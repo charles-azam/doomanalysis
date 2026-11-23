@@ -2,7 +2,7 @@ import test from 'node:test'
 import assert from 'node:assert/strict'
 import worker from '../worker/index.ts'
 
-test('the Worker serves doomanalysis.com and redirects every legacy host to it', async () => {
+test('the Worker serves doomanalysis.com over HTTPS and redirects every legacy host to it', async () => {
   const served: string[] = []
   const env = {
     ASSETS: {
@@ -22,6 +22,7 @@ test('the Worker serves doomanalysis.com and redirects every legacy host to it',
     },
     { url: 'https://doom.charlesazam.com/factors/', status: 301, location: 'https://doomanalysis.com/factors/' },
     { url: 'http://doom.charlesazam.com/', status: 301, location: 'https://doomanalysis.com/' },
+    { url: 'http://doomanalysis.com/factors/?x=1', status: 301, location: 'https://doomanalysis.com/factors/?x=1' },
     { url: 'https://doom.azamcharles0.workers.dev/methodology/', status: 200, location: null },
     { url: 'https://my-branch-doom.azamcharles0.workers.dev/', status: 200, location: null },
     { url: 'http://localhost:8787/', status: 200, location: null },
