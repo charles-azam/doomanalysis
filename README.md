@@ -1,4 +1,4 @@
-# P(doom) dashboard
+# Doom Analysis (the P(doom) dashboard)
 
 A separate Astro site, deployed to `doom.charlesazam.com` as a Cloudflare Worker (named `doom`) with static assets. It shares this
 repository's `node_modules` but has its own config, so the main site's build never touches it.
