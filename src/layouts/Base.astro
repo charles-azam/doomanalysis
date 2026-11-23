@@ -1,0 +1,73 @@
+---
+import '../styles/pdoom.css'
+
+type Props = {
+  title: string
+  description: string
+  active?: 'home' | 'countries' | 'factors' | 'si' | 'methodology'
+}
+
+const { title, description, active } = Astro.props
+const nav = [
+  { href: '/', label: 'P(doom)', key: 'home' },
+  { href: '/countries/france/', label: 'Countries', key: 'countries' },
+  { href: '/factors/', label: 'Factors', key: 'factors' },
+  { href: '/superintelligence/', label: 'Superintelligence', key: 'si' },
+  { href: '/methodology/', label: 'Methodology', key: 'methodology' },
+]
+const fullTitle = title === 'P(doom)' ? 'P(doom) — the odds of collapse and abundance by 2100' : `${title} · P(doom)`
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+  </head>
+  <body class="min-h-screen">
+    <header class="border-b" style="border-color: var(--ring); background: var(--surface)">
+      <div class="mx-auto flex max-w-6xl flex-wrap items-center gap-x-6 gap-y-2 px-4 py-3">
+        <a href="/" class="flex items-center gap-2 font-semibold tracking-tight">
+          <img src="/favicon.svg" alt="" width="22" height="22" />
+          <span>P(doom)</span>
+          <span class="muted hidden text-sm font-normal sm:inline">by 2100</span>
+        </a>
+        <nav class="flex flex-wrap gap-1 text-sm">
+          {
+            nav.map((item) => (
+              <a
+                href={item.href}
+                class="rounded-md px-2.5 py-1.5"
+                style={
+                  item.key === active
+                    ? 'background: var(--surface-2); color: var(--ink); font-weight: 600'
+                    : 'color: var(--ink-2)'
+                }
+              >
+                {item.label}
+              </a>
+            ))
+          }
+        </nav>
+      </div>
+    </header>
+    <main class="mx-auto max-w-6xl px-4 py-8">
+      <slot />
+    </main>
+    <footer class="border-t py-8 text-sm" style="border-color: var(--ring)">
+      <div class="mx-auto flex max-w-6xl flex-col gap-2 px-4 muted">
+        <p>
+          A living estimate of the odds of collapse and abundance by 2100, built from sourced indicators. Probabilities are
+          judgments, labelled as such. <a class="link" href="/methodology/">How it works</a>.
+        </p>
+        <p>By <a class="link" href="https://charlesazam.com">Charles Azam</a>. Version 0.1.</p>
+      </div>
+    </footer>
+  </body>
+</html>

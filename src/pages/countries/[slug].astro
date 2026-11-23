@@ -1,0 +1,164 @@
+---
+import Base from '../../layouts/Base.astro'
+import FactorCard from '../../components/FactorCard.astro'
+import { OutcomeBar, OutcomeLegend } from '../../components/OutcomeBar.tsx'
+import { PairedBars } from '../../components/PairedBars.tsx'
+import { pathwayLabels, pillarLabels } from '../../data/labels.ts'
+import { SiLegend } from '../../components/Dumbbell.tsx'
+import { countries, entities, type Entity } from '../../data/countries.ts'
+import { factors } from '../../data/factors.ts'
+import { indices, judgmentFor, latestJudgeDate, scored, verdict } from '../../data/site.ts'
+import { countryOutcome, formatPercent, pathways, pillars, worldOutcome } from '../../model/judgment.ts'
+import type { CountryId, Outcome } from '../../model/types.ts'
+
+export function getStaticPaths() {
+  return entities.map((entity) => ({ params: { slug: entity.slug }, props: { entity: entity } }))
+}
+
+type Props = { entity: Entity }
+const { entity } = Astro.props
+const isWorld = entity.id === 'WLD'
+const world = verdict.world
+const judged = isWorld ? undefined : judgmentFor({ id: entity.id as CountryId })
+const outcomeFor = (scenario: 'weighted' | 'si' | 'noSi'): Outcome =>
+  judged === undefined ? worldOutcome({ world: world, scenario: scenario }) : countryOutcome({ world: world, country: judged, scenario: scenario })
+const headline = outcomeFor('weighted')
+const index = indices({ entity: entity.id })
+const groups = [
+  { family: 'pillar' as const, title: 'The five essentials today', note: 'Pressure score. The tick is the abundance threshold.' },
+  { family: 'driver' as const, title: 'Pushing toward collapse', note: 'Pressure score: 100 is the danger anchor.' },
+  { family: 'counterforce' as const, title: 'Pushing back', note: 'Strength score: 100 is the strongest push back.' },
+  { family: 'context' as const, title: 'Context, not scored', note: 'Shown with sources and left out of every index.' },
+]
+const scope = isWorld ? 'global' : 'country'
+const missing = factors.filter(
+  (factor) => factor.scope === scope && !groups.some((group) => scored({ entity: entity.id, family: group.family }).some((item) => item.factor.id === factor.id)),
+)
+const collapseWord = isWorld ? 'doom' : 'collapse'
+const pct = (value: number) => formatPercent({ value: value })
+const spread = isWorld ? verdict.spread.doom : verdict.spread.collapse[entity.id as CountryId]
+---
+
+<Base title={entity.name} description={`P(${collapseWord}) and P(abundance) by 2100 for ${entity.name}, with and without superintelligence.`} active="countries">
+  <nav class="mb-6 flex flex-wrap gap-1.5 text-sm">
+    {
+      entities.map((other) => (
+        <a
+          href={`/countries/${other.slug}/`}
+          class="rounded-full px-3 py-1"
+          style={other.id === entity.id ? 'background: var(--ink); color: var(--surface)' : 'border: 1px solid var(--ring); color: var(--ink-2)'}
+        >
+          {other.flag} {other.name}
+        </a>
+      ))
+    }
+  </nav>
+
+  <section class="grid gap-6 lg:grid-cols-[1.2fr_1fr]">
+    <div class="card flex flex-col gap-4 p-6">
+      <h1 class="text-2xl font-semibold">{entity.flag} {entity.name}</h1>
+      <p class="ink-2">{entity.blurb}</p>
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-wide muted">P({collapseWord}) by 2100</p>
+        <p class="text-6xl font-semibold tracking-tight">{pct(headline.collapse)}</p>
+        <p class="text-xs muted">Judged range across runs: {pct(spread.low)}–{pct(spread.high)}. Updated {latestJudgeDate}.</p>
+      </div>
+      <OutcomeLegend collapseLabel={isWorld ? 'Doom' : undefined} />
+      <dl class="grid gap-3">
+        {
+          ([['weighted', 'Our forecast'], ['si', 'If superintelligence arrives'], ['noSi', 'If it never does']] as const).map(([key, label]) => (
+            <div class="grid grid-cols-[11rem_1fr] items-center gap-3">
+              <dt class="text-sm ink-2">{label}</dt>
+              <dd>
+                <OutcomeBar outcome={outcomeFor(key)} name={`${entity.name}, ${label}`} collapseLabel={isWorld ? 'Doom' : undefined} />
+              </dd>
+            </div>
+          ))
+        }
+      </dl>
+    </div>
+    <div class="card flex flex-col gap-4 p-6">
+      <h2 class="text-lg font-semibold">{isWorld ? 'How doom would happen' : 'Which essential would fail'}</h2>
+      <p class="text-sm ink-2">
+        {
+          isWorld
+            ? 'P(doom) split by main cause.'
+            : 'Probability that losing this essential alone triggers collapse. They overlap, so they do not add up to the total.'
+        }
+      </p>
+      <SiLegend />
+      {
+        judged === undefined ? (
+          <PairedBars items={pathways.map((p) => ({ label: pathwayLabels[p], withSi: world.si.pathways[p], withoutSi: world.noSi.pathways[p] }))} />
+        ) : (
+          <PairedBars items={pillars.map((p) => ({ label: pillarLabels[p], withSi: judged.si.pillarLoss[p], withoutSi: judged.noSi.pillarLoss[p] }))} />
+        )
+      }
+      <p class="text-sm ink-2"><span class="font-semibold">Judge's reasoning.</span> {judged === undefined ? world.rationale : judged.rationale}</p>
+    </div>
+  </section>
+
+  <section class="mt-8 grid gap-4 sm:grid-cols-3">
+    <div class="card p-5">
+      <p class="text-sm muted">Pressure index</p>
+      <p class="text-3xl font-semibold tabular">{Math.round(index.pressure)}</p>
+      <p class="text-xs muted">Average of the scores pushing toward {collapseWord}.</p>
+    </div>
+    <div class="card p-5">
+      <p class="text-sm muted">Resilience index</p>
+      <p class="text-3xl font-semibold tabular">{Math.round(index.resilience)}</p>
+      <p class="text-xs muted">Average of the scores pushing back.</p>
+    </div>
+    <div class="card p-5">
+      <p class="text-sm muted">Essentials at the abundance threshold</p>
+      <p class="text-3xl font-semibold tabular">{index.pillarsMet} of {index.pillarsMeasured}</p>
+      <p class="text-xs muted">Measured essentials that already reach 90% coverage today.</p>
+    </div>
+  </section>
+
+  {
+    groups.map((group) => {
+      const items = scored({ entity: entity.id, family: group.family })
+      if (items.length === 0) return null
+      return (
+        <section class="mt-10">
+          <div class="mb-4 flex flex-wrap items-baseline justify-between gap-2">
+            <h2 class="text-xl font-semibold">{group.title}</h2>
+            <p class="text-sm muted">{group.note}</p>
+          </div>
+          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {items.map((item) => (
+              <FactorCard factor={item.factor} observation={item.observation} />
+            ))}
+          </div>
+        </section>
+      )
+    })
+  }
+
+  {
+    missing.length > 0 && (
+      <p class="mt-6 text-sm muted">
+        No comparable data yet: {missing.map((factor) => factor.name).join(', ')}. Missing factors are left out of the indices, never filled in.
+      </p>
+    )
+  }
+
+  {
+    !isWorld && (
+      <p class="mt-6 text-sm ink-2">
+        Global factors such as CO₂, ocean acidification and nuclear arsenals apply to every country. See them on the{' '}
+        <a class="link" href="/countries/world/">World</a> page. Other countries:{' '}
+        {countries
+          .filter((c) => c.id !== entity.id)
+          .map((c, i) => (
+            <span>
+              {i > 0 && ', '}
+              <a class="link" href={`/countries/${c.slug}/`}>{c.name}</a>
+            </span>
+          ))}
+        .
+      </p>
+    )
+  }
+</Base>

@@ -1,0 +1,15 @@
+{
+  // Static assets Worker for the P(doom) dashboard at doom.charlesazam.com.
+  // Cloudflare Workers Builds deploys it from this repository; manual deploy: npm run pdoom:deploy.
+  // account_id pins every deploy to the account that owns the charlesazam.com zone.
+  "name": "doom",
+  "account_id": "625c069e0532163edcb6ca8f144c6d42",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page"
+  },
+  "routes": [
+    { "pattern": "doom.charlesazam.com", "custom_domain": true }
+  ]
+}

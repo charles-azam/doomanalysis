@@ -1,0 +1,167 @@
+---
+import Base from '../layouts/Base.astro'
+import FactorCard from '../components/FactorCard.astro'
+import { Leaderboard } from '../components/Leaderboard.tsx'
+import { Dumbbell, SiLegend } from '../components/Dumbbell.tsx'
+import { PairedBars } from '../components/PairedBars.tsx'
+import { pathwayLabels } from '../data/labels.ts'
+import { Scatter } from '../components/Scatter.tsx'
+import { OutcomeBar, OutcomeLegend } from '../components/OutcomeBar.tsx'
+import { countries } from '../data/countries.ts'
+import { definitions } from '../data/definitions.ts'
+import { indices, judgmentFor, latestJudgeDate, leaderboardRows, measuredFactorCount, scored, verdict } from '../data/site.ts'
+import { formatPercent, pathways, weighted, worldOutcome } from '../model/judgment.ts'
+
+const world = verdict.world
+const doom = weighted({ world: world, pick: (s) => s.doom })
+const abundance = weighted({ world: world, pick: (s) => s.abundance })
+const drivers = scored({ entity: 'WLD', family: 'driver' })
+const counterforces = scored({ entity: 'WLD', family: 'counterforce' })
+const pillars = scored({ entity: 'WLD', family: 'pillar' })
+const dumbbellRows = countries.map((country) => {
+  const judged = judgmentFor({ id: country.id })
+  return { name: country.name, flag: country.flag, judged: judged }
+})
+const scatterPoints = countries.map((country) => {
+  const index = indices({ entity: country.id })
+  return { name: country.name, flag: country.flag, slug: country.slug, x: index.pressure, y: index.resilience }
+})
+const pct = (value: number) => formatPercent({ value: value })
+---
+
+<Base title="P(doom)" description="The probability of doom, collapse and abundance by 2100, for the world and by country, built from sourced indicators and the superintelligence hypothesis." active="home">
+  <section class="grid gap-6 lg:grid-cols-[1.3fr_1fr]">
+    <div class="card flex flex-col gap-4 p-6">
+      <p class="text-sm font-semibold uppercase tracking-wide muted">P(doom) by 2100</p>
+      <p class="text-7xl font-semibold tracking-tight">{pct(doom)}</p>
+      <p class="max-w-prose ink-2">
+        The chance that humanity suffers human extinction or an irreversible, civilization-wide collapse before 2100.
+      </p>
+      <OutcomeBar outcome={worldOutcome({ world: world, scenario: 'weighted' })} name="World" collapseLabel="Doom" />
+      <OutcomeLegend collapseLabel="Doom" />
+      <p class="text-xs muted">
+        Judged by {verdict.model} from {measuredFactorCount} sourced indicators: median of {verdict.runs} independent runs (range {pct(verdict.spread.doom.low)}–{pct(verdict.spread.doom.high)}). Updated {latestJudgeDate}. It is a judgment, not a measurement. <a class="link" href="/methodology/">How it is made</a>.
+      </p>
+    </div>
+    <div class="grid gap-4">
+      <div class="card p-5">
+        <p class="text-sm muted">Superintelligence before 2100</p>
+        <p class="text-4xl font-semibold tracking-tight">{pct(world.siBy2100)}</p>
+        <p class="text-sm ink-2">{pct(world.siBy2050)} by 2050. <a class="link" href="/superintelligence/">What SI would change</a></p>
+      </div>
+      <div class="card grid grid-cols-2 gap-4 p-5">
+        <div>
+          <p class="text-sm muted">P(doom) if SI arrives</p>
+          <p class="text-3xl font-semibold tracking-tight">{pct(world.si.doom)}</p>
+        </div>
+        <div>
+          <p class="text-sm muted">P(doom) if it never does</p>
+          <p class="text-3xl font-semibold tracking-tight">{pct(world.noSi.doom)}</p>
+        </div>
+      </div>
+      <div class="card grid grid-cols-2 gap-4 p-5">
+        <div>
+          <p class="text-sm muted">Global abundance if SI arrives</p>
+          <p class="text-3xl font-semibold tracking-tight">{pct(world.si.abundance)}</p>
+        </div>
+        <div>
+          <p class="text-sm muted">Global abundance if not</p>
+          <p class="text-3xl font-semibold tracking-tight">{pct(world.noSi.abundance)}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-10 card p-6">
+    <h2 class="text-xl font-semibold">The question</h2>
+    <div class="prose-site max-w-3xl">
+      <p>
+        One camp argues that superintelligence makes abundance almost inevitable: once intelligence is cheap, energy, food,
+        medicine and housing follow. This site tests that claim against the physical world. Superintelligence may well
+        arrive. But oceans acidify on their own schedule, mines take years to open, and clinical trials take years to run.
+        Wars and failing states do not wait for better models.
+      </p>
+      <p>
+        So every number here is shown twice, <strong>with</strong> and <strong>without</strong> superintelligence. The gap between the
+        two is what intelligence buys. What it cannot buy shows up in the <a class="link" href="/factors/">factors</a>.
+      </p>
+      <p class="text-sm">Abundance: {definitions.abundance} Collapse: {definitions.collapse}</p>
+    </div>
+  </section>
+
+  <section class="mt-10 card p-6">
+    <div class="mb-4 flex flex-wrap items-baseline justify-between gap-2">
+      <h2 class="text-xl font-semibold">Collapse, muddling through or abundance by 2100</h2>
+      <a class="link text-sm" href="/methodology/#definitions">Definitions</a>
+    </div>
+    <Leaderboard client:load rows={leaderboardRows} siBy2100={world.siBy2100} />
+  </section>
+
+  <section class="mt-10 grid gap-6 lg:grid-cols-2">
+    <div class="card flex flex-col gap-4 p-6">
+      <h2 class="text-xl font-semibold">What superintelligence buys</h2>
+      <p class="text-sm ink-2">The line between the two dots is the change superintelligence makes, as judged.</p>
+      <SiLegend />
+      <Dumbbell
+        title="P(abundance in 2100)"
+        max={1}
+        rows={dumbbellRows.map((row) => ({ name: row.name, flag: row.flag, withSi: row.judged.si.abundance, withoutSi: row.judged.noSi.abundance }))}
+      />
+      <Dumbbell
+        title="P(collapse before 2100)"
+        max={1}
+        rows={dumbbellRows.map((row) => ({ name: row.name, flag: row.flag, withSi: row.judged.si.collapse, withoutSi: row.judged.noSi.collapse }))}
+      />
+    </div>
+    <div class="card flex flex-col gap-4 p-6">
+      <h2 class="text-xl font-semibold">How doom would happen</h2>
+      <p class="text-sm ink-2">
+        P(doom) split by main cause, with and without superintelligence. Loss of control goes from {pct(world.noSi.pathways.ai)} to {pct(world.si.pathways.ai)}; every other cause together goes from {pct(world.noSi.doom - world.noSi.pathways.ai)} to {pct(world.si.doom - world.si.pathways.ai)}.
+      </p>
+      <SiLegend />
+      <PairedBars items={pathways.map((pathway) => ({ label: pathwayLabels[pathway], withSi: world.si.pathways[pathway], withoutSi: world.noSi.pathways[pathway] }))} />
+      <p class="text-xs muted">{world.rationale}</p>
+    </div>
+  </section>
+
+  <section class="mt-10">
+    <div class="mb-4 flex flex-wrap items-baseline justify-between gap-2">
+      <h2 class="text-xl font-semibold">Pushing toward doom</h2>
+      <p class="text-sm muted">Pressure score: 0 is safe, 100 is the danger anchor. The black tick is the limit.</p>
+    </div>
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {drivers.map((item) => <FactorCard factor={item.factor} observation={item.observation} />)}
+    </div>
+  </section>
+
+  <section class="mt-10">
+    <div class="mb-4 flex flex-wrap items-baseline justify-between gap-2">
+      <h2 class="text-xl font-semibold">Pushing back</h2>
+      <p class="text-sm muted">Strength score: 100 is the strongest push back.</p>
+    </div>
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {counterforces.map((item) => <FactorCard factor={item.factor} observation={item.observation} />)}
+    </div>
+  </section>
+
+  <section class="mt-10">
+    <div class="mb-4 flex flex-wrap items-baseline justify-between gap-2">
+      <h2 class="text-xl font-semibold">The five essentials today, worldwide</h2>
+      <p class="text-sm muted">Abundance needs 90% coverage of each. Security is measured per country.</p>
+    </div>
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {pillars.map((item) => <FactorCard factor={item.factor} observation={item.observation} />)}
+    </div>
+  </section>
+
+  <section class="mt-10 card p-6">
+    <h2 class="text-xl font-semibold">Pressure against resilience</h2>
+    <p class="mt-1 max-w-3xl text-sm ink-2">
+      Two mechanical indices, each an equal-weight average of a country's factor scores. They are measured, not judged.
+      The probabilities above are judged from these and the global factors.
+    </p>
+    <div class="mt-4 max-w-3xl">
+      <Scatter points={scatterPoints} />
+    </div>
+  </section>
+</Base>

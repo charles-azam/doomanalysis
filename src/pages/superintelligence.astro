@@ -1,0 +1,199 @@
+---
+import Base from '../layouts/Base.astro'
+import { Dumbbell, SiLegend } from '../components/Dumbbell.tsx'
+import { countries } from '../data/countries.ts'
+import { definitions } from '../data/definitions.ts'
+import { clinicalEvidence, muskEvidence, riskEvidence, timelineEvidence, type Evidence } from '../data/evidence.ts'
+import { siDomains } from '../data/si-domains.ts'
+import { judgmentFor, verdict } from '../data/site.ts'
+import { formatPercent } from '../model/judgment.ts'
+import type { Elasticity } from '../model/types.ts'
+
+const world = verdict.world
+const pct = (value: number) => formatPercent({ value: value })
+const elasticity: Record<Elasticity, { label: string; dots: number }> = {
+  low: { label: 'Low', dots: 1 },
+  medium: { label: 'Medium', dots: 2 },
+  high: { label: 'High', dots: 3 },
+  'two-sided': { label: 'Both ways', dots: 0 },
+}
+const evidenceGroups: { title: string; items: Evidence[] }[] = [
+  { title: 'When superintelligence might arrive', items: timelineEvidence },
+  { title: 'How risky it is, according to others', items: riskEvidence },
+  { title: 'The abundance claim', items: muskEvidence },
+]
+const widerEverywhere = countries.every((c) => {
+  const j = judgmentFor({ id: c.id })
+  return j.si.abundance > j.noSi.abundance && j.si.collapse > j.noSi.collapse
+})
+const muskGood = 0.8
+const muskBad = 0.2
+---
+
+<Base title="Superintelligence" description="What superintelligence would and would not change for doom and abundance, and how likely it is to arrive by 2100." active="si">
+  <h1 class="text-2xl font-semibold">Superintelligence</h1>
+  <p class="mt-2 max-w-3xl ink-2">{definitions.superintelligence}</p>
+
+  <section class="mt-6 grid gap-4 sm:grid-cols-3">
+    <div class="card p-5">
+      <p class="text-sm muted">P(SI by 2050)</p>
+      <p class="text-4xl font-semibold tracking-tight">{pct(world.siBy2050)}</p>
+    </div>
+    <div class="card p-5">
+      <p class="text-sm muted">P(SI by 2100)</p>
+      <p class="text-4xl font-semibold tracking-tight">{pct(world.siBy2100)}</p>
+    </div>
+    <div class="card p-5">
+      <p class="text-sm muted">P(doom by 2100), with SI vs without</p>
+      <p class="text-4xl font-semibold tracking-tight">{pct(world.si.doom)} <span class="text-xl muted">vs {pct(world.noSi.doom)}</span></p>
+    </div>
+  </section>
+  <p class="mt-2 text-xs muted">Judged by {verdict.model}, median of {verdict.runs} runs. Compare with outside views below.</p>
+
+  <section class="mt-10 card p-6">
+    <h2 class="text-xl font-semibold">The claim being tested</h2>
+    <div class="prose-site max-w-3xl">
+      <p>
+        Elon Musk argues that AI and robots will bring abundance, with “universal high income” and work becoming optional.
+        He puts the chance of a good outcome at about {pct(muskGood)} and of a terrible one at 10–20%. Read as a forecast,
+        that is P(abundance | SI) of roughly {pct(muskGood)}.
+      </p>
+      <p>
+        This site's view is narrower. Superintelligence is likely, and it will speed up whatever is limited by thinking:
+        design, discovery, optimization. Much of what separates a country from abundance is limited by something else:
+        construction rates, clinical trials, ocean chemistry, mines, politics, war. The judged P(global abundance | SI) is
+        <strong>{pct(world.si.abundance)}</strong>, against {pct(world.noSi.abundance)} without it. P(doom | SI) is
+        <strong>{pct(world.si.doom)}</strong>, compared with Musk's {pct(muskBad * 0.5)}–{pct(muskBad)}.
+      </p>
+    </div>
+  </section>
+
+  <section class="mt-10 card overflow-x-auto p-6">
+    <h2 class="text-xl font-semibold">Where intelligence is the bottleneck, and where it is not</h2>
+    <p class="mt-1 max-w-3xl text-sm ink-2">
+      The site's working hypothesis, open to challenge. It is not given to the judge, so the probabilities do not simply
+      echo it.
+    </p>
+    <table class="data mt-4 min-w-[760px]">
+      <thead>
+        <tr>
+          <th>Domain</th>
+          <th>What SI speeds up</th>
+          <th>What stays slow</th>
+          <th>Effect by 2050</th>
+          <th>Effect by 2100</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          siDomains.map((domain) => (
+            <tr>
+              <td class="font-medium">{domain.domain}</td>
+              <td class="ink-2">{domain.accelerates}</td>
+              <td class="ink-2">{domain.bottleneck}</td>
+              {[domain.by2050, domain.by2100].map((value) => (
+                <td class="whitespace-nowrap">
+                  <span aria-hidden="true" class="mr-1.5 tracking-widest" style="color: var(--with-si)">
+                    {value === 'two-sided' ? '±' : '●'.repeat(elasticity[value].dots) + '○'.repeat(3 - elasticity[value].dots)}
+                  </span>
+                  {elasticity[value].label}
+                </td>
+              ))}
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+    <div class="prose-site mt-4 max-w-3xl">
+      <h3>The clinical-trial example</h3>
+      <p>
+        A drug that enters Phase I trials takes about {clinicalEvidence.years} years to reach approval, and only{' '}
+        {pct(clinicalEvidence.successFromPhase1)} make it (<a class="link" href={clinicalEvidence.yearsSource.url}>{clinicalEvidence.yearsSource.label}</a>).
+        The median cost per approved drug, counting failures, is about ${(clinicalEvidence.medianCostUsd / 1e9).toFixed(2)} billion
+        (<a class="link" href={clinicalEvidence.costSource.url}>{clinicalEvidence.costSource.label}</a>). Superintelligence can
+        pick better candidates and design better trials. It cannot make a five-year survival study take less than five
+        years.
+      </p>
+    </div>
+  </section>
+
+  <section class="mt-10 card flex flex-col gap-4 p-6">
+    <h2 class="text-xl font-semibold">What SI changes, country by country</h2>
+    <SiLegend />
+    <div class="grid gap-6 lg:grid-cols-2">
+      <Dumbbell
+        title="P(abundance in 2100)"
+        max={1}
+        rows={countries.map((c) => { const j = judgmentFor({ id: c.id }); return { name: c.name, flag: c.flag, withSi: j.si.abundance, withoutSi: j.noSi.abundance } })}
+      />
+      <Dumbbell
+        title="P(collapse before 2100)"
+        max={1}
+        rows={countries.map((c) => { const j = judgmentFor({ id: c.id }); return { name: c.name, flag: c.flag, withSi: j.si.collapse, withoutSi: j.noSi.collapse } })}
+      />
+    </div>
+  </section>
+
+  <section class="mt-10 grid gap-6 lg:grid-cols-2">
+    <div class="card p-6">
+      <h2 class="text-xl font-semibold">Both edges</h2>
+      <div class="prose-site">
+        <p>
+          Superintelligence is the strongest counterforce on the site, and the main source of a new risk. With SI, the
+          judge puts {pct(world.si.pathways.ai)} on doom through loss of control, against {pct(world.noSi.pathways.ai)} without
+          it. Every other cause together goes from {pct(world.noSi.doom - world.noSi.pathways.ai)} without SI to{' '}
+          {pct(world.si.doom - world.si.pathways.ai)} with it{world.si.doom - world.si.pathways.ai < world.noSi.doom - world.noSi.pathways.ai ? ', so SI defends against the older risks' : ', so the judge does not expect SI to defend against the older risks'}.
+        </p>
+        <p>
+          {
+            widerEverywhere
+              ? 'The result is a wider spread of outcomes. In every country the judge sees both abundance and collapse as more likely with SI than without it.'
+              : 'In some countries SI makes both abundance and collapse more likely; in others it shifts the odds one way only.'
+          }
+        </p>
+        <p>
+          That is why the site never folds SI into a single “technology” score. Every probability is shown with and
+          without it.
+        </p>
+      </div>
+    </div>
+    <div class="card p-6">
+      <h2 class="text-xl font-semibold">Judge's reasoning</h2>
+      <p class="prose-site">{world.rationale}</p>
+    </div>
+  </section>
+
+  {
+    evidenceGroups.map((group) => (
+      <section class="mt-10 card overflow-x-auto p-6">
+        <h2 class="text-xl font-semibold">{group.title}</h2>
+        <table class="data mt-3 min-w-[700px]">
+          <thead>
+            <tr>
+              <th>Who</th>
+              <th>What</th>
+              <th class="num">Value</th>
+              <th>Source</th>
+            </tr>
+          </thead>
+          <tbody>
+            {group.items.map((item) => (
+              <tr>
+                <td class="whitespace-nowrap font-medium">{item.who}</td>
+                <td class="ink-2">
+                  {item.claim}
+                  {item.caveat && <div class="mt-1 text-xs muted">{item.caveat}</div>}
+                </td>
+                <td class="num whitespace-nowrap font-semibold">{item.value}</td>
+                <td class="text-xs">
+                  <a class="link" href={item.url} target="_blank" rel="noopener">{item.source}</a>
+                  <div class="muted">{item.date}</div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </section>
+    ))
+  }
+</Base>
