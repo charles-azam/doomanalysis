@@ -1,6 +1,7 @@
 # Doom Analysis (the P(doom) dashboard)
 
-A separate Astro site, deployed to `doom.charlesazam.com` as a Cloudflare Worker (named `doom`) with static assets. It shares this
+A separate Astro site, deployed to `doomanalysis.com` as a Cloudflare Worker (named `doom`) that serves the static build.
+`www.doomanalysis.com` and the original `doom.charlesazam.com` redirect there (`worker/index.ts`). It shares this
 repository's `node_modules` but has its own config, so the main site's build never touches it.
 
 ## Layers
