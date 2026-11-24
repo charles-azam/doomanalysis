@@ -1,8 +1,9 @@
 ---
 import Base from '../layouts/Base.astro'
-import { countries } from '../data/countries.ts'
+import { countries, pathFor, regions } from '../data/entities.ts'
 import { factors } from '../data/factors.ts'
 import { observations } from '../data/observations.ts'
+import { explainerIds } from '../data/explainers.ts'
 import { displayScore, formatValue, observationFor } from '../model/score.ts'
 import type { FactorDefinition, Family } from '../model/types.ts'
 
@@ -24,7 +25,7 @@ const globalFactors = factors
 /** One hue per meaning, light to dark: red for pressure, blue for strength, gray for context. */
 function cellStyle({ factor, score }: { factor: FactorDefinition; score: number }): string {
   if (factor.family === 'context') return 'background: var(--surface-2)'
-  const hue = factor.family === 'counterforce' ? 'var(--strength)' : 'var(--pressure)'
+  const hue = factor.family === 'counterforce' ? 'var(--abundance)' : 'var(--collapse)'
   return `background: color-mix(in oklab, ${hue} ${Math.round(8 + score * 0.62)}%, var(--surface))`
 }
 const anchorText = (factor: FactorDefinition) => {
@@ -34,16 +35,15 @@ const anchorText = (factor: FactorDefinition) => {
 }
 ---
 
-<Base title="Factors" description="Every indicator behind Doom Analysis, with values, sources, scoring anchors and how much superintelligence could change it." active="factors">
-  <h1 class="text-2xl font-semibold">Factors</h1>
-  <p class="mt-2 max-w-3xl ink-2">
-    Like the benchmarks behind an AI leaderboard, each factor is measured by someone else and scored here from 0 to
-    100 between two stated anchors. Essentials and drivers show pressure: 100 is worst. Counterforces show strength:
-    100 is strongest. Context factors are shown with their sources but kept out of every index.
+<Base title="Factors" description="Every indicator behind Doom Analysis, with values, sources, thresholds and how much superintelligence could change it." active="factors">
+  <h1 class="serif text-5xl tracking-tight">Factors</h1>
+  <p class="mt-3 max-w-2xl text-lg leading-snug">
+    Like the benchmarks behind an AI leaderboard, each factor is measured by someone else and cited here. The table
+    below lists every source, the thresholds drawn on each card, and how much superintelligence could change it.
   </p>
 
   <section class="mt-8 card overflow-x-auto p-4">
-    <h2 class="mb-3 text-lg font-semibold">Countries × factors</h2>
+    <h2 class="card-title mb-3">Regions and spotlight countries × factors</h2>
     <table class="data min-w-[900px]">
       <thead>
         <tr>
@@ -60,18 +60,18 @@ const anchorText = (factor: FactorDefinition) => {
       </thead>
       <tbody>
         {
-          countries.map((country) => (
+          [...regions, ...countries.filter((c) => c.spotlight)].map((country) => (
             <tr>
               <td class="whitespace-nowrap">
-                <a class="link" href={`/countries/${country.slug}/`}>{country.flag} {country.name}</a>
+                <a class="link" href={pathFor({ entity: country })} style={country.kind === 'region' ? 'font-weight: 600' : undefined}>{country.mark} {country.name}</a>
               </td>
               {countryFactors.map((factor) => {
                 const observation = observationFor({ observations: observations, factorId: factor.id, entity: country.id })
                 if (observation === undefined) return <td class="num muted">—</td>
                 const score = displayScore({ factor: factor, value: observation.value })
                 return (
-                  <td class="num" style={cellStyle({ factor: factor, score: score })} data-tip={`${factor.name}\n${formatValue({ factor: factor, value: observation.value })} ${factor.unit}\nscore ${Math.round(score)} · ${observation.year}`}>
-                    {factor.family === 'context' ? formatValue({ factor: factor, value: observation.value }) : Math.round(score)}
+                  <td class="num" style={cellStyle({ factor: factor, score: score })} data-tip={`${factor.name}\n${formatValue({ factor: factor, value: observation.value })} ${factor.unit}\n${observation.year}`}>
+                    {formatValue({ factor: factor, value: observation.value })}
                   </td>
                 )
               })}
@@ -80,7 +80,7 @@ const anchorText = (factor: FactorDefinition) => {
         }
       </tbody>
     </table>
-    <p class="mt-3 text-xs muted">Cells show the score (context columns show the raw value). Hover for the raw value and year. — means no comparable data.</p>
+    <p class="mt-3 text-xs muted">Cells show each country's value in the factor's own unit. The darker the cell, the more it pushes toward collapse (red) or back (blue). — means no comparable data.</p>
   </section>
 
   {
@@ -89,7 +89,7 @@ const anchorText = (factor: FactorDefinition) => {
       { title: 'Country factors', list: countryFactors },
     ].map((block) => (
       <section class="mt-8 card overflow-x-auto p-4">
-        <h2 class="mb-3 text-lg font-semibold">{block.title}</h2>
+        <h2 class="card-title mb-3">{block.title}</h2>
         <table class="data min-w-[900px]">
           <thead>
             <tr>
@@ -107,7 +107,7 @@ const anchorText = (factor: FactorDefinition) => {
               return (
                 <tr id={factor.id}>
                   <td class="min-w-[12rem]">
-                    <div class="font-medium">{factor.name}</div>
+                    <div class="font-medium">{explainerIds.has(factor.id) ? <a class="link" href={`/learn/${factor.id}/`}>{factor.name}</a> : factor.name}</div>
                     <div class="text-xs muted">{factor.unit}</div>
                     {world && (
                       <div class="mt-1 text-xs">

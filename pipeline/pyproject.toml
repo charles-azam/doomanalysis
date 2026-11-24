@@ -1,0 +1,13 @@
+[project]
+name = "doom-pipeline"
+version = "0.2.0"
+description = "Fetches and aggregates the country data behind Doom Analysis."
+requires-python = ">=3.13"
+dependencies = ["openpyxl>=3.1"]
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

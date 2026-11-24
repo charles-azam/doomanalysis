@@ -1,0 +1,152 @@
+---
+import FactorCard from './FactorCard.astro'
+import { OutcomeBar, OutcomeLegend } from './OutcomeBar.tsx'
+import { PairedBars } from './PairedBars.tsx'
+import { SiLegend } from './Dumbbell.tsx'
+import { countries, entityById, formatPopulation, pathFor, regions, type Entity } from '../data/entities.ts'
+import { factors } from '../data/factors.ts'
+import { pathwayLabels, pillarLabels } from '../data/labels.ts'
+import { observations } from '../data/observations.ts'
+import { countrySections, globalSections } from '../data/sections.ts'
+import { judgmentFor, latestJudgeDate, outcomesFor, projectionFor, verdict } from '../data/site.ts'
+import { formatPercent, pathways, pillars } from '../model/judgment.ts'
+import { observationFor } from '../model/score.ts'
+
+type Props = { entity: Entity }
+const { entity } = Astro.props
+const isWorld = entity.kind === 'world'
+const world = verdict.world
+const judged = isWorld ? undefined : judgmentFor({ id: entity.id })
+const outcomes = outcomesFor({ entity: entity })
+const collapseWord = isWorld ? 'doom' : 'collapse'
+const pct = (value: number) => formatPercent({ value: value })
+const spread = isWorld ? verdict.doomSpread : judged?.collapseSpread
+const runs = isWorld ? verdict.worldRuns : (judged?.runs ?? 0)
+const scope = isWorld ? 'global' : 'country'
+const pick = (factor: (typeof factors)[number]) => {
+  const observation = observationFor({ observations: observations, factorId: factor.id, entity: entity.id })
+  return observation === undefined ? [] : [{ factor: factor, observation: observation, projection: projectionFor({ factorId: factor.id, entity: entity.id }) }]
+}
+const sections = (isWorld ? globalSections : countrySections).map((section) => ({
+  section: section,
+  items: factors.filter((f) => f.scope === scope && section.themes.includes(f.theme) && f.family !== 'context').flatMap(pick),
+}))
+const context = factors.filter((f) => f.scope === scope && f.family === 'context').flatMap(pick)
+const missing = factors.filter((f) => f.scope === scope && observationFor({ observations: observations, factorId: f.id, entity: entity.id }) === undefined)
+const region = entity.region ? entityById({ id: entity.region }) : undefined
+const members = entity.kind === 'region' ? countries.filter((c) => c.region === entity.id) : []
+const subtitle = isWorld
+  ? `${regions.length} regions · ${countries.length} countries`
+  : `${region ? `${region.name} · ` : ''}${formatPopulation({ people: entity.population })}${entity.kind === 'region' ? ` · ${members.length} countries` : ''}`
+---
+
+<section class="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_440px]">
+  <div>
+    <p class="text-sm muted">
+      {region && <a class="underline" href={pathFor({ entity: region })}>{region.mark} {region.name}</a>}
+      {!region && (entity.kind === 'region' ? 'Region' : isWorld ? 'World' : 'Country')}
+    </p>
+    <h1 class="serif mt-2 text-5xl leading-[1.05] tracking-tight sm:text-6xl">
+      {entity.mark} {entity.name}{outcomes ? `: ${pct(outcomes.weighted.collapse)} chance of ${collapseWord} by 2100` : ''}
+    </h1>
+    <p class="mt-4 text-lg leading-snug">{subtitle}</p>
+    {
+      outcomes && spread && (
+        <p class="mt-2 text-xs muted">
+          {runs === 1 ? 'One judge run' : `Median of ${runs} judge runs, range ${pct(spread.low)}–${pct(spread.high)}`} · Updated {latestJudgeDate}
+        </p>
+      )
+    }
+    {!outcomes && <p class="mt-2 text-sm muted">Not judged yet. The data below is complete; the probabilities will follow.</p>}
+  </div>
+  {
+    outcomes && (
+      <div class="card flex flex-col gap-3 p-5">
+        <h2 class="card-title">
+          <span class="square" style="background: var(--collapse)" />
+          Outcomes by 2100
+        </h2>
+        <OutcomeLegend collapseLabel={isWorld ? 'Doom' : undefined} />
+        {([['weighted', 'Our forecast'], ['si', 'With superintelligence'], ['noSi', 'Without']] as const).map(([key, label]) => (
+          <div class="grid grid-cols-[9rem_1fr] items-center gap-3">
+            <span class="text-sm ink-2">{label}</span>
+            <OutcomeBar outcome={outcomes[key]} name={`${entity.name}, ${label}`} collapseLabel={isWorld ? 'Doom' : undefined} />
+          </div>
+        ))}
+      </div>
+    )
+  }
+</section>
+
+{
+  (isWorld || judged) && (
+    <section class="card mt-8 flex flex-col gap-4 p-6">
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <h2 class="card-title">
+          <span class="square" style="background: var(--theme-ai)" />
+          {isWorld ? 'How doom would happen' : 'Which essential would fail'}
+        </h2>
+        <SiLegend />
+      </div>
+      {isWorld ? (
+        <PairedBars items={pathways.map((p) => ({ label: pathwayLabels[p], withSi: world.si.pathways[p], withoutSi: world.noSi.pathways[p] }))} />
+      ) : (
+        judged && <PairedBars items={pillars.map((p) => ({ label: pillarLabels[p], withSi: judged.si.pillarLoss[p], withoutSi: judged.noSi.pillarLoss[p] }))} />
+      )}
+    </section>
+  )
+}
+
+{
+  sections.map(({ section, items }) =>
+    items.length === 0 ? null : (
+      <section id={section.id} class="mt-14 scroll-mt-24">
+        <h2 class="section-title mb-5">
+          <span class="square" style={`background: ${section.color}`} />
+          {section.title}
+        </h2>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+          {items.map((item) => (
+            <FactorCard factor={item.factor} observation={item.observation} projection={item.projection} />
+          ))}
+        </div>
+      </section>
+    ),
+  )
+}
+
+{
+  context.length > 0 && (
+    <section class="mt-14">
+      <h2 class="section-title mb-5">
+        <span class="square" style="background: var(--muddle)" />
+        Context, not scored
+      </h2>
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+        {context.map((item) => (
+          <FactorCard factor={item.factor} observation={item.observation} projection={item.projection} />
+        ))}
+      </div>
+    </section>
+  )
+}
+
+{
+  members.length > 0 && (
+    <section class="mt-14">
+      <h2 class="section-title mb-5">
+        <span class="square" style="background: var(--ink)" />
+        Countries in {entity.name}
+      </h2>
+      <div class="flex flex-wrap gap-1.5 text-sm">
+        {members.map((member) => (
+          <a href={pathFor({ entity: member })} class="pill pill-solo">
+            {member.mark} {member.name}
+          </a>
+        ))}
+      </div>
+    </section>
+  )
+}
+
+{missing.length > 0 && <p class="mt-8 text-sm muted">No comparable data yet: {missing.map((factor) => factor.name).join(', ')}.</p>}

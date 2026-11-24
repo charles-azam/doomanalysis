@@ -1,51 +1,114 @@
 ---
-import type { FactorDefinition, Observation } from '../model/types.ts'
-import { beyondLimit, displayScore, formatValue, limitPosition } from '../model/score.ts'
-import { Meter } from './Meter.tsx'
+import type { FactorDefinition, Observation, Projection } from '../model/types.ts'
+import { countPast } from '../model/track.ts'
+import { displayFor } from '../data/display.ts'
+import { themeColor } from '../data/sections.ts'
+import { ThresholdTrack } from './ThresholdTrack.tsx'
+import { exceedanceFor } from '../data/exceedance.ts'
+import { explainerIds } from '../data/explainers.ts'
+import { formatPercent } from '../model/judgment.ts'
 
 type Props = {
   factor: FactorDefinition
   observation: Observation
+  projection?: Projection
 }
 
-const { factor, observation } = Astro.props
-const score = displayScore({ factor: factor, value: observation.value })
-const limit = limitPosition({ factor: factor })
-const beyond = beyondLimit({ factor: factor, value: observation.value })
-const kind = factor.family === 'counterforce' ? 'strength' : 'pressure'
-const elasticity = {
-  low: 'SI helps little',
-  medium: 'SI helps somewhat',
-  high: 'SI helps a lot',
-  'two-sided': 'SI cuts both ways',
-}[factor.siElasticity]
+const { factor, observation, projection } = Astro.props
+const display = displayFor({ factorId: factor.id })
+const number = (value: number) =>
+  value.toLocaleString('en-US', { minimumFractionDigits: factor.decimals, maximumFractionDigits: factor.decimals })
+const short = (value: number) => {
+  const digits = Math.abs(value) >= 100 ? 0 : Math.abs(value) >= 10 ? Math.min(factor.decimals, 1) : factor.decimals
+  return `${value.toLocaleString('en-US', { maximumFractionDigits: digits })}${display.symbol}`
+}
+const total = display.thresholds.length
+const pastToday = countPast({ display: display, value: observation.value })
+const pastLater = projection ? countPast({ display: display, value: projection.value }) : undefined
+const basisMark = { published: 'published', derived: 'derived from a published range', judged: 'judged' }
+const odds = exceedanceFor({ factorId: factor.id, entity: observation.entity })
+const chips = [...new Set(odds.map((o) => o.threshold))].map((threshold) => {
+  const group = odds.filter((o) => o.threshold === threshold)
+  const low = Math.min(...group.map((o) => o.probability))
+  const high = Math.max(...group.map((o) => o.probability))
+  const line = display.thresholds.find((t) => t.value === threshold)
+  const pct = (v: number) => formatPercent({ value: v })
+  return {
+    label: group[0].label ?? line?.label ?? short(threshold),
+    text: low === high ? pct(low) : `${pct(low).replace('%', '')}–${pct(high)}`,
+    high: high,
+    judged: group.every((o) => o.basis === 'judged'),
+    sources: group.map((o) => `${pct(o.probability)} · ${basisMark[o.basis]}: ${o.source.slice(0, 90)}`).join('\n'),
+  }
+})
+const learn = explainerIds.has(factor.id) ? `/learn/${factor.id}/` : undefined
+const role = factor.family === 'counterforce' ? 'Pushes back' : factor.family === 'context' ? 'Not scored' : undefined
 ---
 
-<article class="card flex flex-col gap-3 p-4" id={factor.id}>
+<article class="card flex flex-col gap-3 p-5" id={factor.id}>
   <div class="flex items-start justify-between gap-3">
-    <h3 class="text-sm font-semibold leading-snug">{factor.name}</h3>
-    <span class="tabular text-sm font-semibold" title={kind === 'pressure' ? 'Pressure score, 100 = worst' : 'Strength score, 100 = strongest'}>
-      {Math.round(score)}
-    </span>
+    <h3 class="card-title text-[1.15rem]">
+      <span class="square" style={`background: ${themeColor({ theme: factor.theme })}`}></span>
+      {learn ? <a href={learn} class="hover:underline">{factor.name}</a> : factor.name}
+    </h3>
+    {role && <span class="mt-1 whitespace-nowrap text-[11px] muted">{role}</span>}
   </div>
-  <div class="flex items-baseline gap-1.5">
-    <span class="text-2xl font-semibold tracking-tight">{formatValue({ factor: factor, value: observation.value })}</span>
-    <span class="muted text-xs">{factor.unit}</span>
-  </div>
-  <Meter score={score} kind={kind} limit={limit} limitLabel={factor.anchors.limitLabel} />
-  <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs ink-2">
+  <p class="text-sm leading-snug ink-2">{display.why}</p>
+  <div class="flex flex-wrap items-baseline gap-x-5 gap-y-1">
+    <div>
+      <span class="text-2xl font-semibold tracking-tight tabular">{number(observation.value)}</span>
+      <span class="text-xs muted"> {factor.unit}, {observation.year}</span>
+    </div>
     {
-      factor.anchors.limit !== undefined && (
-        <span class="inline-flex items-center gap-1">
-          <span aria-hidden="true">{beyond ? '▲' : '✓'}</span>
-          {factor.family === 'pillar' ? `${beyond ? 'Short of the' : 'Meets the'} ${factor.anchors.limitLabel?.toLowerCase()}` : `${beyond ? 'Past the limit' : 'Not past the limit'}: ${factor.anchors.limitLabel}`}
+      projection && (
+        <div>
+          <span class="text-2xl font-semibold tracking-tight tabular">→ {number(projection.value)}</span>
+          <span class="text-xs muted"> by {projection.year}{projection.low !== undefined && projection.high !== undefined ? ` (${number(projection.low)}–${number(projection.high)})` : ''}</span>
+        </div>
+      )
+    }
+  </div>
+  <ThresholdTrack display={display} today={{ value: observation.value, year: observation.year }} projection={projection} format={short} />
+  {
+    chips.length > 0 && (
+      <div class="flex flex-col gap-1">
+        <p class="text-[11px] muted">Chance by 2100{chips.some((c) => c.judged) ? ' (* judged)' : ''}</p>
+        <div class="flex flex-wrap gap-1.5">
+          {chips.map((chip) => (
+            <span
+              class="rounded px-1.5 py-0.5 text-[11px] tabular"
+              style={`background: ${chip.high >= 0.5 ? 'var(--zone-danger)' : chip.high >= 0.2 ? 'var(--zone-limit)' : 'var(--surface-2)'}`}
+              data-tip={chip.sources}
+            >
+              {chip.label} · <strong>{chip.text}</strong>
+              {chip.judged ? '*' : ''}
+            </span>
+          ))}
+        </div>
+      </div>
+    )
+  }
+  {
+    total > 0 && (
+      <p class="text-xs ink-2">
+        <span class="font-semibold" style={pastToday > 0 ? 'color: var(--tick-danger)' : undefined}>
+          {pastToday === 0 ? 'No line crossed today' : `${pastToday} of ${total} ${total === 1 ? 'line' : 'lines'} crossed today`}
+        </span>
+        {pastLater !== undefined && pastLater !== pastToday && <span> · {pastLater} of {total} by {projection?.year}</span>}
+      </p>
+    )
+  }
+  <p class="mt-auto text-[11px] leading-relaxed muted">
+    {learn && <a class="underline underline-offset-2" href={learn} style="color: var(--ink)">What it is and why it matters</a>}
+    {learn && <span> · </span>}
+    <a class="underline underline-offset-2" href={observation.url} target="_blank" rel="noopener">{observation.source}</a>
+    {observation.note && <span> · {observation.note}</span>}
+    {
+      projection && (
+        <span>
+          {' '}· Projection: <a class="underline underline-offset-2" href={projection.url} target="_blank" rel="noopener">{projection.source}</a>, {projection.scenario}
         </span>
       )
     }
-    <span class="rounded px-1.5 py-0.5" style="background: var(--surface-2)" title={factor.siNote}>{elasticity}</span>
-  </div>
-  <p class="muted text-xs leading-relaxed">
-    {observation.year} · <a class="link" href={observation.url} target="_blank" rel="noopener">{observation.source}</a>
-    {observation.note && <span> · {observation.note}</span>}
   </p>
 </article>

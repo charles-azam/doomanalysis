@@ -1,10 +1,12 @@
 ---
 import Base from '../layouts/Base.astro'
 import { Dumbbell, SiLegend } from '../components/Dumbbell.tsx'
-import { countries } from '../data/countries.ts'
+import { regions } from '../data/entities.ts'
 import { definitions } from '../data/definitions.ts'
 import { clinicalEvidence, muskEvidence, riskEvidence, timelineEvidence, type Evidence } from '../data/evidence.ts'
 import { siDomains } from '../data/si-domains.ts'
+import { arrivalSeries } from '../data/si-arrival.ts'
+import { ArrivalChart } from '../components/ArrivalChart.tsx'
 import { judgmentFor, verdict } from '../data/site.ts'
 import { formatPercent } from '../model/judgment.ts'
 import type { Elasticity } from '../model/types.ts'
@@ -22,17 +24,18 @@ const evidenceGroups: { title: string; items: Evidence[] }[] = [
   { title: 'How risky it is, according to others', items: riskEvidence },
   { title: 'The abundance claim', items: muskEvidence },
 ]
-const widerEverywhere = countries.every((c) => {
-  const j = judgmentFor({ id: c.id })
-  return j.si.abundance > j.noSi.abundance && j.si.collapse > j.noSi.collapse
+const judgedRegions = regions.flatMap((region) => {
+  const judged = judgmentFor({ id: region.id })
+  return judged ? [{ region: region, judged: judged }] : []
 })
+const widerEverywhere = judgedRegions.length > 0 && judgedRegions.every(({ judged }) => judged.si.abundance > judged.noSi.abundance && judged.si.collapse > judged.noSi.collapse)
 const muskGood = 0.8
 const muskBad = 0.2
 ---
 
 <Base title="Superintelligence" description="What superintelligence would and would not change for doom and abundance, and how likely it is to arrive by 2100." active="si">
-  <h1 class="text-2xl font-semibold">Superintelligence</h1>
-  <p class="mt-2 max-w-3xl ink-2">{definitions.superintelligence}</p>
+  <h1 class="serif text-5xl tracking-tight">Superintelligence</h1>
+  <p class="mt-3 max-w-2xl text-lg leading-snug">{definitions.superintelligence}</p>
 
   <section class="mt-6 grid gap-4 sm:grid-cols-3">
     <div class="card p-5">
@@ -48,10 +51,15 @@ const muskBad = 0.2
       <p class="text-4xl font-semibold tracking-tight">{pct(world.si.doom)} <span class="text-xl muted">vs {pct(world.noSi.doom)}</span></p>
     </div>
   </section>
-  <p class="mt-2 text-xs muted">Judged by {verdict.model}, median of {verdict.runs} runs. Compare with outside views below.</p>
+  <p class="mt-2 text-xs muted">Judged by {verdict.model}, median of {verdict.worldRuns} runs. <a class="underline" href="/learn/superintelligence/">What superintelligence means</a> · <a class="underline" href="/learn/ai_loss_of_control/">Loss of control</a> · <a class="underline" href="/learn/ai_horizon/">The AI task horizon</a></p>
+
+  <section class="card mt-8 p-6">
+    <h2 class="card-title mb-3"><span class="square" style="background: var(--theme-ai)"></span>When superintelligence might arrive</h2>
+    <ArrivalChart series={arrivalSeries} judged={[{ year: 2050, probability: world.siBy2050 }, { year: 2100, probability: world.siBy2100 }]} />
+  </section>
 
   <section class="mt-10 card p-6">
-    <h2 class="text-xl font-semibold">The claim being tested</h2>
+    <h2 class="card-title">The claim being tested</h2>
     <div class="prose-site max-w-3xl">
       <p>
         Elon Musk argues that AI and robots will bring abundance, with “universal high income” and work becoming optional.
@@ -69,7 +77,7 @@ const muskBad = 0.2
   </section>
 
   <section class="mt-10 card overflow-x-auto p-6">
-    <h2 class="text-xl font-semibold">Where intelligence is the bottleneck, and where it is not</h2>
+    <h2 class="card-title">Where intelligence is the bottleneck, and where it is not</h2>
     <p class="mt-1 max-w-3xl text-sm ink-2">
       The site's working hypothesis, open to challenge. It is not given to the judge, so the probabilities do not simply
       echo it.
@@ -118,25 +126,25 @@ const muskBad = 0.2
   </section>
 
   <section class="mt-10 card flex flex-col gap-4 p-6">
-    <h2 class="text-xl font-semibold">What SI changes, country by country</h2>
+    <h2 class="card-title">What SI changes, region by region</h2>
     <SiLegend />
     <div class="grid gap-6 lg:grid-cols-2">
       <Dumbbell
         title="P(abundance in 2100)"
         max={1}
-        rows={countries.map((c) => { const j = judgmentFor({ id: c.id }); return { name: c.name, flag: c.flag, withSi: j.si.abundance, withoutSi: j.noSi.abundance } })}
+        rows={judgedRegions.map(({ region, judged }) => ({ name: region.name, flag: region.mark, withSi: judged.si.abundance, withoutSi: judged.noSi.abundance }))}
       />
       <Dumbbell
         title="P(collapse before 2100)"
         max={1}
-        rows={countries.map((c) => { const j = judgmentFor({ id: c.id }); return { name: c.name, flag: c.flag, withSi: j.si.collapse, withoutSi: j.noSi.collapse } })}
+        rows={judgedRegions.map(({ region, judged }) => ({ name: region.name, flag: region.mark, withSi: judged.si.collapse, withoutSi: judged.noSi.collapse }))}
       />
     </div>
   </section>
 
-  <section class="mt-10 grid gap-6 lg:grid-cols-2">
+  <section class="mt-10">
     <div class="card p-6">
-      <h2 class="text-xl font-semibold">Both edges</h2>
+      <h2 class="card-title">Both edges</h2>
       <div class="prose-site">
         <p>
           Superintelligence is the strongest counterforce on the site, and the main source of a new risk. With SI, the
@@ -147,8 +155,8 @@ const muskBad = 0.2
         <p>
           {
             widerEverywhere
-              ? 'The result is a wider spread of outcomes. In every country the judge sees both abundance and collapse as more likely with SI than without it.'
-              : 'In some countries SI makes both abundance and collapse more likely; in others it shifts the odds one way only.'
+              ? 'The result is a wider spread of outcomes. In every region the judges see both abundance and collapse as more likely with SI than without it.'
+              : 'In some regions SI makes both abundance and collapse more likely; in others it shifts the odds one way only.'
           }
         </p>
         <p>
@@ -157,16 +165,12 @@ const muskBad = 0.2
         </p>
       </div>
     </div>
-    <div class="card p-6">
-      <h2 class="text-xl font-semibold">Judge's reasoning</h2>
-      <p class="prose-site">{world.rationale}</p>
-    </div>
   </section>
 
   {
     evidenceGroups.map((group) => (
       <section class="mt-10 card overflow-x-auto p-6">
-        <h2 class="text-xl font-semibold">{group.title}</h2>
+        <h2 class="card-title">{group.title}</h2>
         <table class="data mt-3 min-w-[700px]">
           <thead>
             <tr>

@@ -37,7 +37,7 @@ export function Dumbbell({ rows, title, max }: { rows: DumbbellRow[]; title: str
               <text x={0} y={y + 4} fontSize={13} fill="var(--ink)">
                 {row.flag} {row.name}
               </text>
-              <line x1={x(row.withoutSi)} x2={x(row.withSi)} y1={y} y2={y} stroke="var(--axis)" strokeWidth={2} strokeLinecap="round" />
+              <line x1={x(row.withoutSi)} x2={x(row.withSi)} y1={y} y2={y} stroke="var(--line)" strokeWidth={2} strokeLinecap="round" />
               <circle cx={x(row.withoutSi)} cy={y} r={5} fill="var(--without-si)" stroke="var(--surface)" strokeWidth={2} />
               <circle cx={x(row.withSi)} cy={y} r={5} fill="var(--with-si)" stroke="var(--surface)" strokeWidth={2} />
             </g>

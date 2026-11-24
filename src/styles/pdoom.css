@@ -1,72 +1,61 @@
 @import "tailwindcss" source("..");
 
-/* Roles, not raw hex: every chart and component reads these. Dark values are selected, not flipped. */
+/*
+ * Light, editorial dashboard: white page, hairline cards, serif titles, sans body.
+ * Charts read these roles, never raw hex.
+ */
 :root {
   color-scheme: light;
-  --page: #f9f9f7;
-  --surface: #fcfcfb;
-  --surface-2: #f3f2ee;
-  --ink: #0b0b0b;
-  --ink-2: #52514e;
-  --ink-muted: #898781;
-  --grid: #e1e0d9;
-  --axis: #c3c2b7;
-  --ring: rgba(11, 11, 11, 0.1);
+  --page: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #f3f3f1;
+  --pill: #ececea;
+  --ink: #000000;
+  --ink-2: #4d4d4b;
+  --ink-muted: #8a8985;
+  --line: #d9d9d9;
+  --grid: #ebebe8;
+  --track: #efefec;
+  --zone-limit: #fbe3b6;
+  --zone-danger: #f7c9c6;
+  --tick-limit: #a86a00;
+  --tick-danger: #b42d2d;
   --abundance: #2a78d6;
-  --muddle: #a8a79f;
+  --muddle: #b5b4ad;
   --muddle-ink: #0b0b0b;
   --collapse: #e34948;
-  --pressure: #e34948;
-  --pressure-track: #f6dada;
-  --strength: #2a78d6;
-  --strength-track: #dce8f8;
-  --limit: #0b0b0b;
-  --good: #006300;
-  --critical: #b42d2d;
-  --accent: #2a78d6;
   --with-si: #6250d6;
   --without-si: #eb6834;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-    --page: #0d0d0d;
-    --surface: #1a1a19;
-    --surface-2: #232321;
-    --ink: #f0efec;
-    --ink-2: #c3c2b7;
-    --ink-muted: #898781;
-    --grid: #2c2c2a;
-    --axis: #383835;
-    --ring: rgba(255, 255, 255, 0.1);
-    --abundance: #3987e5;
-    --muddle: #6b6a65;
-    --muddle-ink: #ffffff;
-    --collapse: #e66767;
-    --pressure: #e66767;
-    --pressure-track: #3a2424;
-    --strength: #3987e5;
-    --strength-track: #1d2a3b;
-    --limit: #f0efec;
-    --good: #0ca30c;
-    --critical: #e66767;
-    --accent: #3987e5;
-    --with-si: #9085e9;
-    --without-si: #d95926;
-  }
+  --accent: #2a78d6;
+  --serif: "Iowan Old Style", "Source Serif Pro", Georgia, Cambria, "Times New Roman", serif;
+  --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  /* Square markers that name a theme, like a legend swatch. */
+  --theme-climate: #e34948;
+  --theme-earth: #1baf7a;
+  --theme-resources: #eda100;
+  --theme-society: #eb6834;
+  --theme-people: #e87ba4;
+  --theme-ai: #6250d6;
+  --theme-push-back: #2a78d6;
+  --theme-essentials: #008300;
 }
 
 html {
   background: var(--page);
   color: var(--ink);
-  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-family: var(--sans);
+}
+
+/* Component classes live in a layer, so Tailwind utilities (hidden, absolute, …) always win. */
+@layer components {
+.serif {
+  font-family: var(--serif);
 }
 
 .card {
   background: var(--surface);
-  border: 1px solid var(--ring);
-  border-radius: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
 }
 
 .muted {
@@ -87,9 +76,73 @@ html {
   text-underline-offset: 2px;
 }
 
-/* Hover tooltip for any element carrying data-tip. */
-[data-tip] {
-  position: relative;
+.square {
+  display: inline-block;
+  width: 0.7em;
+  height: 0.7em;
+  flex: none;
+}
+
+/* Pill navigation and segmented controls. */
+.pill-group {
+  display: inline-flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  gap: 2px;
+  padding: 3px;
+  border-radius: 18px;
+  background: var(--pill);
+}
+
+.pill {
+  border-radius: 9999px;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.875rem;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.pill[aria-current="page"],
+.pill[aria-pressed="true"] {
+  background: var(--ink);
+  color: #ffffff;
+}
+
+.pill:not([aria-current="page"]):not([aria-pressed="true"]):hover {
+  background: #dfdfdc;
+}
+
+/* A pill that stands alone, outside a pill group. */
+.pill-solo:not([aria-current="page"]):not([aria-pressed="true"]) {
+  background: var(--pill);
+}
+
+.section-title {
+  font-family: var(--serif);
+  font-size: 1.875rem;
+  line-height: 1.15;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.card-title {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  line-height: 1.2;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+}
+
+/* Hover tooltip for any element carrying data-tip. Layered, so utilities such as `absolute` still win. */
+@layer components {
+  [data-tip] {
+    position: relative;
+  }
 }
 
 [data-tip]:hover::after,
@@ -101,7 +154,7 @@ html {
   transform: translateX(-50%);
   white-space: pre;
   background: var(--ink);
-  color: var(--surface);
+  color: #ffffff;
   font-size: 12px;
   line-height: 1.35;
   padding: 6px 8px;
@@ -118,15 +171,16 @@ html {
 }
 
 .prose-site h2 {
-  font-size: 1.35rem;
-  font-weight: 650;
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 400;
   margin: 2rem 0 0.5rem;
   color: var(--ink);
 }
 
 .prose-site h3 {
   font-size: 1.05rem;
-  font-weight: 650;
+  font-weight: 600;
   margin: 1.5rem 0 0.25rem;
   color: var(--ink);
 }
@@ -142,18 +196,10 @@ html {
   margin: 0.3rem 0;
 }
 
-.prose-site code,
 .prose-site pre {
-  font-size: 0.85em;
+  font-size: 0.8rem;
   background: var(--surface-2);
-  border-radius: 6px;
-}
-
-.prose-site code {
-  padding: 0.1em 0.35em;
-}
-
-.prose-site pre {
+  border-radius: 8px;
   padding: 1rem;
   overflow-x: auto;
   white-space: pre-wrap;
@@ -167,9 +213,9 @@ table.data {
 
 table.data th {
   text-align: left;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--ink-2);
-  border-bottom: 1px solid var(--axis);
+  border-bottom: 1px solid var(--line);
   padding: 0.5rem 0.6rem;
   white-space: nowrap;
 }

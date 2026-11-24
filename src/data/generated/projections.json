@@ -1,0 +1,1478 @@
+[
+ {
+  "factorId": "water_stress",
+  "entity": "AFG",
+  "value": 3.61,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "AGO",
+  "value": 2.05,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "ALB",
+  "value": 3.74,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "AND",
+  "value": 4.59,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "ARE",
+  "value": 5.0,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "ARG",
+  "value": 2.25,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "ARM",
+  "value": 3.4,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "AUS",
+  "value": 3.16,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "AUT",
+  "value": 0.29,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "AZE",
+  "value": 2.85,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "BDI",
+  "value": 0.51,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "BEL",
+  "value": 4.47,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "BEN",
+  "value": 0.57,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "BFA",
+  "value": 3.12,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "BGD",
+  "value": 2.79,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "BGR",
+  "value": 1.58,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "BHR",
+  "value": 5.0,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "BIH",
+  "value": 0.68,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "BLR",
+  "value": 1.25,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "BLZ",
+  "value": 0.05,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "BOL",
+  "value": 0.47,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "BRA",
+  "value": 1.24,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "BRN",
+  "value": 0.0,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "BTN",
+  "value": 0.82,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "BWA",
+  "value": 4.41,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "CAF",
+  "value": 0.44,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "CAN",
+  "value": 1.36,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "CHE",
+  "value": 0.5,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "CHL",
+  "value": 4.55,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "CHN",
+  "value": 2.76,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "CIV",
+  "value": 0.05,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "CMR",
+  "value": 0.13,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "COD",
+  "value": 0.48,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "COG",
+  "value": 0.16,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "COL",
+  "value": 0.56,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "CRI",
+  "value": 0.93,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "CUB",
+  "value": 2.0,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "CYP",
+  "value": 5.0,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "CZE",
+  "value": 2.19,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "DEU",
+  "value": 2.07,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "DJI",
+  "value": 0.02,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "DNK",
+  "value": 0.98,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "DOM",
+  "value": 1.58,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "DZA",
+  "value": 4.74,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "ECU",
+  "value": 1.09,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "EGY",
+  "value": 4.46,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "ERI",
+  "value": 3.02,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "ESP",
+  "value": 4.49,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "EST",
+  "value": 1.23,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "ETH",
+  "value": 1.36,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "FIN",
+  "value": 0.87,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "FRA",
+  "value": 2.27,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "GAB",
+  "value": 0.0,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "GBR",
+  "value": 1.54,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "GEO",
+  "value": 1.2,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "GHA",
+  "value": 1.05,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "GIN",
+  "value": 0.29,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "GMB",
+  "value": 0.67,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "GNB",
+  "value": 0.68,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "GNQ",
+  "value": 0.0,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "GRC",
+  "value": 4.57,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "GTM",
+  "value": 1.72,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "GUY",
+  "value": 2.54,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "HND",
+  "value": 0.66,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "HRV",
+  "value": 0.26,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "HTI",
+  "value": 1.58,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "HUN",
+  "value": 0.4,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "IDN",
+  "value": 2.04,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "IND",
+  "value": 4.02,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "IRL",
+  "value": 0.33,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "IRN",
+  "value": 4.7,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "IRQ",
+  "value": 4.74,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "ISL",
+  "value": 0.0,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "ISR",
+  "value": 4.97,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "ITA",
+  "value": 3.49,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "JAM",
+  "value": 0.01,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "JOR",
+  "value": 4.92,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "JPN",
+  "value": 1.79,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "KAZ",
+  "value": 2.98,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "KEN",
+  "value": 1.78,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "KGZ",
+  "value": 3.42,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "KHM",
+  "value": 1.66,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "KOR",
+  "value": 2.29,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "KWT",
+  "value": 4.26,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "LAO",
+  "value": 0.91,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "LBN",
+  "value": 5.0,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "LBR",
+  "value": 0.0,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "LBY",
+  "value": 4.92,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "LIE",
+  "value": 0.9,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "LKA",
+  "value": 2.22,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "LSO",
+  "value": 3.63,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "LTU",
+  "value": 2.04,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "LUX",
+  "value": 3.26,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "LVA",
+  "value": 0.52,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "MAR",
+  "value": 4.22,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "MDA",
+  "value": 1.27,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "MDG",
+  "value": 1.49,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "MEX",
+  "value": 3.92,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "MKD",
+  "value": 3.48,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "MLI",
+  "value": 1.4,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "MMR",
+  "value": 2.21,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "MNE",
+  "value": 0.94,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "MNG",
+  "value": 3.72,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "MOZ",
+  "value": 2.28,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "MRT",
+  "value": 2.86,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "MWI",
+  "value": 1.01,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "MYS",
+  "value": 1.18,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "NAM",
+  "value": 4.09,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "NER",
+  "value": 3.29,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "NGA",
+  "value": 1.51,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "NIC",
+  "value": 0.44,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "NLD",
+  "value": 1.63,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "NOR",
+  "value": 0.21,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "NPL",
+  "value": 2.98,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "NZL",
+  "value": 0.18,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "OMN",
+  "value": 5.0,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "PAK",
+  "value": 3.68,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "PAN",
+  "value": 1.21,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "PER",
+  "value": 3.57,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "PHL",
+  "value": 2.64,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "PNG",
+  "value": 0.0,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "POL",
+  "value": 1.69,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "PRK",
+  "value": 2.4,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "PRT",
+  "value": 3.67,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "PRY",
+  "value": 0.0,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "QAT",
+  "value": 5.0,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "ROU",
+  "value": 1.23,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "RUS",
+  "value": 1.35,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "RWA",
+  "value": 0.53,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "SAU",
+  "value": 4.89,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "SDN",
+  "value": 1.56,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "SEN",
+  "value": 3.36,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "SLE",
+  "value": 0.0,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "SLV",
+  "value": 2.75,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "SMR",
+  "value": 4.71,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "SOM",
+  "value": 1.42,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "SRB",
+  "value": 1.29,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "SSD",
+  "value": 0.85,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "SUR",
+  "value": 1.66,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "SVK",
+  "value": 1.64,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "SVN",
+  "value": 0.61,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "SWE",
+  "value": 0.89,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "SWZ",
+  "value": 0.91,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "SYR",
+  "value": 4.21,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "TCD",
+  "value": 1.36,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "TGO",
+  "value": 0.67,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "THA",
+  "value": 3.71,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "TJK",
+  "value": 2.69,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "TKM",
+  "value": 3.75,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "TLS",
+  "value": 1.87,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "TUN",
+  "value": 4.93,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "TUR",
+  "value": 3.74,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "TZA",
+  "value": 2.72,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "UGA",
+  "value": 0.9,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "UKR",
+  "value": 1.47,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "URY",
+  "value": 1.56,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "USA",
+  "value": 2.78,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "UZB",
+  "value": 3.75,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "VEN",
+  "value": 1.91,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "VNM",
+  "value": 2.24,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "YEM",
+  "value": 4.49,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "ZAF",
+  "value": 4.38,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "ZMB",
+  "value": 1.25,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ },
+ {
+  "factorId": "water_stress",
+  "entity": "ZWE",
+  "value": 2.68,
+  "year": 2050,
+  "scenario": "business as usual",
+  "source": "WRI Aqueduct 4.0",
+  "url": "https://www.wri.org/data/aqueduct-40-country-rankings"
+ }
+]

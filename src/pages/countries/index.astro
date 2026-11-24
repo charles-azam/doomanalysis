@@ -1,0 +1,17 @@
+---
+import Base from '../../layouts/Base.astro'
+import { Leaderboard } from '../../components/Leaderboard.tsx'
+import { countries, regions } from '../../data/entities.ts'
+import { entityRows } from '../../data/site.ts'
+---
+
+<Base title="Countries and regions" description="Collapse, muddling through or abundance by 2100 for every country and region, with and without superintelligence." active="countries">
+  <h1 class="serif text-5xl tracking-tight">Countries and regions</h1>
+  <p class="mt-3 max-w-2xl text-lg leading-snug">
+    {regions.length} regions and {countries.length} countries. Each bar splits 2100 into three outcomes: abundance,
+    muddling through, or collapse along the way.
+  </p>
+  <section class="card mt-8 p-6">
+    <Leaderboard client:load rows={entityRows} regions={regions.map((r) => ({ id: r.id, name: r.name }))} />
+  </section>
+</Base>

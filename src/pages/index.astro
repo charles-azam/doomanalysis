@@ -1,167 +1,118 @@
 ---
 import Base from '../layouts/Base.astro'
 import FactorCard from '../components/FactorCard.astro'
-import { Leaderboard } from '../components/Leaderboard.tsx'
-import { Dumbbell, SiLegend } from '../components/Dumbbell.tsx'
-import { PairedBars } from '../components/PairedBars.tsx'
-import { pathwayLabels } from '../data/labels.ts'
-import { Scatter } from '../components/Scatter.tsx'
-import { OutcomeBar, OutcomeLegend } from '../components/OutcomeBar.tsx'
-import { countries } from '../data/countries.ts'
-import { definitions } from '../data/definitions.ts'
-import { indices, judgmentFor, latestJudgeDate, leaderboardRows, measuredFactorCount, scored, verdict } from '../data/site.ts'
-import { formatPercent, pathways, weighted, worldOutcome } from '../model/judgment.ts'
+import { Highlights } from '../components/Highlights.tsx'
+import { factors } from '../data/factors.ts'
+import { pathwayLabelsShort } from '../data/labels.ts'
+import { globalSections } from '../data/sections.ts'
+import { entityRows, latestJudgeDate, observationCount, projectionFor, verdict } from '../data/site.ts'
+import { countries, regions } from '../data/entities.ts'
+import { regionShort } from '../data/labels.ts'
+import { observations } from '../data/observations.ts'
+import { formatPercent, pathways, weighted } from '../model/judgment.ts'
+import { observationFor } from '../model/score.ts'
+import type { ScenarioKey } from '../model/types.ts'
 
 const world = verdict.world
 const doom = weighted({ world: world, pick: (s) => s.doom })
-const abundance = weighted({ world: world, pick: (s) => s.abundance })
-const drivers = scored({ entity: 'WLD', family: 'driver' })
-const counterforces = scored({ entity: 'WLD', family: 'counterforce' })
-const pillars = scored({ entity: 'WLD', family: 'pillar' })
-const dumbbellRows = countries.map((country) => {
-  const judged = judgmentFor({ id: country.id })
-  return { name: country.name, flag: country.flag, judged: judged }
-})
-const scatterPoints = countries.map((country) => {
-  const index = indices({ entity: country.id })
-  return { name: country.name, flag: country.flag, slug: country.slug, x: index.pressure, y: index.resilience }
-})
-const pct = (value: number) => formatPercent({ value: value })
+const keys: ScenarioKey[] = ['weighted', 'si', 'noSi']
+const by = (pick: (scenario: ScenarioKey) => number) => Object.fromEntries(keys.map((k) => [k, pick(k)])) as Record<ScenarioKey, number>
+const rows = entityRows.map((row) => ({
+  id: row.id,
+  name: row.name,
+  short: row.kind === 'country' ? row.id : (regionShort[row.id] ?? row.name),
+  mark: row.mark,
+  kind: row.kind,
+  href: row.href,
+  outcomes: row.outcomes,
+}))
+const defaults = entityRows.filter((row) => row.kind !== 'country').map((row) => row.id)
+const pathwayRows = pathways.map((pathway) => ({
+  key: pathway,
+  label: pathwayLabelsShort[pathway],
+  value: by((k) => (k === 'weighted' ? weighted({ world: world, pick: (s) => s.pathways[pathway] }) : world[k].pathways[pathway])),
+}))
+const sectionFactors = globalSections.map((section) => ({
+  section: section,
+  items: factors
+    .filter((factor) => factor.scope === 'global' && section.themes.includes(factor.theme))
+    .flatMap((factor) => {
+      const observation = observationFor({ observations: observations, factorId: factor.id, entity: 'WLD' })
+      return observation === undefined ? [] : [{ factor: factor, observation: observation, projection: projectionFor({ factorId: factor.id, entity: 'WLD' }) }]
+    }),
+}))
+const latest = [
+  { tag: 'Climate', title: 'Climate Action Tracker, November 2026', text: '2.7 °C by 2100 on current policies: 92% chance of passing 2 °C, 33% of passing 3 °C.', href: '/learn/warming/' },
+  { tag: 'Earth', title: 'Planetary Health Check 2026', text: '7 of 9 boundaries crossed; the ocean just passed its acidification limit.', href: '/learn/ocean_acidification/' },
+  { tag: 'War', title: 'SIPRI and UCDP, 2026', text: '12,187 nuclear warheads; 65 state conflicts in 2025, a record for the third year running.', href: '/learn/nuclear_warheads/' },
+  { tag: 'AI', title: 'METR, November 2026', text: 'The best model completes tasks of about 40 hours of expert work, doubling every few months.', href: '/learn/ai_horizon/' },
+]
 ---
 
-<Base title="P(doom)" description="The probability of doom, collapse and abundance by 2100, for the world and by country, built from sourced indicators and the superintelligence hypothesis." active="home">
-  <section class="grid gap-6 lg:grid-cols-[1.3fr_1fr]">
-    <div class="card flex flex-col gap-4 p-6">
-      <p class="text-sm font-semibold uppercase tracking-wide muted">P(doom) by 2100</p>
-      <p class="text-7xl font-semibold tracking-tight">{pct(doom)}</p>
-      <p class="max-w-prose ink-2">
-        The chance that humanity suffers human extinction or an irreversible, civilization-wide collapse before 2100.
-      </p>
-      <OutcomeBar outcome={worldOutcome({ world: world, scenario: 'weighted' })} name="World" collapseLabel="Doom" />
-      <OutcomeLegend collapseLabel="Doom" />
-      <p class="text-xs muted">
-        Judged by {verdict.model} from {measuredFactorCount} sourced indicators: median of {verdict.runs} independent runs (range {pct(verdict.spread.doom.low)}–{pct(verdict.spread.doom.high)}). Updated {latestJudgeDate}. It is a judgment, not a measurement. <a class="link" href="/methodology/">How it is made</a>.
+<Base title="P(doom)" description="The probability of doom, collapse and abundance by 2100, for the world and by country, with and without superintelligence, built from sourced indicators." active="home">
+  <section class="grid grid-cols-1 gap-8 pb-10 pt-4 lg:grid-cols-[1fr_340px]">
+    <div>
+      <h1 class="serif text-5xl leading-[1.02] tracking-tight sm:text-7xl">
+        {formatPercent({ value: doom })} chance of doom<br />by 2100
+      </h1>
+      <p class="mt-5 max-w-xl text-lg leading-snug">
+        Independent estimates of collapse and abundance for the world, {regions.length} regions and {countries.length} countries,
+        from {observationCount.toLocaleString('en-US')} sourced data points, with and without superintelligence.
       </p>
     </div>
-    <div class="grid gap-4">
-      <div class="card p-5">
-        <p class="text-sm muted">Superintelligence before 2100</p>
-        <p class="text-4xl font-semibold tracking-tight">{pct(world.siBy2100)}</p>
-        <p class="text-sm ink-2">{pct(world.siBy2050)} by 2050. <a class="link" href="/superintelligence/">What SI would change</a></p>
-      </div>
-      <div class="card grid grid-cols-2 gap-4 p-5">
-        <div>
-          <p class="text-sm muted">P(doom) if SI arrives</p>
-          <p class="text-3xl font-semibold tracking-tight">{pct(world.si.doom)}</p>
-        </div>
-        <div>
-          <p class="text-sm muted">P(doom) if it never does</p>
-          <p class="text-3xl font-semibold tracking-tight">{pct(world.noSi.doom)}</p>
-        </div>
-      </div>
-      <div class="card grid grid-cols-2 gap-4 p-5">
-        <div>
-          <p class="text-sm muted">Global abundance if SI arrives</p>
-          <p class="text-3xl font-semibold tracking-tight">{pct(world.si.abundance)}</p>
-        </div>
-        <div>
-          <p class="text-sm muted">Global abundance if not</p>
-          <p class="text-3xl font-semibold tracking-tight">{pct(world.noSi.abundance)}</p>
-        </div>
-      </div>
-    </div>
+    <ul class="flex flex-col divide-y" style="border-color: var(--line)">
+      {
+        latest.map((item) => (
+          <li class="py-3 first:pt-0">
+            <a href={item.href} class="block hover:opacity-80">
+              <p class="text-[11px] font-medium uppercase tracking-wide" style="color: var(--with-si)">{item.tag}</p>
+              <p class="text-[15px]">{item.title}</p>
+              <p class="text-sm muted">{item.text}</p>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
   </section>
 
-  <section class="mt-10 card p-6">
-    <h2 class="text-xl font-semibold">The question</h2>
-    <div class="prose-site max-w-3xl">
-      <p>
-        One camp argues that superintelligence makes abundance almost inevitable: once intelligence is cheap, energy, food,
-        medicine and housing follow. This site tests that claim against the physical world. Superintelligence may well
-        arrive. But oceans acidify on their own schedule, mines take years to open, and clinical trials take years to run.
-        Wars and failing states do not wait for better models.
-      </p>
-      <p>
-        So every number here is shown twice, <strong>with</strong> and <strong>without</strong> superintelligence. The gap between the
-        two is what intelligence buys. What it cannot buy shows up in the <a class="link" href="/factors/">factors</a>.
-      </p>
-      <p class="text-sm">Abundance: {definitions.abundance} Collapse: {definitions.collapse}</p>
-    </div>
-  </section>
+  <Highlights client:load rows={rows} pathways={pathwayRows} defaults={defaults} />
 
-  <section class="mt-10 card p-6">
-    <div class="mb-4 flex flex-wrap items-baseline justify-between gap-2">
-      <h2 class="text-xl font-semibold">Collapse, muddling through or abundance by 2100</h2>
-      <a class="link text-sm" href="/methodology/#definitions">Definitions</a>
+  <div class="mt-16 grid grid-cols-1 gap-10 lg:grid-cols-[180px_1fr]">
+    <aside class="hidden lg:block">
+      <ul class="sticky top-24 flex flex-col gap-2 text-sm">
+        {
+          globalSections.map((section) => (
+            <li>
+              <a href={`#${section.id}`} class="flex items-center gap-2 hover:underline">
+                <span class="square" style={`background: ${section.color}`} />
+                {section.title}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </aside>
+    <div class="flex flex-col gap-14">
+      {
+        sectionFactors.map(({ section, items }) => (
+          <section id={section.id} class="scroll-mt-24">
+            <div class="mb-5 flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
+              <h2 class="section-title">
+                <span class="square" style={`background: ${section.color}`} />
+                {section.title}
+              </h2>
+              <a href={`/factors/#${items[0]?.factor.id ?? ''}`} class="inline-flex items-center gap-2 text-sm">
+                Sources <span class="inline-flex h-6 w-6 items-center justify-center rounded bg-black text-white">↗</span>
+              </a>
+            </div>
+            <div class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+              {items.map((item) => (
+                <FactorCard factor={item.factor} observation={item.observation} projection={item.projection} />
+              ))}
+            </div>
+          </section>
+        ))
+      }
     </div>
-    <Leaderboard client:load rows={leaderboardRows} siBy2100={world.siBy2100} />
-  </section>
-
-  <section class="mt-10 grid gap-6 lg:grid-cols-2">
-    <div class="card flex flex-col gap-4 p-6">
-      <h2 class="text-xl font-semibold">What superintelligence buys</h2>
-      <p class="text-sm ink-2">The line between the two dots is the change superintelligence makes, as judged.</p>
-      <SiLegend />
-      <Dumbbell
-        title="P(abundance in 2100)"
-        max={1}
-        rows={dumbbellRows.map((row) => ({ name: row.name, flag: row.flag, withSi: row.judged.si.abundance, withoutSi: row.judged.noSi.abundance }))}
-      />
-      <Dumbbell
-        title="P(collapse before 2100)"
-        max={1}
-        rows={dumbbellRows.map((row) => ({ name: row.name, flag: row.flag, withSi: row.judged.si.collapse, withoutSi: row.judged.noSi.collapse }))}
-      />
-    </div>
-    <div class="card flex flex-col gap-4 p-6">
-      <h2 class="text-xl font-semibold">How doom would happen</h2>
-      <p class="text-sm ink-2">
-        P(doom) split by main cause, with and without superintelligence. Loss of control goes from {pct(world.noSi.pathways.ai)} to {pct(world.si.pathways.ai)}; every other cause together goes from {pct(world.noSi.doom - world.noSi.pathways.ai)} to {pct(world.si.doom - world.si.pathways.ai)}.
-      </p>
-      <SiLegend />
-      <PairedBars items={pathways.map((pathway) => ({ label: pathwayLabels[pathway], withSi: world.si.pathways[pathway], withoutSi: world.noSi.pathways[pathway] }))} />
-      <p class="text-xs muted">{world.rationale}</p>
-    </div>
-  </section>
-
-  <section class="mt-10">
-    <div class="mb-4 flex flex-wrap items-baseline justify-between gap-2">
-      <h2 class="text-xl font-semibold">Pushing toward doom</h2>
-      <p class="text-sm muted">Pressure score: 0 is safe, 100 is the danger anchor. The black tick is the limit.</p>
-    </div>
-    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      {drivers.map((item) => <FactorCard factor={item.factor} observation={item.observation} />)}
-    </div>
-  </section>
-
-  <section class="mt-10">
-    <div class="mb-4 flex flex-wrap items-baseline justify-between gap-2">
-      <h2 class="text-xl font-semibold">Pushing back</h2>
-      <p class="text-sm muted">Strength score: 100 is the strongest push back.</p>
-    </div>
-    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-      {counterforces.map((item) => <FactorCard factor={item.factor} observation={item.observation} />)}
-    </div>
-  </section>
-
-  <section class="mt-10">
-    <div class="mb-4 flex flex-wrap items-baseline justify-between gap-2">
-      <h2 class="text-xl font-semibold">The five essentials today, worldwide</h2>
-      <p class="text-sm muted">Abundance needs 90% coverage of each. Security is measured per country.</p>
-    </div>
-    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-      {pillars.map((item) => <FactorCard factor={item.factor} observation={item.observation} />)}
-    </div>
-  </section>
-
-  <section class="mt-10 card p-6">
-    <h2 class="text-xl font-semibold">Pressure against resilience</h2>
-    <p class="mt-1 max-w-3xl text-sm ink-2">
-      Two mechanical indices, each an equal-weight average of a country's factor scores. They are measured, not judged.
-      The probabilities above are judged from these and the global factors.
-    </p>
-    <div class="mt-4 max-w-3xl">
-      <Scatter points={scatterPoints} />
-    </div>
-  </section>
+  </div>
 </Base>

@@ -1,0 +1,45 @@
+---
+import { getCollection, render } from 'astro:content'
+import Base from '../../layouts/Base.astro'
+import FactorCard from '../../components/FactorCard.astro'
+import { factors } from '../../data/factors.ts'
+import { observations } from '../../data/observations.ts'
+import { projectionFor } from '../../data/site.ts'
+import { observationFor } from '../../model/score.ts'
+
+export async function getStaticPaths() {
+  const entries = await getCollection('explainers')
+  return entries.map((entry) => ({ params: { id: entry.data.factor }, props: { entry: entry } }))
+}
+
+const { entry } = Astro.props
+const { Content } = await render(entry)
+const factor = factors.find((f) => f.id === entry.data.factor)
+const example = factor?.scope === 'global' ? 'WLD' : 'FRA'
+const observation = factor ? observationFor({ observations: observations, factorId: factor.id, entity: example }) : undefined
+---
+
+<Base title={entry.data.title} description={entry.data.summary} active="factors">
+  <div class="grid gap-10 lg:grid-cols-[1fr_380px]">
+    <article class="prose-site max-w-2xl">
+      <p class="text-sm muted"><a class="underline" href="/factors/">Factors</a> · Explainer</p>
+      <h1 class="serif mt-2 text-5xl leading-[1.05] tracking-tight" style="color: var(--ink)">{entry.data.title}</h1>
+      <p class="text-lg leading-snug" style="color: var(--ink)">{entry.data.summary}</p>
+      <Content />
+      <h2>Sources</h2>
+      <ul>
+        {entry.data.sources.map((source) => <li><a class="link" href={source.url} target="_blank" rel="noopener">{source.label}</a></li>)}
+      </ul>
+    </article>
+    <aside class="lg:pt-24">
+      {
+        factor && observation && (
+          <div class="lg:sticky lg:top-24">
+            <p class="mb-2 text-xs muted">{factor.scope === 'global' ? 'Worldwide' : 'Example: France'}. Every country has this card on its page.</p>
+            <FactorCard factor={factor} observation={observation} projection={projectionFor({ factorId: factor.id, entity: example })} />
+          </div>
+        )
+      }
+    </aside>
+  </div>
+</Base>

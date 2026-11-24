@@ -1,98 +1,137 @@
 ---
 import Base from '../layouts/Base.astro'
-import { buildPrompt, promptVersion } from '../../judge/prompt.ts'
+import { buildWorldPrompt, promptVersion } from '../../judge/prompt.ts'
 import { definitions, horizon } from '../data/definitions.ts'
+import { countries, regions } from '../data/entities.ts'
 import { judgeRuns } from '../data/judgments.ts'
-import { latestJudgeDate, measuredFactorCount, verdict } from '../data/site.ts'
+import { observations } from '../data/observations.ts'
+import { latestJudgeDate, verdict } from '../data/site.ts'
+import { muskEvidence } from '../data/evidence.ts'
 
-const prompt = buildPrompt()
+const prompt = buildWorldPrompt()
+const batches = [...new Set(judgeRuns.map((run) => run.batch))].map((batch) => ({
+  batch: batch,
+  runs: judgeRuns.filter((run) => run.batch === batch).length,
+  places: new Set(judgeRuns.filter((run) => run.batch === batch).flatMap((run) => run.entities.map((e) => e.entity))).size,
+}))
+const essentialsCost = observations.find((o) => o.factorId === 'essentials_cost' && o.entity === 'FRA')
 ---
 
-<Base title="Methodology" description="How Doom Analysis defines doom, collapse and abundance, scores its factors, and turns them into judged probabilities." active="methodology">
+<Base title="Methodology" description="How Doom Analysis defines doom, collapse and abundance, gathers its data, and turns it into judged probabilities." active="methodology">
   <article class="prose-site max-w-3xl">
-    <h1 class="text-2xl font-semibold" style="color: var(--ink)">Methodology</h1>
+    <h1 class="serif text-5xl tracking-tight" style="color: var(--ink)">Methodology</h1>
     <p>
-      The site has three layers. <strong>Factors</strong> are measured by others and cited. <strong>Indices</strong> are
-      mechanical averages of factor scores. <strong>Probabilities</strong> are judgments made from the factors, under
-      fixed definitions. Each layer is labelled, so a measured number never passes for a guess, or the reverse.
+      Doom Analysis has three layers. <strong>Factors</strong> are measured by others and cited, with a forecast for
+      {horizon} and the chance of crossing the thresholds that matter. <strong>Indices</strong> are mechanical averages.
+      <strong>Probabilities</strong> are judgments made from the factors under fixed definitions. Each layer is labelled,
+      so a measurement never passes for a guess, or the reverse.
     </p>
 
-    <h2 id="definitions">Definitions</h2>
-    <p>Every probability refers to the end of {horizon}. The definitions never change when the evidence does.</p>
+    <h2 id="abundance">What we mean by abundance</h2>
+    <p>
+      The site exists to test one claim. Elon Musk and others argue that superintelligence and robots will make
+      essentials so cheap that work becomes optional: “universal high income”, a world of
+      “{muskEvidence.find((e) => e.id === 'tesla_mp4') ? 'sustainable abundance' : 'abundance'}”. Meeting basic needs is not
+      that claim. Rich countries already provide electricity, water and food to almost everyone, at a real cost.
+    </p>
+    <p><strong>{definitions.abundance}</strong></p>
+    <p>{definitions.abundanceWhy}</p>
+    <p>
+      The 10% line is the heart of the test. Today the essentials take a far larger share of national income
+      {essentialsCost ? `(about ${Math.round(essentialsCost.value)}% in France)` : ''}: food, home energy, water, health care
+      paid by households and by taxes, and the cost of security. A place reaches abundance only if superintelligence, or
+      anything else, brings that bill under a tenth of what the economy produces, for nearly everyone, and keeps it there
+      through shocks.
+    </p>
+
+    <h2 id="definitions">Other definitions</h2>
     <ul>
       <li><strong>The five essentials.</strong> {definitions.essentials}</li>
-      <li><strong>Abundance.</strong> {definitions.abundance}</li>
       <li><strong>Collapse.</strong> {definitions.collapse}</li>
       <li><strong>Doom.</strong> {definitions.doom}</li>
       <li><strong>Muddling through.</strong> {definitions.muddle}</li>
       <li><strong>Superintelligence.</strong> {definitions.superintelligence}</li>
     </ul>
     <p>
-      Abundance, muddling through and collapse are exclusive and add up to 100% for each country. Doom is global, so it
-      also counts as collapse for every country. That is why no country's P(collapse) can be lower than P(doom).
+      Abundance, muddling through and collapse are exclusive and add up to 100% for each place. Doom is global, so it
+      counts as collapse everywhere, which is why no place's P(collapse) can be lower than P(doom).
     </p>
 
-    <h2>Factors and scores</h2>
+    <h2 id="places">Places</h2>
     <p>
-      Each factor has a <em>good</em> anchor that scores 0 and a <em>bad</em> anchor that scores 100, with values clamped
-      outside that range. Some use a log scale (prices, warheads, income), where each tenfold change moves the score
-      the same amount. Fertility is two-sided: falling far below or rising far above 2.1 births per woman both add
-      pressure. Where a published threshold exists, such as a planetary boundary or WRI's “extremely high” water stress,
-      it is drawn as a tick and marked <em>published</em>. All other anchors are marked <em>judgment</em>, with a reason,
-      on the <a class="link" href="/factors/">factors page</a>.
+      The site covers the world, {regions.length} regions and {countries.length} countries: every country with a population
+      figure and at least ten of the indicators. The regions follow the UN's M49 groupings, with Europe split into
+      North, West, South and East. A region's value for an indicator is the population-weighted average of its
+      countries. It is only shown when countries with data hold at least half of the region's people.
+    </p>
+
+    <h2 id="factors">Factors, forecasts and thresholds</h2>
+    <p>
+      Each card shows a factor in its own units: today's value, the forecast for {horizon} where a published scenario
+      exists, and the thresholds that push toward doom. A threshold is marked <em>published</em> when it comes from a
+      named source (a planetary boundary, a tipping point, an official category) and <em>judgment</em> when it follows
+      this site's definitions. The chance of crossing each threshold by {horizon} is marked <em>published</em>,
+      <em>derived</em> (computed from a published distribution) or <em>judged</em>. These chances go into the judges'
+      evidence.
     </p>
     <p>
-      Factors are measured, not estimated. When a source has no value, the cell stays empty and the factor drops out of
-      that country's indices; nothing is filled in.
+      Country data comes from a re-runnable pipeline (<code>pdoom/pipeline</code>): the World Bank and IMF APIs, plus the
+      official files of the Global Peace Index 2026, ND-GAIN 2026 and WRI Aqueduct 4.0. When a source has no value,
+      the factor is left out for that place. Nothing is filled in.
     </p>
 
     <h2>Indices</h2>
     <p>
-      Like the composite indices on AI leaderboards, each index averages its benchmark scores, here with equal weights:
-    </p>
-    <ul>
-      <li><strong>Pressure index:</strong> the average of the drivers pushing toward collapse.</li>
-      <li><strong>Resilience index:</strong> the average strength of the counterforces.</li>
-      <li><strong>Essentials gap:</strong> the average pressure on the five essentials, plus a count of how many already reach the abundance threshold.</li>
-    </ul>
-    <p>
-      An index of 70 does not mean a 70% chance of anything. It is a summary of where a country stands. Turning
-      that into a probability takes a model or a judgment, which is the next layer.
+      Pressure, resilience and the essentials gap are equal-weight averages of factor scores, each factor scored 0–100
+      between two stated anchors. They summarize where a place stands. They are not probabilities.
     </p>
 
-    <h2>Probabilities: an AI judge, run several times</h2>
+    <h2 id="judges">Probabilities: AI judges, run several times</h2>
     <p>
-      Nobody has observed a civilization collapsing in a world with superintelligence, so no dataset can calibrate these
-      probabilities. Instead, a frontier model acts as the judge. It receives the fixed definitions and every factor value
-      above, then answers in a strict JSON format. The prompt is published below.
+      No dataset can calibrate the chance of collapse in a world with superintelligence. So frontier models act as
+      judges. They receive the fixed definitions and the evidence above, and answer in strict JSON.
     </p>
     <ul>
-      <li>Current judge: {verdict.model}, {verdict.runs} independent runs, last on {latestJudgeDate}. The headline is the median of each value; the spread is shown next to it.</li>
-      <li>Every run is checked for coherence before it reaches the site. Probabilities stay in [0, 1], abundance and collapse cannot add up to more than 1, a total is at least its largest cause and at most their sum, and P(SI by 2050) ≤ P(SI by 2100). A run that breaks a rule is rejected.</li>
-      <li>The judge gives each value twice, with and without superintelligence. The headline combines them by the law of total probability: P(X) = P(SI) × P(X | SI) + (1 − P(SI)) × P(X | no SI).</li>
+      <li>
+        <strong>World and regions:</strong> one batch, run independently three times. Each value shown is the median, with
+        the range beside it.
+      </li>
+      <li>
+        <strong>Spotlight countries</strong> (the most populous, plus Europe's majors): three runs each, judged against the
+        world consensus so that no country comes out safer than the world.
+      </li>
+      <li><strong>Every other country:</strong> one run, labelled as such.</li>
+      <li>
+        <strong>Coherence checks:</strong> every run is checked before it reaches the site, and an incoherent run is rejected.
+        Probabilities stay in [0, 1], abundance and collapse cannot exceed 100% together, a total is at least its largest
+        cause and at most their sum, and P(SI by 2050) ≤ P(SI by 2100).
+      </li>
+      <li>
+        <strong>Headline:</strong> it combines the two scenarios by the law of total probability: P(X) = P(SI) × P(X | SI) +
+        (1 − P(SI)) × P(X | no SI).
+      </li>
     </ul>
     <p>
-      Language models are not calibrated forecasters. They lean toward numbers common in their training data, and
-      they are sensitive to wording. The defences are a fixed, published prompt, several runs, and every input on the
-      page. A disagreement can always be traced to a number or a definition.
+      Current judge: {verdict.model}, last run {latestJudgeDate}. Language models are not calibrated forecasters; they lean
+      toward numbers common in their training data and are sensitive to wording. Hence the fixed, published prompt,
+      several runs, and every input visible on the page.
     </p>
 
     <h2>What this does not do yet</h2>
     <ul>
-      <li><strong>No backtest.</strong> Countries have collapsed before (Somalia, Syria, Lebanon, Venezuela). The next step is to score the factors as they stood in 2000 and check how well the indices predicted collapses by 2020. That would give country probabilities a calibrated anchor.</li>
-      <li><strong>One judge model.</strong> Running other frontier models and a superforecaster panel through the same prompt would show how much the answer depends on the judge.</li>
-      <li><strong>Hand-collected data.</strong> {measuredFactorCount} factors were collected in a November 2026 research pass. A scheduled pipeline should refresh them from their sources.</li>
-      <li><strong>Equal weights.</strong> Every factor counts the same in its index. Letting readers choose weights or presets is planned.</li>
-      <li><strong>Eight countries.</strong> The set was chosen for contrast, not coverage.</li>
+      <li><strong>No backtest.</strong> Countries have collapsed before (Somalia, Syria, Lebanon, Venezuela). Scoring the factors as they stood in 2000 against what happened by 2020 would give the country probabilities a calibrated anchor.</li>
+      <li><strong>One judge model.</strong> Other frontier models and human forecasters should answer the same prompt.</li>
+      <li><strong>The cost of the essentials</strong> is estimated for a set of countries only; the component data is uneven.</li>
+      <li><strong>Equal weights</strong> in the indices. Reader-chosen weights are planned.</li>
     </ul>
-
-    <h2>The judge prompt (version {promptVersion})</h2>
-    <p>This is the exact text sent to every run, generated from the site's own data files.</p>
-    <pre>{prompt}</pre>
 
     <h2>Run log</h2>
     <ul>
-      {judgeRuns.map((run) => <li>{run.id}: {run.model}, {run.date}, {run.method}</li>)}
+      {batches.map((b) => <li>{b.batch}: {b.runs} {b.runs === 1 ? 'run' : 'runs'}, {b.places} places</li>)}
     </ul>
+
+    <h2>The world judge prompt (version {promptVersion})</h2>
+    <p>This is the exact text sent to every world run, generated from the site's own data files. Country batches use the same definitions and rules.</p>
+    <pre>{prompt}</pre>
   </article>
 </Base>

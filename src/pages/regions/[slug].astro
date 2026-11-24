@@ -1,0 +1,16 @@
+---
+import Base from '../../layouts/Base.astro'
+import EntityView from '../../components/EntityView.astro'
+import { regions, type Entity } from '../../data/entities.ts'
+
+export function getStaticPaths() {
+  return regions.map((entity) => ({ params: { slug: entity.slug }, props: { entity: entity } }))
+}
+
+type Props = { entity: Entity }
+const { entity } = Astro.props
+---
+
+<Base title={entity.name} description={`Collapse and abundance by 2100 for ${entity.name}, with and without superintelligence, from sourced data.`} active="countries">
+  <EntityView entity={entity} />
+</Base>

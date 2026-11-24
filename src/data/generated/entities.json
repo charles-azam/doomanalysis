@@ -1,0 +1,2088 @@
+[
+ {
+  "id": "europe-north",
+  "kind": "region",
+  "name": "Northern Europe",
+  "slug": "europe-north",
+  "population": 109329900.0,
+  "spotlight": true
+ },
+ {
+  "id": "europe-west",
+  "kind": "region",
+  "name": "Western Europe",
+  "slug": "europe-west",
+  "population": 201307934.0,
+  "spotlight": true
+ },
+ {
+  "id": "europe-south",
+  "kind": "region",
+  "name": "Southern Europe",
+  "slug": "europe-south",
+  "population": 150676391.0,
+  "spotlight": true
+ },
+ {
+  "id": "europe-east",
+  "kind": "region",
+  "name": "Eastern Europe",
+  "slug": "europe-east",
+  "population": 281644598.0,
+  "spotlight": true
+ },
+ {
+  "id": "north-america",
+  "kind": "region",
+  "name": "North America",
+  "slug": "north-america",
+  "population": 383436510.0,
+  "spotlight": true
+ },
+ {
+  "id": "latin-america",
+  "kind": "region",
+  "name": "Latin America & Caribbean",
+  "slug": "latin-america",
+  "population": 666205012.0,
+  "spotlight": true
+ },
+ {
+  "id": "mena",
+  "kind": "region",
+  "name": "Middle East & North Africa",
+  "slug": "mena",
+  "population": 590960978.0,
+  "spotlight": true
+ },
+ {
+  "id": "sub-saharan-africa",
+  "kind": "region",
+  "name": "Sub-Saharan Africa",
+  "slug": "sub-saharan-africa",
+  "population": 1271176146.0,
+  "spotlight": true
+ },
+ {
+  "id": "central-south-asia",
+  "kind": "region",
+  "name": "Central & South Asia",
+  "slug": "central-south-asia",
+  "population": 2167380073.0,
+  "spotlight": true
+ },
+ {
+  "id": "east-asia",
+  "kind": "region",
+  "name": "East Asia",
+  "slug": "east-asia",
+  "population": 1619961112.0,
+  "spotlight": true
+ },
+ {
+  "id": "southeast-asia",
+  "kind": "region",
+  "name": "Southeast Asia",
+  "slug": "southeast-asia",
+  "population": 700272124.0,
+  "spotlight": true
+ },
+ {
+  "id": "oceania",
+  "kind": "region",
+  "name": "Oceania",
+  "slug": "oceania",
+  "population": 46457577.0,
+  "spotlight": true
+ },
+ {
+  "id": "IND",
+  "kind": "country",
+  "name": "India",
+  "slug": "india",
+  "iso2": "IN",
+  "region": "central-south-asia",
+  "population": 1463865525.0,
+  "spotlight": true
+ },
+ {
+  "id": "CHN",
+  "kind": "country",
+  "name": "China",
+  "slug": "china",
+  "iso2": "CN",
+  "region": "east-asia",
+  "population": 1406585000.0,
+  "spotlight": true
+ },
+ {
+  "id": "USA",
+  "kind": "country",
+  "name": "United States",
+  "slug": "united-states",
+  "iso2": "US",
+  "region": "north-america",
+  "population": 341784857.0,
+  "spotlight": true
+ },
+ {
+  "id": "IDN",
+  "kind": "country",
+  "name": "Indonesia",
+  "slug": "indonesia",
+  "iso2": "ID",
+  "region": "southeast-asia",
+  "population": 285721236.0,
+  "spotlight": true
+ },
+ {
+  "id": "PAK",
+  "kind": "country",
+  "name": "Pakistan",
+  "slug": "pakistan",
+  "iso2": "PK",
+  "region": "central-south-asia",
+  "population": 255219554.0,
+  "spotlight": true
+ },
+ {
+  "id": "NGA",
+  "kind": "country",
+  "name": "Nigeria",
+  "slug": "nigeria",
+  "iso2": "NG",
+  "region": "sub-saharan-africa",
+  "population": 237527782.0,
+  "spotlight": true
+ },
+ {
+  "id": "BRA",
+  "kind": "country",
+  "name": "Brazil",
+  "slug": "brazil",
+  "iso2": "BR",
+  "region": "latin-america",
+  "population": 212812405.0,
+  "spotlight": true
+ },
+ {
+  "id": "BGD",
+  "kind": "country",
+  "name": "Bangladesh",
+  "slug": "bangladesh",
+  "iso2": "BD",
+  "region": "central-south-asia",
+  "population": 175686899.0,
+  "spotlight": true
+ },
+ {
+  "id": "RUS",
+  "kind": "country",
+  "name": "Russia",
+  "slug": "russia",
+  "iso2": "RU",
+  "region": "europe-east",
+  "population": 143513328.0,
+  "spotlight": true
+ },
+ {
+  "id": "ETH",
+  "kind": "country",
+  "name": "Ethiopia",
+  "slug": "ethiopia",
+  "iso2": "ET",
+  "region": "sub-saharan-africa",
+  "population": 135472051.0,
+  "spotlight": true
+ },
+ {
+  "id": "MEX",
+  "kind": "country",
+  "name": "Mexico",
+  "slug": "mexico",
+  "iso2": "MX",
+  "region": "latin-america",
+  "population": 131946900.0,
+  "spotlight": true
+ },
+ {
+  "id": "JPN",
+  "kind": "country",
+  "name": "Japan",
+  "slug": "japan",
+  "iso2": "JP",
+  "region": "east-asia",
+  "population": 123366734.0,
+  "spotlight": true
+ },
+ {
+  "id": "EGY",
+  "kind": "country",
+  "name": "Egypt",
+  "slug": "egypt",
+  "iso2": "EG",
+  "region": "mena",
+  "population": 118365995.0,
+  "spotlight": true
+ },
+ {
+  "id": "PHL",
+  "kind": "country",
+  "name": "Philippines",
+  "slug": "philippines",
+  "iso2": "PH",
+  "region": "southeast-asia",
+  "population": 116786962.0,
+  "spotlight": true
+ },
+ {
+  "id": "COD",
+  "kind": "country",
+  "name": "DR Congo",
+  "slug": "dr-congo",
+  "iso2": "CD",
+  "region": "sub-saharan-africa",
+  "population": 112832473.0,
+  "spotlight": true
+ },
+ {
+  "id": "VNM",
+  "kind": "country",
+  "name": "Viet Nam",
+  "slug": "viet-nam",
+  "iso2": "VN",
+  "region": "southeast-asia",
+  "population": 101598527.0,
+  "spotlight": true
+ },
+ {
+  "id": "IRN",
+  "kind": "country",
+  "name": "Iran",
+  "slug": "iran",
+  "iso2": "IR",
+  "region": "central-south-asia",
+  "population": 92417681.0,
+  "spotlight": true
+ },
+ {
+  "id": "TUR",
+  "kind": "country",
+  "name": "Türkiye",
+  "slug": "turkiye",
+  "iso2": "TR",
+  "region": "mena",
+  "population": 85878556.0,
+  "spotlight": true
+ },
+ {
+  "id": "DEU",
+  "kind": "country",
+  "name": "Germany",
+  "slug": "germany",
+  "iso2": "DE",
+  "region": "europe-west",
+  "population": 83491249.0,
+  "spotlight": true
+ },
+ {
+  "id": "THA",
+  "kind": "country",
+  "name": "Thailand",
+  "slug": "thailand",
+  "iso2": "TH",
+  "region": "southeast-asia",
+  "population": 71619863.0,
+  "spotlight": true
+ },
+ {
+  "id": "TZA",
+  "kind": "country",
+  "name": "Tanzania",
+  "slug": "tanzania",
+  "iso2": "TZ",
+  "region": "sub-saharan-africa",
+  "population": 70545865.0,
+  "spotlight": false
+ },
+ {
+  "id": "GBR",
+  "kind": "country",
+  "name": "United Kingdom",
+  "slug": "united-kingdom",
+  "iso2": "GB",
+  "region": "europe-north",
+  "population": 69487000.0,
+  "spotlight": true
+ },
+ {
+  "id": "FRA",
+  "kind": "country",
+  "name": "France",
+  "slug": "france",
+  "iso2": "FR",
+  "region": "europe-west",
+  "population": 68720337.0,
+  "spotlight": true
+ },
+ {
+  "id": "ZAF",
+  "kind": "country",
+  "name": "South Africa",
+  "slug": "south-africa",
+  "iso2": "ZA",
+  "region": "sub-saharan-africa",
+  "population": 64747319.0,
+  "spotlight": true
+ },
+ {
+  "id": "ITA",
+  "kind": "country",
+  "name": "Italy",
+  "slug": "italy",
+  "iso2": "IT",
+  "region": "europe-south",
+  "population": 58915656.0,
+  "spotlight": true
+ },
+ {
+  "id": "KEN",
+  "kind": "country",
+  "name": "Kenya",
+  "slug": "kenya",
+  "iso2": "KE",
+  "region": "sub-saharan-africa",
+  "population": 57532493.0,
+  "spotlight": true
+ },
+ {
+  "id": "MMR",
+  "kind": "country",
+  "name": "Myanmar",
+  "slug": "myanmar",
+  "iso2": "MM",
+  "region": "southeast-asia",
+  "population": 54850648.0,
+  "spotlight": false
+ },
+ {
+  "id": "COL",
+  "kind": "country",
+  "name": "Colombia",
+  "slug": "colombia",
+  "iso2": "CO",
+  "region": "latin-america",
+  "population": 53425635.0,
+  "spotlight": true
+ },
+ {
+  "id": "KOR",
+  "kind": "country",
+  "name": "South Korea",
+  "slug": "south-korea",
+  "iso2": "KR",
+  "region": "east-asia",
+  "population": 51684564.0,
+  "spotlight": true
+ },
+ {
+  "id": "SDN",
+  "kind": "country",
+  "name": "Sudan",
+  "slug": "sudan",
+  "iso2": "SD",
+  "region": "mena",
+  "population": 51662147.0,
+  "spotlight": false
+ },
+ {
+  "id": "UGA",
+  "kind": "country",
+  "name": "Uganda",
+  "slug": "uganda",
+  "iso2": "UG",
+  "region": "sub-saharan-africa",
+  "population": 51384894.0,
+  "spotlight": false
+ },
+ {
+  "id": "ESP",
+  "kind": "country",
+  "name": "Spain",
+  "slug": "spain",
+  "iso2": "ES",
+  "region": "europe-south",
+  "population": 49355143.0,
+  "spotlight": true
+ },
+ {
+  "id": "DZA",
+  "kind": "country",
+  "name": "Algeria",
+  "slug": "algeria",
+  "iso2": "DZ",
+  "region": "mena",
+  "population": 47435312.0,
+  "spotlight": false
+ },
+ {
+  "id": "IRQ",
+  "kind": "country",
+  "name": "Iraq",
+  "slug": "iraq",
+  "iso2": "IQ",
+  "region": "mena",
+  "population": 47020774.0,
+  "spotlight": false
+ },
+ {
+  "id": "ARG",
+  "kind": "country",
+  "name": "Argentina",
+  "slug": "argentina",
+  "iso2": "AR",
+  "region": "latin-america",
+  "population": 45851378.0,
+  "spotlight": true
+ },
+ {
+  "id": "AFG",
+  "kind": "country",
+  "name": "Afghanistan",
+  "slug": "afghanistan",
+  "iso2": "AF",
+  "region": "central-south-asia",
+  "population": 43844111.0,
+  "spotlight": false
+ },
+ {
+  "id": "YEM",
+  "kind": "country",
+  "name": "Yemen",
+  "slug": "yemen",
+  "iso2": "YE",
+  "region": "mena",
+  "population": 41773878.0,
+  "spotlight": false
+ },
+ {
+  "id": "CAN",
+  "kind": "country",
+  "name": "Canada",
+  "slug": "canada",
+  "iso2": "CA",
+  "region": "north-america",
+  "population": 41651653.0,
+  "spotlight": true
+ },
+ {
+  "id": "AGO",
+  "kind": "country",
+  "name": "Angola",
+  "slug": "angola",
+  "iso2": "AO",
+  "region": "sub-saharan-africa",
+  "population": 39040039.0,
+  "spotlight": false
+ },
+ {
+  "id": "UKR",
+  "kind": "country",
+  "name": "Ukraine",
+  "slug": "ukraine",
+  "iso2": "UA",
+  "region": "europe-east",
+  "population": 38980376.0,
+  "spotlight": true
+ },
+ {
+  "id": "MAR",
+  "kind": "country",
+  "name": "Morocco",
+  "slug": "morocco",
+  "iso2": "MA",
+  "region": "mena",
+  "population": 38430770.0,
+  "spotlight": false
+ },
+ {
+  "id": "UZB",
+  "kind": "country",
+  "name": "Uzbekistan",
+  "slug": "uzbekistan",
+  "iso2": "UZ",
+  "region": "central-south-asia",
+  "population": 37053428.0,
+  "spotlight": false
+ },
+ {
+  "id": "SAU",
+  "kind": "country",
+  "name": "Saudi Arabia",
+  "slug": "saudi-arabia",
+  "iso2": "SA",
+  "region": "mena",
+  "population": 36973555.0,
+  "spotlight": true
+ },
+ {
+  "id": "POL",
+  "kind": "country",
+  "name": "Poland",
+  "slug": "poland",
+  "iso2": "PL",
+  "region": "europe-east",
+  "population": 36435861.0,
+  "spotlight": true
+ },
+ {
+  "id": "MYS",
+  "kind": "country",
+  "name": "Malaysia",
+  "slug": "malaysia",
+  "iso2": "MY",
+  "region": "southeast-asia",
+  "population": 35977838.0,
+  "spotlight": false
+ },
+ {
+  "id": "MOZ",
+  "kind": "country",
+  "name": "Mozambique",
+  "slug": "mozambique",
+  "iso2": "MZ",
+  "region": "sub-saharan-africa",
+  "population": 35631653.0,
+  "spotlight": false
+ },
+ {
+  "id": "GHA",
+  "kind": "country",
+  "name": "Ghana",
+  "slug": "ghana",
+  "iso2": "GH",
+  "region": "sub-saharan-africa",
+  "population": 35064272.0,
+  "spotlight": false
+ },
+ {
+  "id": "PER",
+  "kind": "country",
+  "name": "Peru",
+  "slug": "peru",
+  "iso2": "PE",
+  "region": "latin-america",
+  "population": 34576665.0,
+  "spotlight": false
+ },
+ {
+  "id": "MDG",
+  "kind": "country",
+  "name": "Madagascar",
+  "slug": "madagascar",
+  "iso2": "MG",
+  "region": "sub-saharan-africa",
+  "population": 32740678.0,
+  "spotlight": false
+ },
+ {
+  "id": "CIV",
+  "kind": "country",
+  "name": "Cote d'Ivoire",
+  "slug": "cote-d-ivoire",
+  "iso2": "CI",
+  "region": "sub-saharan-africa",
+  "population": 32711547.0,
+  "spotlight": false
+ },
+ {
+  "id": "CMR",
+  "kind": "country",
+  "name": "Cameroon",
+  "slug": "cameroon",
+  "iso2": "CM",
+  "region": "sub-saharan-africa",
+  "population": 29879337.0,
+  "spotlight": false
+ },
+ {
+  "id": "NPL",
+  "kind": "country",
+  "name": "Nepal",
+  "slug": "nepal",
+  "iso2": "NP",
+  "region": "central-south-asia",
+  "population": 29618118.0,
+  "spotlight": false
+ },
+ {
+  "id": "VEN",
+  "kind": "country",
+  "name": "Venezuela",
+  "slug": "venezuela",
+  "iso2": "VE",
+  "region": "latin-america",
+  "population": 28516896.0,
+  "spotlight": false
+ },
+ {
+  "id": "NER",
+  "kind": "country",
+  "name": "Niger",
+  "slug": "niger",
+  "iso2": "NE",
+  "region": "sub-saharan-africa",
+  "population": 27917831.0,
+  "spotlight": false
+ },
+ {
+  "id": "AUS",
+  "kind": "country",
+  "name": "Australia",
+  "slug": "australia",
+  "iso2": "AU",
+  "region": "oceania",
+  "population": 27614411.0,
+  "spotlight": true
+ },
+ {
+  "id": "PRK",
+  "kind": "country",
+  "name": "North Korea",
+  "slug": "north-korea",
+  "iso2": "KP",
+  "region": "east-asia",
+  "population": 26571036.0,
+  "spotlight": false
+ },
+ {
+  "id": "SYR",
+  "kind": "country",
+  "name": "Syria",
+  "slug": "syria",
+  "iso2": "SY",
+  "region": "mena",
+  "population": 25620427.0,
+  "spotlight": false
+ },
+ {
+  "id": "MLI",
+  "kind": "country",
+  "name": "Mali",
+  "slug": "mali",
+  "iso2": "ML",
+  "region": "sub-saharan-africa",
+  "population": 25198821.0,
+  "spotlight": false
+ },
+ {
+  "id": "BFA",
+  "kind": "country",
+  "name": "Burkina Faso",
+  "slug": "burkina-faso",
+  "iso2": "BF",
+  "region": "sub-saharan-africa",
+  "population": 24074580.0,
+  "spotlight": false
+ },
+ {
+  "id": "MWI",
+  "kind": "country",
+  "name": "Malawi",
+  "slug": "malawi",
+  "iso2": "MW",
+  "region": "sub-saharan-africa",
+  "population": 22216120.0,
+  "spotlight": false
+ },
+ {
+  "id": "ZMB",
+  "kind": "country",
+  "name": "Zambia",
+  "slug": "zambia",
+  "iso2": "ZM",
+  "region": "sub-saharan-africa",
+  "population": 21913874.0,
+  "spotlight": false
+ },
+ {
+  "id": "LKA",
+  "kind": "country",
+  "name": "Sri Lanka",
+  "slug": "sri-lanka",
+  "iso2": "LK",
+  "region": "central-south-asia",
+  "population": 21756000.0,
+  "spotlight": false
+ },
+ {
+  "id": "TCD",
+  "kind": "country",
+  "name": "Chad",
+  "slug": "chad",
+  "iso2": "TD",
+  "region": "sub-saharan-africa",
+  "population": 21003705.0,
+  "spotlight": false
+ },
+ {
+  "id": "KAZ",
+  "kind": "country",
+  "name": "Kazakhstan",
+  "slug": "kazakhstan",
+  "iso2": "KZ",
+  "region": "central-south-asia",
+  "population": 20843754.0,
+  "spotlight": false
+ },
+ {
+  "id": "CHL",
+  "kind": "country",
+  "name": "Chile",
+  "slug": "chile",
+  "iso2": "CL",
+  "region": "latin-america",
+  "population": 19859921.0,
+  "spotlight": false
+ },
+ {
+  "id": "SOM",
+  "kind": "country",
+  "name": "Somalia, Fed. Rep.",
+  "slug": "somalia-fed-rep",
+  "iso2": "SO",
+  "region": "sub-saharan-africa",
+  "population": 19654739.0,
+  "spotlight": false
+ },
+ {
+  "id": "ROU",
+  "kind": "country",
+  "name": "Romania",
+  "slug": "romania",
+  "iso2": "RO",
+  "region": "europe-east",
+  "population": 19020271.0,
+  "spotlight": false
+ },
+ {
+  "id": "SEN",
+  "kind": "country",
+  "name": "Senegal",
+  "slug": "senegal",
+  "iso2": "SN",
+  "region": "sub-saharan-africa",
+  "population": 18931966.0,
+  "spotlight": false
+ },
+ {
+  "id": "GTM",
+  "kind": "country",
+  "name": "Guatemala",
+  "slug": "guatemala",
+  "iso2": "GT",
+  "region": "latin-america",
+  "population": 18687881.0,
+  "spotlight": false
+ },
+ {
+  "id": "ECU",
+  "kind": "country",
+  "name": "Ecuador",
+  "slug": "ecuador",
+  "iso2": "EC",
+  "region": "latin-america",
+  "population": 18289896.0,
+  "spotlight": false
+ },
+ {
+  "id": "NLD",
+  "kind": "country",
+  "name": "Netherlands",
+  "slug": "netherlands",
+  "iso2": "NL",
+  "region": "europe-west",
+  "population": 18087633.0,
+  "spotlight": true
+ },
+ {
+  "id": "KHM",
+  "kind": "country",
+  "name": "Cambodia",
+  "slug": "cambodia",
+  "iso2": "KH",
+  "region": "southeast-asia",
+  "population": 17847982.0,
+  "spotlight": false
+ },
+ {
+  "id": "ZWE",
+  "kind": "country",
+  "name": "Zimbabwe",
+  "slug": "zimbabwe",
+  "iso2": "ZW",
+  "region": "sub-saharan-africa",
+  "population": 16950795.0,
+  "spotlight": false
+ },
+ {
+  "id": "GIN",
+  "kind": "country",
+  "name": "Guinea",
+  "slug": "guinea",
+  "iso2": "GN",
+  "region": "sub-saharan-africa",
+  "population": 15099727.0,
+  "spotlight": false
+ },
+ {
+  "id": "BEN",
+  "kind": "country",
+  "name": "Benin",
+  "slug": "benin",
+  "iso2": "BJ",
+  "region": "sub-saharan-africa",
+  "population": 14814460.0,
+  "spotlight": false
+ },
+ {
+  "id": "RWA",
+  "kind": "country",
+  "name": "Rwanda",
+  "slug": "rwanda",
+  "iso2": "RW",
+  "region": "sub-saharan-africa",
+  "population": 14569341.0,
+  "spotlight": false
+ },
+ {
+  "id": "BDI",
+  "kind": "country",
+  "name": "Burundi",
+  "slug": "burundi",
+  "iso2": "BI",
+  "region": "sub-saharan-africa",
+  "population": 14390003.0,
+  "spotlight": false
+ },
+ {
+  "id": "BOL",
+  "kind": "country",
+  "name": "Bolivia",
+  "slug": "bolivia",
+  "iso2": "BO",
+  "region": "latin-america",
+  "population": 12581843.0,
+  "spotlight": false
+ },
+ {
+  "id": "TUN",
+  "kind": "country",
+  "name": "Tunisia",
+  "slug": "tunisia",
+  "iso2": "TN",
+  "region": "mena",
+  "population": 12348573.0,
+  "spotlight": false
+ },
+ {
+  "id": "SSD",
+  "kind": "country",
+  "name": "South Sudan",
+  "slug": "south-sudan",
+  "iso2": "SS",
+  "region": "sub-saharan-africa",
+  "population": 12188788.0,
+  "spotlight": false
+ },
+ {
+  "id": "BEL",
+  "kind": "country",
+  "name": "Belgium",
+  "slug": "belgium",
+  "iso2": "BE",
+  "region": "europe-west",
+  "population": 11941781.0,
+  "spotlight": false
+ },
+ {
+  "id": "HTI",
+  "kind": "country",
+  "name": "Haiti",
+  "slug": "haiti",
+  "iso2": "HT",
+  "region": "latin-america",
+  "population": 11906095.0,
+  "spotlight": false
+ },
+ {
+  "id": "JOR",
+  "kind": "country",
+  "name": "Jordan",
+  "slug": "jordan",
+  "iso2": "JO",
+  "region": "mena",
+  "population": 11520684.0,
+  "spotlight": false
+ },
+ {
+  "id": "DOM",
+  "kind": "country",
+  "name": "Dominican Republic",
+  "slug": "dominican-republic",
+  "iso2": "DO",
+  "region": "latin-america",
+  "population": 11520487.0,
+  "spotlight": false
+ },
+ {
+  "id": "ARE",
+  "kind": "country",
+  "name": "United Arab Emirates",
+  "slug": "united-arab-emirates",
+  "iso2": "AE",
+  "region": "mena",
+  "population": 11513149.0,
+  "spotlight": false
+ },
+ {
+  "id": "HND",
+  "kind": "country",
+  "name": "Honduras",
+  "slug": "honduras",
+  "iso2": "HN",
+  "region": "latin-america",
+  "population": 11005850.0,
+  "spotlight": false
+ },
+ {
+  "id": "CUB",
+  "kind": "country",
+  "name": "Cuba",
+  "slug": "cuba",
+  "iso2": "CU",
+  "region": "latin-america",
+  "population": 10937203.0,
+  "spotlight": false
+ },
+ {
+  "id": "CZE",
+  "kind": "country",
+  "name": "Czechia",
+  "slug": "czechia",
+  "iso2": "CZ",
+  "region": "europe-east",
+  "population": 10886878.0,
+  "spotlight": false
+ },
+ {
+  "id": "PRT",
+  "kind": "country",
+  "name": "Portugal",
+  "slug": "portugal",
+  "iso2": "PT",
+  "region": "europe-south",
+  "population": 10804871.0,
+  "spotlight": false
+ },
+ {
+  "id": "TJK",
+  "kind": "country",
+  "name": "Tajikistan",
+  "slug": "tajikistan",
+  "iso2": "TJ",
+  "region": "central-south-asia",
+  "population": 10786734.0,
+  "spotlight": false
+ },
+ {
+  "id": "PNG",
+  "kind": "country",
+  "name": "Papua New Guinea",
+  "slug": "papua-new-guinea",
+  "iso2": "PG",
+  "region": "oceania",
+  "population": 10762817.0,
+  "spotlight": false
+ },
+ {
+  "id": "SWE",
+  "kind": "country",
+  "name": "Sweden",
+  "slug": "sweden",
+  "iso2": "SE",
+  "region": "europe-north",
+  "population": 10596620.0,
+  "spotlight": true
+ },
+ {
+  "id": "GRC",
+  "kind": "country",
+  "name": "Greece",
+  "slug": "greece",
+  "iso2": "GR",
+  "region": "europe-south",
+  "population": 10413962.0,
+  "spotlight": false
+ },
+ {
+  "id": "AZE",
+  "kind": "country",
+  "name": "Azerbaijan",
+  "slug": "azerbaijan",
+  "iso2": "AZ",
+  "region": "mena",
+  "population": 10246996.0,
+  "spotlight": false
+ },
+ {
+  "id": "ISR",
+  "kind": "country",
+  "name": "Israel",
+  "slug": "israel",
+  "iso2": "IL",
+  "region": "mena",
+  "population": 10122800.0,
+  "spotlight": false
+ },
+ {
+  "id": "HUN",
+  "kind": "country",
+  "name": "Hungary",
+  "slug": "hungary",
+  "iso2": "HU",
+  "region": "europe-east",
+  "population": 9514251.0,
+  "spotlight": false
+ },
+ {
+  "id": "AUT",
+  "kind": "country",
+  "name": "Austria",
+  "slug": "austria",
+  "iso2": "AT",
+  "region": "europe-west",
+  "population": 9208163.0,
+  "spotlight": false
+ },
+ {
+  "id": "CHE",
+  "kind": "country",
+  "name": "Switzerland",
+  "slug": "switzerland",
+  "iso2": "CH",
+  "region": "europe-west",
+  "population": 9092436.0,
+  "spotlight": false
+ },
+ {
+  "id": "BLR",
+  "kind": "country",
+  "name": "Belarus",
+  "slug": "belarus",
+  "iso2": "BY",
+  "region": "europe-east",
+  "population": 9085991.0,
+  "spotlight": false
+ },
+ {
+  "id": "SLE",
+  "kind": "country",
+  "name": "Sierra Leone",
+  "slug": "sierra-leone",
+  "iso2": "SL",
+  "region": "sub-saharan-africa",
+  "population": 8819794.0,
+  "spotlight": false
+ },
+ {
+  "id": "TGO",
+  "kind": "country",
+  "name": "Togo",
+  "slug": "togo",
+  "iso2": "TG",
+  "region": "sub-saharan-africa",
+  "population": 8591626.0,
+  "spotlight": false
+ },
+ {
+  "id": "LAO",
+  "kind": "country",
+  "name": "Laos",
+  "slug": "laos",
+  "iso2": "LA",
+  "region": "southeast-asia",
+  "population": 7873046.0,
+  "spotlight": false
+ },
+ {
+  "id": "TKM",
+  "kind": "country",
+  "name": "Turkmenistan",
+  "slug": "turkmenistan",
+  "iso2": "TM",
+  "region": "central-south-asia",
+  "population": 7618847.0,
+  "spotlight": false
+ },
+ {
+  "id": "HKG",
+  "kind": "country",
+  "name": "Hong Kong",
+  "slug": "hong-kong",
+  "iso2": "HK",
+  "region": "east-asia",
+  "population": 7498900.0,
+  "spotlight": false
+ },
+ {
+  "id": "LBY",
+  "kind": "country",
+  "name": "Libya",
+  "slug": "libya",
+  "iso2": "LY",
+  "region": "mena",
+  "population": 7458555.0,
+  "spotlight": false
+ },
+ {
+  "id": "KGZ",
+  "kind": "country",
+  "name": "Kyrgyzstan",
+  "slug": "kyrgyzstan",
+  "iso2": "KG",
+  "region": "central-south-asia",
+  "population": 7343064.0,
+  "spotlight": false
+ },
+ {
+  "id": "PRY",
+  "kind": "country",
+  "name": "Paraguay",
+  "slug": "paraguay",
+  "iso2": "PY",
+  "region": "latin-america",
+  "population": 7013078.0,
+  "spotlight": false
+ },
+ {
+  "id": "NIC",
+  "kind": "country",
+  "name": "Nicaragua",
+  "slug": "nicaragua",
+  "iso2": "NI",
+  "region": "latin-america",
+  "population": 7007502.0,
+  "spotlight": false
+ },
+ {
+  "id": "SRB",
+  "kind": "country",
+  "name": "Serbia",
+  "slug": "serbia",
+  "iso2": "RS",
+  "region": "europe-south",
+  "population": 6549143.0,
+  "spotlight": false
+ },
+ {
+  "id": "COG",
+  "kind": "country",
+  "name": "Congo",
+  "slug": "congo",
+  "iso2": "CG",
+  "region": "sub-saharan-africa",
+  "population": 6484437.0,
+  "spotlight": false
+ },
+ {
+  "id": "BGR",
+  "kind": "country",
+  "name": "Bulgaria",
+  "slug": "bulgaria",
+  "iso2": "BG",
+  "region": "europe-east",
+  "population": 6433302.0,
+  "spotlight": false
+ },
+ {
+  "id": "SLV",
+  "kind": "country",
+  "name": "El Salvador",
+  "slug": "el-salvador",
+  "iso2": "SV",
+  "region": "latin-america",
+  "population": 6365503.0,
+  "spotlight": false
+ },
+ {
+  "id": "SGP",
+  "kind": "country",
+  "name": "Singapore",
+  "slug": "singapore",
+  "iso2": "SG",
+  "region": "southeast-asia",
+  "population": 6111175.0,
+  "spotlight": false
+ },
+ {
+  "id": "DNK",
+  "kind": "country",
+  "name": "Denmark",
+  "slug": "denmark",
+  "iso2": "DK",
+  "region": "europe-north",
+  "population": 6009169.0,
+  "spotlight": false
+ },
+ {
+  "id": "LBN",
+  "kind": "country",
+  "name": "Lebanon",
+  "slug": "lebanon",
+  "iso2": "LB",
+  "region": "mena",
+  "population": 5849421.0,
+  "spotlight": false
+ },
+ {
+  "id": "LBR",
+  "kind": "country",
+  "name": "Liberia",
+  "slug": "liberia",
+  "iso2": "LR",
+  "region": "sub-saharan-africa",
+  "population": 5731206.0,
+  "spotlight": false
+ },
+ {
+  "id": "FIN",
+  "kind": "country",
+  "name": "Finland",
+  "slug": "finland",
+  "iso2": "FI",
+  "region": "europe-north",
+  "population": 5646436.0,
+  "spotlight": false
+ },
+ {
+  "id": "NOR",
+  "kind": "country",
+  "name": "Norway",
+  "slug": "norway",
+  "iso2": "NO",
+  "region": "europe-north",
+  "population": 5610870.0,
+  "spotlight": true
+ },
+ {
+  "id": "CAF",
+  "kind": "country",
+  "name": "Central African Republic",
+  "slug": "central-african-republic",
+  "iso2": "CF",
+  "region": "sub-saharan-africa",
+  "population": 5513282.0,
+  "spotlight": false
+ },
+ {
+  "id": "OMN",
+  "kind": "country",
+  "name": "Oman",
+  "slug": "oman",
+  "iso2": "OM",
+  "region": "mena",
+  "population": 5494691.0,
+  "spotlight": false
+ },
+ {
+  "id": "IRL",
+  "kind": "country",
+  "name": "Ireland",
+  "slug": "ireland",
+  "iso2": "IE",
+  "region": "europe-north",
+  "population": 5484367.0,
+  "spotlight": false
+ },
+ {
+  "id": "SVK",
+  "kind": "country",
+  "name": "Slovakia",
+  "slug": "slovakia",
+  "iso2": "SK",
+  "region": "europe-east",
+  "population": 5413813.0,
+  "spotlight": false
+ },
+ {
+  "id": "PSE",
+  "kind": "country",
+  "name": "Palestine",
+  "slug": "palestine",
+  "iso2": "PS",
+  "region": "mena",
+  "population": 5413596.0,
+  "spotlight": false
+ },
+ {
+  "id": "NZL",
+  "kind": "country",
+  "name": "New Zealand",
+  "slug": "new-zealand",
+  "iso2": "NZ",
+  "region": "oceania",
+  "population": 5324700.0,
+  "spotlight": false
+ },
+ {
+  "id": "MRT",
+  "kind": "country",
+  "name": "Mauritania",
+  "slug": "mauritania",
+  "iso2": "MR",
+  "region": "sub-saharan-africa",
+  "population": 5315065.0,
+  "spotlight": false
+ },
+ {
+  "id": "CRI",
+  "kind": "country",
+  "name": "Costa Rica",
+  "slug": "costa-rica",
+  "iso2": "CR",
+  "region": "latin-america",
+  "population": 5152950.0,
+  "spotlight": false
+ },
+ {
+  "id": "KWT",
+  "kind": "country",
+  "name": "Kuwait",
+  "slug": "kuwait",
+  "iso2": "KW",
+  "region": "mena",
+  "population": 4865298.0,
+  "spotlight": false
+ },
+ {
+  "id": "PAN",
+  "kind": "country",
+  "name": "Panama",
+  "slug": "panama",
+  "iso2": "PA",
+  "region": "latin-america",
+  "population": 4571189.0,
+  "spotlight": false
+ },
+ {
+  "id": "GEO",
+  "kind": "country",
+  "name": "Georgia",
+  "slug": "georgia",
+  "iso2": "GE",
+  "region": "mena",
+  "population": 3935766.0,
+  "spotlight": false
+ },
+ {
+  "id": "HRV",
+  "kind": "country",
+  "name": "Croatia",
+  "slug": "croatia",
+  "iso2": "HR",
+  "region": "europe-south",
+  "population": 3876200.0,
+  "spotlight": false
+ },
+ {
+  "id": "ERI",
+  "kind": "country",
+  "name": "Eritrea",
+  "slug": "eritrea",
+  "iso2": "ER",
+  "region": "sub-saharan-africa",
+  "population": 3607003.0,
+  "spotlight": false
+ },
+ {
+  "id": "MNG",
+  "kind": "country",
+  "name": "Mongolia",
+  "slug": "mongolia",
+  "iso2": "MN",
+  "region": "east-asia",
+  "population": 3568978.0,
+  "spotlight": false
+ },
+ {
+  "id": "URY",
+  "kind": "country",
+  "name": "Uruguay",
+  "slug": "uruguay",
+  "iso2": "UY",
+  "region": "latin-america",
+  "population": 3384688.0,
+  "spotlight": false
+ },
+ {
+  "id": "PRI",
+  "kind": "country",
+  "name": "Puerto Rico (US)",
+  "slug": "puerto-rico-us",
+  "iso2": "PR",
+  "region": "latin-america",
+  "population": 3184835.0,
+  "spotlight": false
+ },
+ {
+  "id": "BIH",
+  "kind": "country",
+  "name": "Bosnia and Herzegovina",
+  "slug": "bosnia-and-herzegovina",
+  "iso2": "BA",
+  "region": "europe-south",
+  "population": 3140095.0,
+  "spotlight": false
+ },
+ {
+  "id": "NAM",
+  "kind": "country",
+  "name": "Namibia",
+  "slug": "namibia",
+  "iso2": "NA",
+  "region": "sub-saharan-africa",
+  "population": 3092816.0,
+  "spotlight": false
+ },
+ {
+  "id": "ARM",
+  "kind": "country",
+  "name": "Armenia",
+  "slug": "armenia",
+  "iso2": "AM",
+  "region": "mena",
+  "population": 3086700.0,
+  "spotlight": false
+ },
+ {
+  "id": "QAT",
+  "kind": "country",
+  "name": "Qatar",
+  "slug": "qatar",
+  "iso2": "QA",
+  "region": "mena",
+  "population": 2972215.0,
+  "spotlight": false
+ },
+ {
+  "id": "LTU",
+  "kind": "country",
+  "name": "Lithuania",
+  "slug": "lithuania",
+  "iso2": "LT",
+  "region": "europe-north",
+  "population": 2888774.0,
+  "spotlight": false
+ },
+ {
+  "id": "JAM",
+  "kind": "country",
+  "name": "Jamaica",
+  "slug": "jamaica",
+  "iso2": "JM",
+  "region": "latin-america",
+  "population": 2837077.0,
+  "spotlight": false
+ },
+ {
+  "id": "GMB",
+  "kind": "country",
+  "name": "Gambia",
+  "slug": "gambia",
+  "iso2": "GM",
+  "region": "sub-saharan-africa",
+  "population": 2822093.0,
+  "spotlight": false
+ },
+ {
+  "id": "GAB",
+  "kind": "country",
+  "name": "Gabon",
+  "slug": "gabon",
+  "iso2": "GA",
+  "region": "sub-saharan-africa",
+  "population": 2593130.0,
+  "spotlight": false
+ },
+ {
+  "id": "BWA",
+  "kind": "country",
+  "name": "Botswana",
+  "slug": "botswana",
+  "iso2": "BW",
+  "region": "sub-saharan-africa",
+  "population": 2562122.0,
+  "spotlight": false
+ },
+ {
+  "id": "LSO",
+  "kind": "country",
+  "name": "Lesotho",
+  "slug": "lesotho",
+  "iso2": "LS",
+  "region": "sub-saharan-africa",
+  "population": 2363325.0,
+  "spotlight": false
+ },
+ {
+  "id": "MDA",
+  "kind": "country",
+  "name": "Moldova",
+  "slug": "moldova",
+  "iso2": "MD",
+  "region": "europe-east",
+  "population": 2360527.0,
+  "spotlight": false
+ },
+ {
+  "id": "ALB",
+  "kind": "country",
+  "name": "Albania",
+  "slug": "albania",
+  "iso2": "AL",
+  "region": "europe-south",
+  "population": 2349580.0,
+  "spotlight": false
+ },
+ {
+  "id": "GNB",
+  "kind": "country",
+  "name": "Guinea-Bissau",
+  "slug": "guinea-bissau",
+  "iso2": "GW",
+  "region": "sub-saharan-africa",
+  "population": 2249515.0,
+  "spotlight": false
+ },
+ {
+  "id": "SVN",
+  "kind": "country",
+  "name": "Slovenia",
+  "slug": "slovenia",
+  "iso2": "SI",
+  "region": "europe-south",
+  "population": 2130986.0,
+  "spotlight": false
+ },
+ {
+  "id": "GNQ",
+  "kind": "country",
+  "name": "Equatorial Guinea",
+  "slug": "equatorial-guinea",
+  "iso2": "GQ",
+  "region": "sub-saharan-africa",
+  "population": 1938431.0,
+  "spotlight": false
+ },
+ {
+  "id": "LVA",
+  "kind": "country",
+  "name": "Latvia",
+  "slug": "latvia",
+  "iso2": "LV",
+  "region": "europe-north",
+  "population": 1847785.0,
+  "spotlight": false
+ },
+ {
+  "id": "MKD",
+  "kind": "country",
+  "name": "North Macedonia",
+  "slug": "north-macedonia",
+  "iso2": "MK",
+  "region": "europe-south",
+  "population": 1820909.0,
+  "spotlight": false
+ },
+ {
+  "id": "BHR",
+  "kind": "country",
+  "name": "Bahrain",
+  "slug": "bahrain",
+  "iso2": "BH",
+  "region": "mena",
+  "population": 1600366.0,
+  "spotlight": false
+ },
+ {
+  "id": "TLS",
+  "kind": "country",
+  "name": "Timor-Leste",
+  "slug": "timor-leste",
+  "iso2": "TL",
+  "region": "southeast-asia",
+  "population": 1418517.0,
+  "spotlight": false
+ },
+ {
+  "id": "CYP",
+  "kind": "country",
+  "name": "Cyprus",
+  "slug": "cyprus",
+  "iso2": "CY",
+  "region": "mena",
+  "population": 1370754.0,
+  "spotlight": false
+ },
+ {
+  "id": "TTO",
+  "kind": "country",
+  "name": "Trinidad and Tobago",
+  "slug": "trinidad-and-tobago",
+  "iso2": "TT",
+  "region": "latin-america",
+  "population": 1367764.0,
+  "spotlight": false
+ },
+ {
+  "id": "EST",
+  "kind": "country",
+  "name": "Estonia",
+  "slug": "estonia",
+  "iso2": "EE",
+  "region": "europe-north",
+  "population": 1366475.0,
+  "spotlight": false
+ },
+ {
+  "id": "SWZ",
+  "kind": "country",
+  "name": "Eswatini",
+  "slug": "eswatini",
+  "iso2": "SZ",
+  "region": "sub-saharan-africa",
+  "population": 1256174.0,
+  "spotlight": false
+ },
+ {
+  "id": "MUS",
+  "kind": "country",
+  "name": "Mauritius",
+  "slug": "mauritius",
+  "iso2": "MU",
+  "region": "sub-saharan-africa",
+  "population": 1243741.0,
+  "spotlight": false
+ },
+ {
+  "id": "DJI",
+  "kind": "country",
+  "name": "Djibouti",
+  "slug": "djibouti",
+  "iso2": "DJ",
+  "region": "sub-saharan-africa",
+  "population": 1184076.0,
+  "spotlight": false
+ },
+ {
+  "id": "FJI",
+  "kind": "country",
+  "name": "Fiji",
+  "slug": "fiji",
+  "iso2": "FJ",
+  "region": "oceania",
+  "population": 933154.0,
+  "spotlight": false
+ },
+ {
+  "id": "COM",
+  "kind": "country",
+  "name": "Comoros",
+  "slug": "comoros",
+  "iso2": "KM",
+  "region": "sub-saharan-africa",
+  "population": 882847.0,
+  "spotlight": false
+ },
+ {
+  "id": "SLB",
+  "kind": "country",
+  "name": "Solomon Islands",
+  "slug": "solomon-islands",
+  "iso2": "SB",
+  "region": "oceania",
+  "population": 838645.0,
+  "spotlight": false
+ },
+ {
+  "id": "GUY",
+  "kind": "country",
+  "name": "Guyana",
+  "slug": "guyana",
+  "iso2": "GY",
+  "region": "latin-america",
+  "population": 835986.0,
+  "spotlight": false
+ },
+ {
+  "id": "BTN",
+  "kind": "country",
+  "name": "Bhutan",
+  "slug": "bhutan",
+  "iso2": "BT",
+  "region": "central-south-asia",
+  "population": 796682.0,
+  "spotlight": false
+ },
+ {
+  "id": "LUX",
+  "kind": "country",
+  "name": "Luxembourg",
+  "slug": "luxembourg",
+  "iso2": "LU",
+  "region": "europe-west",
+  "population": 686970.0,
+  "spotlight": false
+ },
+ {
+  "id": "MAC",
+  "kind": "country",
+  "name": "Macao",
+  "slug": "macao",
+  "iso2": "MO",
+  "region": "east-asia",
+  "population": 685900.0,
+  "spotlight": false
+ },
+ {
+  "id": "SUR",
+  "kind": "country",
+  "name": "Suriname",
+  "slug": "suriname",
+  "iso2": "SR",
+  "region": "latin-america",
+  "population": 639850.0,
+  "spotlight": false
+ },
+ {
+  "id": "MNE",
+  "kind": "country",
+  "name": "Montenegro",
+  "slug": "montenegro",
+  "iso2": "ME",
+  "region": "europe-south",
+  "population": 623129.0,
+  "spotlight": false
+ },
+ {
+  "id": "MLT",
+  "kind": "country",
+  "name": "Malta",
+  "slug": "malta",
+  "iso2": "MT",
+  "region": "europe-south",
+  "population": 579704.0,
+  "spotlight": false
+ },
+ {
+  "id": "MDV",
+  "kind": "country",
+  "name": "Maldives",
+  "slug": "maldives",
+  "iso2": "MV",
+  "region": "central-south-asia",
+  "population": 529676.0,
+  "spotlight": false
+ },
+ {
+  "id": "CPV",
+  "kind": "country",
+  "name": "Cabo Verde",
+  "slug": "cabo-verde",
+  "iso2": "CV",
+  "region": "sub-saharan-africa",
+  "population": 527326.0,
+  "spotlight": false
+ },
+ {
+  "id": "BRN",
+  "kind": "country",
+  "name": "Brunei Darussalam",
+  "slug": "brunei-darussalam",
+  "iso2": "BN",
+  "region": "southeast-asia",
+  "population": 466330.0,
+  "spotlight": false
+ },
+ {
+  "id": "BLZ",
+  "kind": "country",
+  "name": "Belize",
+  "slug": "belize",
+  "iso2": "BZ",
+  "region": "latin-america",
+  "population": 422924.0,
+  "spotlight": false
+ },
+ {
+  "id": "BHS",
+  "kind": "country",
+  "name": "Bahamas",
+  "slug": "bahamas",
+  "iso2": "BS",
+  "region": "latin-america",
+  "population": 403033.0,
+  "spotlight": false
+ },
+ {
+  "id": "ISL",
+  "kind": "country",
+  "name": "Iceland",
+  "slug": "iceland",
+  "iso2": "IS",
+  "region": "europe-north",
+  "population": 392404.0,
+  "spotlight": false
+ },
+ {
+  "id": "VUT",
+  "kind": "country",
+  "name": "Vanuatu",
+  "slug": "vanuatu",
+  "iso2": "VU",
+  "region": "oceania",
+  "population": 335169.0,
+  "spotlight": false
+ },
+ {
+  "id": "BRB",
+  "kind": "country",
+  "name": "Barbados",
+  "slug": "barbados",
+  "iso2": "BB",
+  "region": "latin-america",
+  "population": 282623.0,
+  "spotlight": false
+ },
+ {
+  "id": "STP",
+  "kind": "country",
+  "name": "Sao Tome and Principe",
+  "slug": "sao-tome-and-principe",
+  "iso2": "ST",
+  "region": "sub-saharan-africa",
+  "population": 240254.0,
+  "spotlight": false
+ },
+ {
+  "id": "WSM",
+  "kind": "country",
+  "name": "Samoa",
+  "slug": "samoa",
+  "iso2": "WS",
+  "region": "oceania",
+  "population": 219306.0,
+  "spotlight": false
+ },
+ {
+  "id": "LCA",
+  "kind": "country",
+  "name": "St. Lucia",
+  "slug": "st-lucia",
+  "iso2": "LC",
+  "region": "latin-america",
+  "population": 180149.0,
+  "spotlight": false
+ },
+ {
+  "id": "KIR",
+  "kind": "country",
+  "name": "Kiribati",
+  "slug": "kiribati",
+  "iso2": "KI",
+  "region": "oceania",
+  "population": 136488.0,
+  "spotlight": false
+ },
+ {
+  "id": "SYC",
+  "kind": "country",
+  "name": "Seychelles",
+  "slug": "seychelles",
+  "iso2": "SC",
+  "region": "sub-saharan-africa",
+  "population": 122730.0,
+  "spotlight": false
+ },
+ {
+  "id": "GRD",
+  "kind": "country",
+  "name": "Grenada",
+  "slug": "grenada",
+  "iso2": "GD",
+  "region": "latin-america",
+  "population": 117303.0,
+  "spotlight": false
+ },
+ {
+  "id": "FSM",
+  "kind": "country",
+  "name": "Micronesia",
+  "slug": "micronesia",
+  "iso2": "FM",
+  "region": "oceania",
+  "population": 113683.0,
+  "spotlight": false
+ },
+ {
+  "id": "ABW",
+  "kind": "country",
+  "name": "Aruba",
+  "slug": "aruba",
+  "iso2": "AW",
+  "region": "latin-america",
+  "population": 108785.0,
+  "spotlight": false
+ },
+ {
+  "id": "VIR",
+  "kind": "country",
+  "name": "Virgin Islands (U.S.)",
+  "slug": "virgin-islands-u-s",
+  "iso2": "VI",
+  "region": "latin-america",
+  "population": 103792.0,
+  "spotlight": false
+ },
+ {
+  "id": "TON",
+  "kind": "country",
+  "name": "Tonga",
+  "slug": "tonga",
+  "iso2": "TO",
+  "region": "oceania",
+  "population": 103742.0,
+  "spotlight": false
+ },
+ {
+  "id": "VCT",
+  "kind": "country",
+  "name": "St. Vincent and the Grenadines",
+  "slug": "st-vincent-and-the-grenadines",
+  "iso2": "VC",
+  "region": "latin-america",
+  "population": 99924.0,
+  "spotlight": false
+ },
+ {
+  "id": "ATG",
+  "kind": "country",
+  "name": "Antigua and Barbuda",
+  "slug": "antigua-and-barbuda",
+  "iso2": "AG",
+  "region": "latin-america",
+  "population": 94209.0,
+  "spotlight": false
+ },
+ {
+  "id": "AND",
+  "kind": "country",
+  "name": "Andorra",
+  "slug": "andorra",
+  "iso2": "AD",
+  "region": "europe-south",
+  "population": 82904.0,
+  "spotlight": false
+ },
+ {
+  "id": "DMA",
+  "kind": "country",
+  "name": "Dominica",
+  "slug": "dominica",
+  "iso2": "DM",
+  "region": "latin-america",
+  "population": 65871.0,
+  "spotlight": false
+ },
+ {
+  "id": "KNA",
+  "kind": "country",
+  "name": "St. Kitts and Nevis",
+  "slug": "st-kitts-and-nevis",
+  "iso2": "KN",
+  "region": "latin-america",
+  "population": 46922.0,
+  "spotlight": false
+ },
+ {
+  "id": "LIE",
+  "kind": "country",
+  "name": "Liechtenstein",
+  "slug": "liechtenstein",
+  "iso2": "LI",
+  "region": "europe-west",
+  "population": 41024.0,
+  "spotlight": false
+ },
+ {
+  "id": "MCO",
+  "kind": "country",
+  "name": "Monaco",
+  "slug": "monaco",
+  "iso2": "MC",
+  "region": "europe-west",
+  "population": 38341.0,
+  "spotlight": false
+ },
+ {
+  "id": "MHL",
+  "kind": "country",
+  "name": "Marshall Islands",
+  "slug": "marshall-islands",
+  "iso2": "MH",
+  "region": "oceania",
+  "population": 36282.0,
+  "spotlight": false
+ },
+ {
+  "id": "SMR",
+  "kind": "country",
+  "name": "San Marino",
+  "slug": "san-marino",
+  "iso2": "SM",
+  "region": "europe-south",
+  "population": 34109.0,
+  "spotlight": false
+ },
+ {
+  "id": "PLW",
+  "kind": "country",
+  "name": "Palau",
+  "slug": "palau",
+  "iso2": "PW",
+  "region": "oceania",
+  "population": 17663.0,
+  "spotlight": false
+ },
+ {
+  "id": "NRU",
+  "kind": "country",
+  "name": "Naoero",
+  "slug": "naoero",
+  "iso2": "NR",
+  "region": "oceania",
+  "population": 12025.0,
+  "spotlight": false
+ },
+ {
+  "id": "TUV",
+  "kind": "country",
+  "name": "Tuvalu",
+  "slug": "tuvalu",
+  "iso2": "TV",
+  "region": "oceania",
+  "population": 9492.0,
+  "spotlight": false
+ }
+]
