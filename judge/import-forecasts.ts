@@ -31,7 +31,7 @@ const fresh: ForecastRun[] = files.map((file, index) => {
     date: date,
     method: `${method}, prompt ${forecastPromptVersion}`,
     world: world,
-    places: (answer.places ?? []).map((place) => ({ entity: place.entity, si: place.si, noSi: place.noSi })),
+    places: (answer.places ?? []).map((place) => ({ entity: place.entity, si: place.si, noSi: place.noSi, ...(place.reading ? { reading: place.reading } : {}) })),
     curves: answer.curves ?? [],
     timeline: answer.timeline?.map((point) => ({ year: point.year, si: point.si, atLeast3: point.atLeast3, atLeast4: point.atLeast4, doom: point.doom })),
   }

@@ -14,6 +14,7 @@ export const globalSections: Section[] = [
 /** Country factors, grouped for the region and country pages. */
 export const countrySections: Section[] = [
   { id: 'living', title: 'How people live', color: 'var(--theme-people)', themes: ['living'] },
+  { id: 'ai-access', title: 'AI access', color: 'var(--theme-ai)', themes: ['ai'] },
   { id: 'essentials', title: 'The five essentials today', color: 'var(--theme-essentials)', themes: ['energy', 'water', 'food', 'health', 'security'] },
   { id: 'abundance', title: 'The abundance test', color: 'var(--abundance)', themes: ['abundance'] },
   { id: 'climate', title: 'Climate and water', color: 'var(--theme-climate)', themes: ['climate'] },

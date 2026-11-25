@@ -1,0 +1,84 @@
+---
+import { siColors } from '../data/palette.ts'
+import { formatPercent } from '../model/forecast.ts'
+
+/** Pairs of bars, without and with superintelligence, one pair per group, with a legend that hides either series. */
+export type Group = { key: string; label: string; swatch?: string; without: number; with: number }
+type Props = { groups: Group[]; height?: number }
+
+const { groups, height = 96 } = Astro.props
+const max = Math.max(0.05, ...groups.flatMap((g) => [g.without, g.with]))
+const bar = (value: number) => Math.max(1, (value / max) * height)
+const series = [
+  { key: 'noSi', label: 'Without SI', color: siColors.noSi },
+  { key: 'si', label: 'With SI', color: siColors.si },
+] as const
+---
+
+<div data-series-chart class="mt-2">
+  <div class="flex gap-1.5" role="group" aria-label="Show or hide a scenario">
+    {
+      series.map((s) => (
+        <button
+          type="button"
+          data-series-toggle={s.key}
+          aria-pressed="true"
+          title={`${s.key === 'si' ? 'Superintelligence deployed before 2100' : 'No superintelligence before 2100'}. Click to show or hide.`}
+          class="series-toggle inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 text-[11px] ink-2"
+          style="border-color: var(--line)"
+        >
+          <span class="inline-block h-2.5 w-2.5 rounded-[2px]" style={`background: ${s.color}`} />
+          {s.label}
+        </button>
+      ))
+    }
+  </div>
+  <div class="mt-2 flex items-end gap-2" role="img" aria-label={groups.map((g) => `${g.label}: ${formatPercent({ value: g.without })} without superintelligence, ${formatPercent({ value: g.with })} with`).join('; ')}>
+    {
+      groups.map((g) => (
+        <div class="flex min-w-0 flex-1 flex-col items-center">
+          <div class="flex w-full items-end justify-center gap-[2px]" style={`height: ${height + 14}px`}>
+            {[
+              { key: 'noSi', value: g.without, color: siColors.noSi },
+              { key: 'si', value: g.with, color: siColors.si },
+            ].map((b) => (
+              <div data-series={b.key} class="flex w-1/2 max-w-6 flex-col items-center justify-end">
+                <span class="mb-0.5 text-[9px] tabular ink-2">{b.value >= 0.0005 ? formatPercent({ value: b.value }) : ''}</span>
+                <div class="w-full rounded-t-[3px]" style={`height: ${bar(b.value)}px; background: ${b.color}`} />
+              </div>
+            ))}
+          </div>
+          <span class="mt-1 flex items-center gap-1 whitespace-nowrap text-[10px] ink-2">
+            {g.swatch && <span class="inline-block h-2 w-2 rounded-[2px]" style={`background: ${g.swatch}`} />}
+            {g.label}
+          </span>
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<script>
+  // One listener for every chart on the page: a legend button hides or shows its series in its own chart.
+  document.addEventListener('click', (event) => {
+    const target = event.target
+    if (!(target instanceof Element)) return
+    const button = target.closest<HTMLButtonElement>('[data-series-toggle]')
+    if (button === null) return
+    const chart = button.closest('[data-series-chart]')
+    if (chart === null) return
+    const key = button.dataset.seriesToggle ?? ''
+    const shown = button.getAttribute('aria-pressed') !== 'false'
+    button.setAttribute('aria-pressed', shown ? 'false' : 'true')
+    chart.querySelectorAll<HTMLElement>(`[data-series="${key}"]`).forEach((element) => {
+      element.style.opacity = shown ? '0.12' : '1'
+    })
+  })
+</script>
+
+<style>
+  .series-toggle[aria-pressed='false'] {
+    opacity: 0.45;
+    text-decoration: line-through;
+  }
+</style>

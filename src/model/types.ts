@@ -245,10 +245,20 @@ export type OutcomeKey = PlaceOutcomeKey | 'doom'
 /** Shares that sum to 1, given that the world does not end. Doom is global, so it comes from the world forecast. */
 export type PlaceOutcomes = Record<PlaceOutcomeKey, number>
 
+/** The ways superintelligence changes a place's living standard by 2100. */
+export type SiChannel = 'productivity' | 'prices' | 'jobs' | 'ownership' | 'stability'
+
+/**
+ * How superintelligence works on one place, if it arrives: each channel scored from −2 (much worse off)
+ * to +2 (much better off), and the main reason in one short line.
+ */
+export type SiReading = { channels: Record<SiChannel, number>; reason: string }
+
 export type PlaceForecast = {
   entity: EntityId
   si: PlaceOutcomes
   noSi: PlaceOutcomes
+  reading?: SiReading
 }
 
 /** Judged curve points for one card: the chance of being above each band edge or mark. */

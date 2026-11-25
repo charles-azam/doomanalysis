@@ -92,3 +92,12 @@ export const causeShort = {
   ai: 'AI takeover',
   natural: 'Natural',
 } as const
+
+/** The five ways superintelligence works on a place, scored from −2 (much worse off) to +2 (much better off). */
+export const channelDefinitions = {
+  productivity: { name: 'Productivity', text: 'Output per person rises where AI and robots are put to work: more access to AI, more gain.' },
+  prices: { name: 'Prices', text: 'Goods, energy, medicine and services get cheaper everywhere, through trade, even where little AI is used.' },
+  jobs: { name: 'Jobs and exports', text: 'Work AI can do is replaced: economies that sell labour, services or routine manufacturing lose income.' },
+  ownership: { name: 'Ownership', text: 'Profits go to whoever owns the compute, models and robots, and to the states that can tax them.' },
+  stability: { name: 'Power and stability', text: 'Power concentrates, surveillance grows, and fast change can bring unrest or conflict.' },
+} as const

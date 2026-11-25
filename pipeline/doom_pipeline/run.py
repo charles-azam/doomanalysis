@@ -3,7 +3,8 @@
 Usage (from pdoom/pipeline): uv run python -m doom_pipeline.run --raw-dir <downloads> --out-dir ../src/data/generated
 The raw dir holds the official files that have no API: the GPI 2026 site script, the ND-GAIN 2026 zip
 contents and the WRI Aqueduct 4.0 rankings workbook. The run also keeps there the files it downloads itself
-(Our World in Data, WHO, Gallup's safety map, UN WPP 2024): delete one to fetch it again.
+(Our World in Data, WHO, Gallup's safety map, UN WPP 2024, Microsoft's AI diffusion table, Anthropic's
+Economic Index): delete one to fetch it again.
 """
 
 import argparse
@@ -13,6 +14,7 @@ from pathlib import Path
 
 from doom_pipeline.build import build_dataset
 from doom_pipeline.catalog import (
+    AEI_MONTH,
     CONSUMPTION_CODE,
     GALLUP_NAMES,
     GALLUP_SURVEY_YEAR,
@@ -20,12 +22,18 @@ from doom_pipeline.catalog import (
     HEALTH_COVERAGE_CODE,
     HIGH_INCOME,
     MIN_FACTORS,
+    MS_AI_COLUMN,
+    MS_AI_NAMES,
+    MS_AI_UNPUBLISHED,
+    MS_AI_YEAR,
     SPOTLIGHT,
     WORLD_BANK_CODES,
 )
 from doom_pipeline.models import Dataset, Point, RawInputs
 from doom_pipeline.sources import (
+    ANTHROPIC_AEI_CSV,
     GALLUP_SAFETY_CSV,
+    MS_AI_DIFFUSION_CSV,
     OWID_ENERGY_CSV,
     OWID_HOURS_CSV,
     WHO_HALE_JSON,
@@ -36,9 +44,11 @@ from doom_pipeline.sources import (
     fetch_m49,
     fetch_world_bank,
     fetch_world_bank_aggregate,
+    parse_anthropic_usage_index,
     parse_aqueduct,
     parse_gallup_safety,
     parse_gpi,
+    parse_ms_ai_diffusion,
     parse_ndgain,
     parse_owid,
     parse_who_hale,
@@ -85,6 +95,19 @@ def fetch_raw(*, raw_dir: Path) -> RawInputs:
         names={country.name: country.iso3 for country in countries} | GALLUP_NAMES,
         unpublished=GALLUP_UNPUBLISHED,
         year=GALLUP_SURVEY_YEAR,
+    )
+
+    # AI access: fetched after the living factors, for the same reason.
+    indicators["ai_use"] = parse_ms_ai_diffusion(
+        path=cached(url=MS_AI_DIFFUSION_CSV, path=raw_dir / "dl_ms_ai_diffusion" / "AI_Diffusion_Q22026_Update.csv"),
+        column=MS_AI_COLUMN,
+        names={country.name: country.iso3 for country in countries} | MS_AI_NAMES,
+        unpublished=MS_AI_UNPUBLISHED,
+        year=MS_AI_YEAR,
+    )
+    indicators["ai_usage_index"] = parse_anthropic_usage_index(
+        path=cached(url=ANTHROPIC_AEI_CSV, path=raw_dir / "dl_anthropic_aei" / "aei_claude_ai_2026-06-26.csv"),
+        month=AEI_MONTH,
     )
     wpp = cached(url=WPP_MEDIUM_CSV, path=raw_dir / "dl_people_wpp" / "WPP2024_Demographic_Indicators_Medium.csv.gz")
     return RawInputs(

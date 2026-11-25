@@ -3,11 +3,11 @@ import { getCollection } from 'astro:content'
 import Base from '../layouts/Base.astro'
 import { buildWorldPrompt, plainText } from '../../judge/forecast-prompt.ts'
 import { cards } from '../data/cards.ts'
-import { abundanceMultiple, causeDefinitions, dangerScale, horizon, outcomeDefinitions, potentialScale, scaleDefinitions } from '../data/definitions.ts'
+import { abundanceMultiple, causeDefinitions, channelDefinitions, dangerScale, horizon, outcomeDefinitions, potentialScale, scaleDefinitions } from '../data/definitions.ts'
 import { countries, regions } from '../data/entities.ts'
 import { latestForecastDate, outlook } from '../data/outlook.ts'
 import { dangerColors, levelInk, potentialColors, potentialInk } from '../data/palette.ts'
-import { outcomeKeys, rootCauses } from '../model/forecast.ts'
+import { outcomeKeys, rootCauses, siChannels } from '../model/forecast.ts'
 
 const explainers = await getCollection('explainers')
 const aiBody = explainers.find((entry) => entry.data.factor === 'ai_progress_index')?.body ?? ''
@@ -98,6 +98,19 @@ const doublingAtOne = 1.01 ** yearsLeft
       The judges answer one question per cause and level: what is the chance that the worst thing to happen to the world by {horizon} reaches
       this level, and that this cause started it? Since every possible future has one worst level and one root cause, these chances add up:
       the chance of doom is the sum of the seven causes' chances of doom, and each cause's share is its chance divided by the total.
+    </p>
+
+    <h2 id="channels">What superintelligence changes, place by place</h2>
+    <p>
+      For every country, the judges score five channels from −2 (much worse off) to +2 (much better off), if superintelligence arrives,
+      and name the one that matters most. Regions and the world are the population-weighted averages of their countries.
+    </p>
+    <ul>
+      {siChannels.map((channel) => <li><strong>{channelDefinitions[channel].name}.</strong> {channelDefinitions[channel].text}</li>)}
+    </ul>
+    <p>
+      No source counts AI tokens per person by country. The site uses two proxies: the share of people aged 15–64 using generative AI
+      (Microsoft's AI diffusion reports) and the Anthropic AI Usage Index (use per working-age person, 1 = world average). Judges see both.
     </p>
 
     <h2 id="cards">How a card works</h2>

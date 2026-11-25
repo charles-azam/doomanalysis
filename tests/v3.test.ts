@@ -2,7 +2,7 @@ import test from 'node:test'
 import assert from 'node:assert/strict'
 import { cardProblems, cardSetProblems, cardTree } from '../src/model/cards.ts'
 import { atLeast, barsFor, curveEdges, curveFor, levelAt, levelChances } from '../src/model/distribution.ts'
-import { cardFloor, causeShares, headline, parentProblems, placeOutcomes, poolWorlds, rootCauses, timelineEnd, validatePlace, validateRun, validateTimeline, validateWorld, verdictOf, worldDanger } from '../src/model/forecast.ts'
+import { cardFloor, causeShares, headline, parentProblems, placeOutcomes, poolReadings, poolWorlds, rootCauses, timelineEnd, validatePlace, validateRun, validateTimeline, validateWorld, verdictOf, worldDanger } from '../src/model/forecast.ts'
 import type { Card, CauseDanger, ForecastRun, PlaceOutcomes, RootCause, TimelinePoint, WorldCase, WorldForecast } from '../src/model/types.ts'
 
 const close = (actual: number, expected: number) => assert.ok(Math.abs(actual - expected) < 1e-9, `${actual} ≠ ${expected}`)
@@ -135,6 +135,16 @@ test('v0.3 end to end: cards, curves, causes, headline and places from mock data
   }
   close(placeOutcomes({ world: verdict.world, place: france, scenario: 'si' }).abundance, 0.1 * (1 - doomSi))
 
+  // Channel readings: averaged across runs, with the reason of the run closest to the average.
+  const reading = (jobs: number, reason: string) => ({ channels: { productivity: 1, prices: 1, jobs: jobs, ownership: -1, stability: 0 }, reason: reason })
+  const pooled = poolReadings({ readings: [reading(-2, 'far'), reading(0, 'near'), reading(-0.5, 'nearest')] })
+  close(pooled?.channels.jobs ?? 99, -2.5 / 3)
+  assert.equal(pooled?.reason, 'nearest')
+  assert.equal(poolReadings({ readings: [] }), undefined)
+  const read = verdictOf({ runs: [run('a', 1), { ...run('c', 1), batch: 'countries', world: undefined, curves: [], places: [{ entity: 'FRA', si: outcomes(0.1), noSi: outcomes(0), reading: reading(-1, 'Services exports shrink') }] }], cards: cards })
+  assert.equal(read.places.FRA.runs, 2)
+  close(read.places.FRA.reading?.channels.jobs ?? 99, -1)
+
   // Timeline: judged years between 2025 (nothing yet) and 2100 (the headline), averaged across runs.
   assert.equal(verdict.timeline, undefined)
   const end = timelineEnd({ world: verdict.world })
@@ -157,6 +167,8 @@ test('v0.3 rejects incoherent runs', () => {
   assert.throws(() => poolWorlds({ worlds: [] }), /no world forecast/)
 
   assert.throws(() => validatePlace({ place: { entity: 'FRA', si: { ...outcomes(0.1), better: 0.1 }, noSi: outcomes(0) } }), /sum to/)
+  assert.throws(() => validatePlace({ place: { entity: 'FRA', si: outcomes(0.1), noSi: outcomes(0), reading: { channels: { productivity: 3, prices: 0, jobs: 0, ownership: 0, stability: 0 }, reason: 'x' } } }), /between -2 and 2/)
+  assert.throws(() => validatePlace({ place: { entity: 'FRA', si: outcomes(0.1), noSi: outcomes(0), reading: { channels: { productivity: 1, prices: 0, jobs: 0, ownership: 0, stability: 0 }, reason: ' ' } } }), /reason/)
   const nudged = validatePlace({ place: { entity: 'FRA', si: { ...outcomes(0.1), better: 0.31 }, noSi: outcomes(0) } })
   close(Object.values(nudged.si).reduce((a, b) => a + b, 0), 1)
 

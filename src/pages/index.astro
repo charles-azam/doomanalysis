@@ -1,14 +1,23 @@
 ---
 import Base from '../layouts/Base.astro'
+import CardGrid from '../components/CardGrid.astro'
+import ChannelTable from '../components/ChannelTable.astro'
+import EffectChart from '../components/EffectChart.astro'
+import ScatterChart from '../components/ScatterChart.astro'
+import { VerticalBars } from '../components/VerticalBars.tsx'
 import { CauseChart } from '../components/CauseChart.tsx'
 import { ChartCard } from '../components/ChartCard.tsx'
 import { Compare } from '../components/Compare.tsx'
 import { SixOutcomeBar, SixOutcomeLegend } from '../components/SixOutcomeBar.tsx'
 import { TimelineChart } from '../components/TimelineChart.tsx'
-import { countries } from '../data/entities.ts'
+import { cards } from '../data/cards.ts'
+import { causeDefinitions } from '../data/definitions.ts'
+import { countries, entities, pathFor } from '../data/entities.ts'
 import { regionShort } from '../data/labels.ts'
-import { placeColors } from '../data/palette.ts'
-import { causeTable, outlook, people2100, placeRows, sixOutcomesFor } from '../data/outlook.ts'
+import { causeColors, dangerColors, levelInk, placeColors } from '../data/palette.ts'
+import { causeTable, measureFor, outlook, people2100, placeRows, readingFor, siEffectFor, sixOutcomesFor } from '../data/outlook.ts'
+import { rootCauses } from '../model/forecast.ts'
+import type { CardGroup } from '../model/types.ts'
 
 const rows = placeRows.map((row) => ({
   id: row.id,
@@ -23,9 +32,55 @@ const rows = placeRows.map((row) => ({
 const defaults = placeRows.filter((row) => row.kind !== 'country').map((row) => row.id)
 const humanity = sixOutcomesFor({ id: 'WLD' })
 const timeline = outlook.timeline
-const section = (title: string, color: string, href: string, link: string) => ({ title, color, href, link })
-const risks = section('Risks', '#e34948', '/risks/', 'All risks')
-const people = section('People in 2100', '#1f5fb0', '/countries/', 'All countries')
+const groups: { group: CardGroup; title: string; color: string; line: string }[] = [
+  ...rootCauses.map((cause) => ({ group: cause, title: causeDefinitions[cause].name, color: causeColors[cause], line: causeDefinitions[cause].text })),
+  { group: 'technology', title: 'Technologies', color: '#2a78d6', line: 'Chance of each potential level: the share of humanity each could move up one outcome' },
+  { group: 'living', title: 'How people live', color: '#008300', line: 'Living standards today and in 2100' },
+]
+const riskGroups = groups.filter((g) => cards.some((card) => card.group === g.group))
+// What superintelligence changes: the world and regions, then every country for the scatter.
+const headPlaces = entities.filter((e) => e.kind !== 'country')
+const colorOf = (id: string, region?: string) => placeColors[region ?? id] ?? '#0b0b0b'
+const hrefOf = (id: string) => (id === 'WLD' ? '/countries/world/' : pathFor({ entity: entities.find((e) => e.id === id) as (typeof entities)[number] }))
+const nameOf = (id: string) => (id === 'WLD' ? 'World' : (regionShort[id] ?? id))
+const aiBars = headPlaces
+  .flatMap((e) => {
+    const value = measureFor({ factorId: 'ai_use', id: e.id })
+    return value === undefined ? [] : [{ key: e.id, label: nameOf(e.id), title: e.name, color: colorOf(e.id), href: hrefOf(e.id), value: value / 100 }]
+  })
+  .sort((a, b) => b.value - a.value)
+const effectRows = headPlaces
+  .flatMap((e) => {
+    const effect = siEffectFor({ id: e.id })
+    return effect === undefined ? [] : [{ id: e.id, name: e.kind === 'world' ? 'World' : e.name, href: hrefOf(e.id), color: colorOf(e.id), abundance: effect.abundance, down: effect.down }]
+  })
+  .sort((a, b) => b.abundance - a.abundance)
+const scatter = countries.flatMap((country) => {
+  const use = measureFor({ factorId: 'ai_use', id: country.id })
+  const effect = siEffectFor({ id: country.id })
+  return use === undefined || effect === undefined ? [] : [{ id: country.id, name: country.name, href: pathFor({ entity: country }), color: colorOf(country.id, country.region), x: use / 100, y: effect.better }]
+})
+const channelRows = headPlaces.flatMap((e) => {
+  const reading = readingFor({ id: e.id })
+  return reading === undefined ? [] : [{ id: e.id, name: e.kind === 'world' ? 'World' : e.name, href: hrefOf(e.id), color: colorOf(e.id), reading: reading }]
+})
+const hasSi = aiBars.length > 0 || effectRows.length > 0 || channelRows.length > 0
+
+const nav = [
+  { id: 'places', title: 'Places', color: '#e34948' },
+  { id: 'how-bad', title: 'How bad, and why', color: '#eb6834' },
+  ...(hasSi ? [{ id: 'si-effect', title: 'What superintelligence changes', color: '#6250d6' }] : []),
+  { id: 'over-time', title: 'Over time', color: '#0b0b0b' },
+  { id: 'humanity', title: 'Humanity in 2100', color: '#c9c8c2' },
+  ...riskGroups.map((g) => ({ id: g.group, title: g.title, color: g.color })),
+]
+const scale = [
+  { level: 1 as const, share: '<1%' },
+  { level: 2 as const, share: '1–10%' },
+  { level: 3 as const, share: '10–50%' },
+  { level: 4 as const, share: '>50%' },
+  { level: 5 as const, share: 'doom' },
+]
 ---
 
 <Base title="P(doom)" description="Independent estimates of collapse, decline and abundance by 2100 for 199 countries, with and without superintelligence." active="home">
@@ -34,69 +89,160 @@ const people = section('People in 2100', '#1f5fb0', '/countries/', 'All countrie
     <p class="mt-5 text-lg">Collapse, decline and abundance by 2100 for {countries.length} countries, with and without superintelligence</p>
   </section>
 
-  <Compare client:load rows={rows} defaults={defaults} />
+  <div class="grid grid-cols-1 gap-10 lg:grid-cols-[190px_minmax(0,1fr)]">
+    <aside class="hidden lg:block">
+      <ul class="sticky top-24 flex flex-col gap-2 text-sm">
+        {
+          nav.map((item) => (
+            <li>
+              <a href={`#${item.id}`} class="flex items-center gap-2 hover:underline">
+                <span class="square" style={`background: ${item.color}`} />
+                {item.title}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </aside>
 
-  {
-    [risks].map((s) => (
-      <div class="mb-5 mt-16 flex flex-wrap items-center justify-between gap-3">
+    <div class="flex min-w-0 flex-col gap-16">
+      <section id="places" class="scroll-mt-24">
+        <Compare client:load rows={rows} defaults={defaults} />
+      </section>
+
+      <section id="how-bad" class="scroll-mt-24">
         <h2 class="section-title">
-          <span class="square" style={`background: ${s.color}`} />
-          {s.title}
+          <span class="square" style="background: #eb6834"></span>
+          How bad, and why
         </h2>
-        <a href={s.href} class="inline-flex items-center gap-2 text-sm">
-          {s.link} <span class="inline-flex h-6 w-6 items-center justify-center rounded bg-black text-white">↗</span>
+        <p class="mb-5 mt-1 text-sm muted">Each catastrophe counts once, under the cause that started it, so the causes add up to 100%</p>
+        <CauseChart client:visible table={causeTable} />
+      </section>
+
+      {
+        hasSi && (
+          <section id="si-effect" class="scroll-mt-24">
+            <div class="flex flex-wrap items-center justify-between gap-3">
+              <h2 class="section-title">
+                <span class="square" style="background: #6250d6" />
+                What superintelligence changes
+              </h2>
+              <a href="/superintelligence/" class="inline-flex items-center gap-2 text-sm">
+                Superintelligence <span class="inline-flex h-6 w-6 items-center justify-center rounded bg-black text-white">↗</span>
+              </a>
+            </div>
+            <p class="mb-5 mt-1 text-sm muted">Who gains depends on who has the AI, what they sell, and who owns the machines</p>
+            <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
+              {aiBars.length > 0 && (
+                <ChartCard title="AI use" subtitle="Share of people aged 15–64 using AI, 2026 · Our proxy for tokens per person" color="#6250d6">
+                  <VerticalBars bars={aiBars} color="#6250d6" max={Math.max(...aiBars.map((b) => b.value)) * 1.1} />
+                </ChartCard>
+              )}
+              {effectRows.length > 0 && (
+                <ChartCard title="Effect by 2100" subtitle="With superintelligence minus without, in points" color="#1f5fb0">
+                  <EffectChart rows={effectRows} />
+                </ChartCard>
+              )}
+            </div>
+            {scatter.length > 0 && (
+              <div class="mt-4">
+                <ChartCard title="More AI, more gain?" subtitle="Each dot a country · change in people better off with superintelligence, against AI use today" color="#0b0b0b">
+                  <ScatterChart
+                    points={scatter}
+                    xLabel="Share of people aged 15–64 using AI"
+                    yLabel="Better off with SI (points)"
+                    xMax={Math.ceil(Math.max(...scatter.map((p) => p.x)) * 10) / 10}
+                    legend={headPlaces.filter((e) => e.kind === 'region').map((e) => ({ label: nameOf(e.id), color: colorOf(e.id) }))}
+                  />
+                </ChartCard>
+              </div>
+            )}
+            {channelRows.length > 0 && (
+              <div class="mt-4">
+                <ChartCard title="How it works" subtitle="Judged effect of each channel on living standards by 2100, if superintelligence arrives" color="#6250d6">
+                  <ChannelTable rows={channelRows} />
+                </ChartCard>
+              </div>
+            )}
+          </section>
+        )
+      }
+
+      {
+        timeline && (
+          <section id="over-time" class="scroll-mt-24">
+            <h2 class="section-title mb-5">
+              <span class="square" style="background: #0b0b0b" />
+              Over time
+            </h2>
+            <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
+              <ChartCard title="Catastrophe" subtitle="Chance it has happened, by year · Lower is better" color="#e34948">
+                <TimelineChart
+                  points={timeline}
+                  max={0.5}
+                  lines={[
+                    { key: 'atLeast3', label: 'Level 3+', color: '#f09595' },
+                    { key: 'atLeast4', label: 'Level 4+', color: '#e34948' },
+                    { key: 'doom', label: 'Doom', color: '#0b0b0b' },
+                  ]}
+                />
+              </ChartCard>
+              <ChartCard title="Superintelligence" subtitle="Chance it has arrived, by year" color="#6250d6">
+                <TimelineChart points={timeline} max={1} lines={[{ key: 'si', label: 'Superintelligence', color: '#6250d6' }]} />
+              </ChartCard>
+            </div>
+          </section>
+        )
+      }
+
+      {
+        humanity && (
+          <section id="humanity" class="scroll-mt-24">
+            <ChartCard title="Humanity in 2100" subtitle={`${(people2100 / 1e9).toFixed(1)} billion people, by the outcome of their region`} color="#c9c8c2">
+              <div class="flex flex-col gap-3">
+                <SixOutcomeLegend />
+                {([['weighted', 'Our forecast'], ['si', 'With superintelligence'], ['noSi', 'Without']] as const).map(([key, label]) => (
+                  <div class="grid grid-cols-[8.5rem_minmax(0,1fr)] items-center gap-3">
+                    <span class="text-sm ink-2">{label}</span>
+                    <SixOutcomeBar outcomes={humanity[key]} name={`Humanity, ${label}`} />
+                  </div>
+                ))}
+              </div>
+            </ChartCard>
+          </section>
+        )
+      }
+
+      <div id="risks" class="-mb-8 flex scroll-mt-24 flex-wrap items-center justify-end gap-3 border-t pt-10" style="border-color: var(--line)">
+        <a href="/methodology/#scale" class="flex flex-wrap items-center gap-1.5 text-xs ink-2 hover:underline">
+          <span>Danger level, share of humanity harmed:</span>
+          {scale.map((level) => (
+            <span class="rounded px-1.5 py-0.5" style={`background: ${dangerColors[level.level]}; color: ${levelInk[level.level]}`}>
+              {level.level} · {level.share}
+            </span>
+          ))}
         </a>
       </div>
-    ))
-  }
-  <div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
-    {
-      timeline && (
-        <ChartCard title="Catastrophe" subtitle="Chance it has happened, by year · Lower is better" color="#e34948">
-          <TimelineChart
-            points={timeline}
-            max={0.5}
-            lines={[
-              { key: 'atLeast3', label: 'Over 10% of humanity', color: '#f09595' },
-              { key: 'atLeast4', label: 'Over half', color: '#e34948' },
-              { key: 'doom', label: 'Doom', color: '#0b0b0b' },
-            ]}
-          />
-        </ChartCard>
-      )
-    }
-    <CauseChart client:visible table={causeTable} scenario="weighted" />
-    {
-      timeline && (
-        <ChartCard title="Superintelligence" subtitle="Chance it has arrived, by year" color="#6250d6">
-          <TimelineChart points={timeline} max={1} lines={[{ key: 'si', label: 'Superintelligence', color: '#6250d6' }]} />
-        </ChartCard>
-      )
-    }
-  </div>
 
-  <div class="mb-5 mt-16 flex flex-wrap items-center justify-between gap-3">
-    <h2 class="section-title">
-      <span class="square" style={`background: ${people.color}`}></span>
-      {people.title}
-    </h2>
-    <a href={people.href} class="inline-flex items-center gap-2 text-sm">
-      {people.link} <span class="inline-flex h-6 w-6 items-center justify-center rounded bg-black text-white">↗</span>
-    </a>
-  </div>
-  {
-    humanity && (
-      <ChartCard title="Humanity" subtitle={`${(people2100 / 1e9).toFixed(1)} billion people, by the outcome of their region`} color="#c9c8c2">
-        <div class="flex flex-col gap-3">
-          <SixOutcomeLegend />
-          {([['weighted', 'Our forecast'], ['si', 'With superintelligence'], ['noSi', 'Without']] as const).map(([key, label]) => (
-            <div class="grid grid-cols-[8.5rem_minmax(0,1fr)] items-center gap-3">
-              <span class="text-sm ink-2">{label}</span>
-              <SixOutcomeBar outcomes={humanity[key]} name={`Humanity, ${label}`} />
+      {
+        riskGroups.map((g) => (
+          <section id={g.group} class="scroll-mt-24">
+            <div class="flex flex-wrap items-center justify-between gap-3">
+              <h2 class="section-title">
+                <span class="square" style={`background: ${g.color}`} />
+                {g.title}
+              </h2>
+              {g.group in causeDefinitions && (
+                <a href={`/causes/${g.group}/`} class="inline-flex items-center gap-2 text-sm">
+                  Cause <span class="inline-flex h-6 w-6 items-center justify-center rounded bg-black text-white">↗</span>
+                </a>
+              )}
             </div>
-          ))}
-        </div>
-      </ChartCard>
-    )
-  }
+            <p class="mb-5 mt-1 text-sm muted">{g.line}</p>
+            <CardGrid cards={cards} group={g.group} curves={outlook.curves} summary={true} />
+          </section>
+        ))
+      }
+    </div>
+  </div>
 </Base>

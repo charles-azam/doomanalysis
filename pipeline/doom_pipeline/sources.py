@@ -21,6 +21,15 @@ WHO_HALE_JSON = "https://ghoapi.azureedge.net/api/WHOSIS_000002?$filter=Dim1%20e
 # The data behind the map on https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx (2026 report).
 GALLUP_SAFETY_CSV = "https://datawrapper.dwcdn.net/AUEWD/3/dataset.csv"
 WPP_MEDIUM_CSV = "https://population.un.org/wpp/assets/Excel%20Files/1_Indicator%20(Standard)/CSV_FILES/WPP2024_Demographic_Indicators_Medium.csv.gz"
+# The dataset the Microsoft AI Diffusion Report Q2 2026 cites, at the commit that published it.
+MS_AI_DIFFUSION_CSV = (
+    "https://raw.githubusercontent.com/microsoft/ai-diffusion-report/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+)
+# Claude.ai usage by geography from the Anthropic Economic Index release of 26 June 2026 (April and May 2026), pinned.
+ANTHROPIC_AEI_CSV = (
+    "https://huggingface.co/datasets/Anthropic/EconomicIndex/resolve/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6"
+    "/release_2026_06_26/data/aei_claude_ai_2026-06-26.csv"
+)
 
 
 def get_text(*, url: str) -> str:
@@ -200,6 +209,41 @@ def parse_gallup_safety(*, path: Path, names: dict[str, str], unpublished: tuple
         for row in csv.DictReader(handle):
             if row["DW_NAME"] not in unpublished and row["VALUE"] != "":
                 points[names[row["DW_NAME"]]] = Point(value=float(row["VALUE"]), year=year)
+    return points
+
+
+def parse_ms_ai_diffusion(*, path: Path, column: str, names: dict[str, str], unpublished: tuple[str, ...], year: int) -> dict[str, Point]:
+    """Share of people aged 15 to 64 who used a generative AI product in one period of Microsoft's AI diffusion table.
+
+    The file is Mac Roman encoded (its "Türkiye" is the byte 0x9F) and writes shares as "49.6%". It names economies
+    in words: `names` maps them to ISO3 codes, and a name found neither there nor in `unpublished` stops the run.
+    """
+    points: dict[str, Point] = {}
+    with path.open(encoding="mac_roman", newline="") as handle:
+        for row in csv.DictReader(handle):
+            if row["Economy"] not in unpublished:
+                points[names[row["Economy"]]] = Point(value=float(row[column].removesuffix("%")), year=year)
+    return points
+
+
+def parse_anthropic_usage_index(*, path: Path, month: str) -> dict[str, Point]:
+    """The Anthropic AI Usage Index per country for one month of Claude.ai use, as Anthropic publishes it.
+
+    The index is a country's share of Claude.ai conversations divided by its share of the working-age (15–64)
+    population (metric usage_per_capita_index, category overall). `month` is the row's date_start, such as "2026-05-01".
+    """
+    points: dict[str, Point] = {}
+    with path.open(encoding="utf-8", newline="") as handle:
+        for row in csv.DictReader(handle):
+            if (
+                row["date_start"] == month
+                and row["geo_level"] == "country"
+                and row["category_name"] == "overall"
+                and row["metric_id"] == "usage_per_capita_index"
+            ):
+                points[row["geo_id"]] = Point(value=float(row["value"]), year=int(month[:4]))
+    if not points:
+        raise ValueError(f"no country usage index for {month} in {path.name}")
     return points
 
 

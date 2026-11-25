@@ -1,5 +1,5 @@
-import { causeDanger, headline, placeOutcomes, verdictOf, worldDanger, type DangerKey, dangerKeys, rootCauses, type Headline } from '../model/forecast.ts'
-import type { EntityId, HeadlineRecord, RootCause, ScenarioKey, SixOutcomes } from '../model/types.ts'
+import { causeDanger, headline, placeOutcomes, siChannels, verdictOf, worldDanger, type DangerKey, dangerKeys, rootCauses, type Headline } from '../model/forecast.ts'
+import type { EntityId, HeadlineRecord, RootCause, ScenarioKey, SiChannel, SiReading, SixOutcomes } from '../model/types.ts'
 import { cards } from './cards.ts'
 import { countries, entities, pathFor, type Entity } from './entities.ts'
 import { forecastRuns } from './forecasts.ts'
@@ -124,3 +124,36 @@ export const decentToday = (() => {
 })()
 
 export const latestForecastDate = new Date(`${outlook.date}T00:00:00Z`).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' })
+
+/** What superintelligence changes for a place: with minus without, in shares of people (0.05 = 5 points). */
+export type SiEffect = { abundance: number; better: number; down: number }
+
+export function siEffectFor({ id }: { id: EntityId }): SiEffect | undefined {
+  const six = sixOutcomesFor({ id: id })
+  if (six === undefined) return undefined
+  return {
+    abundance: six.si.abundance - six.noSi.abundance,
+    better: six.si.better + six.si.abundance - (six.noSi.better + six.noSi.abundance),
+    down: six.si.collapse + six.si.doom - (six.noSi.collapse + six.noSi.doom),
+  }
+}
+
+/**
+ * The channel reading of a place: a country's own, or for a region or the world the population-weighted
+ * average of its countries' readings (with no reason, since none was judged for the whole).
+ */
+export function readingFor({ id }: { id: EntityId }): SiReading | undefined {
+  const own = outlook.places[id]?.reading
+  if (own !== undefined) return own
+  const members = countries.filter((country) => (id === 'WLD' || country.region === id) && outlook.places[country.id]?.reading !== undefined)
+  if (members.length === 0) return undefined
+  const people = members.reduce((total, country) => total + country.population, 0)
+  const channels = Object.fromEntries(
+    siChannels.map((channel) => [channel, members.reduce((total, country) => total + ((outlook.places[country.id].reading as SiReading).channels[channel] * country.population) / people, 0)]),
+  ) as Record<SiChannel, number>
+  return { channels: channels, reason: '' }
+}
+
+/** A measured value for a place, or undefined where the source has none. */
+export const measureFor = ({ factorId, id }: { factorId: string; id: EntityId }): number | undefined =>
+  observations.find((o) => o.factorId === factorId && o.entity === id)?.value

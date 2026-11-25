@@ -12,7 +12,9 @@ from doom_pipeline.run import write
 from doom_pipeline.sources import (
     fetch_world_bank,
     fetch_world_bank_aggregate,
+    parse_anthropic_usage_index,
     parse_gallup_safety,
+    parse_ms_ai_diffusion,
     parse_owid,
     parse_who_hale,
     parse_wpp_population,
@@ -114,6 +116,30 @@ def test_mock_countries_flow_into_country_and_region_rows(tmp_path: Path, monkey
             "Country/Area,DEU,Germany,Medium,2100,70000.25\nCountry/Area,SWE,Sweden,Medium,2100,12000\n"
             "Country/Area,NOR,Norway,Medium,2100,6000\nCountry/Area,TUV,Tuvalu,Medium,2100,10\nCountry/Area,FRA,France,Medium,2101,\n"
         )
+    # Microsoft's AI diffusion table: Mac Roman, shares written with a percent sign, one column per period.
+    diffusion = tmp_path / "diffusion.csv"
+    diffusion.write_text(
+        "Economy,H1 2025 AI Diffusion,H2 2025 AI Diffusion,Q1 2026 AI Diffusion,Q2 2026 AI Diffusion\r\n"
+        "France,40.90%,44.00%,47.80%,49.6%\r\nGermany,26.50%,28.60%,31.10%,32.3%\r\nKingdom of Sweden,31.20%,33.30%,36.10%,37.3%\r\n"
+        "Türkiye,13.40%,14.60%,17.40%,18.9%\r\nTaiwan,26.40%,28.40%,31.80%,33.8%\r\nTuvalu,5.00%,5.50%,6.00%,6.5%\r\n",
+        encoding="mac_roman",
+    )
+    # Anthropic's Economic Index release: one row per metric, geography, category and month.
+    economic_index = tmp_path / "aei.csv"
+    economic_index.write_text(
+        "date_start,date_end,geo_id,geo_level,category_name,hierarchy_level,metric_id,value,node_name,node_external_id\n"
+        "2026-05-01,2026-06-01,GLOBAL,global,overall,0,usage_per_capita_index,1.0,Overall,-\n"
+        "2026-04-01,2026-05-01,FRA,country,overall,0,usage_per_capita_index,3.87,Overall,-\n"
+        "2026-05-01,2026-06-01,FRA,country,overall,0,usage_per_capita_index,3.97,Overall,-\n"
+        "2026-05-01,2026-06-01,FRA,country,overall,0,usage_pct,3.95,Overall,-\n"
+        '2026-05-01,2026-06-01,FRA,country,onet,3,usage_per_capita_index,9.9,"Prepare reports, budgets, or plans.",4.A.3\n'
+        "2026-05-01,2026-06-01,FR-IDF,subregion,overall,0,usage_per_capita_index,6.0,Overall,-\n"
+        "2026-05-01,2026-06-01,DEU,country,overall,0,usage_per_capita_index,2.5,Overall,-\n"
+        "2026-04-01,2026-05-01,SWE,country,overall,0,usage_per_capita_index,3.0,Overall,-\n"
+        "2026-05-01,2026-06-01,NOR,country,overall,0,usage_per_capita_index,4.04,Overall,-\n"
+        "2026-05-01,2026-06-01,TUV,country,overall,0,usage_per_capita_index,0.5,Overall,-\n",
+        encoding="utf-8",
+    )
 
     indicators = {
         "homicide_rate": {
@@ -137,6 +163,14 @@ def test_mock_countries_flow_into_country_and_region_rows(tmp_path: Path, monkey
             unpublished=("Northern Cyprus",),
             year=2025,
         ),
+        "ai_use": parse_ms_ai_diffusion(
+            path=diffusion,
+            column="Q2 2026 AI Diffusion",
+            names={country.name: country.iso3 for country in countries} | {"Kingdom of Sweden": "SWE", "Türkiye": "TUR"},
+            unpublished=("Taiwan",),
+            year=2026,
+        ),
+        "ai_usage_index": parse_anthropic_usage_index(path=economic_index, month="2026-05-01"),
     }
     raw = RawInputs(
         countries=countries,
@@ -216,6 +250,29 @@ def test_mock_countries_flow_into_country_and_region_rows(tmp_path: Path, monkey
     assert ("hours_worked", "europe-north") not in rows
     assert all(o.entity != "TUV" for o in dataset.observations)
 
+    # AI use: the latest period's column, names resolved (the Mac Roman "Türkiye" included), places without a
+    # country left out, regions and the world weighted by population like every other factor.
+    assert indicators["ai_use"]["TUR"] == Point(value=18.9, year=2026)
+    assert set(indicators["ai_use"]) == {"FRA", "DEU", "SWE", "TUR", "TUV"}
+    assert (rows[("ai_use", "FRA")].value, rows[("ai_use", "FRA")].year) == (49.6, 2026)
+    assert rows[("ai_use", "SWE")].value == 37.3
+    assert rows[("ai_use", "FRA")].source == "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026"
+    assert rows[("ai_use", "FRA")].url.startswith("https://github.com/microsoft/ai-diffusion-report/blob/")
+    assert ("ai_use", "NOR") not in rows
+    assert rows[("ai_use", "europe-west")].value == round((49.6 * 60 + 32.3 * 80) / 140, 2)
+    assert rows[("ai_use", "europe-north")].note == "population-weighted average of 1 countries (67% of the population)"
+    # AI usage index: the chosen month only (Sweden has only April), country rows of the overall category only.
+    assert (rows[("ai_usage_index", "FRA")].value, rows[("ai_usage_index", "FRA")].year) == (3.97, 2026)
+    assert rows[("ai_usage_index", "NOR")].value == 4.04
+    assert ("ai_usage_index", "SWE") not in rows
+    assert rows[("ai_usage_index", "europe-west")].value == round((3.97 * 60 + 2.5 * 80) / 140, 3)
+    # Norway alone holds 5/15 of Northern Europe: too few people for a regional value.
+    assert ("ai_usage_index", "europe-north") not in rows
+    assert benchmarks[("ai_use", "WLD")].value == round((49.6 * 60 + 32.3 * 80 + 37.3 * 10) / 150, 2)
+    assert benchmarks[("ai_usage_index", "WLD")].value == round((3.97 * 60 + 2.5 * 80 + 4.04 * 5) / 145, 3)
+    assert benchmarks[("ai_usage_index", "WLD")].note == "population-weighted average of 3 countries (94% of the population)"
+    assert ("ai_use", HIGH_INCOME) not in benchmarks
+
     # Projections only for published countries.
     assert [(p.entity, p.value, p.year) for p in dataset.projections] == [("FRA", 2.1, 2050)]
 
@@ -223,7 +280,7 @@ def test_mock_countries_flow_into_country_and_region_rows(tmp_path: Path, monkey
     written = json.loads((tmp_path / "out" / "observations.json").read_text(encoding="utf-8"))
     assert set(written[0]) >= {"factorId", "entity", "value", "year", "source", "url"}
     assert all(row.get("note", "x") is not None for row in written)
-    assert {row["factorId"] for row in written if row["entity"] == "FRA"} >= {"living_standard", "energy_per_person", "feel_safe"}
+    assert {row["factorId"] for row in written if row["entity"] == "FRA"} >= {"living_standard", "energy_per_person", "feel_safe", "ai_use", "ai_usage_index"}
     assert len(json.loads((tmp_path / "out" / "entities.json").read_text(encoding="utf-8"))) == 6
 
     # People in 2100: the UN's world total, regions as the sum of their published countries, then the countries.

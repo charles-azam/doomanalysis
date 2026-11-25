@@ -1,0 +1,73 @@
+---
+import { channelDefinitions } from '../data/definitions.ts'
+import { siChannels } from '../model/forecast.ts'
+import type { SiReading } from '../model/types.ts'
+
+type Row = { id: string; name: string; href: string; color: string; reading: SiReading }
+type Props = { rows: Row[] }
+
+const { rows } = Astro.props
+// Diverging scale: red for worse off, grey for no effect, blue for better off.
+const stops: [number, [number, number, number]][] = [
+  [-2, [163, 45, 45]],
+  [-1, [242, 165, 157]],
+  [0, [239, 239, 236]],
+  [1, [141, 184, 234]],
+  [2, [31, 95, 176]],
+]
+const fill = (score: number): string => {
+  const v = Math.max(-2, Math.min(2, score))
+  const i = Math.min(stops.length - 2, Math.floor(v + 2))
+  const [a, ca] = stops[i]
+  const [, cb] = stops[i + 1]
+  const t = v - a
+  const mix = ca.map((c, k) => Math.round(c + (cb[k] - c) * t))
+  return `rgb(${mix.join(',')})`
+}
+const ink = (score: number) => (Math.abs(score) >= 1.2 ? '#ffffff' : '#2c2c2a')
+const signed = (score: number) => `${score > 0.05 ? '+' : score < -0.05 ? '−' : ''}${Math.abs(score).toFixed(1)}`
+---
+
+<div class="overflow-x-auto">
+  <table class="w-full min-w-[640px] border-separate text-sm" style="border-spacing: 2px">
+    <thead>
+      <tr>
+        <th class="px-2 py-1 text-left text-xs font-medium muted"></th>
+        {
+          siChannels.map((channel) => (
+            <th class="px-2 py-1 text-center text-xs font-medium ink-2" title={channelDefinitions[channel].text}>
+              {channelDefinitions[channel].name}
+            </th>
+          ))
+        }
+      </tr>
+    </thead>
+    <tbody>
+      {
+        rows.map((row) => (
+          <tr>
+            <td class="whitespace-nowrap px-2 py-1">
+              <a href={row.href} class="inline-flex items-center gap-2 hover:underline">
+                <span class="square" style={`background: ${row.color}`} />
+                {row.name}
+              </a>
+            </td>
+            {siChannels.map((channel) => (
+              <td
+                class="rounded-[3px] px-2 py-1.5 text-center text-xs font-semibold tabular"
+                style={`background: ${fill(row.reading.channels[channel])}; color: ${ink(row.reading.channels[channel])}`}
+                title={`${row.name}, ${channelDefinitions[channel].name}: ${signed(row.reading.channels[channel])}`}
+              >
+                {signed(row.reading.channels[channel])}
+              </td>
+            ))}
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+</div>
+<div class="mt-2 flex flex-wrap items-center gap-1.5 text-[11px] ink-2">
+  {[-2, -1, 0, 1, 2].map((score) => <span class="rounded px-1.5 py-0.5 tabular" style={`background: ${fill(score)}; color: ${ink(score)}`}>{signed(score)}</span>)}
+  <span class="ml-1">much worse off to much better off, if superintelligence arrives</span>
+</div>

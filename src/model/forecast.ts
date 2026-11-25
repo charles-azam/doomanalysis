@@ -13,6 +13,8 @@ import type {
   RootCause,
   ScenarioKey,
   SiCase,
+  SiChannel,
+  SiReading,
   SixOutcomes,
   TimelinePoint,
   WorldCase,
@@ -23,6 +25,7 @@ export const rootCauses: RootCause[] = ['climate', 'resources', 'war', 'civil', 
 export const siCases: SiCase[] = ['si', 'noSi']
 export const placeOutcomeKeys: PlaceOutcomeKey[] = ['abundance', 'better', 'stagnation', 'decline', 'collapse']
 export const outcomeKeys: OutcomeKey[] = [...placeOutcomeKeys, 'doom']
+export const siChannels: SiChannel[] = ['productivity', 'prices', 'jobs', 'ownership', 'stability']
 
 /** The three levels the causes are judged at. `doom` is level 5. */
 export type DangerKey = keyof CauseDanger
@@ -86,13 +89,32 @@ function normaliseOutcomes({ outcomes, label }: { outcomes: PlaceOutcomes; label
   return Object.fromEntries(placeOutcomeKeys.map((key) => [key, outcomes[key] / total])) as PlaceOutcomes
 }
 
+function validateReading({ reading, label }: { reading: SiReading; label: string }): SiReading {
+  for (const channel of siChannels) {
+    const score = reading.channels[channel]
+    if (!Number.isFinite(score) || score < -2 || score > 2) throw new Error(`${label}: channel ${channel} must be between -2 and 2, got ${score}`)
+  }
+  if (reading.reason.trim().length === 0 || reading.reason.length > 160) throw new Error(`${label}: the reason must be 1 to 160 characters`)
+  return { channels: Object.fromEntries(siChannels.map((channel) => [channel, reading.channels[channel]])) as Record<SiChannel, number>, reason: reading.reason.trim() }
+}
+
 /** Checks a place and rescales its shares to sum to exactly 1. */
 export function validatePlace({ place }: { place: PlaceForecast }): PlaceForecast {
   return {
     entity: place.entity,
     si: normaliseOutcomes({ outcomes: place.si, label: `${place.entity} | SI` }),
     noSi: normaliseOutcomes({ outcomes: place.noSi, label: `${place.entity} | no SI` }),
+    ...(place.reading ? { reading: validateReading({ reading: place.reading, label: place.entity }) } : {}),
   }
+}
+
+/** Average channel scores across runs; the reason shown is that of the run closest to the average. */
+export function poolReadings({ readings }: { readings: SiReading[] }): SiReading | undefined {
+  if (readings.length === 0) return undefined
+  const channels = Object.fromEntries(siChannels.map((channel) => [channel, mean({ values: readings.map((r) => r.channels[channel]) })])) as Record<SiChannel, number>
+  const distance = (reading: SiReading) => sum({ values: siChannels.map((channel) => (reading.channels[channel] - channels[channel]) ** 2) })
+  const closest = readings.reduce((best, reading) => (distance(reading) < distance(best) ? reading : best))
+  return { channels: channels, reason: closest.reason }
 }
 
 /** A judged curve must give every edge of its card, in both cases, and agree with the card's published points. */
@@ -274,7 +296,13 @@ export function verdictOf({ runs, cards }: { runs: ForecastRun[]; cards: Card[] 
   const places = Object.fromEntries(
     [...byPlace].map(([entity, list]): [EntityId, PlaceVerdict] => [
       entity,
-      { entity: entity, si: meanOutcomes({ list: list.map((p) => p.si) }), noSi: meanOutcomes({ list: list.map((p) => p.noSi) }), runs: list.length },
+      {
+        entity: entity,
+        si: meanOutcomes({ list: list.map((p) => p.si) }),
+        noSi: meanOutcomes({ list: list.map((p) => p.noSi) }),
+        runs: list.length,
+        reading: poolReadings({ readings: list.flatMap((p) => (p.reading ? [p.reading] : [])) }),
+      },
     ]),
   )
 

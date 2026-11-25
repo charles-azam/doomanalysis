@@ -1,0 +1,33 @@
+---
+import GroupedBars from './GroupedBars.astro'
+import { causeDefinitions } from '../data/definitions.ts'
+import { causeTable } from '../data/outlook.ts'
+import { causeColors, dangerColors } from '../data/palette.ts'
+import { formatPercent } from '../model/forecast.ts'
+import type { RootCause } from '../model/types.ts'
+
+type Props = { cause: RootCause }
+
+const { cause } = Astro.props
+const groups = [
+  { key: 'atLeast3', label: 'Level 3+', swatch: dangerColors[3] },
+  { key: 'atLeast4', label: 'Level 4+', swatch: dangerColors[4] },
+  { key: 'doom', label: 'Doom', swatch: dangerColors[5] },
+].map((g) => {
+  const key = g.key as 'atLeast3' | 'atLeast4' | 'doom'
+  return { ...g, without: causeTable.noSi[key].causes[cause], with: causeTable.si[key].causes[cause] }
+})
+const share = causeTable.weighted.atLeast3.total === 0 ? 0 : causeTable.weighted.atLeast3.causes[cause] / causeTable.weighted.atLeast3.total
+---
+
+<article class="card flex min-w-0 flex-col gap-1 p-5" style={`border-top: 3px solid ${causeColors[cause]}`}>
+  <div class="flex items-start justify-between gap-3">
+    <h3 class="card-title min-w-0 text-[1.1rem]"><a href={`/causes/${cause}/`} class="hover:underline">{causeDefinitions[cause].name}</a></h3>
+    <span class="flex-none text-right tabular">
+      <span class="text-lg font-semibold">{formatPercent({ value: share })}</span>
+      <span class="text-xs muted"> of level 3+</span>
+    </span>
+  </div>
+  <p class="text-xs muted">Chance it starts a catastrophe by 2100, all channels</p>
+  <GroupedBars groups={groups} />
+</article>

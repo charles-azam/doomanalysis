@@ -547,6 +547,24 @@ export const displays: FactorDisplay[] = [
     better: 'higher',
     thresholds: [],
   },
+  // AI access
+  {
+    factorId: 'ai_use', symbol: '%',
+    why: 'How many people of working age used a generative AI tool in the quarter: whether AI reaches people at all, the first step toward any benefit from it.',
+    min: 0,
+    max: 100,
+    better: 'higher',
+    thresholds: [],
+  },
+  {
+    factorId: 'ai_usage_index', symbol: '×',
+    why: 'How much a country uses Claude compared with its share of the world’s working-age people: a rough stand-in for AI used per person, which no source publishes by country.',
+    min: 0.05,
+    max: 10,
+    log: true,
+    better: 'higher',
+    thresholds: [{ value: 1, label: 'In proportion', severity: 'goal', basis: 'published' }],
+  },
 ]
 
 export function displayFor({ factorId }: { factorId: string }): FactorDisplay {

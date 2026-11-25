@@ -55,7 +55,7 @@ The pipeline's raw dir holds the official files without an API:
 - `dl_aq/ex/.../*.xlsx`: the WRI Aqueduct 4.0 rankings workbook
 
 The run downloads the other files itself and keeps them there (`dl_owid_energy/`, `dl_owid_hours/`, `dl_who_hale/`,
-`dl_gallup_safety/`, `dl_people_wpp/`); delete one to fetch it again. The World Bank and IMF APIs are read fresh each run.
+`dl_gallup_safety/`, `dl_people_wpp/`, `dl_ms_ai_diffusion/`, `dl_anthropic_aei/`); delete one to fetch it again. The World Bank and IMF APIs are read fresh each run.
 
 ## Updating
 

@@ -1,0 +1,58 @@
+---
+import { ChartCard } from './ChartCard.tsx'
+import { channelDefinitions } from '../data/definitions.ts'
+import { measureFor, readingFor, siEffectFor } from '../data/outlook.ts'
+import { siChannels } from '../model/forecast.ts'
+import type { EntityId } from '../model/types.ts'
+
+type Props = { id: EntityId }
+
+const { id } = Astro.props
+const effect = siEffectFor({ id: id })
+const reading = readingFor({ id: id })
+const use = measureFor({ factorId: 'ai_use', id: id })
+const index = measureFor({ factorId: 'ai_usage_index', id: id })
+const points = (value: number) => `${value > 0.0005 ? '+' : value < -0.0005 ? '−' : ''}${Math.abs(value * 100).toFixed(Math.abs(value) < 0.1 ? 1 : 0)}`
+const signed = (score: number) => `${score > 0.05 ? '+' : score < -0.05 ? '−' : ''}${Math.abs(score).toFixed(1)}`
+const figures = [
+  ...(use !== undefined ? [{ label: 'Use AI', value: `${Math.round(use)}%`, note: 'of people aged 15–64' }] : []),
+  ...(index !== undefined ? [{ label: 'Usage index', value: index.toFixed(1), note: '1 = world average per person' }] : []),
+  ...(effect ? [{ label: 'Better off', value: points(effect.better), note: 'points, with SI' }] : []),
+  ...(effect ? [{ label: 'Collapse or doom', value: points(effect.down), note: 'points, with SI' }] : []),
+]
+---
+
+{
+  (effect || reading) && (
+    <ChartCard title="With superintelligence" subtitle="What changes by 2100 if it arrives, and why" color="#6250d6">
+      <div class="grid grid-cols-2 gap-px overflow-hidden rounded-md border sm:grid-cols-4" style="border-color: var(--line); background: var(--line)">
+        {figures.map((figure) => (
+          <div class="bg-white p-3">
+            <p class="text-xs muted">{figure.label}</p>
+            <p class="text-xl font-semibold tabular">{figure.value}</p>
+            <p class="text-[11px] muted">{figure.note}</p>
+          </div>
+        ))}
+      </div>
+      {reading && (
+        <div class="mt-4 flex flex-col gap-1.5">
+          {siChannels.map((channel) => {
+            const score = reading.channels[channel]
+            const width = (Math.abs(score) / 2) * 50
+            return (
+              <div class="grid grid-cols-[8.5rem_minmax(0,1fr)_2.5rem] items-center gap-2 text-xs" title={channelDefinitions[channel].text}>
+                <span class="ink-2">{channelDefinitions[channel].name}</span>
+                <div class="relative h-3">
+                  <div class="absolute top-0 h-full w-px" style="left: 50%; background: var(--line)" />
+                  <div class="absolute top-0 h-full rounded-[2px]" style={`background: ${score >= 0 ? '#1f5fb0' : '#e34948'}; width: ${width}%; ${score >= 0 ? 'left: 50%' : 'right: 50%'}`} />
+                </div>
+                <span class="text-right font-semibold tabular">{signed(score)}</span>
+              </div>
+            )
+          })}
+          {reading.reason && <p class="mt-2 text-sm ink-2">{reading.reason}</p>}
+        </div>
+      )}
+    </ChartCard>
+  )
+}

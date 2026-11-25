@@ -1,5 +1,6 @@
 ---
 import FactorCard from './FactorCard.astro'
+import SiBlock from './SiBlock.astro'
 import { ChartCard } from './ChartCard.tsx'
 import { SixOutcomeBar, SixOutcomeLegend } from './SixOutcomeBar.tsx'
 import { countries, entityById, formatPopulation, pathFor, regions, type Entity } from '../data/entities.ts'
@@ -22,9 +23,9 @@ const pick = (factor: (typeof factors)[number]) => {
 const sections = (isWorld ? [] : countrySections).map((section) => ({
   section: section,
   // Context factors are left out of every section except "How people live", which is made of them.
-  items: factors.filter((f) => f.scope === scope && section.themes.includes(f.theme) && (f.family !== 'context' || section.id === 'living')).flatMap(pick),
+  items: factors.filter((f) => f.scope === scope && section.themes.includes(f.theme) && (f.family !== 'context' || section.id === 'living' || section.id === 'ai-access')).flatMap(pick),
 }))
-const context = isWorld ? [] : factors.filter((f) => f.scope === scope && f.family === 'context' && f.theme !== 'living').flatMap(pick)
+const context = isWorld ? [] : factors.filter((f) => f.scope === scope && f.family === 'context' && f.theme !== 'living' && f.theme !== 'ai').flatMap(pick)
 const region = entity.region ? entityById({ id: entity.region }) : undefined
 const members = entity.kind === 'region' ? countries.filter((c) => c.region === entity.id) : []
 const subtitle = isWorld
@@ -55,6 +56,10 @@ const subtitle = isWorld
       </ChartCard>
     )
   }
+</section>
+
+<section class="mt-8">
+  <SiBlock id={entity.id} />
 </section>
 
 {

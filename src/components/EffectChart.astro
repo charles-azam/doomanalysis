@@ -1,0 +1,47 @@
+---
+type Row = { id: string; name: string; href: string; color: string; abundance: number; down: number }
+type Props = { rows: Row[] }
+
+const { rows } = Astro.props
+const max = Math.max(0.05, ...rows.flatMap((r) => [Math.abs(r.abundance), Math.abs(r.down)]))
+const points = (value: number) => `${value > 0.0005 ? '+' : value < -0.0005 ? '−' : ''}${Math.abs(value * 100).toFixed(Math.abs(value) < 0.1 ? 1 : 0)}`
+const series = [
+  { key: 'abundance' as const, label: 'Abundance', color: '#1f5fb0' },
+  { key: 'down' as const, label: 'Collapse or doom', color: '#e34948' },
+]
+---
+
+<div class="flex gap-4 text-xs ink-2">
+  {
+    series.map((s) => (
+      <span class="inline-flex items-center gap-1.5">
+        <span class="inline-block h-2.5 w-2.5 rounded-[2px]" style={`background: ${s.color}`} />
+        {s.label}
+      </span>
+    ))
+  }
+</div>
+<div class="mt-3 flex flex-col gap-1.5">
+  {
+    rows.map((row) => (
+      <div class="grid grid-cols-[9.5rem_minmax(0,1fr)] items-center gap-2 text-xs">
+        <a href={row.href} class="truncate ink-2 hover:underline">{row.name}</a>
+        <div class="flex flex-col gap-0.5">
+          {series.map((s) => {
+            const value = row[s.key]
+            const width = (Math.abs(value) / max) * 50
+            return (
+              <div class="relative h-3" title={`${row.name}, ${s.label}: ${points(value)} points with superintelligence`}>
+                <div class="absolute top-0 h-full w-px" style="left: 50%; background: var(--line)" />
+                <div class="absolute top-0 h-full rounded-[2px]" style={`background: ${s.color}; width: ${width}%; ${value >= 0 ? 'left: 50%' : `right: 50%`}`} />
+                <span class="absolute top-[-1px] text-[10px] tabular ink-2" style={value >= 0 ? `left: calc(50% + ${width}% + 3px)` : `right: calc(50% + ${width}% + 3px)`}>
+                  {points(value)}
+                </span>
+              </div>
+            )
+          })}
+        </div>
+      </div>
+    ))
+  }
+</div>

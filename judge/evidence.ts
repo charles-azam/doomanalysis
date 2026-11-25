@@ -8,7 +8,7 @@ import { formatValue } from '../src/model/score.ts'
 import type { EntityId } from '../src/model/types.ts'
 
 /** Context measures every judge sees, even in compact prompts: they are the yardstick of the six outcomes. */
-const livingMeasures = new Set(['living_standard', 'consumption_per_person', 'energy_per_person', 'healthy_life_years', 'health_coverage', 'hours_worked', 'feel_safe', 'migrant_share'])
+const livingMeasures = new Set(['living_standard', 'consumption_per_person', 'energy_per_person', 'healthy_life_years', 'health_coverage', 'hours_worked', 'feel_safe', 'migrant_share', 'ai_use', 'ai_usage_index', 'compute_per_person'])
 
 /** One line per factor: today, the 2100 projection, the thresholds and the chance of crossing them. */
 export function evidenceFor({ entity, compact }: { entity: EntityId; compact: boolean }): string {

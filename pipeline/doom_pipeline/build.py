@@ -3,7 +3,7 @@
 import re
 import unicodedata
 
-from doom_pipeline.catalog import HIGH_INCOME, LIVING_FACTORS, MIN_COVERAGE, REGIONS, SPECS
+from doom_pipeline.catalog import AI_FACTORS, HIGH_INCOME, LIVING_FACTORS, MIN_COVERAGE, REGIONS, SPECS
 from doom_pipeline.models import Country, Dataset, Entity, IndicatorSpec, Observation, Point, Projection, RawInputs
 
 # Display names that differ from the World Bank's formal ones.
@@ -92,10 +92,11 @@ def region_of(*, country: Country) -> str | None:
 def build_dataset(*, raw: RawInputs, spotlight: tuple[str, ...], min_factors: int) -> Dataset:
     specs = {spec.factor_id: spec for spec in SPECS}
 
-    # Countries: keep those with a population and enough factor values to be worth a page.
+    # Countries: keep those with a population and enough factor values to be worth a page. The living and
+    # AI-access measures do not count, so adding them never changes which countries are published.
     published: list[Country] = []
     for country in raw.countries:
-        count = sum(1 for factor_id, points in raw.indicators.items() if factor_id not in LIVING_FACTORS and country.iso3 in points)
+        count = sum(1 for factor_id, points in raw.indicators.items() if factor_id not in LIVING_FACTORS + AI_FACTORS and country.iso3 in points)
         if country.iso3 in raw.population and count >= min_factors and region_of(country=country) is not None:
             published.append(country)
 
@@ -142,9 +143,10 @@ def build_dataset(*, raw: RawInputs, spotlight: tuple[str, ...], min_factors: in
             if average is not None:
                 observations.append(average)
 
-    # Benchmarks for the living-standard measures: the world as one more weighted average, and the high-income aggregate.
+    # Benchmarks for the living-standard and AI-access measures: the world as one more weighted average, and the
+    # high-income aggregate where the source has one.
     benchmarks: list[Observation] = []
-    for factor_id in LIVING_FACTORS:
+    for factor_id in LIVING_FACTORS + AI_FACTORS:
         points = indicators.get(factor_id, {})
         spec = specs[factor_id]
         world = weighted_average(entity="WLD", members=published, spec=spec, points=points, population=raw.population)

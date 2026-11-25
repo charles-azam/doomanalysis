@@ -50,6 +50,10 @@ LIVING_FACTORS: tuple[str, ...] = (
     "feel_safe",
 )
 
+# AI access (v0.4): proxies for how much AI a country's people use. Like the living factors, they do not
+# count toward MIN_FACTORS.
+AI_FACTORS: tuple[str, ...] = ("ai_use", "ai_usage_index")
+
 SPECS: list[IndicatorSpec] = [
     world_bank(factor_id="electricity_access", code="EG.ELC.ACCS.ZS", source="World Bank (SDG 7.1.1)", decimals=1),
     world_bank(factor_id="water_access", code="SH.H2O.SMDW.ZS", source="WHO/UNICEF JMP via World Bank", decimals=1),
@@ -124,6 +128,18 @@ SPECS: list[IndicatorSpec] = [
         url_template="https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx",
         decimals=0,
     ),
+    IndicatorSpec(
+        factor_id="ai_use",
+        source="Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+        url_template="https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv",
+        decimals=1,
+    ),
+    IndicatorSpec(
+        factor_id="ai_usage_index",
+        source="Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+        url_template="https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26",
+        decimals=2,
+    ),
 ]
 
 # Country names on Gallup's safety map that differ from the World Bank's.
@@ -154,6 +170,35 @@ GALLUP_NAMES: dict[str, str] = {
 GALLUP_UNPUBLISHED: tuple[str, ...] = ("Kosovo", "Northern Cyprus", "Taiwan, Province of China")
 # The Global Safety Report 2026 map shows the Gallup World Poll surveys of 2025.
 GALLUP_SURVEY_YEAR = 2025
+
+# Economy names in Microsoft's AI diffusion table that differ from the World Bank's.
+MS_AI_NAMES: dict[str, str] = {
+    "South Korea": "KOR",
+    "Czech Republic": "CZE",
+    "Vietnam": "VNM",
+    "Slovakia": "SVK",
+    "Bosnia And Herzegovina": "BIH",
+    "Türkiye": "TUR",
+    "Egypt": "EGY",
+    "Cote D'Ivoire": "CIV",
+    "Iran": "IRN",
+    "Gambia": "GMB",
+    "Venezuela": "VEN",
+    "Kyrgyzstan": "KGZ",
+    "Russia": "RUS",
+    "Congo": "COG",
+    "Congo (DRC)": "COD",
+    "Laos": "LAO",
+    "Somalia": "SOM",
+    "Syria": "SYR",
+}
+# Economies in the table that the pipeline has no country for (French Guiana is part of France).
+MS_AI_UNPUBLISHED: tuple[str, ...] = ("Taiwan", "French Guiana")
+# The table's column for the latest period, and the year it falls in.
+MS_AI_COLUMN = "Q2 2026 AI Diffusion"
+MS_AI_YEAR = 2026
+# The month of Claude.ai use the Anthropic AI Usage Index is read for: the latest in the release of 26 June 2026.
+AEI_MONTH = "2026-05-01"
 
 # UN M49 sub-regions grouped into the site's twelve regions.
 REGIONS: list[Region] = [

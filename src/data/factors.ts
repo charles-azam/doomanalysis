@@ -902,6 +902,35 @@ export const factors: FactorDefinition[] = [
     siNote: 'Abundance and better policing can lower crime; AI can also arm criminals and states.',
     description: 'Share of adults who say they feel safe walking alone at night in the city or area where they live, from the Gallup World Poll surveys of 2025 (Gallup Global Safety Report 2026). It measures what SDG indicator 16.1.4 measures; the official UN series for that indicator covers only 59 countries.',
   },
+  // ── AI access: proxies for how much AI each person has. No source publishes tokens per person by country. ──
+  {
+    id: 'ai_use',
+    name: 'Generative AI use',
+    short: 'AI use',
+    family: 'context',
+    scope: 'country',
+    theme: 'ai',
+    unit: '% of people aged 15–64',
+    decimals: 1,
+    anchors: { good: 100, bad: 0, scale: 'linear', basis: 'judgment', rationale: 'Display only. A share of the working-age population, from 0 to 100.' },
+    siElasticity: 'high',
+    siNote: 'The gains of superintelligence reach people through the AI they use; where few use any today, those gains arrive later unless access is pushed out.',
+    description: 'Share of people aged 15 to 64 who used a generative AI product (ChatGPT, Claude, Gemini, Copilot, DeepSeek and other listed services) in the second quarter of 2026, estimated from anonymised Microsoft telemetry adjusted for device and operating-system market share, internet access and population (Microsoft AI Economy Institute, AI Diffusion Report Q2 2026, dataset AI_Diffusion_Q22026_Update.csv). It counts people who used AI at all, not how much they use. Where telemetry is thin, Microsoft gives a group of neighbouring countries one shared estimate (most of West Africa shares one value, so does most of East Africa). Several Chinese domestic tools are not yet counted, so China is understated.',
+  },
+  {
+    id: 'ai_usage_index',
+    name: 'Claude usage index',
+    short: 'Claude usage',
+    family: 'context',
+    scope: 'country',
+    theme: 'ai',
+    unit: 'index, 1 = in proportion to working-age population',
+    decimals: 2,
+    anchors: { good: 10, bad: 0.05, scale: 'log', limit: 1, limitLabel: 'In proportion to population', basis: 'published', rationale: 'Display only. 1 is the index’s own reference: a country that uses Claude in proportion to its working-age population.' },
+    siElasticity: 'high',
+    siNote: 'A measure of how intensely a country already works with a frontier model, relative to its people; superintelligence would arrive through the same channels.',
+    description: 'Anthropic AI Usage Index: a country’s share of Claude.ai conversations (Free, Pro and Max plans) in May 2026 divided by its share of the working-age (15–64) population, so 1 means use in proportion to its people and 4 means four times that. Published by Anthropic, not computed here (Anthropic Economic Index, release of 26 June 2026, metric usage_per_capita_index). It covers one company’s chatbot, not the API or Claude Code. Countries below Anthropic’s publication floor have no value, and neither do countries where Claude is not offered, such as China and Russia.',
+  },
 ]
 
 export function factorById({ id }: { id: string }): FactorDefinition {

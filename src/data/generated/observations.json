@@ -306,6 +306,14 @@
   "url": "https://data.worldbank.org/indicator/SH_UHC_SCI?locations=AF"
  },
  {
+  "factorId": "ai_use",
+  "entity": "AFG",
+  "value": 6.3,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "AGO",
   "value": 55.5,
@@ -514,6 +522,22 @@
   "year": 2023,
   "source": "Penn World Table 11.0 via Our World in Data",
   "url": "https://ourworldindata.org/grapher/annual-working-hours-per-worker"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "AGO",
+  "value": 11.4,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "AGO",
+  "value": 0.1,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -739,6 +763,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "ALB",
+  "value": 19.2,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "ALB",
+  "value": 1.02,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -1104,6 +1144,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "ARE",
+  "value": 73.3,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "ARE",
+  "value": 2.84,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "ARG",
   "value": 98.4,
@@ -1320,6 +1376,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "ARG",
+  "value": 23.4,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "ARG",
+  "value": 1.48,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -1546,6 +1618,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "ARM",
+  "value": 7.7,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "ARM",
+  "value": 0.95,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -1903,6 +1991,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "AUS",
+  "value": 40.7,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "AUS",
+  "value": 6.4,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "AUT",
   "value": 100.0,
@@ -2127,6 +2231,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "AUT",
+  "value": 35.4,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "AUT",
+  "value": 2.61,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -2356,6 +2476,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "AZE",
+  "value": 18.7,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "AZE",
+  "value": 0.43,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "BDI",
   "value": 20.1,
@@ -2539,6 +2675,14 @@
   "year": 2023,
   "source": "WHO via World Bank (SDG 3.8.1)",
   "url": "https://data.worldbank.org/indicator/SH_UHC_SCI?locations=BI"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "BDI",
+  "value": 8.0,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
  },
  {
   "factorId": "electricity_access",
@@ -2767,6 +2911,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "BEL",
+  "value": 40.3,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "BEL",
+  "value": 3.8,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "BEN",
   "value": 59.0,
@@ -2984,6 +3144,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "BEN",
+  "value": 10.4,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "BEN",
+  "value": 0.39,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "BFA",
   "value": 34.0,
@@ -3191,6 +3367,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "BFA",
+  "value": 10.4,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "BFA",
+  "value": 0.15,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -3416,6 +3608,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "BGD",
+  "value": 8.0,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "BGD",
+  "value": 0.11,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -3644,6 +3852,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "BGR",
+  "value": 30.7,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "BGR",
+  "value": 1.36,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "BHR",
   "value": 100.0,
@@ -3852,6 +4076,14 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "BHR",
+  "value": 1.5,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -4241,6 +4473,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "BIH",
+  "value": 23.2,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "BIH",
+  "value": 0.61,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "BLR",
   "value": 100.0,
@@ -4457,6 +4705,14 @@
   "year": 2023,
   "source": "Penn World Table 11.0 via Our World in Data",
   "url": "https://ourworldindata.org/grapher/annual-working-hours-per-worker"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "BLR",
+  "value": 10.3,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
  },
  {
   "factorId": "electricity_access",
@@ -4862,6 +5118,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "BOL",
+  "value": 13.3,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "BOL",
+  "value": 0.56,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "BRA",
   "value": 99.8,
@@ -5087,6 +5359,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "BRA",
+  "value": 20.2,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "BRA",
+  "value": 0.96,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -5813,6 +6101,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "BWA",
+  "value": 15.0,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "BWA",
+  "value": 0.52,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "CAF",
   "value": 18.2,
@@ -6012,6 +6316,14 @@
   "year": 2023,
   "source": "WHO via World Bank (SDG 3.8.1)",
   "url": "https://data.worldbank.org/indicator/SH_UHC_SCI?locations=CF"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "CAF",
+  "value": 9.1,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
  },
  {
   "factorId": "electricity_access",
@@ -6241,6 +6553,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "CAN",
+  "value": 38.5,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "CAN",
+  "value": 4.13,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "CHE",
   "value": 100.0,
@@ -6465,6 +6793,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "CHE",
+  "value": 39.1,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "CHE",
+  "value": 5.02,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -6693,6 +7037,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "CHL",
+  "value": 24.0,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "CHL",
+  "value": 1.84,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "CHN",
   "value": 100.0,
@@ -6901,6 +7261,14 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "CHN",
+  "value": 17.5,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
  },
  {
   "factorId": "electricity_access",
@@ -7118,6 +7486,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "CIV",
+  "value": 13.7,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "CIV",
+  "value": 0.3,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -7338,6 +7722,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "CMR",
+  "value": 9.1,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "CMR",
+  "value": 0.38,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "COD",
   "value": 22.5,
@@ -7555,6 +7955,14 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "COD",
+  "value": 9.1,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "COG",
   "value": 53.0,
@@ -7763,6 +8171,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "COG",
+  "value": 9.1,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "COG",
+  "value": 0.24,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -7989,6 +8413,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "COL",
+  "value": 25.9,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "COL",
+  "value": 1.18,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -8555,6 +8995,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "CRI",
+  "value": 29.7,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "CRI",
+  "value": 1.57,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "CUB",
   "value": 100.0,
@@ -8705,6 +9161,14 @@
   "year": 2023,
   "source": "WHO via World Bank (SDG 3.8.1)",
   "url": "https://data.worldbank.org/indicator/SH_UHC_SCI?locations=CU"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "CUB",
+  "value": 6.8,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
  },
  {
   "factorId": "electricity_access",
@@ -8933,6 +9397,14 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_usage_index",
+  "entity": "CYP",
+  "value": 3.08,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "CZE",
   "value": 100.0,
@@ -9159,6 +9631,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "CZE",
+  "value": 31.2,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "CZE",
+  "value": 1.84,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "DEU",
   "value": 100.0,
@@ -9383,6 +9871,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "DEU",
+  "value": 32.3,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "DEU",
+  "value": 2.4,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -9924,6 +10428,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "DNK",
+  "value": 32.4,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "DNK",
+  "value": 3.57,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "DOM",
   "value": 99.5,
@@ -10150,6 +10670,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "DOM",
+  "value": 25.8,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "DOM",
+  "value": 0.67,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "DZA",
   "value": 100.0,
@@ -10367,6 +10903,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "DZA",
+  "value": 13.8,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "DZA",
+  "value": 0.56,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -10595,6 +11147,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "ECU",
+  "value": 20.3,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "ECU",
+  "value": 0.58,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "EGY",
   "value": 100.0,
@@ -10820,6 +11388,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "EGY",
+  "value": 15.5,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "EGY",
+  "value": 0.36,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "ERI",
   "value": 55.3,
@@ -10970,6 +11554,14 @@
   "year": 2023,
   "source": "WHO via World Bank (SDG 3.8.1)",
   "url": "https://data.worldbank.org/indicator/SH_UHC_SCI?locations=ER"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "ERI",
+  "value": 8.0,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
  },
  {
   "factorId": "electricity_access",
@@ -11198,6 +11790,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "ESP",
+  "value": 45.1,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "ESP",
+  "value": 2.69,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "EST",
   "value": 100.0,
@@ -11422,6 +12030,14 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "EST",
+  "value": 3.21,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -11649,6 +12265,14 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "ETH",
+  "value": 8.0,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "FIN",
   "value": 100.0,
@@ -11873,6 +12497,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "FIN",
+  "value": 30.6,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "FIN",
+  "value": 2.19,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -12286,6 +12926,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "FRA",
+  "value": 49.6,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "FRA",
+  "value": 3.97,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "FSM",
   "value": 88.9,
@@ -12624,6 +13280,14 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "GAB",
+  "value": 15.7,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "GBR",
   "value": 100.0,
@@ -12848,6 +13512,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "GBR",
+  "value": 43.7,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "GBR",
+  "value": 3.35,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -13076,6 +13756,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "GEO",
+  "value": 21.6,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "GEO",
+  "value": 1.8,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "GHA",
   "value": 91.9,
@@ -13302,6 +13998,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "GHA",
+  "value": 10.4,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "GHA",
+  "value": 0.38,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "GIN",
   "value": 53.8,
@@ -13485,6 +14197,14 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "GIN",
+  "value": 10.4,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
  },
  {
   "factorId": "electricity_access",
@@ -13688,6 +14408,14 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "GMB",
+  "value": 11.5,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "GNB",
   "value": 43.7,
@@ -13887,6 +14615,14 @@
   "year": 2023,
   "source": "WHO via World Bank (SDG 3.8.1)",
   "url": "https://data.worldbank.org/indicator/SH_UHC_SCI?locations=GW"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "GNB",
+  "value": 10.4,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
  },
  {
   "factorId": "electricity_access",
@@ -14293,6 +15029,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "GRC",
+  "value": 21.5,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "GRC",
+  "value": 1.51,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "GRD",
   "value": 95.6,
@@ -14662,6 +15414,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "GTM",
+  "value": 17.3,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "GTM",
+  "value": 0.37,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "GUY",
   "value": 93.0,
@@ -14837,6 +15605,14 @@
   "year": 2023,
   "source": "WHO via World Bank (SDG 3.8.1)",
   "url": "https://data.worldbank.org/indicator/SH_UHC_SCI?locations=GY"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "GUY",
+  "value": 11.3,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
  },
  {
   "factorId": "electricity_access",
@@ -15193,6 +15969,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "HND",
+  "value": 14.5,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "HND",
+  "value": 0.26,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "HRV",
   "value": 100.0,
@@ -15419,6 +16211,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "HRV",
+  "value": 27.2,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "HRV",
+  "value": 1.8,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "HTI",
   "value": 53.9,
@@ -15602,6 +16410,22 @@
   "year": 2023,
   "source": "WHO via World Bank (SDG 3.8.1)",
   "url": "https://data.worldbank.org/indicator/SH_UHC_SCI?locations=HT"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "HTI",
+  "value": 8.9,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "HTI",
+  "value": 0.14,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -15830,6 +16654,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "HUN",
+  "value": 33.3,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "HUN",
+  "value": 1.07,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "IDN",
   "value": 99.9,
@@ -16056,6 +16896,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "IDN",
+  "value": 14.8,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "IDN",
+  "value": 0.46,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "IND",
   "value": 99.9,
@@ -16271,6 +17127,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "IND",
+  "value": 18.5,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "IND",
+  "value": 0.3,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -16499,6 +17371,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "IRL",
+  "value": 49.9,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "IRL",
+  "value": 3.23,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "IRN",
   "value": 100.0,
@@ -16717,6 +17605,14 @@
   "url": "https://ourworldindata.org/grapher/annual-working-hours-per-worker"
  },
  {
+  "factorId": "ai_use",
+  "entity": "IRN",
+  "value": 12.8,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "IRQ",
   "value": 100.0,
@@ -16933,6 +17829,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "IRQ",
+  "value": 13.0,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "IRQ",
+  "value": 0.24,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -17161,6 +18073,14 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_usage_index",
+  "entity": "ISL",
+  "value": 4.02,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "ISR",
   "value": 100.0,
@@ -17385,6 +18305,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "ISR",
+  "value": 38.7,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "ISR",
+  "value": 3.05,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -17613,6 +18549,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "ITA",
+  "value": 31.4,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "ITA",
+  "value": 1.7,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "JAM",
   "value": 97.7,
@@ -17813,6 +18765,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "JAM",
+  "value": 25.0,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "JAM",
+  "value": 0.66,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "JOR",
   "value": 100.0,
@@ -18011,6 +18979,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "JOR",
+  "value": 31.2,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "JOR",
+  "value": 0.64,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -18229,6 +19213,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "JPN",
+  "value": 24.7,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "JPN",
+  "value": 1.91,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -18458,6 +19458,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "KAZ",
+  "value": 16.9,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "KAZ",
+  "value": 0.71,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "KEN",
   "value": 77.0,
@@ -18673,6 +19689,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "KEN",
+  "value": 8.9,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "KEN",
+  "value": 0.34,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -18900,6 +19932,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "KGZ",
+  "value": 10.0,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "KGZ",
+  "value": 0.35,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "KHM",
   "value": 99.2,
@@ -19123,6 +20171,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "KHM",
+  "value": 6.1,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "KHM",
+  "value": 0.21,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -19664,6 +20728,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "KOR",
+  "value": 40.6,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "KOR",
+  "value": 3.78,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "KWT",
   "value": 100.0,
@@ -19891,6 +20971,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "KWT",
+  "value": 22.6,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "KWT",
+  "value": 0.92,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "LAO",
   "value": 96.5,
@@ -20082,6 +21178,14 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "LAO",
+  "value": 8.4,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
  },
  {
   "factorId": "electricity_access",
@@ -20309,6 +21413,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "LBN",
+  "value": 27.7,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "LBN",
+  "value": 0.96,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "LBR",
   "value": 34.9,
@@ -20483,6 +21603,14 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "LBR",
+  "value": 10.4,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
  },
  {
   "factorId": "electricity_access",
@@ -20677,6 +21805,14 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "LBY",
+  "value": 15.5,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
  },
  {
   "factorId": "electricity_access",
@@ -21152,6 +22288,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "LKA",
+  "value": 7.6,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "LKA",
+  "value": 0.56,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "LSO",
   "value": 60.6,
@@ -21351,6 +22503,14 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "LSO",
+  "value": 9.9,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
  },
  {
   "factorId": "electricity_access",
@@ -21579,6 +22739,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "LTU",
+  "value": 25.1,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "LTU",
+  "value": 2.28,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "LUX",
   "value": 100.0,
@@ -21795,6 +22971,14 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "LUX",
+  "value": 4.85,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -22021,6 +23205,14 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "LVA",
+  "value": 2.37,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -22361,6 +23553,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "MAR",
+  "value": 12.0,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "MAR",
+  "value": 0.9,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "MCO",
   "value": 100.0,
@@ -22691,6 +23899,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "MDA",
+  "value": 19.1,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "MDA",
+  "value": 1.45,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "MDG",
   "value": 42.5,
@@ -22906,6 +24130,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "MDG",
+  "value": 11.4,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "MDG",
+  "value": 0.1,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -23294,6 +24534,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "MEX",
+  "value": 21.4,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "MEX",
+  "value": 0.63,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "MHL",
   "value": 97.2,
@@ -23657,6 +24913,14 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_usage_index",
+  "entity": "MKD",
+  "value": 0.98,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "MLI",
   "value": 49.5,
@@ -23856,6 +25120,14 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "MLI",
+  "value": 10.4,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
  },
  {
   "factorId": "electricity_access",
@@ -24068,6 +25340,14 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_usage_index",
+  "entity": "MLT",
+  "value": 4.0,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "MMR",
   "value": 80.4,
@@ -24275,6 +25555,14 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "MMR",
+  "value": 10.4,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
  },
  {
   "factorId": "electricity_access",
@@ -24706,6 +25994,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "MNG",
+  "value": 17.9,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "MNG",
+  "value": 1.37,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "MOZ",
   "value": 36.9,
@@ -24924,6 +26228,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "MOZ",
+  "value": 11.4,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "MOZ",
+  "value": 0.08,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "MRT",
   "value": 52.2,
@@ -25115,6 +26435,14 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "MRT",
+  "value": 10.4,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
  },
  {
   "factorId": "electricity_access",
@@ -25316,6 +26644,14 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "MUS",
+  "value": 1.74,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -25533,6 +26869,14 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "MWI",
+  "value": 11.4,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
  },
  {
   "factorId": "electricity_access",
@@ -25761,6 +27105,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "MYS",
+  "value": 22.6,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "MYS",
+  "value": 0.87,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "NAM",
   "value": 59.3,
@@ -25976,6 +27336,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "NAM",
+  "value": 15.4,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "NAM",
+  "value": 0.44,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -26196,6 +27572,14 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "NER",
+  "value": 10.4,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "NGA",
   "value": 62.5,
@@ -26397,6 +27781,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "NGA",
+  "value": 10.4,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "NGA",
+  "value": 0.24,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "NIC",
   "value": 88.7,
@@ -26588,6 +27988,14 @@
   "year": 2023,
   "source": "WHO via World Bank (SDG 3.8.1)",
   "url": "https://data.worldbank.org/indicator/SH_UHC_SCI?locations=NI"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "NIC",
+  "value": 12.5,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
  },
  {
   "factorId": "electricity_access",
@@ -26814,6 +28222,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "NLD",
+  "value": 43.5,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "NLD",
+  "value": 3.9,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -27043,6 +28467,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "NOR",
+  "value": 49.4,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "NOR",
+  "value": 4.04,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "NPL",
   "value": 97.9,
@@ -27258,6 +28698,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "NPL",
+  "value": 14.6,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "NPL",
+  "value": 0.41,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -27622,6 +29078,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "NZL",
+  "value": 44.1,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "NZL",
+  "value": 4.84,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "OMN",
   "value": 100.0,
@@ -27822,6 +29294,22 @@
   "year": 2023,
   "source": "Penn World Table 11.0 via Our World in Data",
   "url": "https://ourworldindata.org/grapher/annual-working-hours-per-worker"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "OMN",
+  "value": 27.6,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "OMN",
+  "value": 0.73,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -28041,6 +29529,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "PAK",
+  "value": 11.9,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "PAK",
+  "value": 0.31,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "PAN",
   "value": 96.0,
@@ -28240,6 +29744,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "PAN",
+  "value": 24.2,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "PAN",
+  "value": 1.28,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -28467,6 +29987,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "PER",
+  "value": 17.3,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "PER",
+  "value": 1.05,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "PHL",
   "value": 94.8,
@@ -28690,6 +30226,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "PHL",
+  "value": 20.7,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "PHL",
+  "value": 0.44,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -29021,6 +30573,14 @@
   "url": "https://data.worldbank.org/indicator/SH_UHC_SCI?locations=PG"
  },
  {
+  "factorId": "ai_use",
+  "entity": "PNG",
+  "value": 7.6,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "POL",
   "value": 100.0,
@@ -29247,6 +30807,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "POL",
+  "value": 32.3,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "POL",
+  "value": 1.33,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "PRI",
   "value": 100.0,
@@ -29366,6 +30942,14 @@
   "year": 2023,
   "source": "WHO Global Health Estimates",
   "url": "https://www.who.int/data/gho/data/indicators/indicator-details/GHO/gho-ghe-hale-healthy-life-expectancy-at-birth"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "PRI",
+  "value": 1.68,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -29730,6 +31314,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "PRT",
+  "value": 27.4,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "PRT",
+  "value": 3.32,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "PRY",
   "value": 99.8,
@@ -29955,6 +31555,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "PRY",
+  "value": 12.6,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "PRY",
+  "value": 0.59,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "PSE",
   "value": 100.0,
@@ -30106,6 +31722,14 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "PSE",
+  "value": 0.43,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -30300,6 +31924,22 @@
   "year": 2023,
   "source": "Penn World Table 11.0 via Our World in Data",
   "url": "https://ourworldindata.org/grapher/annual-working-hours-per-worker"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "QAT",
+  "value": 43.5,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "QAT",
+  "value": 1.66,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -30526,6 +32166,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "ROU",
+  "value": 18.0,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "ROU",
+  "value": 1.37,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -30755,6 +32411,14 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "RUS",
+  "value": 9.9,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "RWA",
   "value": 72.0,
@@ -30954,6 +32618,22 @@
   "year": 2023,
   "source": "Penn World Table 11.0 via Our World in Data",
   "url": "https://ourworldindata.org/grapher/annual-working-hours-per-worker"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "RWA",
+  "value": 7.6,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "RWA",
+  "value": 0.2,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -31167,6 +32847,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "SAU",
+  "value": 31.4,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "SAU",
+  "value": 0.93,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "SDN",
   "value": 66.0,
@@ -31366,6 +33062,14 @@
   "year": 2023,
   "source": "Penn World Table 11.0 via Our World in Data",
   "url": "https://ourworldindata.org/grapher/annual-working-hours-per-worker"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "SDN",
+  "value": 8.0,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
  },
  {
   "factorId": "electricity_access",
@@ -31593,6 +33297,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "SEN",
+  "value": 14.4,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "SEN",
+  "value": 0.41,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "SGP",
   "value": 100.0,
@@ -31800,6 +33520,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "SGP",
+  "value": 64.3,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "SGP",
+  "value": 5.81,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -32164,6 +33900,14 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "SLE",
+  "value": 10.4,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "SLV",
   "value": 98.7,
@@ -32371,6 +34115,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "SLV",
+  "value": 20.1,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "SLV",
+  "value": 0.59,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -32695,6 +34455,14 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "SOM",
+  "value": 8.0,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "SRB",
   "value": 100.0,
@@ -32921,6 +34689,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "SRB",
+  "value": 25.3,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "SRB",
+  "value": 1.31,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "SSD",
   "value": 5.4,
@@ -33080,6 +34864,14 @@
   "year": 2023,
   "source": "WHO via World Bank (SDG 3.8.1)",
   "url": "https://data.worldbank.org/indicator/SH_UHC_SCI?locations=SS"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "SSD",
+  "value": 8.0,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
  },
  {
   "factorId": "electricity_access",
@@ -33419,6 +35211,14 @@
   "url": "https://data.worldbank.org/indicator/SH_UHC_SCI?locations=SR"
  },
  {
+  "factorId": "ai_use",
+  "entity": "SUR",
+  "value": 11.3,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "SVK",
   "value": 100.0,
@@ -33634,6 +35434,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "SVK",
+  "value": 27.1,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "SVK",
+  "value": 1.43,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -33862,6 +35678,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "SVN",
+  "value": 30.1,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "SVN",
+  "value": 2.13,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "SWE",
   "value": 100.0,
@@ -34086,6 +35918,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "SWE",
+  "value": 37.3,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "SWE",
+  "value": 2.98,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -34668,6 +36516,14 @@
   "url": "https://ourworldindata.org/grapher/annual-working-hours-per-worker"
  },
  {
+  "factorId": "ai_use",
+  "entity": "SYR",
+  "value": 7.4,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "TCD",
   "value": 13.4,
@@ -34878,6 +36734,14 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "TCD",
+  "value": 9.1,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "TGO",
   "value": 61.1,
@@ -35085,6 +36949,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "TGO",
+  "value": 10.4,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "TGO",
+  "value": 0.22,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -35302,6 +37182,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "THA",
+  "value": 13.4,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "THA",
+  "value": 0.73,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -35529,6 +37425,14 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "TJK",
+  "value": 6.3,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "TKM",
   "value": 100.0,
@@ -35712,6 +37616,14 @@
   "year": 2023,
   "source": "Penn World Table 11.0 via Our World in Data",
   "url": "https://ourworldindata.org/grapher/annual-working-hours-per-worker"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "TKM",
+  "value": 6.3,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
  },
  {
   "factorId": "electricity_access",
@@ -36269,6 +38181,14 @@
   "url": "https://ourworldindata.org/grapher/annual-working-hours-per-worker"
  },
  {
+  "factorId": "ai_usage_index",
+  "entity": "TTO",
+  "value": 1.05,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "TUN",
   "value": 100.0,
@@ -36494,6 +38414,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "TUN",
+  "value": 13.9,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "TUN",
+  "value": 1.4,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "TUR",
   "value": 100.0,
@@ -36702,6 +38638,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "TUR",
+  "value": 18.9,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "TUR",
+  "value": 0.64,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -37049,6 +39001,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "TZA",
+  "value": 8.0,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "TZA",
+  "value": 0.07,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "UGA",
   "value": 55.3,
@@ -37272,6 +39240,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "UGA",
+  "value": 8.0,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "UGA",
+  "value": 0.11,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -37499,6 +39483,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "UKR",
+  "value": 9.5,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "UKR",
+  "value": 0.78,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "URY",
   "value": 100.0,
@@ -37698,6 +39698,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "URY",
+  "value": 25.7,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "URY",
+  "value": 1.89,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -37927,6 +39943,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "USA",
+  "value": 33.0,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "USA",
+  "value": 3.87,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "UZB",
   "value": 100.0,
@@ -38143,6 +40175,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "UZB",
+  "value": 7.6,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "UZB",
+  "value": 0.3,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -38474,6 +40522,14 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "VEN",
+  "value": 11.3,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "VIR",
   "value": 100.0,
@@ -38794,6 +40850,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "VNM",
+  "value": 27.9,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "VNM",
+  "value": 0.53,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -39544,6 +41616,22 @@
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
  },
  {
+  "factorId": "ai_use",
+  "entity": "ZAF",
+  "value": 23.9,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "ZAF",
+  "value": 0.46,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "ZMB",
   "value": 53.6,
@@ -39759,6 +41847,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "ZMB",
+  "value": 13.3,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "ZMB",
+  "value": 0.15,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -39984,6 +42088,22 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "ZWE",
+  "value": 8.9,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "ZWE",
+  "value": 0.2,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
  },
  {
   "factorId": "electricity_access",
@@ -40235,6 +42355,24 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx",
+  "note": "population-weighted average of 10 countries (100% of the population)"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "europe-north",
+  "value": 41.83,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv",
+  "note": "population-weighted average of 7 countries (97% of the population)"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "europe-north",
+  "value": 3.252,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26",
   "note": "population-weighted average of 10 countries (100% of the population)"
  },
  {
@@ -40490,6 +42628,24 @@
   "note": "population-weighted average of 7 countries (100% of the population)"
  },
  {
+  "factorId": "ai_use",
+  "entity": "europe-west",
+  "value": 40.17,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv",
+  "note": "population-weighted average of 6 countries (100% of the population)"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "europe-west",
+  "value": 3.29,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26",
+  "note": "population-weighted average of 7 countries (100% of the population)"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "europe-south",
   "value": 100.0,
@@ -40740,6 +42896,24 @@
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx",
   "note": "population-weighted average of 12 countries (100% of the population)"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "europe-south",
+  "value": 34.22,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv",
+  "note": "population-weighted average of 9 countries (98% of the population)"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "europe-south",
+  "value": 2.088,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26",
+  "note": "population-weighted average of 11 countries (100% of the population)"
  },
  {
   "factorId": "electricity_access",
@@ -40994,6 +43168,15 @@
   "note": "population-weighted average of 9 countries (97% of the population)"
  },
  {
+  "factorId": "ai_use",
+  "entity": "europe-east",
+  "value": 15.8,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv",
+  "note": "population-weighted average of 10 countries (100% of the population)"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "north-america",
   "value": 100.0,
@@ -41243,6 +43426,24 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx",
+  "note": "population-weighted average of 2 countries (100% of the population)"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "north-america",
+  "value": 33.6,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv",
+  "note": "population-weighted average of 2 countries (100% of the population)"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "north-america",
+  "value": 3.898,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26",
   "note": "population-weighted average of 2 countries (100% of the population)"
  },
  {
@@ -41498,6 +43699,24 @@
   "note": "population-weighted average of 18 countries (94% of the population)"
  },
  {
+  "factorId": "ai_use",
+  "entity": "latin-america",
+  "value": 20.03,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv",
+  "note": "population-weighted average of 23 countries (99% of the population)"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "latin-america",
+  "value": 0.917,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26",
+  "note": "population-weighted average of 20 countries (93% of the population)"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "mena",
   "value": 95.31,
@@ -41739,6 +43958,24 @@
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx",
   "note": "population-weighted average of 19 countries (78% of the population)"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "mena",
+  "value": 17.91,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv",
+  "note": "population-weighted average of 20 countries (92% of the population)"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "mena",
+  "value": 0.721,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26",
+  "note": "population-weighted average of 20 countries (79% of the population)"
  },
  {
   "factorId": "electricity_access",
@@ -41993,6 +44230,24 @@
   "note": "population-weighted average of 35 countries (92% of the population)"
  },
  {
+  "factorId": "ai_use",
+  "entity": "sub-saharan-africa",
+  "value": 10.54,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv",
+  "note": "population-weighted average of 40 countries (99% of the population)"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "sub-saharan-africa",
+  "value": 0.24,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26",
+  "note": "population-weighted average of 22 countries (65% of the population)"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "central-south-asia",
   "value": 99.11,
@@ -42236,6 +44491,24 @@
   "note": "population-weighted average of 9 countries (93% of the population)"
  },
  {
+  "factorId": "ai_use",
+  "entity": "central-south-asia",
+  "value": 15.88,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv",
+  "note": "population-weighted average of 12 countries (100% of the population)"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "central-south-asia",
+  "value": 0.294,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26",
+  "note": "population-weighted average of 8 countries (93% of the population)"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "east-asia",
   "value": 99.36,
@@ -42468,6 +44741,15 @@
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx",
   "note": "population-weighted average of 5 countries (98% of the population)"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "east-asia",
+  "value": 18.81,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv",
+  "note": "population-weighted average of 4 countries (98% of the population)"
  },
  {
   "factorId": "electricity_access",
@@ -42722,6 +45004,24 @@
   "note": "population-weighted average of 9 countries (100% of the population)"
  },
  {
+  "factorId": "ai_use",
+  "entity": "southeast-asia",
+  "value": 17.74,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv",
+  "note": "population-weighted average of 9 countries (100% of the population)"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "southeast-asia",
+  "value": 0.566,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26",
+  "note": "population-weighted average of 7 countries (91% of the population)"
+ },
+ {
   "factorId": "electricity_access",
   "entity": "oceania",
   "value": 86.16,
@@ -42962,6 +45262,24 @@
   "year": 2025,
   "source": "Gallup Global Safety Report 2026",
   "url": "https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx",
+  "note": "population-weighted average of 2 countries (71% of the population)"
+ },
+ {
+  "factorId": "ai_use",
+  "entity": "oceania",
+  "value": 32.96,
+  "year": 2026,
+  "source": "Microsoft AI Economy Institute, AI Diffusion Report Q2 2026",
+  "url": "https://github.com/microsoft/ai-diffusion-report/blob/507c31611c2af77abf44de43036f3ea1d599c248/data/AI_Diffusion_Q22026_Update.csv",
+  "note": "population-weighted average of 3 countries (94% of the population)"
+ },
+ {
+  "factorId": "ai_usage_index",
+  "entity": "oceania",
+  "value": 6.148,
+  "year": 2026,
+  "source": "Anthropic Economic Index, release of 26 June 2026 (Claude.ai, May 2026)",
+  "url": "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26",
   "note": "population-weighted average of 2 countries (71% of the population)"
  }
 ]

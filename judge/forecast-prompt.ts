@@ -1,10 +1,10 @@
-import { causeDefinitions, dangerScale, definitions, horizon, outcomeDefinitions, potentialScale, scaleDefinitions } from '../src/data/definitions.ts'
+import { causeDefinitions, channelDefinitions, dangerScale, definitions, horizon, outcomeDefinitions, potentialScale, scaleDefinitions } from '../src/data/definitions.ts'
 import { countries, entityById, regions } from '../src/data/entities.ts'
 import { riskEvidence } from '../src/data/evidence.ts'
 import { arrivalSeries } from '../src/data/si-arrival.ts'
 import { formatAxis } from '../src/model/chart.ts'
 import { atLeast, curveEdges, curveFor, levelChances } from '../src/model/distribution.ts'
-import { cardFloor, causeShares, dangerKeys, formatPercent, headline, placeOutcomeKeys, rootCauses, sumCauses, timelineEnd, timelineKeys, timelineYears, type DangerKey, type Verdict } from '../src/model/forecast.ts'
+import { cardFloor, causeShares, dangerKeys, formatPercent, headline, placeOutcomeKeys, rootCauses, siChannels, sumCauses, timelineEnd, timelineKeys, timelineYears, type DangerKey, type Verdict } from '../src/model/forecast.ts'
 import type { Card, CurveForecast, EntityId, RootCause } from '../src/model/types.ts'
 import { evidenceFor } from './evidence.ts'
 
@@ -193,13 +193,23 @@ const outcomesSchema = {
   properties: Object.fromEntries(placeOutcomeKeys.map((key) => [key, { type: 'number' }])),
 }
 
-const placesSchema = ({ ids }: { ids: string[] }) => ({
+const readingSchema = {
+  type: 'object',
+  additionalProperties: false,
+  required: ['channels', 'reason'],
+  properties: {
+    channels: { type: 'object', additionalProperties: false, required: siChannels, properties: Object.fromEntries(siChannels.map((channel) => [channel, { type: 'number', minimum: -2, maximum: 2 }])) },
+    reason: { type: 'string', maxLength: 160 },
+  },
+}
+
+const placesSchema = ({ ids, reading }: { ids: string[]; reading: boolean }) => ({
   type: 'array',
   items: {
     type: 'object',
     additionalProperties: false,
-    required: ['entity', 'si', 'noSi', 'rationale'],
-    properties: { entity: { type: 'string', enum: ids }, si: outcomesSchema, noSi: outcomesSchema, rationale: { type: 'string' } },
+    required: ['entity', 'si', 'noSi', 'rationale', ...(reading ? ['reading'] : [])],
+    properties: { entity: { type: 'string', enum: ids }, si: outcomesSchema, noSi: outcomesSchema, rationale: { type: 'string' }, ...(reading ? { reading: readingSchema } : {}) },
   },
 })
 
@@ -226,7 +236,7 @@ export const worldSchema = {
       required: ['siBy2050', 'siBy2100', 'si', 'noSi', 'rationale'],
       properties: { siBy2050: { type: 'number' }, siBy2100: { type: 'number' }, si: worldCaseSchema, noSi: worldCaseSchema, rationale: { type: 'string' } },
     },
-    places: placesSchema({ ids: regions.map((r) => r.id) }),
+    places: placesSchema({ ids: regions.map((r) => r.id), reading: false }),
   },
 }
 
@@ -234,7 +244,7 @@ export const countrySchema = ({ ids }: { ids: string[] }) => ({
   type: 'object',
   additionalProperties: false,
   required: ['places'],
-  properties: { places: placesSchema({ ids: ids }) },
+  properties: { places: placesSchema({ ids: ids, reading: true }) },
 })
 
 /** Round 3: a batch of countries, judged against the pooled world and its region. */
@@ -270,9 +280,16 @@ ${Object.values(outcomeDefinitions).map((text) => `- ${text}`).join('\n')}
 - World abundance in ${horizon}: ${pct(verdict.world.si.abundance)} with superintelligence, ${pct(verdict.world.noSi.abundance)} without.
 A global catastrophe hits countries unequally: judge where each country would stand.
 
-## Your task
+## Your task, part 1: outcomes
 For each country and each case ("si", "noSi"), the chance of each of the five outcomes other than doom, GIVEN that the world does not reach doom. The five must sum to 1 (your answer is rejected otherwise). Doom is global and is added by the site. Judge each country on its own evidence; neighbours can differ.
 - rationale: one or two sentences per country naming what matters most.
+
+## Your task, part 2: how superintelligence works on each country
+If superintelligence arrives, how does each of these five channels move the country's living standard by ${horizon}? Score each from -2 (much worse off) through 0 (no effect) to +2 (much better off); halves are fine.
+${siChannels.map((channel) => `- ${channel}: ${channelDefinitions[channel].name}. ${channelDefinitions[channel].text}`).join('\n')}
+Use the country's access to AI (share of people using AI, intensity of use, compute) together with what its economy sells and how well its state works. Two caveats on the AI figures: Microsoft's share of people using AI does not yet count several Chinese domestic tools, so it understates China, and where data is thin it gives neighbouring countries one shared estimate; the Claude usage index has no value for China, Russia, Iran and some others. A country that sells labour or routine services and has little AI can score badly on jobs and ownership even if prices help it.
+- reason: one plain line, at most 160 characters, naming the channel that matters most for this country and why.
+Your scores must agree with your outcomes: if the channels net out negative, the "si" case should not be much better than "noSi" for that country.
 
 ## Global indicators (the same for every country)
 ${evidenceFor({ entity: 'WLD', compact: true })}
@@ -280,7 +297,7 @@ ${evidenceFor({ entity: 'WLD', compact: true })}
 ## Countries to judge
 ${blocks}
 
-Answer only with JSON: {"places": [one object per country, in this order: ${ids.join(', ')}]}.`
+Answer only with JSON: {"places": [one object per country, in this order: ${ids.join(', ')}; each {"entity", "si", "noSi", "rationale", "reading": {"channels": {${siChannels.map((c) => `"${c}"`).join(', ')}}, "reason"}}]}.`
 }
 
 /** Batches for country judging: spotlight countries first (three runs each), then the rest (one run). */

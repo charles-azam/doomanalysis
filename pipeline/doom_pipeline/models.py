@@ -87,7 +87,7 @@ class Dataset:
     entities: list[Entity]
     observations: list[Observation]
     projections: list[Projection]
-    # World ("WLD") and high-income ("HIC") values of the living-standard measures: printed by the run, not written.
+    # World ("WLD") and high-income ("HIC") values of the living-standard and AI-access measures: printed by the run, not written.
     benchmarks: list[Observation]
     # People in 2100 for the world, every region and every published country.
     population_2100: dict[str, int]
