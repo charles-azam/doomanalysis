@@ -231,3 +231,30 @@ table.data th.num {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
+
+/* Clickable charts and legends (see src/scripts/interactions.ts). */
+[data-series-toggle],
+[data-highlight],
+[data-level],
+[data-sort] {
+  cursor: pointer;
+}
+
+[data-series-toggle][aria-pressed='false'] {
+  opacity: 0.45;
+  text-decoration: line-through;
+}
+
+[data-highlight][aria-pressed='true'] {
+  outline: 1.5px solid var(--ink);
+  outline-offset: 1px;
+}
+
+[data-sort]:hover,
+[data-sort][aria-sort] {
+  text-decoration: underline;
+}
+
+[data-level]:hover {
+  filter: brightness(0.95);
+}

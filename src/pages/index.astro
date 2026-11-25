@@ -35,7 +35,7 @@ const humanity = sixOutcomesFor({ id: 'WLD' })
 const timeline = outlook.timeline
 const groups: { group: CardGroup; title: string; color: string; line: string }[] = [
   ...rootCauses.map((cause) => ({ group: cause, title: causeDefinitions[cause].name, color: causeColors[cause], line: causeDefinitions[cause].text })),
-  { group: 'technology', title: 'Technologies', color: '#2a78d6', line: 'Chance of each potential level: the share of humanity each could move up one outcome' },
+  { group: 'technology', title: 'Technologies', color: '#2a78d6', line: 'What each could do for people by 2100' },
   { group: 'living', title: 'How people live', color: '#008300', line: 'Living standards today and in 2100' },
 ]
 const riskGroups = groups.filter((g) => cards.some((card) => card.group === g.group))
@@ -59,7 +59,7 @@ const effectRows = headPlaces
 const scatter = countries.flatMap((country) => {
   const use = measureFor({ factorId: 'ai_use', id: country.id })
   const effect = siEffectFor({ id: country.id })
-  return use === undefined || effect === undefined ? [] : [{ id: country.id, name: country.name, href: pathFor({ entity: country }), color: colorOf(country.id, country.region), x: use / 100, y: effect.better }]
+  return use === undefined || effect === undefined ? [] : [{ id: country.id, group: country.region ?? 'WLD', name: country.name, href: pathFor({ entity: country }), color: colorOf(country.id, country.region), x: use / 100, y: effect.better }]
 })
 const channelRows = headPlaces.flatMap((e) => {
   const reading = readingFor({ id: e.id })
@@ -151,7 +151,7 @@ const nav = [
                     xLabel="Share of people aged 15–64 using AI"
                     yLabel="Better off with SI (points)"
                     xMax={Math.ceil(Math.max(...scatter.map((p) => p.x)) * 10) / 10}
-                    legend={headPlaces.filter((e) => e.kind === 'region').map((e) => ({ label: nameOf(e.id), color: colorOf(e.id) }))}
+                    legend={headPlaces.filter((e) => e.kind === 'region').map((e) => ({ key: e.id, label: nameOf(e.id), color: colorOf(e.id) }))}
                   />
                 </ChartCard>
               </div>
@@ -198,7 +198,7 @@ const nav = [
         humanity && (
           <section id="humanity" class="scroll-mt-24">
             <ChartCard title="Humanity in 2100" subtitle={`${(people2100 / 1e9).toFixed(1)} billion people, by the outcome of their region`} color="#c9c8c2">
-              <div class="flex flex-col gap-3">
+              <div class="flex flex-col gap-3" data-highlight-chart>
                 <SixOutcomeLegend />
                 {([['weighted', 'Our forecast'], ['si', 'With superintelligence'], ['noSi', 'Without']] as const).map(([key, label]) => (
                   <div class="grid grid-cols-[8.5rem_minmax(0,1fr)] items-center gap-3">
@@ -231,6 +231,7 @@ const nav = [
               )}
             </div>
             <p class="mb-5 mt-1 text-sm muted">{g.line}</p>
+            {g.group === 'technology' && <div class="mb-5"><DangerScale scale="potential" /></div>}
             <CardGrid cards={cards} group={g.group} curves={outlook.curves} summary={true} />
           </section>
         ))

@@ -53,7 +53,7 @@ export function Leaderboard({ rows, regions }: { rows: LeaderboardRow[]; regions
   const control = { border: '1px solid var(--line)', background: 'var(--surface)', color: 'var(--ink)' }
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4" data-highlight-chart>
       <div className="flex flex-wrap items-center gap-3 text-sm">
         <div className="pill-group" role="group" aria-label="Scenario">
           {(Object.keys(scenarioLabels) as ScenarioKey[]).map((key) => (

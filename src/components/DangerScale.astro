@@ -1,25 +1,72 @@
 ---
-import { dangerScale } from '../data/definitions.ts'
-import { dangerColors, levelInk } from '../data/palette.ts'
+import { dangerScale, potentialScale } from '../data/definitions.ts'
+import { causeTable } from '../data/outlook.ts'
+import { dangerColors, levelInk, potentialColors, potentialInk } from '../data/palette.ts'
+import { formatPercent } from '../model/forecast.ts'
 
-const levels = dangerScale.filter((level) => level.level > 0)
+type Props = { scale?: 'danger' | 'potential' }
+
+const { scale = 'danger' } = Astro.props
+const isDanger = scale === 'danger'
+const colors = isDanger ? dangerColors : potentialColors
+const inks = isDanger ? levelInk : potentialInk
+const references: Record<number, string> = { 1: 'COVID-19', 2: 'World War II, 1918 flu', 3: 'Black Death in Europe', 4: 'no precedent', 5: 'no precedent' }
+const shorts: Record<number, string> = isDanger
+  ? { 1: 'under 1%', 2: '1–10%', 3: '10–50%', 4: 'over 50%', 5: 'extinction or no recovery' }
+  : { 1: 'under 1%', 2: '1–10%', 3: '10–50%', 4: 'over 50%', 5: 'an essential nearly free' }
+const examples: Record<number, string> = { 1: 'a niche tool', 2: 'a useful supplement', 3: 'a major source', 4: 'the backbone', 5: 'makes energy, water, food or health nearly free' }
+const chance: Record<number, number | undefined> = { 3: causeTable.weighted.atLeast3.total, 4: causeTable.weighted.atLeast4.total, 5: causeTable.weighted.doom.total }
+const harm: Record<number, string> = {
+  1: 'under 1% of humanity dies or lastingly loses decent living conditions',
+  2: '1 to 10% of humanity dies or lastingly loses decent living conditions',
+  3: '10 to 50% of humanity dies or lastingly loses decent living conditions',
+  4: 'over half of humanity dies or lastingly loses decent living conditions, but civilisation can recover',
+  5: 'human extinction, or a collapse with no recovery within a century',
+}
+const levels = (isDanger ? dangerScale : potentialScale)
+  .filter((level) => level.level > 0)
+  .map((level) => ({
+    level: level.level,
+    name: level.name,
+    short: shorts[level.level],
+    under: isDanger ? references[level.level] : examples[level.level],
+    detail: isDanger
+      ? `Level ${level.level}, ${level.name}: ${harm[level.level]}. For scale: ${dangerScale[level.level].reference}.${chance[level.level] !== undefined ? ` Our forecast gives ${formatPercent({ value: chance[level.level] as number })} that the world reaches this level or worse by 2100.` : ''}`
+      : level.level === 5
+        ? `Potential 5, ${level.name}: the technology alone makes an essential (energy, water, food or health) nearly free for everyone.`
+        : `Potential ${level.level}, ${level.name}: the technology alone lifts ${level.share.replace(' moves up one outcome', '')} up at least one outcome, for example from stagnation to better.`,
+  }))
 ---
 
-<div class="flex flex-col gap-1.5">
+<div class="flex flex-col gap-1.5" data-scale={scale}>
   <p class="text-xs ink-2">
-    <a href="/methodology/#scale" class="hover:underline">Danger level: the share of humanity that dies or lastingly loses decent living conditions</a>
+    {isDanger ? 'Danger level: the share of humanity that dies or lastingly loses decent living conditions' : 'Potential level: the share of humanity a technology alone moves up at least one outcome'}
+    <span class="muted"> · click a level</span>
   </p>
-  <div class="grid grid-cols-2 gap-[2px] overflow-hidden rounded-md sm:grid-cols-5">
+  <div class="grid grid-cols-2 gap-[2px] overflow-hidden rounded-md sm:grid-cols-5" role="group" aria-label={isDanger ? 'Danger levels' : 'Potential levels'}>
     {
       levels.map((level) => (
-        <div class="flex flex-col px-2.5 py-1.5" style={`background: ${dangerColors[level.level]}; color: ${levelInk[level.level]}`}>
+        <button
+          type="button"
+          data-level={level.level}
+          aria-expanded="false"
+          class="flex flex-col px-2.5 py-1.5 text-left"
+          style={`background: ${colors[level.level]}; color: ${inks[level.level]}`}
+        >
           <span class="text-xs font-semibold">
             {level.level} · {level.name}
           </span>
           <span class="text-[11px] tabular">{level.short}</span>
-          <span class="text-[10px] opacity-80">{level.reference}</span>
-        </div>
+          <span class="text-[10px] opacity-80">{level.under}</span>
+        </button>
       ))
     }
   </div>
+  {
+    levels.map((level) => (
+      <p data-level-detail={level.level} hidden class="rounded-md px-3 py-2 text-sm ink-2" style="background: var(--surface-2)">
+        {level.detail} <a class="link" href="/methodology/#scale">Methodology</a>
+      </p>
+    ))
+  }
 </div>

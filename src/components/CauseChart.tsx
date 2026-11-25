@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { causeDefinitions } from '../data/definitions.ts'
 import { causeColors } from '../data/palette.ts'
 import { formatPercent, rootCauses, type DangerKey } from '../model/forecast.ts'
@@ -23,6 +23,17 @@ const scenarios: { key: ScenarioKey; label: string }[] = [
 export function CauseChart({ table }: { table: CauseTable }) {
   const [level, setLevel] = useState<DangerKey>('atLeast3')
   const [scenario, setScenario] = useState<ScenarioKey>('weighted')
+  // Clicking level 3, 4 or 5 in a danger-scale legend switches this chart to that level.
+  useEffect(() => {
+    const onLevel = (event: Event) => {
+      const detail = (event as CustomEvent<{ scale: string; level: number }>).detail
+      if (detail.scale !== 'danger') return
+      const key: DangerKey | undefined = detail.level === 3 ? 'atLeast3' : detail.level === 4 ? 'atLeast4' : detail.level === 5 ? 'doom' : undefined
+      if (key) setLevel(key)
+    }
+    window.addEventListener('doom:level', onLevel)
+    return () => window.removeEventListener('doom:level', onLevel)
+  }, [])
   const current = table[scenario][level]
   const ordered = [...rootCauses].sort((a, b) => current.causes[b] - current.causes[a])
   const largest = Math.max(...ordered.map((cause) => current.causes[cause]), 1e-9)

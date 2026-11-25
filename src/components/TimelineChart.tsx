@@ -22,15 +22,15 @@ export function TimelineChart({ points, lines, max }: { points: TimelinePoint[];
     .sort((a, b) => a.y - b.y)
     .reduce<(Line & { y: number })[]>((placed, line) => [...placed, { ...line, y: Math.max(line.y, (placed[placed.length - 1]?.y ?? -Infinity) + 13) }], [])
   return (
-    <div>
-      <div className="mb-1 flex flex-wrap gap-x-4 gap-y-1 text-xs" style={{ color: 'var(--ink-2)' }}>
+    <div data-series-chart>
+      <div className="mb-1 flex flex-wrap gap-x-2 gap-y-1 text-xs" style={{ color: 'var(--ink-2)' }}>
         {lines.map((line) => (
-          <span key={line.key} className="inline-flex items-center gap-1.5">
+          <button key={line.key} type="button" data-series-toggle={line.key} aria-pressed="true" title="Click to show or hide" className="inline-flex items-center gap-1.5 rounded px-1">
             <svg width="16" height="8" aria-hidden="true">
               <line x1="0" y1="4" x2="16" y2="4" stroke={line.color} strokeWidth="2.5" strokeDasharray={line.dash} />
             </svg>
             {line.label}
-          </span>
+          </button>
         ))}
       </div>
       <svg viewBox={`0 0 ${width} ${height}`} width="100%" role="img" aria-label={`Cumulative chance by year, 2025 to 2100: ${lines.map((l) => `${l.label} ${formatPercent({ value: last[l.key] })} by 2100`).join(', ')}.`}>
@@ -48,7 +48,7 @@ export function TimelineChart({ points, lines, max }: { points: TimelinePoint[];
           </text>
         ))}
         {lines.map((line) => (
-          <g key={line.key}>
+          <g key={line.key} data-series={line.key}>
             <path d={points.map((p, i) => `${i === 0 ? 'M' : 'L'}${x(p.year).toFixed(1)} ${y(p[line.key]).toFixed(1)}`).join('')} fill="none" stroke={line.color} strokeWidth="2.5" strokeDasharray={line.dash} strokeLinejoin="round" />
             {points.slice(1).map((p) => (
               <circle key={p.year} cx={x(p.year)} cy={y(p[line.key])} r="3.5" fill={line.color} stroke="#fff" strokeWidth="1.5">
@@ -58,7 +58,7 @@ export function TimelineChart({ points, lines, max }: { points: TimelinePoint[];
           </g>
         ))}
         {labels.map((line) => (
-          <text key={line.key} x={right + 6} y={line.y + 4} fontSize="12" fontWeight="600" fill={line.color}>
+          <text key={line.key} data-series={line.key} x={right + 6} y={line.y + 4} fontSize="12" fontWeight="600" fill={line.color}>
             {formatPercent({ value: last[line.key] })}
           </text>
         ))}

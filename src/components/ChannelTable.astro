@@ -35,8 +35,8 @@ const signed = (score: number) => `${score > 0.05 ? '+' : score < -0.05 ? '−' 
         <th class="px-2 py-1 text-left text-xs font-medium muted"></th>
         {
           siChannels.map((channel) => (
-            <th class="px-2 py-1 text-center text-xs font-medium ink-2" title={channelDefinitions[channel].text}>
-              {channelDefinitions[channel].name}
+            <th class="px-2 py-1 text-center text-xs font-medium ink-2" data-sort={channel} title={`${channelDefinitions[channel].text} Click to sort.`}>
+              {channelDefinitions[channel].name} ↕
             </th>
           ))
         }
@@ -45,7 +45,7 @@ const signed = (score: number) => `${score > 0.05 ? '+' : score < -0.05 ? '−' 
     <tbody>
       {
         rows.map((row) => (
-          <tr>
+          <tr {...Object.fromEntries(siChannels.map((channel) => [`data-v${channel}`, row.reading.channels[channel].toFixed(3)]))}>
             <td class="whitespace-nowrap px-2 py-1">
               <a href={row.href} class="inline-flex items-center gap-2 hover:underline">
                 <span class="square" style={`background: ${row.color}`} />

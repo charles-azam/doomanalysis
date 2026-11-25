@@ -58,27 +58,3 @@ const series = [
   </div>
 </div>
 
-<script>
-  // One listener for every chart on the page: a legend button hides or shows its series in its own chart.
-  document.addEventListener('click', (event) => {
-    const target = event.target
-    if (!(target instanceof Element)) return
-    const button = target.closest<HTMLButtonElement>('[data-series-toggle]')
-    if (button === null) return
-    const chart = button.closest('[data-series-chart]')
-    if (chart === null) return
-    const key = button.dataset.seriesToggle ?? ''
-    const shown = button.getAttribute('aria-pressed') !== 'false'
-    button.setAttribute('aria-pressed', shown ? 'false' : 'true')
-    chart.querySelectorAll<HTMLElement>(`[data-series="${key}"]`).forEach((element) => {
-      element.style.opacity = shown ? '0.12' : '1'
-    })
-  })
-</script>
-
-<style>
-  .series-toggle[aria-pressed='false'] {
-    opacity: 0.45;
-    text-decoration: line-through;
-  }
-</style>

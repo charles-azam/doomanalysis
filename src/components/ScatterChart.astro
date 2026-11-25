@@ -1,6 +1,6 @@
 ---
-type Point = { id: string; name: string; href: string; color: string; x: number; y: number }
-type Props = { points: Point[]; xLabel: string; yLabel: string; xMax: number; legend: { label: string; color: string }[] }
+type Point = { id: string; group: string; name: string; href: string; color: string; x: number; y: number }
+type Props = { points: Point[]; xLabel: string; yLabel: string; xMax: number; legend: { key: string; label: string; color: string }[] }
 
 const { points, xLabel, yLabel, xMax, legend } = Astro.props
 const width = 640
@@ -20,13 +20,14 @@ const pct = (v: number) => `${Math.round(v * 100)}%`
 const pts = (v: number) => `${v > 0.0005 ? '+' : v < -0.0005 ? '−' : ''}${Math.round(Math.abs(v) * 100)}`
 ---
 
-<div class="mb-2 flex flex-wrap gap-x-3 gap-y-1 text-[11px] ink-2">
+<div data-highlight-chart>
+<div class="mb-2 flex flex-wrap gap-x-1 gap-y-1 text-[11px] ink-2">
   {
     legend.map((item) => (
-      <span class="inline-flex items-center gap-1">
+      <button type="button" data-highlight={item.key} aria-pressed="false" class="inline-flex items-center gap-1 rounded px-1">
         <span class="inline-block h-2.5 w-2.5 rounded-full" style={`background: ${item.color}`} />
         {item.label}
-      </span>
+      </button>
     ))
   }
 </div>
@@ -50,10 +51,11 @@ const pts = (v: number) => `${v > 0.0005 ? '+' : v < -0.0005 ? '−' : ''}${Math
   {
     points.map((p) => (
       <a href={p.href}>
-        <circle cx={x(p.x)} cy={y(p.y)} r="4.5" fill={p.color} fill-opacity="0.85" stroke="#ffffff" stroke-width="1">
+        <circle data-key={p.group} cx={x(p.x)} cy={y(p.y)} r="4.5" fill={p.color} fill-opacity="0.85" stroke="#ffffff" stroke-width="1">
           <title>{`${p.name}: ${pct(p.x)} use AI; ${pts(p.y)} points with superintelligence`}</title>
         </circle>
       </a>
     ))
   }
 </svg>
+</div>
