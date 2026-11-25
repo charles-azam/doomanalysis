@@ -1,5 +1,6 @@
 ---
 import GroupedBars from './GroupedBars.astro'
+import { dangerScale, potentialScale } from '../data/definitions.ts'
 import { dangerColors, potentialColors } from '../data/palette.ts'
 import { formatAxis, formatValue } from '../model/chart.ts'
 import { curveFor, levelChances } from '../model/distribution.ts'
@@ -21,7 +22,8 @@ const groups = (() => {
     if (a === undefined || b === undefined) return []
     const levels = [...new Set(card.bands.map((band) => band.level))].filter((level) => level > 0).sort((x, y) => x - y) as DangerLevel[]
     const colors = card.scale === 'potential' ? potentialColors : dangerColors
-    return levels.map((level) => ({ key: String(level), label: `Level ${level}`, swatch: colors[level], without: a[level], with: b[level] }))
+    const names = card.scale === 'potential' ? potentialScale : dangerScale
+    return levels.map((level) => ({ key: String(level), label: `Level ${level}`, note: `Level ${level}, ${names[level].name}: ${names[level].share}`, swatch: colors[level], without: a[level], with: b[level] }))
   }
   return [...(card.marks ?? [])]
     .sort((x, y) => x.value - y.value)

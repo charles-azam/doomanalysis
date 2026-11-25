@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro'
 import CardGrid from '../../components/CardGrid.astro'
+import DangerScale from '../../components/DangerScale.astro'
 import { cards } from '../../data/cards.ts'
 import { causeDefinitions } from '../../data/definitions.ts'
 import { causeColors, siColors } from '../../data/palette.ts'
@@ -37,7 +38,9 @@ const pct = (value: number | undefined) => (value === undefined ? '—' : format
   </h1>
   <p class="mt-4 max-w-3xl text-lg leading-snug">{definition.text}</p>
 
-  <section class="card mt-8 overflow-x-auto p-5">
+  <div class="mt-6"><DangerScale /></div>
+
+  <section class="card mt-4 overflow-x-auto p-5">
     <h2 class="card-title">
       <span class="square" style={`background: ${color}`}></span>
       Chance it starts a catastrophe by 2100

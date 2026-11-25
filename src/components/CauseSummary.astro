@@ -10,9 +10,9 @@ type Props = { cause: RootCause }
 
 const { cause } = Astro.props
 const groups = [
-  { key: 'atLeast3', label: 'Level 3+', swatch: dangerColors[3] },
-  { key: 'atLeast4', label: 'Level 4+', swatch: dangerColors[4] },
-  { key: 'doom', label: 'Doom', swatch: dangerColors[5] },
+  { key: 'atLeast3', label: 'Level 3+', note: 'Level 3 or worse: over 10% of humanity dies or lastingly loses decent living conditions', swatch: dangerColors[3] },
+  { key: 'atLeast4', label: 'Level 4+', note: 'Level 4 or worse: over half of humanity', swatch: dangerColors[4] },
+  { key: 'doom', label: 'Doom', note: 'Level 5: extinction, or no recovery within a century', swatch: dangerColors[5] },
 ].map((g) => {
   const key = g.key as 'atLeast3' | 'atLeast4' | 'doom'
   return { ...g, without: causeTable.noSi[key].causes[cause], with: causeTable.si[key].causes[cause] }

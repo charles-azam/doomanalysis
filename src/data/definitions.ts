@@ -20,12 +20,12 @@ export const outcomeStep = 0.25
 
 /** The danger scale every hazard card is read on. */
 export const dangerScale = [
-  { level: 0, name: 'None', share: 'nobody', reference: '' },
-  { level: 1, name: 'Limited', share: 'under 1% of humanity', reference: 'COVID-19' },
-  { level: 2, name: 'Serious', share: '1 to 10% of humanity', reference: 'the Second World War, the 1918 flu' },
-  { level: 3, name: 'Severe', share: '10 to 50% of humanity', reference: 'the Black Death in Europe' },
-  { level: 4, name: 'Global catastrophe', share: 'over 50% of humanity, recovery possible', reference: 'no precedent' },
-  { level: 5, name: 'Doom', share: 'extinction, or no recovery within a century', reference: 'no precedent' },
+  { level: 0, name: 'None', share: 'nobody', short: 'nobody', reference: '' },
+  { level: 1, name: 'Limited', share: 'under 1% of humanity', short: 'under 1%', reference: 'COVID-19' },
+  { level: 2, name: 'Serious', share: '1 to 10% of humanity', short: '1–10%', reference: 'World War II, 1918 flu' },
+  { level: 3, name: 'Severe', share: '10 to 50% of humanity', short: '10–50%', reference: 'Black Death in Europe' },
+  { level: 4, name: 'Global catastrophe', share: 'over 50% of humanity, recovery possible', short: 'over 50%', reference: 'no precedent' },
+  { level: 5, name: 'Doom', share: 'extinction, or no recovery within a century', short: 'extinction or no recovery', reference: 'no precedent' },
 ] as const
 
 /** The potential scale technology cards are read on: the mirror of the danger scale. */

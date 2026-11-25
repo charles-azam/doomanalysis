@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro'
 import CardGrid from '../components/CardGrid.astro'
+import DangerScale from '../components/DangerScale.astro'
 import ChannelTable from '../components/ChannelTable.astro'
 import EffectChart from '../components/EffectChart.astro'
 import ScatterChart from '../components/ScatterChart.astro'
@@ -14,7 +15,7 @@ import { cards } from '../data/cards.ts'
 import { causeDefinitions } from '../data/definitions.ts'
 import { countries, entities, pathFor } from '../data/entities.ts'
 import { regionShort } from '../data/labels.ts'
-import { causeColors, dangerColors, levelInk, placeColors } from '../data/palette.ts'
+import { causeColors, placeColors } from '../data/palette.ts'
 import { causeTable, measureFor, outlook, people2100, placeRows, readingFor, siEffectFor, sixOutcomesFor } from '../data/outlook.ts'
 import { rootCauses } from '../model/forecast.ts'
 import type { CardGroup } from '../model/types.ts'
@@ -67,19 +68,12 @@ const channelRows = headPlaces.flatMap((e) => {
 const hasSi = aiBars.length > 0 || effectRows.length > 0 || channelRows.length > 0
 
 const nav = [
-  { id: 'places', title: 'Places', color: '#e34948' },
   { id: 'how-bad', title: 'How bad, and why', color: '#eb6834' },
+  { id: 'places', title: 'Where it lands', color: '#e34948' },
   ...(hasSi ? [{ id: 'si-effect', title: 'What superintelligence changes', color: '#6250d6' }] : []),
   { id: 'over-time', title: 'Over time', color: '#0b0b0b' },
   { id: 'humanity', title: 'Humanity in 2100', color: '#c9c8c2' },
   ...riskGroups.map((g) => ({ id: g.group, title: g.title, color: g.color })),
-]
-const scale = [
-  { level: 1 as const, share: '<1%' },
-  { level: 2 as const, share: '1–10%' },
-  { level: 3 as const, share: '10–50%' },
-  { level: 4 as const, share: '>50%' },
-  { level: 5 as const, share: 'doom' },
 ]
 ---
 
@@ -106,17 +100,22 @@ const scale = [
     </aside>
 
     <div class="flex min-w-0 flex-col gap-16">
-      <section id="places" class="scroll-mt-24">
-        <Compare client:load rows={rows} defaults={defaults} />
-      </section>
-
       <section id="how-bad" class="scroll-mt-24">
         <h2 class="section-title">
           <span class="square" style="background: #eb6834"></span>
           How bad, and why
         </h2>
-        <p class="mb-5 mt-1 text-sm muted">Each catastrophe counts once, under the cause that started it, so the causes add up to 100%</p>
-        <CauseChart client:visible table={causeTable} />
+        <p class="mb-4 mt-1 text-sm muted">Each catastrophe counts once, under the cause that started it, so the causes add up to 100%</p>
+        <div class="mb-4"><DangerScale /></div>
+        <CauseChart client:load table={causeTable} />
+      </section>
+
+      <section id="places" class="scroll-mt-24">
+        <h2 class="section-title mb-5">
+          <span class="square" style="background: #e34948"></span>
+          Where it lands
+        </h2>
+        <Compare client:load rows={rows} defaults={defaults} />
       </section>
 
       {
@@ -181,8 +180,8 @@ const scale = [
                   points={timeline}
                   max={0.5}
                   lines={[
-                    { key: 'atLeast3', label: 'Level 3+', color: '#f09595' },
-                    { key: 'atLeast4', label: 'Level 4+', color: '#e34948' },
+                    { key: 'atLeast3', label: 'Level 3+ (over 10% of humanity)', color: '#f09595' },
+                    { key: 'atLeast4', label: 'Level 4+ (over half)', color: '#e34948' },
                     { key: 'doom', label: 'Doom', color: '#0b0b0b' },
                   ]}
                 />
@@ -213,15 +212,8 @@ const scale = [
         )
       }
 
-      <div id="risks" class="-mb-8 flex scroll-mt-24 flex-wrap items-center justify-end gap-3 border-t pt-10" style="border-color: var(--line)">
-        <a href="/methodology/#scale" class="flex flex-wrap items-center gap-1.5 text-xs ink-2 hover:underline">
-          <span>Danger level, share of humanity harmed:</span>
-          {scale.map((level) => (
-            <span class="rounded px-1.5 py-0.5" style={`background: ${dangerColors[level.level]}; color: ${levelInk[level.level]}`}>
-              {level.level} · {level.share}
-            </span>
-          ))}
-        </a>
+      <div id="risks" class="-mb-8 scroll-mt-24 border-t pt-10" style="border-color: var(--line)">
+        <div class="w-full"><DangerScale /></div>
       </div>
 
       {

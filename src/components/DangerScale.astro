@@ -1,0 +1,25 @@
+---
+import { dangerScale } from '../data/definitions.ts'
+import { dangerColors, levelInk } from '../data/palette.ts'
+
+const levels = dangerScale.filter((level) => level.level > 0)
+---
+
+<div class="flex flex-col gap-1.5">
+  <p class="text-xs ink-2">
+    <a href="/methodology/#scale" class="hover:underline">Danger level: the share of humanity that dies or lastingly loses decent living conditions</a>
+  </p>
+  <div class="grid grid-cols-2 gap-[2px] overflow-hidden rounded-md sm:grid-cols-5">
+    {
+      levels.map((level) => (
+        <div class="flex flex-col px-2.5 py-1.5" style={`background: ${dangerColors[level.level]}; color: ${levelInk[level.level]}`}>
+          <span class="text-xs font-semibold">
+            {level.level} · {level.name}
+          </span>
+          <span class="text-[11px] tabular">{level.short}</span>
+          <span class="text-[10px] opacity-80">{level.reference}</span>
+        </div>
+      ))
+    }
+  </div>
+</div>
