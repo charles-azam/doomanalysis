@@ -1,0 +1,173 @@
+import type { Card } from '../../model/types.ts'
+
+const isbell = 'https://par.nsf.gov/servlets/purl/10399722'
+const smithDeficits = 'https://pmc.ncbi.nlm.nih.gov/articles/PMC9749483'
+const planetaryHealthCheck = 'https://www.planetaryhealthcheck.org/'
+const solaw = 'https://www.downtoearth.org.in/agriculture/expanding-agricultural-area-no-longer-viable-report'
+const sofia = 'https://news.mongabay.com/2026/06/aquatic-animal-and-terrestrial-meat-trades-now-almost-on-par-fao-report-finds/'
+const aqueductCountries = 'https://www.wri.org/insights/highest-water-stressed-countries'
+
+/** Living world, soil and water, researched November 2026. */
+export const cards: Card[] = [
+  {
+    id: 'biodiversity',
+    name: 'Species at risk of extinction',
+    summary: 'The share of all species that are threatened with extinction or already gone. Wild species pollinate crops, feed people and keep soil and water working.',
+    group: 'climate',
+    scale: 'danger',
+    statistic: 'value-in-2100',
+    metric: 'Species threatened with extinction or extinct since 1500',
+    unit: '% of species',
+    decimals: 0,
+    axis: { min: 10, max: 70 },
+    today: {
+      value: 30,
+      year: 2022,
+      source: 'Isbell et al. 2022, survey of 3,331 biodiversity experts (their bounds: 16 to 50%)',
+      url: isbell,
+    },
+    bands: [
+      { from: 10, to: 30, level: 1, label: 'Fewer species at risk than today; pollination gaps shrink', basis: 'judged' },
+      {
+        from: 30,
+        to: 37,
+        level: 1,
+        label: 'Poor pollination costs about 427,000 lives a year, as today',
+        basis: 'derived',
+        source: 'Smith et al. 2022: too few pollinators cost about 427,000 lives a year, under 1 death in 100',
+        url: smithDeficits,
+      },
+      { from: 37, to: 50, level: 2, label: 'Pollinators and wild foods fail across regions; millions die early', basis: 'judged' },
+      { from: 50, to: 70, level: 2, label: 'Nature’s services fail widely; hundreds of millions lose food or water', basis: 'judged' },
+    ],
+    marks: [{ value: 25, label: 'Experts: 2100 with strong conservation' }],
+    published: {
+      noSi: [
+        {
+          value: 37,
+          above: 0.5,
+          basis: 'published',
+          source: 'Isbell et al. 2022: median estimate of 3,331 surveyed experts for 2100 if current trends continue',
+          url: isbell,
+        },
+      ],
+      si: [],
+    },
+    wikipedia: 'Biodiversity loss',
+    siNote: 'Higher farm yields could free land for nature, and monitoring would get far better. Extinct species do not come back, habitats regrow over decades, and leaving land to nature is a political choice.',
+  },
+  {
+    id: 'planetary_boundaries',
+    name: 'Planetary boundaries crossed',
+    summary: 'Scientists track nine Earth processes that kept the planet stable while civilization grew. This counts how many are now outside their safe limit.',
+    group: 'climate',
+    scale: 'none',
+    statistic: 'value-in-2100',
+    metric: 'Planetary boundaries outside their safe limit',
+    unit: 'of 9',
+    decimals: 0,
+    axis: { min: 0, max: 9 },
+    today: {
+      value: 7,
+      year: 2026,
+      source: 'Planetary Health Check 2026, Potsdam Institute for Climate Impact Research',
+      url: planetaryHealthCheck,
+    },
+    bands: [],
+    marks: [
+      { value: 4, label: '2015 count' },
+      { value: 6, label: '2023 count' },
+      { value: 7, label: 'Count in 2025 and 2026' },
+      { value: 8, label: 'One boundary left' },
+    ],
+    published: { noSi: [], si: [] },
+    wikipedia: 'Planetary boundaries',
+    siNote: 'Cheaper clean energy and substitutes for fertilizer and persistent chemicals could ease several boundaries. Most are stocks, such as CO₂ in the air or species already lost, that recover over decades to centuries whatever is invented.',
+  },
+  {
+    id: 'soil',
+    name: 'Degraded farmland',
+    summary: 'The share of the world’s cropland and pasture that farming has worn down. Soils grow about 95% of our food, so degraded land means smaller harvests.',
+    group: 'resources',
+    scale: 'danger',
+    statistic: 'value-in-2100',
+    metric: 'Farmland degraded by human activity',
+    unit: '% of farmland',
+    decimals: 0,
+    axis: { min: 5, max: 70 },
+    today: {
+      value: 20,
+      year: 2025,
+      source: 'FAO SOLAW 2025: over 60% of 1.6 billion degraded hectares, on 4.8 billion hectares of farmland',
+      url: solaw,
+    },
+    bands: [
+      { from: 5, to: 20, level: 1, label: 'Soils are restored faster than they wear out; harvests gain', basis: 'judged' },
+      { from: 20, to: 40, level: 1, label: 'Poorer harvests where 1.7 billion live; world output still grows', basis: 'judged' },
+      { from: 40, to: 70, level: 2, label: 'Harvests shrink across regions; 100 million or more go hungry', basis: 'judged' },
+    ],
+    published: { noSi: [], si: [] },
+    wikipedia: 'Land degradation',
+    siNote: 'Better crop breeding, soil sensing and precision farming could cut erosion and raise yields on less land. Rebuilding soil still takes years of work, field by field, and depends on what farmers can afford.',
+  },
+  {
+    id: 'fish',
+    name: 'Overfished stocks',
+    summary: 'The share of the sea’s fish stocks caught faster than they can breed. Fish and seafood give 3.1 billion people at least a fifth of their animal protein.',
+    group: 'resources',
+    scale: 'danger',
+    statistic: 'value-in-2100',
+    metric: 'Assessed marine fish stocks that are overfished',
+    unit: '% of stocks',
+    decimals: 1,
+    axis: { min: 0, max: 100 },
+    today: {
+      value: 37.6,
+      year: 2023,
+      source: 'FAO, State of World Fisheries and Aquaculture 2026 (reported by Mongabay)',
+      url: sofia,
+    },
+    bands: [
+      { from: 0, to: 35, level: 1, label: 'Stocks rebuild and the wild catch can grow', basis: 'judged' },
+      { from: 35, to: 60, level: 1, label: 'The wild catch stalls; fish farms and trade fill the gaps', basis: 'judged' },
+      { from: 60, to: 100, level: 2, label: 'The wild catch falls; the coastal poor lose their main animal protein', basis: 'judged' },
+    ],
+    marks: [
+      { value: 10, label: '1974' },
+      { value: 54.3, label: 'Mediterranean and Black Sea today' },
+    ],
+    published: { noSi: [], si: [] },
+    wikipedia: 'Overfishing',
+    siNote: 'Satellite tracking and better stock models could expose illegal fishing and set smarter quotas, and fish farming could grow. Stocks rebuild only when boats catch less, which is a matter of enforcement and politics.',
+  },
+  {
+    id: 'fresh_water',
+    name: 'People under water stress',
+    summary: 'The share of humanity living where farms, cities and industry take 40% or more of the water that rivers and aquifers renew, for at least one month a year.',
+    group: 'resources',
+    scale: 'danger',
+    statistic: 'value-in-2100',
+    metric: 'People under high water stress at least one month a year',
+    unit: '% of humanity',
+    decimals: 0,
+    axis: { min: 30, max: 90 },
+    today: {
+      value: 50,
+      year: 2023,
+      source: 'World Resources Institute, Aqueduct 4.0: around 4 billion people',
+      url: aqueductCountries,
+    },
+    bands: [
+      { from: 30, to: 55, level: 1, label: 'Shortages are seasonal and local; wealth and trade cover them', basis: 'judged' },
+      { from: 55, to: 70, level: 2, label: 'A billion more people in extreme stress; rationing and failed harvests', basis: 'judged' },
+      { from: 70, to: 90, level: 2, label: 'Stress almost everywhere people live; hundreds of millions go short', basis: 'judged' },
+    ],
+    marks: [
+      { value: 60, label: 'WRI projection for 2050' },
+      { value: 66, label: 'Top 2100 scenario, counting polluted water' },
+    ],
+    published: { noSi: [], si: [] },
+    wikipedia: 'Water scarcity',
+    siNote: 'Cheap clean energy would make desalination and water recycling affordable for coastal cities. It cannot make rain fall inland, refill emptied aquifers quickly, or settle disputes over shared rivers.',
+  },
+]

@@ -1,17 +1,19 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import { buildCountryPrompt, buildWorldPrompt, countryBatches } from '../judge/prompt.ts'
-import { definitions } from '../src/data/definitions.ts'
+import { buildCountryPrompt, buildCurvePrompt, buildWorldPrompt, countryBatches } from '../judge/forecast-prompt.ts'
+import { cards } from '../src/data/cards.ts'
 import { displays } from '../src/data/display.ts'
 import { countries, entities, regions } from '../src/data/entities.ts'
 import { exceedances } from '../src/data/exceedance.ts'
 import { factors } from '../src/data/factors.ts'
-import { judgeRuns } from '../src/data/judgments.ts'
+import { forecastRuns } from '../src/data/forecasts.ts'
+import { history } from '../src/data/history.ts'
 import { observations } from '../src/data/observations.ts'
 import { projections } from '../src/data/projections.ts'
-import { consensus, entityOutcome, validateRun, worldOutcome } from '../src/model/judgment.ts'
+import { cardSetProblems } from '../src/model/cards.ts'
+import { parentProblems, verdictOf } from '../src/model/forecast.ts'
 import { displayScore, entityIndices, pressureScore } from '../src/model/score.ts'
-import type { EntityScenario, FactorDefinition, JudgeRun, Observation, WorldJudgment, WorldScenario } from '../src/model/types.ts'
+import type { FactorDefinition, Observation } from '../src/model/types.ts'
 
 const close = (actual: number, expected: number) => assert.ok(Math.abs(actual - expected) < 1e-9, `${actual} ≠ ${expected}`)
 
@@ -27,27 +29,7 @@ const factor = (overrides: Partial<FactorDefinition> & Pick<FactorDefinition, 'i
   ...overrides,
 })
 
-const scenario = (collapse: number, abundance: number, worst: number): EntityScenario => ({
-  collapse: collapse,
-  abundance: abundance,
-  pillarLoss: { energy: worst, water: worst / 2, food: worst / 2, health: worst / 4, security: worst / 4 },
-})
-
-const worldScenario = (doom: number, abundance: number): WorldScenario => ({
-  doom: doom,
-  abundance: abundance,
-  pathways: { ai: doom * 0.5, nuclear: doom * 0.2, pandemic: doom * 0.1, climate: doom * 0.1, resources: doom * 0.05, other: doom * 0.05 },
-})
-
-const mockWorld = (siBy2100: number, doomSi: number): WorldJudgment => ({
-  siBy2050: siBy2100 / 2,
-  siBy2100: siBy2100,
-  si: worldScenario(doomSi, 0.2),
-  noSi: worldScenario(0.04, 0.05),
-  rationale: 'world',
-})
-
-test('mock factors, regions and batched judge runs flow end to end into the published numbers', () => {
+test('mock factors flow into scores and indices', () => {
   const mockFactors: FactorDefinition[] = [
     factor({ id: 'heat', family: 'driver', scope: 'country', anchors: { good: 0, bad: 10, scale: 'linear', basis: 'judgment', rationale: '' } }),
     factor({ id: 'births', family: 'driver', scope: 'country', anchors: { good: 2.1, bad: 4.6, scale: 'two-sided', basis: 'judgment', rationale: '' } }),
@@ -69,65 +51,6 @@ test('mock factors, regions and batched judge runs flow end to end into the publ
   close(index.basketGap, (10 + 40) / 2)
   assert.equal(index.pillarsMet, 1)
 
-  // Three world runs (world + one region), then country batches: two spotlight runs, one ordinary run.
-  const worldRun = (id: string, siBy2100: number, doomSi: number, regionCollapse: number): JudgeRun => ({
-    id: id,
-    batch: 'world',
-    model: 'mock',
-    date: `2026-11-2${id.length}`,
-    method: 'mock',
-    world: mockWorld(siBy2100, doomSi),
-    entities: [{ entity: 'europe-west', si: scenario(regionCollapse, 0.3, regionCollapse * 0.8), noSi: scenario(0.08, 0.2, 0.06), rationale: 'region' }],
-  })
-  const countryRun = (id: string, batch: string, collapse: number): JudgeRun => ({
-    id: id,
-    batch: batch,
-    model: 'mock',
-    date: '2026-11-24',
-    method: 'mock',
-    entities: [{ entity: 'FRA', si: scenario(collapse, 0.25, collapse * 0.8), noSi: scenario(0.1, 0.15, 0.08), rationale: 'France' }],
-  })
-  const runs = [
-    worldRun('a', 0.8, 0.1, 0.2),
-    worldRun('bb', 0.9, 0.2, 0.3),
-    worldRun('ccc', 0.6, 0.05, 0.15),
-    countryRun('f1', 'spotlight-1', 0.3),
-    countryRun('f2', 'spotlight-1', 0.4),
-    countryRun('f3', 'spotlight-1', 0.2),
-  ]
-  const verdict = consensus({ runs: runs })
-  assert.equal(verdict.worldRuns, 3)
-  close(verdict.world.siBy2100, 0.8)
-  close(verdict.world.si.doom, 0.1)
-  assert.equal(verdict.date, '2026-11-24')
-  close(verdict.entities['europe-west'].si.collapse, 0.2)
-  assert.equal(verdict.entities['europe-west'].runs, 3)
-  const france = verdict.entities.FRA
-  assert.equal(france.runs, 3)
-  close(france.si.collapse, 0.3)
-
-  // Headlines: the law of total probability over SI, and outcomes that add to one.
-  const world = worldOutcome({ world: verdict.world, scenario: 'weighted' })
-  close(world.collapse, 0.8 * 0.1 + 0.2 * 0.04)
-  close(world.abundance + world.muddle + world.collapse, 1)
-  const weighted = entityOutcome({ world: verdict.world, entity: france, scenario: 'weighted' })
-  close(weighted.collapse, 0.8 * 0.3 + 0.2 * 0.1)
-  close(weighted.abundance, 0.8 * 0.25 + 0.2 * 0.15)
-  close(verdict.doomSpread.high, 0.9 * 0.2 + 0.1 * 0.04)
-
-  // Incoherent judgments are rejected before they reach the site.
-  const broken = structuredClone(runs[3])
-  broken.entities[0].si.abundance = 0.9
-  assert.throws(() => validateRun({ run: broken, world: verdict.world, checkUpper: true }), /exclusive/)
-  const safer = structuredClone(runs[3])
-  safer.entities[0].si = scenario(0.05, 0.2, 0.04)
-  assert.throws(() => validateRun({ run: safer, world: verdict.world, checkUpper: true }), /below global doom/)
-  const early = structuredClone(runs[0])
-  ;(early.world as WorldJudgment).siBy2050 = 0.95
-  assert.throws(() => validateRun({ run: early, world: early.world as WorldJudgment, checkUpper: true }), /2050/)
-  const union = structuredClone(runs[0])
-  ;(union.world as WorldJudgment).si.pathways.ai = 0.5
-  assert.throws(() => validateRun({ run: union, world: union.world as WorldJudgment, checkUpper: true }), /largest part/)
 })
 
 test('published data is complete, sourced and coherent', () => {
@@ -167,16 +90,32 @@ test('published data is complete, sourced and coherent', () => {
     assert.ok(e.probability >= 0 && e.probability <= 1, `exceedance ${e.factorId} ${e.threshold} is a probability`)
     assert.ok(e.basis !== 'published' || (e.url ?? '').startsWith('https://'), `published exceedance ${e.factorId} ${e.threshold} has a source URL`)
   }
-  assert.match(definitions.abundance, /less than 10% of national income/)
 
-  assert.ok(judgeRuns.length >= 1, 'at least one judge run is published')
-  const verdict = consensus({ runs: judgeRuns })
-  for (const id of Object.keys(verdict.entities)) assert.ok(entityIds.has(id), `judged entity ${id} exists`)
+  // Cards: valid one by one and as a set, no sub-card above its parent.
+  assert.deepEqual(cardSetProblems({ cards: cards }), [])
+  assert.ok(cards.length >= 60, 'every group of cards is present')
 
-  const worldPrompt = buildWorldPrompt()
+  // Judge runs: every stored run is coherent, and every place and card it names exists.
+  assert.ok(forecastRuns.length >= 1, 'at least one judge run is published')
+  const verdict = verdictOf({ runs: forecastRuns, cards: cards })
+  for (const id of Object.keys(verdict.places)) assert.ok(entityIds.has(id), `judged place ${id} exists`)
+  for (const region of regions) assert.ok(verdict.places[region.id], `region ${region.id} is judged`)
+  for (const country of countries) assert.ok(verdict.places[country.id], `country ${country.id} is judged`)
+  assert.deepEqual(parentProblems({ cards: cards, curves: verdict.curves }), [])
+
+  // History: oldest first, unique versions, probabilities.
+  assert.equal(new Set(history.map((record) => record.version)).size, history.length)
+  for (const [index, record] of history.entries()) {
+    if (index > 0) assert.ok(record.date >= history[index - 1].date, `history is in order at ${record.version}`)
+    for (const value of [record.doom, record.doomGivenSi, record.abundance, record.si]) assert.ok(value >= 0 && value <= 1)
+  }
+
+  // Prompts cover what they should.
+  const worldPrompt = buildWorldPrompt({ cards: cards, curves: verdict.curves, aiNote: '' })
   for (const region of regions) assert.ok(worldPrompt.includes(`(${region.id})`), `world prompt covers ${region.id}`)
+  assert.ok(buildCurvePrompt({ cards: cards.slice(0, 3), explainers: {} }).includes(cards[0].id))
   const batches = countryBatches({ size: 20 })
   assert.equal(batches.spotlight.flat().length + batches.rest.flat().length, countries.length, 'every country is in one batch')
-  const countryPrompt = buildCountryPrompt({ ids: batches.spotlight[0], world: verdict.world })
+  const countryPrompt = buildCountryPrompt({ ids: batches.spotlight[0], verdict: verdict })
   assert.ok(countryPrompt.includes('(FRA)') || countryPrompt.includes('(USA)'))
 })

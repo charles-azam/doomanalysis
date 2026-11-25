@@ -2,7 +2,8 @@
 
 Usage (from pdoom/pipeline): uv run python -m doom_pipeline.run --raw-dir <downloads> --out-dir ../src/data/generated
 The raw dir holds the official files that have no API: the GPI 2026 site script, the ND-GAIN 2026 zip
-contents and the WRI Aqueduct 4.0 rankings workbook.
+contents and the WRI Aqueduct 4.0 rankings workbook. The run also keeps there the files it downloads itself
+(Our World in Data, WHO, Gallup's safety map, UN WPP 2024): delete one to fetch it again.
 """
 
 import argparse
@@ -11,16 +12,37 @@ from dataclasses import asdict
 from pathlib import Path
 
 from doom_pipeline.build import build_dataset
-from doom_pipeline.catalog import MIN_FACTORS, SPOTLIGHT, WORLD_BANK_CODES
+from doom_pipeline.catalog import (
+    CONSUMPTION_CODE,
+    GALLUP_NAMES,
+    GALLUP_SURVEY_YEAR,
+    GALLUP_UNPUBLISHED,
+    HEALTH_COVERAGE_CODE,
+    HIGH_INCOME,
+    MIN_FACTORS,
+    SPOTLIGHT,
+    WORLD_BANK_CODES,
+)
 from doom_pipeline.models import Dataset, Point, RawInputs
 from doom_pipeline.sources import (
+    GALLUP_SAFETY_CSV,
+    OWID_ENERGY_CSV,
+    OWID_HOURS_CSV,
+    WHO_HALE_JSON,
+    WPP_MEDIUM_CSV,
+    cached,
     fetch_countries,
     fetch_imf_debt,
     fetch_m49,
     fetch_world_bank,
+    fetch_world_bank_aggregate,
     parse_aqueduct,
+    parse_gallup_safety,
     parse_gpi,
     parse_ndgain,
+    parse_owid,
+    parse_who_hale,
+    parse_wpp_population,
 )
 
 
@@ -49,11 +71,29 @@ def fetch_raw(*, raw_dir: Path) -> RawInputs:
     workbook = raw_dir / "dl_aq" / "ex" / "Aqueduct40_rankings_download_Y2023M07D05" / "Aqueduct40_rankings_download_Y2023M07D05.xlsx"
     baseline, future = parse_aqueduct(path=workbook)
     indicators["water_stress"] = baseline
+
+    # How people live: fetched last, so the rows of the factors above keep their place in the output.
+    indicators["consumption_per_person"] = fetch_world_bank(code=CONSUMPTION_CODE, source=None)
+    energy = cached(url=OWID_ENERGY_CSV, path=raw_dir / "dl_owid_energy" / "per-capita-energy-use.csv")
+    indicators["energy_per_person"] = parse_owid(path=energy, column="Total energy supply")
+    indicators["healthy_life_years"] = parse_who_hale(path=cached(url=WHO_HALE_JSON, path=raw_dir / "dl_who_hale" / "WHOSIS_000002.json"))
+    indicators["health_coverage"] = fetch_world_bank(code=HEALTH_COVERAGE_CODE, source=None)
+    hours = cached(url=OWID_HOURS_CSV, path=raw_dir / "dl_owid_hours" / "annual-working-hours-per-worker.csv")
+    indicators["hours_worked"] = parse_owid(path=hours, column="Working hours per worker")
+    indicators["feel_safe"] = parse_gallup_safety(
+        path=cached(url=GALLUP_SAFETY_CSV, path=raw_dir / "dl_gallup_safety" / "dataset.csv"),
+        names={country.name: country.iso3 for country in countries} | GALLUP_NAMES,
+        unpublished=GALLUP_UNPUBLISHED,
+        year=GALLUP_SURVEY_YEAR,
+    )
+    wpp = cached(url=WPP_MEDIUM_CSV, path=raw_dir / "dl_people_wpp" / "WPP2024_Demographic_Indicators_Medium.csv.gz")
     return RawInputs(
         countries=countries,
         population=fetch_world_bank(code="SP.POP.TOTL", source=None),
         indicators=indicators,
         projections={"water_stress": future},
+        high_income_consumption=fetch_world_bank_aggregate(code=CONSUMPTION_CODE, aggregate=HIGH_INCOME),
+        population_2100=parse_wpp_population(path=wpp, year=2100),
     )
 
 
@@ -62,6 +102,7 @@ def write(*, dataset: Dataset, out_dir: Path) -> None:
     (out_dir / "entities.json").write_text(to_json(rows=[asdict(e) for e in dataset.entities]), encoding="utf-8")
     (out_dir / "observations.json").write_text(to_json(rows=[asdict(o) for o in dataset.observations]), encoding="utf-8")
     (out_dir / "projections.json").write_text(to_json(rows=[asdict(p) for p in dataset.projections]), encoding="utf-8")
+    (out_dir / "population-2100.json").write_text(json.dumps(dataset.population_2100, indent=1) + "\n", encoding="utf-8")
 
 
 def main() -> None:
@@ -73,6 +114,9 @@ def main() -> None:
     write(dataset=dataset, out_dir=args.out_dir)
     countries = sum(1 for e in dataset.entities if e.kind == "country")
     print(f"{countries} countries, {len(dataset.entities) - countries} regions, {len(dataset.observations)} observations, {len(dataset.projections)} projections")
+    print(f"{dataset.population_2100['WLD']:,} people in 2100")
+    for row in dataset.benchmarks:
+        print(f"{row.factor_id} {row.entity}: {row.value} ({row.year}; {row.note})")
 
 
 if __name__ == "__main__":

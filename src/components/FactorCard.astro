@@ -1,12 +1,12 @@
 ---
 import type { FactorDefinition, Observation, Projection } from '../model/types.ts'
-import { countPast } from '../model/track.ts'
+import { countPast, countReached } from '../model/track.ts'
 import { displayFor } from '../data/display.ts'
 import { themeColor } from '../data/sections.ts'
 import { ThresholdTrack } from './ThresholdTrack.tsx'
 import { exceedanceFor } from '../data/exceedance.ts'
 import { explainerIds } from '../data/explainers.ts'
-import { formatPercent } from '../model/judgment.ts'
+import { formatPercent } from '../model/forecast.ts'
 
 type Props = {
   factor: FactorDefinition
@@ -22,7 +22,9 @@ const short = (value: number) => {
   const digits = Math.abs(value) >= 100 ? 0 : Math.abs(value) >= 10 ? Math.min(factor.decimals, 1) : factor.decimals
   return `${value.toLocaleString('en-US', { maximumFractionDigits: digits })}${display.symbol}`
 }
-const total = display.thresholds.length
+const total = display.thresholds.filter((t) => t.severity !== 'goal').length
+const goals = display.thresholds.filter((t) => t.severity === 'goal').length
+const reached = countReached({ display: display, value: observation.value })
 const pastToday = countPast({ display: display, value: observation.value })
 const pastLater = projection ? countPast({ display: display, value: projection.value }) : undefined
 const basisMark = { published: 'published', derived: 'derived from a published range', judged: 'judged' }
@@ -86,6 +88,15 @@ const role = factor.family === 'counterforce' ? 'Pushes back' : factor.family ==
           ))}
         </div>
       </div>
+    )
+  }
+  {
+    goals > 0 && (
+      <p class="text-xs ink-2">
+        <span class="font-semibold" style={reached > 0 ? 'color: var(--accent)' : undefined}>
+          {reached === 0 ? 'No goal reached today' : `${reached} of ${goals} ${goals === 1 ? 'goal' : 'goals'} reached today`}
+        </span>
+      </p>
     )
   }
   {

@@ -124,3 +124,6 @@ const globalProjections: Projection[] = [
 
 /** Global projections written by hand, plus country projections from the pipeline (Aqueduct 2050 water stress). */
 export const projections: Projection[] = [...globalProjections, ...(generated as Projection[])]
+
+export const projectionFor = ({ factorId, entity }: { factorId: string; entity: string }): Projection | undefined =>
+  projections.find((projection) => projection.factorId === factorId && projection.entity === entity)

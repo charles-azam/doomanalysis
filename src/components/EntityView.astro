@@ -1,38 +1,40 @@
 ---
+import CardTree from './CardTree.astro'
 import FactorCard from './FactorCard.astro'
-import { OutcomeBar, OutcomeLegend } from './OutcomeBar.tsx'
-import { PairedBars } from './PairedBars.tsx'
-import { SiLegend } from './Dumbbell.tsx'
+import { cards } from '../data/cards.ts'
+import { causeDefinitions } from '../data/definitions.ts'
+import { causeColors } from '../data/palette.ts'
+import { rootCauses } from '../model/forecast.ts'
+import { SixOutcomeBar, SixOutcomeLegend } from './SixOutcomeBar.tsx'
 import { countries, entityById, formatPopulation, pathFor, regions, type Entity } from '../data/entities.ts'
 import { factors } from '../data/factors.ts'
-import { pathwayLabels, pillarLabels } from '../data/labels.ts'
+import { outcomeDefinitions, outcomeNames } from '../data/definitions.ts'
 import { observations } from '../data/observations.ts'
-import { countrySections, globalSections } from '../data/sections.ts'
-import { judgmentFor, latestJudgeDate, outcomesFor, projectionFor, verdict } from '../data/site.ts'
-import { formatPercent, pathways, pillars } from '../model/judgment.ts'
+import { latestForecastDate, outlook, sixOutcomesFor, top } from '../data/outlook.ts'
+import { countrySections } from '../data/sections.ts'
+import { projectionFor } from '../data/projections.ts'
+import { formatPercent, outcomeKeys } from '../model/forecast.ts'
 import { observationFor } from '../model/score.ts'
 
 type Props = { entity: Entity }
 const { entity } = Astro.props
 const isWorld = entity.kind === 'world'
-const world = verdict.world
-const judged = isWorld ? undefined : judgmentFor({ id: entity.id })
-const outcomes = outcomesFor({ entity: entity })
-const collapseWord = isWorld ? 'doom' : 'collapse'
+const outcomes = sixOutcomesFor({ id: entity.id })
 const pct = (value: number) => formatPercent({ value: value })
-const spread = isWorld ? verdict.doomSpread : judged?.collapseSpread
-const runs = isWorld ? verdict.worldRuns : (judged?.runs ?? 0)
+const runs = isWorld ? outlook.worldRuns : (outlook.places[entity.id]?.runs ?? 0)
 const scope = isWorld ? 'global' : 'country'
 const pick = (factor: (typeof factors)[number]) => {
   const observation = observationFor({ observations: observations, factorId: factor.id, entity: entity.id })
   return observation === undefined ? [] : [{ factor: factor, observation: observation, projection: projectionFor({ factorId: factor.id, entity: entity.id }) }]
 }
-const sections = (isWorld ? globalSections : countrySections).map((section) => ({
+const sections = (isWorld ? [] : countrySections).map((section) => ({
   section: section,
-  items: factors.filter((f) => f.scope === scope && section.themes.includes(f.theme) && f.family !== 'context').flatMap(pick),
+  // Context factors are left out of every section except "How people live", which is made of them.
+  items: factors.filter((f) => f.scope === scope && section.themes.includes(f.theme) && (f.family !== 'context' || section.id === 'living')).flatMap(pick),
 }))
-const context = factors.filter((f) => f.scope === scope && f.family === 'context').flatMap(pick)
-const missing = factors.filter((f) => f.scope === scope && observationFor({ observations: observations, factorId: f.id, entity: entity.id }) === undefined)
+const context = isWorld ? [] : factors.filter((f) => f.scope === scope && f.family === 'context' && f.theme !== 'living').flatMap(pick)
+const missing = isWorld ? [] : factors.filter((f) => f.scope === scope && observationFor({ observations: observations, factorId: f.id, entity: entity.id }) === undefined)
+const worldGroups = isWorld ? rootCauses.filter((cause) => cards.some((card) => card.group === cause)) : []
 const region = entity.region ? entityById({ id: entity.region }) : undefined
 const members = entity.kind === 'region' ? countries.filter((c) => c.region === entity.id) : []
 const subtitle = isWorld
@@ -47,13 +49,13 @@ const subtitle = isWorld
       {!region && (entity.kind === 'region' ? 'Region' : isWorld ? 'World' : 'Country')}
     </p>
     <h1 class="serif mt-2 text-5xl leading-[1.05] tracking-tight sm:text-6xl">
-      {entity.mark} {entity.name}{outcomes ? `: ${pct(outcomes.weighted.collapse)} chance of ${collapseWord} by 2100` : ''}
+      {entity.mark} {entity.name}{outcomes ? `: ${pct(outcomes.weighted.collapse + outcomes.weighted.doom)} chance of collapse or doom by 2100` : ''}
     </h1>
     <p class="mt-4 text-lg leading-snug">{subtitle}</p>
     {
-      outcomes && spread && (
+      outcomes && (
         <p class="mt-2 text-xs muted">
-          {runs === 1 ? 'One judge run' : `Median of ${runs} judge runs, range ${pct(spread.low)}–${pct(spread.high)}`} · Updated {latestJudgeDate}
+          {isWorld ? `Doom ${pct(top.doom)} from the seven causes; the other outcomes are the regions weighted by population` : runs === 1 ? 'One judge run' : `Average of ${runs} independent judge runs`} · Judged {latestForecastDate}
         </p>
       )
     }
@@ -63,38 +65,61 @@ const subtitle = isWorld
     outcomes && (
       <div class="card flex flex-col gap-3 p-5">
         <h2 class="card-title">
-          <span class="square" style="background: var(--collapse)" />
-          Outcomes by 2100
+          <span class="square" style="background: #c9c8c2" />
+          {isWorld ? 'Humanity in 2100' : 'Outcomes in 2100'}
         </h2>
-        <OutcomeLegend collapseLabel={isWorld ? 'Doom' : undefined} />
+        <SixOutcomeLegend />
         {([['weighted', 'Our forecast'], ['si', 'With superintelligence'], ['noSi', 'Without']] as const).map(([key, label]) => (
-          <div class="grid grid-cols-[9rem_1fr] items-center gap-3">
+          <div class="grid grid-cols-[9rem_minmax(0,1fr)] items-center gap-3">
             <span class="text-sm ink-2">{label}</span>
-            <OutcomeBar outcome={outcomes[key]} name={`${entity.name}, ${label}`} collapseLabel={isWorld ? 'Doom' : undefined} />
+            <SixOutcomeBar outcomes={outcomes[key]} name={`${entity.name}, ${label}`} />
           </div>
         ))}
+        <details class="text-xs ink-2">
+          <summary class="cursor-pointer muted">What the six outcomes mean</summary>
+          <ul class="mt-2 flex flex-col gap-1">
+            {outcomeKeys.map((key) => <li>{outcomeDefinitions[key]}</li>)}
+          </ul>
+        </details>
       </div>
     )
   }
 </section>
 
 {
-  (isWorld || judged) && (
-    <section class="card mt-8 flex flex-col gap-4 p-6">
-      <div class="flex flex-wrap items-center justify-between gap-3">
-        <h2 class="card-title">
-          <span class="square" style="background: var(--theme-ai)" />
-          {isWorld ? 'How doom would happen' : 'Which essential would fail'}
-        </h2>
-        <SiLegend />
-      </div>
-      {isWorld ? (
-        <PairedBars items={pathways.map((p) => ({ label: pathwayLabels[p], withSi: world.si.pathways[p], withoutSi: world.noSi.pathways[p] }))} />
-      ) : (
-        judged && <PairedBars items={pillars.map((p) => ({ label: pillarLabels[p], withSi: judged.si.pillarLoss[p], withoutSi: judged.noSi.pillarLoss[p] }))} />
-      )}
+  outcomes && (
+    <section class="card mt-8 overflow-x-auto p-5">
+      <table class="data">
+        <thead>
+          <tr>
+            <th>Scenario</th>
+            {outcomeKeys.map((key) => <th class="num">{outcomeNames[key]}</th>)}
+          </tr>
+        </thead>
+        <tbody>
+          {([['weighted', 'Our forecast'], ['si', 'If superintelligence arrives'], ['noSi', 'If it never does']] as const).map(([key, label]) => (
+            <tr>
+              <td>{label}</td>
+              {outcomeKeys.map((outcome) => <td class="num">{pct(outcomes[key][outcome])}</td>)}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      {isWorld && <p class="mt-3 text-sm"><a class="link" href="/#causes">How doom would happen: the seven causes</a></p>}
     </section>
   )
+}
+
+{
+  worldGroups.map((cause) => (
+    <section id={cause} class="mt-14 scroll-mt-24">
+      <h2 class="section-title mb-5">
+        <span class="square" style={`background: ${causeColors[cause]}`} />
+        <a class="hover:underline" href={`/causes/${cause}/`}>{causeDefinitions[cause].name}</a>
+      </h2>
+      <CardTree cards={cards} group={cause} curves={outlook.curves} />
+    </section>
+  ))
 }
 
 {

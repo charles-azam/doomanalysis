@@ -1,4 +1,4 @@
-import { formatPercent } from '../model/judgment.ts'
+import { formatPercent } from '../model/forecast.ts'
 
 export type Bar = { key: string; label: string; mark?: string; value: number; href?: string; title?: string }
 

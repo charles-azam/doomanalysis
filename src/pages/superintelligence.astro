@@ -7,11 +7,16 @@ import { clinicalEvidence, muskEvidence, riskEvidence, timelineEvidence, type Ev
 import { siDomains } from '../data/si-domains.ts'
 import { arrivalSeries } from '../data/si-arrival.ts'
 import { ArrivalChart } from '../components/ArrivalChart.tsx'
-import { judgmentFor, verdict } from '../data/site.ts'
-import { formatPercent } from '../model/judgment.ts'
+import HazardCard from '../components/HazardCard.astro'
+import { SiTrend } from '../components/SiTrend.tsx'
+import { frontier, siThreshold } from '../data/si-progress.ts'
+import { cards } from '../data/cards.ts'
+import { outlook, sixOutcomesFor, top } from '../data/outlook.ts'
+import { formatPercent, sumCauses } from '../model/forecast.ts'
 import type { Elasticity } from '../model/types.ts'
 
-const world = verdict.world
+const world = outlook.world
+const aiCards = cards.filter((card) => card.group === 'ai')
 const pct = (value: number) => formatPercent({ value: value })
 const elasticity: Record<Elasticity, { label: string; dots: number }> = {
   low: { label: 'Low', dots: 1 },
@@ -25,10 +30,13 @@ const evidenceGroups: { title: string; items: Evidence[] }[] = [
   { title: 'The abundance claim', items: muskEvidence },
 ]
 const judgedRegions = regions.flatMap((region) => {
-  const judged = judgmentFor({ id: region.id })
-  return judged ? [{ region: region, judged: judged }] : []
+  const six = sixOutcomesFor({ id: region.id })
+  return six ? [{ region: region, six: six }] : []
 })
-const widerEverywhere = judgedRegions.length > 0 && judgedRegions.every(({ judged }) => judged.si.abundance > judged.noSi.abundance && judged.si.collapse > judged.noSi.collapse)
+const down = (o: { collapse: number; doom: number }) => o.collapse + o.doom
+const widerEverywhere = judgedRegions.length > 0 && judgedRegions.every(({ six }) => six.si.abundance > six.noSi.abundance && down(six.si) > down(six.noSi))
+const takeover = { si: world.si.causes.ai.doom, noSi: world.noSi.causes.ai.doom }
+const others = { si: sumCauses({ worldCase: world.si, key: 'doom' }) - takeover.si, noSi: sumCauses({ worldCase: world.noSi, key: 'doom' }) - takeover.noSi }
 const muskGood = 0.8
 const muskBad = 0.2
 ---
@@ -48,10 +56,39 @@ const muskBad = 0.2
     </div>
     <div class="card p-5">
       <p class="text-sm muted">P(doom by 2100), with SI vs without</p>
-      <p class="text-4xl font-semibold tracking-tight">{pct(world.si.doom)} <span class="text-xl muted">vs {pct(world.noSi.doom)}</span></p>
+      <p class="text-4xl font-semibold tracking-tight">{pct(top.doomGivenSi)} <span class="text-xl muted">vs {pct(top.doomGivenNoSi)}</span></p>
     </div>
   </section>
-  <p class="mt-2 text-xs muted">Judged by {verdict.model}, median of {verdict.worldRuns} runs. <a class="underline" href="/learn/superintelligence/">What superintelligence means</a> · <a class="underline" href="/learn/ai_loss_of_control/">Loss of control</a> · <a class="underline" href="/learn/ai_horizon/">The AI task horizon</a></p>
+  <p class="mt-2 text-xs muted">Judged by {outlook.model}, {outlook.worldRuns} independent runs. <a class="underline" href="/learn/superintelligence/">What superintelligence means</a> · <a class="underline" href="/learn/ai_loss_of_control/">Loss of control</a> · <a class="underline" href="/learn/ai_horizon/">The AI task horizon</a></p>
+
+  {
+    aiCards.length > 0 && (
+      <section class="mt-8">
+        <h2 class="section-title mb-2">
+          <span class="square" style="background: var(--theme-ai)" />
+          Progress so far, and the line that matters
+        </h2>
+        <p class="mb-5 max-w-3xl ink-2">
+          The Artificial Analysis Progress Index puts every model on one scale, consistent over time. The uncertain step is not the trend but where on that scale
+          superintelligence begins: the card shows that line as a range.
+        </p>
+        <div class="card mb-4 p-5">
+          <h3 class="card-title mb-3">
+            <span class="square" style="background: var(--theme-ai)" />
+            The best model's Progress Index, extended in a straight line
+          </h3>
+          <SiTrend points={frontier} threshold={siThreshold} until={2034} />
+          <p class="mt-2 text-xs muted">
+            Scores from <a class="underline" href="https://artificialanalysis.ai/trends">Artificial Analysis</a>. The range is our reading of where superintelligence begins on this scale;
+            <a class="underline" href="/learn/ai_progress_index/">how it is worked out</a>.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+          {aiCards.map((card) => <HazardCard card={card} judged={outlook.curves[card.id]} />)}
+        </div>
+      </section>
+    )
+  }
 
   <section class="card mt-8 p-6">
     <h2 class="card-title mb-3"><span class="square" style="background: var(--theme-ai)"></span>When superintelligence might arrive</h2>
@@ -67,11 +104,11 @@ const muskBad = 0.2
         that is P(abundance | SI) of roughly {pct(muskGood)}.
       </p>
       <p>
-        This site's view is narrower. Superintelligence is likely, and it will speed up whatever is limited by thinking:
-        design, discovery, optimization. Much of what separates a country from abundance is limited by something else:
-        construction rates, clinical trials, ocean chemistry, mines, politics, war. The judged P(global abundance | SI) is
+        This site tests it with a strict bar: abundance means nine in ten people living at least five times better than the rich world's average today.
+        Superintelligence will speed up whatever is limited by thinking: design, discovery, optimization. Much of what separates a country from abundance
+        is limited by something else: construction rates, clinical trials, ocean chemistry, mines, politics, war. The judged P(global abundance | SI) is
         <strong>{pct(world.si.abundance)}</strong>, against {pct(world.noSi.abundance)} without it. P(doom | SI) is
-        <strong>{pct(world.si.doom)}</strong>, compared with Musk's {pct(muskBad * 0.5)}–{pct(muskBad)}.
+        <strong>{pct(top.doomGivenSi)}</strong>, compared with Musk's {pct(muskBad * 0.5)}–{pct(muskBad)}.
       </p>
     </div>
   </section>
@@ -132,12 +169,12 @@ const muskBad = 0.2
       <Dumbbell
         title="P(abundance in 2100)"
         max={1}
-        rows={judgedRegions.map(({ region, judged }) => ({ name: region.name, flag: region.mark, withSi: judged.si.abundance, withoutSi: judged.noSi.abundance }))}
+        rows={judgedRegions.map(({ region, six }) => ({ name: region.name, flag: region.mark, withSi: six.si.abundance, withoutSi: six.noSi.abundance }))}
       />
       <Dumbbell
-        title="P(collapse before 2100)"
+        title="P(collapse or doom by 2100)"
         max={1}
-        rows={judgedRegions.map(({ region, judged }) => ({ name: region.name, flag: region.mark, withSi: judged.si.collapse, withoutSi: judged.noSi.collapse }))}
+        rows={judgedRegions.map(({ region, six }) => ({ name: region.name, flag: region.mark, withSi: down(six.si), withoutSi: down(six.noSi) }))}
       />
     </div>
   </section>
@@ -148,9 +185,9 @@ const muskBad = 0.2
       <div class="prose-site">
         <p>
           Superintelligence is the strongest counterforce on the site, and the main source of a new risk. With SI, the
-          judge puts {pct(world.si.pathways.ai)} on doom through loss of control, against {pct(world.noSi.pathways.ai)} without
-          it. Every other cause together goes from {pct(world.noSi.doom - world.noSi.pathways.ai)} without SI to{' '}
-          {pct(world.si.doom - world.si.pathways.ai)} with it{world.si.doom - world.si.pathways.ai < world.noSi.doom - world.noSi.pathways.ai ? ', so SI defends against the older risks' : ', so the judge does not expect SI to defend against the older risks'}.
+          judges put {pct(takeover.si)} on doom started by AI systems acting on their own, against {pct(takeover.noSi)} without it.
+          Every other cause together goes from {pct(others.noSi)} without SI to {pct(others.si)} with it
+          {others.si < others.noSi ? ', so the judges expect SI to defend against the older risks on balance.' : ', so the judges do not expect SI to defend against the older risks on balance.'}
         </p>
         <p>
           {

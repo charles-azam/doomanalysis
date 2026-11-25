@@ -1,0 +1,32 @@
+---
+import { dangerColors, levelInk, potentialColors, potentialInk } from '../data/palette.ts'
+import { dangerScale, potentialScale } from '../data/definitions.ts'
+import { dangerLevels } from '../model/distribution.ts'
+import { formatPercent } from '../model/forecast.ts'
+import type { DangerLevel } from '../model/types.ts'
+
+type Props = { chances: Record<DangerLevel, number>; scale: 'danger' | 'potential'; label: string }
+
+const { chances, scale, label } = Astro.props
+const colors = scale === 'potential' ? potentialColors : dangerColors
+const inks = scale === 'potential' ? potentialInk : levelInk
+const names = scale === 'potential' ? potentialScale : dangerScale
+const segments = dangerLevels.filter((level) => chances[level] >= 0.0005)
+---
+
+<div class="flex items-center gap-2 text-xs">
+  <span class="w-[5.2rem] flex-none muted">{label}</span>
+  <div class="flex h-5 min-w-0 flex-1 gap-px overflow-hidden rounded-sm">
+    {
+      segments.map((level) => (
+        <div
+          class="flex min-w-[3px] items-center justify-center overflow-hidden whitespace-nowrap tabular"
+          style={`flex: ${chances[level]} 0 0; background: ${colors[level]}; color: ${inks[level]}`}
+          title={`Level ${level}, ${names[level].name.toLowerCase()} (${names[level].share}): ${formatPercent({ value: chances[level] })}`}
+        >
+          {chances[level] >= 0.11 && <span><b>{level}</b> · {formatPercent({ value: chances[level] })}</span>}
+        </div>
+      ))
+    }
+  </div>
+</div>

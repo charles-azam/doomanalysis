@@ -1,137 +1,194 @@
 ---
+import { getCollection } from 'astro:content'
 import Base from '../layouts/Base.astro'
-import { buildWorldPrompt, promptVersion } from '../../judge/prompt.ts'
-import { definitions, horizon } from '../data/definitions.ts'
+import { buildWorldPrompt, forecastPromptVersion, plainText } from '../../judge/forecast-prompt.ts'
+import { cards } from '../data/cards.ts'
+import { abundanceMultiple, causeDefinitions, dangerScale, definitions, horizon, outcomeDefinitions, potentialScale, scaleDefinitions } from '../data/definitions.ts'
 import { countries, regions } from '../data/entities.ts'
-import { judgeRuns } from '../data/judgments.ts'
-import { observations } from '../data/observations.ts'
-import { latestJudgeDate, verdict } from '../data/site.ts'
-import { muskEvidence } from '../data/evidence.ts'
+import { forecastRuns } from '../data/forecasts.ts'
+import { history } from '../data/history.ts'
+import { latestForecastDate, outlook } from '../data/outlook.ts'
+import { dangerColors, levelInk, potentialColors, potentialInk } from '../data/palette.ts'
+import { outcomeKeys, rootCauses } from '../model/forecast.ts'
 
-const prompt = buildWorldPrompt()
-const batches = [...new Set(judgeRuns.map((run) => run.batch))].map((batch) => ({
-  batch: batch,
-  runs: judgeRuns.filter((run) => run.batch === batch).length,
-  places: new Set(judgeRuns.filter((run) => run.batch === batch).flatMap((run) => run.entities.map((e) => e.entity))).size,
-}))
-const essentialsCost = observations.find((o) => o.factorId === 'essentials_cost' && o.entity === 'FRA')
+const explainers = await getCollection('explainers')
+const aiBody = explainers.find((entry) => entry.data.factor === 'ai_progress_index')?.body ?? ''
+const prompt = buildWorldPrompt({ cards: cards, curves: outlook.curves, aiNote: plainText({ markdown: aiBody, limit: 2500 }) })
+const batches = [...new Set(forecastRuns.map((run) => run.batch))].map((batch) => {
+  const runs = forecastRuns.filter((run) => run.batch === batch)
+  return {
+    batch: batch,
+    runs: runs.length,
+    places: new Set(runs.flatMap((run) => run.places.map((place) => place.entity))).size,
+    curves: new Set(runs.flatMap((run) => run.curves.map((curve) => curve.card))).size,
+    world: runs.some((run) => run.world !== undefined),
+  }
+})
+const published = cards.reduce((sum, card) => sum + card.published.noSi.length + card.published.si.length, 0)
+const scaled = cards.filter((card) => card.scale !== 'none').length
+// Growth needed to multiply a living standard by five over the 75 years to 2100.
+const yearsLeft = horizon - 2025
+const growthForFive = (abundanceMultiple ** (1 / yearsLeft) - 1) * 100
+const doublingAtOne = 1.01 ** yearsLeft
 ---
 
-<Base title="Methodology" description="How Doom Analysis defines doom, collapse and abundance, gathers its data, and turns it into judged probabilities." active="methodology">
+<Base title="Methodology" description="How Doom Analysis defines its danger scale, the six outcomes and abundance, builds its cards, and turns them into judged probabilities." active="methodology">
   <article class="prose-site max-w-3xl">
     <h1 class="serif text-5xl tracking-tight" style="color: var(--ink)">Methodology</h1>
     <p>
-      Doom Analysis has three layers. <strong>Factors</strong> are measured by others and cited, with a forecast for
-      {horizon} and the chance of crossing the thresholds that matter. <strong>Indices</strong> are mechanical averages.
-      <strong>Probabilities</strong> are judgments made from the factors under fixed definitions. Each layer is labelled,
-      so a measurement never passes for a guess, or the reverse.
+      Doom Analysis has three layers, each labelled. <strong>Cards</strong> measure one thing each (warming, oil, pandemics, fusion), with
+      sources, today's value and the danger each value would mean. <strong>Curves</strong> give the chance of each value in {horizon}, taken
+      from sources where they exist and judged where they do not. <strong>Forecasts</strong> (doom, the seven causes, the six outcomes of every
+      place) are judgments made from the cards under fixed definitions. A measurement never passes for a guess, or the reverse.
     </p>
 
-    <h2 id="abundance">What we mean by abundance</h2>
-    <p>
-      The site exists to test one claim. Elon Musk and others argue that superintelligence and robots will make
-      essentials so cheap that work becomes optional: “universal high income”, a world of
-      “{muskEvidence.find((e) => e.id === 'tesla_mp4') ? 'sustainable abundance' : 'abundance'}”. Meeting basic needs is not
-      that claim. Rich countries already provide electricity, water and food to almost everyone, at a real cost.
-    </p>
-    <p><strong>{definitions.abundance}</strong></p>
-    <p>{definitions.abundanceWhy}</p>
-    <p>
-      The 10% line is the heart of the test. Today the essentials take a far larger share of national income
-      {essentialsCost ? `(about ${Math.round(essentialsCost.value)}% in France)` : ''}: food, home energy, water, health care
-      paid by households and by taxes, and the cost of security. A place reaches abundance only if superintelligence, or
-      anything else, brings that bill under a tenth of what the economy produces, for nearly everyone, and keeps it there
-      through shocks.
-    </p>
+    <h2 id="scale">One danger scale</h2>
+    <p>{scaleDefinitions.danger}</p>
+    <div class="overflow-x-auto">
+    <table class="data not-prose">
+      <thead>
+        <tr><th>Level</th><th>Name</th><th>Who dies or loses decent conditions</th><th>For scale</th></tr>
+      </thead>
+      <tbody>
+        {
+          dangerScale.map((level) => (
+            <tr>
+              <td><span class="inline-flex h-6 w-6 items-center justify-center rounded text-xs font-semibold" style={`background: ${dangerColors[level.level]}; color: ${levelInk[level.level]}`}>{level.level}</span></td>
+              <td>{level.name}</td>
+              <td>{level.share}</td>
+              <td class="muted">{level.reference}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+    </div>
+    <p>{scaleDefinitions.decent} {scaleDefinitions.doom}</p>
+    <p>Technologies are read on the mirror image, the potential scale: the share of humanity a technology alone could move up at least one outcome.</p>
+    <div class="overflow-x-auto">
+    <table class="data not-prose">
+      <tbody>
+        {
+          potentialScale.map((level) => (
+            <tr>
+              <td><span class="inline-flex h-6 w-6 items-center justify-center rounded text-xs font-semibold" style={`background: ${potentialColors[level.level]}; color: ${potentialInk[level.level]}`}>{level.level}</span></td>
+              <td>{level.name}</td>
+              <td>{level.share}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+    </div>
 
-    <h2 id="definitions">Other definitions</h2>
+    <h2 id="outcomes">Six outcomes for every place</h2>
+    <p>Each place is judged against its own living standard today, so that getting twice as poor counts as collapse even where nobody starves.</p>
     <ul>
-      <li><strong>The five essentials.</strong> {definitions.essentials}</li>
-      <li><strong>Collapse.</strong> {definitions.collapse}</li>
-      <li><strong>Doom.</strong> {definitions.doom}</li>
-      <li><strong>Muddling through.</strong> {definitions.muddle}</li>
-      <li><strong>Superintelligence.</strong> {definitions.superintelligence}</li>
+      {outcomeKeys.map((key) => <li>{outcomeDefinitions[key]}</li>)}
+    </ul>
+    <p>{scaleDefinitions.livingStandard}</p>
+
+    <h2 id="abundance">Why abundance is set at five times the rich world</h2>
+    <p>
+      The site exists to test one claim. Elon Musk and others argue that superintelligence and robots will make everything so cheap that work
+      becomes optional: "universal high income". Most people in rich countries do not feel they live in abundance today, so abundance has to mean
+      far more than today's rich-world comfort.
+    </p>
+    <p>
+      Ordinary growth does not get there. At 1% a year, a living standard grows {doublingAtOne.toFixed(1)}-fold in the {yearsLeft} years to {horizon}:
+      that is "better", not abundance. Reaching {abundanceMultiple} times today's rich-world average takes {growthForFive.toFixed(1)}% a year per person,
+      every year until {horizon}, starting from the rich world, and far more from anywhere poorer. That is why the bar tests the claim: it is reachable
+      with a transformation, not with business as usual.
+    </p>
+
+    <h2 id="causes">Seven root causes that add up to 100%</h2>
+    <p>{scaleDefinitions.rootCause}</p>
+    <ul>
+      {rootCauses.map((cause) => <li><strong>{causeDefinitions[cause].name}.</strong> {causeDefinitions[cause].text}</li>)}
     </ul>
     <p>
-      Abundance, muddling through and collapse are exclusive and add up to 100% for each place. Doom is global, so it
-      counts as collapse everywhere, which is why no place's P(collapse) can be lower than P(doom).
+      The judges answer one question per cause and level: what is the chance that the worst thing to happen to the world by {horizon} reaches
+      this level, and that this cause started it? Since every possible future has one worst level and one root cause, these chances add up:
+      the chance of doom is the sum of the seven causes' chances of doom, and each cause's share is its chance divided by the total.
+    </p>
+
+    <h2 id="cards">How a card works</h2>
+    <ul>
+      <li><strong>A metric</strong> a reader can picture, with today's value and its source. For events (pandemics, wars, eruptions), the metric is the size of the worst one before {horizon}, such as the share of humanity it kills.</li>
+      <li><strong>The danger band</strong> under the axis: what each stretch of values would mean for people, through this card alone. Each stretch is marked <em>published</em> (a source states it), <em>derived</em> (computed from published figures) or <em>our judgment</em>.</li>
+      <li><strong>The curve:</strong> the chance of each value in {horizon}, without superintelligence (bars) and with it (line). Every edge of the band has its own stated chance, published or judged; the shape drawn between two edges is only a picture, and no figure on the site is read from it.</li>
+      <li><strong>The chance of each level</strong> follows directly from those stated chances.</li>
+      <li><strong>Sub-cards</strong> (sea level under warming, oil under energy) explain their parent. The parent's band already includes them, so nothing is counted twice, and a sub-card never shows more danger than its parent.</li>
+    </ul>
+    <p>
+      There are {cards.length} cards, {scaled} of them on the danger or potential scale, with {published} published points on their curves.
+      Each card's page opens with the opening section of a Wikipedia article, quoted word for word from a stated revision under the
+      <a class="link" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> licence, then the site's own numbers and order-of-magnitude
+      calculations.
+    </p>
+
+    <h2 id="headline">The headline</h2>
+    <p>
+      P(doom) is the sum of the seven causes' chances of doom, combined over superintelligence by the law of total probability:
+      P(doom) = P(SI) × P(doom | SI) + (1 − P(SI)) × P(doom | no SI). P(abundance) is the chance that nine in ten people live in places that
+      reach abundance. Each cause page also shows what its own cards give on their own: that figure moves as soon as a card's data changes, the
+      judged figure at the next re-judging.
+    </p>
+    <p>
+      Every published headline is kept, never revised, and drawn over time on the home page ({history.length} earlier versions so far). When the
+      definitions change, as they did for this version, the chart marks the break: values on either side are not comparable.
     </p>
 
     <h2 id="places">Places</h2>
     <p>
-      The site covers the world, {regions.length} regions and {countries.length} countries: every country with a population
-      figure and at least ten of the indicators. The regions follow the UN's M49 groupings, with Europe split into
-      North, West, South and East. A region's value for an indicator is the population-weighted average of its
-      countries. It is only shown when countries with data hold at least half of the region's people.
-    </p>
-
-    <h2 id="factors">Factors, forecasts and thresholds</h2>
-    <p>
-      Each card shows a factor in its own units: today's value, the forecast for {horizon} where a published scenario
-      exists, and the thresholds that push toward doom. A threshold is marked <em>published</em> when it comes from a
-      named source (a planetary boundary, a tipping point, an official category) and <em>judgment</em> when it follows
-      this site's definitions. The chance of crossing each threshold by {horizon} is marked <em>published</em>,
-      <em>derived</em> (computed from a published distribution) or <em>judged</em>. These chances go into the judges'
-      evidence.
-    </p>
-    <p>
-      Country data comes from a re-runnable pipeline (<code>pdoom/pipeline</code>): the World Bank and IMF APIs, plus the
-      official files of the Global Peace Index 2026, ND-GAIN 2026 and WRI Aqueduct 4.0. When a source has no value,
-      the factor is left out for that place. Nothing is filled in.
-    </p>
-
-    <h2>Indices</h2>
-    <p>
-      Pressure, resilience and the essentials gap are equal-weight averages of factor scores, each factor scored 0–100
-      between two stated anchors. They summarize where a place stands. They are not probabilities.
+      The site covers the world, {regions.length} regions and {countries.length} countries: every country with a population figure and at least
+      ten indicators. The regions follow the UN's M49 groupings, with Europe split into North, West, South and East. A region's value for an
+      indicator is the population-weighted average of its countries, shown only when countries with data hold at least half of its people.
+      Country data comes from a re-runnable pipeline (<code>pdoom/pipeline</code>): the World Bank, IMF, WHO and UN, Our World in Data, and the
+      official files of the Global Peace Index 2026, ND-GAIN 2026 and WRI Aqueduct 4.0. When a source has no value, nothing is filled in.
     </p>
 
     <h2 id="judges">Probabilities: AI judges, run several times</h2>
     <p>
-      No dataset can calibrate the chance of collapse in a world with superintelligence. So frontier models act as
-      judges. They receive the fixed definitions and the evidence above, and answer in strict JSON.
+      No dataset can calibrate the chance of collapse in a world with superintelligence, so frontier models act as judges. They receive the fixed
+      definitions and the evidence, and answer in strict JSON, in three rounds:
     </p>
     <ul>
-      <li>
-        <strong>World and regions:</strong> one batch, run independently three times. Each value shown is the median, with
-        the range beside it.
-      </li>
-      <li>
-        <strong>Spotlight countries</strong> (the most populous, plus Europe's majors): three runs each, judged against the
-        world consensus so that no country comes out safer than the world.
-      </li>
-      <li><strong>Every other country:</strong> one run, labelled as such.</li>
-      <li>
-        <strong>Coherence checks:</strong> every run is checked before it reaches the site, and an incoherent run is rejected.
-        Probabilities stay in [0, 1], abundance and collapse cannot exceed 100% together, a total is at least its largest
-        cause and at most their sum, and P(SI by 2050) ≤ P(SI by 2100).
-      </li>
-      <li>
-        <strong>Headline:</strong> it combines the two scenarios by the law of total probability: P(X) = P(SI) × P(X | SI) +
-        (1 − P(SI)) × P(X | no SI).
-      </li>
+      <li><strong>Curves:</strong> the chance of each band edge that no source publishes, for every card, with and without superintelligence. Two independent runs per batch.</li>
+      <li><strong>The world and the regions:</strong> superintelligence, the seven causes at levels 3, 4 and 5, world abundance, and the six outcomes of each region. Three independent runs.</li>
+      <li><strong>Countries:</strong> the six outcomes, judged against the world and the country's region. Three runs for the most populous countries and Europe's majors, one for the rest.</li>
     </ul>
     <p>
-      Current judge: {verdict.model}, last run {latestJudgeDate}. Language models are not calibrated forecasters; they lean
-      toward numbers common in their training data and are sensitive to wording. Hence the fixed, published prompt,
-      several runs, and every input visible on the page.
+      Runs are averaged, not taken at the median, so that shares that add up to 100% still do. Every run is checked before it reaches the site,
+      and an incoherent run is rejected: probabilities outside [0, 1]; a cause whose chance rises with the level; causes that sum to more than 1;
+      a place whose outcomes do not sum to 1; a judge's direct estimate of doom far from the sum of its causes; a curve that rises, or that
+      contradicts a published point.
+    </p>
+    <p>
+      "Without superintelligence" includes the futures in which a catastrophe is what stopped it. That makes it look worse than a world that
+      simply chose not to build it.
+    </p>
+    <p>
+      Current judge: {outlook.model}, last run {latestForecastDate}. Language models are not calibrated forecasters: they lean toward numbers common
+      in their training data and are sensitive to wording. Hence the fixed, published prompt, several runs, and every input visible on the page.
     </p>
 
     <h2>What this does not do yet</h2>
     <ul>
-      <li><strong>No backtest.</strong> Countries have collapsed before (Somalia, Syria, Lebanon, Venezuela). Scoring the factors as they stood in 2000 against what happened by 2020 would give the country probabilities a calibrated anchor.</li>
-      <li><strong>One judge model.</strong> Other frontier models and human forecasters should answer the same prompt.</li>
-      <li><strong>The cost of the essentials</strong> is estimated for a set of countries only; the component data is uneven.</li>
-      <li><strong>Equal weights</strong> in the indices. Reader-chosen weights are planned.</li>
+      <li><strong>No backtest.</strong> Scoring the evidence as it stood in 2000 against what happened by 2020 would give the country probabilities a calibrated anchor.</li>
+      <li><strong>One judge model.</strong> Other frontier models and human forecasters should answer the same prompts.</li>
+      <li><strong>Re-judging is manual.</strong> The headline moves when the judges are re-run; a regular schedule is planned.</li>
+      <li><strong>Living standard</strong> is measured by consumption alone; floor area and free time exist for fewer countries.</li>
     </ul>
 
     <h2>Run log</h2>
     <ul>
-      {batches.map((b) => <li>{b.batch}: {b.runs} {b.runs === 1 ? 'run' : 'runs'}, {b.places} places</li>)}
+      {batches.map((b) => <li>{b.batch}: {b.runs} {b.runs === 1 ? 'run' : 'runs'}{b.world ? ', the world' : ''}{b.places > 0 ? `, ${b.places} places` : ''}{b.curves > 0 ? `, ${b.curves} curves` : ''}</li>)}
     </ul>
 
-    <h2>The world judge prompt (version {promptVersion})</h2>
-    <p>This is the exact text sent to every world run, generated from the site's own data files. Country batches use the same definitions and rules.</p>
-    <pre>{prompt}</pre>
+    <h2>The world judge prompt (version {forecastPromptVersion})</h2>
+    <p>This is the exact text of the world round, generated from the site's own data files. The curve and country rounds use the same definitions.</p>
+    <pre class="max-h-[32rem] overflow-y-auto">{prompt}</pre>
+    <p class="text-xs muted">{definitions.superintelligence}</p>
   </article>
 </Base>

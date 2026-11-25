@@ -13,6 +13,7 @@ export const globalSections: Section[] = [
 
 /** Country factors, grouped for the region and country pages. */
 export const countrySections: Section[] = [
+  { id: 'living', title: 'How people live', color: 'var(--theme-people)', themes: ['living'] },
   { id: 'essentials', title: 'The five essentials today', color: 'var(--theme-essentials)', themes: ['energy', 'water', 'food', 'health', 'security'] },
   { id: 'abundance', title: 'The abundance test', color: 'var(--abundance)', themes: ['abundance'] },
   { id: 'climate', title: 'Climate and water', color: 'var(--theme-climate)', themes: ['climate'] },
@@ -36,6 +37,7 @@ const themeColors: Record<Theme, string> = {
   readiness: 'var(--theme-push-back)',
   finance: 'var(--theme-resources)',
   abundance: 'var(--abundance)',
+  living: 'var(--theme-people)',
   energy: 'var(--theme-essentials)',
   water: 'var(--theme-essentials)',
   food: 'var(--theme-essentials)',

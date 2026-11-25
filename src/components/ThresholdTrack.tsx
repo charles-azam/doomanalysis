@@ -40,14 +40,14 @@ export function ThresholdTrack({
             left: `${pct(t.value)}%`,
             top: rows[i] * 16,
             transform: align(pct(t.value)),
-            color: t.severity === 'danger' ? 'var(--tick-danger)' : 'var(--tick-limit)',
+            color: t.severity === 'danger' ? 'var(--tick-danger)' : t.severity === 'goal' ? 'var(--accent)' : 'var(--tick-limit)',
           }}
         >
           {t.label}
         </div>
       ))}
       <div className="absolute left-0 right-0 h-2 overflow-hidden rounded-full" style={{ top: top + 2, background: 'var(--track)' }}>
-        {sorted.map((t) => {
+        {sorted.filter((t) => t.severity !== 'goal').map((t) => {
           const p = pct(t.value)
           return (
             <div
@@ -77,7 +77,7 @@ export function ThresholdTrack({
             left: `calc(${pct(t.value)}% - 1px)`,
             top: top - 3,
             height: 18,
-            background: t.severity === 'danger' ? 'var(--tick-danger)' : 'var(--tick-limit)',
+            background: t.severity === 'danger' ? 'var(--tick-danger)' : t.severity === 'goal' ? 'var(--accent)' : 'var(--tick-limit)',
           }}
           data-tip={`${t.label}: ${format(t.value)}`}
         />

@@ -1,0 +1,104 @@
+---
+import DistributionChart from './DistributionChart.astro'
+import LevelBar from './LevelBar.astro'
+import { causeColors, siColors } from '../data/palette.ts'
+import { explainerIds } from '../data/explainers.ts'
+import { formatAxis, formatValue } from '../model/chart.ts'
+import { atLeast, curveFor, levelAt, levelChances } from '../model/distribution.ts'
+import { formatPercent } from '../model/forecast.ts'
+import type { Card, CurveForecast, CurvePoint } from '../model/types.ts'
+
+type Props = { card: Card; judged: CurveForecast | undefined; compact?: boolean }
+
+const { card, judged, compact = false } = Astro.props
+const noSi = curveFor({ card: card, judged: judged, siCase: 'noSi' })
+const si = curveFor({ card: card, judged: judged, siCase: 'si' })
+const chancesNoSi = levelChances({ card: card, points: noSi })
+const chancesSi = levelChances({ card: card, points: si })
+const scaled = card.scale !== 'none'
+const color = card.group === 'technology' ? '#2a78d6' : card.group === 'living' ? '#008300' : causeColors[card.group]
+const levelNow = scaled ? levelAt({ card: card, value: card.today.value }) : undefined
+const learn = explainerIds.has(card.id) ? `/learn/${card.id}/` : undefined
+const above = ({ points, value }: { points: CurvePoint[]; value: number }) => points.find((p) => Math.abs(p.value - value) < 1e-9 * Math.max(1, Math.abs(value)))?.above
+const markRows = scaled
+  ? []
+  : [...(card.marks ?? [])].filter((mark) => mark.value >= card.axis.min && mark.value <= card.axis.max).sort((a, b) => a.value - b.value).slice(0, 4).flatMap((mark, index) => {
+      const without = above({ points: noSi, value: mark.value })
+      const withSi = above({ points: si, value: mark.value })
+      return without === undefined && withSi === undefined ? [] : [{ mark: mark, number: index + 1, without: without, withSi: withSi }]
+    })
+const published = card.published.noSi.length + card.published.si.length
+const judgedPoints = (judged?.noSi.length ?? 0) + (judged?.si.length ?? 0)
+const basis =
+  published === 0 && judgedPoints === 0
+    ? undefined
+    : published === 0
+      ? 'Odds judged for this site'
+      : judgedPoints === 0
+        ? `${published} point${published === 1 ? '' : 's'} of the curve published`
+        : `${published} point${published === 1 ? '' : 's'} of the curve published, the rest judged`
+const word = card.scale === 'potential' ? 'potential' : 'danger'
+const serious = chancesNoSi && chancesSi && card.scale === 'danger' ? { without: atLeast({ chances: chancesNoSi, level: 3 }), withSi: atLeast({ chances: chancesSi, level: 3 }) } : undefined
+---
+
+<article class="card flex min-w-0 flex-col gap-2.5 p-5" id={card.id}>
+  <div class="flex flex-wrap items-start justify-between gap-x-3 gap-y-1">
+    <h3 class="card-title min-w-0 text-[1.15rem]">
+      <span class="square" style={`background: ${color}`}></span>
+      {learn ? <a href={learn} class="hover:underline">{card.name}</a> : card.name}
+    </h3>
+    <p class="mt-0.5 ml-auto text-right text-xs muted">
+      <span class="text-lg font-semibold tabular" style="color: var(--ink)">{formatValue({ card: card, value: card.today.value })}</span>
+      {card.unit}<br />
+      {card.statistic === 'worst-by-2100' ? `worst so far${card.today.label ? `: ${card.today.label}` : ''}` : card.today.year}
+      {levelNow !== undefined && card.statistic === 'value-in-2100' && <span> · {word} {levelNow}</span>}
+    </p>
+  </div>
+  {!compact && <p class="text-sm leading-snug ink-2">{card.summary}</p>}
+  <div>
+    <p class="mb-1 flex flex-wrap items-center gap-x-3 text-[11px] muted">
+      <span class="mr-1">{card.metric}{card.statistic === 'worst-by-2100' ? ', worst event before 2100' : ', in 2100'}</span>
+      <span class="inline-flex items-center gap-1"><span class="inline-block h-2 w-3" style={`background: ${siColors.noSi}; opacity: 0.45`}></span>without SI</span>
+      <span class="inline-flex items-center gap-1"><span class="inline-block w-3" style={`height: 2px; background: ${siColors.si}`}></span>with SI</span>
+    </p>
+    <DistributionChart card={card} noSi={noSi} si={si} listMarks={markRows.length === 0} />
+  </div>
+  {
+    chancesNoSi && chancesSi && card.scale !== 'none' && (
+      <div class="flex flex-col gap-1">
+        <p class="text-[11px] muted">Chance of each {word} level</p>
+        <LevelBar chances={chancesNoSi} scale={card.scale} label="Without SI" />
+        <LevelBar chances={chancesSi} scale={card.scale} label="With SI" />
+      </div>
+    )
+  }
+  {
+    scaled && !(chancesNoSi && chancesSi) && <p class="text-xs muted">The odds for this card have not been judged yet.</p>
+  }
+  {
+    markRows.length > 0 && (
+      <ul class="flex flex-col gap-0.5 text-xs">
+        {markRows.map((row) => (
+          <li class="flex items-baseline justify-between gap-3">
+            <span class="flex gap-1.5 ink-2">
+              <span class="mt-px inline-flex h-3.5 w-3.5 flex-none items-center justify-center rounded-full border text-[8px]" style="border-color: var(--ink-muted)">{row.number}</span>
+              <span>Above {formatAxis({ card: card, value: row.mark.value })} {card.unit}: {row.mark.label}</span>
+            </span>
+            <span class="flex-none tabular">
+              {row.without !== undefined && <span style={`color: ${siColors.noSi}`}>{formatPercent({ value: row.without })}</span>}
+              {row.without !== undefined && row.withSi !== undefined && <span class="muted"> · </span>}
+              {row.withSi !== undefined && <span style={`color: ${siColors.si}`}>{formatPercent({ value: row.withSi })}</span>}
+            </span>
+          </li>
+        ))}
+      </ul>
+    )
+  }
+  <p class="mt-auto flex flex-wrap items-center justify-between gap-x-3 pt-1 text-[11px] muted">
+    <span>
+      {serious && <span>Level 3 or worse: {formatPercent({ value: serious.without })} without SI, {formatPercent({ value: serious.withSi })} with. </span>}
+      {basis && `${basis}.`}
+    </span>
+    {learn && <a href={learn} class="link flex-none">Explained</a>}
+  </p>
+</article>

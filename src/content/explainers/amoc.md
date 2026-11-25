@@ -1,55 +1,59 @@
 ---
 factor: amoc
 title: "Atlantic overturning circulation"
-summary: "The AMOC carries heat north through the Atlantic; its collapse would reshape rainfall and winters across several continents and threaten food supplies."
+summary: "The strength of the Atlantic current loop that carries warm water north and cold water back south. A collapse would bring freezing European winters, push tropical rain belts south and hit harvests on several continents."
 sources:
-  - label: "RAPID-MOCHA array, AMOC integrated transports, 2024"
-    url: https://rapid.ac.uk/data/integrated-transports
-  - label: "IPCC, AR6 Working Group I Summary for Policymakers, 2021"
+  - label: "UCAR, on Dai and Trenberth, Estimates of freshwater discharge from continents, Journal of Hydrometeorology, 2002"
+    url: https://data.ucar.edu/dataset/estimates-of-freshwater-discharge-from-continents-latitudinal-and-seasonal-variations
+  - label: "IPCC, AR6 Working Group I, Summary for Policymakers, 2021"
     url: https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_SPM.pdf
-  - label: "Dijkstra et al., Multi-stability of the present-day AMOC, WIREs Climate Change, 2026"
-    url: https://doi.org/10.1002/wcc.70049
-  - label: "Drijfhout et al., Environmental Research Letters (with 2025 corrigendum), 2025"
-    url: https://doi.org/10.1088/1748-9326/adfa3b
-  - label: "Ditlevsen and Ditlevsen, Nature Communications, 2023"
-    url: https://doi.org/10.1038/s41467-023-39810-w
-  - label: "van Westen et al., Substantial risk of 21st century AMOC tipping (preprint), 2024"
-    url: https://arxiv.org/abs/2407.19909
-  - label: "Global Tipping Points team, News explainer on AMOC studies, 2026"
+  - label: "RAPID-MOCHA array, AMOC integrated transports, April 2004 to November 2024"
+    url: https://rapid.ac.uk/data/integrated-transports
+  - label: "National Oceanography Centre, Tracking the AMOC: 20 years of data, 2025"
+    url: https://www.noc.ac.uk/news/tracking-amoc-20-years-data-highlight-need-ongoing-observation
+  - label: "Utrecht University, on van Westen et al., Physics-based early warning signal shows that AMOC is on tipping course, Science Advances, 2024"
+    url: https://uu.nl/en/news/potential-collapse-of-the-atlantic-ocean-circulation-strongly-affects-european-climate
+  - label: "Carbon Brief, on van Westen et al., European temperature extremes under different AMOC scenarios, Geophysical Research Letters, 2025"
+    url: https://www.carbonbrief.org/ocean-current-collapse-could-trigger-profound-cooling-in-northern-europe-even-with-global-warming/
+  - label: "University of Exeter, on Ritchie et al., Shifts in national land use and food production in Great Britain after a climate tipping point, Nature Food, 2020"
+    url: https://news-archive.exeter.ac.uk/2020/january/title_772755_en.html
+  - label: "University of Exeter, Global Tipping Points Report 2025, summary"
+    url: https://wwfes.awsassets.panda.org/downloads/gtp_summary_report_2025-v4-pages-lo-res--1-.pdf
+  - label: "Drijfhout et al., Shutdown of northern Atlantic overturning after 2100 following deep mixing collapse in CMIP6 projections, Environmental Research Letters, 2025"
+    url: https://publications.pik-potsdam.de/rest/items/item_32699_1/component/file_32701/content
+  - label: "Armstrong McKay et al., Exceeding 1.5 °C global warming could trigger multiple climate tipping points, Science, 2022 (accepted version)"
+    url: https://pik-potsdam.de/members/johanro/ArmstrongMcKayetal2022_ClimateTippingPointsReassessment_AcceptedversionwithFigures.pdf
+  - label: "Global Tipping Points, News explainer: is the AMOC closer to collapse than thought?, 2026"
     url: https://climatetippingpoints.info/2026/05/06/news-explainer-is-the-amoc-closer-to-collapse-than-thought/
+  - label: "University of Copenhagen, on Ditlevsen and Ditlevsen, Nature Communications, 2023"
+    url: https://science.ku.dk/english/press/news/2023/gloomy-climate-calculation-scientists-predict-a-collapse-of-the-atlantic-ocean-current-to-happen-mid-century/
   - label: "Cini et al., EGU General Assembly abstract EGU26-14650, 2026"
     url: https://meetingorganizer.copernicus.org/EGU26/EGU26-14650.html
-  - label: "University of Exeter, Global Tipping Points Report 2025 summary, 2025"
-    url: https://wwfes.awsassets.panda.org/downloads/gtp_summary_report_2025-v4-pages-lo-res--1-.pdf
+  - label: "Climate Action Tracker, global temperature estimates, November 2026"
+    url: https://climateactiontracker.org/documents/1453/CAT_2026-11_PublicData_GlobalTemperatureEstimates_COP31.xlsx
 ---
 
-## What it is
+## Why it matters here
 
-The Atlantic Meridional Overturning Circulation is a slow loop of ocean currents. Warm surface water flows north, cools and sinks near Greenland, and returns south at depth. Its strength is measured in sverdrups (Sv; one Sv is a million cubic metres of water per second). The RAPID array across the Atlantic at 26°N has measured it continuously since 2004.
+A sverdrup (Sv) is a flow of a million cubic metres of water a second. All the world's rivers pour [37,288 km³ a year](https://data.ucar.edu/dataset/estimates-of-freshwater-discharge-from-continents-latitudinal-and-seasonal-variations) into the sea; divided by 31.6 million seconds, that is 1.2 Sv. The Atlantic overturning moves about 17.1 ÷ 1.2 ≈ 14 times as much. A collapse would very likely [move the tropical rain belt south, weaken the African and Asian monsoons and dry Europe](https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_SPM.pdf), so it can reach level 2.
 
-## Why it matters
+## In numbers
 
-The AMOC moves heat into the North Atlantic. A collapse would bring abrupt shifts in weather: a southward shift of the tropical rain belt, weaker African and Asian monsoons, and drying in Europe ([IPCC AR6](https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_SPM.pdf)). The [Global Tipping Points Report 2025](https://wwfes.awsassets.panda.org/downloads/gtp_summary_report_2025-v4-pages-lo-res--1-.pdf) adds much harsher northwest European winters and threats to global food and water security.
+- **Trend.** The RAPID array measured [17.1 Sv on average over 2004–2024](https://rapid.ac.uk/data/integrated-transports), falling [0.9 ± 0.7 Sv a decade](https://www.noc.ac.uk/news/tracking-amoc-20-years-data-highlight-need-ongoing-observation). Extended in a straight line from 2014 to 2100: 17.1 − 0.09 × 86 ≈ 9.4 Sv.
+- **Europe.** After a collapse, one model [cools Europe about 1 °C a decade](https://uu.nl/en/news/potential-collapse-of-the-atlantic-ocean-circulation-strongly-affects-european-climate); even in a 2 °C world, [Oslo's winters would average −16.5 °C](https://www.carbonbrief.org/ocean-current-collapse-could-trigger-profound-cooling-in-northern-europe-even-with-global-warming/). Britain's [land fit for arable farming falls from 32% to 7%](https://news-archive.exeter.ac.uk/2020/january/title_772755_en.html).
+- **The tropics.** West Africa faces [critical risk from AMOC collapse and monsoon disruption](https://wwfes.awsassets.panda.org/downloads/gtp_summary_report_2025-v4-pages-lo-res--1-.pdf), and [over 3 billion people in South and Southeast Asia depend on vulnerable monsoons](https://wwfes.awsassets.panda.org/downloads/gtp_summary_report_2025-v4-pages-lo-res--1-.pdf).
 
-## Where it stands
+## What each level looks like
 
-RAPID averaged **17.1 Sv** from 2004 to 2024, with a trend of −0.9 ± 0.7 Sv per decade ([RAPID](https://rapid.ac.uk/data/integrated-transports)). The record is short and noisy: transport fell about 4 Sv from 2004 to 2012, then partly recovered. Some reconstructions show a 15% weakening since the 1950s; one based on ocean heat release shows none from 1963 to 2017 ([Dijkstra et al. 2026](https://doi.org/10.1002/wcc.70049)).
+- **Below 6 Sv, level 2.** The deep northern circulation [has shut down](https://publications.pik-potsdam.de/rest/items/item_32699_1/component/file_32701/content). Our judgment: weaker monsoons hit the food and water of well over a billion people and Europe loses farmland; the soil, fish and fresh-water cards keep such losses below 1 in 10. A collapse by 2100 would most likely come at the [2.2–3.4 °C](https://climateactiontracker.org/documents/1453/CAT_2026-11_PublicData_GlobalTemperatureEstimates_COP31.xlsx) of current policies, below the [best-estimate threshold of 4 °C](https://pik-potsdam.de/members/johanro/ArmstrongMcKayetal2022_ClimateTippingPointsReassessment_AcceptedversionwithFigures.pdf), where the warming card, which includes this channel, is at level 2.
+- **6–10 Sv, level 2.** Every extended model run [below about 10 Sv in 2100 later shuts down](https://publications.pik-potsdam.de/rest/items/item_32699_1/component/file_32701/content). Our judgment: early shifts in rain and winters harm 1–10%.
+- **10–15 Sv, level 1.** Weaker but working; regional shifts stay modest. Our judgment.
+- **Above 15 Sv, level 0.** Within the [late-20th-century 14–26 Sv of models](https://publications.pik-potsdam.de/rest/items/item_32699_1/component/file_32701/content); no harm through this channel. Our judgment.
 
-The IPCC says the AMOC will very likely weaken this century, with medium confidence that it will not collapse abruptly before 2100. Newer work disagrees on how far and how fast:
+## Where the 2100 odds come from
 
-- Early-warning statistics point to collapse around mid-century under current emissions ([Ditlevsen and Ditlevsen 2023](https://doi.org/10.1038/s41467-023-39810-w)).
-- One climate model (CESM) gives a better-than-even chance of tipping this century under middle-of-the-road emissions ([van Westen et al. 2024](https://arxiv.org/abs/2407.19909), preprint).
-- In long model runs, deep mixing collapses mid-century; a northern shutdown by 2300 follows in 25%, 37% and 70% of runs under low, intermediate and high emissions, but after 2100 ([Drijfhout et al. 2025](https://doi.org/10.1088/1748-9326/adfa3b)).
-- Observation-filtered projections give 51% weakening by 2100 under intermediate emissions; another method gives 18–43% ([explainer](https://climatetippingpoints.info/2026/05/06/news-explainer-is-the-amoc-closer-to-collapse-than-thought/)).
-- A rare-event study finds under 1% chance of a weak state by 2100 even under high emissions, rising to about 95% by 2200 ([Cini et al. 2026](https://meetingorganizer.copernicus.org/EGU26/EGU26-14650.html)).
-
-A 2026 review by 22 AMOC scientists concludes the present-day AMOC can exist in more than one stable state and that an eventual collapse may already be unavoidable without deep emission cuts (Dijkstra et al. 2026). Others now argue the models may be too unstable ([Drijfhout and Sanchez-Franks 2026](https://arxiv.org/abs/2611.12515), preprint).
-
-## The lines that matter
-
-- **About 10 Sv:** in models, every run that drops below roughly 10 Sv by 2100 goes on to shut down (Drijfhout et al.). Chance by 2100: about 40% (judgment).
-- **Below 6 Sv, collapse:** the deep overturning is gone. Chance of being collapsed by 2100: about 10% (judgment). In the models a shutdown takes 50–100 years to unfold after tipping ([KNMI/PIK release](https://www.eurekalert.org/news-releases/1096243)), so passing the tipping point this century is likelier than finishing the collapse.
+Sources disagree too much for a curve point. The IPCC has [medium confidence of no collapse before 2100](https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_SPM.pdf). Under intermediate emissions, [37% of models pass the 10 Sv test](https://publications.pik-potsdam.de/rest/items/item_32699_1/component/file_32701/content), while models weighted by observations give [a 51 ± 8% weakening by 2100](https://climatetippingpoints.info/2026/05/06/news-explainer-is-the-amoc-closer-to-collapse-than-thought/). Warning signs in sea temperatures [date a collapse to 2025–2095](https://science.ku.dk/english/press/news/2023/gloomy-climate-calculation-scientists-predict-a-collapse-of-the-atlantic-ocean-current-to-happen-mid-century/) if emissions stay at today's level; a rare-event study in a simpler model finds [under 1% by 2100 even with very high emissions](https://meetingorganizer.copernicus.org/EGU26/EGU26-14650.html).
 
 ## What superintelligence can and cannot change
 
-SI can improve monitoring and models and narrow these wide disagreements, and faster emission cuts lower the risk. It cannot quickly restart a slowing ocean current. The AMOC responds to heat and freshwater over decades, and once past a tipping point it can keep weakening even if warming stops.
+Better models could settle how close the tipping point is, and faster cuts lower the risk. A current past it keeps weakening for decades, and no known technology could restart it.

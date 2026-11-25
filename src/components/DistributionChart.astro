@@ -1,0 +1,122 @@
+---
+import { dangerColors, levelInk, potentialColors, potentialInk, siColors } from '../data/palette.ts'
+import { axisTicks, formatAxis, niceCeiling } from '../model/chart.ts'
+import { axisPosition, barsFor } from '../model/distribution.ts'
+import type { Card, CurvePoint } from '../model/types.ts'
+
+type Props = { card: Card; noSi: CurvePoint[]; si: CurvePoint[]; listMarks: boolean }
+
+const { card, noSi, si, listMarks } = Astro.props
+const width = 360
+const left = 34
+const right = 352
+const top = 22
+const base = 104
+const count = 24
+const drawnNoSi = noSi.length > 0 ? barsFor({ card: card, points: noSi, count: count }) : undefined
+const drawnSi = si.length > 0 ? barsFor({ card: card, points: si, count: count }) : undefined
+const tallest = Math.max(0.02, ...(drawnNoSi?.bars ?? []).map((b) => b.chance), ...(drawnSi?.bars ?? []).map((b) => b.chance))
+const ceiling = niceCeiling({ value: tallest })
+const x = (value: number) => left + axisPosition({ card: card, value: value }) * (right - left)
+const y = (chance: number) => base - (Math.min(chance, ceiling) / ceiling) * (base - top)
+const percent = (chance: number) => `${Number((chance * 100).toFixed(chance < 0.1 ? 1 : 0))}%`
+const between = (series: NonNullable<typeof drawnSi>) =>
+  series.bars.filter((bar) => bar.to > series.below.value + 1e-9 && bar.from < series.beyond.value - 1e-9)
+const stepPath = drawnSi
+  ? between(drawnSi).map((bar, index) => `${index === 0 ? 'M' : 'L'}${x(bar.from).toFixed(1)} ${y(bar.chance).toFixed(1)}L${x(bar.to).toFixed(1)} ${y(bar.chance).toFixed(1)}`).join('')
+  : undefined
+const pctTail = (chance: number) => `${chance < 0.1 ? Number((chance * 100).toFixed(1)) : Math.round(chance * 100)}%`
+// What lies outside the stated points is written, not drawn.
+const tails = [
+  ...(drawnNoSi ? [{ series: drawnNoSi, color: '#b24a1d', name: 'without SI' }] : []),
+  ...(drawnSi ? [{ series: drawnSi, color: siColors.si, name: 'with SI' }] : []),
+].flatMap(({ series, color, name }) => [
+  ...(series.below.chance >= 0.005 && series.below.value > card.axis.min ? [{ color: color, text: `${pctTail(series.below.chance)} below ${formatAxis({ card: card, value: series.below.value })} ${card.unit} ${name}` }] : []),
+  ...(series.beyond.chance >= 0.005 && series.beyond.value < card.axis.max ? [{ color: color, text: `${pctTail(series.beyond.chance)} above ${formatAxis({ card: card, value: series.beyond.value })} ${card.unit} ${name}` }] : []),
+])
+const colors = card.scale === 'potential' ? potentialColors : dangerColors
+const inks = card.scale === 'potential' ? potentialInk : levelInk
+const ticks = axisTicks({ card: card })
+const todayX = x(card.today.value)
+// Dashed lines are numbered on the chart and named in a list underneath, so long names never collide.
+const labelled = (card.marks ?? [])
+  .slice(0, 4)
+  .filter((mark) => mark.value >= card.axis.min && mark.value <= card.axis.max)
+  .sort((a, b) => a.value - b.value)
+  .map((mark, index) => ({ ...mark, x: x(mark.value), number: index + 1 }))
+const bandY = 108
+const tickY = card.scale === 'none' ? base + 12 : bandY + 24
+const height = tickY + 6
+const describe = `Chance of each value of ${card.metric} ${card.statistic === 'worst-by-2100' ? 'for the worst event before 2100' : 'in 2100'}, with and without superintelligence.`
+---
+
+<svg viewBox={`0 0 ${width} ${height}`} width="100%" role="img" aria-label={describe} class="block">
+  <text x={left - 5} y={top + 3} text-anchor="end" font-size="9" fill="var(--ink-muted)">{percent(ceiling)}</text>
+  <text x={left - 5} y={(top + base) / 2 + 3} text-anchor="end" font-size="9" fill="var(--ink-muted)">{percent(ceiling / 2)}</text>
+  <text x={left} y="8" font-size="9" fill="var(--ink-muted)">chance</text>
+  <line x1={left} y1={top} x2={right} y2={top} stroke="var(--grid)" stroke-width="1"></line>
+  <line x1={left} y1={(top + base) / 2} x2={right} y2={(top + base) / 2} stroke="var(--grid)" stroke-width="1"></line>
+  {
+    drawnNoSi?.bars.map((bar) => (
+      <rect x={x(bar.from) + 0.5} y={y(bar.chance)} width={Math.max(0, x(bar.to) - x(bar.from) - 1)} height={base - y(bar.chance)} fill={siColors.noSi} fill-opacity="0.32">
+        <title>{`${formatAxis({ card: card, value: bar.from })}–${formatAxis({ card: card, value: bar.to })} ${card.unit}: ${percent(bar.chance)} without superintelligence`}</title>
+      </rect>
+    ))
+  }
+  {stepPath && <path d={stepPath} fill="none" stroke={siColors.si} stroke-width="1.75" stroke-linejoin="round"></path>}
+  <line x1={left} y1={base} x2={right} y2={base} stroke="var(--line)" stroke-width="1"></line>
+  {
+    labelled.map((mark) => (
+      <g>
+        <line x1={mark.x} y1={top + 6} x2={mark.x} y2={card.scale === 'none' ? base : bandY + 12} stroke="var(--ink-muted)" stroke-width="1" stroke-dasharray="2 3"></line>
+        <circle cx={mark.x} cy={top + 1} r="5" fill="#ffffff" stroke="var(--ink-muted)" stroke-width="1"></circle>
+        <text x={mark.x} y={top + 4} text-anchor="middle" font-size="7.5" fill="var(--ink-2)">{mark.number}</text>
+        <title>{`${mark.label}: ${formatAxis({ card: card, value: mark.value })} ${card.unit}`}</title>
+      </g>
+    ))
+  }
+  {
+    card.bands.map((band) => {
+      const from = x(band.from)
+      const to = x(band.to)
+      return (
+        <g>
+          <rect x={from} y={bandY} width={Math.max(0, to - from - 1)} height="12" fill={colors[band.level]}>
+            <title>{`${formatAxis({ card: card, value: band.from })}–${formatAxis({ card: card, value: band.to })} ${card.unit}: level ${band.level}. ${band.label}`}</title>
+          </rect>
+          {to - from > 14 && <text x={(from + to) / 2} y={bandY + 9.5} text-anchor="middle" font-size="9" font-weight="600" fill={inks[band.level]}>{band.level}</text>}
+        </g>
+      )
+    })
+  }
+  {
+    ticks.map((tick) => (
+      <g>
+        <line x1={x(tick)} y1={tickY - 12} x2={x(tick)} y2={tickY - 9} stroke="var(--ink-muted)" stroke-width="1"></line>
+        <text x={x(tick)} y={tickY} text-anchor={x(tick) > right - 14 ? 'end' : x(tick) < left + 8 ? 'start' : 'middle'} font-size="9" fill="var(--ink-muted)">{formatAxis({ card: card, value: tick })}</text>
+      </g>
+    ))
+  }
+  <line x1={todayX} y1={top - 10} x2={todayX} y2={card.scale === 'none' ? base : bandY + 12} stroke="var(--ink)" stroke-width="1.25"></line>
+  <text x={todayX + (todayX > right - 60 ? -4 : 4)} y={top - 4} text-anchor={todayX > right - 60 ? 'end' : 'start'} font-size="9" fill="var(--ink)">{card.statistic === 'worst-by-2100' ? 'worst so far' : 'today'}</text>
+</svg>
+{
+  tails.length > 0 && (
+    <p class="mt-0.5 flex flex-wrap gap-x-3 text-[11px] tabular" title="No shape is drawn beyond the outermost stated values: only the chance is known.">
+      <span class="muted">Not drawn:</span>
+      {tails.map((tail) => <span style={`color: ${tail.color}`}>{tail.text}</span>)}
+    </p>
+  )
+}
+{
+  listMarks && labelled.length > 0 && (
+    <ol class="mt-1 flex flex-col gap-0.5 text-[11px] ink-2">
+      {labelled.map((mark) => (
+        <li class="flex gap-1.5">
+          <span class="inline-flex h-3.5 w-3.5 flex-none items-center justify-center rounded-full border text-[8px]" style="border-color: var(--ink-muted)">{mark.number}</span>
+          <span><span class="tabular">{formatAxis({ card: card, value: mark.value })} {card.unit}</span>: {mark.label}</span>
+        </li>
+      ))}
+    </ol>
+  )
+}

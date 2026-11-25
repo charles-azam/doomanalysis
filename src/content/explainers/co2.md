@@ -1,45 +1,57 @@
 ---
 factor: co2
 title: "Atmospheric CO₂"
-summary: "CO₂ is the main driver of warming and ocean acidification, and what we add stays in the air for centuries."
+summary: "How much carbon dioxide the air holds. It drives most of the warming, acidifies the ocean, stays for centuries and, at high levels, makes staple crops less nutritious."
 sources:
-  - label: "NOAA Global Monitoring Laboratory, Trends in atmospheric CO₂, 2026"
-    url: https://gml.noaa.gov/ccgg/trends/
-  - label: "NOAA Global Monitoring Laboratory, Global CO₂ growth rate, 2026"
-    url: https://gml.noaa.gov/ccgg/trends/gl_gr.html
-  - label: "WMO, State of the Global Climate 2025, 2026"
-    url: https://library.wmo.int/records/item/69807-state-of-the-global-climate-2025
-  - label: "Potsdam Institute for Climate Impact Research, Planetary Health Check 2026, 2026"
-    url: https://publications.pik-potsdam.de/pubman/item/item_35009/component/file_35022/PlanetaryHealthCheck2026.pdf
-  - label: "Jiang et al., JAMES (SSP concentrations from Meinshausen et al. 2020), 2023"
-    url: https://doi.org/10.1029/2022MS003563
-  - label: "IPCC, AR6 Working Group I Summary for Policymakers, 2021"
+  - label: "NOAA Global Monitoring Laboratory, global annual mean CO₂, 2026"
+    url: https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_annmean_gl.txt
+  - label: "NOAA Global Monitoring Laboratory, global CO₂ growth rate, 2026"
+    url: https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_gr_gl.txt
+  - label: "IPCC, AR6 Working Group I, Technical Summary, Box TS.2, 2021"
+    url: https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_TS.pdf
+  - label: "IPCC, AR6 Working Group I, Summary for Policymakers, 2021"
     url: https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_SPM.pdf
+  - label: "Meinshausen et al., The SSP greenhouse gas concentrations and their extensions to 2500, Geoscientific Model Development, 2020"
+    url: https://gmd.copernicus.org/articles/13/3571/2020/
+  - label: "Satish et al., Is CO₂ an indoor pollutant?, Environmental Health Perspectives, 2012"
+    url: https://doi.org/10.1289/ehp.1104789
+  - label: "Zhang, Wargocki, Lian and Thyregod, Effects of exposure to carbon dioxide and bioeffluents, Indoor Air, 2017"
+    url: https://doi.org/10.1111/ina.12284
+  - label: "Chen et al., Effects of short-term exposure to moderate pure carbon dioxide levels on cognitive performance, Building and Environment, 2023"
+    url: https://discovery.ucl.ac.uk/id/eprint/10180048/1/1-s2.0-S0360132323009940-main.pdf
+  - label: "NIOSH Pocket Guide to Chemical Hazards, Carbon dioxide"
+    url: https://www.cdc.gov/niosh/npg/npgd0103.html
+  - label: "CIRES, Continued CO₂ emissions will impair cognition, 2020, on Karnauskas, Miller and Schapiro in GeoHealth"
+    url: https://cires.colorado.edu/news/continued-co2-emissions-will-impair-cognition
+  - label: "Carbon Brief, Rising CO₂ levels could push hundreds of millions into malnutrition by 2050, 2018, on Smith and Myers in Nature Climate Change"
+    url: https://www.carbonbrief.org/rising-co2-levels-could-push-hundreds-of-millions-into-malnutrition-by-2050
+  - label: "Zhu et al., CO₂ levels this century will alter the protein, micronutrients and vitamin content of rice grains, Science Advances, 2018"
+    url: https://doi.org/10.1126/sciadv.aaq1012
+  - label: "Lenton et al., Quantifying the human cost of global warming, Nature Sustainability, 2023"
+    url: https://www.nature.com/articles/s41893-023-01132-6
 ---
 
-## What it is
+## Why it matters here
 
-The concentration of carbon dioxide in the air, in parts per million (ppm): how many CO₂ molecules there are in every million molecules of air. The longest continuous record comes from Mauna Loa in Hawaii.
+CO₂ harms people mostly through warming, so this card is the warming card read in parts per million (ppm: CO₂ molecules per million molecules of air). It also acidifies the ocean surface, already [unusually acidic for 2 million years](https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_SPM.pdf), and makes crops less nutritious. Breathing it outdoors does not matter.
 
-## Why it matters
+## In numbers
 
-CO₂ traps heat. It is the largest single cause of warming, and it is also what acidifies the ocean, which absorbed about 29% of the CO₂ emitted in 2015–2024 ([WMO](https://library.wmo.int/records/item/69807-state-of-the-global-climate-2025)). Unlike smoke or smog, CO₂ does not wash out quickly. The level in the air reflects the running total of past emissions, so it only falls if the world removes more than it emits.
+- **Today.** The world averaged [425.6 ppm in 2025](https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_annmean_gl.txt), up [2.0 ppm in a year](https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_gr_gl.txt). The last ice age had about 190 and 1850–1900 had 286–296 ([IPCC](https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_TS.pdf)): we have added about 135 (425.6 − 291), more than the 100 or so that ended the ice age.
+- **Thinking.** Pure CO₂ worsened decisions at [1,000 ppm, and more at 2,500](https://doi.org/10.1289/ehp.1104789), in one test; others found no effect at [1,000 or 3,000](https://doi.org/10.1111/ina.12284) or [up to 2,100 ppm](https://discovery.ucl.ac.uk/id/eprint/10180048/1/1-s2.0-S0360132323009940-main.pdf). Workplaces allow [5,000 ppm over a working day](https://www.cdc.gov/niosh/npg/npgd0103.html). Outdoor air in 2100 holds [393.5 to 1,135 ppm](https://gmd.copernicus.org/articles/13/3571/2020/); with our breath added, 930 outside could mean [up to 1,400 indoors](https://cires.colorado.edu/news/continued-co2-emissions-will-impair-cognition). Our reading: unproven, indoors only, fixed by ventilation. It does not change the level.
+- **Food.** At 550 ppm, rice, wheat and maize lose 3–17% of their iron, zinc and protein: by 2050, [175 million more people short of zinc and 122 million of protein](https://www.carbonbrief.org/rising-co2-levels-could-push-hundreds-of-millions-into-malnutrition-by-2050), 1.9% and 1.3% of humanity. Rice also loses [B vitamins](https://doi.org/10.1126/sciadv.aaq1012).
 
-## Where it stands
+## What each level looks like
 
-Mauna Loa averaged **427.35 ppm** in 2025 ([NOAA](https://gml.noaa.gov/ccgg/trends/)). The global average was 423.9 ppm in 2024, which is 152% of the pre-industrial level of about 280 ppm (WMO). The yearly rise hit a record 3.75 ppm in 2024, then slowed to 2.03 ppm in 2025 ([NOAA growth rate](https://gml.noaa.gov/ccgg/trends/gl_gr.html)).
+The 2100 concentrations of the IPCC scenarios, [393.5, 445.6, 602.8 and 867.2 ppm](https://gmd.copernicus.org/articles/13/3571/2020/), go with median warming of [1.4, 1.8, 2.7 and 3.6 °C](https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_SPM.pdf).
+- **350–405 ppm, level 1.** Near 1.5 °C (393.5 + 52.1 × 0.1 ÷ 0.4 = 406). Our judgment, as on the warming card.
+- **405–840 ppm, level 2.** 1.5 to 3.5 °C (602.8 + 264.4 × 0.8 ÷ 0.9 = 838). Lost zinc alone reaches [1.9% of humanity at 550 ppm](https://www.carbonbrief.org/rising-co2-levels-could-push-hundreds-of-millions-into-malnutrition-by-2050).
+- **840–1,200 ppm, level 3.** Over 3.5 °C; our judgment, as on the warming card.
 
-What happens next depends entirely on emissions. In the IPCC's scenario set, CO₂ in 2100 ranges from 393 ppm (very low emissions) and 446 ppm (low) to **603 ppm** under the intermediate SSP2-4.5 path, and 867–1135 ppm under high emissions ([Jiang et al. 2023](https://doi.org/10.1029/2022MS003563)). Today's policies, which lead to about 2.7 °C, sit close to SSP2-4.5. No source we found gives a 2100 CO₂ figure for "current policies" directly.
+## Where the 2100 odds come from
 
-## The lines that matter
-
-- **350 ppm, the planetary boundary for climate.** Proposed from paleoclimate evidence as the level that keeps the climate close to the stable conditions in which civilization developed ([Planetary Health Check 2026](https://publications.pik-potsdam.de/pubman/item/item_35009/component/file_35022/PlanetaryHealthCheck2026.pdf)). Already far behind us. Every IPCC scenario still ends the century above it, so the chance of being above it in 2100 is about 99% (derived).
-- **450 ppm, the start of the high-risk zone** in the same framework. At recent growth rates of 2–3.75 ppm a year, the world passes it in the 2030s. Only paths at or below the IPCC low-emission case (446 ppm in 2100) end the century below it, which requires roughly every net-zero pledge to be met. Chance of being above 450 ppm in 2100: about 90% (our judgment).
-
-The Planetary Health Check also tracks the total extra heating from all human causes: 3.10 watts per square metre, against a boundary of 1.
+No source publishes odds. Current policies warm about as much as the IPCC middle scenario ([Lenton et al.](https://www.nature.com/articles/s41893-023-01132-6)), which reaches 603 ppm: a scenario, not a forecast.
 
 ## What superintelligence can and cannot change
 
-SI can lower the curve. Cheaper solar, batteries and industrial processes cut emissions sooner. SI could also make carbon removal cheaper. The IPCC finds that net-negative emissions would lower CO₂ and reverse surface ocean acidification ([IPCC AR6](https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_SPM.pdf)).
-
-But removal is a physical job. Each ppm in the air is about 7.8 billion tonnes of CO₂ (derived from WMO's 3,306 billion tonnes at 423.9 ppm), and capturing and storing that takes energy, land or minerals, and many years. Smarter software does not shorten the time CO₂ already emitted spends in the air.
+Removing more CO₂ than we emit would [lower the concentration and reverse surface acidification](https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_SPM.pdf), but it is physical work that takes energy, land and decades.

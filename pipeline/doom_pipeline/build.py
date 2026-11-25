@@ -3,7 +3,7 @@
 import re
 import unicodedata
 
-from doom_pipeline.catalog import MIN_COVERAGE, REGIONS, SPECS
+from doom_pipeline.catalog import HIGH_INCOME, LIVING_FACTORS, MIN_COVERAGE, REGIONS, SPECS
 from doom_pipeline.models import Country, Dataset, Entity, IndicatorSpec, Observation, Point, Projection, RawInputs
 
 # Display names that differ from the World Bank's formal ones.
@@ -37,16 +37,49 @@ def slugify(*, text: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", ascii_text.lower()).strip("-")
 
 
-def note_for(*, factor_id: str, point: Point) -> str | None:
+def note_for(*, factor_id: str, point: Point, baseline: Point) -> str | None:
     if factor_id == "undernourishment" and point.value <= 2.5:
         return "below 2.5%; FAO does not report lower values"
     if factor_id == "energy_imports" and point.value < 0:
         return "negative means a net energy exporter"
+    if factor_id == "living_standard":
+        return f"100 = high-income average of ${baseline.value:,.0f} per person ({baseline.year})"
     return None
 
 
 def cite(*, spec: IndicatorSpec, country: Country) -> str:
     return spec.url_template.replace("{iso2}", country.iso2).replace("{iso3}", country.iso3)
+
+
+def cite_aggregate(*, spec: IndicatorSpec) -> str:
+    return spec.url_template.replace("?locations={iso2}", "").replace("{iso3}", "")
+
+
+def living_standard(*, consumption: dict[str, Point], baseline: Point) -> dict[str, Point]:
+    """Consumption per person as an index where the high-income aggregate is 100."""
+    return {iso3: Point(value=100 * point.value / baseline.value, year=point.year) for iso3, point in consumption.items()}
+
+
+def weighted_average(
+    *, entity: str, members: list[Country], spec: IndicatorSpec, points: dict[str, Point], population: dict[str, Point]
+) -> Observation | None:
+    """Population-weighted mean over the members with a value, or nothing when they hold too few of the people."""
+    total = sum(population[country.iso3].value for country in members)
+    covered = [country for country in members if country.iso3 in points]
+    weight = sum(population[country.iso3].value for country in covered)
+    if total == 0 or weight / total < MIN_COVERAGE:
+        return None
+    value = sum(points[c.iso3].value * population[c.iso3].value for c in covered) / weight
+    years = sorted(points[c.iso3].year for c in covered)
+    return Observation(
+        factor_id=spec.factor_id,
+        entity=entity,
+        value=round(value, spec.decimals + 1),
+        year=years[len(years) // 2],
+        source=spec.source,
+        url=cite_aggregate(spec=spec),
+        note=f"population-weighted average of {len(covered)} countries ({round(100 * weight / total)}% of the population)",
+    )
 
 
 def region_of(*, country: Country) -> str | None:
@@ -62,13 +95,22 @@ def build_dataset(*, raw: RawInputs, spotlight: tuple[str, ...], min_factors: in
     # Countries: keep those with a population and enough factor values to be worth a page.
     published: list[Country] = []
     for country in raw.countries:
-        count = sum(1 for points in raw.indicators.values() if country.iso3 in points)
+        count = sum(1 for factor_id, points in raw.indicators.items() if factor_id not in LIVING_FACTORS and country.iso3 in points)
         if country.iso3 in raw.population and count >= min_factors and region_of(country=country) is not None:
             published.append(country)
 
+    # The living standard is derived from consumption. The high-income aggregate rides along as its own
+    # economy, so it comes out at exactly 100.
+    indicators: dict[str, dict[str, Point]] = {}
+    for factor_id, points in raw.indicators.items():
+        indicators[factor_id] = points
+        if factor_id == "consumption_per_person":
+            indicators[factor_id] = points | {HIGH_INCOME: raw.high_income_consumption}
+            indicators["living_standard"] = living_standard(consumption=indicators[factor_id], baseline=raw.high_income_consumption)
+
     observations: list[Observation] = []
     for country in published:
-        for factor_id, points in raw.indicators.items():
+        for factor_id, points in indicators.items():
             point = points.get(country.iso3)
             if point is None:
                 continue
@@ -81,7 +123,7 @@ def build_dataset(*, raw: RawInputs, spotlight: tuple[str, ...], min_factors: in
                     year=point.year,
                     source=spec.source,
                     url=cite(spec=spec, country=country),
-                    note=note_for(factor_id=factor_id, point=point),
+                    note=note_for(factor_id=factor_id, point=point, baseline=raw.high_income_consumption),
                 )
             )
 
@@ -95,23 +137,29 @@ def build_dataset(*, raw: RawInputs, spotlight: tuple[str, ...], min_factors: in
         region_entities.append(
             Entity(id=region.id, kind="region", name=region.name, slug=region.id, iso2=None, region=None, population=total, spotlight=True)
         )
-        for factor_id, points in raw.indicators.items():
-            covered = [country for country in members if country.iso3 in points]
-            weight = sum(raw.population[country.iso3].value for country in covered)
-            if weight / total < MIN_COVERAGE:
-                continue
-            value = sum(points[c.iso3].value * raw.population[c.iso3].value for c in covered) / weight
-            years = sorted(points[c.iso3].year for c in covered)
-            spec = specs[factor_id]
-            observations.append(
+        for factor_id, points in indicators.items():
+            average = weighted_average(entity=region.id, members=members, spec=specs[factor_id], points=points, population=raw.population)
+            if average is not None:
+                observations.append(average)
+
+    # Benchmarks for the living-standard measures: the world as one more weighted average, and the high-income aggregate.
+    benchmarks: list[Observation] = []
+    for factor_id in LIVING_FACTORS:
+        points = indicators.get(factor_id, {})
+        spec = specs[factor_id]
+        world = weighted_average(entity="WLD", members=published, spec=spec, points=points, population=raw.population)
+        if world is not None:
+            benchmarks.append(world)
+        if HIGH_INCOME in points:
+            benchmarks.append(
                 Observation(
                     factor_id=factor_id,
-                    entity=region.id,
-                    value=round(value, spec.decimals + 1),
-                    year=years[len(years) // 2],
+                    entity=HIGH_INCOME,
+                    value=round(points[HIGH_INCOME].value, spec.decimals + 1),
+                    year=points[HIGH_INCOME].year,
                     source=spec.source,
-                    url=spec.url_template.replace("?locations={iso2}", "").replace("{iso3}", ""),
-                    note=f"population-weighted average of {len(covered)} countries ({round(100 * weight / total)}% of the population)",
+                    url=cite_aggregate(spec=spec),
+                    note="World Bank high-income aggregate",
                 )
             )
 
@@ -150,4 +198,21 @@ def build_dataset(*, raw: RawInputs, spotlight: tuple[str, ...], min_factors: in
         raise ValueError(f"spotlight countries without enough data: {missing_spotlight}")
     if len({e.slug for e in country_entities}) != len(country_entities):
         raise ValueError("two countries share a slug")
-    return Dataset(entities=region_entities + country_entities, observations=observations, projections=projections)
+
+    # People in 2100: the UN's world total, each region as the sum of its published countries, then the countries.
+    without_2100 = [country.iso3 for country in published if country.iso3 not in raw.population_2100]
+    if without_2100:
+        raise ValueError(f"published countries without a 2100 population: {without_2100}")
+    population_2100 = {"WLD": raw.population_2100["WLD"]}
+    for region in region_entities:
+        population_2100[region.id] = sum(raw.population_2100[c.iso3] for c in published if region_of(country=c) == region.id)
+    for entity in country_entities:
+        population_2100[entity.id] = raw.population_2100[entity.id]
+
+    return Dataset(
+        entities=region_entities + country_entities,
+        observations=observations,
+        projections=projections,
+        benchmarks=benchmarks,
+        population_2100=population_2100,
+    )

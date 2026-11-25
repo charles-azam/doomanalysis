@@ -1,62 +1,52 @@
 ---
 factor: warming
 title: "Global warming"
-summary: "Warming drives most climate risks; each extra tenth of a degree raises the odds of tipping points and of people losing liveable climates."
+summary: "How much hotter the planet is than before industry. Deadly heat, failed harvests, drought, floods and rising seas all grow with it."
 sources:
-  - label: "WMO, State of the Global Climate 2025, 2026"
-    url: https://library.wmo.int/records/item/69807-state-of-the-global-climate-2025
+  - label: "WMO, State of the Global Climate 2025, press release, 23 March 2026"
+    url: https://wmo.int/node/38416
   - label: "Climate Action Tracker, Warming Projections Global Update, November 2026"
     url: https://climateactiontracker.org/documents/1451/CAT_2026-11-12_GlobalUpdate_COP31.pdf
-  - label: "Carbon Brief, UNEP Emissions Gap Report 2026 coverage, 2026"
+  - label: "Climate Action Tracker, global temperature estimates data, November 2026"
+    url: https://climateactiontracker.org/documents/1453/CAT_2026-11_PublicData_GlobalTemperatureEstimates_COP31.xlsx
+  - label: "Carbon Brief, UNEP: Opportunity has been lost to meet 1.5C warming limit without overshoot, 21 October 2026"
     url: https://carbonbrief.org/unep-opportunity-has-been-lost-to-meet-1-5c-warming-limit-without-overshoot
-  - label: "IPCC, AR6 Working Group I Summary for Policymakers, 2021"
+  - label: "IPCC, AR6 Working Group I, Summary for Policymakers, 2021"
     url: https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_SPM.pdf
-  - label: "Liu and Raftery, Communications Earth & Environment, 2021"
-    url: https://doi.org/10.1038/s43247-021-00097-8
-  - label: "University of Exeter, Global Tipping Points Report 2025 summary, 2025"
-    url: https://wwfes.awsassets.panda.org/downloads/gtp_summary_report_2025-v4-pages-lo-res--1-.pdf
-  - label: "Armstrong McKay et al., Science, 2022"
-    url: https://doi.org/10.1126/science.abn7950
-  - label: "Lenton et al., Nature Sustainability, 2023"
-    url: https://doi.org/10.1038/s41893-023-01132-6
+  - label: "IPCC, AR6 Working Group I, Technical Summary, Box TS.2, 2021"
+    url: https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_TS.pdf
+  - label: "Jean-Marc Jancovici, Mines ParisTech lectures, part 4, 2019"
+    url: https://jancovici.com/wp-content/uploads/2020/07/Jancovici_Mines_ParisTech_cours_4.pdf
+  - label: "Lenton et al., Quantifying the human cost of global warming, Nature Sustainability, 2023"
+    url: https://www.nature.com/articles/s41893-023-01132-6
+  - label: "Bressler, The mortality cost of carbon, Nature Communications, 2021"
+    url: https://www.nature.com/articles/s41467-021-24487-w
+  - label: "Jafino, Walsh, Rozenberg and Hallegatte, Revised estimates of the impact of climate change on extreme poverty by 2030, World Bank, 2020"
+    url: https://econpapers.repec.org/RePEc:wbk:wbrwps:9417
 ---
 
-## What it is
+## Why it matters here
 
-The rise in the planet's average surface temperature since 1850–1900, before heavy fossil-fuel use. It is measured from thermometers on land and at sea, blended across several datasets.
+Warming reaches people through heat, failed harvests, drought, floods and rising seas; the heat, harvest and extreme-weather cards are its channels. We judge that 3.5 °C costs over a tenth of humanity decent living, and only an ice-age-sized change would cost most people.
 
-## Why it matters
+## In numbers
 
-Warming is the dial behind sea-level rise, ice loss, heatwaves and crop stress. Around 1.5–2 °C, several large systems (ice sheets, permafrost, the Atlantic overturning circulation) are likely to pass tipping points: thresholds beyond which they keep changing on their own ([Global Tipping Points Report 2025](https://wwfes.awsassets.panda.org/downloads/gtp_summary_report_2025-v4-pages-lo-res--1-.pdf)). At about 2.7 °C, roughly a third of people (22–39%) would live outside the temperature range humans have historically lived in, up from about 9% today ([Lenton et al. 2023](https://doi.org/10.1038/s41893-023-01132-6)).
+- **Ice age.** The last ice age was [about 6 °C (5 to 7) colder](https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_TS.pdf) than 1850–1900, so about 7 °C colder than [2025 (1.43 °C)](https://wmo.int/node/38416). [Jancovici](https://jancovici.com/wp-content/uploads/2020/07/Jancovici_Mines_ParisTech_cours_4.pdf) says 5 °C over 5,000 to 10,000 years: the right order of magnitude, a little low. That is 0.05–0.1 °C per century (5 ÷ 50–100); we are 10 to 20 times faster (1.43 °C in 1.5 centuries).
+- **Deaths.** A path to 4.1 °C brings [83 million extra temperature-related deaths by 2100](https://www.nature.com/articles/s41467-021-24487-w), about 1% of 8 billion; a path to 2.4 °C, 9 million.
+- **Poverty.** Climate change could push [32 to 132 million people into extreme poverty by 2030](https://econpapers.repec.org/RePEc:wbk:wbrwps:9417): 0.4–1.6% of 8.5 billion.
 
-## Where it stands
+## What each level looks like
 
-2025 was **1.43 °C ± 0.13** above 1850–1900; 2024 was 1.55 °C ([WMO](https://library.wmo.int/records/item/69807-state-of-the-global-climate-2025)). The long-term average is expected to pass 1.5 °C around 2030 ([Climate Action Tracker](https://climateactiontracker.org/documents/1451/CAT_2026-11-12_GlobalUpdate_COP31.pdf)).
+All four are our judgment.
+- **1–1.5 °C, level 1.** Deadlier extremes; the poverty estimate straddles 1%.
+- **1.5–3.5 °C, level 2.** [5% of people at 1.5 °C, 22% at 2.7 °C and 34% at 3.6 °C](https://www.nature.com/articles/s41893-023-01132-6) live in unprecedented heat. If one in five of them loses decent living, that is 1% to about 7%.
+- **3.5–6 °C, level 3.** A third to two-thirds in that heat ([45% at 4.4 °C](https://www.nature.com/articles/s41893-023-01132-6), plus about 14 points per degree), and harvests a sixth or more smaller (harvest card): over a tenth.
+- **6–7 °C, level 4.** A change as large as the ice-age one, in two centuries. No study counts it; we judge most people lose decent living.
 
-Forecasts for 2100 under today's policies agree closely:
-- Climate Action Tracker: **2.7 °C**, with a 16–84% range of 2.2–3.4 °C.
-- UNEP Emissions Gap Report 2026: 2.8 °C with 66% confidence, and a 10% chance of exceeding 3.4 °C ([Carbon Brief](https://carbonbrief.org/unep-opportunity-has-been-lost-to-meet-1-5c-warming-limit-without-overshoot)).
-- IPCC intermediate scenario SSP2-4.5: 2.7 °C (2.1–3.5) for 2081–2100 ([IPCC AR6](https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_SPM.pdf)).
-- A statistical forecast from past trends: 2.8 °C (2.1–3.9), with a 5% chance of staying under 2 °C ([Liu and Raftery 2021](https://doi.org/10.1038/s43247-021-00097-8)).
+## Where the 2100 odds come from
 
-If every national pledge, including net-zero targets, were met, CAT projects 1.9 °C. Under current policies, temperatures keep rising after 2100.
-
-## The lines that matter
-
-Chances below are for end-of-century warming. We derived them from CAT's published percentiles; UNEP, IPCC and statistical forecasts shift the middle values by up to about 15 points either way.
-
-- **1.2 °C, coral reefs:** central tipping estimate for warm-water reefs, already crossed; die-off is underway (GTPR 2025). Chance of ending above it: 99%.
-- **1.5 °C, Paris goal:** Greenland and West Antarctic ice sheets and land permafrost likely tip near here (GTPR 2025). 99%.
-- **2 °C:** the AMOC, boreal forests and mountain glaciers likely tip near here (GTPR 2025). 92%.
-- **2.5 °C:** an ice-free Arctic most Septembers and up to 75% of near-surface permafrost lost (IPCC AR6). 65%.
-- **3 °C:** commits 4–10 m of sea-level rise over 2,000 years (IPCC AR6). 33%.
-- **3.5 °C:** central estimate for Amazon dieback from climate alone; deforestation lowers it ([Armstrong McKay et al. 2022](https://doi.org/10.1126/science.abn7950)). 13%.
-- **4 °C:** central estimates for AMOC and boreal permafrost collapse (Armstrong McKay et al.). 3%.
-
-These odds assume today's policies hold. Stronger policy would shift them down; rollbacks would shift them up.
+[Climate Action Tracker](https://climateactiontracker.org/documents/1451/CAT_2026-11-12_GlobalUpdate_COP31.pdf) projects 2.7 °C under current policies, with a 16th–84th percentile range of [2.2–3.4 °C](https://climateactiontracker.org/documents/1453/CAT_2026-11_PublicData_GlobalTemperatureEstimates_COP31.xlsx) and a 66% chance of staying under 3.0 °C; we use these. UNEP is slightly cooler: 66% under 2.8 °C and [10% above 3.4 °C](https://carbonbrief.org/unep-opportunity-has-been-lost-to-meet-1-5c-warming-limit-without-overshoot), against CAT's 16%. The IPCC middle scenario gives [2.7 °C (2.1–3.5)](https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_SPM.pdf). A normal curve fitted to CAT's lower half (spread 0.5 ÷ 0.99 = 0.5 °C) puts 1.5 °C 2.4 spreads below the median: 99% above.
 
 ## What superintelligence can and cannot change
 
-SI could make clean energy, storage and CO₂ removal cheaper, which lowers future emissions. Timing matters: each five years of delay locks in about 0.1 °C more peak warming (UNEP, via Carbon Brief).
-
-SI cannot remove warming already caused. CO₂ stays in the air for centuries, the ocean keeps releasing stored heat, and tipping points already crossed do not reset when emissions stop. Deliberately dimming sunlight could cool the planet quickly, but it brings its own risks and governance problems.
+Cheaper clean energy could lower the curve: each five years of delay locks in [about 0.1 °C](https://carbonbrief.org/unep-opportunity-has-been-lost-to-meet-1-5c-warming-limit-without-overshoot). It cannot recall CO₂ already emitted, which keeps the planet warm for centuries.

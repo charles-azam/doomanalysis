@@ -2,10 +2,18 @@
 import { getCollection, render } from 'astro:content'
 import Base from '../../layouts/Base.astro'
 import FactorCard from '../../components/FactorCard.astro'
+import HazardCard from '../../components/HazardCard.astro'
+import { cards } from '../../data/cards.ts'
+import { causeDefinitions, dangerScale, potentialScale } from '../../data/definitions.ts'
 import { factors } from '../../data/factors.ts'
 import { observations } from '../../data/observations.ts'
-import { projectionFor } from '../../data/site.ts'
+import { outlook } from '../../data/outlook.ts'
+import { dangerColors, levelInk, potentialColors, potentialInk } from '../../data/palette.ts'
+import { projectionFor } from '../../data/projections.ts'
+import { revisionUrl, wikipediaFor } from '../../data/wikipedia.ts'
+import { formatAxis } from '../../model/chart.ts'
 import { observationFor } from '../../model/score.ts'
+import type { RootCause } from '../../model/types.ts'
 
 export async function getStaticPaths() {
   const entries = await getCollection('explainers')
@@ -14,17 +22,62 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props
 const { Content } = await render(entry)
-const factor = factors.find((f) => f.id === entry.data.factor)
+const card = cards.find((c) => c.id === entry.data.factor)
+const factor = card ? undefined : factors.find((f) => f.id === entry.data.factor)
 const example = factor?.scope === 'global' ? 'WLD' : 'FRA'
 const observation = factor ? observationFor({ observations: observations, factorId: factor.id, entity: example }) : undefined
+const wiki = card ? wikipediaFor({ title: card.wikipedia }) : undefined
+const paragraphs = wiki ? wiki.text.split(/\n+/).filter((p) => p.trim().length > 0) : []
+const parent = card?.parent ? cards.find((c) => c.id === card.parent) : undefined
+const children = card ? cards.filter((c) => c.parent === card.id) : []
+const isCause = (group: string): group is RootCause => group in causeDefinitions
+const groupLink = card
+  ? isCause(card.group)
+    ? { href: `/causes/${card.group}/`, label: causeDefinitions[card.group].name }
+    : { href: `/#${card.group}`, label: card.group === 'technology' ? 'Technologies' : 'How people live' }
+  : { href: '/factors/', label: 'Factors' }
+const scaleNames = card?.scale === 'potential' ? potentialScale : dangerScale
+const colors = card?.scale === 'potential' ? potentialColors : dangerColors
+const inks = card?.scale === 'potential' ? potentialInk : levelInk
+const basisWord = { published: 'published', derived: 'derived', judged: 'our judgment' }
+const wikiDate = wiki ? new Date(wiki.timestamp).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : ''
 ---
 
 <Base title={entry.data.title} description={entry.data.summary} active="factors">
-  <div class="grid gap-10 lg:grid-cols-[1fr_380px]">
-    <article class="prose-site max-w-2xl">
-      <p class="text-sm muted"><a class="underline" href="/factors/">Factors</a> · Explainer</p>
+  <div class="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1fr)_400px]">
+    <article class="prose-site min-w-0 max-w-2xl">
+      <p class="text-sm muted">
+        <a class="underline" href={groupLink.href}>{groupLink.label}</a>
+        {parent && <span> · part of <a class="underline" href={`/learn/${parent.id}/`}>{parent.name}</a></span>}
+      </p>
       <h1 class="serif mt-2 text-5xl leading-[1.05] tracking-tight" style="color: var(--ink)">{entry.data.title}</h1>
       <p class="text-lg leading-snug" style="color: var(--ink)">{entry.data.summary}</p>
+      {
+        wiki && (
+          <section class="my-6 rounded-lg border p-5" style="border-color: var(--line); background: var(--surface-2)">
+            <p class="!my-0 text-xs font-medium uppercase tracking-wide muted">From Wikipedia</p>
+            <h2 class="!mt-1 !text-xl">{wiki.title}</h2>
+            {paragraphs.map((paragraph) => (
+              <p class="!my-2 text-[0.95rem]">{paragraph}</p>
+            ))}
+            <p class="!mb-0 !mt-3 text-xs muted">
+              Opening section of the Wikipedia article{' '}
+              <a class="underline" href={wiki.url} target="_blank" rel="noopener">
+                {wiki.title}
+              </a>
+              , quoted word for word from the{' '}
+              <a class="underline" href={revisionUrl({ extract: wiki })} target="_blank" rel="noopener">
+                revision of {wikiDate}
+              </a>
+              . Text by Wikipedia contributors, under{' '}
+              <a class="underline" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">
+                CC BY-SA 4.0
+              </a>
+              .
+            </p>
+          </section>
+        )
+      }
       <Content />
       <h2>Sources</h2>
       <ul>
@@ -32,6 +85,44 @@ const observation = factor ? observationFor({ observations: observations, factor
       </ul>
     </article>
     <aside class="lg:pt-24">
+      {
+        card && (
+          <div class="flex flex-col gap-5 lg:sticky lg:top-24">
+            <HazardCard card={card} judged={outlook.curves[card.id]} />
+            {card.bands.length > 0 && (
+              <div class="card p-4">
+                <p class="mb-2 text-sm font-medium">What each stretch means</p>
+                <ul class="flex flex-col gap-2 text-sm">
+                  {card.bands.map((band) => (
+                    <li class="grid grid-cols-[2.2rem_minmax(0,1fr)] gap-2">
+                      <span class="flex h-6 items-center justify-center rounded text-xs font-semibold" style={`background: ${colors[band.level]}; color: ${inks[band.level]}`} title={scaleNames[band.level].name}>
+                        {band.level}
+                      </span>
+                      <span>
+                        <span class="tabular">{formatAxis({ card: card, value: band.from })}–{formatAxis({ card: card, value: band.to })} {card.unit}</span>: {band.label}.{' '}
+                        <span class="text-xs muted">
+                          {band.url ? <a class="underline" href={band.url} target="_blank" rel="noopener">{basisWord[band.basis]}</a> : basisWord[band.basis]}
+                        </span>
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {children.length > 0 && (
+              <div class="card p-4 text-sm">
+                <p class="mb-2 font-medium">Explained in more detail by</p>
+                <ul class="flex flex-wrap gap-1.5">
+                  {children.map((child) => (
+                    <li><a class="pill pill-solo" href={`/learn/${child.id}/`}>{child.name}</a></li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            <p class="text-xs muted">Superintelligence: {card.siNote}</p>
+          </div>
+        )
+      }
       {
         factor && observation && (
           <div class="lg:sticky lg:top-24">

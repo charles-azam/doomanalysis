@@ -1,49 +1,47 @@
 ---
 factor: ocean_acidification
 title: "Ocean acidification"
-summary: "The ocean soaks up about a quarter of our CO₂, which makes seawater more acidic and harder for shell-building life to survive in."
+summary: "How much carbonate, the material of shells and coral skeletons, surface seawater holds as it absorbs CO₂. As it falls, sea snails, shellfish and reefs struggle, and with them part of the sea's food."
 sources:
-  - label: "Potsdam Institute for Climate Impact Research, Planetary Health Check 2026, 2026"
+  - label: "Jiang et al., Global surface ocean acidification indicators from 1750 to 2100, Journal of Advances in Modeling Earth Systems, 2023"
+    url: https://ueaeprints.uea.ac.uk/id/eprint/91703/1/J_Adv_Model_Earth_Syst_2023_Jiang_Global_Surface_Ocean_Acidification_Indicators_From_1750_to_2100.pdf
+  - label: "FAO, The State of World Fisheries and Aquaculture 2024, press release"
+    url: https://www.fao.org/newsroom/detail/fao-report-global-fisheries-and-aquaculture-production-reaches-a-new-record-high/en
+  - label: "Planetary Health Check 2026, PIK"
     url: https://publications.pik-potsdam.de/pubman/item/item_35009/component/file_35022/PlanetaryHealthCheck2026.pdf
-  - label: "Findlay et al., Ocean acidification, another planetary boundary crossed, Global Change Biology, 2025"
-    url: https://doi.org/10.1111/gcb.70238
-  - label: "Jiang et al., Global surface ocean acidification indicators from 1750 to 2100, JAMES, 2023"
-    url: https://doi.org/10.1029/2022MS003563
   - label: "WMO, State of the Global Climate 2025, 2026"
     url: https://library.wmo.int/records/item/69807-state-of-the-global-climate-2025
-  - label: "IPCC, AR6 Working Group I Summary for Policymakers, 2021"
+  - label: "Bednaršek et al., Systematic review and meta-analysis toward synthesis of thresholds of ocean acidification impacts on calcifying pteropods, Frontiers in Marine Science, 2019"
+    url: https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2019.00227/full
+  - label: "Findlay et al., Ocean acidification: another planetary boundary crossed, Global Change Biology, 2025"
+    url: https://plymsea.ac.uk/id/eprint/10454/
+  - label: "Dawn (AFP), on UN World Population Prospects 2024, 2024"
+    url: https://www.dawn.com/news/1845492
+  - label: "IPCC, AR6 Working Group I, Summary for Policymakers, 2021"
     url: https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_SPM.pdf
 ---
 
-## What it is
+## Why it matters here
 
-When CO₂ dissolves in seawater it forms carbonic acid. The acid releases hydrogen ions, which lower the pH. Those ions also lock up carbonate, the building block that corals, oysters and tiny plankton use for shells and skeletons ([Planetary Health Check 2026](https://publications.pik-potsdam.de/pubman/item/item_35009/component/file_35022/PlanetaryHealthCheck2026.pdf)).
+Seawater that absorbs CO₂ loses carbonate ions, the building block of shells and coral skeletons. The aragonite saturation state, Ω, measures what is left: [above 1 shells can form, below 1 the water dissolves them](https://ueaeprints.uea.ac.uk/id/eprint/91703/1/J_Adv_Model_Earth_Syst_2023_Jiang_Global_Surface_Ocean_Acidification_Indicators_From_1750_to_2100.pdf). The harm runs through food: shellfish, reefs and tiny sea snails (pteropods) that fish eat. Aquatic foods give [15% of the world's animal protein, and at least a fifth of it for 3.2 billion people](https://www.fao.org/newsroom/detail/fao-report-global-fisheries-and-aquaculture-production-reaches-a-new-record-high/en). On its own, acidification stays at level 1 unless CO₂ climbs very high.
 
-Scientists track this with the **aragonite saturation state (Ωarag)**: how much carbonate the water holds compared with what shells need. Above 1, shells can form. Below 1, the water is corrosive and shells dissolve. Ωarag is about 3.3–4 in the tropics and 1–2 near the poles. Seawater is still alkaline; "acidification" means moving toward acid, not being acid ([WMO](https://library.wmo.int/records/item/69807-state-of-the-global-climate-2025)).
+## In numbers
 
-## Why it matters
+- **Today.** Global surface Ω was [2.85 in 2024, against 3.57 in 1750](https://publications.pik-potsdam.de/pubman/item/item_35009/component/file_35022/PlanetaryHealthCheck2026.pdf): 2.85 ÷ 3.57 = 80%, just below the boundary of 0.8 × 3.57 = 2.86.
+- **Acidity.** pH fell [from 8.19 in 1750 to 8.07 in 2010](https://ueaeprints.uea.ac.uk/id/eprint/91703/1/J_Adv_Model_Earth_Syst_2023_Jiang_Global_Surface_Ocean_Acidification_Indicators_From_1750_to_2100.pdf); 10^0.12 = 1.32, so a third more hydrogen ions. It falls [0.017 a decade and is unprecedented for at least 26,000 years](https://library.wmo.int/records/item/69807-state-of-the-global-climate-2025).
+- **Thresholds.** Pteropod shells [start to dissolve at Ω 1.5, badly at 1.2, and survival may fail below 0.95](https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2019.00227/full), the last with low confidence. Polar surface water was [1.5–1.9 in 2010](https://ueaeprints.uea.ac.uk/id/eprint/91703/1/J_Adv_Model_Earth_Syst_2023_Jiang_Global_Surface_Ocean_Acidification_Indicators_From_1750_to_2100.pdf). Habitat has shrunk [43% for tropical reefs, up to 61% for polar pteropods and 13% for coastal bivalves](https://plymsea.ac.uk/id/eprint/10454/). We found no published threshold at which fish stocks fail.
 
-- **Shell-builders lose habitat.** Since pre-industrial times, suitable habitat has shrunk by 43% for tropical and subtropical coral reefs, by up to 61% for polar pteropods ("sea butterflies", a key fish food), and by 13% for coastal shellfish ([Findlay et al. 2025](https://doi.org/10.1111/gcb.70238)). Pteropod shell damage is already visible in polar waters.
-- **Reefs get hit twice.** Heatwaves cause most bleaching; acidification slows recovery.
-- **The ocean absorbs less CO₂.** Less carbonate means weaker buffering, and uptake efficiency has already slipped slightly (PHC 2026).
-- **It lasts.** Deep-ocean acidification is irreversible over centuries to millennia ([IPCC AR6](https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_SPM.pdf)).
+## What each level looks like
 
-Alone, acidification is a slow squeeze on fisheries and coastal livelihoods, not a direct threat to civilization. It matters because it stacks on top of warming and oxygen loss.
+- **Below 2.0, level 2.** Needs very high CO₂. At the global [1.6 of very high emissions, polar water falls by about 1](https://ueaeprints.uea.ac.uk/id/eprint/91703/1/J_Adv_Model_Earth_Syst_2023_Jiang_Global_Surface_Ocean_Acidification_Indicators_From_1750_to_2100.pdf), to 0.5–0.9, under the pteropod survival line. Our judgment: shellfish, reef and some plankton-fed fisheries fail together, and over 1% of the [10.2 billion people of 2100](https://www.dawn.com/news/1845492) could lose a main food.
+- **2.0–2.86, level 1.** Past the boundary and the [provisional high-risk line at 2.5](https://publications.pik-potsdam.de/pubman/item/item_35009/component/file_35022/PlanetaryHealthCheck2026.pdf): shells thin and reefs grow slower; fish farms and trade fill most gaps. Our judgment.
+- **2.86–3.21, level 1.** Inside the boundary but past the [stricter 10% limit proposed in 2025](https://plymsea.ac.uk/id/eprint/10454/), 0.9 × 3.57 = 3.21. Our judgment.
+- **3.21–3.6, level 0.** Near pre-industrial; no harm to people through this channel. Our judgment.
 
-## Where it stands
+## Where the 2100 odds come from
 
-Global surface Ωarag was **2.85** in 2024, down from **3.57** in 1750 (PHC 2026). Surface pH fell by 0.017 units per decade over 1985–2025, and today's pH is unprecedented for at least 26,000 years (WMO). From 1750 to 2010, pH dropped from 8.19 to 8.07 ([Jiang et al. 2023](https://doi.org/10.1029/2022MS003563)): about a third more hydrogen ions.
-
-The 2100 outcome follows CO₂. Under very low emissions Ωarag recovers slightly to 2.9; under very high emissions it falls to 1.6 (Jiang et al.). Under the intermediate SSP2-4.5 path, close to today's policies, the whole surface ocean passes the 20% decline line and nearly a quarter falls more than 40% below pre-industrial (Findlay et al.). Our own chemistry estimate for that path is a global mean near **2.35**, a derived figure, not a published one.
-
-## The lines that matter
-
-- **2.86, the planetary boundary:** 80% of pre-industrial, set to stop polar waters turning corrosive at large scale. The 2026 Planetary Health Check judges it crossed. Chance it is still crossed in 2100: about 97% (our judgment).
-- **2.50, the provisional high-risk line:** 70% of pre-industrial, reached once atmospheric CO₂ passes roughly 540–560 ppm (derived). Current policies get there before 2100; fully delivered pledges would not. Chance: about 65% (judgment).
-- **3.21, a stricter proposal:** Findlay et al. argue for a 10% limit. The whole surface ocean passed it by 2000.
+The value follows CO₂: Ω reaches [2.9 by 2100 under very low emissions and 1.6 under very high](https://ueaeprints.uea.ac.uk/id/eprint/91703/1/J_Adv_Model_Earth_Syst_2023_Jiang_Global_Surface_Ocean_Acidification_Indicators_From_1750_to_2100.pdf), on a scale where 1750 is 3.6. No source gives probabilities, so the judges estimate the curve. The 10% line was [passed across the whole surface ocean by 2000](https://plymsea.ac.uk/id/eprint/10454/).
 
 ## What superintelligence can and cannot change
 
-SI can speed up emission cuts and make CO₂ removal cheaper. Net-negative emissions would lower CO₂ and reverse surface ocean acidification ([IPCC AR6](https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_SPM.pdf)).
-
-It cannot change the chemistry. Surface Ωarag tracks CO₂ in the air (PHC 2026), so it stays low while CO₂ stays high. Acidity already in the deep ocean stays for centuries, and lost reefs do not regrow on demand.
+Cheaper clean energy and CO₂ removal could bring CO₂ down and let surface water recover. Acidity already in the deep ocean [stays for centuries to millennia](https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_SPM.pdf).

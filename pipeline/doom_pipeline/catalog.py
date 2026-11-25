@@ -32,6 +32,24 @@ WORLD_BANK_CODES: dict[str, tuple[str, int | None]] = {
     "government_effectiveness": ("GOV_WGI_GE.EST", 3),
 }
 
+# Household consumption per person in 2021 international dollars, and the UHC service coverage index
+# (SH.UHC.SRVS.CV.XD until the World Bank archived that code).
+CONSUMPTION_CODE = "NE.CON.PCAP.PP.KD"
+HEALTH_COVERAGE_CODE = "SH_UHC_SCI"
+# The World Bank aggregate whose consumption per person is the living standard's 100.
+HIGH_INCOME = "HIC"
+
+# How people live (v0.3). They do not count toward MIN_FACTORS, so the set of published countries stays the judged one.
+LIVING_FACTORS: tuple[str, ...] = (
+    "consumption_per_person",
+    "living_standard",
+    "energy_per_person",
+    "healthy_life_years",
+    "health_coverage",
+    "hours_worked",
+    "feel_safe",
+)
+
 SPECS: list[IndicatorSpec] = [
     world_bank(factor_id="electricity_access", code="EG.ELC.ACCS.ZS", source="World Bank (SDG 7.1.1)", decimals=1),
     world_bank(factor_id="water_access", code="SH.H2O.SMDW.ZS", source="WHO/UNICEF JMP via World Bank", decimals=1),
@@ -79,7 +97,63 @@ SPECS: list[IndicatorSpec] = [
         url_template="https://www.wri.org/data/aqueduct-40-country-rankings",
         decimals=2,
     ),
+    world_bank(factor_id="consumption_per_person", code=CONSUMPTION_CODE, source="World Bank (ICP)", decimals=0),
+    world_bank(factor_id="living_standard", code=CONSUMPTION_CODE, source="Doom Analysis index from World Bank (ICP) data", decimals=1),
+    IndicatorSpec(
+        factor_id="energy_per_person",
+        source="Energy Institute and EIA via Our World in Data",
+        url_template="https://ourworldindata.org/grapher/per-capita-energy-use",
+        decimals=0,
+    ),
+    IndicatorSpec(
+        factor_id="healthy_life_years",
+        source="WHO Global Health Estimates",
+        url_template="https://www.who.int/data/gho/data/indicators/indicator-details/GHO/gho-ghe-hale-healthy-life-expectancy-at-birth",
+        decimals=1,
+    ),
+    world_bank(factor_id="health_coverage", code=HEALTH_COVERAGE_CODE, source="WHO via World Bank (SDG 3.8.1)", decimals=0),
+    IndicatorSpec(
+        factor_id="hours_worked",
+        source="Penn World Table 11.0 via Our World in Data",
+        url_template="https://ourworldindata.org/grapher/annual-working-hours-per-worker",
+        decimals=0,
+    ),
+    IndicatorSpec(
+        factor_id="feel_safe",
+        source="Gallup Global Safety Report 2026",
+        url_template="https://www.gallup.com/analytics/356996/gallup-global-safety-report.aspx",
+        decimals=0,
+    ),
 ]
+
+# Country names on Gallup's safety map that differ from the World Bank's.
+GALLUP_NAMES: dict[str, str] = {
+    "Hong Kong (S.A.R. of China)": "HKG",
+    "Vietnam": "VNM",
+    "South Korea": "KOR",
+    "Egypt": "EGY",
+    "United States of America": "USA",
+    "Kyrgyzstan": "KGZ",
+    "Somalia": "SOM",
+    "Czech Republic": "CZE",
+    "United Kingdom of Great Britain and Northern Ireland": "GBR",
+    "Republic of Moldova": "MDA",
+    "The Comoros": "COM",
+    "Slovakia": "SVK",
+    "Venezuela": "VEN",
+    "Türkiye": "TUR",
+    "State of Palestine": "PSE",
+    "Côte d'Ivoire": "CIV",
+    "Gambia": "GMB",
+    "Lao People's Democratic Republic": "LAO",
+    "THE DOMINICAN REPUBLIC": "DOM",
+    "The Democratic Republic of the Congo": "COD",
+    "The Republic of the Congo": "COG",
+}
+# Places Gallup surveys that the pipeline has no country for.
+GALLUP_UNPUBLISHED: tuple[str, ...] = ("Kosovo", "Northern Cyprus", "Taiwan, Province of China")
+# The Global Safety Report 2026 map shows the Gallup World Poll surveys of 2025.
+GALLUP_SURVEY_YEAR = 2025
 
 # UN M49 sub-regions grouped into the site's twelve regions.
 REGIONS: list[Region] = [

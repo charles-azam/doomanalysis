@@ -481,6 +481,72 @@ export const displays: FactorDisplay[] = [
     better: 'lower',
     thresholds: [],
   },
+  // How people live
+  {
+    factorId: 'living_standard', symbol: '',
+    why: 'What a person can actually consume in a year, with today’s rich-world average set to 100. Abundance, as this site defines it, is 500.',
+    min: 1,
+    max: 1000,
+    log: true,
+    better: 'higher',
+    thresholds: [
+      { value: 100, label: 'Rich world today', severity: 'goal', basis: 'published' },
+      { value: 500, label: 'Abundance 500', severity: 'goal', basis: 'judgment' },
+    ],
+  },
+  {
+    factorId: 'consumption_per_person', symbol: ' $',
+    why: 'Everything households buy and use in a year, per person, adjusted for prices so that a dollar buys the same everywhere.',
+    min: 300,
+    max: 200000,
+    log: true,
+    better: 'higher',
+    thresholds: [
+      { value: 3030, label: '$8.30 a day', severity: 'limit', basis: 'published' },
+      { value: 1095, label: '$3 a day', severity: 'danger', basis: 'published' },
+    ],
+  },
+  {
+    factorId: 'energy_per_person', symbol: ' kWh',
+    why: 'All the energy a person commands in a year: fuel, heat and electricity. Nearly everything else in a living standard is made with it.',
+    min: 200,
+    max: 250000,
+    log: true,
+    better: 'higher',
+    thresholds: [],
+  },
+  {
+    factorId: 'healthy_life_years', symbol: ' yrs',
+    why: 'Years lived in good health, not just years lived.',
+    min: 40,
+    max: 80,
+    better: 'higher',
+    thresholds: [],
+  },
+  {
+    factorId: 'health_coverage', symbol: '',
+    why: 'Whether people actually get essential care: vaccines, safe childbirth, treatment for infections and chronic disease, a hospital within reach.',
+    min: 0,
+    max: 100,
+    better: 'higher',
+    thresholds: [],
+  },
+  {
+    factorId: 'hours_worked', symbol: ' h',
+    why: 'The time a living standard costs. Richer countries tend to consume more while working fewer hours.',
+    min: 1200,
+    max: 2800,
+    better: 'lower',
+    thresholds: [],
+  },
+  {
+    factorId: 'feel_safe', symbol: '%',
+    why: 'People who say they feel safe walking alone at night where they live: security as people experience it.',
+    min: 0,
+    max: 100,
+    better: 'higher',
+    thresholds: [],
+  },
 ]
 
 export function displayFor({ factorId }: { factorId: string }): FactorDisplay {

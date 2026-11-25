@@ -1,4 +1,4 @@
-import { formatPercent } from '../model/judgment.ts'
+import { formatPercent } from '../model/forecast.ts'
 
 export type DumbbellRow = { name: string; flag: string; withSi: number; withoutSi: number }
 

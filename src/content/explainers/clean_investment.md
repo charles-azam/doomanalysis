@@ -1,7 +1,7 @@
 ---
 factor: clean_investment
 title: "Clean share of energy investment"
-summary: "Where the world puts its energy money today decides what energy system it will have for decades; the clean share tracks that shift."
+summary: "The share of the world's yearly energy investment going to clean energy rather than oil, gas and coal, which shows what energy system the world is building for the coming decades."
 sources:
   - label: "Down To Earth, Clean energy investment saved fuel importers $260 billion in 2025 (IEA World Energy Investment 2026), 2026"
     url: https://www.downtoearth.org.in/energy/clean-energy-investment-saved-fuel-importers-260-billion-in-2025-iea
@@ -11,27 +11,26 @@ sources:
     url: https://www.thenationalnews.com/business/energy/2023/09/26/net-zero-achievable-by-2050-but-more-investment-and-renewable-capacity-needed-iea-says
 ---
 
-## What it is
+## Why it matters here
 
-The share of all money invested in energy each year that goes to clean energy: renewables, nuclear, grids, storage, low-emission fuels, efficiency and electrification. The rest goes to oil, gas and coal supply and to fossil power. The figures come from the International Energy Agency's (IEA) annual World Energy Investment report.
+Power plants, grids and oil fields run for decades, so this year's investment is the energy system of the 2050s. A rising clean share is how the parent card, solar and wind with storage, grows. It is a measure, not a level; its effect on people counts in the parent card.
 
-## Why it matters
+## In numbers
 
-Power plants, pipelines and oil fields last 30 years or more, so today's investment locks in tomorrow's energy system, its emissions and its costs. A rising clean share means future energy depends less on fuels that must be bought, burned and often imported, and more on equipment that produces cheaply once it is built.
+- For 2026 the International Energy Agency (IEA) expects $3.4 trillion of energy investment: about $2.2 trillion for renewables, nuclear, grids, storage, low-emission fuels, efficiency and electrification, and $1.2 trillion for oil, gas and coal ([Down To Earth](https://www.downtoearth.org.in/energy/clean-energy-investment-saved-fuel-importers-260-billion-in-2025-iea)). That is 2.2 / 3.4 = 65% clean, or $1.80 clean for each fossil dollar.
+- In 2023 the split was $1.7 trillion clean against about $1 trillion fossil, 1.7 / 2.7 = 63%. Five years earlier the two were about even ([pv magazine](https://www.pv-magazine-australia.com/2023/06/01/global-investment-in-clean-energy-nearly-doubles-that-of-fossil-fuels/)).
+- Money does not all move one way. Gas investment of $330 billion in 2026 is a ten-year high, and coal supply investment of $180 billion is the highest since 2012 ([Down To Earth](https://www.downtoearth.org.in/energy/clean-energy-investment-saved-fuel-importers-260-billion-in-2025-iea)).
 
-## Where it stands
+## The lines on the card
 
-The IEA expects $3.4 trillion of energy investment in 2026: about $2.2 trillion clean and $1.2 trillion fossil, a clean share of about 65% ([Down To Earth](https://www.downtoearth.org.in/energy/clean-energy-investment-saved-fuel-importers-260-billion-in-2025-iea)). In 2023, about $1.70 went to clean energy for every dollar spent on fossil fuels; five years earlier the ratio was about 1:1 ([pv magazine](https://www.pv-magazine-australia.com/2023/06/01/global-investment-in-clean-energy-nearly-doubles-that-of-fossil-fuels/)). Spending on power grids is about $550 billion in 2026, up nearly 20%, and battery storage is set to pass $100 billion ([Down To Earth](https://www.downtoearth.org.in/energy/clean-energy-investment-saved-fuel-importers-260-billion-in-2025-iea)).
+- **50%, parity**, roughly where the world stood around 2018.
+- **63%, 2023**: $1.70 clean for each fossil dollar.
+- **79%, net-zero pace.** The IEA's 2023 Net Zero Roadmap needs $4.5 trillion a year of clean investment by the early 2030s ([The National](https://www.thenationalnews.com/business/energy/2023/09/26/net-zero-achievable-by-2050-but-more-investment-and-renewable-capacity-needed-iea-says)). With fossil spending held at $1.2 trillion, that is 4.5 / 5.7 = 79%. In the IEA's path fossil spending falls, so the share would be higher.
 
-The shift is not one-way. Gas investment of $330 billion in 2026 is the highest in a decade. Coal supply investment of $180 billion is the highest since 2012, and China accounts for nearly 70% of it (same source). Money is also unevenly spread. Emerging economies outside China got only 10% of the growth in global energy investment over the past decade, though they will drive more than half of future demand growth. Their borrowing costs are at least double those of rich economies (same source).
+## Where the 2100 odds come from
 
-The pace needed is higher. The IEA's 2023 Net Zero Roadmap says clean energy investment must reach about $4.5 trillion a year by the early 2030s, against $1.8 trillion in 2023 ([The National](https://www.thenationalnews.com/business/energy/2023/09/26/net-zero-achievable-by-2050-but-more-investment-and-renewable-capacity-needed-iea-says)). If fossil investment stayed at today's $1.2 trillion, that would mean a clean share near 79%. In the IEA's pathway fossil spending falls, so the share would be higher still. No one projects this share to 2100.
-
-## The lines that matter
-
-- **50%, parity.** Clean and fossil investment equal, as around 2018. Falling back there would signal that the transition has stalled. A judgment line.
-- **About 79%, 1.5°C pace.** A rough line this site derives from the IEA's $4.5 trillion requirement, holding fossil spending flat. Below it, investment falls short of what the IEA says the net-zero path needs.
+No one projects this share to 2100. It then depends mostly on how much oil and gas is still drilled: a share near 100% means fossil supply has stopped.
 
 ## What superintelligence can and cannot change
 
-Superintelligence (SI) can keep pushing clean technology costs down. The IEA says 2026's energy investment would cost nearly twice as much without past cost falls ([Down To Earth](https://www.downtoearth.org.in/energy/clean-energy-investment-saved-fuel-importers-260-billion-in-2025-iea)). Cheaper technology pulls money toward clean energy on its own. SI cannot set interest rates, carbon prices, subsidies or permitting rules. Governments and lenders decide those, and they decide where much of the money goes.
+Suppose superintelligence arrives in the 2030s. It could keep cutting clean costs, which pulls money on its own: the IEA says 2026's energy investment would have cost nearly twice as much without the past decade's cost falls. It cannot set interest rates, subsidies or permits. Borrowing costs in emerging economies are at least double those of rich ones, and those outside China got only 10% of the growth in energy investment over the past decade ([Down To Earth](https://www.downtoearth.org.in/energy/clean-energy-investment-saved-fuel-importers-260-billion-in-2025-iea)).

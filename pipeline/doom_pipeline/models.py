@@ -76,6 +76,10 @@ class RawInputs:
     population: dict[str, Point]
     indicators: dict[str, dict[str, Point]]
     projections: dict[str, dict[str, Point]]
+    # Consumption per person of the World Bank high-income aggregate: the living standard's 100.
+    high_income_consumption: Point
+    # People in 2100 by ISO3 code, plus the world total under "WLD".
+    population_2100: dict[str, int]
 
 
 @dataclass(frozen=True)
@@ -83,3 +87,7 @@ class Dataset:
     entities: list[Entity]
     observations: list[Observation]
     projections: list[Projection]
+    # World ("WLD") and high-income ("HIC") values of the living-standard measures: printed by the run, not written.
+    benchmarks: list[Observation]
+    # People in 2100 for the world, every region and every published country.
+    population_2100: dict[str, int]

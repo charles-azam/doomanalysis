@@ -1,7 +1,8 @@
 import { useMemo, useState } from 'react'
-import type { Outcome, ScenarioKey } from '../model/types.ts'
-import { formatPercent } from '../model/judgment.ts'
-import { OutcomeBar, OutcomeLegend } from './OutcomeBar.tsx'
+import { outcomeNames } from '../data/definitions.ts'
+import { formatPercent, outcomeKeys } from '../model/forecast.ts'
+import type { ScenarioKey, SixOutcomes } from '../model/types.ts'
+import { SixOutcomeBar, SixOutcomeLegend } from './SixOutcomeBar.tsx'
 
 export type LeaderboardRow = {
   id: string
@@ -12,7 +13,7 @@ export type LeaderboardRow = {
   region?: string
   population: number
   runs: number
-  outcomes?: Record<ScenarioKey, Outcome>
+  outcomes?: Record<ScenarioKey, SixOutcomes>
 }
 
 const scenarioLabels: Record<ScenarioKey, string> = {
@@ -21,9 +22,12 @@ const scenarioLabels: Record<ScenarioKey, string> = {
   noSi: 'If it never does',
 }
 
-type SortKey = 'collapse' | 'abundance' | 'population' | 'name'
+type SortKey = 'down' | 'up' | 'abundance' | 'population' | 'name'
 
-/** Every place, searchable and filterable by region, each split into abundance, muddling through and collapse. */
+const downOf = (o: SixOutcomes): number => o.collapse + o.doom
+const upOf = (o: SixOutcomes): number => o.abundance + o.better
+
+/** Every place, searchable and filterable by region, each split into its six outcomes. */
 export function Leaderboard({ rows, regions }: { rows: LeaderboardRow[]; regions: { id: string; name: string }[] }) {
   const [scenario, setScenario] = useState<ScenarioKey>('weighted')
   const [sort, setSort] = useState<SortKey>('population')
@@ -40,7 +44,8 @@ export function Leaderboard({ rows, regions }: { rows: LeaderboardRow[]; regions
         if (a.kind !== b.kind && region === 'all' && q === '') return a.kind === 'world' ? -1 : b.kind === 'world' ? 1 : a.kind === 'region' ? -1 : 1
         if (sort === 'name') return a.name.localeCompare(b.name)
         if (sort === 'population') return b.population - a.population
-        const value = (row: LeaderboardRow) => (row.outcomes ? row.outcomes[scenario][sort] : -1)
+        const pick = sort === 'down' ? downOf : sort === 'up' ? upOf : (o: SixOutcomes) => o.abundance
+        const value = (row: LeaderboardRow) => (row.outcomes ? pick(row.outcomes[scenario]) : -1)
         return value(b) - value(a)
       })
   }, [rows, query, region, sort, scenario])
@@ -69,7 +74,8 @@ export function Leaderboard({ rows, regions }: { rows: LeaderboardRow[]; regions
         </select>
         <select className="rounded-md px-2 py-1.5" style={control} value={sort} onChange={(e) => setSort(e.target.value as SortKey)} aria-label="Sort">
           <option value="population">Most populous</option>
-          <option value="collapse">Most likely to collapse</option>
+          <option value="down">Most likely to collapse</option>
+          <option value="up">Most likely better off</option>
           <option value="abundance">Most likely abundant</option>
           <option value="name">Name</option>
         </select>
@@ -77,15 +83,17 @@ export function Leaderboard({ rows, regions }: { rows: LeaderboardRow[]; regions
           {asTable ? 'Show bars' : 'Show table'}
         </button>
       </div>
-      <OutcomeLegend />
+      <SixOutcomeLegend />
       {asTable ? (
         <table className="data">
           <thead>
             <tr>
               <th>Place</th>
-              <th className="num">Abundance</th>
-              <th className="num">Muddling through</th>
-              <th className="num">Collapse (World: doom)</th>
+              {outcomeKeys.map((key) => (
+                <th key={key} className="num">
+                  {outcomeNames[key]}
+                </th>
+              ))}
               <th className="num">Judge runs</th>
             </tr>
           </thead>
@@ -97,9 +105,11 @@ export function Leaderboard({ rows, regions }: { rows: LeaderboardRow[]; regions
                     {row.mark} {row.name}
                   </a>
                 </td>
-                <td className="num">{row.outcomes ? formatPercent({ value: row.outcomes[scenario].abundance }) : '—'}</td>
-                <td className="num">{row.outcomes ? formatPercent({ value: row.outcomes[scenario].muddle }) : '—'}</td>
-                <td className="num">{row.outcomes ? formatPercent({ value: row.outcomes[scenario].collapse }) : '—'}</td>
+                {outcomeKeys.map((key) => (
+                  <td key={key} className="num">
+                    {row.outcomes ? formatPercent({ value: row.outcomes[scenario][key] }) : '—'}
+                  </td>
+                ))}
                 <td className="num">{row.runs}</td>
               </tr>
             ))}
@@ -114,13 +124,15 @@ export function Leaderboard({ rows, regions }: { rows: LeaderboardRow[]; regions
                 {row.name}
               </a>
               {row.outcomes ? (
-                <OutcomeBar outcome={row.outcomes[scenario]} name={row.name} collapseLabel={row.kind === 'world' ? 'Doom' : undefined} />
+                <SixOutcomeBar outcomes={row.outcomes[scenario]} name={row.name} height={24} />
               ) : (
                 <span className="text-xs" style={{ color: 'var(--ink-muted)' }}>
                   Not judged yet
                 </span>
               )}
-              <span className="text-right text-sm font-semibold tabular">{row.outcomes ? formatPercent({ value: row.outcomes[scenario].collapse }) : ''}</span>
+              <span className="text-right text-sm font-semibold tabular" title="Collapse or doom">
+                {row.outcomes ? formatPercent({ value: downOf(row.outcomes[scenario]) }) : ''}
+              </span>
             </li>
           ))}
         </ul>
