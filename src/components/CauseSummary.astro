@@ -10,12 +10,15 @@ type Props = { cause: RootCause }
 
 const { cause } = Astro.props
 const groups = [
+  ...(causeTable.noSi.atLeast2 && causeTable.si.atLeast2
+    ? [{ key: 'atLeast2', label: 'Level 2+', note: 'Level 2 or worse: over 1% of humanity dies or lastingly loses decent living conditions', swatch: dangerColors[2] }]
+    : []),
   { key: 'atLeast3', label: 'Level 3+', note: 'Level 3 or worse: over 10% of humanity dies or lastingly loses decent living conditions', swatch: dangerColors[3] },
   { key: 'atLeast4', label: 'Level 4+', note: 'Level 4 or worse: over half of humanity', swatch: dangerColors[4] },
   { key: 'doom', label: 'Doom', note: 'Level 5: extinction, or no recovery within a century', swatch: dangerColors[5] },
 ].map((g) => {
-  const key = g.key as 'atLeast3' | 'atLeast4' | 'doom'
-  return { ...g, without: causeTable.noSi[key].causes[cause], with: causeTable.si[key].causes[cause] }
+  const key = g.key as 'atLeast2' | 'atLeast3' | 'atLeast4' | 'doom'
+  return { ...g, without: causeTable.noSi[key]?.causes[cause] ?? 0, with: causeTable.si[key]?.causes[cause] ?? 0 }
 })
 const share = causeTable.weighted.atLeast3.total === 0 ? 0 : causeTable.weighted.atLeast3.causes[cause] / causeTable.weighted.atLeast3.total
 ---

@@ -68,8 +68,8 @@ const channelRows = headPlaces.flatMap((e) => {
 const hasSi = aiBars.length > 0 || effectRows.length > 0 || channelRows.length > 0
 
 const nav = [
+  { id: 'places', title: 'Places', color: '#e34948' },
   { id: 'how-bad', title: 'How bad, and why', color: '#eb6834' },
-  { id: 'places', title: 'Where it lands', color: '#e34948' },
   ...(hasSi ? [{ id: 'si-effect', title: 'What superintelligence changes', color: '#6250d6' }] : []),
   { id: 'over-time', title: 'Over time', color: '#0b0b0b' },
   { id: 'humanity', title: 'Humanity in 2100', color: '#c9c8c2' },
@@ -100,6 +100,10 @@ const nav = [
     </aside>
 
     <div class="flex min-w-0 flex-col gap-16">
+      <section id="places" class="scroll-mt-24">
+        <Compare client:load rows={rows} defaults={defaults} />
+      </section>
+
       <section id="how-bad" class="scroll-mt-24">
         <h2 class="section-title">
           <span class="square" style="background: #eb6834"></span>
@@ -108,14 +112,6 @@ const nav = [
         <p class="mb-4 mt-1 text-sm muted">Each catastrophe counts once, under the cause that started it, so the causes add up to 100%</p>
         <div class="mb-4"><DangerScale /></div>
         <CauseChart client:load table={causeTable} />
-      </section>
-
-      <section id="places" class="scroll-mt-24">
-        <h2 class="section-title mb-5">
-          <span class="square" style="background: #e34948"></span>
-          Where it lands
-        </h2>
-        <Compare client:load rows={rows} defaults={defaults} />
       </section>
 
       {
@@ -178,8 +174,9 @@ const nav = [
               <ChartCard title="Catastrophe" subtitle="Chance it has happened, by year · Lower is better" color="#e34948">
                 <TimelineChart
                   points={timeline}
-                  max={0.5}
+                  max={timeline.some((p) => (p.atLeast2 ?? 0) > 0.5) ? 1 : 0.5}
                   lines={[
+                    ...(timeline.some((p) => p.atLeast2 !== undefined) ? [{ key: 'atLeast2' as const, label: 'Level 2+ (over 1%)', color: '#f7c1c1' }] : []),
                     { key: 'atLeast3', label: 'Level 3+ (over 10% of humanity)', color: '#f09595' },
                     { key: 'atLeast4', label: 'Level 4+ (over half)', color: '#e34948' },
                     { key: 'doom', label: 'Doom', color: '#0b0b0b' },

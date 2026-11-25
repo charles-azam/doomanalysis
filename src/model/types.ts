@@ -272,7 +272,17 @@ export type CurveForecast = {
  * Cumulative chances by a year, for the world, in our forecast (mixed over superintelligence):
  * superintelligence deployed, and the worst thing to happen reaching level 3+, level 4+ and doom.
  */
-export type TimelinePoint = { year: number; si: number; atLeast3: number; atLeast4: number; doom: number }
+export type TimelinePoint = { year: number; si: number; atLeast3: number; atLeast4: number; doom: number; atLeast2?: number }
+
+/**
+ * Level 2 or worse, judged in a round of its own after the world: for each case and root cause, the chance that the
+ * worst thing to happen by 2100 reaches level 2 and this cause started it; and its cumulative chance by year.
+ */
+export type Level2Forecast = {
+  si: Record<RootCause, number>
+  noSi: Record<RootCause, number>
+  timeline: { year: number; atLeast2: number }[]
+}
 
 /** One judge answer under the v0.3 definitions. A run carries curves, or the world and regions, or countries, or a timeline. */
 export type ForecastRun = {
@@ -285,6 +295,7 @@ export type ForecastRun = {
   places: PlaceForecast[]
   curves: CurveForecast[]
   timeline?: TimelinePoint[]
+  level2?: Level2Forecast
 }
 
 export type SixOutcomes = Record<OutcomeKey, number>

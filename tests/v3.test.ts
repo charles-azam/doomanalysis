@@ -2,8 +2,8 @@ import test from 'node:test'
 import assert from 'node:assert/strict'
 import { cardProblems, cardSetProblems, cardTree } from '../src/model/cards.ts'
 import { atLeast, barsFor, curveEdges, curveFor, levelAt, levelChances } from '../src/model/distribution.ts'
-import { cardFloor, causeShares, headline, parentProblems, placeOutcomes, poolReadings, poolWorlds, rootCauses, timelineEnd, validatePlace, validateRun, validateTimeline, validateWorld, verdictOf, worldDanger } from '../src/model/forecast.ts'
-import type { Card, CauseDanger, ForecastRun, PlaceOutcomes, RootCause, TimelinePoint, WorldCase, WorldForecast } from '../src/model/types.ts'
+import { cardFloor, causeShares, headline, parentProblems, placeOutcomes, poolReadings, poolWorlds, rootCauses, timelineEnd, validateLevel2, validatePlace, validateRun, validateTimeline, validateWorld, verdictOf, worldDanger } from '../src/model/forecast.ts'
+import type { Card, CauseDanger, ForecastRun, Level2Forecast, PlaceOutcomes, RootCause, TimelinePoint, WorldCase, WorldForecast } from '../src/model/types.ts'
 
 const close = (actual: number, expected: number) => assert.ok(Math.abs(actual - expected) < 1e-9, `${actual} ≠ ${expected}`)
 
@@ -155,6 +155,21 @@ test('v0.3 end to end: cards, curves, causes, headline and places from mock data
   close(withTimeline.timeline?.[0].doom ?? -1, 0)
   close(withTimeline.timeline?.[4].doom ?? -1, end.doom * 0.75 * 4 / 5)
   close(withTimeline.timeline?.[5].doom ?? -1, top.doom)
+
+  // Level 2: its own round, at least each cause's level 3, joined to the timeline.
+  const level2 = (k: number): Level2Forecast => ({
+    si: Object.fromEntries(rootCauses.map((cause) => [cause, withTimeline.world.si.causes[cause].atLeast3 * k])) as Record<RootCause, number>,
+    noSi: Object.fromEntries(rootCauses.map((cause) => [cause, withTimeline.world.noSi.causes[cause].atLeast3 * k])) as Record<RootCause, number>,
+    timeline: [2030, 2040, 2050, 2075].map((year, i) => ({ year: year, atLeast2: 0.01 * (i + 1) })),
+  })
+  const withLevel2 = verdictOf({
+    runs: [run('a', 1), run('b', 2), { ...run('t', 1), batch: 'timeline', world: undefined, places: [], curves: [], timeline: timeline(1) }, { ...run('l', 1), batch: 'level2', world: undefined, places: [], curves: [], level2: level2(2) }],
+    cards: cards,
+  })
+  close(withLevel2.level2?.si.climate ?? -1, withLevel2.world.si.causes.climate.atLeast3 * 2)
+  close(withLevel2.timeline?.[0].atLeast2 ?? -1, 0)
+  close(withLevel2.timeline?.[3].atLeast2 ?? -1, 0.03)
+  assert.throws(() => validateLevel2({ level2: level2(0.5), world: withLevel2.world }), /below its level-3 chance/)
 })
 
 test('v0.3 rejects incoherent runs', () => {

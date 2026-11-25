@@ -12967,5 +12967,146 @@ export const forecastRuns: ForecastRun[] = [
    }
   ],
   "curves": []
+ },
+ {
+  "id": "level2-2026-11-25-1",
+  "batch": "level2",
+  "model": "Claude Opus 5.5",
+  "date": "2026-11-25",
+  "method": "independent agent run, prompt 2026-11-25.1",
+  "places": [],
+  "curves": [],
+  "level2": {
+   "si": {
+    "climate": 0.21,
+    "resources": 0.1,
+    "war": 0.1,
+    "civil": 0.175,
+    "disease": 0.075,
+    "ai": 0.13,
+    "natural": 0.015
+   },
+   "noSi": {
+    "climate": 0.29,
+    "resources": 0.13,
+    "war": 0.095,
+    "civil": 0.16,
+    "disease": 0.11,
+    "ai": 0.025,
+    "natural": 0.017
+   },
+   "timeline": [
+    {
+     "year": 2030,
+     "atLeast2": 0.06
+    },
+    {
+     "year": 2040,
+     "atLeast2": 0.22
+    },
+    {
+     "year": 2050,
+     "atLeast2": 0.38
+    },
+    {
+     "year": 2075,
+     "atLeast2": 0.65
+    }
+   ]
+  }
+ },
+ {
+  "id": "level2-2026-11-25-2",
+  "batch": "level2",
+  "model": "Claude Opus 5.5",
+  "date": "2026-11-25",
+  "method": "independent agent run, prompt 2026-11-25.1",
+  "places": [],
+  "curves": [],
+  "level2": {
+   "si": {
+    "climate": 0.16,
+    "resources": 0.095,
+    "war": 0.125,
+    "civil": 0.155,
+    "disease": 0.085,
+    "ai": 0.13,
+    "natural": 0.022
+   },
+   "noSi": {
+    "climate": 0.24,
+    "resources": 0.12,
+    "war": 0.115,
+    "civil": 0.13,
+    "disease": 0.1,
+    "ai": 0.028,
+    "natural": 0.022
+   },
+   "timeline": [
+    {
+     "year": 2030,
+     "atLeast2": 0.045
+    },
+    {
+     "year": 2040,
+     "atLeast2": 0.19
+    },
+    {
+     "year": 2050,
+     "atLeast2": 0.33
+    },
+    {
+     "year": 2075,
+     "atLeast2": 0.61
+    }
+   ]
+  }
+ },
+ {
+  "id": "level2-2026-11-25-3",
+  "batch": "level2",
+  "model": "Claude Opus 5.5",
+  "date": "2026-11-25",
+  "method": "independent agent run, prompt 2026-11-25.1",
+  "places": [],
+  "curves": [],
+  "level2": {
+   "si": {
+    "climate": 0.17,
+    "resources": 0.09,
+    "war": 0.12,
+    "civil": 0.14,
+    "disease": 0.08,
+    "ai": 0.14,
+    "natural": 0.012
+   },
+   "noSi": {
+    "climate": 0.24,
+    "resources": 0.11,
+    "war": 0.11,
+    "civil": 0.12,
+    "disease": 0.11,
+    "ai": 0.025,
+    "natural": 0.012
+   },
+   "timeline": [
+    {
+     "year": 2030,
+     "atLeast2": 0.035
+    },
+    {
+     "year": 2040,
+     "atLeast2": 0.14
+    },
+    {
+     "year": 2050,
+     "atLeast2": 0.27
+    },
+    {
+     "year": 2075,
+     "atLeast2": 0.54
+    }
+   ]
+  }
  }
 ]

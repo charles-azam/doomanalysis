@@ -29,10 +29,21 @@ export const scenarioKeys: ScenarioKey[] = ['weighted', 'si', 'noSi']
 
 export type CauseCell = { total: number; causes: Record<RootCause, number> }
 
-export const causeTable: Record<ScenarioKey, Record<DangerKey, CauseCell>> = Object.fromEntries(
-  scenarioKeys.map((scenario) => [
-    scenario,
-    Object.fromEntries(
+/** The levels the causes are shown at: level 2+ joins once its own round is judged. */
+export type TableKey = 'atLeast2' | DangerKey
+
+const level2Cell = (scenario: ScenarioKey): CauseCell | undefined => {
+  const level2 = outlook.level2
+  if (level2 === undefined) return undefined
+  const pick = (cause: RootCause) =>
+    scenario === 'weighted' ? outlook.world.siBy2100 * level2.si[cause] + (1 - outlook.world.siBy2100) * level2.noSi[cause] : level2[scenario][cause]
+  const causes = Object.fromEntries(rootCauses.map((cause) => [cause, pick(cause)])) as Record<RootCause, number>
+  return { total: rootCauses.reduce((total, cause) => total + causes[cause], 0), causes: causes }
+}
+
+export const causeTable: Record<ScenarioKey, Record<DangerKey, CauseCell> & Partial<Record<'atLeast2', CauseCell>>> = Object.fromEntries(
+  scenarioKeys.map((scenario) => {
+    const cells = Object.fromEntries(
       dangerKeys.map((key) => [
         key,
         {
@@ -40,9 +51,11 @@ export const causeTable: Record<ScenarioKey, Record<DangerKey, CauseCell>> = Obj
           causes: Object.fromEntries(rootCauses.map((cause) => [cause, causeDanger({ world: outlook.world, cause: cause, key: key, scenario: scenario })])) as Record<RootCause, number>,
         },
       ]),
-    ) as Record<DangerKey, CauseCell>,
-  ]),
-) as Record<ScenarioKey, Record<DangerKey, CauseCell>>
+    ) as Record<DangerKey, CauseCell>
+    const level2 = level2Cell(scenario)
+    return [scenario, level2 === undefined ? cells : { atLeast2: level2, ...cells }]
+  }),
+) as Record<ScenarioKey, Record<DangerKey, CauseCell> & Partial<Record<'atLeast2', CauseCell>>>
 
 /** People expected in 2100 (UN medium variant), the weights for humanity's outcomes. */
 export const people2100 = population2100.WLD

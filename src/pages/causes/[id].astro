@@ -6,6 +6,7 @@ import { cards } from '../../data/cards.ts'
 import { causeDefinitions } from '../../data/definitions.ts'
 import { causeColors, siColors } from '../../data/palette.ts'
 import { causeTable, outlook } from '../../data/outlook.ts'
+import { atLeast, curveFor, levelChances } from '../../model/distribution.ts'
 import { cardFloor, dangerKeys, formatPercent, rootCauses, siCases, type DangerKey } from '../../model/forecast.ts'
 import type { RootCause } from '../../model/types.ts'
 
@@ -26,6 +27,33 @@ const rows = dangerKeys.map((key) => ({
   noSi: causeTable.noSi[key].causes[cause],
   floor: Object.fromEntries(siCases.map((siCase) => [siCase, cardFloor({ cards: cards, curves: outlook.curves, cause: cause, key: key, siCase: siCase })])) as Record<'si' | 'noSi', number | undefined>,
 }))
+// Level 2+ joins once its own round is judged; "cards alone" is the most dangerous card's own chance of level 2+.
+const level2Alone = (siCase: 'si' | 'noSi') => {
+  const values = cards
+    .filter((card) => card.group === cause && card.scale === 'danger')
+    .flatMap((card) => {
+      const chances = levelChances({ card: card, points: curveFor({ card: card, judged: outlook.curves[card.id], siCase: siCase }) })
+      return chances === undefined ? [] : [atLeast({ chances: chances, level: 2 })]
+    })
+  return values.length === 0 ? undefined : Math.max(...values)
+}
+const level2 = causeTable.weighted.atLeast2
+const allRows = [
+  ...(level2 && causeTable.si.atLeast2 && causeTable.noSi.atLeast2
+    ? [
+        {
+          key: 'atLeast2',
+          name: 'Level 2 or worse',
+          weighted: level2.causes[cause],
+          share: level2.total === 0 ? 0 : level2.causes[cause] / level2.total,
+          si: causeTable.si.atLeast2.causes[cause],
+          noSi: causeTable.noSi.atLeast2.causes[cause],
+          floor: { si: level2Alone('si'), noSi: level2Alone('noSi') },
+        },
+      ]
+    : []),
+  ...rows,
+]
 const own = cards.filter((card) => card.group === cause)
 const pct = (value: number | undefined) => (value === undefined ? '—' : formatPercent({ value: value }))
 ---
@@ -59,7 +87,7 @@ const pct = (value: number | undefined) => (value === undefined ? '—' : format
       </thead>
       <tbody>
         {
-          rows.map((row) => (
+          allRows.map((row) => (
             <tr>
               <td>{row.name}</td>
               <td class="num font-semibold">{pct(row.weighted)}</td>

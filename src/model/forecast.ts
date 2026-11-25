@@ -6,6 +6,7 @@ import type {
   DangerLevel,
   EntityId,
   ForecastRun,
+  Level2Forecast,
   OutcomeKey,
   PlaceForecast,
   PlaceOutcomeKey,
@@ -170,6 +171,34 @@ export function validateTimeline({ points, world }: { points: TimelinePoint[]; w
   return sorted
 }
 
+/**
+ * A level-2 answer must give every cause in both cases, never below that cause's settled level-3 chance, with causes
+ * summing to at most 1, and a timeline that only rises and ends at or below the 2100 total.
+ */
+export function validateLevel2({ level2, world }: { level2: Level2Forecast; world: WorldForecast }): Level2Forecast {
+  for (const siCase of siCases) {
+    for (const cause of rootCauses) {
+      const value = level2[siCase][cause]
+      checkProbability({ value: value, label: `level 2 ${siCase} ${cause}` })
+      const floor = world[siCase].causes[cause].atLeast3
+      if (value + 0.002 < floor) throw new Error(`level 2 ${siCase} ${cause} is ${value}, below its level-3 chance ${floor.toFixed(4)}`)
+    }
+    const total = sum({ values: rootCauses.map((cause) => level2[siCase][cause]) })
+    if (total > 1 + tolerance) throw new Error(`level 2 ${siCase}: the causes sum to ${total}, above 1`)
+  }
+  const end = world.siBy2100 * sum({ values: rootCauses.map((c) => level2.si[c]) }) + (1 - world.siBy2100) * sum({ values: rootCauses.map((c) => level2.noSi[c]) })
+  const sorted = [...level2.timeline].sort((a, b) => a.year - b.year)
+  if (sorted.map((p) => p.year).join() !== timelineYears.join()) throw new Error(`level 2 timeline must give the years ${timelineYears.join(', ')}`)
+  let previous = 0
+  for (const point of sorted) {
+    checkProbability({ value: point.atLeast2, label: `level 2 timeline ${point.year}` })
+    if (point.atLeast2 + tolerance < previous) throw new Error(`level 2 timeline falls in ${point.year}`)
+    if (point.atLeast2 > end + 0.005) throw new Error(`level 2 timeline in ${point.year} is ${point.atLeast2}, above its 2100 value ${end.toFixed(4)}`)
+    previous = point.atLeast2
+  }
+  return { si: level2.si, noSi: level2.noSi, timeline: sorted }
+}
+
 /** Throws on any incoherent run, and returns it with place shares rescaled. Nothing invalid reaches the site. */
 export function validateRun({ run, cards }: { run: ForecastRun; cards: Card[] }): ForecastRun {
   if (run.world !== undefined) validateWorld({ world: run.world })
@@ -222,6 +251,8 @@ export type Verdict = {
   curves: Record<string, CurveForecast>
   /** 2025 to 2100, judged in between; undefined until a timeline is judged. */
   timeline: TimelinePoint[] | undefined
+  /** Level 2 or worse by root cause, judged in its own round; undefined until it is. */
+  level2: { si: Record<RootCause, number>; noSi: Record<RootCause, number> } | undefined
 }
 
 /** Law of total probability over the superintelligence hypothesis. */
@@ -321,8 +352,40 @@ export function verdictOf({ runs, cards }: { runs: ForecastRun[]; cards: Card[] 
           timelineEnd({ world: world }),
         ]
 
+  const level2Runs = checked.flatMap((run) => (run.level2 ? [validateLevel2({ level2: run.level2, world: world })] : []))
+  const level2 =
+    level2Runs.length === 0
+      ? undefined
+      : {
+          si: Object.fromEntries(rootCauses.map((cause) => [cause, mean({ values: level2Runs.map((r) => r.si[cause]) })])) as Record<RootCause, number>,
+          noSi: Object.fromEntries(rootCauses.map((cause) => [cause, mean({ values: level2Runs.map((r) => r.noSi[cause]) })])) as Record<RootCause, number>,
+        }
+  // The level-2 timeline joins the main one: 0 in 2025, judged in between, the pooled total in 2100.
+  const timelineWithLevel2 =
+    timeline === undefined || level2 === undefined
+      ? timeline
+      : timeline.map((point) => ({
+          ...point,
+          atLeast2:
+            point.year === 2025
+              ? 0
+              : point.year === 2100
+                ? world.siBy2100 * sum({ values: rootCauses.map((c) => level2.si[c]) }) + (1 - world.siBy2100) * sum({ values: rootCauses.map((c) => level2.noSi[c]) })
+                : mean({ values: level2Runs.map((r) => (r.timeline.find((p) => p.year === point.year) as { atLeast2: number }).atLeast2) }),
+        }))
+
   const latest = worldRuns.reduce((a, b) => (a.date >= b.date ? a : b))
-  return { model: latest.model, date: latest.date, worldRuns: worldRuns.length, world: world, doomSpread: { low: Math.min(...dooms), high: Math.max(...dooms) }, places: places, curves: curves, timeline: timeline }
+  return {
+    model: latest.model,
+    date: latest.date,
+    worldRuns: worldRuns.length,
+    world: world,
+    doomSpread: { low: Math.min(...dooms), high: Math.max(...dooms) },
+    places: places,
+    curves: curves,
+    timeline: timelineWithLevel2,
+    level2: level2,
+  }
 }
 
 /**

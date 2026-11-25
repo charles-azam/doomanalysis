@@ -360,3 +360,63 @@ export const timelineSchema = {
     rationale: { type: 'string' },
   },
 }
+
+/** The most dangerous card of a cause, on its own: its chance of level 2 or worse. */
+function cardsAtLevel2({ cards, curves, cause, siCase }: { cards: Card[]; curves: Record<string, CurveForecast>; cause: RootCause; siCase: 'si' | 'noSi' }): number | undefined {
+  const values = cards
+    .filter((card) => card.group === cause && card.scale === 'danger')
+    .flatMap((card) => {
+      const chances = levelChances({ card: card, points: curveFor({ card: card, judged: curves[card.id], siCase: siCase }) })
+      return chances === undefined ? [] : [atLeast({ chances: chances, level: 2 })]
+    })
+  return values.length === 0 ? undefined : Math.max(...values)
+}
+
+/** Round 5: level 2 or worse, by root cause and over time, held to the levels already settled. */
+export function buildLevel2Prompt({ verdict, cards }: { verdict: Verdict; cards: Card[] }): string {
+  const lines = rootCauses.map((cause) => {
+    const floor = (siCase: 'si' | 'noSi') => verdict.world[siCase].causes[cause].atLeast3
+    const alone = (siCase: 'si' | 'noSi') => cardsAtLevel2({ cards: cards, curves: verdict.curves, cause: cause, siCase: siCase })
+    const show = (value: number | undefined) => (value === undefined ? 'n/a' : pct(value))
+    return `- ${cause} (${causeDefinitions[cause].name}): level 3+ already settled at ${pct(floor('si'))} with superintelligence, ${pct(floor('noSi'))} without. Its most dangerous card alone gives level 2+ at ${show(alone('si'))} with, ${show(alone('noSi'))} without.`
+  })
+  return `${preamble}
+
+## Your task: level 2
+Level 2 means 1 to 10% of humanity dies or lastingly loses decent living conditions. For scale: World War II killed about 3% of humanity, the 1918 flu about 2.7%. COVID-19, well under 1%, was level 1.
+
+For each case ("si": superintelligence deployed before ${horizon}; "noSi": not) and each of the seven root causes, give the chance that the worst thing to happen to the world by ${horizon} reaches level 2 or worse AND that this cause started it.
+${scaleDefinitions.rootCause}
+
+What is already settled (pooled from independent judges), and what the cards say on their own:
+${lines.join('\n')}
+
+Then give the cumulative chance, from today, that the world has had a level 2 or worse catastrophe (any cause, our forecast mixed over superintelligence at P(SI by ${horizon}) = ${pct(verdict.world.siBy2100)}) by ${timelineYears.join(', ')}.
+
+Rules (your answer is rejected if it breaks them):
+- Every value is between 0 and 1.
+- Each cause's level-2 chance is at least its settled level-3 chance in the same case.
+- In each case the seven causes sum to at most 1.
+- The timeline never falls, and never exceeds the ${horizon} total implied by your causes.
+
+Answer only with JSON: {"level2": {"si": {${rootCauses.map((c) => `"${c}": ..`).join(', ')}}, "noSi": {...}, "timeline": [{"year": 2030, "atLeast2": ..}, ... one per year ${timelineYears.join(', ')}]}, "rationale": "two or three sentences"}.`
+}
+
+export const level2Schema = {
+  type: 'object',
+  additionalProperties: false,
+  required: ['level2', 'rationale'],
+  properties: {
+    level2: {
+      type: 'object',
+      additionalProperties: false,
+      required: ['si', 'noSi', 'timeline'],
+      properties: {
+        si: { type: 'object', additionalProperties: false, required: rootCauses, properties: Object.fromEntries(rootCauses.map((c) => [c, { type: 'number' }])) },
+        noSi: { type: 'object', additionalProperties: false, required: rootCauses, properties: Object.fromEntries(rootCauses.map((c) => [c, { type: 'number' }])) },
+        timeline: { type: 'array', items: { type: 'object', additionalProperties: false, required: ['year', 'atLeast2'], properties: { year: { type: 'number', enum: timelineYears }, atLeast2: { type: 'number' } } } },
+      },
+    },
+    rationale: { type: 'string' },
+  },
+}

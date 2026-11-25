@@ -6,7 +6,7 @@ import { curveEdges } from '../src/model/distribution.ts'
 import { poolCurves, validateRun, verdictOf } from '../src/model/forecast.ts'
 import type { Card, CurveForecast } from '../src/model/types.ts'
 import { explainersFor, explainerText } from './forecast-files.ts'
-import { buildCountryPrompt, buildCurvePrompt, buildTimelinePrompt, buildWorldPrompt, countryBatches, countrySchema, curveSchema, forecastPromptVersion, timelineSchema, worldSchema } from './forecast-prompt.ts'
+import { buildCountryPrompt, buildCurvePrompt, buildLevel2Prompt, buildTimelinePrompt, buildWorldPrompt, countryBatches, countrySchema, curveSchema, forecastPromptVersion, level2Schema, timelineSchema, worldSchema } from './forecast-prompt.ts'
 
 /**
  * Writes the v0.3 judge prompts to a folder, one file per batch.
@@ -14,10 +14,11 @@ import { buildCountryPrompt, buildCurvePrompt, buildTimelinePrompt, buildWorldPr
  *        node --experimental-strip-types pdoom/judge/print-forecast.ts world <dir>
  *        node --experimental-strip-types pdoom/judge/print-forecast.ts countries <dir> [batch size]
  *        node --experimental-strip-types pdoom/judge/print-forecast.ts timeline <dir>
+ *        node --experimental-strip-types pdoom/judge/print-forecast.ts level2 <dir>
  * The world prompt uses the curves already imported; country prompts use the world already imported.
  */
 const [mode, dir, size] = process.argv.slice(2)
-if (!['curves', 'world', 'countries', 'timeline'].includes(mode ?? '') || dir === undefined) throw new Error('usage: print-forecast.ts curves|world|countries|timeline <dir> [batch size]')
+if (!['curves', 'world', 'countries', 'timeline', 'level2'].includes(mode ?? '') || dir === undefined) throw new Error('usage: print-forecast.ts curves|world|countries|timeline|level2 <dir> [batch size]')
 mkdirSync(dir, { recursive: true })
 const write = (name: string, prompt: string, schema: object) =>
   writeFileSync(join(dir, `${name}.md`), `<!-- forecast prompt version ${forecastPromptVersion} -->\n${prompt}\n\n## Output JSON schema\n\n${JSON.stringify(schema, null, 1)}\n`)
@@ -40,6 +41,9 @@ if (mode === 'curves') {
   const aiNote = explainerText({ id: 'ai_progress_index', limit: 2500 }) ?? ''
   write('world', buildWorldPrompt({ cards: cards, curves: pooledCurves(), aiNote: aiNote }), worldSchema)
   console.log('wrote world.md')
+} else if (mode === 'level2') {
+  write('level2', buildLevel2Prompt({ verdict: verdictOf({ runs: forecastRuns, cards: cards }), cards: cards }), level2Schema)
+  console.log('wrote level2.md')
 } else if (mode === 'timeline') {
   write('timeline', buildTimelinePrompt({ verdict: verdictOf({ runs: forecastRuns, cards: cards }) }), timelineSchema)
   console.log('wrote timeline.md')

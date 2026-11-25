@@ -4,10 +4,14 @@ import { causeColors } from '../data/palette.ts'
 import { formatPercent, rootCauses, type DangerKey } from '../model/forecast.ts'
 import type { RootCause, ScenarioKey } from '../model/types.ts'
 
-/** For each scenario and level: the world's chance, and each cause's absolute chance. */
-export type CauseTable = Record<ScenarioKey, Record<DangerKey, { total: number; causes: Record<RootCause, number> }>>
+type Cell = { total: number; causes: Record<RootCause, number> }
+type LevelKey = 'atLeast2' | DangerKey
 
-const levels: { key: DangerKey; label: string; long: string }[] = [
+/** For each scenario and level: the world's chance, and each cause's absolute chance. Level 2+ only once judged. */
+export type CauseTable = Record<ScenarioKey, Record<DangerKey, Cell> & Partial<Record<'atLeast2', Cell>>>
+
+const allLevels: { key: LevelKey; label: string; long: string }[] = [
+  { key: 'atLeast2', label: 'Level 2+', long: 'a catastrophe that kills or ruins over 1% of humanity' },
   { key: 'atLeast3', label: 'Level 3+', long: 'a catastrophe that kills or ruins over 10% of humanity' },
   { key: 'atLeast4', label: 'Level 4+', long: 'a catastrophe that kills or ruins over half of humanity' },
   { key: 'doom', label: 'Doom', long: 'doom' },
@@ -21,24 +25,25 @@ const scenarios: { key: ScenarioKey; label: string }[] = [
 
 /** How bad, and why: the chance of each level by 2100, split by root cause into shares that add up to 100%. */
 export function CauseChart({ table }: { table: CauseTable }) {
-  const [level, setLevel] = useState<DangerKey>('atLeast3')
+  const [level, setLevel] = useState<LevelKey>('atLeast3')
+  const levels = allLevels.filter((l) => table.weighted[l.key] !== undefined)
   const [scenario, setScenario] = useState<ScenarioKey>('weighted')
   // Clicking level 3, 4 or 5 in a danger-scale legend switches this chart to that level.
   useEffect(() => {
     const onLevel = (event: Event) => {
       const detail = (event as CustomEvent<{ scale: string; level: number }>).detail
       if (detail.scale !== 'danger') return
-      const key: DangerKey | undefined = detail.level === 3 ? 'atLeast3' : detail.level === 4 ? 'atLeast4' : detail.level === 5 ? 'doom' : undefined
-      if (key) setLevel(key)
+      const key: LevelKey | undefined = detail.level === 2 ? 'atLeast2' : detail.level === 3 ? 'atLeast3' : detail.level === 4 ? 'atLeast4' : detail.level === 5 ? 'doom' : undefined
+      if (key && table.weighted[key] !== undefined) setLevel(key)
     }
     window.addEventListener('doom:level', onLevel)
     return () => window.removeEventListener('doom:level', onLevel)
-  }, [])
-  const current = table[scenario][level]
+  }, [table])
+  const current = table[scenario][level] ?? table[scenario].atLeast3
   const ordered = [...rootCauses].sort((a, b) => current.causes[b] - current.causes[a])
   const largest = Math.max(...ordered.map((cause) => current.causes[cause]), 1e-9)
   const share = (cause: RootCause) => (current.total === 0 ? 0 : current.causes[cause] / current.total)
-  const chosen = levels.find((l) => l.key === level) ?? levels[0]
+  const chosen = levels.find((l) => l.key === level) ?? allLevels[1]
 
   return (
     <div className="card flex flex-col gap-4 p-5">
