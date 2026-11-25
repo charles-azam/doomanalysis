@@ -1,7 +1,7 @@
 import { useState, useSyncExternalStore } from 'react'
 import type { ScenarioKey, SixOutcomes } from '../model/types.ts'
+import { ChartCard } from './ChartCard.tsx'
 import { EntityPicker } from './EntityPicker.tsx'
-import { SixOutcomeBar, SixOutcomeLegend } from './SixOutcomeBar.tsx'
 import { VerticalBars, type Bar } from './VerticalBars.tsx'
 
 export type CompareRow = {
@@ -9,6 +9,7 @@ export type CompareRow = {
   name: string
   short: string
   mark: string
+  color: string
   kind: 'world' | 'region' | 'country'
   href: string
   outcomes?: Record<ScenarioKey, SixOutcomes>
@@ -16,8 +17,8 @@ export type CompareRow = {
 
 const scenarios: { key: ScenarioKey; label: string }[] = [
   { key: 'weighted', label: 'Our forecast' },
-  { key: 'si', label: 'If superintelligence arrives' },
-  { key: 'noSi', label: 'If it never does' },
+  { key: 'si', label: 'With superintelligence' },
+  { key: 'noSi', label: 'Without' },
 ]
 
 const urlListeners = new Set<() => void>()
@@ -49,36 +50,15 @@ export function Compare({ rows, defaults }: { rows: CompareRow[]; defaults: stri
   }
 
   const chosen = rows.filter((row) => selected.includes(row.id) && row.outcomes !== undefined)
-  const outcomesOf = (row: CompareRow) => (row.outcomes as Record<ScenarioKey, SixOutcomes>)[scenario]
   const bars = (pick: (o: SixOutcomes) => number): Bar[] =>
     chosen
-      .map((row) => ({ key: row.id, label: row.short, title: row.name, mark: row.mark, href: row.href, value: pick(outcomesOf(row)) }))
+      .map((row) => ({ key: row.id, label: row.short, title: row.name, mark: row.mark, color: row.color, href: row.href, value: pick((row.outcomes as Record<ScenarioKey, SixOutcomes>)[scenario]) }))
       .sort((a, b) => b.value - a.value)
-  const down = bars((o) => o.collapse + o.doom)
-  const up = bars((o) => o.abundance)
-  const max = Math.max(0.05, ...down.map((b) => b.value), ...up.map((b) => b.value))
-  const stacked = [...chosen].sort((a, b) => outcomesOf(b).collapse + outcomesOf(b).doom - (outcomesOf(a).collapse + outcomesOf(a).doom))
-
-  const card = (title: string, color: string, subtitle: string, list: Bar[]) => (
-    <div className="card flex flex-col gap-2 p-5">
-      <h3 className="card-title">
-        <span className="square" style={{ background: color }} />
-        {title}
-      </h3>
-      <p className="text-xs" style={{ color: 'var(--ink-muted)' }}>
-        {subtitle}
-      </p>
-      <div className="mt-3">
-        {list.length > 0 ? (
-          <VerticalBars bars={list} color={color} max={max} />
-        ) : (
-          <p className="py-16 text-center text-sm" style={{ color: 'var(--ink-muted)' }}>
-            Add a place to compare.
-          </p>
-        )}
-      </div>
-    </div>
-  )
+  const charts = [
+    { title: 'Collapse or doom', subtitle: 'By 2100 · Lower is better', color: '#e34948', bars: bars((o) => o.collapse + o.doom) },
+    { title: 'Better than today', subtitle: 'Living standard in 2100 · Higher is better', color: '#8db8ea', bars: bars((o) => o.better + o.abundance) },
+    { title: 'Abundance', subtitle: '5× the rich world today, in 2100 · Higher is better', color: '#1f5fb0', bars: bars((o) => o.abundance) },
+  ]
 
   return (
     <div className="flex flex-col gap-4">
@@ -96,36 +76,18 @@ export function Compare({ rows, defaults }: { rows: CompareRow[]; defaults: stri
           onChange={update}
         />
       </div>
-      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-        {card('Collapse or doom by 2100', '#e34948', 'At least twice as poor as today, an essential lost, or global doom · Lower is better', down)}
-        {card('Abundance in 2100', '#1f5fb0', 'Nine in ten people live five times better than the rich world today · Higher is better', up)}
-      </div>
-      <div className="card flex flex-col gap-3 p-5">
-        <h3 className="card-title">
-          <span className="square" style={{ background: '#c9c8c2' }} />
-          All six outcomes in 2100
-        </h3>
-        <p className="text-xs" style={{ color: 'var(--ink-muted)' }}>
-          Each place against its own living standard today. Doom is global, so it is the same everywhere.
-        </p>
-        <SixOutcomeLegend />
-        {stacked.length > 0 ? (
-          <ul className="flex flex-col gap-1.5">
-            {stacked.map((row) => (
-              <li key={row.id} className="grid grid-cols-[minmax(0,9rem)_minmax(0,1fr)] items-center gap-3 text-sm">
-                <a href={row.href} className="flex min-w-0 items-center gap-1.5 hover:underline">
-                  <span className="flex-none">{row.mark}</span>
-                  <span className="truncate">{row.name}</span>
-                </a>
-                <SixOutcomeBar outcomes={outcomesOf(row)} name={row.name} height={22} />
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <p className="py-6 text-center text-sm" style={{ color: 'var(--ink-muted)' }}>
-            Add a place to compare.
-          </p>
-        )}
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
+        {charts.map((chart) => (
+          <ChartCard key={chart.title} title={chart.title} subtitle={chart.subtitle} color={chart.color}>
+            {chart.bars.length > 0 ? (
+              <VerticalBars bars={chart.bars} color={chart.color} max={Math.max(0.05, ...chart.bars.map((b) => b.value)) * 1.08} />
+            ) : (
+              <p className="py-16 text-center text-sm" style={{ color: 'var(--ink-muted)' }}>
+                Add a place
+              </p>
+            )}
+          </ChartCard>
+        ))}
       </div>
     </div>
   )

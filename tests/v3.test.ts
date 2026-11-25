@@ -2,8 +2,8 @@ import test from 'node:test'
 import assert from 'node:assert/strict'
 import { cardProblems, cardSetProblems, cardTree } from '../src/model/cards.ts'
 import { atLeast, barsFor, curveEdges, curveFor, levelAt, levelChances } from '../src/model/distribution.ts'
-import { cardFloor, causeShares, headline, parentProblems, placeOutcomes, poolWorlds, rootCauses, validatePlace, validateRun, validateWorld, verdictOf, worldDanger } from '../src/model/forecast.ts'
-import type { Card, CauseDanger, ForecastRun, PlaceOutcomes, RootCause, WorldCase, WorldForecast } from '../src/model/types.ts'
+import { cardFloor, causeShares, headline, parentProblems, placeOutcomes, poolWorlds, rootCauses, timelineEnd, validatePlace, validateRun, validateTimeline, validateWorld, verdictOf, worldDanger } from '../src/model/forecast.ts'
+import type { Card, CauseDanger, ForecastRun, PlaceOutcomes, RootCause, TimelinePoint, WorldCase, WorldForecast } from '../src/model/types.ts'
 
 const close = (actual: number, expected: number) => assert.ok(Math.abs(actual - expected) < 1e-9, `${actual} ≠ ${expected}`)
 
@@ -134,6 +134,17 @@ test('v0.3 end to end: cards, curves, causes, headline and places from mock data
     close(six.doom, worldDanger({ world: verdict.world, key: 'doom', scenario: scenario }))
   }
   close(placeOutcomes({ world: verdict.world, place: france, scenario: 'si' }).abundance, 0.1 * (1 - doomSi))
+
+  // Timeline: judged years between 2025 (nothing yet) and 2100 (the headline), averaged across runs.
+  assert.equal(verdict.timeline, undefined)
+  const end = timelineEnd({ world: verdict.world })
+  const timeline = (k: number): TimelinePoint[] =>
+    [2030, 2040, 2050, 2075].map((year, i) => ({ year: year, si: [0.1, 0.3, verdict.world.siBy2050, 0.7][i], atLeast3: end.atLeast3 * k * (i + 1) / 5, atLeast4: end.atLeast4 * k * (i + 1) / 5, doom: end.doom * k * (i + 1) / 5 }))
+  const withTimeline = verdictOf({ runs: [run('a', 1), run('b', 2), { ...run('t', 1), batch: 'timeline', world: undefined, places: [], curves: [], timeline: timeline(1) }, { ...run('u', 1), batch: 'timeline', world: undefined, places: [], curves: [], timeline: timeline(0.5) }], cards: cards })
+  assert.deepEqual(withTimeline.timeline?.map((p) => p.year), [2025, 2030, 2040, 2050, 2075, 2100])
+  close(withTimeline.timeline?.[0].doom ?? -1, 0)
+  close(withTimeline.timeline?.[4].doom ?? -1, end.doom * 0.75 * 4 / 5)
+  close(withTimeline.timeline?.[5].doom ?? -1, top.doom)
 })
 
 test('v0.3 rejects incoherent runs', () => {
@@ -153,4 +164,13 @@ test('v0.3 rejects incoherent runs', () => {
   assert.throws(() => validateRun({ run: { ...base, curves: [{ card: 'heat', si: [{ value: 2, above: 0.6 }], noSi: [{ value: 3.5, above: 0.2 }] }] }, cards: cards }), /no chance stated at 3.5/)
   assert.throws(() => validateRun({ run: { ...base, curves: [{ card: 'heat', si: base.curves[0].si, noSi: [{ value: 3.5, above: 0.95 }] }] }, cards: cards }), /exceeds the chance/)
   assert.throws(() => validateRun({ run: { ...base, curves: [{ card: 'nope', si: [], noSi: [] }] }, cards: cards }), /unknown card/)
+
+  const points = (doom2075: number, si2050: number): TimelinePoint[] =>
+    [2030, 2040, 2050, 2075].map((year) => ({ year: year, si: year === 2050 ? si2050 : year < 2050 ? 0.1 : 0.7, atLeast3: 0.01, atLeast4: 0.005, doom: year === 2075 ? doom2075 : 0.001 }))
+  const pooled = poolWorlds({ worlds: [good] })
+  assert.equal(validateTimeline({ points: points(0.002, 0.5), world: pooled }).length, 4)
+  assert.throws(() => validateTimeline({ points: points(0.0005, 0.5), world: pooled }), /falls/)
+  assert.throws(() => validateTimeline({ points: points(0.9, 0.5), world: pooled }), /above its 2100 value/)
+  assert.throws(() => validateTimeline({ points: points(0.002, 0.2), world: pooled }), /2050/)
+  assert.throws(() => validateTimeline({ points: points(0.002, 0.5).slice(1), world: pooled }), /must give the years/)
 })

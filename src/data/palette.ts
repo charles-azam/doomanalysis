@@ -33,3 +33,20 @@ export const causeColors: Record<RootCause, string> = {
 }
 
 export const siColors = { si: '#6250d6', noSi: '#eb6834' } as const
+
+/** One colour per region, used for the region and every country in it, on every chart. The world is black. */
+export const placeColors: Record<string, string> = {
+  WLD: '#0b0b0b',
+  'europe-north': '#2a78d6',
+  'europe-west': '#6250d6',
+  'europe-south': '#9085e9',
+  'europe-east': '#5c8fd6',
+  'north-america': '#1f5fb0',
+  'latin-america': '#1baf7a',
+  mena: '#eda100',
+  'sub-saharan-africa': '#eb6834',
+  'central-south-asia': '#e34948',
+  'east-asia': '#e87ba4',
+  'southeast-asia': '#c2410c',
+  oceania: '#0e9f9a',
+}

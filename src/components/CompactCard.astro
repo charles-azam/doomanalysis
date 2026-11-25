@@ -1,0 +1,76 @@
+---
+import { dangerColors, potentialColors, siColors } from '../data/palette.ts'
+import { formatAxis, formatValue } from '../model/chart.ts'
+import { curveFor, levelChances } from '../model/distribution.ts'
+import { formatPercent } from '../model/forecast.ts'
+import type { Card, CurveForecast, DangerLevel } from '../model/types.ts'
+
+type Props = { card: Card; judged: CurveForecast | undefined; parent?: Card }
+
+const { card, judged, parent } = Astro.props
+const noSi = curveFor({ card: card, judged: judged, siCase: 'noSi' })
+const si = curveFor({ card: card, judged: judged, siCase: 'si' })
+const subtitle = card.scale === 'danger' ? 'Chance of each danger level by 2100' : card.scale === 'potential' ? 'Chance of each potential level by 2100' : 'Chance of passing each line by 2100'
+const above = (points: typeof noSi, value: number) => points.find((p) => Math.abs(p.value - value) < 1e-9 * Math.max(1, Math.abs(value)))?.above
+
+// One group of two bars per danger level (or, for plain measures, per line on the axis): without and with superintelligence.
+const groups = (() => {
+  if (card.scale !== 'none') {
+    const a = levelChances({ card: card, points: noSi })
+    const b = levelChances({ card: card, points: si })
+    if (a === undefined || b === undefined) return []
+    const levels = [...new Set(card.bands.map((band) => band.level))].filter((level) => level > 0).sort((x, y) => x - y) as DangerLevel[]
+    const colors = card.scale === 'potential' ? potentialColors : dangerColors
+    return levels.map((level) => ({ key: String(level), label: `Level ${level}`, swatch: colors[level], without: a[level], with: b[level] }))
+  }
+  return [...(card.marks ?? [])]
+    .sort((x, y) => x.value - y.value)
+    .flatMap((mark) => {
+      const without = above(noSi, mark.value)
+      const withSi = above(si, mark.value)
+      return without === undefined || withSi === undefined ? [] : [{ key: String(mark.value), label: `> ${formatAxis({ card: card, value: mark.value })} ${card.unit.length <= 4 ? card.unit : ''}`.trim(), swatch: undefined, without: without, with: withSi }]
+    })
+})()
+const max = Math.max(0.05, ...groups.flatMap((g) => [g.without, g.with]))
+const height = 96
+const bar = (value: number) => Math.max(1, (value / max) * height)
+---
+
+<a href={`/learn/${card.id}/`} class="card flex min-w-0 flex-col gap-1 p-5 hover:border-[#bdbdbd]" id={card.id}>
+  {parent && <span class="text-[11px] muted">{parent.name} ›</span>}
+  <div class="flex items-start justify-between gap-3">
+    <h3 class="card-title min-w-0 text-[1.1rem]">{card.name}</h3>
+    <span class="flex-none text-right tabular">
+      <span class="text-lg font-semibold">{formatValue({ card: card, value: card.today.value })}</span>
+      <span class="text-xs muted"> {card.unit}</span>
+    </span>
+  </div>
+  <p class="text-xs muted">{subtitle}</p>
+  {
+    groups.length > 0 ? (
+      <div class="mt-3 flex items-end gap-2" role="img" aria-label={groups.map((g) => `${g.label}: ${formatPercent({ value: g.without })} without superintelligence, ${formatPercent({ value: g.with })} with`).join('; ')}>
+        {groups.map((g) => (
+          <div class="flex min-w-0 flex-1 flex-col items-center">
+            <div class="flex w-full items-end justify-center gap-[2px]" style={`height: ${height + 14}px`}>
+              {[
+                { value: g.without, color: siColors.noSi },
+                { value: g.with, color: siColors.si },
+              ].map((b) => (
+                <div class="flex w-1/2 max-w-6 flex-col items-center justify-end">
+                  <span class="mb-0.5 text-[9px] tabular ink-2">{b.value >= 0.005 ? formatPercent({ value: b.value }) : ''}</span>
+                  <div class="w-full rounded-t-[3px]" style={`height: ${bar(b.value)}px; background: ${b.color}`} />
+                </div>
+              ))}
+            </div>
+            <span class="mt-1 flex items-center gap-1 whitespace-nowrap text-[10px] ink-2">
+              {g.swatch && <span class="inline-block h-2 w-2 rounded-[2px]" style={`background: ${g.swatch}`} />}
+              {g.label}
+            </span>
+          </div>
+        ))}
+      </div>
+    ) : (
+      <p class="mt-3 text-xs muted">Not judged</p>
+    )
+  }
+</a>

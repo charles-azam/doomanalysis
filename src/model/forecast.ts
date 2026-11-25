@@ -14,6 +14,7 @@ import type {
   ScenarioKey,
   SiCase,
   SixOutcomes,
+  TimelinePoint,
   WorldCase,
   WorldForecast,
 } from './types.ts'
@@ -110,6 +111,43 @@ export function validateCurve({ curve, cards }: { curve: CurveForecast; cards: C
   return curve
 }
 
+/** The years a judged timeline gives; 2025 (nothing yet) and 2100 (the headline) are added by the site. */
+export const timelineYears = [2030, 2040, 2050, 2075]
+export const timelineKeys = ['si', 'atLeast3', 'atLeast4', 'doom'] as const
+
+/** The 2100 end of the timeline, from the pooled world: what every judged timeline must climb to. */
+export function timelineEnd({ world }: { world: WorldForecast }): TimelinePoint {
+  return {
+    year: 2100,
+    si: world.siBy2100,
+    atLeast3: worldDanger({ world: world, key: 'atLeast3', scenario: 'weighted' }),
+    atLeast4: worldDanger({ world: world, key: 'atLeast4', scenario: 'weighted' }),
+    doom: worldDanger({ world: world, key: 'doom', scenario: 'weighted' }),
+  }
+}
+
+/**
+ * A judged timeline must give exactly the timeline years, never fall as years pass, never exceed its 2100 value,
+ * and keep P(SI by 2050) within 3 points of the pooled world's.
+ */
+export function validateTimeline({ points, world }: { points: TimelinePoint[]; world: WorldForecast }): TimelinePoint[] {
+  const sorted = [...points].sort((a, b) => a.year - b.year)
+  if (sorted.map((p) => p.year).join() !== timelineYears.join()) throw new Error(`timeline must give the years ${timelineYears.join(', ')}`)
+  const end = timelineEnd({ world: world })
+  for (const key of timelineKeys) {
+    let previous = 0
+    for (const point of sorted) {
+      checkProbability({ value: point[key], label: `timeline ${point.year} ${key}` })
+      if (point[key] + tolerance < previous) throw new Error(`timeline ${key} falls in ${point.year}: cumulative chances only rise`)
+      if (point[key] > end[key] + 0.005) throw new Error(`timeline ${key} in ${point.year} is ${point[key]}, above its 2100 value ${end[key].toFixed(4)}`)
+      previous = point[key]
+    }
+  }
+  const at2050 = sorted.find((p) => p.year === 2050) as TimelinePoint
+  if (Math.abs(at2050.si - world.siBy2050) > 0.03) throw new Error(`timeline P(SI by 2050) is ${at2050.si}, but the world forecast says ${world.siBy2050}`)
+  return sorted
+}
+
 /** Throws on any incoherent run, and returns it with place shares rescaled. Nothing invalid reaches the site. */
 export function validateRun({ run, cards }: { run: ForecastRun; cards: Card[] }): ForecastRun {
   if (run.world !== undefined) validateWorld({ world: run.world })
@@ -160,6 +198,8 @@ export type Verdict = {
   doomSpread: Spread
   places: Record<EntityId, PlaceVerdict>
   curves: Record<string, CurveForecast>
+  /** 2025 to 2100, judged in between; undefined until a timeline is judged. */
+  timeline: TimelinePoint[] | undefined
 }
 
 /** Law of total probability over the superintelligence hypothesis. */
@@ -240,8 +280,21 @@ export function verdictOf({ runs, cards }: { runs: ForecastRun[]; cards: Card[] 
 
   const curves = poolCurves({ runs: checked, cards: cards })
 
+  const timelines = checked.flatMap((run) => (run.timeline ? [validateTimeline({ points: run.timeline, world: world })] : []))
+  const timeline =
+    timelines.length === 0
+      ? undefined
+      : [
+          { year: 2025, si: 0, atLeast3: 0, atLeast4: 0, doom: 0 },
+          ...timelineYears.map((year): TimelinePoint => {
+            const at = timelines.map((points) => points.find((p) => p.year === year) as TimelinePoint)
+            return { year: year, si: mean({ values: at.map((p) => p.si) }), atLeast3: mean({ values: at.map((p) => p.atLeast3) }), atLeast4: mean({ values: at.map((p) => p.atLeast4) }), doom: mean({ values: at.map((p) => p.doom) }) }
+          }),
+          timelineEnd({ world: world }),
+        ]
+
   const latest = worldRuns.reduce((a, b) => (a.date >= b.date ? a : b))
-  return { model: latest.model, date: latest.date, worldRuns: worldRuns.length, world: world, doomSpread: { low: Math.min(...dooms), high: Math.max(...dooms) }, places: places, curves: curves }
+  return { model: latest.model, date: latest.date, worldRuns: worldRuns.length, world: world, doomSpread: { low: Math.min(...dooms), high: Math.max(...dooms) }, places: places, curves: curves, timeline: timeline }
 }
 
 /**

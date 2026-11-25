@@ -258,7 +258,13 @@ export type CurveForecast = {
   noSi: { value: number; above: number }[]
 }
 
-/** One judge answer under the v0.3 definitions. A run carries curves, or the world and regions, or countries. */
+/**
+ * Cumulative chances by a year, for the world, in our forecast (mixed over superintelligence):
+ * superintelligence deployed, and the worst thing to happen reaching level 3+, level 4+ and doom.
+ */
+export type TimelinePoint = { year: number; si: number; atLeast3: number; atLeast4: number; doom: number }
+
+/** One judge answer under the v0.3 definitions. A run carries curves, or the world and regions, or countries, or a timeline. */
 export type ForecastRun = {
   id: string
   batch: string
@@ -268,6 +274,7 @@ export type ForecastRun = {
   world?: WorldForecast
   places: PlaceForecast[]
   curves: CurveForecast[]
+  timeline?: TimelinePoint[]
 }
 
 export type SixOutcomes = Record<OutcomeKey, number>

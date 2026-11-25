@@ -1,0 +1,16 @@
+---
+import CompactCard from './CompactCard.astro'
+import { cardTree, type CardNode } from '../model/cards.ts'
+import type { Card, CardGroup, CurveForecast } from '../model/types.ts'
+
+type Props = { cards: Card[]; group: CardGroup; curves: Record<string, CurveForecast> }
+
+const { cards, group, curves } = Astro.props
+/** Top cards first, each followed by the cards that explain it. */
+const ordered = (node: CardNode, parent?: Card): { card: Card; parent?: Card }[] => [{ card: node.card, parent: parent }, ...node.children.flatMap((child) => ordered(child, node.card))]
+const items = cardTree({ cards: cards, group: group }).flatMap((node) => ordered(node))
+---
+
+<div class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+  {items.map((item) => <CompactCard card={item.card} judged={curves[item.card.id]} parent={item.parent} />)}
+</div>

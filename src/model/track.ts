@@ -13,13 +13,3 @@ export function positionOn({ display, value }: { display: FactorDisplay; value: 
 export function isPast({ display, value, threshold }: { display: FactorDisplay; value: number; threshold: number }): boolean {
   return display.better === 'lower' ? value > threshold : value < threshold
 }
-
-/** Danger and limit lines on the bad side; goals are counted separately by countReached. */
-export function countPast({ display, value }: { display: FactorDisplay; value: number }): number {
-  return display.thresholds.filter((t) => t.severity !== 'goal' && isPast({ display: display, value: value, threshold: t.value })).length
-}
-
-/** Goal lines already reached. */
-export function countReached({ display, value }: { display: FactorDisplay; value: number }): number {
-  return display.thresholds.filter((t) => t.severity === 'goal' && !isPast({ display: display, value: value, threshold: t.value })).length
-}

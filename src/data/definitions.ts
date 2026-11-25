@@ -81,3 +81,14 @@ export const causeDefinitions = {
   ai: { name: 'AI takeover', text: 'AI systems that kill or disempower people on their own. AI used as a weapon by people counts for war or disease.' },
   natural: { name: 'Natural disasters and the unknown', text: 'Asteroids, supervolcanoes, solar storms, and causes nobody has thought of.' },
 } as const
+
+/** Short cause names for chart labels. */
+export const causeShort = {
+  climate: 'Climate',
+  resources: 'Resources',
+  war: 'War',
+  civil: 'Civil war',
+  disease: 'Disease',
+  ai: 'AI takeover',
+  natural: 'Natural',
+} as const

@@ -4,7 +4,7 @@ import { riskEvidence } from '../src/data/evidence.ts'
 import { arrivalSeries } from '../src/data/si-arrival.ts'
 import { formatAxis } from '../src/model/chart.ts'
 import { atLeast, curveEdges, curveFor, levelChances } from '../src/model/distribution.ts'
-import { cardFloor, causeShares, dangerKeys, formatPercent, headline, placeOutcomeKeys, rootCauses, sumCauses, type Verdict } from '../src/model/forecast.ts'
+import { cardFloor, causeShares, dangerKeys, formatPercent, headline, placeOutcomeKeys, rootCauses, sumCauses, timelineEnd, timelineKeys, timelineYears, type DangerKey, type Verdict } from '../src/model/forecast.ts'
 import type { Card, CurveForecast, EntityId, RootCause } from '../src/model/types.ts'
 import { evidenceFor } from './evidence.ts'
 
@@ -290,4 +290,56 @@ export function countryBatches({ size }: { size: number }): { spotlight: EntityI
     spotlight: chunk(countries.filter((c) => c.spotlight).map((c) => c.id)),
     rest: chunk(countries.filter((c) => !c.spotlight).map((c) => c.id)),
   }
+}
+
+/** Round 4: how the pooled 2100 chances build up over the years. */
+export function buildTimelinePrompt({ verdict }: { verdict: Verdict }): string {
+  const end = timelineEnd({ world: verdict.world })
+  const shares = (key: DangerKey) => {
+    const s = causeShares({ world: verdict.world, key: key, scenario: 'weighted' })
+    return rootCauses.map((cause) => `${cause} ${pct(s[cause])}`).join(', ')
+  }
+  return `${preamble}
+
+## What the judges have already settled (pooled from independent runs)
+- Superintelligence deployed: ${pct(verdict.world.siBy2050)} by 2050 and ${pct(end.si)} by ${horizon}.
+- By ${horizon}, in our forecast (mixed over superintelligence):
+  - the worst thing to happen to the world reaches level 3 or worse: ${pct(end.atLeast3)} (shares by root cause: ${shares('atLeast3')});
+  - level 4 or worse: ${pct(end.atLeast4)} (shares: ${shares('atLeast4')});
+  - doom, level 5: ${pct(end.doom)} (shares: ${shares('doom')}).
+- If superintelligence arrives, doom is ${pct(sumCauses({ worldCase: verdict.world.si, key: 'doom' }))}; if it never does, ${pct(sumCauses({ worldCase: verdict.world.noSi, key: 'doom' }))}.
+
+## Your task: when it happens
+Give the cumulative chance, from today, of each of these by ${timelineYears.join(', ')}:
+- si: superintelligence is deployed by that year;
+- atLeast3: by that year, a catastrophe of level 3 or worse has happened;
+- atLeast4: level 4 or worse has happened;
+- doom: level 5 has happened.
+
+Think about timing: when superintelligence is likely to arrive, how soon after it AI risk would play out, how warming and resource limits build up through the century, and how wars and pandemics strike at any time.
+
+Rules (your answer is rejected if it breaks them):
+- Every value is between 0 and 1, and none falls from one year to the next.
+- None may exceed its ${horizon} value above.
+- si by 2050 must stay within 3 points of ${pct(verdict.world.siBy2050)}.
+
+Answer only with JSON: {"timeline": [{"year": 2030, "si": .., "atLeast3": .., "atLeast4": .., "doom": ..}, ... one object for each of ${timelineYears.join(', ')}], "rationale": "two or three sentences on timing"}.`
+}
+
+export const timelineSchema = {
+  type: 'object',
+  additionalProperties: false,
+  required: ['timeline', 'rationale'],
+  properties: {
+    timeline: {
+      type: 'array',
+      items: {
+        type: 'object',
+        additionalProperties: false,
+        required: ['year', ...timelineKeys],
+        properties: { year: { type: 'number', enum: timelineYears }, ...Object.fromEntries(timelineKeys.map((key) => [key, { type: 'number' }])) },
+      },
+    },
+    rationale: { type: 'string' },
+  },
 }

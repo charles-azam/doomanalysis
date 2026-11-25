@@ -1,12 +1,12 @@
 import { formatPercent } from '../model/forecast.ts'
 
-export type Bar = { key: string; label: string; mark?: string; value: number; href?: string; title?: string }
+export type Bar = { key: string; label: string; mark?: string; value: number; href?: string; title?: string; color?: string }
 
 /**
  * Vertical bars from one baseline, sorted by the caller. The value sits inside the bar's top when it
  * fits, above it otherwise; labels under the bars are slanted so many entities fit side by side.
  */
-export function VerticalBars({ bars, color, max, height = 190 }: { bars: Bar[]; color: string; max: number; height?: number }) {
+export function VerticalBars({ bars, color, max, height = 170 }: { bars: Bar[]; color: string; max: number; height?: number }) {
   const scale = (value: number) => (value / max) * (height - 22)
   return (
     <div className="flex w-full items-end gap-[3px]" style={{ height: height + 78 }}>
@@ -16,10 +16,10 @@ export function VerticalBars({ bars, color, max, height = 190 }: { bars: Bar[]; 
         const text = formatPercent({ value: bar.value })
         const body = (
           <div className="flex h-full flex-col items-center justify-end" data-tip={`${bar.title ?? bar.label}: ${text}`}>
-            {!inside && <span className="mb-1 text-[10px] font-semibold tabular">{text}</span>}
+            {!inside && <span className="mb-1 text-[8px] font-semibold tabular sm:text-[10px]">{text}</span>}
             <div
-              className="flex w-full max-w-9 justify-center rounded-t-[4px] pt-1.5 text-[10px] font-semibold tabular text-white"
-              style={{ height: h, background: color }}
+              className="flex w-full max-w-9 justify-center overflow-hidden rounded-t-[4px] pt-1.5 text-[8px] font-semibold tabular text-white sm:text-[10px]"
+              style={{ height: h, background: bar.color ?? color }}
             >
               {inside ? text : ''}
             </div>

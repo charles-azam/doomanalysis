@@ -6,17 +6,18 @@ import { curveEdges } from '../src/model/distribution.ts'
 import { poolCurves, validateRun, verdictOf } from '../src/model/forecast.ts'
 import type { Card, CurveForecast } from '../src/model/types.ts'
 import { explainersFor, explainerText } from './forecast-files.ts'
-import { buildCountryPrompt, buildCurvePrompt, buildWorldPrompt, countryBatches, countrySchema, curveSchema, forecastPromptVersion, worldSchema } from './forecast-prompt.ts'
+import { buildCountryPrompt, buildCurvePrompt, buildTimelinePrompt, buildWorldPrompt, countryBatches, countrySchema, curveSchema, forecastPromptVersion, timelineSchema, worldSchema } from './forecast-prompt.ts'
 
 /**
  * Writes the v0.3 judge prompts to a folder, one file per batch.
  * Usage: node --experimental-strip-types pdoom/judge/print-forecast.ts curves <dir>
  *        node --experimental-strip-types pdoom/judge/print-forecast.ts world <dir>
  *        node --experimental-strip-types pdoom/judge/print-forecast.ts countries <dir> [batch size]
+ *        node --experimental-strip-types pdoom/judge/print-forecast.ts timeline <dir>
  * The world prompt uses the curves already imported; country prompts use the world already imported.
  */
 const [mode, dir, size] = process.argv.slice(2)
-if (!['curves', 'world', 'countries'].includes(mode ?? '') || dir === undefined) throw new Error('usage: print-forecast.ts curves|world|countries <dir> [batch size]')
+if (!['curves', 'world', 'countries', 'timeline'].includes(mode ?? '') || dir === undefined) throw new Error('usage: print-forecast.ts curves|world|countries|timeline <dir> [batch size]')
 mkdirSync(dir, { recursive: true })
 const write = (name: string, prompt: string, schema: object) =>
   writeFileSync(join(dir, `${name}.md`), `<!-- forecast prompt version ${forecastPromptVersion} -->\n${prompt}\n\n## Output JSON schema\n\n${JSON.stringify(schema, null, 1)}\n`)
@@ -39,6 +40,9 @@ if (mode === 'curves') {
   const aiNote = explainerText({ id: 'ai_progress_index', limit: 2500 }) ?? ''
   write('world', buildWorldPrompt({ cards: cards, curves: pooledCurves(), aiNote: aiNote }), worldSchema)
   console.log('wrote world.md')
+} else if (mode === 'timeline') {
+  write('timeline', buildTimelinePrompt({ verdict: verdictOf({ runs: forecastRuns, cards: cards }) }), timelineSchema)
+  console.log('wrote timeline.md')
 } else {
   const verdict = verdictOf({ runs: forecastRuns, cards: cards })
   const batches = countryBatches({ size: Number(size ?? '20') })

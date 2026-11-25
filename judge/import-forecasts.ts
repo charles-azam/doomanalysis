@@ -1,8 +1,8 @@
 import { readFileSync, writeFileSync } from 'node:fs'
 import { cards } from '../src/data/cards.ts'
 import { forecastRuns } from '../src/data/forecasts.ts'
-import { validateRun } from '../src/model/forecast.ts'
-import type { CurveForecast, ForecastRun, PlaceForecast, WorldForecast } from '../src/model/types.ts'
+import { validateRun, validateTimeline, verdictOf } from '../src/model/forecast.ts'
+import type { CurveForecast, ForecastRun, PlaceForecast, TimelinePoint, WorldForecast } from '../src/model/types.ts'
 import { forecastPromptVersion } from './forecast-prompt.ts'
 
 /**
@@ -18,7 +18,7 @@ if (model === undefined || method === undefined || batch === undefined || files.
   throw new Error('usage: import-forecasts.ts [--reset|--check] <model> <method> <batch> <run.json>...')
 }
 
-type Answer = { world?: WorldForecast & { rationale?: string }; places?: (PlaceForecast & { rationale?: string })[]; curves?: CurveForecast[] }
+type Answer = { world?: WorldForecast & { rationale?: string }; places?: (PlaceForecast & { rationale?: string })[]; curves?: CurveForecast[]; timeline?: TimelinePoint[] }
 
 const date = new Date().toISOString().slice(0, 10)
 const fresh: ForecastRun[] = files.map((file, index) => {
@@ -33,9 +33,16 @@ const fresh: ForecastRun[] = files.map((file, index) => {
     world: world,
     places: (answer.places ?? []).map((place) => ({ entity: place.entity, si: place.si, noSi: place.noSi })),
     curves: answer.curves ?? [],
+    timeline: answer.timeline?.map((point) => ({ year: point.year, si: point.si, atLeast3: point.atLeast3, atLeast4: point.atLeast4, doom: point.doom })),
   }
   return validateRun({ run: run, cards: cards })
 })
+
+// A timeline is checked against the world already stored: it must climb to the pooled 2100 values.
+if (fresh.some((run) => run.timeline !== undefined)) {
+  const stored = verdictOf({ runs: forecastRuns.filter((run) => run.batch !== batch), cards: cards })
+  for (const run of fresh) if (run.timeline) validateTimeline({ points: run.timeline, world: stored.world })
+}
 
 for (const run of fresh) console.error(`${run.id}: ${run.world ? 'world, ' : ''}${run.places.length} places, ${run.curves.length} curves: valid`)
 if (flag === '--check') process.exit(0)

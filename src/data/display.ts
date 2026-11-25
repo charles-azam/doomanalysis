@@ -490,8 +490,8 @@ export const displays: FactorDisplay[] = [
     log: true,
     better: 'higher',
     thresholds: [
-      { value: 100, label: 'Rich world today', severity: 'goal', basis: 'published' },
-      { value: 500, label: 'Abundance 500', severity: 'goal', basis: 'judgment' },
+      { value: 100, label: 'Rich world', severity: 'goal', basis: 'published' },
+      { value: 500, label: '×5', severity: 'goal', basis: 'judgment' },
     ],
   },
   {

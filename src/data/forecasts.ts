@@ -10120,5 +10120,122 @@ export const forecastRuns: ForecastRun[] = [
    }
   ],
   "curves": []
+ },
+ {
+  "id": "timeline-2026-11-25-1",
+  "batch": "timeline",
+  "model": "Claude Opus 5.5",
+  "date": "2026-11-25",
+  "method": "independent agent run, prompt 2026-11-25.1",
+  "places": [],
+  "curves": [],
+  "timeline": [
+   {
+    "year": 2030,
+    "si": 0.15,
+    "atLeast3": 0.022,
+    "atLeast4": 0.008,
+    "doom": 0.003
+   },
+   {
+    "year": 2040,
+    "si": 0.45,
+    "atLeast3": 0.095,
+    "atLeast4": 0.04,
+    "doom": 0.016
+   },
+   {
+    "year": 2050,
+    "si": 0.6,
+    "atLeast3": 0.16,
+    "atLeast4": 0.066,
+    "doom": 0.025
+   },
+   {
+    "year": 2075,
+    "si": 0.75,
+    "atLeast3": 0.3,
+    "atLeast4": 0.105,
+    "doom": 0.036
+   }
+  ]
+ },
+ {
+  "id": "timeline-2026-11-25-2",
+  "batch": "timeline",
+  "model": "Claude Opus 5.5",
+  "date": "2026-11-25",
+  "method": "independent agent run, prompt 2026-11-25.1",
+  "places": [],
+  "curves": [],
+  "timeline": [
+   {
+    "year": 2030,
+    "si": 0.18,
+    "atLeast3": 0.026,
+    "atLeast4": 0.01,
+    "doom": 0.0035
+   },
+   {
+    "year": 2040,
+    "si": 0.43,
+    "atLeast3": 0.1,
+    "atLeast4": 0.04,
+    "doom": 0.015
+   },
+   {
+    "year": 2050,
+    "si": 0.6,
+    "atLeast3": 0.18,
+    "atLeast4": 0.067,
+    "doom": 0.025
+   },
+   {
+    "year": 2075,
+    "si": 0.75,
+    "atLeast3": 0.32,
+    "atLeast4": 0.11,
+    "doom": 0.036
+   }
+  ]
+ },
+ {
+  "id": "timeline-2026-11-25-3",
+  "batch": "timeline",
+  "model": "Claude Opus 5.5",
+  "date": "2026-11-25",
+  "method": "independent agent run, prompt 2026-11-25.1",
+  "places": [],
+  "curves": [],
+  "timeline": [
+   {
+    "year": 2030,
+    "si": 0.14,
+    "atLeast3": 0.022,
+    "atLeast4": 0.007,
+    "doom": 0.0025
+   },
+   {
+    "year": 2040,
+    "si": 0.45,
+    "atLeast3": 0.095,
+    "atLeast4": 0.035,
+    "doom": 0.015
+   },
+   {
+    "year": 2050,
+    "si": 0.6,
+    "atLeast3": 0.165,
+    "atLeast4": 0.062,
+    "doom": 0.026
+   },
+   {
+    "year": 2075,
+    "si": 0.75,
+    "atLeast3": 0.3,
+    "atLeast4": 0.105,
+    "doom": 0.037
+   }
+  ]
  }
 ]

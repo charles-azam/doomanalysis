@@ -1,8 +1,8 @@
 ---
 import Base from '../../layouts/Base.astro'
-import CardTree from '../../components/CardTree.astro'
+import CardGrid from '../../components/CardGrid.astro'
 import { cards } from '../../data/cards.ts'
-import { causeDefinitions, scaleDefinitions } from '../../data/definitions.ts'
+import { causeDefinitions } from '../../data/definitions.ts'
 import { causeColors, siColors } from '../../data/palette.ts'
 import { causeTable, outlook } from '../../data/outlook.ts'
 import { cardFloor, dangerKeys, formatPercent, rootCauses, siCases, type DangerKey } from '../../model/forecast.ts'
@@ -26,32 +26,32 @@ const rows = dangerKeys.map((key) => ({
   floor: Object.fromEntries(siCases.map((siCase) => [siCase, cardFloor({ cards: cards, curves: outlook.curves, cause: cause, key: key, siCase: siCase })])) as Record<'si' | 'noSi', number | undefined>,
 }))
 const own = cards.filter((card) => card.group === cause)
-const pct = (value: number | undefined) => (value === undefined ? 'not judged' : formatPercent({ value: value }))
+const pct = (value: number | undefined) => (value === undefined ? '—' : formatPercent({ value: value }))
 ---
 
-<Base title={definition.name} description={`${definition.name}: the chance it starts a catastrophe by 2100, and the cards behind it.`} active="home">
-  <p class="text-sm muted"><a class="underline" href="/#causes">How bad, and why</a> · Root cause</p>
+<Base title={definition.name} description={`${definition.name}: the chance it starts a catastrophe by 2100, and the cards behind it.`} active="risks">
+  <a class="text-sm underline muted" href="/risks/">Risks</a>
   <h1 class="serif mt-2 flex items-center gap-3 text-5xl leading-[1.05] tracking-tight">
     <span class="square" style={`background: ${color}`}></span>
     {definition.name}
   </h1>
   <p class="mt-4 max-w-3xl text-lg leading-snug">{definition.text}</p>
-  <p class="mt-2 max-w-3xl text-sm ink-2">{scaleDefinitions.rootCause}</p>
 
   <section class="card mt-8 overflow-x-auto p-5">
-    <h2 class="card-title mb-3">
+    <h2 class="card-title">
       <span class="square" style={`background: ${color}`}></span>
-      The chance that it starts a catastrophe by 2100
+      Chance it starts a catastrophe by 2100
     </h2>
+    <p class="mb-3 text-xs muted">Judged, all channels · Cards alone: its most dangerous card on its own</p>
     <table class="data">
       <thead>
         <tr>
           <th>Worst outcome</th>
           <th class="num">Our forecast</th>
           <th class="num">Share of all causes</th>
-          <th class="num" style={`color: ${siColors.si}`}>With SI</th>
-          <th class="num" style={`color: ${siColors.noSi}`}>Without SI</th>
-          <th class="num">Its cards alone, with / without SI</th>
+          <th class="num" style={`color: ${siColors.si}`}>With superintelligence</th>
+          <th class="num" style={`color: ${siColors.noSi}`}>Without</th>
+          <th class="num">Cards alone, with / without</th>
         </tr>
       </thead>
       <tbody>
@@ -69,17 +69,13 @@ const pct = (value: number | undefined) => (value === undefined ? 'not judged' :
         }
       </tbody>
     </table>
-    <p class="mt-3 text-xs muted">
-      The judged figure counts every channel of this cause, knock-on effects included. "Its cards alone" is the most dangerous single card of this cause, read from its own curve:
-      it moves as soon as a card's data changes, while the judged figure moves at the next re-judging.
-    </p>
   </section>
 
   <section class="mt-12">
     <h2 class="section-title mb-5">
       <span class="square" style={`background: ${color}`}></span>
-      Its cards
+      Cards
     </h2>
-    {own.length > 0 ? <CardTree cards={cards} group={cause} curves={outlook.curves} /> : <p class="muted">No cards yet.</p>}
+    {own.length > 0 && <CardGrid cards={cards} group={cause} curves={outlook.curves} />}
   </section>
 </Base>

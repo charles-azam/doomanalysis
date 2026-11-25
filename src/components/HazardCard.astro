@@ -4,7 +4,7 @@ import LevelBar from './LevelBar.astro'
 import { causeColors, siColors } from '../data/palette.ts'
 import { explainerIds } from '../data/explainers.ts'
 import { formatAxis, formatValue } from '../model/chart.ts'
-import { atLeast, curveFor, levelAt, levelChances } from '../model/distribution.ts'
+import { curveFor, levelAt, levelChances } from '../model/distribution.ts'
 import { formatPercent } from '../model/forecast.ts'
 import type { Card, CurveForecast, CurvePoint } from '../model/types.ts'
 
@@ -33,12 +33,11 @@ const basis =
   published === 0 && judgedPoints === 0
     ? undefined
     : published === 0
-      ? 'Odds judged for this site'
+      ? 'Judged'
       : judgedPoints === 0
-        ? `${published} point${published === 1 ? '' : 's'} of the curve published`
-        : `${published} point${published === 1 ? '' : 's'} of the curve published, the rest judged`
+        ? `${published} published point${published === 1 ? '' : 's'}`
+        : `${published} published point${published === 1 ? '' : 's'}, the rest judged`
 const word = card.scale === 'potential' ? 'potential' : 'danger'
-const serious = chancesNoSi && chancesSi && card.scale === 'danger' ? { without: atLeast({ chances: chancesNoSi, level: 3 }), withSi: atLeast({ chances: chancesSi, level: 3 }) } : undefined
 ---
 
 <article class="card flex min-w-0 flex-col gap-2.5 p-5" id={card.id}>
@@ -94,11 +93,5 @@ const serious = chancesNoSi && chancesSi && card.scale === 'danger' ? { without:
       </ul>
     )
   }
-  <p class="mt-auto flex flex-wrap items-center justify-between gap-x-3 pt-1 text-[11px] muted">
-    <span>
-      {serious && <span>Level 3 or worse: {formatPercent({ value: serious.without })} without SI, {formatPercent({ value: serious.withSi })} with. </span>}
-      {basis && `${basis}.`}
-    </span>
-    {learn && <a href={learn} class="link flex-none">Explained</a>}
-  </p>
+  {basis && <p class="mt-auto pt-1 text-[11px] muted">{basis}</p>}
 </article>

@@ -4,13 +4,13 @@ import '../styles/pdoom.css'
 type Props = {
   title: string
   description: string
-  active?: 'home' | 'countries' | 'factors' | 'si' | 'methodology'
+  active?: 'home' | 'risks' | 'countries' | 'factors' | 'si' | 'methodology'
 }
 
 const { title, description, active } = Astro.props
 const nav = [
+  { href: '/risks/', label: 'Risks', key: 'risks' },
   { href: '/countries/', label: 'Countries', key: 'countries' },
-  { href: '/factors/', label: 'Factors', key: 'factors' },
   { href: '/superintelligence/', label: 'Superintelligence', key: 'si' },
   { href: '/methodology/', label: 'Methodology', key: 'methodology' },
 ]
@@ -45,7 +45,6 @@ const fullTitle = title === 'P(doom)' ? 'Doom Analysis: P(doom), collapse and ab
             ))
           }
         </nav>
-        <span class="text-xs muted">Horizon: 2100</span>
       </div>
       <nav class="flex gap-1 overflow-x-auto px-5 pb-2 md:hidden">
         {
@@ -62,7 +61,7 @@ const fullTitle = title === 'P(doom)' ? 'Doom Analysis: P(doom), collapse and ab
     </main>
     <footer class="border-t py-8 text-sm" style="border-color: var(--line)">
       <div class="mx-auto flex max-w-[1320px] flex-wrap justify-between gap-2 px-5 muted">
-        <span>Factors are measured by others and cited. Probabilities are judgments. <a class="underline" href="/methodology/">Methodology</a></span>
+        <span><a class="underline" href="/methodology/">Methodology</a> · <a class="underline" href="/factors/">Data</a></span>
         <span>Doom Analysis, by <a class="underline" href="https://charlesazam.com">Charles Azam</a></span>
       </div>
     </footer>

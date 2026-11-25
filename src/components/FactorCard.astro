@@ -1,6 +1,5 @@
 ---
 import type { FactorDefinition, Observation, Projection } from '../model/types.ts'
-import { countPast, countReached } from '../model/track.ts'
 import { displayFor } from '../data/display.ts'
 import { themeColor } from '../data/sections.ts'
 import { ThresholdTrack } from './ThresholdTrack.tsx'
@@ -22,11 +21,6 @@ const short = (value: number) => {
   const digits = Math.abs(value) >= 100 ? 0 : Math.abs(value) >= 10 ? Math.min(factor.decimals, 1) : factor.decimals
   return `${value.toLocaleString('en-US', { maximumFractionDigits: digits })}${display.symbol}`
 }
-const total = display.thresholds.filter((t) => t.severity !== 'goal').length
-const goals = display.thresholds.filter((t) => t.severity === 'goal').length
-const reached = countReached({ display: display, value: observation.value })
-const pastToday = countPast({ display: display, value: observation.value })
-const pastLater = projection ? countPast({ display: display, value: projection.value }) : undefined
 const basisMark = { published: 'published', derived: 'derived from a published range', judged: 'judged' }
 const odds = exceedanceFor({ factorId: factor.id, entity: observation.entity })
 const chips = [...new Set(odds.map((o) => o.threshold))].map((threshold) => {
@@ -44,22 +38,20 @@ const chips = [...new Set(odds.map((o) => o.threshold))].map((threshold) => {
   }
 })
 const learn = explainerIds.has(factor.id) ? `/learn/${factor.id}/` : undefined
-const role = factor.family === 'counterforce' ? 'Pushes back' : factor.family === 'context' ? 'Not scored' : undefined
 ---
 
 <article class="card flex flex-col gap-3 p-5" id={factor.id}>
   <div class="flex items-start justify-between gap-3">
-    <h3 class="card-title text-[1.15rem]">
+    <h3 class="card-title text-[1.15rem]" title={display.why}>
       <span class="square" style={`background: ${themeColor({ theme: factor.theme })}`}></span>
       {learn ? <a href={learn} class="hover:underline">{factor.name}</a> : factor.name}
     </h3>
-    {role && <span class="mt-1 whitespace-nowrap text-[11px] muted">{role}</span>}
   </div>
-  <p class="text-sm leading-snug ink-2">{display.why}</p>
+  <p class="-mt-2 text-xs muted">{factor.unit}{display.better === 'lower' ? ' · Lower is better' : ' · Higher is better'}</p>
   <div class="flex flex-wrap items-baseline gap-x-5 gap-y-1">
     <div>
       <span class="text-2xl font-semibold tracking-tight tabular">{number(observation.value)}</span>
-      <span class="text-xs muted"> {factor.unit}, {observation.year}</span>
+      <span class="text-xs muted"> {observation.year}</span>
     </div>
     {
       projection && (
@@ -74,7 +66,7 @@ const role = factor.family === 'counterforce' ? 'Pushes back' : factor.family ==
   {
     chips.length > 0 && (
       <div class="flex flex-col gap-1">
-        <p class="text-[11px] muted">Chance by 2100{chips.some((c) => c.judged) ? ' (* judged)' : ''}</p>
+        <p class="text-[11px] muted">Chance by 2100{chips.some((c) => c.judged) ? ', * judged' : ''}</p>
         <div class="flex flex-wrap gap-1.5">
           {chips.map((chip) => (
             <span
@@ -90,36 +82,8 @@ const role = factor.family === 'counterforce' ? 'Pushes back' : factor.family ==
       </div>
     )
   }
-  {
-    goals > 0 && (
-      <p class="text-xs ink-2">
-        <span class="font-semibold" style={reached > 0 ? 'color: var(--accent)' : undefined}>
-          {reached === 0 ? 'No goal reached today' : `${reached} of ${goals} ${goals === 1 ? 'goal' : 'goals'} reached today`}
-        </span>
-      </p>
-    )
-  }
-  {
-    total > 0 && (
-      <p class="text-xs ink-2">
-        <span class="font-semibold" style={pastToday > 0 ? 'color: var(--tick-danger)' : undefined}>
-          {pastToday === 0 ? 'No line crossed today' : `${pastToday} of ${total} ${total === 1 ? 'line' : 'lines'} crossed today`}
-        </span>
-        {pastLater !== undefined && pastLater !== pastToday && <span> · {pastLater} of {total} by {projection?.year}</span>}
-      </p>
-    )
-  }
-  <p class="mt-auto text-[11px] leading-relaxed muted">
-    {learn && <a class="underline underline-offset-2" href={learn} style="color: var(--ink)">What it is and why it matters</a>}
-    {learn && <span> · </span>}
+  <p class="mt-auto text-[11px] muted">
     <a class="underline underline-offset-2" href={observation.url} target="_blank" rel="noopener">{observation.source}</a>
-    {observation.note && <span> · {observation.note}</span>}
-    {
-      projection && (
-        <span>
-          {' '}· Projection: <a class="underline underline-offset-2" href={projection.url} target="_blank" rel="noopener">{projection.source}</a>, {projection.scenario}
-        </span>
-      )
-    }
+    {projection && <span> · <a class="underline underline-offset-2" href={projection.url} target="_blank" rel="noopener">{projection.source}</a></span>}
   </p>
 </article>

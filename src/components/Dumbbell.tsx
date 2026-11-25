@@ -17,8 +17,8 @@ export function Dumbbell({ rows, title, max }: { rows: DumbbellRow[]; title: str
   const ticks = [0, 0.25, 0.5, 0.75, 1].map((t) => t * max)
   return (
     <figure className="flex flex-col gap-2">
-      <figcaption className="text-sm font-semibold">{title}</figcaption>
-      <svg viewBox={`0 0 ${width} ${height}`} className="w-full" role="img" aria-label={title}>
+      {title && <figcaption className="text-sm font-semibold">{title}</figcaption>}
+      <svg viewBox={`0 0 ${width} ${height}`} className="w-full" role="img" aria-label={title || 'With and without superintelligence, by region'}>
         {ticks.map((tick) => (
           <g key={tick}>
             <line x1={x(tick)} x2={x(tick)} y1={top - 6} y2={height - 4} stroke="var(--grid)" strokeWidth={1} />
@@ -35,7 +35,7 @@ export function Dumbbell({ rows, title, max }: { rows: DumbbellRow[]; title: str
               <title>{`${row.name}: ${formatPercent({ value: row.withoutSi })} without SI, ${formatPercent({ value: row.withSi })} with SI (${delta >= 0 ? '+' : '−'}${Math.abs(Math.round(delta * 100))} points)`}</title>
               <rect x={0} y={y - rowHeight / 2} width={width} height={rowHeight} fill="transparent" />
               <text x={0} y={y + 4} fontSize={13} fill="var(--ink)">
-                {row.flag} {row.name}
+                {row.flag ? `${row.flag} ` : ''}{row.name}
               </text>
               <line x1={x(row.withoutSi)} x2={x(row.withSi)} y1={y} y2={y} stroke="var(--line)" strokeWidth={2} strokeLinecap="round" />
               <circle cx={x(row.withoutSi)} cy={y} r={5} fill="var(--without-si)" stroke="var(--surface)" strokeWidth={2} />

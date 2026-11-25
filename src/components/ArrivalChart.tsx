@@ -8,7 +8,7 @@ const colors = ['#2a78d6', '#eb6834', '#1baf7a', '#eda100', '#e87ba4', '#008300'
  * with this site's judged values drawn as black diamonds for comparison.
  */
 export function ArrivalChart({ series, judged }: { series: ArrivalSeries[]; judged: { year: number; probability: number }[] }) {
-  const width = 760
+  const width = 460
   const height = 340
   const pad = { left: 44, right: 20, top: 16, bottom: 34 }
   const x = (year: number) => pad.left + ((year - 2025) / (2100 - 2025)) * (width - pad.left - pad.right)
@@ -32,13 +32,13 @@ export function ArrivalChart({ series, judged }: { series: ArrivalSeries[]; judg
         {[0, 0.25, 0.5, 0.75, 1].map((p) => (
           <g key={p}>
             <line x1={pad.left} x2={width - pad.right} y1={y(p)} y2={y(p)} stroke="var(--grid)" />
-            <text x={pad.left - 8} y={y(p) + 4} textAnchor="end" fontSize={11} fill="var(--ink-muted)">
+            <text x={pad.left - 8} y={y(p) + 4} textAnchor="end" fontSize={12} fill="var(--ink-muted)">
               {Math.round(p * 100)}%
             </text>
           </g>
         ))}
         {years.map((year) => (
-          <text key={year} x={x(year)} y={height - 10} textAnchor="middle" fontSize={11} fill="var(--ink-muted)">
+          <text key={year} x={x(year)} y={height - 10} textAnchor="middle" fontSize={12} fill="var(--ink-muted)">
             {year}
           </text>
         ))}
@@ -79,10 +79,6 @@ export function ArrivalChart({ series, judged }: { series: ArrivalSeries[]; judg
           </rect>
         ))}
       </svg>
-      <figcaption className="text-xs" style={{ color: 'var(--ink-muted)' }}>
-        Each source defines the milestone differently, from “weak AGI” to superintelligence; the Metaculus line combines two questions and
-        assumes they are independent. Click a source to read it.
-      </figcaption>
     </figure>
   )
 }

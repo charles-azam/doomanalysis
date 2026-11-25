@@ -1,16 +1,16 @@
 ---
 import Base from '../../layouts/Base.astro'
 import { Leaderboard } from '../../components/Leaderboard.tsx'
-import { countries, regions } from '../../data/entities.ts'
+import { regions } from '../../data/entities.ts'
 import { placeRows } from '../../data/outlook.ts'
 ---
 
 <Base title="Countries and regions" description="Six outcomes by 2100 for every country and region, from abundance to doom, with and without superintelligence." active="countries">
-  <h1 class="serif text-5xl tracking-tight">Countries and regions</h1>
-  <p class="mt-3 max-w-2xl text-lg leading-snug">
-    {regions.length} regions and {countries.length} countries. Each bar splits 2100 into six outcomes, each place against its own living standard today:
-    abundance, better, stagnation, decline, collapse, or global doom. The number on the right is collapse or doom.
-  </p>
+  <div class="flex flex-wrap items-end justify-between gap-3">
+    <h1 class="serif text-5xl tracking-tight">Countries and regions</h1>
+    <a href="/factors/" class="inline-flex items-center gap-2 text-sm">Compare indicators <span class="inline-flex h-6 w-6 items-center justify-center rounded bg-black text-white">↗</span></a>
+  </div>
+  <p class="mt-3 text-lg">Six outcomes by 2100, each against its own living standard today</p>
   <section class="card mt-8 p-6">
     <Leaderboard client:load rows={placeRows} regions={regions.map((r) => ({ id: r.id, name: r.name }))} />
   </section>

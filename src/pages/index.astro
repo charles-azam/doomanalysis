@@ -1,157 +1,102 @@
 ---
 import Base from '../layouts/Base.astro'
-import CardTree from '../components/CardTree.astro'
-import HeadlineFigures from '../components/HeadlineFigures.astro'
 import { CauseChart } from '../components/CauseChart.tsx'
+import { ChartCard } from '../components/ChartCard.tsx'
 import { Compare } from '../components/Compare.tsx'
-import { HistoryChart } from '../components/HistoryChart.tsx'
 import { SixOutcomeBar, SixOutcomeLegend } from '../components/SixOutcomeBar.tsx'
-import { cards } from '../data/cards.ts'
-import { causeDefinitions } from '../data/definitions.ts'
-import { countries, regions } from '../data/entities.ts'
+import { TimelineChart } from '../components/TimelineChart.tsx'
+import { countries } from '../data/entities.ts'
 import { regionShort } from '../data/labels.ts'
-import { causeColors } from '../data/palette.ts'
-import { causeTable, decentToday, historyToChart, latestForecastDate, outlook, people2100, placeRows, previous, sameDefinitions, sixOutcomesFor, top } from '../data/outlook.ts'
-import { formatPercent, rootCauses } from '../model/forecast.ts'
-import type { CardGroup } from '../model/types.ts'
+import { placeColors } from '../data/palette.ts'
+import { causeTable, outlook, people2100, placeRows, sixOutcomesFor } from '../data/outlook.ts'
 
 const rows = placeRows.map((row) => ({
   id: row.id,
   name: row.name,
-  short: row.kind === 'country' ? row.id : (regionShort[row.id] ?? row.name),
-  mark: row.mark,
+  short: row.kind === 'country' ? row.name : (regionShort[row.id] ?? row.name),
+  mark: row.kind === 'country' ? row.mark : '',
+  color: placeColors[row.kind === 'country' ? (row.region ?? 'WLD') : row.id] ?? '#0b0b0b',
   kind: row.kind,
   href: row.href,
   outcomes: row.outcomes,
 }))
 const defaults = placeRows.filter((row) => row.kind !== 'country').map((row) => row.id)
 const humanity = sixOutcomesFor({ id: 'WLD' })
-const sections: { group: CardGroup; title: string; color: string; intro: string }[] = [
-  ...rootCauses.map((cause) => ({ group: cause, title: causeDefinitions[cause].name, color: causeColors[cause], intro: causeDefinitions[cause].text })),
-  { group: 'technology', title: 'Technologies that push back', color: '#2a78d6', intro: 'Read on the potential scale: the share of humanity each technology could move up at least one outcome.' },
-  { group: 'living', title: 'How people live', color: '#008300', intro: 'Plain measures of living standards today and in 2100, the yardstick for the six outcomes.' },
-]
-const present = sections.filter((section) => cards.some((card) => card.group === section.group))
-const billions = (people: number) => `${(people / 1e9).toFixed(1)} billion`
+const timeline = outlook.timeline
+const section = (title: string, color: string, href: string, link: string) => ({ title, color, href, link })
+const risks = section('Risks', '#e34948', '/risks/', 'All risks')
+const people = section('People in 2100', '#1f5fb0', '/countries/', 'All countries')
 ---
 
-<Base title="P(doom)" description="The probability of doom, collapse and abundance by 2100, for the world and every country, with and without superintelligence, built from sourced data." active="home">
-  <section class="flex flex-col gap-5 pb-8 pt-2">
-    <div class="flex flex-wrap items-end justify-between gap-3">
-      <h1 class="serif text-4xl leading-[1.05] tracking-tight sm:text-5xl">Doom, abundance and superintelligence by 2100</h1>
-      <p class="text-sm muted">Judged {latestForecastDate} · {outlook.worldRuns === 1 ? "one judge run" : `${outlook.worldRuns} independent judge runs`}</p>
-    </div>
-    <HeadlineFigures top={top} previous={previous} sameDefinitions={sameDefinitions} />
-    <p class="max-w-4xl text-lg leading-snug">
-      Doom is the extreme. Below it, our forecast gives a <a class="link" href="#causes">{formatPercent({ value: causeTable.weighted.atLeast3.total })} chance</a> that a catastrophe kills or ruins
-      over 10% of humanity by 2100, and {formatPercent({ value: causeTable.weighted.atLeast4.total })} that it hits over half.
-    </p>
-    <div class="card p-5">
-      <div class="mb-3 flex flex-wrap items-baseline justify-between gap-2">
-        <h2 class="card-title">
-          <span class="square" style="background: var(--ink)"></span>
-          The headline over time
+<Base title="P(doom)" description="Independent estimates of collapse, decline and abundance by 2100 for 199 countries, with and without superintelligence." active="home">
+  <section class="pb-10 pt-4">
+    <h1 class="serif text-5xl leading-[1.02] tracking-tight sm:text-7xl">Independent analysis <br class="hidden sm:block" />of where we are heading</h1>
+    <p class="mt-5 text-lg">Collapse, decline and abundance by 2100 for {countries.length} countries, with and without superintelligence</p>
+  </section>
+
+  <Compare client:load rows={rows} defaults={defaults} />
+
+  {
+    [risks].map((s) => (
+      <div class="mb-5 mt-16 flex flex-wrap items-center justify-between gap-3">
+        <h2 class="section-title">
+          <span class="square" style={`background: ${s.color}`} />
+          {s.title}
         </h2>
-        <p class="text-xs muted">Each point is a published re-judging. Values across a change of definitions are not comparable. Square-root scale, so small risks stay visible.</p>
+        <a href={s.href} class="inline-flex items-center gap-2 text-sm">
+          {s.link} <span class="inline-flex h-6 w-6 items-center justify-center rounded bg-black text-white">↗</span>
+        </a>
       </div>
-      <HistoryChart client:load records={historyToChart} />
-    </div>
-  </section>
-
-  <section id="causes" class="scroll-mt-24 pt-6">
-    <h2 class="section-title mb-2">
-      <span class="square" style="background: var(--ink)"></span>
-      How bad, and why
-    </h2>
-    <p class="mb-5 max-w-3xl ink-2">
-      The chance that the worst thing to happen to the world by 2100 reaches each level of the danger scale, and the cause that would start it.
-      A level is the share of humanity that dies or lastingly loses decent living conditions: level 3 is over 10%, level 4 over half, level 5 is doom.
-      <a class="link" href="/methodology/#scale">The scale</a>
-    </p>
-    <CauseChart client:visible table={causeTable} />
-  </section>
-
-  <section id="places" class="scroll-mt-24 pt-14">
-    <h2 class="section-title mb-2">
-      <span class="square" style="background: #1f5fb0"></span>
-      Where people will live
-    </h2>
-    <p class="mb-5 max-w-3xl ink-2">
-      Every place is judged against its own living standard today: better, the same, poorer, collapsed, or in abundance, five times richer than the rich world today.
-      The world, {regions.length} regions and {countries.length} countries. <a class="link" href="/countries/">All countries</a>
-    </p>
-    <div class="mb-4 grid grid-cols-1 gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)]">
-      <div class="card flex flex-col gap-2 p-5">
-        <h3 class="card-title">
-          <span class="square" style="background: #008300"></span>
-          Decent conditions today
-        </h3>
-        <p class="serif text-4xl tabular">{formatPercent({ value: decentToday.share })}</p>
-        <p class="text-sm ink-2">
-          of people have electricity, safely managed water and enough food: about {billions(decentToday.people)} people.
-          An estimate: each country counts its weakest of the three. Health and security have no per-person count, and the countries that report all three hold {formatPercent({ value: decentToday.reporting })} of humanity.
-        </p>
-      </div>
-      {
-        humanity && (
-          <div class="card flex flex-col gap-3 p-5">
-            <h3 class="card-title">
-              <span class="square" style="background: #c9c8c2"></span>
-              Humanity in 2100
-            </h3>
-            <p class="text-sm ink-2">
-              The {billions(people2100)} people the UN expects in 2100, by the outcome of the region they live in.
-              {humanity && <span> Our forecast: about {billions(people2100 * (humanity.weighted.abundance + humanity.weighted.better))} live better than today, {billions(people2100 * (humanity.weighted.collapse + humanity.weighted.doom))} in collapse or doom.</span>}
-            </p>
-            <SixOutcomeLegend />
-            {([['weighted', 'Our forecast'], ['si', 'With superintelligence'], ['noSi', 'Without']] as const).map(([key, label]) => (
-              <div class="grid grid-cols-[8.5rem_minmax(0,1fr)] items-center gap-3">
-                <span class="text-sm ink-2">{label}</span>
-                <SixOutcomeBar outcomes={humanity[key]} name={`Humanity, ${label}`} />
-              </div>
-            ))}
-          </div>
-        )
-      }
-    </div>
-    <Compare client:load rows={rows} defaults={defaults} />
-  </section>
-
-  <div class="mt-16 grid grid-cols-1 gap-10 lg:grid-cols-[190px_minmax(0,1fr)]">
-    <aside class="hidden lg:block">
-      <ul class="sticky top-24 flex flex-col gap-2 text-sm">
-        {
-          present.map((section) => (
-            <li>
-              <a href={`#${section.group}`} class="flex items-center gap-2 hover:underline">
-                <span class="square" style={`background: ${section.color}`} />
-                {section.title}
-              </a>
-            </li>
-          ))
-        }
-      </ul>
-    </aside>
-    <div class="flex min-w-0 flex-col gap-14">
-      {
-        present.map((section) => (
-          <section id={section.group} class="scroll-mt-24">
-            <div class="mb-2 flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
-              <h2 class="section-title">
-                <span class="square" style={`background: ${section.color}`} />
-                {section.title}
-              </h2>
-              {rootCauses.includes(section.group as (typeof rootCauses)[number]) && (
-                <a href={`/causes/${section.group}/`} class="inline-flex items-center gap-2 text-sm">
-                  The whole cause <span class="inline-flex h-6 w-6 items-center justify-center rounded bg-black text-white">↗</span>
-                </a>
-              )}
-            </div>
-            <p class="mb-5 max-w-3xl text-sm ink-2">{section.intro}</p>
-            <CardTree cards={cards} group={section.group} curves={outlook.curves} />
-          </section>
-        ))
-      }
-    </div>
+    ))
+  }
+  <div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
+    {
+      timeline && (
+        <ChartCard title="Catastrophe" subtitle="Chance it has happened, by year · Lower is better" color="#e34948">
+          <TimelineChart
+            points={timeline}
+            max={0.5}
+            lines={[
+              { key: 'atLeast3', label: 'Over 10% of humanity', color: '#f09595' },
+              { key: 'atLeast4', label: 'Over half', color: '#e34948' },
+              { key: 'doom', label: 'Doom', color: '#0b0b0b' },
+            ]}
+          />
+        </ChartCard>
+      )
+    }
+    <CauseChart client:visible table={causeTable} scenario="weighted" />
+    {
+      timeline && (
+        <ChartCard title="Superintelligence" subtitle="Chance it has arrived, by year" color="#6250d6">
+          <TimelineChart points={timeline} max={1} lines={[{ key: 'si', label: 'Superintelligence', color: '#6250d6' }]} />
+        </ChartCard>
+      )
+    }
   </div>
+
+  <div class="mb-5 mt-16 flex flex-wrap items-center justify-between gap-3">
+    <h2 class="section-title">
+      <span class="square" style={`background: ${people.color}`}></span>
+      {people.title}
+    </h2>
+    <a href={people.href} class="inline-flex items-center gap-2 text-sm">
+      {people.link} <span class="inline-flex h-6 w-6 items-center justify-center rounded bg-black text-white">↗</span>
+    </a>
+  </div>
+  {
+    humanity && (
+      <ChartCard title="Humanity" subtitle={`${(people2100 / 1e9).toFixed(1)} billion people, by the outcome of their region`} color="#c9c8c2">
+        <div class="flex flex-col gap-3">
+          <SixOutcomeLegend />
+          {([['weighted', 'Our forecast'], ['si', 'With superintelligence'], ['noSi', 'Without']] as const).map(([key, label]) => (
+            <div class="grid grid-cols-[8.5rem_minmax(0,1fr)] items-center gap-3">
+              <span class="text-sm ink-2">{label}</span>
+              <SixOutcomeBar outcomes={humanity[key]} name={`Humanity, ${label}`} />
+            </div>
+          ))}
+        </div>
+      </ChartCard>
+    )
+  }
 </Base>

@@ -1,12 +1,10 @@
 ---
 import { getCollection } from 'astro:content'
 import Base from '../layouts/Base.astro'
-import { buildWorldPrompt, forecastPromptVersion, plainText } from '../../judge/forecast-prompt.ts'
+import { buildWorldPrompt, plainText } from '../../judge/forecast-prompt.ts'
 import { cards } from '../data/cards.ts'
-import { abundanceMultiple, causeDefinitions, dangerScale, definitions, horizon, outcomeDefinitions, potentialScale, scaleDefinitions } from '../data/definitions.ts'
+import { abundanceMultiple, causeDefinitions, dangerScale, horizon, outcomeDefinitions, potentialScale, scaleDefinitions } from '../data/definitions.ts'
 import { countries, regions } from '../data/entities.ts'
-import { forecastRuns } from '../data/forecasts.ts'
-import { history } from '../data/history.ts'
 import { latestForecastDate, outlook } from '../data/outlook.ts'
 import { dangerColors, levelInk, potentialColors, potentialInk } from '../data/palette.ts'
 import { outcomeKeys, rootCauses } from '../model/forecast.ts'
@@ -14,16 +12,6 @@ import { outcomeKeys, rootCauses } from '../model/forecast.ts'
 const explainers = await getCollection('explainers')
 const aiBody = explainers.find((entry) => entry.data.factor === 'ai_progress_index')?.body ?? ''
 const prompt = buildWorldPrompt({ cards: cards, curves: outlook.curves, aiNote: plainText({ markdown: aiBody, limit: 2500 }) })
-const batches = [...new Set(forecastRuns.map((run) => run.batch))].map((batch) => {
-  const runs = forecastRuns.filter((run) => run.batch === batch)
-  return {
-    batch: batch,
-    runs: runs.length,
-    places: new Set(runs.flatMap((run) => run.places.map((place) => place.entity))).size,
-    curves: new Set(runs.flatMap((run) => run.curves.map((curve) => curve.card))).size,
-    world: runs.some((run) => run.world !== undefined),
-  }
-})
 const published = cards.reduce((sum, card) => sum + card.published.noSi.length + card.published.si.length, 0)
 const scaled = cards.filter((card) => card.scale !== 'none').length
 // Growth needed to multiply a living standard by five over the 75 years to 2100.
@@ -135,8 +123,7 @@ const doublingAtOne = 1.01 ** yearsLeft
       judged figure at the next re-judging.
     </p>
     <p>
-      Every published headline is kept, never revised, and drawn over time on the home page ({history.length} earlier versions so far). When the
-      definitions change, as they did for this version, the chart marks the break: values on either side are not comparable.
+      The timeline gives, for 2030, 2040, 2050 and 2075, the judges' cumulative chance of each event, rising to the 2100 figures above.
     </p>
 
     <h2 id="places">Places</h2>
@@ -151,11 +138,12 @@ const doublingAtOne = 1.01 ** yearsLeft
     <h2 id="judges">Probabilities: AI judges, run several times</h2>
     <p>
       No dataset can calibrate the chance of collapse in a world with superintelligence, so frontier models act as judges. They receive the fixed
-      definitions and the evidence, and answer in strict JSON, in three rounds:
+      definitions and the evidence, and answer in strict JSON, in four rounds:
     </p>
     <ul>
       <li><strong>Curves:</strong> the chance of each band edge that no source publishes, for every card, with and without superintelligence. Two independent runs per batch.</li>
       <li><strong>The world and the regions:</strong> superintelligence, the seven causes at levels 3, 4 and 5, world abundance, and the six outcomes of each region. Three independent runs.</li>
+      <li><strong>Timeline:</strong> when the world's chances build up between now and 2100. Three independent runs.</li>
       <li><strong>Countries:</strong> the six outcomes, judged against the world and the country's region. Three runs for the most populous countries and Europe's majors, one for the rest.</li>
     </ul>
     <p>
@@ -181,14 +169,7 @@ const doublingAtOne = 1.01 ** yearsLeft
       <li><strong>Living standard</strong> is measured by consumption alone; floor area and free time exist for fewer countries.</li>
     </ul>
 
-    <h2>Run log</h2>
-    <ul>
-      {batches.map((b) => <li>{b.batch}: {b.runs} {b.runs === 1 ? 'run' : 'runs'}{b.world ? ', the world' : ''}{b.places > 0 ? `, ${b.places} places` : ''}{b.curves > 0 ? `, ${b.curves} curves` : ''}</li>)}
-    </ul>
-
-    <h2>The world judge prompt (version {forecastPromptVersion})</h2>
-    <p>This is the exact text of the world round, generated from the site's own data files. The curve and country rounds use the same definitions.</p>
+    <h2>The world judge prompt</h2>
     <pre class="max-h-[32rem] overflow-y-auto">{prompt}</pre>
-    <p class="text-xs muted">{definitions.superintelligence}</p>
   </article>
 </Base>
