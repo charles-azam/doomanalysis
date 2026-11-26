@@ -1,15 +1,20 @@
 ---
 import Base from '../layouts/Base.astro'
 import CompactCard from '../components/CompactCard.astro'
+import ChannelTable from '../components/ChannelTable.astro'
+import EffectChart from '../components/EffectChart.astro'
+import ScatterChart from '../components/ScatterChart.astro'
 import { ArrivalChart } from '../components/ArrivalChart.tsx'
 import { ChartCard } from '../components/ChartCard.tsx'
 import { Dumbbell, SiLegend } from '../components/Dumbbell.tsx'
 import { SiTrend } from '../components/SiTrend.tsx'
 import { VerticalBars } from '../components/VerticalBars.tsx'
 import { cards } from '../data/cards.ts'
-import { regions } from '../data/entities.ts'
+import { countries, entities, pathFor, regions } from '../data/entities.ts'
 import { muskEvidence, riskEvidence, timelineEvidence, type Evidence } from '../data/evidence.ts'
-import { outlook, sixOutcomesFor, top } from '../data/outlook.ts'
+import { regionShort } from '../data/labels.ts'
+import { measureFor, outlook, readingFor, siEffectFor, sixOutcomesFor, top } from '../data/outlook.ts'
+import { placeColors } from '../data/palette.ts'
 import { arrivalSeries } from '../data/si-arrival.ts'
 import { frontier, siThreshold } from '../data/si-progress.ts'
 
@@ -31,6 +36,33 @@ const claim = [
   { key: 'abundance', label: 'Abundance', color: '#1f5fb0', value: world.si.abundance },
   { key: 'doom', label: 'Doom', color: '#0b0b0b', value: top.doomGivenSi },
 ]
+// Who gains: the world and regions, then every country for the scatter.
+const headPlaces = entities.filter((e) => e.kind !== 'country')
+const colorOf = (id: string, region?: string) => placeColors[region ?? id] ?? '#0b0b0b'
+const hrefOf = (id: string) => (id === 'WLD' ? '/countries/world/' : pathFor({ entity: entities.find((e) => e.id === id) as (typeof entities)[number] }))
+const nameOf = (id: string) => (id === 'WLD' ? 'World' : (regionShort[id] ?? id))
+const aiBars = headPlaces
+  .flatMap((e) => {
+    const value = measureFor({ factorId: 'ai_use', id: e.id })
+    return value === undefined ? [] : [{ key: e.id, label: nameOf(e.id), title: e.name, color: colorOf(e.id), href: hrefOf(e.id), value: value / 100 }]
+  })
+  .sort((a, b) => b.value - a.value)
+const effectRows = headPlaces
+  .flatMap((e) => {
+    const effect = siEffectFor({ id: e.id })
+    return effect === undefined ? [] : [{ id: e.id, name: e.kind === 'world' ? 'World' : e.name, href: hrefOf(e.id), color: colorOf(e.id), abundance: effect.abundance, down: effect.down }]
+  })
+  .sort((a, b) => b.abundance - a.abundance)
+const scatter = countries.flatMap((country) => {
+  const use = measureFor({ factorId: 'ai_use', id: country.id })
+  const effect = siEffectFor({ id: country.id })
+  return use === undefined || effect === undefined ? [] : [{ id: country.id, group: country.region ?? 'WLD', name: country.name, href: pathFor({ entity: country }), color: colorOf(country.id, country.region), x: use / 100, y: effect.better }]
+})
+const channelRows = headPlaces.flatMap((e) => {
+  const reading = readingFor({ id: e.id })
+  return reading === undefined ? [] : [{ id: e.id, name: e.kind === 'world' ? 'World' : e.name, href: hrefOf(e.id), color: colorOf(e.id), reading: reading }]
+})
+const hasSi = aiBars.length > 0 || effectRows.length > 0 || channelRows.length > 0
 ---
 
 <Base title="Superintelligence" description="When superintelligence may arrive, and what it changes for doom and abundance by 2100." active="si">
@@ -69,6 +101,50 @@ const claim = [
       <Dumbbell title="" max={1} rows={judgedRegions.map(({ region, six }) => ({ name: region.name, flag: '', withSi: down(six.si), withoutSi: down(six.noSi) }))} />
     </ChartCard>
   </div>
+
+  {
+    hasSi && (
+      <section class="mt-16">
+        <h2 class="section-title">
+          <span class="square" style="background: #6250d6" />
+          Who gains
+        </h2>
+    <p class="mb-5 mt-1 text-sm muted">Who gains depends on who has the AI, what they sell, and who owns the machines</p>
+    <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
+      {aiBars.length > 0 && (
+        <ChartCard title="AI use" subtitle="Share of people aged 15–64 using AI, 2026 · Our proxy for tokens per person" color="#6250d6">
+          <VerticalBars bars={aiBars} color="#6250d6" max={Math.max(...aiBars.map((b) => b.value)) * 1.1} />
+        </ChartCard>
+      )}
+      {effectRows.length > 0 && (
+        <ChartCard title="Effect by 2100" subtitle="With superintelligence minus without, in points" color="#1f5fb0">
+          <EffectChart rows={effectRows} />
+        </ChartCard>
+      )}
+    </div>
+    {scatter.length > 0 && (
+      <div class="mt-4">
+        <ChartCard title="More AI, more gain?" subtitle="Each dot a country · change in people better off with superintelligence, against AI use today" color="#0b0b0b">
+          <ScatterChart
+            points={scatter}
+            xLabel="Share of people aged 15–64 using AI"
+            yLabel="Better off with SI (points)"
+            xMax={Math.ceil(Math.max(...scatter.map((p) => p.x)) * 10) / 10}
+            legend={headPlaces.filter((e) => e.kind === 'region').map((e) => ({ key: e.id, label: nameOf(e.id), color: colorOf(e.id) }))}
+          />
+        </ChartCard>
+      </div>
+    )}
+    {channelRows.length > 0 && (
+      <div class="mt-4">
+        <ChartCard title="How it works" subtitle="Judged effect of each channel on living standards by 2100, if superintelligence arrives" color="#6250d6">
+          <ChannelTable rows={channelRows} />
+        </ChartCard>
+      </div>
+    )}
+      </section>
+    )
+  }
 
 
   {

@@ -1,0 +1,77 @@
+---
+import { siColors } from '../data/palette.ts'
+import { formatPercent } from '../model/forecast.ts'
+
+/** One domain: its chance without and with superintelligence, and why the two differ. */
+export type ImpactRow = { id: string; name: string; href: string; note: string; without: number; with: number }
+/** 'gain': a rise is good (technologies). 'risk': a rise is bad (dangers). */
+type Props = { rows: ImpactRow[]; max: number; kind: 'gain' | 'risk' }
+
+const { rows, max, kind } = Astro.props
+const step = max <= 0.2 ? 0.05 : 0.25
+const ticks = Array.from({ length: Math.round(max / step) + 1 }, (_, i) => i * step)
+const x = (value: number) => `${(Math.min(value, max) / max) * 100}%`
+const points = (value: number) => {
+  const p = value * 100
+  const shown = Math.abs(p) < 10 ? p.toFixed(1) : String(Math.round(p))
+  return `${p > 0.05 ? '+' : p < -0.05 ? '−' : ''}${shown.replace('-', '')}`
+}
+const good = (change: number) => (kind === 'gain' ? change > 0 : change < 0)
+const changeColor = (change: number) => (Math.abs(change) < 0.0005 ? 'var(--ink-muted)' : good(change) ? '#008300' : '#c62828')
+const series = [
+  { key: 'noSi', label: 'Without superintelligence', color: siColors.noSi },
+  { key: 'si', label: 'With superintelligence', color: siColors.si },
+] as const
+const grid = 'grid grid-cols-[0.75rem_minmax(0,13rem)_minmax(0,1fr)_3rem] items-center gap-x-3'
+---
+
+<div data-series-chart class="mt-2 flex flex-col">
+  <div class="flex flex-wrap gap-1.5" role="group" aria-label="Show or hide a scenario">
+    {
+      series.map((s) => (
+        <button
+          type="button"
+          data-series-toggle={s.key}
+          aria-pressed="true"
+          title="Click to show or hide"
+          class="series-toggle inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 text-[11px] ink-2"
+          style="border-color: var(--line)"
+        >
+          <span class="inline-block h-2.5 w-2.5 rounded-full" style={`background: ${s.color}`} />
+          {s.label}
+        </button>
+      ))
+    }
+  </div>
+  <div class={`${grid} mt-3 text-[11px] muted`}>
+    <span />
+    <span />
+    <span class="relative h-4">
+      {ticks.map((tick) => <span class="absolute -translate-x-1/2 tabular" style={`left: ${x(tick)}`}>{Math.round(tick * 100)}%</span>)}
+    </span>
+    <span class="text-right">Points</span>
+  </div>
+  {
+    rows.map((row) => {
+      const change = row.with - row.without
+      return (
+        <details class="si-impact border-t" style="border-color: var(--line)">
+          <summary class={`${grid} cursor-pointer py-2`} title={`${row.name}: ${formatPercent({ value: row.without })} without superintelligence, ${formatPercent({ value: row.with })} with`}>
+            <span class="si-chevron text-base leading-none ink-2">›</span>
+            <span class="text-sm leading-tight">{row.name}</span>
+            <span class="relative h-3">
+              {ticks.map((tick) => <span class="absolute top-0 h-full w-px" style={`left: ${x(tick)}; background: var(--grid)`} />)}
+              <span class="absolute top-1/2 h-[2px] -translate-y-1/2" style={`left: ${x(Math.min(row.with, row.without))}; width: calc(${x(Math.max(row.with, row.without))} - ${x(Math.min(row.with, row.without))}); background: var(--line)`} />
+              <span data-series="noSi" class="absolute top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full ring-2 ring-white" style={`left: ${x(row.without)}; background: ${siColors.noSi}`} />
+              <span data-series="si" class="absolute top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full ring-2 ring-white" style={`left: ${x(row.with)}; background: ${siColors.si}`} />
+            </span>
+            <span class="text-right text-sm font-semibold tabular" style={`color: ${changeColor(change)}`}>{points(change)}</span>
+          </summary>
+          <p class="pb-3 pl-[1.5rem] text-xs leading-relaxed ink-2">
+            <span class="tabular">{formatPercent({ value: row.without })} → {formatPercent({ value: row.with })}.</span> {row.note} <a href={row.href} class="whitespace-nowrap underline">Card ›</a>
+          </p>
+        </details>
+      )
+    })
+  }
+</div>
