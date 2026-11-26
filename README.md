@@ -4,8 +4,8 @@ An Astro site, deployed to `doomanalysis.com` as a Cloudflare Worker (named `doo
 `www.doomanalysis.com` and the original `doom.charlesazam.com` redirect there (`worker/index.ts`).
 Before working on it, read `AGENTS.md`: the owner's decisions, the design rules, how judging works and what is open.
 
-**Deploys go through Git.** Cloudflare Workers Builds deploys `main` to production. Ship through a pull request that
-Charles merges; never run `wrangler deploy` by hand, the next Git build would overwrite it.
+**Deploys go through Git.** Cloudflare Workers Builds deploys `main` to production. Contributors with write access merge
+into `main` themselves once the checks pass; never run `wrangler deploy` by hand, the next Git build would overwrite it.
 
 ```bash
 npm install

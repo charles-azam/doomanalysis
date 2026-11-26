@@ -15,10 +15,12 @@ counterforce and as a risk.
 
 ## How to ship
 
-- Work on a branch and open a pull request into `main`. Charles reviews and merges.
-- Merging deploys: Cloudflare Workers Builds builds `main` and deploys the Worker `doom`. Never run `wrangler deploy`
-  by hand; the next Git build overwrites it.
-- Before opening a PR: `npm test`, `npx tsc --noEmit`, `npm run build`, `npx wrangler deploy --dry-run`.
+- Contributors with write access merge into `main` on their own, without waiting for Charles: open a pull request
+  and merge it, or push to `main` directly, once the checks below pass.
+- Checks before merging: `npm test`, `npx tsc --noEmit`, `npm run build`, `npx wrangler deploy --dry-run`.
+- `main` is what goes live: Cloudflare Workers Builds deploys it as the Worker `doom`. Until the Worker's builds are
+  connected to this repository (they still point at Charles's website repository), merges here do not go live yet.
+  Never run `wrangler deploy` by hand; the next Git build overwrites it.
 - Never edit by hand `src/data/forecasts.ts`, past records in `src/data/history.ts`, or `src/data/generated/*.json`:
   they come from the judge import and the data pipeline.
 - Show visual changes in the local preview (`npm run dev`) before shipping.
