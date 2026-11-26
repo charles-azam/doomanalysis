@@ -1,5 +1,6 @@
 import { causeDanger, headline, placeOutcomes, siChannels, verdictOf, worldDanger, type DangerKey, dangerKeys, rootCauses, type Headline } from '../model/forecast.ts'
-import type { EntityId, HeadlineRecord, RootCause, ScenarioKey, SiChannel, SiReading, SixOutcomes } from '../model/types.ts'
+import { atLeast, curveFor, levelChances } from '../model/distribution.ts'
+import type { EntityId, HeadlineRecord, RootCause, ScenarioKey, SiCase, SiChannel, SiReading, SixOutcomes } from '../model/types.ts'
 import { cards } from './cards.ts'
 import { countries, entities, pathFor, type Entity } from './entities.ts'
 import { forecastRuns } from './forecasts.ts'
@@ -56,6 +57,39 @@ export const causeTable: Record<ScenarioKey, Record<DangerKey, CauseCell> & Part
     return [scenario, level2 === undefined ? cells : { atLeast2: level2, ...cells }]
   }),
 ) as Record<ScenarioKey, Record<DangerKey, CauseCell> & Partial<Record<'atLeast2', CauseCell>>>
+
+/** The potential levels "How good, and why" can show. */
+export type GoodLevel = 2 | 3 | 4 | 5
+export const goodLevels: GoodLevel[] = [2, 3, 4, 5]
+
+/** One technology and its chance, in each scenario, of reaching each potential level or more by 2100. */
+export type GoodRow = { id: string; name: string; href: string; note: string; chances: Record<ScenarioKey, Record<GoodLevel, number>> }
+
+/**
+ * How good, and why: every top technology card, on its own. Technologies overlap, so unlike the causes
+ * these chances never add up. "Our forecast" weighs the two cases by the world's chance of superintelligence.
+ */
+export const goodRows: GoodRow[] = cards
+  .filter((card) => card.group === 'technology' && card.scale === 'potential' && card.parent === undefined)
+  .flatMap((card) => {
+    const chancesIn = (siCase: SiCase) => levelChances({ card: card, points: curveFor({ card: card, judged: outlook.curves[card.id], siCase: siCase }) })
+    const si = chancesIn('si')
+    const noSi = chancesIn('noSi')
+    if (si === undefined || noSi === undefined) return []
+    const pSi = outlook.world.siBy2100
+    const byLevel = (pick: (level: GoodLevel) => number) => Object.fromEntries(goodLevels.map((level) => [level, pick(level)])) as Record<GoodLevel, number>
+    const withSi = byLevel((level) => atLeast({ chances: si, level: level }))
+    const withoutSi = byLevel((level) => atLeast({ chances: noSi, level: level }))
+    return [
+      {
+        id: card.id,
+        name: card.name,
+        href: `/learn/${card.id}/`,
+        note: card.siNote,
+        chances: { si: withSi, noSi: withoutSi, weighted: byLevel((level) => pSi * withSi[level] + (1 - pSi) * withoutSi[level]) },
+      },
+    ]
+  })
 
 /** People expected in 2100 (UN medium variant), the weights for humanity's outcomes. */
 export const people2100 = population2100.WLD

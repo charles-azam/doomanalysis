@@ -258,21 +258,3 @@ table.data th.num {
 [data-level]:hover {
   filter: brightness(0.95);
 }
-
-/* Rows that open to say why (SiImpact). */
-details.si-impact > summary {
-  list-style: none;
-}
-
-details.si-impact > summary::-webkit-details-marker {
-  display: none;
-}
-
-details.si-impact > summary:hover {
-  background: var(--grid);
-}
-
-details.si-impact[open] .si-chevron {
-  display: inline-block;
-  transform: rotate(90deg);
-}

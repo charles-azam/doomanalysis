@@ -2,8 +2,8 @@
 import Base from '../layouts/Base.astro'
 import CardGrid from '../components/CardGrid.astro'
 import DangerScale from '../components/DangerScale.astro'
-import SiImpact, { type ImpactRow } from '../components/SiImpact.astro'
 import { CauseChart } from '../components/CauseChart.tsx'
+import { GoodChart } from '../components/GoodChart.tsx'
 import { ChartCard } from '../components/ChartCard.tsx'
 import { Compare } from '../components/Compare.tsx'
 import { SixOutcomeBar, SixOutcomeLegend } from '../components/SixOutcomeBar.tsx'
@@ -13,11 +13,9 @@ import { causeDefinitions } from '../data/definitions.ts'
 import { countries } from '../data/entities.ts'
 import { regionShort } from '../data/labels.ts'
 import { causeColors, placeColors } from '../data/palette.ts'
-import { causeTable, outlook, people2100, placeRows, sixOutcomesFor } from '../data/outlook.ts'
-import { niceCeiling } from '../model/chart.ts'
-import { atLeast, curveFor, levelChances } from '../model/distribution.ts'
+import { causeTable, goodRows, outlook, people2100, placeRows, sixOutcomesFor } from '../data/outlook.ts'
 import { rootCauses } from '../model/forecast.ts'
-import type { Card, CardGroup, SiCase } from '../model/types.ts'
+import type { CardGroup } from '../model/types.ts'
 
 const rows = placeRows.map((row) => ({
   id: row.id,
@@ -38,29 +36,10 @@ const groups: { group: CardGroup; title: string; color: string; line: string }[]
   { group: 'living', title: 'How people live', color: '#008300', line: 'Living standards today and in 2100' },
 ]
 const riskGroups = groups.filter((g) => cards.some((card) => card.group === g.group))
-// Where superintelligence makes a difference: each top card's chance of level 3+ by 2100, without and with it.
-const levelThreeOrMore = ({ card, siCase }: { card: Card; siCase: SiCase }): number | undefined => {
-  const chances = levelChances({ card: card, points: curveFor({ card: card, judged: outlook.curves[card.id], siCase: siCase }) })
-  return chances === undefined ? undefined : atLeast({ chances: chances, level: 3 })
-}
-const impactRows = ({ scale }: { scale: Card['scale'] }): ImpactRow[] =>
-  cards
-    .filter((card) => card.parent === undefined && card.scale === scale)
-    .flatMap((card) => {
-      const without = levelThreeOrMore({ card: card, siCase: 'noSi' })
-      const withSi = levelThreeOrMore({ card: card, siCase: 'si' })
-      return without === undefined || withSi === undefined ? [] : [{ id: card.id, name: card.name, href: `/learn/${card.id}/`, note: card.siNote, without: without, with: withSi }]
-    })
-    .sort((a, b) => b.with - b.without - (a.with - a.without))
-const technologyRows = impactRows({ scale: 'potential' })
-// Risks too small to show on either side are left out.
-const riskRows = impactRows({ scale: 'danger' }).filter((row) => Math.max(row.with, row.without) >= 0.005)
-const riskMax = niceCeiling({ value: Math.max(...riskRows.map((row) => Math.max(row.with, row.without))) })
-
 const nav = [
   { id: 'how-bad', title: 'How bad, and why', color: '#eb6834' },
+  { id: 'how-good', title: 'How good, and why', color: '#2a78d6' },
   { id: 'places', title: 'Places', color: '#e34948' },
-  { id: 'si-domains', title: 'Where superintelligence matters', color: '#6250d6' },
   { id: 'over-time', title: 'Over time', color: '#0b0b0b' },
   { id: 'humanity', title: 'Humanity in 2100', color: '#c9c8c2' },
   ...riskGroups.map((g) => ({ id: g.group, title: g.title, color: g.color })),
@@ -101,32 +80,22 @@ const nav = [
         <CauseChart client:load table={causeTable} />
       </section>
 
+      <section id="how-good" class="scroll-mt-24">
+        <h2 class="section-title">
+          <span class="square" style="background: #2a78d6"></span>
+          How good, and why
+        </h2>
+        <p class="mb-4 mt-1 text-sm muted">Each technology on its own. They overlap, so their chances do not add up</p>
+        <div class="mb-4"><DangerScale scale="potential" /></div>
+        <GoodChart client:load rows={goodRows} />
+      </section>
+
       <section id="places" class="scroll-mt-24">
         <h2 class="section-title mb-5">
           <span class="square" style="background: #e34948"></span>
           Places
         </h2>
         <Compare client:load rows={rows} defaults={defaults} />
-      </section>
-
-      <section id="si-domains" class="scroll-mt-24">
-        <div class="flex flex-wrap items-center justify-between gap-3">
-          <h2 class="section-title">
-            <span class="square" style="background: #6250d6"></span>
-            Where superintelligence matters
-          </h2>
-          <a href="/superintelligence/" class="inline-flex items-center gap-2 text-sm">
-            Superintelligence <span class="inline-flex h-6 w-6 items-center justify-center rounded bg-black text-white">↗</span>
-          </a>
-        </div>
-        <div class="mt-5 grid grid-cols-1 gap-4 2xl:grid-cols-2">
-          <ChartCard title="Technologies" subtitle="Chance it lifts over 10% of humanity up one outcome (level 3+) by 2100" color="#2a78d6">
-            <SiImpact rows={technologyRows} max={1} kind="gain" />
-          </ChartCard>
-          <ChartCard title="Risks" subtitle="Chance it kills or ruins over 10% of humanity (level 3+) by 2100" color="#e34948">
-            <SiImpact rows={riskRows} max={riskMax} kind="risk" />
-          </ChartCard>
-        </div>
       </section>
 
       {
