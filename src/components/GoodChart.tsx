@@ -65,7 +65,7 @@ export function GoodChart({ rows }: { rows: GoodRow[] }) {
         </div>
       </div>
       <p className="text-sm" style={{ color: 'var(--ink-2)' }}>
-        Chance each technology alone {chosen.long} by 2100
+        Chance each technology alone {chosen.long} by 2100{chosen.level < 5 ? ', for example from stagnation to better' : ''}
       </p>
       <div className={`${grid} text-[11px]`} style={{ color: 'var(--ink-muted)' }}>
         <span>Technology</span>

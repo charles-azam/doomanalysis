@@ -18,8 +18,10 @@ const references: Record<number, string> = {
   5: 'no precedent',
 }
 const shorts: Record<number, string> = isDanger
-  ? { 1: '<1% of humanity', 2: '1–10%', 3: '10–50%', 4: '>50%', 5: 'doom' }
+  ? { 1: 'under 1%', 2: '1–10%', 3: '10–50%', 4: 'over 50%', 5: 'doom' }
   : { 1: 'under 1%', 2: '1–10%', 3: '10–50%', 4: 'over 50%', 5: 'essential nearly free' }
+// What the percentages on the chips are a share of.
+const meaning = isDanger ? 'Danger level: share of humanity killed or ruined' : 'Potential level: share of humanity lifted one outcome'
 const chance: Record<number, number | undefined> = { 2: causeTable.weighted.atLeast2?.total, 3: causeTable.weighted.atLeast3.total, 4: causeTable.weighted.atLeast4.total, 5: causeTable.weighted.doom.total }
 const harm: Record<number, string> = {
   1: 'under 1% of humanity dies or lastingly loses decent living conditions',
@@ -44,7 +46,7 @@ const levels = (isDanger ? dangerScale : potentialScale)
 
 <div class="flex flex-col gap-1.5" data-scale={scale}>
   <div class="flex flex-wrap items-center gap-1.5 text-[11px]" role="group" aria-label={isDanger ? 'Danger levels' : 'Potential levels'}>
-    <span class="muted">{isDanger ? 'Danger level' : 'Potential level'}</span>
+    <span class="muted">{meaning}</span>
     {
       levels.map((level) => (
         <button
