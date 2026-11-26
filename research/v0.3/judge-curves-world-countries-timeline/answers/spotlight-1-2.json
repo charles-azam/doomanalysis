@@ -1,0 +1,124 @@
+{
+  "places": [
+    {
+      "entity": "IND",
+      "si": {"abundance": 0.12, "better": 0.68, "stagnation": 0.06, "decline": 0.05, "collapse": 0.09},
+      "noSi": {"abundance": 0.002, "better": 0.718, "stagnation": 0.09, "decline": 0.08, "collapse": 0.11},
+      "rationale": "Strong growth momentum and a deep tech talent pool make 'better' the default, but extreme heat, near-maximal water stress and the nuclear rivalry with Pakistan keep a fat tail of decline and collapse."
+    },
+    {
+      "entity": "CHN",
+      "si": {"abundance": 0.22, "better": 0.59, "stagnation": 0.065, "decline": 0.05, "collapse": 0.075},
+      "noSi": {"abundance": 0.003, "better": 0.747, "stagnation": 0.1, "decline": 0.08, "collapse": 0.07},
+      "rationale": "Huge industrial and energy base and likely SI leadership favour gains, with automation offsetting extreme ageing; the main downside is a Taiwan or US-China war and a rigid political system."
+    },
+    {
+      "entity": "USA",
+      "si": {"abundance": 0.32, "better": 0.485, "stagnation": 0.07, "decline": 0.055, "collapse": 0.07},
+      "noSi": {"abundance": 0.012, "better": 0.723, "stagnation": 0.13, "decline": 0.07, "collapse": 0.065},
+      "rationale": "Richest starting point, energy exporter and likely SI epicentre, so abundance is most reachable here, though high inequality makes the 9-in-10 bar hard; risks are great-power nuclear war, AI-driven power concentration and political breakdown."
+    },
+    {
+      "entity": "IDN",
+      "si": {"abundance": 0.14, "better": 0.675, "stagnation": 0.07, "decline": 0.055, "collapse": 0.06},
+      "noSi": {"abundance": 0.002, "better": 0.758, "stagnation": 0.1, "decline": 0.075, "collapse": 0.065},
+      "rationale": "Steady growth, energy and mineral self-sufficiency and a peaceful society support improvement; coastal subsidence, sea-level rise and weak water services are the main drags."
+    },
+    {
+      "entity": "PAK",
+      "si": {"abundance": 0.065, "better": 0.645, "stagnation": 0.1, "decline": 0.08, "collapse": 0.11},
+      "noSi": {"abundance": 0.0005, "better": 0.5895, "stagnation": 0.15, "decline": 0.11, "collapse": 0.15},
+      "rationale": "Very low political stability, Indus water dependence under heavy stress, extreme heat and floods, and a population heading toward half a billion make it one of the riskiest large countries, alongside nuclear rivalry with India."
+    },
+    {
+      "entity": "NGA",
+      "si": {"abundance": 0.065, "better": 0.625, "stagnation": 0.13, "decline": 0.08, "collapse": 0.1},
+      "noSi": {"abundance": 0.0005, "better": 0.5695, "stagnation": 0.19, "decline": 0.11, "collapse": 0.13},
+      "rationale": "Decades of flat per-capita income, oil dependence, insecurity and weak governance make long-run stagnation unusually likely, while ample water and a young workforce leave room for catch-up."
+    },
+    {
+      "entity": "BRA",
+      "si": {"abundance": 0.13, "better": 0.68, "stagnation": 0.09, "decline": 0.05, "collapse": 0.05},
+      "noSi": {"abundance": 0.002, "better": 0.733, "stagnation": 0.14, "decline": 0.075, "collapse": 0.05},
+      "rationale": "Abundant food, water and renewable energy and distance from great-power conflict limit collapse risk; the middle-income trap, violence and fiscal strain make stagnation the main alternative to improvement."
+    },
+    {
+      "entity": "BGD",
+      "si": {"abundance": 0.09, "better": 0.67, "stagnation": 0.08, "decline": 0.07, "collapse": 0.09},
+      "noSi": {"abundance": 0.001, "better": 0.679, "stagnation": 0.12, "decline": 0.1, "collapse": 0.1},
+      "rationale": "Impressive development record and good life expectancy point up, but one of the highest climate vulnerabilities (delta flooding, salinisation, cyclones), low readiness and political turbulence weigh heavily."
+    },
+    {
+      "entity": "RUS",
+      "si": {"abundance": 0.13, "better": 0.57, "stagnation": 0.13, "decline": 0.08, "collapse": 0.09},
+      "noSi": {"abundance": 0.003, "better": 0.627, "stagnation": 0.17, "decline": 0.11, "collapse": 0.09},
+      "rationale": "Energy wealth and low debt are offset by war, sanctions, shrinking population, hydrocarbon revenues eroded by the energy transition, a succession risk and its status as a prime nuclear target."
+    },
+    {
+      "entity": "ETH",
+      "si": {"abundance": 0.065, "better": 0.655, "stagnation": 0.1, "decline": 0.075, "collapse": 0.105},
+      "noSi": {"abundance": 0.0005, "better": 0.6395, "stagnation": 0.14, "decline": 0.1, "collapse": 0.12},
+      "rationale": "Rapid recent growth from a very low base and new hydropower favour improvement, but recurrent civil war, drought-driven famine risk and weak state capacity keep collapse risk high."
+    },
+    {
+      "entity": "MEX",
+      "si": {"abundance": 0.14, "better": 0.65, "stagnation": 0.09, "decline": 0.06, "collapse": 0.06},
+      "noSi": {"abundance": 0.002, "better": 0.698, "stagnation": 0.15, "decline": 0.08, "collapse": 0.07},
+      "rationale": "Integration with the US economy supports gains, while very high water stress, cartel violence and slow productivity growth make stagnation and decline real possibilities."
+    },
+    {
+      "entity": "JPN",
+      "si": {"abundance": 0.26, "better": 0.54, "stagnation": 0.09, "decline": 0.055, "collapse": 0.055},
+      "noSi": {"abundance": 0.004, "better": 0.601, "stagnation": 0.25, "decline": 0.09, "collapse": 0.055},
+      "rationale": "Superb state capacity, cohesion and robotics make it well placed to share SI gains broadly, but without SI three decades of flat consumption, extreme ageing, 205% debt and near-total energy and heavy food import dependence make stagnation likely."
+    },
+    {
+      "entity": "EGY",
+      "si": {"abundance": 0.095, "better": 0.615, "stagnation": 0.12, "decline": 0.08, "collapse": 0.09},
+      "noSi": {"abundance": 0.001, "better": 0.569, "stagnation": 0.18, "decline": 0.13, "collapse": 0.12},
+      "rationale": "Near-total dependence on a contested Nile, the world's largest wheat import bill, heavy debt service and a fast-growing population create serious decline and collapse risk; SI-cheapened desalination would help most."
+    },
+    {
+      "entity": "PHL",
+      "si": {"abundance": 0.12, "better": 0.66, "stagnation": 0.09, "decline": 0.065, "collapse": 0.065},
+      "noSi": {"abundance": 0.002, "better": 0.728, "stagnation": 0.12, "decline": 0.08, "collapse": 0.07},
+      "rationale": "Fast growth and a young population point up, but typhoons, sea-level rise, energy imports, South China Sea tension and an outsourcing economy exposed to automation add risk."
+    },
+    {
+      "entity": "COD",
+      "si": {"abundance": 0.055, "better": 0.635, "stagnation": 0.12, "decline": 0.08, "collapse": 0.11},
+      "noSi": {"abundance": 0.0005, "better": 0.5995, "stagnation": 0.16, "decline": 0.1, "collapse": 0.14},
+      "rationale": "The weakest state capacity and adaptive readiness here, chronic conflict and a population set to roughly quadruple make it the most fragile case, though vast minerals, hydropower and water give real upside."
+    },
+    {
+      "entity": "VNM",
+      "si": {"abundance": 0.15, "better": 0.66, "stagnation": 0.07, "decline": 0.06, "collapse": 0.06},
+      "noSi": {"abundance": 0.003, "better": 0.757, "stagnation": 0.1, "decline": 0.075, "collapse": 0.065},
+      "rationale": "Strong, stable growth and high social cohesion favour improvement; the sinking, salinising Mekong delta and tensions with China are the main risks."
+    },
+    {
+      "entity": "IRN",
+      "si": {"abundance": 0.09, "better": 0.62, "stagnation": 0.11, "decline": 0.08, "collapse": 0.1},
+      "noSi": {"abundance": 0.001, "better": 0.569, "stagnation": 0.17, "decline": 0.13, "collapse": 0.13},
+      "rationale": "An educated population and energy wealth are undercut by aquifer depletion and acute water crisis, sanctions, regime instability and military confrontation with Israel and the US."
+    },
+    {
+      "entity": "TUR",
+      "si": {"abundance": 0.15, "better": 0.62, "stagnation": 0.1, "decline": 0.07, "collapse": 0.06},
+      "noSi": {"abundance": 0.003, "better": 0.672, "stagnation": 0.16, "decline": 0.1, "collapse": 0.065},
+      "rationale": "A diversified upper-middle-income economy with low public debt points up, but recurrent currency crises, 70% energy imports, rising water stress, fast ageing and a dangerous neighbourhood add downside."
+    },
+    {
+      "entity": "DEU",
+      "si": {"abundance": 0.28, "better": 0.52, "stagnation": 0.09, "decline": 0.055, "collapse": 0.055},
+      "noSi": {"abundance": 0.005, "better": 0.63, "stagnation": 0.22, "decline": 0.09, "collapse": 0.055},
+      "rationale": "A strong welfare state would spread SI gains broadly, but without SI ageing, 70% energy imports, industrial erosion and recent stagnation make flat consumption quite plausible; a Russia-NATO war is the collapse tail."
+    },
+    {
+      "entity": "THA",
+      "si": {"abundance": 0.15, "better": 0.63, "stagnation": 0.09, "decline": 0.065, "collapse": 0.065},
+      "noSi": {"abundance": 0.002, "better": 0.683, "stagnation": 0.16, "decline": 0.09, "collapse": 0.065},
+      "rationale": "Thailand is ageing very fast before it gets rich, has slowing growth, recurring coups, high water stress and a flood-prone, sinking Bangkok, so stagnation is a substantial risk despite a solid base."
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "places": [
+    {
+      "entity": "RWA",
+      "si": {"abundance": 0.08, "better": 0.70, "stagnation": 0.07, "decline": 0.055, "collapse": 0.095},
+      "noSi": {"abundance": 0.001, "better": 0.749, "stagnation": 0.09, "decline": 0.06, "collapse": 0.10},
+      "rationale": "Effective state and a long record of fast growth from a very low base make improvement likely, but extreme land scarcity, food insecurity, rapid population growth and a personalised regime facing succession and DRC conflict keep the collapse tail near one in ten."
+    },
+    {
+      "entity": "BDI",
+      "si": {"abundance": 0.05, "better": 0.62, "stagnation": 0.13, "decline": 0.065, "collapse": 0.135},
+      "noSi": {"abundance": 0.0005, "better": 0.59, "stagnation": 0.17, "decline": 0.085, "collapse": 0.1545},
+      "rationale": "One of the poorest countries on earth with decades of flat income, very weak governance, 20% electricity access and the densest rural population in Africa still growing fast, so stagnation and conflict-driven collapse are both well above the regional average even though the low base makes some gain likely."
+    },
+    {
+      "entity": "BOL",
+      "si": {"abundance": 0.10, "better": 0.67, "stagnation": 0.095, "decline": 0.065, "collapse": 0.07},
+      "noSi": {"abundance": 0.001, "better": 0.70, "stagnation": 0.14, "decline": 0.084, "collapse": 0.075},
+      "rationale": "Moderate growth prospects and lithium and gas endowments favour improvement over 75 years, tempered by the current fiscal and fuel crisis, high debt, volatile politics, high undernourishment and Andean glacier water loss."
+    },
+    {
+      "entity": "TUN",
+      "si": {"abundance": 0.09, "better": 0.62, "stagnation": 0.13, "decline": 0.08, "collapse": 0.08},
+      "noSi": {"abundance": 0.001, "better": 0.63, "stagnation": 0.18, "decline": 0.10, "collapse": 0.089},
+      "rationale": "Educated, relatively peaceful and close to Europe, but fifteen years of flat income, extreme and worsening water stress, heavy energy imports and high debt under an increasingly authoritarian government make stagnation a real risk; cheap solar desalination is the main upside."
+    },
+    {
+      "entity": "SSD",
+      "si": {"abundance": 0.03, "better": 0.54, "stagnation": 0.15, "decline": 0.08, "collapse": 0.20},
+      "noSi": {"abundance": 0.0003, "better": 0.50, "stagnation": 0.18, "decline": 0.10, "collapse": 0.2197},
+      "rationale": "Among the world's most fragile states, with near-total state ineffectiveness, recurrent civil war, 5% electricity access and an oil economy hostage to Sudan's war, so collapse is the highest risk in this group even though any durable peace would lift income from today's crisis base."
+    },
+    {
+      "entity": "BEL",
+      "si": {"abundance": 0.28, "better": 0.515, "stagnation": 0.09, "decline": 0.05, "collapse": 0.065},
+      "noSi": {"abundance": 0.005, "better": 0.66, "stagnation": 0.18, "decline": 0.09, "collapse": 0.065},
+      "rationale": "Rich, well-governed and redistributive, so it is well placed to share superintelligence gains, but slow consumption growth, heavy aging, 108% debt and 89% energy import dependence make long stagnation plausible without it, and hosting NATO makes it exposed in a European war."
+    },
+    {
+      "entity": "HTI",
+      "si": {"abundance": 0.04, "better": 0.52, "stagnation": 0.19, "decline": 0.10, "collapse": 0.15},
+      "noSi": {"abundance": 0.0005, "better": 0.48, "stagnation": 0.23, "decline": 0.12, "collapse": 0.1695},
+      "rationale": "Income per person is roughly where it was in 1950, the state has largely ceded the capital to gangs, half the population is undernourished and hurricanes and earthquakes recur, so a further 75 years without real gains or a deeper collapse are both likely."
+    },
+    {
+      "entity": "JOR",
+      "si": {"abundance": 0.08, "better": 0.62, "stagnation": 0.13, "decline": 0.08, "collapse": 0.09},
+      "noSi": {"abundance": 0.001, "better": 0.60, "stagnation": 0.19, "decline": 0.11, "collapse": 0.099},
+      "rationale": "A stable state in a dangerous neighbourhood, with among the lowest water availability per person anywhere, 82% energy imports, a heavy interest burden and a decade of flat income; large-scale solar desalination and continued Western support are what keep improvement the likeliest outcome."
+    },
+    {
+      "entity": "DOM",
+      "si": {"abundance": 0.14, "better": 0.65, "stagnation": 0.09, "decline": 0.06, "collapse": 0.06},
+      "noSi": {"abundance": 0.002, "better": 0.76, "stagnation": 0.108, "decline": 0.07, "collapse": 0.06},
+      "rationale": "Decades of the fastest growth in Latin America under stable politics make further improvement very likely, with risks from hurricanes, a tourism and remittance economy exposed to global shocks, 94% energy imports and a high interest burden."
+    },
+    {
+      "entity": "ARE",
+      "si": {"abundance": 0.18, "better": 0.52, "stagnation": 0.15, "decline": 0.08, "collapse": 0.07},
+      "noSi": {"abundance": 0.002, "better": 0.55, "stagnation": 0.24, "decline": 0.128, "collapse": 0.08},
+      "rationale": "Vast sovereign wealth, low debt and heavy AI investment suit a superintelligence world, but abundance must reach a resident population that is three-quarters migrant workers, and without it the post-oil transition, extreme heat, total desalination dependence and Iran tensions make flat or falling consumption per person quite likely."
+    },
+    {
+      "entity": "HND",
+      "si": {"abundance": 0.09, "better": 0.66, "stagnation": 0.11, "decline": 0.07, "collapse": 0.07},
+      "noSi": {"abundance": 0.001, "better": 0.69, "stagnation": 0.135, "decline": 0.09, "collapse": 0.084},
+      "rationale": "Slow but positive long-run growth makes improvement likely, held back by weak institutions, high violence, Dry Corridor drought and severe hurricane exposure."
+    },
+    {
+      "entity": "CUB",
+      "si": {"abundance": 0.10, "better": 0.63, "stagnation": 0.12, "decline": 0.075, "collapse": 0.075},
+      "noSi": {"abundance": 0.001, "better": 0.64, "stagnation": 0.16, "decline": 0.10, "collapse": 0.099},
+      "rationale": "Today's baseline is a deep crisis of blackouts, shortages and mass emigration, so an eventual political and economic opening would lift living standards well above it, but rapid aging, depopulation, fuel import dependence and hurricane exposure keep stagnation and decline sizeable."
+    },
+    {
+      "entity": "CZE",
+      "si": {"abundance": 0.24, "better": 0.565, "stagnation": 0.09, "decline": 0.05, "collapse": 0.055},
+      "noSi": {"abundance": 0.004, "better": 0.75, "stagnation": 0.12, "decline": 0.07, "collapse": 0.056},
+      "rationale": "Strong institutions, low debt, low inequality and continued convergence with Western Europe make improvement very likely; the main risks are rapid aging, an auto-dependent industry and a war on NATO's eastern flank."
+    },
+    {
+      "entity": "PRT",
+      "si": {"abundance": 0.25, "better": 0.54, "stagnation": 0.10, "decline": 0.05, "collapse": 0.06},
+      "noSi": {"abundance": 0.004, "better": 0.67, "stagnation": 0.18, "decline": 0.083, "collapse": 0.063},
+      "rationale": "Stable and well governed with strong renewables, but two decades of slow growth, one of Europe's oldest populations, high debt and worsening Iberian drought and wildfires make long stagnation a real possibility without a technology boost."
+    },
+    {
+      "entity": "TJK",
+      "si": {"abundance": 0.08, "better": 0.68, "stagnation": 0.10, "decline": 0.065, "collapse": 0.075},
+      "noSi": {"abundance": 0.001, "better": 0.72, "stagnation": 0.12, "decline": 0.075, "collapse": 0.084},
+      "rationale": "Fast growth from a low base and large hydropower potential favour improvement, but heavy dependence on remittances from Russia, an authoritarian succession, the Afghan border and late-century glacier loss create downside risk."
+    },
+    {
+      "entity": "PNG",
+      "si": {"abundance": 0.05, "better": 0.645, "stagnation": 0.14, "decline": 0.075, "collapse": 0.09},
+      "noSi": {"abundance": 0.0005, "better": 0.63, "stagnation": 0.18, "decline": 0.09, "collapse": 0.0995},
+      "rationale": "Resource wealth and a low base allow gains, and subsistence farming buffers global shocks, but very weak health and state capacity, tribal violence, fast population growth and El Nino droughts keep stagnation and collapse well above Oceania's average."
+    },
+    {
+      "entity": "GRC",
+      "si": {"abundance": 0.22, "better": 0.535, "stagnation": 0.12, "decline": 0.06, "collapse": 0.065},
+      "noSi": {"abundance": 0.003, "better": 0.60, "stagnation": 0.22, "decline": 0.105, "collapse": 0.072},
+      "rationale": "Income is still below its 2007 peak, with debt near 150% of GDP, very low fertility and rapid population decline, high water stress and a Mediterranean heat and fire hotspot, so stagnation is more likely than in most of Europe, while EU membership limits the downside."
+    },
+    {
+      "entity": "AZE",
+      "si": {"abundance": 0.09, "better": 0.59, "stagnation": 0.15, "decline": 0.09, "collapse": 0.08},
+      "noSi": {"abundance": 0.001, "better": 0.58, "stagnation": 0.20, "decline": 0.12, "collapse": 0.099},
+      "rationale": "Low debt and a sovereign fund help, but an economy almost entirely built on declining oil and gas faces a hard transition, alongside a shrinking Caspian, rising water stress, an authoritarian system and risky neighbours."
+    },
+    {
+      "entity": "ISR",
+      "si": {"abundance": 0.22, "better": 0.545, "stagnation": 0.09, "decline": 0.055, "collapse": 0.09},
+      "noSi": {"abundance": 0.004, "better": 0.68, "stagnation": 0.15, "decline": 0.08, "collapse": 0.086},
+      "rationale": "A leading tech and AI economy with solved water and its own gas favours improvement and a share of superintelligence gains, but persistent multi-front war including a nuclear-armed Iran risk, deep internal divisions and high inequality fatten the collapse tail and make abundance for nine in ten residents harder."
+    },
+    {
+      "entity": "HUN",
+      "si": {"abundance": 0.20, "better": 0.585, "stagnation": 0.095, "decline": 0.055, "collapse": 0.065},
+      "noSi": {"abundance": 0.003, "better": 0.71, "stagnation": 0.14, "decline": 0.085, "collapse": 0.062},
+      "rationale": "EU membership and continued convergence make improvement likely, but a high interest burden, dependence on Russian energy, weaker governance than its neighbours, rapid aging and Great Plain drought add downside risk."
+    }
+  ]
+}

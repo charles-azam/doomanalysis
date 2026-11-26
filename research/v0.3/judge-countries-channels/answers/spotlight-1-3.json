@@ -1,0 +1,204 @@
+{
+  "places": [
+    {
+      "entity": "IND",
+      "si": {"abundance": 0.06, "better": 0.75, "stagnation": 0.05, "decline": 0.05, "collapse": 0.09},
+      "noSi": {"abundance": 0.001, "better": 0.79, "stagnation": 0.06, "decline": 0.06, "collapse": 0.089},
+      "rationale": "Steady growth from a low base makes 'better' the default; the tail risks are extreme heat, groundwater depletion and war with Pakistan. Superintelligence threatens the IT-services export model but cheapens medicine and energy.",
+      "reading": {
+        "channels": {"productivity": 1.5, "prices": 1.5, "jobs": -1, "ownership": -1, "stability": -0.5},
+        "reason": "Cheaper goods and wide diffusion help a poor, AI-literate population, but IT and outsourcing exports are what AI replaces first."
+      }
+    },
+    {
+      "entity": "CHN",
+      "si": {"abundance": 0.14, "better": 0.67, "stagnation": 0.05, "decline": 0.06, "collapse": 0.08},
+      "noSi": {"abundance": 0.003, "better": 0.79, "stagnation": 0.08, "decline": 0.06, "collapse": 0.067},
+      "rationale": "Consumption is still a third of rich-world levels with room to grow, but a shrinking, ageing population and a Taiwan or US conflict are the main ways it stalls. As one of two AI powers it gains most from superintelligence if it avoids war.",
+      "reading": {
+        "channels": {"productivity": 1.5, "prices": 1.5, "jobs": -0.5, "ownership": 1.5, "stability": -1},
+        "reason": "China owns compute, models and robot factories, so it captures AI rents; the drag is power concentration and an arms race with the US."
+      }
+    },
+    {
+      "entity": "USA",
+      "si": {"abundance": 0.30, "better": 0.54, "stagnation": 0.06, "decline": 0.04, "collapse": 0.06},
+      "noSi": {"abundance": 0.005, "better": 0.765, "stagnation": 0.10, "decline": 0.07, "collapse": 0.06},
+      "rationale": "Rich, energy-exporting and the AI leader, so abundance is plausible only with superintelligence, which still needs a ninefold rise to lift nine in ten residents. Polarisation, debt and a great-power war are the main downside risks.",
+      "reading": {
+        "channels": {"productivity": 2, "prices": 1.5, "jobs": -1, "ownership": 2, "stability": -1},
+        "reason": "The US owns most frontier compute and models, so ownership and productivity dominate; white-collar job losses and polarisation drag."
+      }
+    },
+    {
+      "entity": "IDN",
+      "si": {"abundance": 0.06, "better": 0.76, "stagnation": 0.06, "decline": 0.06, "collapse": 0.06},
+      "noSi": {"abundance": 0.002, "better": 0.80, "stagnation": 0.08, "decline": 0.06, "collapse": 0.058},
+      "rationale": "A stable, growing middle-income economy with energy and mineral exports; very poor safe-water access, a sinking capital and coal dependence are the vulnerabilities.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1.5, "jobs": -0.5, "ownership": -0.5, "stability": -0.5},
+        "reason": "A large domestic market and nickel for batteries keep it relevant; cheaper goods and medicine outweigh modest export job losses."
+      }
+    },
+    {
+      "entity": "PAK",
+      "si": {"abundance": 0.03, "better": 0.62, "stagnation": 0.11, "decline": 0.09, "collapse": 0.15},
+      "noSi": {"abundance": 0.001, "better": 0.66, "stagnation": 0.12, "decline": 0.09, "collapse": 0.129},
+      "rationale": "Political instability, extreme water stress on the Indus, fast population growth and nuclear rivalry with India give it one of the highest collapse risks here. Growth from a low base still makes 'better' most likely.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -1, "ownership": -1, "stability": -1},
+        "reason": "Textile exports and Gulf remittances are exposed and a fragile military-led state gains surveillance power; cheaper goods only partly offset."
+      }
+    },
+    {
+      "entity": "NGA",
+      "si": {"abundance": 0.035, "better": 0.585, "stagnation": 0.15, "decline": 0.10, "collapse": 0.13},
+      "noSi": {"abundance": 0.001, "better": 0.57, "stagnation": 0.17, "decline": 0.12, "collapse": 0.139},
+      "rationale": "Consumption per person has stalled for a decade while the population heads toward half a billion; insecurity, weak governance and declining oil rents keep stagnation and collapse risks high.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -0.5, "ownership": -1, "stability": -0.5},
+        "reason": "Cheap medicine, solar and AI services help a poor, young population most, but falling oil rents and a weak state limit the gains."
+      }
+    },
+    {
+      "entity": "BRA",
+      "si": {"abundance": 0.08, "better": 0.72, "stagnation": 0.09, "decline": 0.06, "collapse": 0.05},
+      "noSi": {"abundance": 0.001, "better": 0.72, "stagnation": 0.14, "decline": 0.08, "collapse": 0.059},
+      "rationale": "Food, energy and mineral wealth make 'better' likely, but slow growth, high inequality, crime and drought risk to farming and the Amazon keep stagnation sizeable; inequality also makes abundance for nine in ten hard.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1.5, "jobs": -0.5, "ownership": -0.5, "stability": -0.5},
+        "reason": "Fairly high AI use helps and a commodity exporter loses few jobs to AI, but deep inequality and crime limit how widely gains spread."
+      }
+    },
+    {
+      "entity": "BGD",
+      "si": {"abundance": 0.035, "better": 0.69, "stagnation": 0.10, "decline": 0.08, "collapse": 0.095},
+      "noSi": {"abundance": 0.001, "better": 0.73, "stagnation": 0.10, "decline": 0.08, "collapse": 0.089},
+      "rationale": "Strong past gains in health and income, but the most climate-exposed delta here faces sea-level rise, cyclones and heat, and its growth model rests on low-wage garment exports.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -1.5, "ownership": -1, "stability": -0.5},
+        "reason": "Garment exports and remittances are routine labour that robots replace, and AI use is very low; cheaper goods only partly offset the loss."
+      }
+    },
+    {
+      "entity": "RUS",
+      "si": {"abundance": 0.05, "better": 0.55, "stagnation": 0.17, "decline": 0.11, "collapse": 0.12},
+      "noSi": {"abundance": 0.002, "better": 0.60, "stagnation": 0.18, "decline": 0.11, "collapse": 0.108},
+      "rationale": "A petrostate at war with a shrinking population faces falling fossil-fuel rents as the world decarbonises, so stagnation is a real possibility, and it is a principal party to nuclear risk.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 0.5, "jobs": 0, "ownership": -1, "stability": -1.5},
+        "reason": "Cheaper energy erodes its oil and gas rents, sanctions limit AI access, and an authoritarian state at war uses AI for control."
+      }
+    },
+    {
+      "entity": "ETH",
+      "si": {"abundance": 0.03, "better": 0.67, "stagnation": 0.11, "decline": 0.08, "collapse": 0.11},
+      "noSi": {"abundance": 0.001, "better": 0.66, "stagnation": 0.12, "decline": 0.09, "collapse": 0.129},
+      "rationale": "Fast growth from a very low base makes 'better' likely, but recurrent civil war, drought and famine risk and a weak state keep collapse odds high.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 2, "jobs": -0.5, "ownership": -1, "stability": -0.5},
+        "reason": "Very poor households gain most from cheap medicine, energy and farming advice; little AI access and a fragile state limit the rest."
+      }
+    },
+    {
+      "entity": "MEX",
+      "si": {"abundance": 0.08, "better": 0.67, "stagnation": 0.12, "decline": 0.07, "collapse": 0.06},
+      "noSi": {"abundance": 0.001, "better": 0.71, "stagnation": 0.15, "decline": 0.08, "collapse": 0.059},
+      "rationale": "Tied to the US economy with decent AI uptake, but slow growth, cartel violence, high inequality and severe water stress in the centre and north cap its outlook.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1.5, "jobs": -1, "ownership": -0.5, "stability": -1},
+        "reason": "US proximity spreads AI gains, but export assembly and remittances from US jobs are exposed, and cartels can exploit new tools."
+      }
+    },
+    {
+      "entity": "JPN",
+      "si": {"abundance": 0.20, "better": 0.61, "stagnation": 0.09, "decline": 0.05, "collapse": 0.05},
+      "noSi": {"abundance": 0.003, "better": 0.597, "stagnation": 0.25, "decline": 0.10, "collapse": 0.05},
+      "rationale": "Decades of near-flat consumption, the world's oldest population, huge public debt and 87% energy imports make stagnation likely without superintelligence; a strong state and robotics make it a big winner with it.",
+      "reading": {
+        "channels": {"productivity": 1.5, "prices": 1.5, "jobs": 0, "ownership": 0, "stability": 0},
+        "reason": "Robots and AI fill an ageing workforce's gaps and cheaper energy eases import dependence; it owns robotics but not frontier models."
+      }
+    },
+    {
+      "entity": "EGY",
+      "si": {"abundance": 0.04, "better": 0.64, "stagnation": 0.13, "decline": 0.09, "collapse": 0.10},
+      "noSi": {"abundance": 0.001, "better": 0.62, "stagnation": 0.16, "decline": 0.11, "collapse": 0.109},
+      "rationale": "Extreme water stress on the Nile, heavy food imports, a fast-growing population and a debt-burdened state make decline and collapse risks among the highest here.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -0.5, "ownership": -0.5, "stability": -1},
+        "reason": "Cheap energy for desalination and cheaper food imports matter most to a Nile-dependent state; authoritarian control limits the rest."
+      }
+    },
+    {
+      "entity": "PHL",
+      "si": {"abundance": 0.04, "better": 0.70, "stagnation": 0.11, "decline": 0.08, "collapse": 0.07},
+      "noSi": {"abundance": 0.002, "better": 0.76, "stagnation": 0.10, "decline": 0.07, "collapse": 0.068},
+      "rationale": "Solid growth and a young population favour 'better', but typhoons, sea-level rise and a South China Sea flashpoint are risks, and its export model is services labour.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1.5, "jobs": -1.5, "ownership": -1, "stability": -0.5},
+        "reason": "Call-centre outsourcing and overseas workers' remittances are exactly the labour AI and robots replace, despite fairly high AI use."
+      }
+    },
+    {
+      "entity": "COD",
+      "si": {"abundance": 0.025, "better": 0.575, "stagnation": 0.16, "decline": 0.10, "collapse": 0.14},
+      "noSi": {"abundance": 0.0002, "better": 0.57, "stagnation": 0.18, "decline": 0.11, "collapse": 0.1398},
+      "rationale": "One of the poorest and least governed countries, with war in the east, 40% undernourished and under a quarter with electricity; its mineral wealth has historically fuelled conflict rather than consumption.",
+      "reading": {
+        "channels": {"productivity": 0, "prices": 1.5, "jobs": 0, "ownership": -0.5, "stability": -1},
+        "reason": "Cheap medicine and solar help the very poor, but AI-era demand for its cobalt and copper may feed conflict more than households."
+      }
+    },
+    {
+      "entity": "VNM",
+      "si": {"abundance": 0.07, "better": 0.76, "stagnation": 0.06, "decline": 0.055, "collapse": 0.055},
+      "noSi": {"abundance": 0.002, "better": 0.81, "stagnation": 0.07, "decline": 0.06, "collapse": 0.058},
+      "rationale": "A capable, stable state with strong growth makes 'better' very likely; the Mekong delta's exposure to sea-level rise and reliance on export assembly are the main risks.",
+      "reading": {
+        "channels": {"productivity": 1.5, "prices": 1.5, "jobs": -1.5, "ownership": -0.5, "stability": -0.5},
+        "reason": "High AI uptake and a capable state help, but its electronics-assembly export model is the routine manufacturing robots replace."
+      }
+    },
+    {
+      "entity": "IRN",
+      "si": {"abundance": 0.03, "better": 0.59, "stagnation": 0.14, "decline": 0.09, "collapse": 0.15},
+      "noSi": {"abundance": 0.001, "better": 0.62, "stagnation": 0.15, "decline": 0.10, "collapse": 0.129},
+      "rationale": "A water crisis that threatens Tehran, sanctions, a repressive and unstable regime and war with Israel and the US make decline or collapse unusually likely for a middle-income country.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1, "jobs": 0, "ownership": -1, "stability": -1.5},
+        "reason": "Sanctions cut its AI access and cheap energy cuts oil rents, while a repressive state in conflict with Israel and the US gains surveillance."
+      }
+    },
+    {
+      "entity": "TUR",
+      "si": {"abundance": 0.10, "better": 0.66, "stagnation": 0.11, "decline": 0.07, "collapse": 0.06},
+      "noSi": {"abundance": 0.002, "better": 0.68, "stagnation": 0.15, "decline": 0.10, "collapse": 0.068},
+      "rationale": "A fairly rich industrial economy with strong long-run growth, held back by chronic inflation, autocratic drift, earthquake risk and a volatile neighbourhood.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1.5, "jobs": -1, "ownership": -0.5, "stability": -0.5},
+        "reason": "Cheaper energy helps a country importing 70% of its energy, but textile and car-assembly exports are exposed to automation."
+      }
+    },
+    {
+      "entity": "DEU",
+      "si": {"abundance": 0.25, "better": 0.56, "stagnation": 0.09, "decline": 0.05, "collapse": 0.05},
+      "noSi": {"abundance": 0.003, "better": 0.717, "stagnation": 0.15, "decline": 0.08, "collapse": 0.05},
+      "rationale": "Rich, egalitarian and well governed, so 'better' is the base case, but energy imports, ageing and industrial erosion make stagnation plausible without superintelligence.",
+      "reading": {
+        "channels": {"productivity": 1.5, "prices": 1.5, "jobs": -0.5, "ownership": -0.5, "stability": 0},
+        "reason": "High AI use and a strong state spread gains widely; it imports frontier models, and its engineering exports face AI and Chinese rivals."
+      }
+    },
+    {
+      "entity": "THA",
+      "si": {"abundance": 0.07, "better": 0.72, "stagnation": 0.09, "decline": 0.06, "collapse": 0.06},
+      "noSi": {"abundance": 0.002, "better": 0.74, "stagnation": 0.12, "decline": 0.08, "collapse": 0.058},
+      "rationale": "An upper-middle-income economy ageing before it is rich, with slow growth, recurring coups, water stress and flood-prone Bangkok; 'better' is still likely over 75 years.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1.5, "jobs": -1, "ownership": -0.5, "stability": -0.5},
+        "reason": "Robots offset a fast-ageing workforce and tourism resists automation, but car-assembly exports are exposed and coups recur."
+      }
+    }
+  ]
+}

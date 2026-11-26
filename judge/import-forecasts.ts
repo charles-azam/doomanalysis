@@ -7,7 +7,7 @@ import { forecastPromptVersion } from './forecast-prompt.ts'
 
 /**
  * Validates v0.3 judge answers (one JSON file per run) and stores them in src/data/forecasts.ts.
- * Usage: node --experimental-strip-types pdoom/judge/import-forecasts.ts [--reset|--check] <model> <method> <batch> <run.json>...
+ * Usage: node --experimental-strip-types judge/import-forecasts.ts [--reset|--check] <model> <method> <batch> <run.json>...
  * --reset drops every stored run first. --check validates and prints, without writing anything.
  * A batch replaces any earlier runs of the same batch. Any incoherent run stops the import.
  */
@@ -57,7 +57,7 @@ writeFileSync(
   new URL('../src/data/forecasts.ts', import.meta.url),
   `import type { ForecastRun } from '../model/types.ts'
 
-/** Validated v0.3 judge runs, imported by pdoom/judge/import-forecasts.ts. Do not edit by hand. */
+/** Validated v0.3 judge runs, imported by judge/import-forecasts.ts. Do not edit by hand. */
 export const forecastRuns: ForecastRun[] = ${JSON.stringify(all, null, 1)}
 `,
 )

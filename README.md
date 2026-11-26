@@ -1,11 +1,16 @@
 # Doom Analysis (the P(doom) dashboard)
 
-A separate Astro site, deployed to `doomanalysis.com` as a Cloudflare Worker (named `doom`) that serves the static build.
-`www.doomanalysis.com` and the original `doom.charlesazam.com` redirect there (`worker/index.ts`). It shares this
-repository's `node_modules` but has its own config, so the main site's build never touches it.
+An Astro site, deployed to `doomanalysis.com` as a Cloudflare Worker (named `doom`) that serves the static build.
+`www.doomanalysis.com` and the original `doom.charlesazam.com` redirect there (`worker/index.ts`).
+Before working on it, read `AGENTS.md`: the owner's decisions, the design rules, how judging works and what is open.
 
-**Deploys go through Git.** Cloudflare Workers Builds deploys `main` to production and builds a preview for every other branch.
-Ship through a pull request; never run `wrangler deploy` by hand, the next Git build would overwrite it.
+**Deploys go through Git.** Cloudflare Workers Builds deploys `main` to production. Ship through a pull request that
+Charles merges; never run `wrangler deploy` by hand, the next Git build would overwrite it.
+
+```bash
+npm install
+npm run dev       # http://localhost:4321
+```
 
 ## The model (v0.3)
 
@@ -35,18 +40,21 @@ Definitions live in `src/data/definitions.ts`, shared by the pages and the judge
 ## Commands (from the repository root)
 
 ```bash
-npm run pdoom:dev       # local server
-npm run pdoom:test      # end-to-end tests with mock data, plus integrity checks on the real data
-npm run pdoom:build
-npm run pdoom:cards -- pdoom/src/data/cards/<file>.ts    # check one card file
-npm run pdoom:wikipedia                                  # download the Wikipedia openings for every card
-npm run pdoom:data -- <raw-dir>    # refresh country data (World Bank, IMF, WHO, UN, OWID, GPI, ND-GAIN, Aqueduct)
-(cd pdoom/pipeline && uv run --group dev pytest)          # pipeline end-to-end test
-npm run pdoom:prompt -- curves <dir>       # round 1 prompts
-npm run pdoom:prompt -- world <dir>        # round 2, using the stored curves
-npm run pdoom:prompt -- countries <dir>    # round 3, using the stored world
-npm run pdoom:import -- [--reset|--check] <model> <method> <batch> <run.json>...
-node --experimental-strip-types pdoom/judge/record-headline.ts <version> <definitions> <note>
+npm run dev       # local server
+npm run test      # end-to-end tests with mock data, plus integrity checks on the real data
+npm run build
+npm run cards -- src/data/cards/<file>.ts   # check one card file
+npm run wikipedia                           # download the Wikipedia openings for every card
+npm run data -- <raw-dir>                   # refresh country data (World Bank, IMF, WHO, UN, OWID, GPI, ND-GAIN, Aqueduct)
+(cd pipeline && uv run --group dev pytest)  # pipeline end-to-end test
+npm run prompt -- curves <dir>       # round 1 prompts
+npm run prompt -- world <dir>        # round 2, using the stored curves
+npm run prompt -- countries <dir>    # round 3, using the stored world
+npm run prompt -- timeline <dir>     # chances by 2030, 2040, 2050 and 2075
+npm run prompt -- level2 <dir>       # level 2+ by cause and over time
+npm run import -- [--reset|--check] <model> <method> <batch> <run.json>...
+npm run headline -- <version> <definitions> <note>
+npx wrangler deploy --dry-run                # check the deploy without deploying
 ```
 
 The pipeline's raw dir holds the official files without an API:
@@ -60,7 +68,8 @@ The run downloads the other files itself and keeps them there (`dl_owid_energy/`
 ## Updating
 
 1. Refresh data and cards; run both test suites.
-2. Judge the curves, then the world, then the countries, importing each round before printing the next prompts.
+2. Judge the curves, then the world, then the countries (then the timeline and level 2+), importing each round before
+   printing the next prompts. The judges are Claude agents run by `judge/workflows/judges.js` (see `AGENTS.md`).
 3. Record the new headline in the history.
 4. Open a PR.
 

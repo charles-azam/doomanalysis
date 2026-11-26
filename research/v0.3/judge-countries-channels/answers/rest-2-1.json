@@ -1,0 +1,204 @@
+{
+  "places": [
+    {
+      "entity": "NER",
+      "si": {"abundance": 0.03, "better": 0.52, "stagnation": 0.17, "decline": 0.115, "collapse": 0.165},
+      "noSi": {"abundance": 0.001, "better": 0.50, "stagnation": 0.19, "decline": 0.13, "collapse": 0.179},
+      "rationale": "Extreme poverty, fertility near six, Sahel heat and a jihadist insurgency under junta rule make sustained gains uncertain; consumption has barely grown in decades, though oil exports and an eventual demographic transition give upside.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -0.5, "ownership": -0.5, "stability": -1},
+        "reason": "Prices help most: cheaper solar, medicine and inputs for a country with 21% electricity, but junta rule and insurgency limit what SI delivers."
+      }
+    },
+    {
+      "entity": "PRK",
+      "si": {"abundance": 0.035, "better": 0.53, "stagnation": 0.17, "decline": 0.10, "collapse": 0.165},
+      "noSi": {"abundance": 0.002, "better": 0.59, "stagnation": 0.17, "decline": 0.09, "collapse": 0.148},
+      "rationale": "Living standards hinge on whether the regime opens, collapses or reunifies with the South; sanctions, chronic food shortage and war risk on the peninsula weigh heavily.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1, "jobs": -0.5, "ownership": -1, "stability": -1.5},
+        "reason": "Stability dominates: AI surveillance entrenches the regime and lowers the odds of opening or reunification, on a flashpoint of the AI race."
+      }
+    },
+    {
+      "entity": "SYR",
+      "si": {"abundance": 0.03, "better": 0.59, "stagnation": 0.13, "decline": 0.11, "collapse": 0.14},
+      "noSi": {"abundance": 0.002, "better": 0.60, "stagnation": 0.15, "decline": 0.118, "collapse": 0.13},
+      "rationale": "After Assad's fall, reconstruction from a deeply depressed 2022 base makes recovery likely if the fragile transition holds; sectarian violence and severe, worsening water stress threaten it.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -0.5, "ownership": -0.5, "stability": -1},
+        "reason": "Cheap energy for desalination would ease severe water stress, but a fragile post-war state and regional AI arms races threaten stability."
+      }
+    },
+    {
+      "entity": "MLI",
+      "si": {"abundance": 0.025, "better": 0.515, "stagnation": 0.16, "decline": 0.12, "collapse": 0.18},
+      "noSi": {"abundance": 0.001, "better": 0.50, "stagnation": 0.18, "decline": 0.13, "collapse": 0.189},
+      "rationale": "The worst possible political stability score, a jihadist squeeze on the capital and junta rule dominate; gold and the Niger River give a base for recovery if security returns.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -0.5, "ownership": -0.5, "stability": -1},
+        "reason": "Stability dominates: with jihadists and a junta, AI drones and surveillance could cancel the gains from cheaper goods and medicine."
+      }
+    },
+    {
+      "entity": "BFA",
+      "si": {"abundance": 0.025, "better": 0.535, "stagnation": 0.16, "decline": 0.11, "collapse": 0.17},
+      "noSi": {"abundance": 0.001, "better": 0.52, "stagnation": 0.18, "decline": 0.12, "collapse": 0.179},
+      "rationale": "An insurgency contests much of the territory and has displaced millions under a junta; lower fertility than its neighbours and gold exports make growth possible if the conflict ends.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -0.5, "ownership": -0.5, "stability": -1},
+        "reason": "Cheaper energy and medicine help most, but with much territory contested, AI weapons and junta surveillance weigh on stability."
+      }
+    },
+    {
+      "entity": "MWI",
+      "si": {"abundance": 0.035, "better": 0.595, "stagnation": 0.16, "decline": 0.09, "collapse": 0.12},
+      "noSi": {"abundance": 0.001, "better": 0.57, "stagnation": 0.19, "decline": 0.11, "collapse": 0.129},
+      "rationale": "Peace and electoral democracy are strengths, but land pressure, debt distress and climate shocks on a tiny electricity base have kept growth slow for decades.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -0.5, "ownership": -0.5, "stability": -0.5},
+        "reason": "Prices matter most: cheaper fertiliser, energy and medicine would ease the binding constraints of a peaceful but very poor farm economy."
+      }
+    },
+    {
+      "entity": "ZMB",
+      "si": {"abundance": 0.04, "better": 0.625, "stagnation": 0.15, "decline": 0.08, "collapse": 0.105},
+      "noSi": {"abundance": 0.001, "better": 0.60, "stagnation": 0.18, "decline": 0.10, "collapse": 0.119},
+      "rationale": "Copper demand from electrification and a peaceful democracy favour growth, while heavy debt, drought-hit hydropower and 41% undernourishment are the main risks.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -0.5, "ownership": 0, "stability": -0.5},
+        "reason": "Copper sold into the SI build-out and cheaper goods help most; a stable democracy can tax mining rents, though AI access is low."
+      }
+    },
+    {
+      "entity": "LKA",
+      "si": {"abundance": 0.06, "better": 0.65, "stagnation": 0.12, "decline": 0.085, "collapse": 0.085},
+      "noSi": {"abundance": 0.002, "better": 0.68, "stagnation": 0.14, "decline": 0.09, "collapse": 0.088},
+      "rationale": "Strong human development and a record of solid growth point to gains, but the debt and interest burden left by the 2022 default, ageing and import dependence limit the margin.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1.5, "jobs": -1, "ownership": -1, "stability": -0.5},
+        "reason": "Jobs offset prices: garments, BPO and Gulf migrant remittances are exposed, while cheaper imported energy helps a debt-strapped importer."
+      }
+    },
+    {
+      "entity": "TCD",
+      "si": {"abundance": 0.025, "better": 0.50, "stagnation": 0.17, "decline": 0.12, "collapse": 0.185},
+      "noSi": {"abundance": 0.001, "better": 0.48, "stagnation": 0.19, "decline": 0.13, "collapse": 0.199},
+      "rationale": "Among the lowest health coverage, adaptive readiness and electricity access anywhere, with fertility above six, Sudanese refugees and oil rents that will fade; collapse risk is high.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -0.5, "ownership": -0.5, "stability": -1},
+        "reason": "Prices are the main gain where 13% have electricity and health coverage is 26; oil rents fade and a weak state captures little."
+      }
+    },
+    {
+      "entity": "KAZ",
+      "si": {"abundance": 0.08, "better": 0.61, "stagnation": 0.14, "decline": 0.09, "collapse": 0.08},
+      "noSi": {"abundance": 0.002, "better": 0.64, "stagnation": 0.16, "decline": 0.11, "collapse": 0.088},
+      "rationale": "Oil, uranium and metals and a reasonably effective state support further gains, but fossil revenue faces the energy transition, water stress is rising and power is concentrated.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1, "jobs": -0.5, "ownership": 0, "stability": -1},
+        "reason": "Productivity from decent AI use and cheap power for compute helps, but oil rents fade and an authoritarian state gains surveillance."
+      }
+    },
+    {
+      "entity": "CHL",
+      "si": {"abundance": 0.10, "better": 0.68, "stagnation": 0.10, "decline": 0.06, "collapse": 0.06},
+      "noSi": {"abundance": 0.003, "better": 0.70, "stagnation": 0.15, "decline": 0.08, "collapse": 0.067},
+      "rationale": "Capable institutions, copper and lithium and high AI use favour gains; severe water stress, very low fertility and rising insecurity are the main drags.",
+      "reading": {
+        "channels": {"productivity": 1.5, "prices": 1, "jobs": -0.5, "ownership": 0, "stability": -0.5},
+        "reason": "Productivity leads: high AI use and a capable state, plus copper and lithium sold into the build-out; water stress and polarisation are risks."
+      }
+    },
+    {
+      "entity": "SOM",
+      "si": {"abundance": 0.015, "better": 0.47, "stagnation": 0.185, "decline": 0.13, "collapse": 0.20},
+      "noSi": {"abundance": 0.001, "better": 0.48, "stagnation": 0.19, "decline": 0.13, "collapse": 0.199},
+      "rationale": "A barely functioning state, al-Shabaab, famine-prone drought and fertility above six keep collapse a real risk, though peace would bring large catch-up gains from a very low base.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -1, "ownership": -0.5, "stability": -1},
+        "reason": "Jobs bite: remittances from diaspora service work shrink as AI and robots spread, offsetting cheaper food and medicine in a fragile state."
+      }
+    },
+    {
+      "entity": "ROU",
+      "si": {"abundance": 0.14, "better": 0.64, "stagnation": 0.10, "decline": 0.06, "collapse": 0.06},
+      "noSi": {"abundance": 0.004, "better": 0.70, "stagnation": 0.15, "decline": 0.08, "collapse": 0.066},
+      "rationale": "EU and NATO membership anchor continued convergence, but rapid ageing, emigration, large fiscal deficits and a war next door are the risks.",
+      "reading": {
+        "channels": {"productivity": 1.5, "prices": 1, "jobs": -1, "ownership": 0, "stability": -0.5},
+        "reason": "Productivity within the EU leads, but IT outsourcing and routine manufacturing jobs are exposed; EU-level taxing of AI profits helps."
+      }
+    },
+    {
+      "entity": "SEN",
+      "si": {"abundance": 0.04, "better": 0.64, "stagnation": 0.14, "decline": 0.08, "collapse": 0.10},
+      "noSi": {"abundance": 0.001, "better": 0.62, "stagnation": 0.17, "decline": 0.10, "collapse": 0.109},
+      "rationale": "A stable democracy with new oil and gas favours gains; a debt load near 128% of GDP after hidden-debt revelations and coastal and Sahel climate stress are the risks.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1.5, "jobs": -0.5, "ownership": -0.5, "stability": -0.5},
+        "reason": "A working democracy with 83% electricity can use cheap AI services and cheaper imports; debt distress and coastal climate risk temper it."
+      }
+    },
+    {
+      "entity": "GTM",
+      "si": {"abundance": 0.035, "better": 0.615, "stagnation": 0.155, "decline": 0.10, "collapse": 0.095},
+      "noSi": {"abundance": 0.002, "better": 0.66, "stagnation": 0.16, "decline": 0.10, "collapse": 0.078},
+      "rationale": "Macro stability and remittances support slow gains, but weak governance, gang violence and Dry Corridor climate stress hold growth back.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -1.5, "ownership": -1, "stability": -0.5},
+        "reason": "Jobs dominate: remittances from US labour and maquila exports shrink as robots spread, outweighing cheaper goods in a weakly governed state."
+      }
+    },
+    {
+      "entity": "ECU",
+      "si": {"abundance": 0.06, "better": 0.63, "stagnation": 0.13, "decline": 0.09, "collapse": 0.09},
+      "noSi": {"abundance": 0.002, "better": 0.64, "stagnation": 0.17, "decline": 0.10, "collapse": 0.088},
+      "rationale": "Dollarisation and oil underpin a middle-income base, but declining oil output, an extreme homicide wave and hydro-dependent power are serious risks.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1.5, "jobs": -0.5, "ownership": -0.5, "stability": -0.5},
+        "reason": "Cheaper energy and goods plus decent AI use help most; fading oil rents and gang violence, which surveillance may curb or entrench, temper it."
+      }
+    },
+    {
+      "entity": "KHM",
+      "si": {"abundance": 0.03, "better": 0.645, "stagnation": 0.14, "decline": 0.095, "collapse": 0.09},
+      "noSi": {"abundance": 0.001, "better": 0.70, "stagnation": 0.14, "decline": 0.08, "collapse": 0.079},
+      "rationale": "Decades of fast garment- and tourism-led growth point upward, but one-party rule, Mekong ecological decline and border tensions with Thailand add risk.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -1, "ownership": -1, "stability": -1},
+        "reason": "Jobs: garment exports, the core of growth, are routine manufacturing that AI and robots replace; low AI use and one-party rule add little."
+      }
+    },
+    {
+      "entity": "ZWE",
+      "si": {"abundance": 0.03, "better": 0.585, "stagnation": 0.17, "decline": 0.10, "collapse": 0.115},
+      "noSi": {"abundance": 0.001, "better": 0.56, "stagnation": 0.19, "decline": 0.12, "collapse": 0.129},
+      "rationale": "Decades of mismanagement and currency crises have kept living standards flat; lithium and platinum offer upside if governance improves, while drought and debt recur.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -0.5, "ownership": 0, "stability": -1},
+        "reason": "Lithium and platinum demand and cheaper goods help, but a ruling party with surveillance tools and poor governance captures much of it."
+      }
+    },
+    {
+      "entity": "GIN",
+      "si": {"abundance": 0.03, "better": 0.625, "stagnation": 0.15, "decline": 0.08, "collapse": 0.115},
+      "noSi": {"abundance": 0.001, "better": 0.60, "stagnation": 0.17, "decline": 0.10, "collapse": 0.129},
+      "rationale": "Simandou iron ore and bauxite promise large export growth and water is plentiful, but junta-rooted rule and weak institutions decide how much reaches residents.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -0.5, "ownership": 0, "stability": -1},
+        "reason": "Bauxite and iron ore sell into the SI build-out, but a military-rooted government and weak institutions limit how far gains spread."
+      }
+    },
+    {
+      "entity": "BEN",
+      "si": {"abundance": 0.04, "better": 0.645, "stagnation": 0.14, "decline": 0.08, "collapse": 0.095},
+      "noSi": {"abundance": 0.001, "better": 0.62, "stagnation": 0.17, "decline": 0.10, "collapse": 0.109},
+      "rationale": "A relatively effective government and the port of Cotonou support growth, while jihadist spillover in the north and high climate vulnerability are the risks.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1.5, "jobs": -0.5, "ownership": -0.5, "stability": -0.5},
+        "reason": "Cheaper energy and medicine plus moderate state capacity let Benin turn SI-era trade into gains, though northern insurgency is a risk."
+      }
+    }
+  ]
+}

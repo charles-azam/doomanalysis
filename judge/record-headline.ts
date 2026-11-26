@@ -7,7 +7,7 @@ import type { HeadlineRecord } from '../src/model/types.ts'
 
 /**
  * Appends the current headline to src/data/history.ts, after a re-judging. Past records are never changed.
- * Usage: node --experimental-strip-types pdoom/judge/record-headline.ts <version> <definitions> <note>
+ * Usage: node --experimental-strip-types judge/record-headline.ts <version> <definitions> <note>
  */
 const [version, definitions, ...words] = process.argv.slice(2)
 if (version === undefined || definitions === undefined || words.length === 0) throw new Error('usage: record-headline.ts <version> <definitions> <note>')

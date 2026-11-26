@@ -1,0 +1,204 @@
+{
+  "places": [
+    {
+      "entity": "TZA",
+      "si": {"abundance": 0.05, "better": 0.74, "stagnation": 0.08, "decline": 0.06, "collapse": 0.07},
+      "noSi": {"abundance": 0.001, "better": 0.76, "stagnation": 0.10, "decline": 0.065, "collapse": 0.074},
+      "rationale": "Steady growth, relative peace and a gold, tourism and farm economy make a better 2100 likely; the 2025 election crackdown, very fast population growth and climate exposure are the main downside risks.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1.5, "jobs": -0.5, "ownership": -1, "stability": -0.5},
+        "reason": "Prices help most: cheap medicine, energy and inputs reach a poor farm economy, while low AI use and no compute ownership cap the gains."
+      }
+    },
+    {
+      "entity": "MMR",
+      "si": {"abundance": 0.03, "better": 0.59, "stagnation": 0.14, "decline": 0.10, "collapse": 0.14},
+      "noSi": {"abundance": 0.001, "better": 0.62, "stagnation": 0.15, "decline": 0.10, "collapse": 0.129},
+      "rationale": "Civil war since the 2021 coup and a junta with very weak institutions have pushed living standards down; recovery from a depressed base is likely over 75 years but far from assured given persistent conflict and climate exposure.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -0.5, "ownership": -1, "stability": -1},
+        "reason": "Stability dominates: AI surveillance and drones can entrench the junta or prolong war, and garment exports face automation; cheap goods only offset."
+      }
+    },
+    {
+      "entity": "SDN",
+      "si": {"abundance": 0.025, "better": 0.52, "stagnation": 0.16, "decline": 0.12, "collapse": 0.175},
+      "noSi": {"abundance": 0.001, "better": 0.54, "stagnation": 0.17, "decline": 0.12, "collapse": 0.169},
+      "rationale": "The 2023 war, famine, partition risk, debt above 200% of GDP and one of the weakest states make every bad outcome plausible, though a war-depressed base and Nile farmland allow recovery if peace holds.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -0.5, "ownership": -1, "stability": -1},
+        "reason": "Stability matters most: cheap drones and AI warfare can prolong factional war; cheap medicine and food help, but the state captures no AI gains."
+      }
+    },
+    {
+      "entity": "UGA",
+      "si": {"abundance": 0.045, "better": 0.71, "stagnation": 0.09, "decline": 0.07, "collapse": 0.085},
+      "noSi": {"abundance": 0.001, "better": 0.74, "stagnation": 0.10, "decline": 0.075, "collapse": 0.084},
+      "rationale": "Ample water, fertile land and coming oil revenue support growth, but very fast population growth, a contested succession after Museveni and a 21% interest burden add real downside.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1.5, "jobs": -0.5, "ownership": -1, "stability": -1},
+        "reason": "Prices and productivity help a farm economy with ample water, but an entrenched regime using AI surveillance and no compute ownership offset much."
+      }
+    },
+    {
+      "entity": "DZA",
+      "si": {"abundance": 0.06, "better": 0.54, "stagnation": 0.18, "decline": 0.11, "collapse": 0.11},
+      "noSi": {"abundance": 0.001, "better": 0.60, "stagnation": 0.19, "decline": 0.11, "collapse": 0.099},
+      "rationale": "Gas rents fund a low-debt state with full electricity, but declining hydrocarbon demand, severe and worsening water stress and weak diversification make stagnation or decline a substantial risk.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1, "jobs": -1, "ownership": -1, "stability": -0.5},
+        "reason": "Exports matter most: AI-driven cheap clean energy erodes the gas rents that fund the state; cheap desalination and goods soften the hit."
+      }
+    },
+    {
+      "entity": "IRQ",
+      "si": {"abundance": 0.035, "better": 0.44, "stagnation": 0.20, "decline": 0.16, "collapse": 0.165},
+      "noSi": {"abundance": 0.001, "better": 0.48, "stagnation": 0.21, "decline": 0.16, "collapse": 0.149},
+      "rationale": "Oil pays nearly all public revenue and salaries, so falling oil demand, a population set to roughly double and a drying Tigris-Euphrates basin make Iraq one of the likeliest places here to end up no better off.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1, "jobs": -1.5, "ownership": -1, "stability": -0.5},
+        "reason": "Exports dominate: SI makes clean energy cheap and shrinks the oil rents that pay public wages; cheaper goods do not replace that income."
+      }
+    },
+    {
+      "entity": "AFG",
+      "si": {"abundance": 0.02, "better": 0.55, "stagnation": 0.16, "decline": 0.12, "collapse": 0.15},
+      "noSi": {"abundance": 0.001, "better": 0.56, "stagnation": 0.17, "decline": 0.12, "collapse": 0.149},
+      "rationale": "Taliban rule excluding women from work and school, aid cuts, drought and fast population growth weigh heavily; a very low base and untapped minerals keep modest improvement the single most likely outcome.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -0.5, "ownership": -1, "stability": -1},
+        "reason": "Prices help most at this poverty level: cheap medicine, food and solar; but internet curbs and a closed regime keep AI access and gains low."
+      }
+    },
+    {
+      "entity": "YEM",
+      "si": {"abundance": 0.02, "better": 0.49, "stagnation": 0.17, "decline": 0.13, "collapse": 0.19},
+      "noSi": {"abundance": 0.001, "better": 0.50, "stagnation": 0.18, "decline": 0.13, "collapse": 0.189},
+      "rationale": "War, the worst water stress here, halted oil exports and fast population growth make collapse a real risk; recovery depends on the conflict ending and on energy for desalination becoming cheap.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -0.5, "ownership": -1, "stability": -1},
+        "reason": "Prices matter most: cheap energy could make desalination affordable for a country running out of water, but war and no AI capacity limit the rest."
+      }
+    },
+    {
+      "entity": "AGO",
+      "si": {"abundance": 0.035, "better": 0.54, "stagnation": 0.18, "decline": 0.12, "collapse": 0.125},
+      "noSi": {"abundance": 0.001, "better": 0.57, "stagnation": 0.19, "decline": 0.12, "collapse": 0.119},
+      "rationale": "Oil supplies most exports and output is already declining, debt service takes a quarter of revenue and the population may more than double, so income per person risks stagnation despite good water and farmland.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -1, "ownership": -1, "stability": -0.5},
+        "reason": "Exports dominate: faster clean-energy substitution under SI cuts the oil income that funds the state, while low AI use limits productivity gains."
+      }
+    },
+    {
+      "entity": "MAR",
+      "si": {"abundance": 0.08, "better": 0.71, "stagnation": 0.09, "decline": 0.06, "collapse": 0.06},
+      "noSi": {"abundance": 0.001, "better": 0.76, "stagnation": 0.11, "decline": 0.065, "collapse": 0.064},
+      "rationale": "A relatively effective state, proximity to Europe, phosphates, car manufacturing and renewables support steady gains, while chronic drought and severe water stress are the main threat.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1.5, "jobs": -1, "ownership": -0.5, "stability": -0.5},
+        "reason": "Jobs weigh most: call centres and car assembly face automation, but cheap energy for desalination and solid AI use give net gains."
+      }
+    },
+    {
+      "entity": "UZB",
+      "si": {"abundance": 0.06, "better": 0.72, "stagnation": 0.09, "decline": 0.06, "collapse": 0.07},
+      "noSi": {"abundance": 0.001, "better": 0.74, "stagnation": 0.11, "decline": 0.07, "collapse": 0.079},
+      "rationale": "Reforms since 2016, a young population, low debt and diversified exports point to continued growth; dependence on shrinking Amu Darya water and on remittances from Russia are the key risks.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1.5, "jobs": -0.5, "ownership": -1, "stability": -0.5},
+        "reason": "Prices and productivity help a reforming, fully electrified economy; migrant labour and textiles face automation and the state owns no compute."
+      }
+    },
+    {
+      "entity": "MYS",
+      "si": {"abundance": 0.17, "better": 0.70, "stagnation": 0.06, "decline": 0.035, "collapse": 0.035},
+      "noSi": {"abundance": 0.008, "better": 0.82, "stagnation": 0.09, "decline": 0.045, "collapse": 0.037},
+      "rationale": "An upper-middle-income economy with an effective state, low climate vulnerability and a growing data-centre and chip-packaging industry is very likely to be better off, and is the likeliest here to reach abundance.",
+      "reading": {
+        "channels": {"productivity": 1.5, "prices": 1, "jobs": -1, "ownership": 0.5, "stability": -0.5},
+        "reason": "Productivity leads: high AI use and Johor's data-centre and chip-packaging hub, though electronics assembly and service centres face automation."
+      }
+    },
+    {
+      "entity": "MOZ",
+      "si": {"abundance": 0.035, "better": 0.63, "stagnation": 0.13, "decline": 0.09, "collapse": 0.115},
+      "noSi": {"abundance": 0.001, "better": 0.64, "stagnation": 0.14, "decline": 0.10, "collapse": 0.119},
+      "rationale": "Among the poorest here, with insurgency in Cabo Delgado, heavy debt and repeated cyclones; LNG revenue and a very low base give room to improve, but governance failure is a large risk.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -0.5, "ownership": -1, "stability": -0.5},
+        "reason": "Prices help most where medicine and power are scarce; insurgency, a weak state and little AI capacity limit productivity and ownership gains."
+      }
+    },
+    {
+      "entity": "GHA",
+      "si": {"abundance": 0.06, "better": 0.76, "stagnation": 0.065, "decline": 0.055, "collapse": 0.06},
+      "noSi": {"abundance": 0.001, "better": 0.80, "stagnation": 0.08, "decline": 0.06, "collapse": 0.059},
+      "rationale": "A functioning democracy with gold, cocoa and oil and a reasonably effective state makes improvement likely; the recent debt crisis and climate stress on cocoa are the main risks.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1.5, "jobs": -0.5, "ownership": -1, "stability": -0.5},
+        "reason": "Prices and productivity help an English-speaking democracy with fair AI uptake, but it owns no compute and its service exports face automation."
+      }
+    },
+    {
+      "entity": "PER",
+      "si": {"abundance": 0.10, "better": 0.70, "stagnation": 0.09, "decline": 0.055, "collapse": 0.055},
+      "noSi": {"abundance": 0.002, "better": 0.75, "stagnation": 0.12, "decline": 0.065, "collapse": 0.063},
+      "rationale": "Copper demand from electrification and low public debt support growth, while chronic political instability, glacier loss threatening coastal water and high informality cap it.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1, "jobs": 0, "ownership": -0.5, "stability": -0.5},
+        "reason": "Productivity and exports help: high AI use for its income and rising copper demand from the AI build-out; political churn is the main drag."
+      }
+    },
+    {
+      "entity": "MDG",
+      "si": {"abundance": 0.03, "better": 0.58, "stagnation": 0.15, "decline": 0.105, "collapse": 0.135},
+      "noSi": {"abundance": 0.001, "better": 0.58, "stagnation": 0.17, "decline": 0.11, "collapse": 0.139},
+      "rationale": "Living standards have fallen since independence, 42% are undernourished and the 2025 coup worsens governance; nickel, graphite and vanilla offer upside, but decline or collapse remain unusually likely.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -0.5, "ownership": -1, "stability": -0.5},
+        "reason": "Prices help most for a very poor, hungry population, but weak governance and garment and call-centre exports exposed to automation offset gains."
+      }
+    },
+    {
+      "entity": "CIV",
+      "si": {"abundance": 0.05, "better": 0.74, "stagnation": 0.08, "decline": 0.065, "collapse": 0.065},
+      "noSi": {"abundance": 0.001, "better": 0.77, "stagnation": 0.09, "decline": 0.07, "collapse": 0.069},
+      "rationale": "Over a decade of fast growth, cocoa leadership and new offshore oil and gas support further gains; political tension around succession and climate stress on cocoa are the main risks.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1.5, "jobs": -0.5, "ownership": -1, "stability": -0.5},
+        "reason": "Prices and productivity help a fast-growing economy with moderate AI use, but it owns no compute and its state taxes little of the gains."
+      }
+    },
+    {
+      "entity": "CMR",
+      "si": {"abundance": 0.035, "better": 0.65, "stagnation": 0.125, "decline": 0.09, "collapse": 0.10},
+      "noSi": {"abundance": 0.001, "better": 0.68, "stagnation": 0.13, "decline": 0.09, "collapse": 0.099},
+      "rationale": "Two internal conflicts and an unresolved succession after a very old president make political breakdown a real risk, while diversified farm and timber exports and ample water support modest growth.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -0.5, "ownership": -1, "stability": -1},
+        "reason": "Stability weighs most: a contested succession with AI-enabled repression or unrest, while cheap goods help a poor, mostly farm economy."
+      }
+    },
+    {
+      "entity": "NPL",
+      "si": {"abundance": 0.045, "better": 0.71, "stagnation": 0.105, "decline": 0.07, "collapse": 0.07},
+      "noSi": {"abundance": 0.001, "better": 0.76, "stagnation": 0.11, "decline": 0.065, "collapse": 0.064},
+      "rationale": "Remittances, tourism and hydropower drive gains and the 2025 youth uprising may renew governance, but earthquake and glacier risks and dependence on migrant labour abroad are key vulnerabilities.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1.5, "jobs": -1.5, "ownership": -1, "stability": -0.5},
+        "reason": "Jobs weigh most: about a quarter of income is remittances from migrant labour that robots can replace; cheap goods and hydropower help offset it."
+      }
+    },
+    {
+      "entity": "VEN",
+      "si": {"abundance": 0.04, "better": 0.63, "stagnation": 0.14, "decline": 0.085, "collapse": 0.105},
+      "noSi": {"abundance": 0.001, "better": 0.68, "stagnation": 0.14, "decline": 0.08, "collapse": 0.099},
+      "rationale": "Living standards sit far below their past after a decade of collapse, so recovery is likely if a political opening holds, but oil's long decline and weak institutions limit the upside.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1, "jobs": -1, "ownership": -1, "stability": -0.5},
+        "reason": "Exports weigh most: cheap clean energy under SI erodes the oil reserves a recovery depends on; cheaper goods only partly offset that."
+      }
+    }
+  ]
+}

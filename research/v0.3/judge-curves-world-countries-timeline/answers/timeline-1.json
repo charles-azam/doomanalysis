@@ -1,0 +1,9 @@
+{
+  "timeline": [
+    {"year": 2030, "si": 0.15, "atLeast3": 0.022, "atLeast4": 0.008, "doom": 0.003},
+    {"year": 2040, "si": 0.45, "atLeast3": 0.095, "atLeast4": 0.04, "doom": 0.016},
+    {"year": 2050, "si": 0.6, "atLeast3": 0.16, "atLeast4": 0.066, "doom": 0.025},
+    {"year": 2075, "si": 0.75, "atLeast3": 0.3, "atLeast4": 0.105, "doom": 0.036}
+  ],
+  "rationale": "Superintelligence most likely arrives in the 2030s, and because AI carries most of the doom and level-4 risk and plays out within roughly a decade of deployment, doom and level 4 rise fastest between 2030 and 2050 and then slow. War, civil breakdown and pandemics are treated as a roughly constant yearly hazard, while climate and resource-driven level-3 catastrophes are back-loaded after 2050, which keeps level 3 climbing steadily to 2100."
+}

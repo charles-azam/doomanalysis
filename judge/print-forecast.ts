@@ -10,11 +10,11 @@ import { buildCountryPrompt, buildCurvePrompt, buildLevel2Prompt, buildTimelineP
 
 /**
  * Writes the v0.3 judge prompts to a folder, one file per batch.
- * Usage: node --experimental-strip-types pdoom/judge/print-forecast.ts curves <dir>
- *        node --experimental-strip-types pdoom/judge/print-forecast.ts world <dir>
- *        node --experimental-strip-types pdoom/judge/print-forecast.ts countries <dir> [batch size]
- *        node --experimental-strip-types pdoom/judge/print-forecast.ts timeline <dir>
- *        node --experimental-strip-types pdoom/judge/print-forecast.ts level2 <dir>
+ * Usage: node --experimental-strip-types judge/print-forecast.ts curves <dir>
+ *        node --experimental-strip-types judge/print-forecast.ts world <dir>
+ *        node --experimental-strip-types judge/print-forecast.ts countries <dir> [batch size]
+ *        node --experimental-strip-types judge/print-forecast.ts timeline <dir>
+ *        node --experimental-strip-types judge/print-forecast.ts level2 <dir>
  * The world prompt uses the curves already imported; country prompts use the world already imported.
  */
 const [mode, dir, size] = process.argv.slice(2)

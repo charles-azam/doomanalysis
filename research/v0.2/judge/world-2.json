@@ -1,0 +1,345 @@
+{
+  "world": {
+    "siBy2050": 0.5,
+    "siBy2100": 0.75,
+    "si": {
+      "doom": 0.11,
+      "abundance": 0.15,
+      "pathways": {
+        "ai": 0.08,
+        "nuclear": 0.015,
+        "pandemic": 0.012,
+        "climate": 0.001,
+        "resources": 0.001,
+        "other": 0.007
+      }
+    },
+    "noSi": {
+      "doom": 0.045,
+      "abundance": 0.004,
+      "pathways": {
+        "ai": 0.003,
+        "nuclear": 0.02,
+        "pandemic": 0.012,
+        "climate": 0.004,
+        "resources": 0.003,
+        "other": 0.008
+      }
+    },
+    "rationale": "Superintelligence is more likely than not this century given how fast AI capability is rising, and it drives both tails: loss of control is the main route to doom, while near-free essentials for 90% of humanity also depend on it and on the gains reaching Africa and South Asia, which will hold over half of humanity by 2100. Without it, doom comes mainly from nuclear war and engineered pandemics, and doom is a little more likely because some no-superintelligence worlds are ones where a catastrophe stopped progress. The near-free test is almost out of reach without superintelligence, because health and security alone already cost more than 10% of income in rich countries."
+  },
+  "entities": [
+    {
+      "entity": "europe-north",
+      "si": {
+        "collapse": 0.145,
+        "abundance": 0.38,
+        "pillarLoss": {
+          "energy": 0.11,
+          "water": 0.09,
+          "food": 0.11,
+          "health": 0.11,
+          "security": 0.12
+        }
+      },
+      "noSi": {
+        "collapse": 0.08,
+        "abundance": 0.04,
+        "pillarLoss": {
+          "energy": 0.05,
+          "water": 0.04,
+          "food": 0.055,
+          "health": 0.05,
+          "security": 0.06
+        }
+      },
+      "rationale": "Rich, stable and well governed, so collapse mostly means global doom or a war with Russia reaching the region. Abundance hinges on superintelligence pushing health and food costs far below today's roughly quarter of income."
+    },
+    {
+      "entity": "europe-west",
+      "si": {
+        "collapse": 0.15,
+        "abundance": 0.37,
+        "pillarLoss": {
+          "energy": 0.115,
+          "water": 0.09,
+          "food": 0.11,
+          "health": 0.11,
+          "security": 0.125
+        }
+      },
+      "noSi": {
+        "collapse": 0.09,
+        "abundance": 0.035,
+        "pillarLoss": {
+          "energy": 0.06,
+          "water": 0.04,
+          "food": 0.055,
+          "health": 0.05,
+          "security": 0.065
+        }
+      },
+      "rationale": "Wealthy and resilient but reliant on imported energy and exposed to a European war. Health spending near 12% of GDP must fall sharply for the near-free test, which realistically needs superintelligence."
+    },
+    {
+      "entity": "europe-south",
+      "si": {
+        "collapse": 0.155,
+        "abundance": 0.32,
+        "pillarLoss": {
+          "energy": 0.11,
+          "water": 0.105,
+          "food": 0.115,
+          "health": 0.11,
+          "security": 0.12
+        }
+      },
+      "noSi": {
+        "collapse": 0.095,
+        "abundance": 0.03,
+        "pillarLoss": {
+          "energy": 0.055,
+          "water": 0.055,
+          "food": 0.06,
+          "health": 0.05,
+          "security": 0.06
+        }
+      },
+      "rationale": "High water stress, heat and heavy public debt add some risk, but rich states can buy their way through droughts. Abundance needs superintelligence to cut costs and lift weaker economies."
+    },
+    {
+      "entity": "europe-east",
+      "si": {
+        "collapse": 0.21,
+        "abundance": 0.22,
+        "pillarLoss": {
+          "energy": 0.12,
+          "water": 0.1,
+          "food": 0.12,
+          "health": 0.13,
+          "security": 0.18
+        }
+      },
+      "noSi": {
+        "collapse": 0.16,
+        "abundance": 0.015,
+        "pillarLoss": {
+          "energy": 0.07,
+          "water": 0.05,
+          "food": 0.07,
+          "health": 0.08,
+          "security": 0.14
+        }
+      },
+      "rationale": "Security is the weak pillar: an ongoing war, near-war-zone peace scores and Russia making up half the population mean a wider war or Russian breakdown could leave most people unsafe. Weak governance and military spending also make near-free essentials harder."
+    },
+    {
+      "entity": "north-america",
+      "si": {
+        "collapse": 0.165,
+        "abundance": 0.35,
+        "pillarLoss": {
+          "energy": 0.12,
+          "water": 0.09,
+          "food": 0.11,
+          "health": 0.12,
+          "security": 0.13
+        }
+      },
+      "noSi": {
+        "collapse": 0.1,
+        "abundance": 0.03,
+        "pillarLoss": {
+          "energy": 0.065,
+          "water": 0.045,
+          "food": 0.06,
+          "health": 0.06,
+          "security": 0.075
+        }
+      },
+      "rationale": "The main nuclear target and the centre of the AI race, with rising political instability, but rich in energy and food. Health spending at 16% of GDP is the biggest barrier to near-free essentials unless superintelligence-driven growth swamps it."
+    },
+    {
+      "entity": "latin-america",
+      "si": {
+        "collapse": 0.17,
+        "abundance": 0.21,
+        "pillarLoss": {
+          "energy": 0.11,
+          "water": 0.11,
+          "food": 0.12,
+          "health": 0.12,
+          "security": 0.14
+        }
+      },
+      "noSi": {
+        "collapse": 0.11,
+        "abundance": 0.008,
+        "pillarLoss": {
+          "energy": 0.05,
+          "water": 0.06,
+          "food": 0.07,
+          "health": 0.06,
+          "security": 0.085
+        }
+      },
+      "rationale": "Far from the nuclear front lines and rich in food and energy, but very high violence, weak water access and middling governance stand in the way of 90% access. Abundance needs superintelligence gains to reach it and violence to fall."
+    },
+    {
+      "entity": "mena",
+      "si": {
+        "collapse": 0.21,
+        "abundance": 0.18,
+        "pillarLoss": {
+          "energy": 0.12,
+          "water": 0.15,
+          "food": 0.15,
+          "health": 0.12,
+          "security": 0.17
+        }
+      },
+      "noSi": {
+        "collapse": 0.17,
+        "abundance": 0.008,
+        "pillarLoss": {
+          "energy": 0.06,
+          "water": 0.11,
+          "food": 0.11,
+          "health": 0.07,
+          "security": 0.13
+        }
+      },
+      "rationale": "Extreme water stress, food import dependence, heat and repeated wars make it one of the likeliest regions to collapse. Cheap desalination and energy under superintelligence could change that, but only if conflict subsides."
+    },
+    {
+      "entity": "sub-saharan-africa",
+      "si": {
+        "collapse": 0.19,
+        "abundance": 0.15,
+        "pillarLoss": {
+          "energy": 0.11,
+          "water": 0.11,
+          "food": 0.15,
+          "health": 0.13,
+          "security": 0.14
+        }
+      },
+      "noSi": {
+        "collapse": 0.16,
+        "abundance": 0.002,
+        "pillarLoss": {
+          "energy": 0.06,
+          "water": 0.07,
+          "food": 0.12,
+          "health": 0.09,
+          "security": 0.1
+        }
+      },
+      "rationale": "Starts furthest from abundance, with low electricity and water access, widespread hunger and fragile states, while its population may more than double. Food is the pillar most at risk from warming, and reaching near-free essentials requires superintelligence gains to diffuse here quickly."
+    },
+    {
+      "entity": "central-south-asia",
+      "si": {
+        "collapse": 0.18,
+        "abundance": 0.18,
+        "pillarLoss": {
+          "energy": 0.11,
+          "water": 0.13,
+          "food": 0.13,
+          "health": 0.11,
+          "security": 0.13
+        }
+      },
+      "noSi": {
+        "collapse": 0.13,
+        "abundance": 0.004,
+        "pillarLoss": {
+          "energy": 0.055,
+          "water": 0.08,
+          "food": 0.09,
+          "health": 0.06,
+          "security": 0.08
+        }
+      },
+      "rationale": "India dominates, so regional collapse needs India to fail, most plausibly through an India-Pakistan nuclear war or severe water and heat stress. Low incomes and a heavy interest burden make near-free essentials unlikely without superintelligence."
+    },
+    {
+      "entity": "east-asia",
+      "si": {
+        "collapse": 0.18,
+        "abundance": 0.29,
+        "pillarLoss": {
+          "energy": 0.12,
+          "water": 0.1,
+          "food": 0.12,
+          "health": 0.11,
+          "security": 0.15
+        }
+      },
+      "noSi": {
+        "collapse": 0.11,
+        "abundance": 0.02,
+        "pillarLoss": {
+          "energy": 0.06,
+          "water": 0.05,
+          "food": 0.065,
+          "health": 0.055,
+          "security": 0.08
+        }
+      },
+      "rationale": "Capable states and strong industry, but a war over Taiwan, which an AI race makes more likely, is the main collapse risk. China's scale and manufacturing base give it a real shot at abundance if superintelligence arrives."
+    },
+    {
+      "entity": "southeast-asia",
+      "si": {
+        "collapse": 0.17,
+        "abundance": 0.23,
+        "pillarLoss": {
+          "energy": 0.11,
+          "water": 0.11,
+          "food": 0.12,
+          "health": 0.11,
+          "security": 0.13
+        }
+      },
+      "noSi": {
+        "collapse": 0.11,
+        "abundance": 0.008,
+        "pillarLoss": {
+          "energy": 0.055,
+          "water": 0.06,
+          "food": 0.07,
+          "health": 0.055,
+          "security": 0.08
+        }
+      },
+      "rationale": "Fairly peaceful and growing, but exposed to sea-level rise, storms and a South China Sea conflict, and fewer than half of people have safe water today. Abundance depends on superintelligence gains spreading through middle-income economies."
+    },
+    {
+      "entity": "oceania",
+      "si": {
+        "collapse": 0.145,
+        "abundance": 0.35,
+        "pillarLoss": {
+          "energy": 0.11,
+          "water": 0.09,
+          "food": 0.1,
+          "health": 0.11,
+          "security": 0.12
+        }
+      },
+      "noSi": {
+        "collapse": 0.08,
+        "abundance": 0.03,
+        "pillarLoss": {
+          "energy": 0.05,
+          "water": 0.045,
+          "food": 0.05,
+          "health": 0.05,
+          "security": 0.055
+        }
+      },
+      "rationale": "Australia and New Zealand are rich, stable, food and energy exporters, far from likely nuclear targets. Papua New Guinea's low access to electricity and food pulls the 90% threshold down, and near-free essentials still need superintelligence."
+    }
+  ]
+}

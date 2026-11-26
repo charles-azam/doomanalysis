@@ -1,0 +1,124 @@
+{
+  "places": [
+    {
+      "entity": "MUS",
+      "si": {"abundance": 0.15, "better": 0.63, "stagnation": 0.09, "decline": 0.06, "collapse": 0.07},
+      "noSi": {"abundance": 0.002, "better": 0.66, "stagnation": 0.17, "decline": 0.093, "collapse": 0.075},
+      "rationale": "A stable, well-governed upper-middle-income democracy with a long growth record, so further gains are likely; the drags are rapid aging, high public debt, and dependence on imported food, fuel and tourism, which a global trade shock or stronger cyclones would hit hard."
+    },
+    {
+      "entity": "DJI",
+      "si": {"abundance": 0.05, "better": 0.61, "stagnation": 0.12, "decline": 0.095, "collapse": 0.125},
+      "noSi": {"abundance": 0.001, "better": 0.589, "stagnation": 0.17, "decline": 0.11, "collapse": 0.13},
+      "rationale": "Its strategic port and the foreign bases it hosts give it a steady source of rent tied to Ethiopia's growth; but extreme heat that will get worse, scarce water, a personalised regime with no clear successor and a volatile Horn of Africa and Red Sea keep the risk of collapse high."
+    },
+    {
+      "entity": "FJI",
+      "si": {"abundance": 0.08, "better": 0.64, "stagnation": 0.12, "decline": 0.08, "collapse": 0.08},
+      "noSi": {"abundance": 0.001, "better": 0.64, "stagnation": 0.18, "decline": 0.094, "collapse": 0.085},
+      "rationale": "Its high volcanic islands, a recovering tourism sector and a reasonably stable democracy since 2014 make gains likely from a baseline depressed by COVID; the risks are cyclones, coastal sea-level rise, poor water and health outcomes, and its history of coups."
+    },
+    {
+      "entity": "COM",
+      "si": {"abundance": 0.04, "better": 0.58, "stagnation": 0.15, "decline": 0.11, "collapse": 0.12},
+      "noSi": {"abundance": 0.0005, "better": 0.55, "stagnation": 0.2, "decline": 0.12, "collapse": 0.1295},
+      "rationale": "A very poor state with weak capacity, a long history of coups and secession crises, high fertility and a very low readiness to adapt; remittances from France and some growth from a low base still make modest gains more likely than not over 75 years."
+    },
+    {
+      "entity": "SLB",
+      "si": {"abundance": 0.04, "better": 0.55, "stagnation": 0.17, "decline": 0.1, "collapse": 0.14},
+      "noSi": {"abundance": 0.0005, "better": 0.5, "stagnation": 0.23, "decline": 0.12, "collapse": 0.1495},
+      "rationale": "Income per head has been close to flat for decades, logging revenue is running out as the forests go, population growth is fast, and ethnic and urban unrest recurs; subsistence farming puts a floor under living standards, but stagnation and collapse are both real risks."
+    },
+    {
+      "entity": "GUY",
+      "si": {"abundance": 0.12, "better": 0.64, "stagnation": 0.09, "decline": 0.07, "collapse": 0.08},
+      "noSi": {"abundance": 0.002, "better": 0.68, "stagnation": 0.13, "decline": 0.093, "collapse": 0.095},
+      "rationale": "Low-cost offshore oil will fund household consumption for decades and makes it likely to keep rising; the risks are the resource curse, ethnic polarisation, high crime, the Venezuelan claim to Essequibo, and a capital that lies below high-tide level as the sea rises."
+    },
+    {
+      "entity": "BTN",
+      "si": {"abundance": 0.1, "better": 0.7, "stagnation": 0.08, "decline": 0.05, "collapse": 0.07},
+      "noSi": {"abundance": 0.002, "better": 0.72, "stagnation": 0.12, "decline": 0.078, "collapse": 0.08},
+      "rationale": "Hydropower exports to a fast-growing India, a stable and capable government and low water stress favour steady gains; the risks are the young emigrating, debt from hydropower projects, glacial floods and lower glacier-fed flows, and its position between China and India."
+    },
+    {
+      "entity": "LUX",
+      "si": {"abundance": 0.33, "better": 0.49, "stagnation": 0.085, "decline": 0.045, "collapse": 0.05},
+      "noSi": {"abundance": 0.015, "better": 0.63, "stagnation": 0.2, "decline": 0.095, "collapse": 0.06},
+      "rationale": "The richest starting point, excellent governance and almost no public debt make it a prime beneficiary of superintelligence; without it, rich-world growth may slow towards stagnation, and its finance-heavy economy depends on its energy imports and on the EU holding together."
+    },
+    {
+      "entity": "MAC",
+      "si": {"abundance": 0.24, "better": 0.54, "stagnation": 0.095, "decline": 0.06, "collapse": 0.065},
+      "noSi": {"abundance": 0.005, "better": 0.59, "stagnation": 0.2, "decline": 0.12, "collapse": 0.085},
+      "rationale": "Wealthy, with no public debt and large reserves, but the economy rests on casinos that depend on Beijing's policy and on mainland visitors, the SAR arrangement ends in 2049, fertility is the lowest in the world, and a US–China war over Taiwan would hit it hard."
+    },
+    {
+      "entity": "SUR",
+      "si": {"abundance": 0.1, "better": 0.64, "stagnation": 0.1, "decline": 0.075, "collapse": 0.085},
+      "noSi": {"abundance": 0.002, "better": 0.66, "stagnation": 0.14, "decline": 0.1, "collapse": 0.098},
+      "rationale": "New offshore oil from the late 2020s should lift public revenue and consumption, but the country carries heavy restructured debt and mediocre governance with a history of coups, and its population lives on a low coastal plain exposed to sea-level rise."
+    },
+    {
+      "entity": "MNE",
+      "si": {"abundance": 0.22, "better": 0.56, "stagnation": 0.1, "decline": 0.06, "collapse": 0.06},
+      "noSi": {"abundance": 0.003, "better": 0.66, "stagnation": 0.165, "decline": 0.1, "collapse": 0.072},
+      "rationale": "It leads the queue to join the EU and is still converging on the EU average, so it has more room for gains than the rest of Southern Europe; the drags are rapid aging, a shrinking population, dependence on tourism, and Balkan or NATO–Russia tensions."
+    },
+    {
+      "entity": "MLT",
+      "si": {"abundance": 0.27, "better": 0.51, "stagnation": 0.095, "decline": 0.06, "collapse": 0.065},
+      "noSi": {"abundance": 0.005, "better": 0.63, "stagnation": 0.185, "decline": 0.11, "collapse": 0.07},
+      "rationale": "A fast-growing EU economy built on services and migration, with moderate debt, so further gains are likely; it imports nearly all its energy, depends on desalinated water, faces Mediterranean heat, has the lowest fertility in the EU, and has governance controversies."
+    },
+    {
+      "entity": "MDV",
+      "si": {"abundance": 0.08, "better": 0.59, "stagnation": 0.12, "decline": 0.1, "collapse": 0.11},
+      "noSi": {"abundance": 0.001, "better": 0.56, "stagnation": 0.18, "decline": 0.13, "collapse": 0.129},
+      "rationale": "Luxury tourism has made it rich for South Asia, but it is nearly all under a metre above sea level, faces half a metre or more of sea-level rise and the bleaching of its reefs, and carries debt close to default; it survives only with costly land raising and by concentrating people on fewer islands."
+    },
+    {
+      "entity": "CPV",
+      "si": {"abundance": 0.07, "better": 0.66, "stagnation": 0.11, "decline": 0.08, "collapse": 0.08},
+      "noSi": {"abundance": 0.001, "better": 0.67, "stagnation": 0.16, "decline": 0.084, "collapse": 0.085},
+      "rationale": "One of Africa's best-governed and most stable democracies, with tourism, a large diaspora and good health outcomes, so steady gains are likely; it is very short of water, imports its food and fuel, and has high public debt."
+    },
+    {
+      "entity": "BRN",
+      "si": {"abundance": 0.15, "better": 0.55, "stagnation": 0.15, "decline": 0.08, "collapse": 0.07},
+      "noSi": {"abundance": 0.003, "better": 0.5, "stagnation": 0.25, "decline": 0.15, "collapse": 0.097},
+      "rationale": "Wealthy with almost no debt and a large sovereign fund, but income has stagnated for decades and depends on oil and gas that are depleting and losing their market in the energy transition; an aging absolute monarchy with little diversification makes stagnation or post-oil decline plausible."
+    },
+    {
+      "entity": "BLZ",
+      "si": {"abundance": 0.08, "better": 0.63, "stagnation": 0.12, "decline": 0.08, "collapse": 0.09},
+      "noSi": {"abundance": 0.001, "better": 0.62, "stagnation": 0.17, "decline": 0.11, "collapse": 0.099},
+      "rationale": "Tourism, farming and abundant water and land support gains from a low-middle base; the drags are very high violent crime, weak government effectiveness, hurricanes, the bleaching of its barrier reef, a low-lying coast, and Guatemala's territorial claim."
+    },
+    {
+      "entity": "BHS",
+      "si": {"abundance": 0.13, "better": 0.54, "stagnation": 0.14, "decline": 0.1, "collapse": 0.09},
+      "noSi": {"abundance": 0.003, "better": 0.517, "stagnation": 0.23, "decline": 0.14, "collapse": 0.11},
+      "rationale": "Comfortably off but stagnant for two decades, it depends almost entirely on tourism and imports, spends a fifth of its revenue on interest, and is low-lying and exposed to stronger hurricanes like Dorian, so it is more exposed than most rich-ish islands to stagnation and climate damage."
+    },
+    {
+      "entity": "ISL",
+      "si": {"abundance": 0.34, "better": 0.5, "stagnation": 0.08, "decline": 0.04, "collapse": 0.04},
+      "noSi": {"abundance": 0.01, "better": 0.68, "stagnation": 0.18, "decline": 0.085, "collapse": 0.045},
+      "rationale": "Rich, peaceful and well-governed, almost self-sufficient in energy from geothermal and hydro and with fish for food, it is among the most resilient places in a global catastrophe; its residual risks are volcanic eruptions, the economic cost of an AMOC collapse, and acidification of its fishing grounds."
+    },
+    {
+      "entity": "VUT",
+      "si": {"abundance": 0.05, "better": 0.58, "stagnation": 0.16, "decline": 0.1, "collapse": 0.11},
+      "noSi": {"abundance": 0.0005, "better": 0.54, "stagnation": 0.23, "decline": 0.12, "collapse": 0.1095},
+      "rationale": "Often ranked the world's most disaster-exposed country (cyclones, earthquakes, volcanoes), with near-flat income for decades, fast population growth and weak administration; customary subsistence farming makes a fall to half of today's living standard hard but not impossible."
+    },
+    {
+      "entity": "BRB",
+      "si": {"abundance": 0.13, "better": 0.58, "stagnation": 0.13, "decline": 0.085, "collapse": 0.075},
+      "noSi": {"abundance": 0.002, "better": 0.58, "stagnation": 0.21, "decline": 0.123, "collapse": 0.085},
+      "rationale": "Well-governed and stable, with higher ground than most Caribbean islands, but income has been roughly stagnant since 2008 and depends on tourism, with heavy debt, scarce water and an aging population, so stagnation is a substantial risk alongside likely modest gains."
+    }
+  ]
+}

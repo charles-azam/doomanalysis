@@ -1,0 +1,394 @@
+[
+ {
+  "entity": "FRA",
+  "central": 27.1,
+  "low": 26.5,
+  "high": 34.3,
+  "parts": {
+   "food": 6.89,
+   "energy": 4.13,
+   "water": 0.71,
+   "health": 11.54,
+   "military": 2.03,
+   "public_order": 1.8
+  },
+  "years": {
+   "food": 2022,
+   "energy": 2022,
+   "water": 2022,
+   "health": 2024,
+   "military": 2025,
+   "public_order": 2024
+  },
+  "sources": {
+   "food": "Eurostat nama_10_co3_p3 COICOP 01, 2022",
+   "energy": "Eurostat nama_10_co3_p3 COICOP 04.5 + fuel share of 07.2 (Eurostat HICP weights), 2022; high = x2.3 economy-wide (judged, US ratio)",
+   "water": "Eurostat nama_10_co3_p3 COICOP 04.4, 2022; high adds public water and wastewater (COFOG)",
+   "health": "WHO GHED current health expenditure via World Bank, 2024",
+   "military": "SIPRI via World Bank, 2025",
+   "public_order": "Eurostat gov_10a_exp GF03, 2024"
+  },
+  "judged": []
+ },
+ {
+  "entity": "DEU",
+  "central": 26.6,
+  "low": 25.9,
+  "high": 32.7,
+  "parts": {
+   "food": 5.39,
+   "energy": 3.92,
+   "water": 1.15,
+   "health": 12.27,
+   "military": 2.27,
+   "public_order": 1.6
+  },
+  "years": {
+   "food": 2022,
+   "energy": 2022,
+   "water": 2022,
+   "health": 2024,
+   "military": 2025,
+   "public_order": 2024
+  },
+  "sources": {
+   "food": "Eurostat nama_10_co3_p3 COICOP 01, 2022",
+   "energy": "Eurostat nama_10_co3_p3 COICOP 04.5 + fuel share of 07.2 (Eurostat HICP weights), 2022; high = x2.3 economy-wide (judged, US ratio)",
+   "water": "Eurostat nama_10_co3_p3 COICOP 04.4, 2022; high adds public water and wastewater (COFOG)",
+   "health": "WHO GHED current health expenditure via World Bank, 2024",
+   "military": "SIPRI via World Bank, 2025",
+   "public_order": "Eurostat gov_10a_exp GF03, 2024"
+  },
+  "judged": []
+ },
+ {
+  "entity": "GBR",
+  "central": 24.4,
+  "low": 23.9,
+  "high": 30.8,
+  "parts": {
+   "food": 5.28,
+   "energy": 3.0,
+   "water": 0.51,
+   "health": 11.13,
+   "military": 2.35,
+   "public_order": 2.15
+  },
+  "years": {
+   "food": 2025,
+   "energy": 2025,
+   "water": 2025,
+   "health": 2024,
+   "military": 2025,
+   "public_order": 2024
+  },
+  "sources": {
+   "food": "OECD Table 5 COICOP 01, 2025",
+   "energy": "OECD Table 5 COICOP 04.5 + fuel share of 07.2 (Eurostat HICP weights), 2025; high = x2.3 economy-wide (judged, US ratio)",
+   "water": "OECD Table 5 COICOP 04.4, 2025; high adds public water and wastewater (COFOG)",
+   "health": "WHO GHED current health expenditure via World Bank, 2024",
+   "military": "SIPRI via World Bank, 2025",
+   "public_order": "OECD Table 11 COFOG 03, 2024"
+  },
+  "judged": []
+ },
+ {
+  "entity": "SWE",
+  "central": 25.1,
+  "low": 24.4,
+  "high": 31.8,
+  "parts": {
+   "food": 5.56,
+   "energy": 3.94,
+   "water": 0.3,
+   "health": 11.22,
+   "military": 2.47,
+   "public_order": 1.6
+  },
+  "years": {
+   "food": 2022,
+   "energy": 2022,
+   "water": 2025,
+   "health": 2024,
+   "military": 2025,
+   "public_order": 2024
+  },
+  "sources": {
+   "food": "Eurostat nama_10_co3_p3 COICOP 01, 2022",
+   "energy": "Eurostat nama_10_co3_p3 COICOP 04.5 + fuel share of 07.2 (Eurostat HICP weights), 2022; high = x2.3 economy-wide (judged, US ratio)",
+   "water": "judged: HICP weight for water and sewerage 5.8 per mille (2025); high adds public water and wastewater 0.4% (COFOG)",
+   "health": "WHO GHED current health expenditure via World Bank, 2024",
+   "military": "SIPRI via World Bank, 2025",
+   "public_order": "Eurostat gov_10a_exp GF03, 2024"
+  },
+  "judged": [
+   "water"
+  ]
+ },
+ {
+  "entity": "NOR",
+  "central": 19.7,
+  "low": 19.3,
+  "high": 24.1,
+  "parts": {
+   "food": 3.55,
+   "energy": 1.93,
+   "water": 0.55,
+   "health": 9.43,
+   "military": 3.28,
+   "public_order": 1.0
+  },
+  "years": {
+   "food": 2023,
+   "energy": 2023,
+   "water": 2023,
+   "health": 2023,
+   "military": 2025,
+   "public_order": 2024
+  },
+  "sources": {
+   "food": "OECD Table 5 (COICOP 2018) COICOP 01, 2023",
+   "energy": "OECD Table 5 (COICOP 2018) COICOP 04.5 + fuel share of 07.2 (Eurostat HICP weights), 2023; high = x2.3 economy-wide (judged, US ratio)",
+   "water": "OECD Table 5 (COICOP 2018) COICOP 04.4, 2023; high adds public water and wastewater (COFOG)",
+   "health": "WHO GHED current health expenditure via World Bank, 2023",
+   "military": "SIPRI via World Bank, 2025",
+   "public_order": "Eurostat gov_10a_exp GF03, 2024"
+  },
+  "judged": []
+ },
+ {
+  "entity": "USA",
+  "central": 28.8,
+  "low": 28.3,
+  "high": 34.3,
+  "parts": {
+   "food": 4.27,
+   "energy": 2.48,
+   "water": 0.45,
+   "health": 16.69,
+   "military": 3.12,
+   "public_order": 1.8
+  },
+  "years": {
+   "food": 2024,
+   "energy": 2025,
+   "water": 2025,
+   "health": 2023,
+   "military": 2025,
+   "public_order": 2024
+  },
+  "sources": {
+   "food": "OECD Table 5 COICOP 01, 2024",
+   "energy": "BEA PCE energy goods and services 2025 (FRED); high = EIA total energy expenditure 5.7% of GDP (2023)",
+   "water": "BEA PCE water supply and sanitation 2025 (FRED)",
+   "health": "WHO GHED current health expenditure via World Bank, 2023",
+   "military": "SIPRI via World Bank, 2025",
+   "public_order": "OECD Table 11 COFOG 03, 2024"
+  },
+  "judged": []
+ },
+ {
+  "entity": "JPN",
+  "central": 25.0,
+  "low": 24.2,
+  "high": 30.4,
+  "parts": {
+   "food": 8.53,
+   "energy": 2.65,
+   "water": 0.53,
+   "health": 10.74,
+   "military": 1.41,
+   "public_order": 1.16
+  },
+  "years": {
+   "food": 2024,
+   "energy": 2024,
+   "water": 2024,
+   "health": 2023,
+   "military": 2025,
+   "public_order": 2024
+  },
+  "sources": {
+   "food": "OECD Table 5 (COICOP 2018) COICOP 01, 2024",
+   "energy": "OECD Table 5 (COICOP 2018) COICOP 04.5 + fuel share of 07.2 (Eurostat HICP weights), 2024; high = x2.3 economy-wide (judged, US ratio)",
+   "water": "OECD Table 5 (COICOP 2018) COICOP 04.4, 2024; high adds public water and wastewater (COFOG)",
+   "health": "WHO GHED current health expenditure via World Bank, 2023",
+   "military": "SIPRI via World Bank, 2025",
+   "public_order": "OECD Table 11 COFOG 03, 2024"
+  },
+  "judged": []
+ },
+ {
+  "entity": "CHN",
+  "central": 18.5,
+  "low": 17.5,
+  "high": 22.8,
+  "parts": {
+   "food": 7.18,
+   "energy": 2.0,
+   "water": 0.5,
+   "health": 5.94,
+   "military": 1.72,
+   "public_order": 1.1
+  },
+  "years": {
+   "food": 2021,
+   "energy": 2024,
+   "water": 2024,
+   "health": 2023,
+   "military": 2025,
+   "public_order": 2024
+  },
+  "sources": {
+   "food": "World Bank ICP 2021, food and non-alcoholic beverages",
+   "energy": "judged: households consume only 38-40% of GDP; no published COICOP split",
+   "water": "judged, anchored on World Bank: public water spending in developing countries about 0.5% of GDP",
+   "health": "WHO GHED current health expenditure via World Bank, 2023",
+   "military": "SIPRI via World Bank, 2025",
+   "public_order": "IMF GFS COFOG 03, 2024"
+  },
+  "judged": [
+   "energy",
+   "water"
+  ]
+ },
+ {
+  "entity": "IND",
+  "central": 31.2,
+  "low": 28.7,
+  "high": 39.1,
+  "parts": {
+   "food": 18.87,
+   "energy": 5.13,
+   "water": 0.5,
+   "health": 3.34,
+   "military": 2.3,
+   "public_order": 1.1
+  },
+  "years": {
+   "food": 2021,
+   "energy": 2024,
+   "water": 2024,
+   "health": 2023,
+   "military": 2025,
+   "public_order": 2024
+  },
+  "sources": {
+   "food": "World Bank ICP 2021, food and non-alcoholic beverages",
+   "energy": "MoSPI HCES 2023-24 fuel and light + 40% of conveyance (judged fuel part) x household consumption 56.7% of GDP (2025)",
+   "water": "judged, anchored on World Bank: public water spending in developing countries about 0.5% of GDP",
+   "health": "WHO GHED current health expenditure via World Bank, 2023",
+   "military": "SIPRI via World Bank, 2025",
+   "public_order": "judged: Union police budget alone was 0.44% of GDP in 2023-24 (PRS, derived with World Bank GDP); states fund most policing"
+  },
+  "judged": [
+   "energy",
+   "water",
+   "public_order"
+  ]
+ },
+ {
+  "entity": "BRA",
+  "central": 30.7,
+  "low": 28.4,
+  "high": 38.0,
+  "parts": {
+   "food": 12.43,
+   "energy": 4.0,
+   "water": 0.5,
+   "health": 9.73,
+   "military": 1.05,
+   "public_order": 2.95
+  },
+  "years": {
+   "food": 2021,
+   "energy": 2024,
+   "water": 2024,
+   "health": 2023,
+   "military": 2025,
+   "public_order": 2024
+  },
+  "sources": {
+   "food": "World Bank ICP 2021, food and non-alcoholic beverages",
+   "energy": "judged: households consume 63% of GDP; no COICOP split read on a fetched page",
+   "water": "judged, anchored on World Bank: public water spending in developing countries about 0.5% of GDP",
+   "health": "WHO GHED current health expenditure via World Bank, 2023",
+   "military": "SIPRI via World Bank, 2025",
+   "public_order": "IMF GFS COFOG 03, 2024"
+  },
+  "judged": [
+   "energy",
+   "water"
+  ]
+ },
+ {
+  "entity": "NGA",
+  "central": 38.3,
+  "low": 35.2,
+  "high": 48.4,
+  "parts": {
+   "food": 27.76,
+   "energy": 4.3,
+   "water": 0.5,
+   "health": 4.19,
+   "military": 0.91,
+   "public_order": 0.6
+  },
+  "years": {
+   "food": 2021,
+   "energy": 2024,
+   "water": 2024,
+   "health": 2023,
+   "military": 2025,
+   "public_order": 2024
+  },
+  "sources": {
+   "food": "World Bank ICP 2021, food and non-alcoholic beverages",
+   "energy": "judged: 5-10% of household spending (2024 CPI weights: housing, water, electricity, gas and fuels 8.4%, transport 10.7%) times household consumption 62% of GDP (ICP 2021)",
+   "water": "judged, anchored on World Bank: public water spending in developing countries about 0.5% of GDP",
+   "health": "WHO GHED current health expenditure via World Bank, 2023",
+   "military": "SIPRI via World Bank, 2025",
+   "public_order": "judged: no COFOG data"
+  },
+  "judged": [
+   "energy",
+   "water",
+   "public_order"
+  ]
+ },
+ {
+  "entity": "WLD",
+  "central": 26.1,
+  "low": 23.8,
+  "high": 35.8,
+  "parts": {
+   "food": 8.56,
+   "energy": 3.0,
+   "water": 0.5,
+   "health": 10.06,
+   "military": 2.48,
+   "public_order": 1.5
+  },
+  "years": {
+   "food": 2021,
+   "energy": 2024,
+   "water": 2024,
+   "health": 2023,
+   "military": 2025,
+   "public_order": 2024
+  },
+  "sources": {
+   "food": "World Bank ICP 2021, food and non-alcoholic beverages",
+   "energy": "judged from the country values above; high = IEA: energy spending nearly 10% of world GDP (via SolarQuarter)",
+   "water": "judged, anchored on World Bank: public water spending in developing countries about 0.5% of GDP",
+   "health": "WHO GHED current health expenditure via World Bank, 2023",
+   "military": "SIPRI via World Bank, 2025",
+   "public_order": "judged: reported countries range 1.0-2.9% of GDP"
+  },
+  "judged": [
+   "energy",
+   "water",
+   "public_order"
+  ]
+ }
+]

@@ -1,0 +1,204 @@
+{
+  "places": [
+    {
+      "entity": "STP",
+      "si": {"abundance": 0.03, "better": 0.62, "stagnation": 0.13, "decline": 0.09, "collapse": 0.13},
+      "noSi": {"abundance": 0.001, "better": 0.60, "stagnation": 0.16, "decline": 0.10, "collapse": 0.139},
+      "rationale": "A poor, aid- and cocoa-dependent island with a weak state, high undernourishment and fast population growth; slow gains are likeliest, with food-import and governance shocks the main collapse risk.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": 0, "ownership": -1, "stability": -0.5},
+        "reason": "Prices matter most: cheaper imported medicine, energy and food help a poor island that owns no AI and has a weak state to capture gains."
+      }
+    },
+    {
+      "entity": "WSM",
+      "si": {"abundance": 0.03, "better": 0.66, "stagnation": 0.14, "decline": 0.09, "collapse": 0.08},
+      "noSi": {"abundance": 0.002, "better": 0.64, "stagnation": 0.17, "decline": 0.10, "collapse": 0.088},
+      "rationale": "Stable, low-debt volcanic islands, but a small economy leaning on remittances and tourism, with slow growth and cyclone exposure; modest gains are likeliest.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -0.5, "ownership": -1, "stability": 0},
+        "reason": "Prices help an import-dependent island most; remittances from migrants' manual jobs in New Zealand and Australia are exposed to automation."
+      }
+    },
+    {
+      "entity": "LCA",
+      "si": {"abundance": 0.06, "better": 0.64, "stagnation": 0.13, "decline": 0.088, "collapse": 0.082},
+      "noSi": {"abundance": 0.004, "better": 0.61, "stagnation": 0.18, "decline": 0.12, "collapse": 0.086},
+      "rationale": "Upper-middle-income tourism economy with sound institutions but high debt, high crime and hurricane exposure; tourism demand and climate damage to reefs and beaches set the range.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": 0, "ownership": -1, "stability": -0.5},
+        "reason": "Prices help an import-dependent island; tourism work is hard to automate, but foreign-owned resorts and AI owners capture most gains."
+      }
+    },
+    {
+      "entity": "KIR",
+      "si": {"abundance": 0.02, "better": 0.47, "stagnation": 0.19, "decline": 0.14, "collapse": 0.18},
+      "noSi": {"abundance": 0.001, "better": 0.43, "stagnation": 0.20, "decline": 0.16, "collapse": 0.209},
+      "rationale": "Low atolls with an overcrowded South Tarawa, very poor water and health; 44-76 cm of sea-level rise threatens freshwater lenses and habitability, so collapse risk is high despite fishing rents and a sovereign fund.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -0.5, "ownership": -0.5, "stability": -0.5},
+        "reason": "Prices matter most: cheaper desalination, energy and medicine, but no AI ownership and rising seas limit what SI can do for atolls."
+      }
+    },
+    {
+      "entity": "SYC",
+      "si": {"abundance": 0.08, "better": 0.63, "stagnation": 0.13, "decline": 0.085, "collapse": 0.075},
+      "noSi": {"abundance": 0.008, "better": 0.59, "stagnation": 0.19, "decline": 0.13, "collapse": 0.082},
+      "rationale": "High-income, well-governed island state living on luxury tourism and tuna; reef loss at 2.7 °C and flooding of Mahé's narrow coastal plain are the main drags.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1, "jobs": 0, "ownership": -0.5, "stability": 0},
+        "reason": "Prices and richer travellers help; luxury tourism is hard to automate, but the islands own little of the AI stack."
+      }
+    },
+    {
+      "entity": "GRD",
+      "si": {"abundance": 0.05, "better": 0.64, "stagnation": 0.14, "decline": 0.088, "collapse": 0.082},
+      "noSi": {"abundance": 0.004, "better": 0.62, "stagnation": 0.18, "decline": 0.11, "collapse": 0.086},
+      "rationale": "Tourism plus a large offshore medical university, decent readiness but high debt and hurricane exposure (Beryl in 2024); modest gains are likeliest.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -0.5, "ownership": -1, "stability": 0},
+        "reason": "Prices help, but jobs: the offshore medical school, a big earner, is exposed if AI reshapes medical training and demand for doctors."
+      }
+    },
+    {
+      "entity": "FSM",
+      "si": {"abundance": 0.02, "better": 0.52, "stagnation": 0.21, "decline": 0.12, "collapse": 0.13},
+      "noSi": {"abundance": 0.001, "better": 0.48, "stagnation": 0.24, "decline": 0.14, "collapse": 0.139},
+      "rationale": "Decades of near-zero per-person growth, dependence on US Compact grants and the highest climate vulnerability here; most people live on high islands, and US migration is a safety valve.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -0.5, "ownership": -0.5, "stability": 0},
+        "reason": "Prices help an aid-funded import economy; migrants' manual jobs in the US face automation, and the Compact trust fund is its only AI-linked stake."
+      }
+    },
+    {
+      "entity": "ABW",
+      "si": {"abundance": 0.11, "better": 0.61, "stagnation": 0.14, "decline": 0.075, "collapse": 0.065},
+      "noSi": {"abundance": 0.01, "better": 0.60, "stagnation": 0.20, "decline": 0.12, "collapse": 0.07},
+      "rationale": "Rich, well-governed tourism island outside the main hurricane belt with Dutch-kingdom backing; heavy reliance on tourism and on desalinated water are the main risks.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1, "jobs": 0, "ownership": -0.5, "stability": 0},
+        "reason": "Richer travellers and cheaper energy for desalination help; tourism work resists automation, but owning no AI limits the gain."
+      }
+    },
+    {
+      "entity": "VIR",
+      "si": {"abundance": 0.13, "better": 0.57, "stagnation": 0.15, "decline": 0.07, "collapse": 0.08},
+      "noSi": {"abundance": 0.01, "better": 0.52, "stagnation": 0.24, "decline": 0.14, "collapse": 0.09},
+      "rationale": "A US territory with US institutions and federal transfers, but a shrinking, ageing population, high crime and repeated hurricane damage; stagnation is a real possibility without SI.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1, "jobs": 0, "ownership": 0.5, "stability": -0.5},
+        "reason": "Ownership through the US: federal transfers could share AI-economy gains with an ageing territory, while tourism resists automation."
+      }
+    },
+    {
+      "entity": "TON",
+      "si": {"abundance": 0.025, "better": 0.59, "stagnation": 0.175, "decline": 0.11, "collapse": 0.10},
+      "noSi": {"abundance": 0.002, "better": 0.58, "stagnation": 0.19, "decline": 0.12, "collapse": 0.108},
+      "rationale": "Stable but highly exposed: remittances near 40% of GDP, low-lying Tongatapu, cyclones and volcanic hazard (2022 eruption); slow gains are likeliest.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -1, "ownership": -1, "stability": 0},
+        "reason": "Jobs matter most: remittances from migrants' manual work abroad, near 40% of GDP, are exposed to automation; cheaper imports offset."
+      }
+    },
+    {
+      "entity": "VCT",
+      "si": {"abundance": 0.04, "better": 0.61, "stagnation": 0.16, "decline": 0.098, "collapse": 0.092},
+      "noSi": {"abundance": 0.003, "better": 0.58, "stagnation": 0.19, "decline": 0.13, "collapse": 0.097},
+      "rationale": "Debt above 100% of GDP, very high homicide and recent volcano and hurricane shocks weigh on a small tourism-and-farming economy.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": 0, "ownership": -1, "stability": -0.5},
+        "reason": "Prices help an import-dependent island, but high debt, crime and no AI ownership limit what it captures."
+      }
+    },
+    {
+      "entity": "ATG",
+      "si": {"abundance": 0.07, "better": 0.63, "stagnation": 0.13, "decline": 0.08, "collapse": 0.09},
+      "noSi": {"abundance": 0.006, "better": 0.60, "stagnation": 0.18, "decline": 0.12, "collapse": 0.094},
+      "rationale": "High-income tourism economy with a large migrant workforce, moderate debt and strong hurricane exposure (Barbuda after Irma); tourism demand drives the range.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": 0, "ownership": -1, "stability": 0},
+        "reason": "Prices and richer travellers help a tourism island; it owns none of the AI, so ownership drags."
+      }
+    },
+    {
+      "entity": "AND",
+      "si": {"abundance": 0.18, "better": 0.56, "stagnation": 0.14, "decline": 0.065, "collapse": 0.055},
+      "noSi": {"abundance": 0.01, "better": 0.56, "stagnation": 0.24, "decline": 0.13, "collapse": 0.06},
+      "rationale": "Rich, well-run low-tax microstate; ski tourism faces shrinking Pyrenean snow and rising water stress, so stagnation is a real risk without SI.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 0.5, "jobs": 0, "ownership": 0.5, "stability": 0},
+        "reason": "Ownership: a low-tax haven may draw AI-enriched residents and capital, on top of good access to AI."
+      }
+    },
+    {
+      "entity": "DMA",
+      "si": {"abundance": 0.04, "better": 0.61, "stagnation": 0.16, "decline": 0.098, "collapse": 0.092},
+      "noSi": {"abundance": 0.003, "better": 0.57, "stagnation": 0.20, "decline": 0.13, "collapse": 0.097},
+      "rationale": "Debt near 100% of GDP and reliance on citizenship-sale revenue, on an island Hurricane Maria wrecked in 2017; good adaptation readiness and high terrain help.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": 0, "ownership": -1, "stability": 0},
+        "reason": "Prices help an import-dependent island; little AI access and no ownership limit gains, and hurricanes still set the pace."
+      }
+    },
+    {
+      "entity": "KNA",
+      "si": {"abundance": 0.07, "better": 0.61, "stagnation": 0.14, "decline": 0.09, "collapse": 0.09},
+      "noSi": {"abundance": 0.006, "better": 0.59, "stagnation": 0.19, "decline": 0.12, "collapse": 0.094},
+      "rationale": "High-income on tourism, citizenship sales and offshore finance, with good governance but the region's highest homicide rate; those revenue streams are fragile.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -0.5, "ownership": -0.5, "stability": -0.5},
+        "reason": "Jobs: offshore corporate services and medical schools are exposed to AI; cheaper imports and tourism demand offset."
+      }
+    },
+    {
+      "entity": "LIE",
+      "si": {"abundance": 0.25, "better": 0.55, "stagnation": 0.10, "decline": 0.05, "collapse": 0.05},
+      "noSi": {"abundance": 0.015, "better": 0.62, "stagnation": 0.21, "decline": 0.10, "collapse": 0.055},
+      "rationale": "Very rich, debt-free and excellently governed, with high-value industry and wealth management; ageing and finance's exposure to AI are the main risks.",
+      "reading": {
+        "channels": {"productivity": 1.5, "prices": 0.5, "jobs": -0.5, "ownership": 1, "stability": 0},
+        "reason": "Ownership: its wealth managers and industrial firms hold capital and the state can tax it, so AI gains accrue here."
+      }
+    },
+    {
+      "entity": "MCO",
+      "si": {"abundance": 0.30, "better": 0.50, "stagnation": 0.10, "decline": 0.05, "collapse": 0.05},
+      "noSi": {"abundance": 0.02, "better": 0.60, "stagnation": 0.22, "decline": 0.11, "collapse": 0.05},
+      "rationale": "Residents are among the world's richest capital owners, under a strong state backed by France; extreme ageing and seafront exposure matter less than who owns the AI.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 0.5, "jobs": -0.5, "ownership": 1.5, "stability": 0},
+        "reason": "Ownership dominates: residents are wealthy capital owners whose returns would soar, and high housing costs keep it that way."
+      }
+    },
+    {
+      "entity": "MHL",
+      "si": {"abundance": 0.02, "better": 0.49, "stagnation": 0.19, "decline": 0.13, "collapse": 0.17},
+      "noSi": {"abundance": 0.001, "better": 0.45, "stagnation": 0.20, "decline": 0.15, "collapse": 0.199},
+      "rationale": "Atolls about two metres high, overcrowded Majuro and Ebeye and a weak government; US Compact funds and free migration to the US cushion but do not remove the sea-level threat.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -0.5, "ownership": -0.5, "stability": 0},
+        "reason": "Prices: cheaper energy, desalination and medicine help most; remittances from migrants' manual US jobs face automation."
+      }
+    },
+    {
+      "entity": "SMR",
+      "si": {"abundance": 0.16, "better": 0.55, "stagnation": 0.16, "decline": 0.07, "collapse": 0.06},
+      "noSi": {"abundance": 0.008, "better": 0.50, "stagnation": 0.28, "decline": 0.14, "collapse": 0.072},
+      "rationale": "Rich enclave tied to Italy's long stagnation, with very low fertility, ageing and high water stress; banking and light manufacturing are its base.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 0.5, "jobs": -0.5, "ownership": 0, "stability": 0},
+        "reason": "Productivity: good AI access in a rich Italian-linked economy, partly offset by banking and routine manufacturing jobs exposed to automation."
+      }
+    },
+    {
+      "entity": "PLW",
+      "si": {"abundance": 0.05, "better": 0.57, "stagnation": 0.18, "decline": 0.11, "collapse": 0.09},
+      "noSi": {"abundance": 0.004, "better": 0.53, "stagnation": 0.22, "decline": 0.145, "collapse": 0.101},
+      "rationale": "Upper-middle-income dive-tourism economy with US Compact support; coral reefs largely lost at 2.7 °C threaten its main export.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": 0, "ownership": -0.5, "stability": 0},
+        "reason": "Prices help an import-dependent island; reef tourism resists automation, but climate rather than AI sets its fate."
+      }
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "places": [
+    {
+      "entity": "NRU",
+      "si": {
+        "abundance": 0.07,
+        "better": 0.53,
+        "stagnation": 0.15,
+        "decline": 0.12,
+        "collapse": 0.13
+      },
+      "noSi": {
+        "abundance": 0.002,
+        "better": 0.53,
+        "stagnation": 0.2,
+        "decline": 0.14,
+        "collapse": 0.128
+      },
+      "rationale": "A raised coral island whose income rests on Australian-funded offshore processing, fishing licences and aid, with very poor health and desalination-dependent water. Close Australian ties make modest gains likely, but its past boom-and-bust and near-total import dependence keep decline and collapse real.",
+      "reading": {
+        "channels": {
+          "productivity": 0.5,
+          "prices": 1.5,
+          "jobs": -0.5,
+          "ownership": -0.5,
+          "stability": -0.5
+        },
+        "reason": "Prices matter most: Nauru imports almost all food, fuel and medicine, so cheaper goods and desalination help, while it owns no AI and sells little labour."
+      }
+    },
+    {
+      "entity": "TUV",
+      "si": {
+        "abundance": 0.06,
+        "better": 0.48,
+        "stagnation": 0.165,
+        "decline": 0.13,
+        "collapse": 0.165
+      },
+      "noSi": {
+        "abundance": 0.001,
+        "better": 0.47,
+        "stagnation": 0.21,
+        "decline": 0.15,
+        "collapse": 0.169
+      },
+      "rationale": "Low atolls face 44-76 cm of sea-level rise, storm surges and salinising groundwater, partly offset by land-reclamation plans and the Falepili Union's migration and security guarantees with Australia. Aid, fishing rents and remittances make modest gains likely, but habitability risk keeps collapse high.",
+      "reading": {
+        "channels": {
+          "productivity": 0.5,
+          "prices": 1.5,
+          "jobs": -1,
+          "ownership": -0.5,
+          "stability": -0.25
+        },
+        "reason": "Prices help most as Tuvalu imports nearly everything, but seafarer and seasonal-work remittances face automation, and it owns no AI to share in profits."
+      }
+    }
+  ]
+}

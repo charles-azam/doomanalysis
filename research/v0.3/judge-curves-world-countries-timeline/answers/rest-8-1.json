@@ -1,0 +1,124 @@
+{
+  "places": [
+    {
+      "entity": "STP",
+      "si": {"abundance": 0.07, "better": 0.70, "stagnation": 0.095, "decline": 0.055, "collapse": 0.08},
+      "noSi": {"abundance": 0.001, "better": 0.66, "stagnation": 0.155, "decline": 0.085, "collapse": 0.099},
+      "rationale": "A peaceful but very poor, aid-dependent island with weak government effectiveness, high undernourishment and fast population growth; the 1.25x bar is low over 75 years, but abundance needs a roughly 28-fold rise that only broad SI diffusion could deliver."
+    },
+    {
+      "entity": "WSM",
+      "si": {"abundance": 0.08, "better": 0.70, "stagnation": 0.10, "decline": 0.06, "collapse": 0.06},
+      "noSi": {"abundance": 0.002, "better": 0.66, "stagnation": 0.18, "decline": 0.09, "collapse": 0.068},
+      "rationale": "Stable, low-debt volcanic islands with fertile land and strong New Zealand and Australia remittance links, held back by slow Pacific growth and cyclone and coastal exposure; far less likely than the Australia-dominated region to reach abundance."
+    },
+    {
+      "entity": "LCA",
+      "si": {"abundance": 0.11, "better": 0.66, "stagnation": 0.10, "decline": 0.06, "collapse": 0.07},
+      "noSi": {"abundance": 0.0015, "better": 0.65, "stagnation": 0.17, "decline": 0.10, "collapse": 0.0785},
+      "rationale": "A middle-income tourism economy on the southern edge of the hurricane belt, with rising homicide, high debt and an aging population; reef loss and costlier aviation weigh on tourism, but modest trend growth makes better the main path."
+    },
+    {
+      "entity": "KIR",
+      "si": {"abundance": 0.05, "better": 0.58, "stagnation": 0.12, "decline": 0.12, "collapse": 0.13},
+      "noSi": {"abundance": 0.0005, "better": 0.48, "stagnation": 0.215, "decline": 0.15, "collapse": 0.1545},
+      "rationale": "Low-lying atolls facing about half a metre of sea-level rise, freshwater-lens salinisation and an already crowded South Tarawa, with very poor water and health access; fishing-licence revenue, a sovereign fund and migration routes soften but do not remove a high decline and collapse risk."
+    },
+    {
+      "entity": "SYC",
+      "si": {"abundance": 0.13, "better": 0.66, "stagnation": 0.095, "decline": 0.055, "collapse": 0.06},
+      "noSi": {"abundance": 0.003, "better": 0.67, "stagnation": 0.17, "decline": 0.095, "collapse": 0.062},
+      "rationale": "High-income, well-governed tourism and tuna economy with no conflict history, so its collapse risk is well below the Sub-Saharan region; coastal infrastructure on narrow plains and coral bleaching are the main climate threats."
+    },
+    {
+      "entity": "GRD",
+      "si": {"abundance": 0.11, "better": 0.665, "stagnation": 0.095, "decline": 0.06, "collapse": 0.07},
+      "noSi": {"abundance": 0.0015, "better": 0.655, "stagnation": 0.165, "decline": 0.10, "collapse": 0.0785},
+      "rationale": "A middle-income island with good adaptation readiness that recovered from Hurricane Ivan, diversified somewhat by its medical-school economy; stronger hurricanes, reef loss and debt keep decline risk meaningful."
+    },
+    {
+      "entity": "FSM",
+      "si": {"abundance": 0.06, "better": 0.62, "stagnation": 0.13, "decline": 0.09, "collapse": 0.10},
+      "noSi": {"abundance": 0.001, "better": 0.53, "stagnation": 0.22, "decline": 0.13, "collapse": 0.119},
+      "rationale": "Decades of near-flat per-person income propped by US Compact funding, the highest climate vulnerability in this batch and many exposed outer atolls; most people live on high islands, which keeps collapse below the pure-atoll states."
+    },
+    {
+      "entity": "ABW",
+      "si": {"abundance": 0.15, "better": 0.62, "stagnation": 0.10, "decline": 0.065, "collapse": 0.065},
+      "noSi": {"abundance": 0.003, "better": 0.64, "stagnation": 0.19, "decline": 0.10, "collapse": 0.067},
+      "rationale": "A fairly rich Dutch-Kingdom tourism island mostly south of the hurricane belt, with desalinated water and EU citizenship as a backstop; dependence on US tourism and beach exposure to sea-level rise are the main risks."
+    },
+    {
+      "entity": "VIR",
+      "si": {"abundance": 0.18, "better": 0.58, "stagnation": 0.11, "decline": 0.065, "collapse": 0.065},
+      "noSi": {"abundance": 0.004, "better": 0.58, "stagnation": 0.23, "decline": 0.11, "collapse": 0.076},
+      "rationale": "Already near rich-world consumption and tied to US transfers and citizenship, which raises its SI upside, but a shrinking, aging population, fiscal and pension stress, high violence and repeated major hurricanes make stagnation unusually likely."
+    },
+    {
+      "entity": "TON",
+      "si": {"abundance": 0.075, "better": 0.67, "stagnation": 0.11, "decline": 0.07, "collapse": 0.075},
+      "noSi": {"abundance": 0.0015, "better": 0.61, "stagnation": 0.19, "decline": 0.11, "collapse": 0.0885},
+      "rationale": "A stable, remittance-dependent kingdom exposed to cyclones, volcanic events and sea-level rise on low-lying Tongatapu, with poor water access and heavy non-communicable disease; strong diaspora ties support modest gains."
+    },
+    {
+      "entity": "VCT",
+      "si": {"abundance": 0.10, "better": 0.65, "stagnation": 0.105, "decline": 0.07, "collapse": 0.075},
+      "noSi": {"abundance": 0.0012, "better": 0.62, "stagnation": 0.17, "decline": 0.12, "collapse": 0.0888},
+      "rationale": "Public debt above 100% of GDP, very high homicide and recent hurricane and volcanic damage make it among the more fragile Caribbean states here, though good health coverage and stable politics keep better as the most likely outcome."
+    },
+    {
+      "entity": "ATG",
+      "si": {"abundance": 0.13, "better": 0.635, "stagnation": 0.10, "decline": 0.06, "collapse": 0.075},
+      "noSi": {"abundance": 0.002, "better": 0.64, "stagnation": 0.17, "decline": 0.105, "collapse": 0.083},
+      "rationale": "A higher-income tourism economy with decent growth, but on flat limestone islands squarely in the hurricane belt, as Barbuda's near-total loss to Irma showed; hurricane intensification and beach erosion drive its downside."
+    },
+    {
+      "entity": "AND",
+      "si": {"abundance": 0.30, "better": 0.48, "stagnation": 0.10, "decline": 0.06, "collapse": 0.06},
+      "noSi": {"abundance": 0.006, "better": 0.58, "stagnation": 0.23, "decline": 0.117, "collapse": 0.067},
+      "rationale": "Rich, well-governed and stable, but its ski and retail tourism economy is exposed to Pyrenean snow loss and rising water stress, and its fate is tied to France and Spain; a cooler mountain refuge role could partly offset this."
+    },
+    {
+      "entity": "DMA",
+      "si": {"abundance": 0.10, "better": 0.65, "stagnation": 0.105, "decline": 0.07, "collapse": 0.075},
+      "noSi": {"abundance": 0.0012, "better": 0.61, "stagnation": 0.18, "decline": 0.12, "collapse": 0.0888},
+      "rationale": "Hurricane Maria wiped out over twice its GDP and debt is near 100% of GDP, so intensifying storms are the dominant risk; strong adaptation readiness and its climate-resilience drive temper that."
+    },
+    {
+      "entity": "KNA",
+      "si": {"abundance": 0.13, "better": 0.635, "stagnation": 0.10, "decline": 0.06, "collapse": 0.075},
+      "noSi": {"abundance": 0.002, "better": 0.63, "stagnation": 0.18, "decline": 0.105, "collapse": 0.083},
+      "rationale": "Higher-income with good government effectiveness, but the highest homicide rate in this batch, reliance on a citizenship-by-investment revenue stream under international pressure, and hurricane exposure."
+    },
+    {
+      "entity": "LIE",
+      "si": {"abundance": 0.40, "better": 0.43, "stagnation": 0.075, "decline": 0.045, "collapse": 0.05},
+      "noSi": {"abundance": 0.015, "better": 0.67, "stagnation": 0.17, "decline": 0.09, "collapse": 0.055},
+      "rationale": "Among the richest and best-governed places on earth, with almost no public debt, low water stress and an Alpine, Swiss-anchored position; its high starting level makes abundance unusually reachable if SI arrives."
+    },
+    {
+      "entity": "MCO",
+      "si": {"abundance": 0.42, "better": 0.41, "stagnation": 0.075, "decline": 0.04, "collapse": 0.055},
+      "noSi": {"abundance": 0.02, "better": 0.63, "stagnation": 0.19, "decline": 0.10, "collapse": 0.06},
+      "rationale": "A residence that selects for the very wealthy, with top government effectiveness, so it needs the smallest multiple to reach abundance; dependence on France for security, energy and water, Riviera heat and a very old population are the limits."
+    },
+    {
+      "entity": "MHL",
+      "si": {"abundance": 0.06, "better": 0.58, "stagnation": 0.12, "decline": 0.115, "collapse": 0.125},
+      "noSi": {"abundance": 0.0005, "better": 0.49, "stagnation": 0.21, "decline": 0.15, "collapse": 0.1495},
+      "rationale": "Atolls averaging about two metres above sea level face wave overwash and freshwater loss as seas rise, with weak government effectiveness; US Compact funding and open migration to the US make adaptation or orderly emigration possible, but remaining residents carry high decline and collapse risk."
+    },
+    {
+      "entity": "SMR",
+      "si": {"abundance": 0.27, "better": 0.49, "stagnation": 0.11, "decline": 0.065, "collapse": 0.065},
+      "noSi": {"abundance": 0.004, "better": 0.57, "stagnation": 0.23, "decline": 0.122, "collapse": 0.074},
+      "rationale": "A rich enclave whose fortunes track Italy's long stagnation, with very low fertility, rapid aging and severe water stress; good readiness to adapt keeps collapse low."
+    },
+    {
+      "entity": "PLW",
+      "si": {"abundance": 0.12, "better": 0.64, "stagnation": 0.10, "decline": 0.07, "collapse": 0.07},
+      "noSi": {"abundance": 0.002, "better": 0.62, "stagnation": 0.18, "decline": 0.11, "collapse": 0.088},
+      "rationale": "The richest Pacific island state here, mostly on high islands with good water access and US Compact ties, but reliant on fragile tourism and exposed to reef loss and to a Taiwan-related great-power conflict near its US installations."
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "places": [
+    {
+      "entity": "QAT",
+      "si": {"abundance": 0.15, "better": 0.52, "stagnation": 0.13, "decline": 0.10, "collapse": 0.10},
+      "noSi": {"abundance": 0.002, "better": 0.50, "stagnation": 0.23, "decline": 0.14, "collapse": 0.128},
+      "rationale": "A huge sovereign fund and tiny citizen base cushion the end of LNG, but consumption across a mostly migrant population, extreme heat, total reliance on desalination and Gulf war risk keep stagnation and decline real."
+    },
+    {
+      "entity": "LTU",
+      "si": {"abundance": 0.26, "better": 0.54, "stagnation": 0.07, "decline": 0.06, "collapse": 0.07},
+      "noSi": {"abundance": 0.006, "better": 0.73, "stagnation": 0.11, "decline": 0.08, "collapse": 0.074},
+      "rationale": "Fast EU convergence, low debt and good governance make further gains likely; the main tail is Russian aggression on NATO's eastern flank, with very low fertility a slow drag."
+    },
+    {
+      "entity": "JAM",
+      "si": {"abundance": 0.11, "better": 0.62, "stagnation": 0.12, "decline": 0.07, "collapse": 0.08},
+      "noSi": {"abundance": 0.002, "better": 0.588, "stagnation": 0.20, "decline": 0.12, "collapse": 0.09},
+      "rationale": "Decades of near-flat income per head, very high homicide, import dependence and intensifying Category 5 hurricanes weigh against recent fiscal repair and room to grow."
+    },
+    {
+      "entity": "GMB",
+      "si": {"abundance": 0.06, "better": 0.66, "stagnation": 0.10, "decline": 0.06, "collapse": 0.12},
+      "noSi": {"abundance": 0.001, "better": 0.62, "stagnation": 0.15, "decline": 0.10, "collapse": 0.129},
+      "rationale": "A very low base and a fragile but working democracy leave room for gains, but four decades of stagnant income per head, fast population growth, Sahel heat and a low-lying capital keep the downside wide."
+    },
+    {
+      "entity": "GAB",
+      "si": {"abundance": 0.07, "better": 0.60, "stagnation": 0.13, "decline": 0.08, "collapse": 0.12},
+      "noSi": {"abundance": 0.001, "better": 0.54, "stagnation": 0.21, "decline": 0.13, "collapse": 0.119},
+      "rationale": "Declining oil output, heavy debt service, weak governance after the 2023 coup and a half-century of flat income per head cap the upside; ample water and forest are buffers."
+    },
+    {
+      "entity": "BWA",
+      "si": {"abundance": 0.08, "better": 0.65, "stagnation": 0.11, "decline": 0.07, "collapse": 0.09},
+      "noSi": {"abundance": 0.002, "better": 0.628, "stagnation": 0.17, "decline": 0.11, "collapse": 0.09},
+      "rationale": "Africa's strongest institutions and low debt favour gains, but diamond dependence as lab-grown stones erode demand, severe water stress and rising heat add real stagnation risk."
+    },
+    {
+      "entity": "LSO",
+      "si": {"abundance": 0.05, "better": 0.63, "stagnation": 0.12, "decline": 0.07, "collapse": 0.13},
+      "noSi": {"abundance": 0.001, "better": 0.569, "stagnation": 0.18, "decline": 0.12, "collapse": 0.13},
+      "rationale": "Very poor, with a heavy HIV burden, weak governance and textile exports hit by US tariffs, and fully tied to South Africa's fortunes; exported highland water is its main durable asset."
+    },
+    {
+      "entity": "MDA",
+      "si": {"abundance": 0.15, "better": 0.60, "stagnation": 0.09, "decline": 0.07, "collapse": 0.09},
+      "noSi": {"abundance": 0.003, "better": 0.66, "stagnation": 0.13, "decline": 0.11, "collapse": 0.097},
+      "rationale": "The EU accession path offers strong convergence from a modest base, while Russian pressure via Transnistria, energy import dependence and emigration drive the downside."
+    },
+    {
+      "entity": "ALB",
+      "si": {"abundance": 0.17, "better": 0.63, "stagnation": 0.08, "decline": 0.06, "collapse": 0.06},
+      "noSi": {"abundance": 0.003, "better": 0.70, "stagnation": 0.13, "decline": 0.09, "collapse": 0.077},
+      "rationale": "A credible EU accession track, tourism growth and long life expectancy favour convergence; emigration, summer drought, water stress and middling governance are the drags."
+    },
+    {
+      "entity": "GNB",
+      "si": {"abundance": 0.04, "better": 0.60, "stagnation": 0.14, "decline": 0.08, "collapse": 0.14},
+      "noSi": {"abundance": 0.001, "better": 0.52, "stagnation": 0.19, "decline": 0.13, "collapse": 0.159},
+      "rationale": "Among the weakest states anywhere, with repeated coups, narco-trafficking, reliance on cashews and a low coast exposed to sea-level rise, so stagnation and collapse carry high weight."
+    },
+    {
+      "entity": "SVN",
+      "si": {"abundance": 0.27, "better": 0.55, "stagnation": 0.08, "decline": 0.05, "collapse": 0.05},
+      "noSi": {"abundance": 0.006, "better": 0.68, "stagnation": 0.18, "decline": 0.08, "collapse": 0.054},
+      "rationale": "Peaceful, well governed, water-secure and climate-resilient, so the main question is growth speed against fast aging, not catastrophe."
+    },
+    {
+      "entity": "GNQ",
+      "si": {"abundance": 0.04, "better": 0.52, "stagnation": 0.16, "decline": 0.12, "collapse": 0.16},
+      "noSi": {"abundance": 0.001, "better": 0.44, "stagnation": 0.20, "decline": 0.18, "collapse": 0.179},
+      "rationale": "Oil is running out under a kleptocratic regime with almost no readiness to adapt and a looming succession crisis, so decline and collapse are unusually likely despite a small population."
+    },
+    {
+      "entity": "LVA",
+      "si": {"abundance": 0.24, "better": 0.55, "stagnation": 0.08, "decline": 0.06, "collapse": 0.07},
+      "noSi": {"abundance": 0.005, "better": 0.71, "stagnation": 0.13, "decline": 0.08, "collapse": 0.075},
+      "rationale": "EU and NATO anchoring support convergence, tempered by the Russian border and a large Russian-speaking minority, slower recent growth than its neighbours and steep population aging."
+    },
+    {
+      "entity": "MKD",
+      "si": {"abundance": 0.16, "better": 0.62, "stagnation": 0.09, "decline": 0.07, "collapse": 0.06},
+      "noSi": {"abundance": 0.003, "better": 0.66, "stagnation": 0.16, "decline": 0.10, "collapse": 0.077},
+      "rationale": "Plenty of room to converge, but a stalled EU path, emigration, rising water stress and weak government effectiveness slow it."
+    },
+    {
+      "entity": "BHR",
+      "si": {"abundance": 0.11, "better": 0.50, "stagnation": 0.15, "decline": 0.11, "collapse": 0.13},
+      "noSi": {"abundance": 0.002, "better": 0.42, "stagnation": 0.24, "decline": 0.18, "collapse": 0.158},
+      "rationale": "Depleting oil, public debt near 150% of GDP that depends on Gulf bailouts, sectarian instability, extreme water stress and exposure to Iran make it the most fragile of the rich Gulf states."
+    },
+    {
+      "entity": "TLS",
+      "si": {"abundance": 0.06, "better": 0.65, "stagnation": 0.12, "decline": 0.07, "collapse": 0.10},
+      "noSi": {"abundance": 0.001, "better": 0.58, "stagnation": 0.18, "decline": 0.12, "collapse": 0.119},
+      "rationale": "Stable democracy, ASEAN entry and a low base favour growth, but the fiscal cliff as the petroleum fund drains, high malnutrition and climate exposure pose real downside risk."
+    },
+    {
+      "entity": "CYP",
+      "si": {"abundance": 0.25, "better": 0.55, "stagnation": 0.09, "decline": 0.06, "collapse": 0.05},
+      "noSi": {"abundance": 0.006, "better": 0.64, "stagnation": 0.19, "decline": 0.10, "collapse": 0.064},
+      "rationale": "A rich EU member near rich-world living standards, but extreme water stress, a hotter and drier eastern Mediterranean, the unresolved division and nearby Middle East wars add tail risk."
+    },
+    {
+      "entity": "TTO",
+      "si": {"abundance": 0.10, "better": 0.56, "stagnation": 0.15, "decline": 0.10, "collapse": 0.09},
+      "noSi": {"abundance": 0.002, "better": 0.50, "stagnation": 0.23, "decline": 0.15, "collapse": 0.118},
+      "rationale": "Falling gas output in a petrochemical economy, rising debt, very high homicide and instability in neighbouring Venezuela make stagnation or decline about as likely as further gains."
+    },
+    {
+      "entity": "EST",
+      "si": {"abundance": 0.28, "better": 0.54, "stagnation": 0.06, "decline": 0.05, "collapse": 0.07},
+      "noSi": {"abundance": 0.007, "better": 0.74, "stagnation": 0.11, "decline": 0.07, "collapse": 0.073},
+      "rationale": "Top-tier governance, very low debt and a digital economy point to strong convergence; the main tail is Russia on its border, plus very low fertility and the oil-shale transition."
+    },
+    {
+      "entity": "SWZ",
+      "si": {"abundance": 0.05, "better": 0.62, "stagnation": 0.12, "decline": 0.08, "collapse": 0.13},
+      "noSi": {"abundance": 0.001, "better": 0.56, "stagnation": 0.18, "decline": 0.12, "collapse": 0.139},
+      "rationale": "An absolute monarchy with recent unrest, a heavy HIV burden and dependence on South African customs revenue and sugar make it fragile, even with a modest income base to grow from."
+    }
+  ]
+}

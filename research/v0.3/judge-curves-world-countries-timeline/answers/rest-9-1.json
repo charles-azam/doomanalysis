@@ -1,0 +1,40 @@
+{
+  "places": [
+    {
+      "entity": "NRU",
+      "si": {
+        "abundance": 0.06,
+        "better": 0.58,
+        "stagnation": 0.15,
+        "decline": 0.11,
+        "collapse": 0.10
+      },
+      "noSi": {
+        "abundance": 0.003,
+        "better": 0.53,
+        "stagnation": 0.21,
+        "decline": 0.137,
+        "collapse": 0.12
+      },
+      "rationale": "Nauru's consumption rests almost entirely on Australian money (the processing centre and the 2024 Nauru Treaty), fishing licences and imported food, water and fuel. It already lived through a collapse of more than half after the phosphate and banking crash, so a patron pulling back or global shipping breaking down could do it again. Most residents live on a low coastal belt, but the raised plateau gives a retreat option that atolls lack, and Australian strategic interest makes long-run support likely."
+    },
+    {
+      "entity": "TUV",
+      "si": {
+        "abundance": 0.05,
+        "better": 0.55,
+        "stagnation": 0.15,
+        "decline": 0.12,
+        "collapse": 0.13
+      },
+      "noSi": {
+        "abundance": 0.002,
+        "better": 0.47,
+        "stagnation": 0.218,
+        "decline": 0.16,
+        "collapse": 0.15
+      },
+      "rationale": "Tuvalu is a set of atolls about 2 m above sea level, and roughly 0.4 to 0.8 m of sea-level rise by 2100 brings flooding, cyclone surges and salt in the groundwater, so whether Funafuti can afford large land reclamation decides its future more than income does. Fishing-licence and trust-fund revenue (at risk as tuna move east), the Falepili Union's migration and disaster guarantees, and possible SI-driven cheap construction make improvement the most likely outcome but leave a fat downside tail."
+    }
+  ]
+}

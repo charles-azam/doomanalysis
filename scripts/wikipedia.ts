@@ -4,7 +4,7 @@ import { cards } from '../src/data/cards.ts'
 /**
  * Downloads, word for word, the opening section of the English Wikipedia article chosen for each card,
  * with its link, revision and date, into src/data/generated/wikipedia.json. Nothing is rewritten.
- * Usage: node --experimental-strip-types pdoom/scripts/wikipedia.ts
+ * Usage: node --experimental-strip-types scripts/wikipedia.ts
  * The text is shared under CC BY-SA 4.0; the card page credits it and links to the revision.
  */
 export type WikipediaExtract = { title: string; url: string; revision: number; timestamp: string; text: string }

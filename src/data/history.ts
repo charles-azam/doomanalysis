@@ -2,7 +2,7 @@ import type { HeadlineRecord } from '../model/types.ts'
 
 /**
  * Every headline the site has published, oldest first. A record is added each time judges are re-run
- * (pdoom/judge/import-forecasts.ts does it); none is ever back-filled. Do not edit past records.
+ * (judge/import-forecasts.ts does it); none is ever back-filled. Do not edit past records.
  * `definitions` names the definitions in force: when it changes, the chart marks the break.
  */
 export const history: HeadlineRecord[] = [

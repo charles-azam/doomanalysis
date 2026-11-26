@@ -1,0 +1,124 @@
+{
+  "places": [
+    {
+      "entity": "FIN",
+      "si": {"abundance": 0.24, "better": 0.55, "stagnation": 0.08, "decline": 0.06, "collapse": 0.07},
+      "noSi": {"abundance": 0.006, "better": 0.66, "stagnation": 0.17, "decline": 0.09, "collapse": 0.074},
+      "rationale": "Strong institutions, clean firm power (nuclear, hydro, wind) and a climate that warming barely harms point to further gains. The main tail is a Russian war across its long border, and rapid aging with very low fertility slows growth without SI."
+    },
+    {
+      "entity": "CAF",
+      "si": {"abundance": 0.04, "better": 0.58, "stagnation": 0.14, "decline": 0.11, "collapse": 0.13},
+      "noSi": {"abundance": 0.0005, "better": 0.49, "stagnation": 0.21, "decline": 0.14, "collapse": 0.1595},
+      "rationale": "From a base of 3, any lasting peace counts as better. But sixty years without growth, endemic armed conflict, almost no state capacity, high climate vulnerability and six births per woman make long stagnation or deeper impoverishment a large share."
+    },
+    {
+      "entity": "OMN",
+      "si": {"abundance": 0.08, "better": 0.52, "stagnation": 0.17, "decline": 0.12, "collapse": 0.11},
+      "noSi": {"abundance": 0.002, "better": 0.44, "stagnation": 0.25, "decline": 0.17, "collapse": 0.138},
+      "rationale": "Oil and gas income fades with the energy transition, water stress is at the maximum and the coast is heading toward dangerous humid heat. Against that, the state is stable, has little debt and has strong solar and hydrogen prospects. A large, low-paid migrant workforce makes the 9-in-10 abundance bar harder."
+    },
+    {
+      "entity": "IRL",
+      "si": {"abundance": 0.25, "better": 0.55, "stagnation": 0.08, "decline": 0.06, "collapse": 0.06},
+      "noSi": {"abundance": 0.006, "better": 0.67, "stagnation": 0.16, "decline": 0.095, "collapse": 0.069},
+      "rationale": "Peaceful, rich and young for Europe, with a mild, water-rich climate. But it imports nearly all its energy and relies on multinational profits that tax reform or AI could move elsewhere, and a shutdown of the Atlantic overturning circulation is a specific tail risk."
+    },
+    {
+      "entity": "SVK",
+      "si": {"abundance": 0.16, "better": 0.58, "stagnation": 0.1, "decline": 0.08, "collapse": 0.08},
+      "noSi": {"abundance": 0.003, "better": 0.62, "stagnation": 0.17, "decline": 0.11, "collapse": 0.097},
+      "rationale": "Catching up within the EU and its nuclear power favour gains. But an economy built on car assembly faces automation and the shift to electric cars, governance is slipping, and it sits on NATO's front line next to Ukraine."
+    },
+    {
+      "entity": "PSE",
+      "si": {"abundance": 0.04, "better": 0.53, "stagnation": 0.17, "decline": 0.12, "collapse": 0.14},
+      "noSi": {"abundance": 0.001, "better": 0.48, "stagnation": 0.2, "decline": 0.14, "collapse": 0.179},
+      "rationale": "Today's baseline is already crushed by the Gaza war, so any lasting reconstruction counts as better. But occupation, annexation pressure, water controlled from outside and recurring war keep the risk of further loss of essentials high."
+    },
+    {
+      "entity": "NZL",
+      "si": {"abundance": 0.23, "better": 0.57, "stagnation": 0.09, "decline": 0.06, "collapse": 0.05},
+      "noSi": {"abundance": 0.006, "better": 0.67, "stagnation": 0.18, "decline": 0.09, "collapse": 0.054},
+      "rationale": "Remote, peaceful, a large food exporter and mostly on renewable power, it is among the places most likely to ride out a global catastrophe. Slow productivity growth, imported liquid fuel and earthquake and volcano risk are the main drags."
+    },
+    {
+      "entity": "MRT",
+      "si": {"abundance": 0.04, "better": 0.58, "stagnation": 0.15, "decline": 0.11, "collapse": 0.12},
+      "noSi": {"abundance": 0.0005, "better": 0.53, "stagnation": 0.2, "decline": 0.13, "collapse": 0.1395},
+      "rationale": "Offshore gas, iron ore and world-class sun and wind give it a path up from a low base. Saharan heat, scarce water, fast population growth and spillover from Mali's insurgency threaten those gains."
+    },
+    {
+      "entity": "CRI",
+      "si": {"abundance": 0.12, "better": 0.6, "stagnation": 0.12, "decline": 0.08, "collapse": 0.08},
+      "noSi": {"abundance": 0.002, "better": 0.62, "stagnation": 0.19, "decline": 0.1, "collapse": 0.088},
+      "rationale": "A long-stable democracy with almost all-renewable power, tourism and high-tech exports. It is held back by rising cartel violence, heavy debt service and exposure to hurricanes and drought."
+    },
+    {
+      "entity": "KWT",
+      "si": {"abundance": 0.08, "better": 0.5, "stagnation": 0.18, "decline": 0.13, "collapse": 0.11},
+      "noSi": {"abundance": 0.002, "better": 0.4, "stagnation": 0.27, "decline": 0.18, "collapse": 0.148},
+      "rationale": "A sovereign fund of about a trillion dollars and long-lived oil reserves cushion the shift away from oil. But consumption has been flat for decades, summer heat is nearing the limit of outdoor work, water is almost all desalinated, a large share of residents are low-paid migrants, and it sits between Iraq and Iran."
+    },
+    {
+      "entity": "PAN",
+      "si": {"abundance": 0.1, "better": 0.6, "stagnation": 0.13, "decline": 0.09, "collapse": 0.08},
+      "noSi": {"abundance": 0.002, "better": 0.62, "stagnation": 0.18, "decline": 0.11, "collapse": 0.088},
+      "rationale": "Canal and services income and a record of fast growth favour gains. But the canal depends on rainfall that recent droughts cut, debt service takes nearly 30% of revenue, inequality is among the region's highest, and great-power pressure over the canal is rising."
+    },
+    {
+      "entity": "GEO",
+      "si": {"abundance": 0.1, "better": 0.6, "stagnation": 0.12, "decline": 0.09, "collapse": 0.09},
+      "noSi": {"abundance": 0.002, "better": 0.6, "stagnation": 0.18, "decline": 0.11, "collapse": 0.108},
+      "rationale": "Fast recent growth, hydropower and a transit role point upward. But Russia occupies a fifth of its territory and has invaded before, and a backsliding government's turn away from the EU adds political risk."
+    },
+    {
+      "entity": "HRV",
+      "si": {"abundance": 0.18, "better": 0.58, "stagnation": 0.1, "decline": 0.07, "collapse": 0.07},
+      "noSi": {"abundance": 0.004, "better": 0.6, "stagnation": 0.2, "decline": 0.11, "collapse": 0.086},
+      "rationale": "EU and euro membership and continued catching up favour gains. A shrinking, fast-aging population and heavy reliance on summer tourism exposed to Mediterranean heat limit the upside without SI."
+    },
+    {
+      "entity": "ERI",
+      "si": {"abundance": 0.03, "better": 0.53, "stagnation": 0.17, "decline": 0.12, "collapse": 0.15},
+      "noSi": {"abundance": 0.0005, "better": 0.46, "stagnation": 0.22, "decline": 0.15, "collapse": 0.1695},
+      "rationale": "One of the world's most closed regimes, with indefinite conscription, mass emigration, water stress and a real risk of renewed war with Ethiopia over sea access. A political opening and its mineral and coastal assets could still lift a very low base by 2100."
+    },
+    {
+      "entity": "MNG",
+      "si": {"abundance": 0.07, "better": 0.62, "stagnation": 0.13, "decline": 0.09, "collapse": 0.09},
+      "noSi": {"abundance": 0.001, "better": 0.6, "stagnation": 0.18, "decline": 0.11, "collapse": 0.109},
+      "rationale": "Copper from Oyu Tolgoi meets a growing world shortage. But the economy lives on commodities, is landlocked between China and Russia and exports coal that the energy transition erodes, while worsening water stress and harsh dzud winters make the path volatile."
+    },
+    {
+      "entity": "URY",
+      "si": {"abundance": 0.13, "better": 0.61, "stagnation": 0.11, "decline": 0.08, "collapse": 0.07},
+      "noSi": {"abundance": 0.002, "better": 0.63, "stagnation": 0.19, "decline": 0.1, "collapse": 0.078},
+      "rationale": "Latin America's most stable institutions, near-all-renewable power and food exports from a temperate climate favour gains. Slow growth, aging and rising drug-gang violence work against them."
+    },
+    {
+      "entity": "PRI",
+      "si": {"abundance": 0.17, "better": 0.55, "stagnation": 0.13, "decline": 0.08, "collapse": 0.07},
+      "noSi": {"abundance": 0.003, "better": 0.52, "stagnation": 0.25, "decline": 0.142, "collapse": 0.085},
+      "rationale": "US membership and federal transfers already put consumption near the rich-world average. But the world's lowest fertility, steady emigration, a fragile grid, stronger hurricanes and high inequality make further broad gains less certain than in most rich places."
+    },
+    {
+      "entity": "BIH",
+      "si": {"abundance": 0.1, "better": 0.6, "stagnation": 0.12, "decline": 0.09, "collapse": 0.09},
+      "noSi": {"abundance": 0.002, "better": 0.57, "stagnation": 0.2, "decline": 0.12, "collapse": 0.108},
+      "rationale": "EU candidacy and catching up with its neighbours point up from a modest base. But the Dayton state is gridlocked, Republika Srpska's secessionism threatens renewed conflict, and emigration and aging are hollowing out the workforce."
+    },
+    {
+      "entity": "NAM",
+      "si": {"abundance": 0.05, "better": 0.62, "stagnation": 0.13, "decline": 0.1, "collapse": 0.1},
+      "noSi": {"abundance": 0.001, "better": 0.58, "stagnation": 0.19, "decline": 0.12, "collapse": 0.109},
+      "rationale": "A stable democracy with offshore oil on the way and uranium and green-hydrogen prospects. But some of the world's worst inequality, an arid climate facing deeper droughts, widespread undernourishment and high debt service limit how widely gains spread."
+    },
+    {
+      "entity": "ARM",
+      "si": {"abundance": 0.1, "better": 0.6, "stagnation": 0.12, "decline": 0.09, "collapse": 0.09},
+      "noSi": {"abundance": 0.002, "better": 0.58, "stagnation": 0.19, "decline": 0.12, "collapse": 0.108},
+      "rationale": "Fast recent growth, a tech sector and an emerging peace with Azerbaijan favour gains. But it is landlocked between hostile or unreliable neighbours, imports most of its energy, relies on an aging nuclear plant and faces rising water stress."
+    }
+  ]
+}

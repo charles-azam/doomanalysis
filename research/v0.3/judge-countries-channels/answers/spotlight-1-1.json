@@ -1,0 +1,204 @@
+{
+  "places": [
+    {
+      "entity": "IND",
+      "si": {"abundance": 0.07, "better": 0.71, "stagnation": 0.075, "decline": 0.06, "collapse": 0.085},
+      "noSi": {"abundance": 0.001, "better": 0.72, "stagnation": 0.10, "decline": 0.08, "collapse": 0.099},
+      "rationale": "Strong growth momentum and a capable state make a better 2100 likely; the main threats are extreme heat, severe water stress and the nuclear rivalry with Pakistan.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1.5, "jobs": -1, "ownership": -0.5, "stability": -0.5},
+        "reason": "Prices matter most: cheaper energy, food and medicine lift a huge poor population, while IT and outsourcing exports face automation."
+      }
+    },
+    {
+      "entity": "CHN",
+      "si": {"abundance": 0.15, "better": 0.65, "stagnation": 0.07, "decline": 0.05, "collapse": 0.08},
+      "noSi": {"abundance": 0.003, "better": 0.71, "stagnation": 0.13, "decline": 0.08, "collapse": 0.077},
+      "rationale": "A large industrial and AI base and an effective state point to strong gains, offset by extreme ageing, high debt and the risk of war over Taiwan.",
+      "reading": {
+        "channels": {"productivity": 1.5, "prices": 1, "jobs": -0.5, "ownership": 1, "stability": -1},
+        "reason": "Ownership and productivity: China builds its own models and robots and its state taxes them; the US rivalry and surveillance cut stability."
+      }
+    },
+    {
+      "entity": "USA",
+      "si": {"abundance": 0.27, "better": 0.54, "stagnation": 0.07, "decline": 0.05, "collapse": 0.07},
+      "noSi": {"abundance": 0.004, "better": 0.70, "stagnation": 0.14, "decline": 0.08, "collapse": 0.076},
+      "rationale": "Already rich and home to the frontier labs and compute, the US is among the likeliest places to reach abundance; polarisation, inequality and its exposure as the AI and nuclear centre are the main risks.",
+      "reading": {
+        "channels": {"productivity": 2, "prices": 1, "jobs": -0.5, "ownership": 2, "stability": -1},
+        "reason": "Ownership dominates: the US owns most frontier models and compute and can tax them, though unequal gains and polarisation threaten stability."
+      }
+    },
+    {
+      "entity": "IDN",
+      "si": {"abundance": 0.07, "better": 0.73, "stagnation": 0.07, "decline": 0.055, "collapse": 0.075},
+      "noSi": {"abundance": 0.002, "better": 0.73, "stagnation": 0.11, "decline": 0.08, "collapse": 0.078},
+      "rationale": "Steady growth, low debt and a young population favour a better future; poor water access, coal-export dependence and sea-level rise around Jakarta are the risks.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -0.5, "ownership": -0.5, "stability": -0.5},
+        "reason": "Prices matter most: cheaper energy, medicine and goods help a middle-income economy whose commodity exports are only partly exposed to AI."
+      }
+    },
+    {
+      "entity": "PAK",
+      "si": {"abundance": 0.025, "better": 0.595, "stagnation": 0.13, "decline": 0.11, "collapse": 0.14},
+      "noSi": {"abundance": 0.001, "better": 0.60, "stagnation": 0.15, "decline": 0.11, "collapse": 0.139},
+      "rationale": "Very weak political stability, extreme water stress, high climate vulnerability and a nuclear rivalry make decline or collapse far likelier than for its neighbours.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -0.5, "ownership": -1, "stability": -1},
+        "reason": "Stability matters most: a fragile, military-dominated state with little AI and a young population risks unrest, though cheaper energy and medicine help."
+      }
+    },
+    {
+      "entity": "NGA",
+      "si": {"abundance": 0.025, "better": 0.565, "stagnation": 0.15, "decline": 0.12, "collapse": 0.14},
+      "noSi": {"abundance": 0.001, "better": 0.58, "stagnation": 0.17, "decline": 0.12, "collapse": 0.129},
+      "rationale": "Decades of flat income per person, weak governance, insecurity and reliance on oil revenue that decarbonisation will erode keep stagnation and collapse risks high.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -0.5, "ownership": -1, "stability": -1},
+        "reason": "Stability and ownership matter most: a weak state with little compute captures few gains and may lose oil income, though cheap medicine and power help."
+      }
+    },
+    {
+      "entity": "BRA",
+      "si": {"abundance": 0.08, "better": 0.68, "stagnation": 0.10, "decline": 0.065, "collapse": 0.075},
+      "noSi": {"abundance": 0.002, "better": 0.68, "stagnation": 0.15, "decline": 0.09, "collapse": 0.078},
+      "rationale": "A food and energy exporter with decent AI uptake should end up better off, but high violence, inequality and heavy interest costs keep the middle-income trap a real risk.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1, "jobs": -0.5, "ownership": -0.5, "stability": -0.5},
+        "reason": "Productivity matters most: fairly high AI use and agribusiness gain from AI, while commodity exports hold up and service jobs are moderately exposed."
+      }
+    },
+    {
+      "entity": "BGD",
+      "si": {"abundance": 0.025, "better": 0.635, "stagnation": 0.13, "decline": 0.10, "collapse": 0.11},
+      "noSi": {"abundance": 0.001, "better": 0.68, "stagnation": 0.11, "decline": 0.10, "collapse": 0.109},
+      "rationale": "A strong development record is threatened by sea-level rise in the delta, high climate vulnerability, low readiness to adapt and a fragile political settlement.",
+      "reading": {
+        "channels": {"productivity": 0, "prices": 1.5, "jobs": -1.5, "ownership": -0.5, "stability": -0.5},
+        "reason": "Jobs matter most: garment exports and Gulf remittance work are exposed to robots, and very low AI use leaves little to gain beyond cheaper goods."
+      }
+    },
+    {
+      "entity": "RUS",
+      "si": {"abundance": 0.05, "better": 0.55, "stagnation": 0.16, "decline": 0.12, "collapse": 0.12},
+      "noSi": {"abundance": 0.002, "better": 0.60, "stagnation": 0.18, "decline": 0.12, "collapse": 0.098},
+      "rationale": "War, sanctions, ageing and dependence on fossil exports that decarbonisation will erode make stagnation or decline a serious alternative to gains.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1, "jobs": -1, "ownership": -0.5, "stability": -1},
+        "reason": "Jobs and exports matter most: cheaper clean energy erodes oil and gas income, and an isolated, surveillance-heavy state gains little from AI."
+      }
+    },
+    {
+      "entity": "ETH",
+      "si": {"abundance": 0.02, "better": 0.635, "stagnation": 0.12, "decline": 0.095, "collapse": 0.13},
+      "noSi": {"abundance": 0.001, "better": 0.64, "stagnation": 0.13, "decline": 0.10, "collapse": 0.129},
+      "rationale": "From a very low base some growth is likely, but civil conflict, drought and a recent debt default give Ethiopia one of the higher collapse risks.",
+      "reading": {
+        "channels": {"productivity": 0, "prices": 2, "jobs": -0.5, "ownership": -0.5, "stability": -1},
+        "reason": "Prices matter most: cheap medicine, solar power and AI tutoring help a very poor country, while conflict and weak access to AI limit the rest."
+      }
+    },
+    {
+      "entity": "MEX",
+      "si": {"abundance": 0.06, "better": 0.63, "stagnation": 0.13, "decline": 0.095, "collapse": 0.085},
+      "noSi": {"abundance": 0.002, "better": 0.66, "stagnation": 0.16, "decline": 0.10, "collapse": 0.078},
+      "rationale": "Close ties to the US economy favour gains, but cartel violence, severe water stress and a weak growth record keep stagnation likely.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1, "jobs": -1, "ownership": -0.5, "stability": -0.5},
+        "reason": "Jobs matter most: assembly plants and remittance work in the US are exposed to robots, offset by productivity gains from close US integration."
+      }
+    },
+    {
+      "entity": "JPN",
+      "si": {"abundance": 0.20, "better": 0.62, "stagnation": 0.08, "decline": 0.04, "collapse": 0.06},
+      "noSi": {"abundance": 0.003, "better": 0.60, "stagnation": 0.24, "decline": 0.09, "collapse": 0.067},
+      "rationale": "Rich, stable and well governed but ageing fast, heavily indebted and importing most of its energy and food, Japan risks long stagnation without superintelligence.",
+      "reading": {
+        "channels": {"productivity": 2, "prices": 1.5, "jobs": -0.5, "ownership": 0, "stability": 0},
+        "reason": "Productivity matters most: robots and AI fill the gap left by a shrinking workforce, and cheaper energy helps a country that imports 87% of it."
+      }
+    },
+    {
+      "entity": "EGY",
+      "si": {"abundance": 0.035, "better": 0.61, "stagnation": 0.15, "decline": 0.10, "collapse": 0.105},
+      "noSi": {"abundance": 0.001, "better": 0.58, "stagnation": 0.18, "decline": 0.12, "collapse": 0.119},
+      "rationale": "Extreme water stress, dependence on food imports, high interest costs and an authoritarian state give Egypt one of the larger decline risks.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 2, "jobs": -0.5, "ownership": -0.5, "stability": -1},
+        "reason": "Prices matter most: cheap energy makes desalination and food imports affordable for a water-starved country, though stability may suffer."
+      }
+    },
+    {
+      "entity": "PHL",
+      "si": {"abundance": 0.04, "better": 0.66, "stagnation": 0.14, "decline": 0.08, "collapse": 0.08},
+      "noSi": {"abundance": 0.002, "better": 0.72, "stagnation": 0.12, "decline": 0.08, "collapse": 0.078},
+      "rationale": "Fast growth and a young population favour a better future, while typhoons, sea-level rise and reliance on outsourcing and remittances are the risks.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -1.5, "ownership": -0.5, "stability": -0.5},
+        "reason": "Jobs matter most: call-centre and outsourcing exports plus overseas service work are among the most exposed to AI, offsetting cheaper goods."
+      }
+    },
+    {
+      "entity": "COD",
+      "si": {"abundance": 0.015, "better": 0.525, "stagnation": 0.18, "decline": 0.13, "collapse": 0.15},
+      "noSi": {"abundance": 0.001, "better": 0.529, "stagnation": 0.20, "decline": 0.13, "collapse": 0.14},
+      "rationale": "The weakest state, active conflict, the lowest readiness to adapt and a long record of falling income make stagnation and collapse likely despite huge mineral wealth.",
+      "reading": {
+        "channels": {"productivity": 0, "prices": 1.5, "jobs": 0, "ownership": -1, "stability": -1},
+        "reason": "Ownership and stability matter most: mineral rents go to foreign owners and elites and armed conflict can worsen, though cheap medicine helps."
+      }
+    },
+    {
+      "entity": "VNM",
+      "si": {"abundance": 0.08, "better": 0.73, "stagnation": 0.07, "decline": 0.055, "collapse": 0.065},
+      "noSi": {"abundance": 0.003, "better": 0.76, "stagnation": 0.09, "decline": 0.075, "collapse": 0.072},
+      "rationale": "A capable state, strong growth and high AI use favour gains; the Mekong delta's exposure to sea-level rise and South China Sea tensions are the main risks.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1.5, "jobs": -1, "ownership": -0.5, "stability": -0.5},
+        "reason": "Productivity matters most: high AI use and a capable state gain, while electronics assembly exports are exposed to robots and reshoring."
+      }
+    },
+    {
+      "entity": "IRN",
+      "si": {"abundance": 0.03, "better": 0.54, "stagnation": 0.16, "decline": 0.125, "collapse": 0.145},
+      "noSi": {"abundance": 0.001, "better": 0.56, "stagnation": 0.17, "decline": 0.13, "collapse": 0.139},
+      "rationale": "Severe aquifer depletion, sanctions, conflict with Israel and the US and a brittle regime make decline or collapse a real risk despite an educated population.",
+      "reading": {
+        "channels": {"productivity": 0, "prices": 1, "jobs": -0.5, "ownership": -0.5, "stability": -1},
+        "reason": "Stability matters most: a sanctioned, surveillance-heavy regime in a regional conflict gets little AI access while cheaper clean energy erodes oil income."
+      }
+    },
+    {
+      "entity": "TUR",
+      "si": {"abundance": 0.07, "better": 0.66, "stagnation": 0.12, "decline": 0.08, "collapse": 0.07},
+      "noSi": {"abundance": 0.003, "better": 0.66, "stagnation": 0.16, "decline": 0.10, "collapse": 0.077},
+      "rationale": "A dynamic manufacturing economy with low public debt should grow, but chronic inflation, political instability, earthquakes and heavy energy imports add risk.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1.5, "jobs": -1, "ownership": -0.5, "stability": -0.5},
+        "reason": "Prices matter most: cheaper energy helps a country importing 70% of it, while textile and auto-parts exports to Europe are exposed to robots."
+      }
+    },
+    {
+      "entity": "DEU",
+      "si": {"abundance": 0.23, "better": 0.59, "stagnation": 0.08, "decline": 0.045, "collapse": 0.055},
+      "noSi": {"abundance": 0.004, "better": 0.645, "stagnation": 0.20, "decline": 0.095, "collapse": 0.056},
+      "rationale": "Rich, well governed and high in AI use, but ageing, energy-import dependence and pressure on its export industry make stagnation the main alternative to gains.",
+      "reading": {
+        "channels": {"productivity": 1.5, "prices": 1.5, "jobs": -0.5, "ownership": 0, "stability": 0},
+        "reason": "Productivity and prices matter most: high AI use and an effective state gain, and cheaper energy relieves its industry, though it owns few models."
+      }
+    },
+    {
+      "entity": "THA",
+      "si": {"abundance": 0.07, "better": 0.67, "stagnation": 0.12, "decline": 0.07, "collapse": 0.07},
+      "noSi": {"abundance": 0.002, "better": 0.68, "stagnation": 0.15, "decline": 0.09, "collapse": 0.078},
+      "rationale": "A middle-income manufacturing and tourism economy facing fast ageing, coups and flood risk around Bangkok; growth has slowed but gains remain likely.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1.5, "jobs": -1, "ownership": -0.5, "stability": -0.5},
+        "reason": "Productivity matters most: robots offset fast ageing, while car and electronics assembly exports face automation and cheaper energy helps an importer."
+      }
+    }
+  ]
+}

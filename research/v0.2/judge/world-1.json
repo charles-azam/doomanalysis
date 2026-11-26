@@ -1,0 +1,201 @@
+{
+  "world": {
+    "siBy2050": 0.52,
+    "siBy2100": 0.78,
+    "si": {
+      "doom": 0.12,
+      "abundance": 0.16,
+      "pathways": {
+        "ai": 0.085,
+        "nuclear": 0.015,
+        "pandemic": 0.015,
+        "climate": 0.002,
+        "resources": 0.002,
+        "other": 0.01
+      }
+    },
+    "noSi": {
+      "doom": 0.052,
+      "abundance": 0.01,
+      "pathways": {
+        "ai": 0.005,
+        "nuclear": 0.025,
+        "pandemic": 0.015,
+        "climate": 0.004,
+        "resources": 0.003,
+        "other": 0.006
+      }
+    },
+    "rationale": "Rapid capability gains (40-hour task horizons in 2026) make superintelligence more likely than not by 2100, and loss of control or misuse is then the dominant doom route, with AI-enabled bioweapons and great-power war behind it. Without superintelligence, nuclear war and engineered pandemics are the main tail risks, and some of those same catastrophes are what would stop superintelligence arriving. World abundance needs near-free essentials for 90% of a 2100 population about one third of which lives in Sub-Saharan Africa, so it is rare even with superintelligence and almost impossible without it, because health and security costs rise with income."
+  },
+  "entities": [
+    {
+      "entity": "europe-north",
+      "si": {
+        "collapse": 0.155,
+        "abundance": 0.47,
+        "pillarLoss": { "energy": 0.14, "water": 0.128, "food": 0.135, "health": 0.135, "security": 0.145 }
+      },
+      "noSi": {
+        "collapse": 0.09,
+        "abundance": 0.06,
+        "pillarLoss": { "energy": 0.072, "water": 0.06, "food": 0.072, "health": 0.067, "security": 0.077 }
+      },
+      "rationale": "Rich, well governed and domestically supplied with energy, so collapse risk is mostly global doom or a war with Russia. Abundance depends on whether superintelligence pushes health and security spending far below today's roughly 25-30% essentials share."
+    },
+    {
+      "entity": "europe-west",
+      "si": {
+        "collapse": 0.16,
+        "abundance": 0.46,
+        "pillarLoss": { "energy": 0.145, "water": 0.128, "food": 0.135, "health": 0.135, "security": 0.15 }
+      },
+      "noSi": {
+        "collapse": 0.1,
+        "abundance": 0.055,
+        "pillarLoss": { "energy": 0.077, "water": 0.062, "food": 0.074, "health": 0.067, "security": 0.082 }
+      },
+      "rationale": "Strong institutions and wealth, but it imports 62% of its energy and ages fast, which pushes up health costs. An AMOC weakening and a European war are the main regional collapse routes outside global doom."
+    },
+    {
+      "entity": "europe-south",
+      "si": {
+        "collapse": 0.165,
+        "abundance": 0.43,
+        "pillarLoss": { "energy": 0.145, "water": 0.135, "food": 0.14, "health": 0.135, "security": 0.15 }
+      },
+      "noSi": {
+        "collapse": 0.11,
+        "abundance": 0.045,
+        "pillarLoss": { "energy": 0.077, "water": 0.077, "food": 0.077, "health": 0.067, "security": 0.087 }
+      },
+      "rationale": "High water stress, heavy energy imports, high debt and the oldest population make Mediterranean heat and drought the main regional threat. Wealth and EU membership still make collapse unlikely outside global catastrophe."
+    },
+    {
+      "entity": "europe-east",
+      "si": {
+        "collapse": 0.195,
+        "abundance": 0.33,
+        "pillarLoss": { "energy": 0.15, "water": 0.135, "food": 0.14, "health": 0.145, "security": 0.185 }
+      },
+      "noSi": {
+        "collapse": 0.14,
+        "abundance": 0.03,
+        "pillarLoss": { "energy": 0.082, "water": 0.067, "food": 0.077, "health": 0.077, "security": 0.127 }
+      },
+      "rationale": "The Russia-Ukraine war, military spending of 10% of GDP and the risk of a NATO-Russia nuclear exchange make security the weak point. Weak governance and war-level peace scores also lower the odds of near-free essentials."
+    },
+    {
+      "entity": "north-america",
+      "si": {
+        "collapse": 0.175,
+        "abundance": 0.45,
+        "pillarLoss": { "energy": 0.15, "water": 0.13, "food": 0.135, "health": 0.14, "security": 0.165 }
+      },
+      "noSi": {
+        "collapse": 0.11,
+        "abundance": 0.045,
+        "pillarLoss": { "energy": 0.082, "water": 0.067, "food": 0.072, "health": 0.072, "security": 0.097 }
+      },
+      "rationale": "As the likely superintelligence leader it would capture the gains first, but it is also the prime nuclear target and is politically polarized. Health spending of 16% of GDP alone breaks the abundance line today, so abundance needs a big drop in care costs."
+    },
+    {
+      "entity": "latin-america",
+      "si": {
+        "collapse": 0.175,
+        "abundance": 0.29,
+        "pillarLoss": { "energy": 0.14, "water": 0.14, "food": 0.145, "health": 0.14, "security": 0.165 }
+      },
+      "noSi": {
+        "collapse": 0.12,
+        "abundance": 0.025,
+        "pillarLoss": { "energy": 0.072, "water": 0.077, "food": 0.087, "health": 0.072, "security": 0.107 }
+      },
+      "rationale": "It produces its own food and energy, far from the main nuclear rivals, but homicide near 19 per 100,000 means 90% physical safety is a high bar. Heavy interest burdens and weak governance slow how fast cheap technology spreads."
+    },
+    {
+      "entity": "mena",
+      "si": {
+        "collapse": 0.21,
+        "abundance": 0.23,
+        "pillarLoss": { "energy": 0.15, "water": 0.17, "food": 0.165, "health": 0.15, "security": 0.19 }
+      },
+      "noSi": {
+        "collapse": 0.17,
+        "abundance": 0.02,
+        "pillarLoss": { "energy": 0.082, "water": 0.122, "food": 0.112, "health": 0.082, "security": 0.142 }
+      },
+      "rationale": "Extremely high water stress, dependence on food imports, extreme heat and chronic regional wars make water and security the likeliest breaking points. Cheap solar desalination under superintelligence is the main way out."
+    },
+    {
+      "entity": "sub-saharan-africa",
+      "si": {
+        "collapse": 0.2,
+        "abundance": 0.19,
+        "pillarLoss": { "energy": 0.15, "water": 0.155, "food": 0.175, "health": 0.16, "security": 0.175 }
+      },
+      "noSi": {
+        "collapse": 0.15,
+        "abundance": 0.012,
+        "pillarLoss": { "energy": 0.082, "water": 0.092, "food": 0.127, "health": 0.097, "security": 0.117 }
+      },
+      "rationale": "Starting from 55% electricity access, 27% safe water and 62% food insecurity, with a population likely to more than double, it needs a huge build-out before 2100 to reach 90% access. Climate shocks on food and widespread conflict are the main collapse risks."
+    },
+    {
+      "entity": "central-south-asia",
+      "si": {
+        "collapse": 0.2,
+        "abundance": 0.24,
+        "pillarLoss": { "energy": 0.15, "water": 0.165, "food": 0.175, "health": 0.15, "security": 0.17 }
+      },
+      "noSi": {
+        "collapse": 0.15,
+        "abundance": 0.018,
+        "pillarLoss": { "energy": 0.082, "water": 0.112, "food": 0.122, "health": 0.082, "security": 0.112 }
+      },
+      "rationale": "Near-extreme water stress, glacier loss, wet-bulb heat and an India-Pakistan nuclear rivalry threaten food and water for two billion people. Interest costs near 30% of revenue and low health spending limit resilience."
+    },
+    {
+      "entity": "east-asia",
+      "si": {
+        "collapse": 0.195,
+        "abundance": 0.38,
+        "pillarLoss": { "energy": 0.155, "water": 0.14, "food": 0.15, "health": 0.145, "security": 0.18 }
+      },
+      "noSi": {
+        "collapse": 0.13,
+        "abundance": 0.04,
+        "pillarLoss": { "energy": 0.087, "water": 0.077, "food": 0.087, "health": 0.077, "security": 0.112 }
+      },
+      "rationale": "China's manufacturing and robotics base makes it a strong candidate to make essentials cheap, but a Taiwan or US-China AI-race war and very low fertility are the key risks. Energy and food imports add some exposure."
+    },
+    {
+      "entity": "southeast-asia",
+      "si": {
+        "collapse": 0.175,
+        "abundance": 0.3,
+        "pillarLoss": { "energy": 0.14, "water": 0.14, "food": 0.15, "health": 0.14, "security": 0.16 }
+      },
+      "noSi": {
+        "collapse": 0.11,
+        "abundance": 0.025,
+        "pillarLoss": { "energy": 0.072, "water": 0.072, "food": 0.087, "health": 0.072, "security": 0.092 }
+      },
+      "rationale": "Relatively peaceful, with fast-growing economies, but only 45% safe water access, low-lying deltas exposed to sea-level rise and spillover from a South China Sea conflict. Rice yields under heat stress are the main food risk."
+    },
+    {
+      "entity": "oceania",
+      "si": {
+        "collapse": 0.15,
+        "abundance": 0.39,
+        "pillarLoss": { "energy": 0.135, "water": 0.13, "food": 0.132, "health": 0.132, "security": 0.14 }
+      },
+      "noSi": {
+        "collapse": 0.09,
+        "abundance": 0.05,
+        "pillarLoss": { "energy": 0.067, "water": 0.064, "food": 0.067, "health": 0.064, "security": 0.077 }
+      },
+      "rationale": "Australia and New Zealand are remote, food and energy exporters, which is the best protection from collapse. Papua New Guinea's low access to the essentials makes the regional 90% access line harder to reach."
+    }
+  ]
+}

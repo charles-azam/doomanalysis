@@ -1,0 +1,106 @@
+{
+  "places": [
+    {
+      "entity": "GBR",
+      "si": {"abundance": 0.28, "better": 0.48, "stagnation": 0.10, "decline": 0.07, "collapse": 0.07},
+      "noSi": {"abundance": 0.006, "better": 0.66, "stagnation": 0.17, "decline": 0.10, "collapse": 0.064},
+      "rationale": "A strong AI sector, capable government and low climate exposure favour gains, but a living standard already at 92 must rise more than fivefold for abundance, and high debt, energy imports, moderate inequality, nuclear-target status and AMOC risk keep real tails."
+    },
+    {
+      "entity": "FRA",
+      "si": {"abundance": 0.27, "better": 0.48, "stagnation": 0.10, "decline": 0.08, "collapse": 0.07},
+      "noSi": {"abundance": 0.005, "better": 0.64, "stagnation": 0.18, "decline": 0.11, "collapse": 0.065},
+      "rationale": "Its nuclear electricity fleet and strong redistribution help both growth and the nine-in-ten test, while a rising debt path toward 144% of GDP and weak political stability raise the odds of a lost decade or worse."
+    },
+    {
+      "entity": "ZAF",
+      "si": {"abundance": 0.08, "better": 0.60, "stagnation": 0.12, "decline": 0.09, "collapse": 0.11},
+      "noSi": {"abundance": 0.002, "better": 0.57, "stagnation": 0.185, "decline": 0.123, "collapse": 0.12},
+      "rationale": "Seventy-five years of catch-up make 'better' likely, but the world's most unequal income distribution, mass unemployment, near-maximal water stress, extreme violence and fragile public finances give it unusually fat stagnation and collapse tails, and abundance for nine in ten residents almost requires world abundance."
+    },
+    {
+      "entity": "ITA",
+      "si": {"abundance": 0.23, "better": 0.50, "stagnation": 0.12, "decline": 0.08, "collapse": 0.07},
+      "noSi": {"abundance": 0.004, "better": 0.56, "stagnation": 0.22, "decline": 0.14, "collapse": 0.076},
+      "rationale": "Twenty-five years of flat consumption, extreme aging (dependency heading to 73), 137% debt, 79% energy imports and a hotter, drier south make stagnation unusually likely without SI; robots and SI ease the aging drag but slow adoption tempers abundance."
+    },
+    {
+      "entity": "KEN",
+      "si": {"abundance": 0.08, "better": 0.67, "stagnation": 0.09, "decline": 0.06, "collapse": 0.10},
+      "noSi": {"abundance": 0.001, "better": 0.66, "stagnation": 0.125, "decline": 0.095, "collapse": 0.119},
+      "rationale": "From a living standard of 14, ordinary growth easily clears the 'better' bar, but 35% undernourishment, high climate vulnerability, debt distress and political volatility make a collapse in which a majority loses food or security a real risk; abundance needs a 36-fold rise and mostly comes through world abundance."
+    },
+    {
+      "entity": "COL",
+      "si": {"abundance": 0.10, "better": 0.64, "stagnation": 0.11, "decline": 0.07, "collapse": 0.08},
+      "noSi": {"abundance": 0.002, "better": 0.645, "stagnation": 0.163, "decline": 0.104, "collapse": 0.086},
+      "rationale": "Steady growth, abundant water and hydro and good health coverage favour improvement, while persistent armed groups, high homicide, high inequality and reliance on oil and coal exports during the transition keep the downside meaningful."
+    },
+    {
+      "entity": "KOR",
+      "si": {"abundance": 0.26, "better": 0.50, "stagnation": 0.09, "decline": 0.07, "collapse": 0.08},
+      "noSi": {"abundance": 0.005, "better": 0.62, "stagnation": 0.18, "decline": 0.11, "collapse": 0.085},
+      "rationale": "Its memory-chip leadership, high robot density and very effective government make it a natural SI winner, but a fertility rate of 0.75 with a dependency ratio near 98 by 2100 weighs heavily without SI, and war with a nuclear North Korea is a specific collapse path."
+    },
+    {
+      "entity": "ESP",
+      "si": {"abundance": 0.25, "better": 0.50, "stagnation": 0.11, "decline": 0.07, "collapse": 0.07},
+      "noSi": {"abundance": 0.004, "better": 0.60, "stagnation": 0.20, "decline": 0.125, "collapse": 0.071},
+      "rationale": "Excellent solar resources and strong immigration offset its very low fertility, but water stress heading to 4.5, heat that hurts tourism and farming, and high debt make stagnation or decline likelier than in northern Europe."
+    },
+    {
+      "entity": "ARG",
+      "si": {"abundance": 0.13, "better": 0.58, "stagnation": 0.13, "decline": 0.09, "collapse": 0.07},
+      "noSi": {"abundance": 0.002, "better": 0.60, "stagnation": 0.21, "decline": 0.12, "collapse": 0.068},
+      "rationale": "Shale, lithium and a large food surplus far from likely war zones make it resilient to global shocks, but half a century of defaults and boom-bust stagnation gives stagnation a high weight."
+    },
+    {
+      "entity": "CAN",
+      "si": {"abundance": 0.31, "better": 0.47, "stagnation": 0.09, "decline": 0.07, "collapse": 0.06},
+      "noSi": {"abundance": 0.008, "better": 0.68, "stagnation": 0.16, "decline": 0.10, "collapse": 0.052},
+      "rationale": "Vast energy, water, land and minerals, low climate vulnerability, strong institutions and integration with the leading AI economy put it near the top, tempered by recent productivity stagnation, housing costs and dependence on the US."
+    },
+    {
+      "entity": "UKR",
+      "si": {"abundance": 0.11, "better": 0.64, "stagnation": 0.09, "decline": 0.06, "collapse": 0.10},
+      "noSi": {"abundance": 0.002, "better": 0.637, "stagnation": 0.126, "decline": 0.105, "collapse": 0.13},
+      "rationale": "From a war-depressed base of 33, reconstruction and EU convergence on a Polish model make 'better' the central case, but renewed Russian aggression or occupation, weak governance and a fertility rate near 1 give it one of the larger collapse tails."
+    },
+    {
+      "entity": "SAU",
+      "si": {"abundance": 0.15, "better": 0.50, "stagnation": 0.14, "decline": 0.11, "collapse": 0.10},
+      "noSi": {"abundance": 0.002, "better": 0.44, "stagnation": 0.24, "decline": 0.19, "collapse": 0.128},
+      "rationale": "A rentier economy facing falling oil demand, near-maximal water stress that relies on desalination, Gulf heat approaching physiological limits and regional war risk depresses the noSi outlook, while large sovereign capital, cheap solar and AI-hub ambitions give it real upside under SI despite a 40% low-wage migrant population."
+    },
+    {
+      "entity": "POL",
+      "si": {"abundance": 0.24, "better": 0.52, "stagnation": 0.09, "decline": 0.07, "collapse": 0.08},
+      "noSi": {"abundance": 0.004, "better": 0.67, "stagnation": 0.15, "decline": 0.10, "collapse": 0.076},
+      "rationale": "Europe's best convergence record, moderate debt and a stable government favour improvement, but very low fertility and a frontline position next to Russia add aging and war tails."
+    },
+    {
+      "entity": "AUS",
+      "si": {"abundance": 0.31, "better": 0.48, "stagnation": 0.09, "decline": 0.06, "collapse": 0.06},
+      "noSi": {"abundance": 0.008, "better": 0.67, "stagnation": 0.165, "decline": 0.10, "collapse": 0.057},
+      "rationale": "Critical minerals, huge solar resources, food surpluses, strong institutions and distance from most conflicts make it resilient, with heat, drought, fires and the end of coal and LNG exports as its main drags."
+    },
+    {
+      "entity": "NLD",
+      "si": {"abundance": 0.31, "better": 0.48, "stagnation": 0.09, "decline": 0.06, "collapse": 0.06},
+      "noSi": {"abundance": 0.007, "better": 0.67, "stagnation": 0.17, "decline": 0.095, "collapse": 0.058},
+      "rationale": "High productivity, low debt, world-class water management and ASML's central place in AI hardware favour it; the risks are high energy imports and sea-level rise that is manageable at around 56 cm but is a tail worry."
+    },
+    {
+      "entity": "SWE",
+      "si": {"abundance": 0.30, "better": 0.49, "stagnation": 0.09, "decline": 0.06, "collapse": 0.06},
+      "noSi": {"abundance": 0.006, "better": 0.70, "stagnation": 0.16, "decline": 0.085, "collapse": 0.049},
+      "rationale": "Clean hydro and nuclear power, very low debt, top government effectiveness and strong redistribution (which helps the nine-in-ten test) make it among the safest, with rising gang violence and AMOC risk as modest drags."
+    },
+    {
+      "entity": "NOR",
+      "si": {"abundance": 0.37, "better": 0.45, "stagnation": 0.08, "decline": 0.05, "collapse": 0.05},
+      "noSi": {"abundance": 0.012, "better": 0.68, "stagnation": 0.17, "decline": 0.09, "collapse": 0.048},
+      "rationale": "The highest starting living standard (113), a sovereign fund worth roughly $350k per person whose returns would grow under SI, abundant hydro, low inequality and top institutions make abundance most reachable; stagnation risk comes from the decline of oil and gas."
+    }
+  ]
+}

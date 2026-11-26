@@ -1,0 +1,201 @@
+{
+  "world": {
+    "siBy2050": 0.58,
+    "siBy2100": 0.8,
+    "si": {
+      "doom": 0.115,
+      "abundance": 0.18,
+      "pathways": {
+        "ai": 0.085,
+        "nuclear": 0.015,
+        "pandemic": 0.01,
+        "climate": 0.001,
+        "resources": 0.001,
+        "other": 0.008
+      }
+    },
+    "noSi": {
+      "doom": 0.04,
+      "abundance": 0.012,
+      "pathways": {
+        "ai": 0.005,
+        "nuclear": 0.015,
+        "pandemic": 0.011,
+        "climate": 0.003,
+        "resources": 0.002,
+        "other": 0.006
+      }
+    },
+    "rationale": "Fast capability gains (40-hour task horizons in 2026) make superintelligence by 2100 likely, and loss of control or AI-enabled disempowerment dominates the doom risk in that branch, with AI-amplified war and bioweapons behind it. World abundance needs near-free essentials for 90% of humanity, including Sub-Saharan Africa and South Asia, which will hold over half of people by 2100, so even a well-aligned SI world clears it less than one time in five. Without SI, essentials still cost about a quarter of output and health costs tend to rise with income, so abundance is close to ruled out while nuclear war and engineered pandemics carry most of the doom risk."
+  },
+  "entities": [
+    {
+      "entity": "europe-north",
+      "si": {
+        "collapse": 0.165,
+        "abundance": 0.48,
+        "pillarLoss": { "energy": 0.13, "water": 0.12, "food": 0.135, "health": 0.13, "security": 0.15 }
+      },
+      "noSi": {
+        "collapse": 0.09,
+        "abundance": 0.05,
+        "pillarLoss": { "energy": 0.06, "water": 0.05, "food": 0.065, "health": 0.06, "security": 0.075 }
+      },
+      "rationale": "Rich, stable, well governed and energy self-sufficient, so its collapse risk is mostly global doom plus spillover from a war with Russia. Health spending at 10.5% of GDP alone uses up the abundance budget, so near-free essentials need SI-driven cost collapse."
+    },
+    {
+      "entity": "europe-west",
+      "si": {
+        "collapse": 0.17,
+        "abundance": 0.46,
+        "pillarLoss": { "energy": 0.135, "water": 0.125, "food": 0.14, "health": 0.135, "security": 0.155 }
+      },
+      "noSi": {
+        "collapse": 0.1,
+        "abundance": 0.045,
+        "pillarLoss": { "energy": 0.07, "water": 0.055, "food": 0.07, "health": 0.065, "security": 0.085 }
+      },
+      "rationale": "Wealthy and capable but imports 62% of its energy and spends almost 12% of GDP on health, so abundance depends on SI making care and energy far cheaper. Collapse is mostly global doom or a European war."
+    },
+    {
+      "entity": "europe-south",
+      "si": {
+        "collapse": 0.18,
+        "abundance": 0.42,
+        "pillarLoss": { "energy": 0.135, "water": 0.14, "food": 0.145, "health": 0.135, "security": 0.16 }
+      },
+      "noSi": {
+        "collapse": 0.12,
+        "abundance": 0.035,
+        "pillarLoss": { "energy": 0.075, "water": 0.08, "food": 0.085, "health": 0.07, "security": 0.095 }
+      },
+      "rationale": "High water stress, heat exposure, heavy energy imports and debt above 100% of GDP make it a bit more fragile than northern Europe. Long life expectancy and peace keep regional collapse unlikely outside global shocks."
+    },
+    {
+      "entity": "europe-east",
+      "si": {
+        "collapse": 0.25,
+        "abundance": 0.32,
+        "pillarLoss": { "energy": 0.16, "water": 0.15, "food": 0.16, "health": 0.17, "security": 0.23 }
+      },
+      "noSi": {
+        "collapse": 0.2,
+        "abundance": 0.02,
+        "pillarLoss": { "energy": 0.1, "water": 0.08, "food": 0.1, "health": 0.11, "security": 0.18 }
+      },
+      "rationale": "The Russia-Ukraine war, military spending at 10% of GDP and a peace score near war-zone level make security the dominant collapse route, including the risk of a nuclear NATO-Russia war. Weaker governance and life expectancy right at 75 lower its abundance odds."
+    },
+    {
+      "entity": "north-america",
+      "si": {
+        "collapse": 0.2,
+        "abundance": 0.43,
+        "pillarLoss": { "energy": 0.14, "water": 0.13, "food": 0.14, "health": 0.15, "security": 0.18 }
+      },
+      "noSi": {
+        "collapse": 0.12,
+        "abundance": 0.03,
+        "pillarLoss": { "energy": 0.07, "water": 0.06, "food": 0.07, "health": 0.08, "security": 0.1 }
+      },
+      "rationale": "Likely home of SI, which brings both the biggest gains and the most direct exposure to AI conflict and loss of control, on top of being a prime nuclear target. Health spending at 16% of GDP and high inequality make the under-10% cost test hard without SI."
+    },
+    {
+      "entity": "latin-america",
+      "si": {
+        "collapse": 0.21,
+        "abundance": 0.27,
+        "pillarLoss": { "energy": 0.14, "water": 0.15, "food": 0.16, "health": 0.15, "security": 0.19 }
+      },
+      "noSi": {
+        "collapse": 0.17,
+        "abundance": 0.012,
+        "pillarLoss": { "energy": 0.08, "water": 0.1, "food": 0.11, "health": 0.09, "security": 0.14 }
+      },
+      "rationale": "Endemic violence (homicide near 19 per 100,000) and 22% food insecurity are the main obstacles. The region is far from great-power nuclear targets, but it needs SI benefits to spread to it, not just reach the US and China, before it can reach abundance."
+    },
+    {
+      "entity": "mena",
+      "si": {
+        "collapse": 0.24,
+        "abundance": 0.25,
+        "pillarLoss": { "energy": 0.14, "water": 0.19, "food": 0.18, "health": 0.15, "security": 0.21 }
+      },
+      "noSi": {
+        "collapse": 0.23,
+        "abundance": 0.012,
+        "pillarLoss": { "energy": 0.09, "water": 0.17, "food": 0.15, "health": 0.1, "security": 0.19 }
+      },
+      "rationale": "Extreme water stress, dependence on food imports, extreme heat and chronic conflict make water, food and security the weak points. Cheap SI-driven desalination and solar would help most here, but political fragility limits how far gains spread."
+    },
+    {
+      "entity": "sub-saharan-africa",
+      "si": {
+        "collapse": 0.26,
+        "abundance": 0.2,
+        "pillarLoss": { "energy": 0.15, "water": 0.17, "food": 0.2, "health": 0.18, "security": 0.22 }
+      },
+      "noSi": {
+        "collapse": 0.3,
+        "abundance": 0.004,
+        "pillarLoss": { "energy": 0.1, "water": 0.15, "food": 0.22, "health": 0.17, "security": 0.24 }
+      },
+      "rationale": "Starting from 55% electricity access, 27% safe water, 62% food insecurity and fragile states, with population roughly tripling, it is the region most exposed to climate-driven harvest losses and conflict. Abundance requires SI and robots to leapfrog decades of infrastructure, which is possible but far from assured."
+    },
+    {
+      "entity": "central-south-asia",
+      "si": {
+        "collapse": 0.25,
+        "abundance": 0.25,
+        "pillarLoss": { "energy": 0.15, "water": 0.19, "food": 0.19, "health": 0.16, "security": 0.2 }
+      },
+      "noSi": {
+        "collapse": 0.24,
+        "abundance": 0.008,
+        "pillarLoss": { "energy": 0.09, "water": 0.16, "food": 0.16, "health": 0.1, "security": 0.17 }
+      },
+      "rationale": "Near-extreme water stress, deadly heat, monsoon-dependent harvests and the India-Pakistan nuclear rivalry are the main collapse risks. Low current spending and income mean abundance hinges on SI-driven growth reaching two billion people."
+    },
+    {
+      "entity": "east-asia",
+      "si": {
+        "collapse": 0.22,
+        "abundance": 0.37,
+        "pillarLoss": { "energy": 0.15, "water": 0.15, "food": 0.16, "health": 0.14, "security": 0.2 }
+      },
+      "noSi": {
+        "collapse": 0.15,
+        "abundance": 0.025,
+        "pillarLoss": { "energy": 0.08, "water": 0.08, "food": 0.09, "health": 0.07, "security": 0.12 }
+      },
+      "rationale": "Strong state capacity, manufacturing depth and likely SI leadership in China favour abundance, but a Taiwan or Korea war and a US-China AI race are serious collapse risks. Very low fertility and rapid aging add pressure on health systems."
+    },
+    {
+      "entity": "southeast-asia",
+      "si": {
+        "collapse": 0.2,
+        "abundance": 0.3,
+        "pillarLoss": { "energy": 0.14, "water": 0.15, "food": 0.15, "health": 0.14, "security": 0.17 }
+      },
+      "noSi": {
+        "collapse": 0.16,
+        "abundance": 0.012,
+        "pillarLoss": { "energy": 0.08, "water": 0.1, "food": 0.1, "health": 0.08, "security": 0.12 }
+      },
+      "rationale": "Relatively peaceful and growing, but only 45% have safe water, and sea-level rise and flooding threaten its delta rice lands. Spillover from a South China Sea conflict is the main security risk."
+    },
+    {
+      "entity": "oceania",
+      "si": {
+        "collapse": 0.15,
+        "abundance": 0.44,
+        "pillarLoss": { "energy": 0.125, "water": 0.12, "food": 0.125, "health": 0.125, "security": 0.135 }
+      },
+      "noSi": {
+        "collapse": 0.075,
+        "abundance": 0.04,
+        "pillarLoss": { "energy": 0.05, "water": 0.05, "food": 0.055, "health": 0.05, "security": 0.06 }
+      },
+      "rationale": "Dominated by Australia and New Zealand: big energy and food exporters, remote from nuclear targets and among the best places to ride out global shocks. Pacific islands and Papua New Guinea pull access figures down, which tempers the abundance odds."
+    }
+  ]
+}

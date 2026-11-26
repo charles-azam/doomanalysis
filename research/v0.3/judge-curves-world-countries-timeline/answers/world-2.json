@@ -1,0 +1,107 @@
+{
+  "world": {
+    "siBy2050": 0.6,
+    "siBy2100": 0.8,
+    "si": {
+      "causes": {
+        "climate": {"atLeast3": 0.07, "atLeast4": 0.003, "doom": 0.0003},
+        "resources": {"atLeast3": 0.063, "atLeast4": 0.02, "doom": 0.001},
+        "war": {"atLeast3": 0.075, "atLeast4": 0.028, "doom": 0.007},
+        "civil": {"atLeast3": 0.1, "atLeast4": 0.035, "doom": 0.003},
+        "disease": {"atLeast3": 0.04, "atLeast4": 0.012, "doom": 0.005},
+        "ai": {"atLeast3": 0.11, "atLeast4": 0.07, "doom": 0.045},
+        "natural": {"atLeast3": 0.006, "atLeast4": 0.002, "doom": 0.001}
+      },
+      "directDoom": 0.06,
+      "abundance": 0.06
+    },
+    "noSi": {
+      "causes": {
+        "climate": {"atLeast3": 0.13, "atLeast4": 0.006, "doom": 0.0008},
+        "resources": {"atLeast3": 0.07, "atLeast4": 0.018, "doom": 0.0015},
+        "war": {"atLeast3": 0.055, "atLeast4": 0.018, "doom": 0.004},
+        "civil": {"atLeast3": 0.065, "atLeast4": 0.011, "doom": 0.0005},
+        "disease": {"atLeast3": 0.04, "atLeast4": 0.006, "doom": 0.001},
+        "ai": {"atLeast3": 0.02, "atLeast4": 0.006, "doom": 0.003},
+        "natural": {"atLeast3": 0.006, "atLeast4": 0.0008, "doom": 0.0003}
+      },
+      "directDoom": 0.011,
+      "abundance": 0.0006
+    },
+    "rationale": "AI drives the result: if superintelligence arrives I put AI-takeover doom near 4.5%, well above the card's 1%, because a takeover that disempowers most people is more likely to be permanent than recoverable, so I move weight from level 4 to level 5; that gives about 6% doom with superintelligence, about 1% without, and roughly 5% overall. I keep the other cards as floors and add knock-on channels, mainly for war (AI-sped arms races, bioweapons) and civil breakdown (job displacement and power concentration under superintelligence). I go below the energy card's 3.8% level-4 figure under superintelligence because I count AI systems seizing resources as AI takeover and expect faster substitution, and slightly below the civil-war card without superintelligence because breakdowns started by drought or shortages belong to climate or resources. Abundance for 90% of humanity is near zero without superintelligence and about 6% with it, capped by how fast Sub-Saharan Africa and South Asia could be built out and whether the gains are shared."
+  },
+  "places": [
+    {
+      "entity": "europe-north",
+      "si": {"abundance": 0.3, "better": 0.53, "stagnation": 0.08, "decline": 0.05, "collapse": 0.04},
+      "noSi": {"abundance": 0.005, "better": 0.685, "stagnation": 0.17, "decline": 0.08, "collapse": 0.06},
+      "rationale": "Rich, stable, well governed and nearly energy self-sufficient, so modest growth is the default; without superintelligence slow growth and aging make stagnation the main alternative, and abundance needs the gains of superintelligence shared widely."
+    },
+    {
+      "entity": "europe-west",
+      "si": {"abundance": 0.28, "better": 0.53, "stagnation": 0.09, "decline": 0.05, "collapse": 0.05},
+      "noSi": {"abundance": 0.005, "better": 0.645, "stagnation": 0.19, "decline": 0.09, "collapse": 0.07},
+      "rationale": "Strong institutions but 62% of energy imported, low fertility and slow growth leave real room for stagnation; with superintelligence it likely shares in the gains, though perhaps behind the US and China where the systems are built."
+    },
+    {
+      "entity": "europe-south",
+      "si": {"abundance": 0.24, "better": 0.53, "stagnation": 0.11, "decline": 0.07, "collapse": 0.05},
+      "noSi": {"abundance": 0.003, "better": 0.562, "stagnation": 0.23, "decline": 0.12, "collapse": 0.085},
+      "rationale": "A quarter-century of flat incomes, very low fertility, high debt, 76% energy imports and growing heat and water stress make stagnation or decline more likely here than elsewhere in Europe."
+    },
+    {
+      "entity": "europe-east",
+      "si": {"abundance": 0.18, "better": 0.55, "stagnation": 0.11, "decline": 0.08, "collapse": 0.08},
+      "noSi": {"abundance": 0.003, "better": 0.622, "stagnation": 0.15, "decline": 0.11, "collapse": 0.115},
+      "rationale": "Catch-up growth and energy exports favour improvement, but the Russia-Ukraine war, 10% of GDP on the military and weak governance make it the European region most exposed to war-driven decline or collapse."
+    },
+    {
+      "entity": "north-america",
+      "si": {"abundance": 0.33, "better": 0.49, "stagnation": 0.07, "decline": 0.05, "collapse": 0.06},
+      "noSi": {"abundance": 0.01, "better": 0.67, "stagnation": 0.15, "decline": 0.09, "collapse": 0.08},
+      "rationale": "The richest starting point, an energy exporter and home of frontier AI, so it gains most if superintelligence goes well; high inequality, polarisation, debt and its central place in the AI and nuclear rivalries keep a real tail of decline or collapse."
+    },
+    {
+      "entity": "latin-america",
+      "si": {"abundance": 0.12, "better": 0.64, "stagnation": 0.1, "decline": 0.07, "collapse": 0.07},
+      "noSi": {"abundance": 0.002, "better": 0.661, "stagnation": 0.15, "decline": 0.1, "collapse": 0.087},
+      "rationale": "A low bar for a quarter's gain and abundant energy and minerals favour improvement, while the middle-income trap, high violence and heavy interest burdens keep stagnation and decline plausible."
+    },
+    {
+      "entity": "mena",
+      "si": {"abundance": 0.11, "better": 0.56, "stagnation": 0.12, "decline": 0.09, "collapse": 0.12},
+      "noSi": {"abundance": 0.002, "better": 0.521, "stagnation": 0.17, "decline": 0.14, "collapse": 0.167},
+      "rationale": "Extreme water stress, rising heat, fragile politics and oil revenues that shrink as the world decarbonises make this one of the most collapse-prone regions, though cheap solar and desalination could carry it forward."
+    },
+    {
+      "entity": "sub-saharan-africa",
+      "si": {"abundance": 0.08, "better": 0.65, "stagnation": 0.1, "decline": 0.06, "collapse": 0.11},
+      "noSi": {"abundance": 0.001, "better": 0.62, "stagnation": 0.15, "decline": 0.09, "collapse": 0.139},
+      "rationale": "From a very low base a quarter's gain is likely, but the highest climate vulnerability, fragile states and fast population growth give it the largest collapse risk; abundance would need a build-out of unprecedented speed."
+    },
+    {
+      "entity": "central-south-asia",
+      "si": {"abundance": 0.1, "better": 0.69, "stagnation": 0.07, "decline": 0.05, "collapse": 0.09},
+      "noSi": {"abundance": 0.001, "better": 0.721, "stagnation": 0.1, "decline": 0.07, "collapse": 0.108},
+      "rationale": "India's fast growth makes improvement the strong default, while humid heat, very high water stress, harvests and India-Pakistan nuclear risk drive the collapse tail."
+    },
+    {
+      "entity": "east-asia",
+      "si": {"abundance": 0.2, "better": 0.62, "stagnation": 0.07, "decline": 0.05, "collapse": 0.06},
+      "noSi": {"abundance": 0.003, "better": 0.703, "stagnation": 0.13, "decline": 0.08, "collapse": 0.084},
+      "rationale": "Strong state capacity, manufacturing and AI capability favour gains, while the world's lowest fertility, fast aging and a possible war over Taiwan are the main downside risks."
+    },
+    {
+      "entity": "southeast-asia",
+      "si": {"abundance": 0.14, "better": 0.68, "stagnation": 0.07, "decline": 0.05, "collapse": 0.06},
+      "noSi": {"abundance": 0.002, "better": 0.712, "stagnation": 0.12, "decline": 0.08, "collapse": 0.086},
+      "rationale": "Steady catch-up growth and a manufacturing role make improvement likely; sea-level rise, heat and storms on dense coasts and deltas, plus South China Sea tensions, make up the downside."
+    },
+    {
+      "entity": "oceania",
+      "si": {"abundance": 0.27, "better": 0.55, "stagnation": 0.08, "decline": 0.05, "collapse": 0.05},
+      "noSi": {"abundance": 0.005, "better": 0.665, "stagnation": 0.18, "decline": 0.09, "collapse": 0.06},
+      "rationale": "Dominated by rich, stable Australia and New Zealand with large energy and mineral exports, so improvement is likely; heat, drought and remoteness from conflict cut both ways."
+    }
+  ]
+}

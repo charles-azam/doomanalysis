@@ -1,0 +1,174 @@
+{
+  "places": [
+    {
+      "entity": "GBR",
+      "si": {"abundance": 0.28, "better": 0.49, "stagnation": 0.09, "decline": 0.07, "collapse": 0.07},
+      "noSi": {"abundance": 0.004, "better": 0.64, "stagnation": 0.19, "decline": 0.10, "collapse": 0.066},
+      "rationale": "High AI use, a deep research base and strong capital markets make the UK a likely SI beneficiary, though its finance and business-services exports are exposed. Weak productivity growth since 2008 and high debt raise stagnation risk without SI.",
+      "reading": {
+        "channels": {"productivity": 1.5, "prices": 1, "jobs": -1, "ownership": 0.5, "stability": -0.5},
+        "reason": "Jobs: finance and business-services exports face AI displacement, though high AI use and a strong research base lift productivity."
+      }
+    },
+    {
+      "entity": "FRA",
+      "si": {"abundance": 0.27, "better": 0.50, "stagnation": 0.09, "decline": 0.07, "collapse": 0.07},
+      "noSi": {"abundance": 0.004, "better": 0.61, "stagnation": 0.21, "decline": 0.11, "collapse": 0.066},
+      "rationale": "Nuclear power, high AI uptake and strong redistribution favour broad gains that reach nearly everyone. Rising debt and political fragmentation weigh on the path without SI.",
+      "reading": {
+        "channels": {"productivity": 1.5, "prices": 1, "jobs": -0.5, "ownership": 0.5, "stability": -0.5},
+        "reason": "Productivity: broad AI uptake and nuclear power for compute, with redistribution spreading gains; fiscal and political strain is the drag."
+      }
+    },
+    {
+      "entity": "ZAF",
+      "si": {"abundance": 0.05, "better": 0.57, "stagnation": 0.15, "decline": 0.10, "collapse": 0.13},
+      "noSi": {"abundance": 0.0002, "better": 0.55, "stagnation": 0.20, "decline": 0.12, "collapse": 0.1298},
+      "rationale": "Extreme inequality, mass unemployment, violent crime and severe water stress cap the upside and keep collapse risk elevated. Mineral wealth and cheaper energy and medicine are the main sources of gain.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1.5, "jobs": -1, "ownership": -0.5, "stability": -1},
+        "reason": "Prices: cheaper energy, medicine and goods help most, but BPO and mining jobs face automation and extreme inequality risks unrest."
+      }
+    },
+    {
+      "entity": "ITA",
+      "si": {"abundance": 0.22, "better": 0.51, "stagnation": 0.12, "decline": 0.08, "collapse": 0.07},
+      "noSi": {"abundance": 0.002, "better": 0.54, "stagnation": 0.25, "decline": 0.13, "collapse": 0.078},
+      "rationale": "A quarter-century of flat incomes, steep ageing, high debt and heavy energy imports make stagnation a real risk without SI. Robots and cheaper energy would offset the shrinking workforce.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1.5, "jobs": -0.5, "ownership": 0, "stability": -0.5},
+        "reason": "Prices and robots: cheaper energy and automated care offset a shrinking workforce, but small firms adopt AI slowly."
+      }
+    },
+    {
+      "entity": "KEN",
+      "si": {"abundance": 0.04, "better": 0.65, "stagnation": 0.11, "decline": 0.08, "collapse": 0.12},
+      "noSi": {"abundance": 0.0001, "better": 0.65, "stagnation": 0.14, "decline": 0.08, "collapse": 0.1299},
+      "rationale": "A young, fast-growing, tech-forward economy is likely to keep rising from a low base, but widespread hunger, drought exposure and heavy debt service keep collapse risk material. Abundance from so low a base needs a global transformation.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1.5, "jobs": -1, "ownership": -1, "stability": -0.5},
+        "reason": "Prices: cheap medicine, energy and food tech help most, but AI wipes out the BPO and data-labelling work that was a path up."
+      }
+    },
+    {
+      "entity": "COL",
+      "si": {"abundance": 0.08, "better": 0.60, "stagnation": 0.14, "decline": 0.09, "collapse": 0.09},
+      "noSi": {"abundance": 0.0003, "better": 0.63, "stagnation": 0.18, "decline": 0.10, "collapse": 0.0897},
+      "rationale": "Steady middle-income growth and ample water favour improvement. Armed groups, high violence and reliance on oil and coal exports that decarbonisation erodes limit the upside.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1.5, "jobs": -1, "ownership": -0.5, "stability": -1},
+        "reason": "Prices help consumers, but call-centre jobs, fading oil and coal rents and armed groups cancel much of the gain."
+      }
+    },
+    {
+      "entity": "KOR",
+      "si": {"abundance": 0.25, "better": 0.51, "stagnation": 0.09, "decline": 0.07, "collapse": 0.08},
+      "noSi": {"abundance": 0.003, "better": 0.60, "stagnation": 0.19, "decline": 0.12, "collapse": 0.087},
+      "rationale": "The world's lowest fertility means a rapidly shrinking, ageing workforce without SI, but memory chips and the densest robot base make Korea a prime SI beneficiary. North Korea and a Taiwan conflict are the main tail risks.",
+      "reading": {
+        "channels": {"productivity": 2, "prices": 1, "jobs": -0.5, "ownership": 1, "stability": -0.5},
+        "reason": "Ownership: memory chips and the densest robot base let AI offset a collapsing workforce; regional war risk is the drag."
+      }
+    },
+    {
+      "entity": "ESP",
+      "si": {"abundance": 0.23, "better": 0.52, "stagnation": 0.11, "decline": 0.07, "collapse": 0.07},
+      "noSi": {"abundance": 0.002, "better": 0.57, "stagnation": 0.23, "decline": 0.12, "collapse": 0.078},
+      "rationale": "Severe and worsening water stress, rising heat and very low fertility are the main risks. Cheap solar, immigration and high AI uptake are the main strengths.",
+      "reading": {
+        "channels": {"productivity": 1.5, "prices": 1.5, "jobs": -0.5, "ownership": 0, "stability": -0.5},
+        "reason": "Prices: cheap solar and desalination ease energy imports and drought, and tourism resists automation better than office work."
+      }
+    },
+    {
+      "entity": "ARG",
+      "si": {"abundance": 0.10, "better": 0.59, "stagnation": 0.14, "decline": 0.09, "collapse": 0.08},
+      "noSi": {"abundance": 0.0005, "better": 0.60, "stagnation": 0.20, "decline": 0.12, "collapse": 0.0795},
+      "rationale": "Food, shale and lithium wealth and low climate stress give a solid base. A century of recurring macroeconomic crises makes long stagnation or another sharp decline plausible.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1.5, "jobs": -0.5, "ownership": -0.5, "stability": -0.5},
+        "reason": "Prices: cheaper goods help, and food and lithium stay in demand, but chronic macro instability limits gains reaching households."
+      }
+    },
+    {
+      "entity": "CAN",
+      "si": {"abundance": 0.33, "better": 0.47, "stagnation": 0.08, "decline": 0.06, "collapse": 0.06},
+      "noSi": {"abundance": 0.006, "better": 0.67, "stagnation": 0.17, "decline": 0.095, "collapse": 0.059},
+      "rationale": "Abundant energy, water and land, an effective state and deep AI talent make Canada one of the most resilient places. Weak productivity growth and dependence on the US market are the main drags.",
+      "reading": {
+        "channels": {"productivity": 1.5, "prices": 1, "jobs": -0.5, "ownership": 0.5, "stability": -0.5},
+        "reason": "Productivity: deep AI talent, cheap hydro and land for compute, and pension funds owning global equities spread gains widely."
+      }
+    },
+    {
+      "entity": "UKR",
+      "si": {"abundance": 0.07, "better": 0.58, "stagnation": 0.13, "decline": 0.10, "collapse": 0.12},
+      "noSi": {"abundance": 0.0003, "better": 0.61, "stagnation": 0.15, "decline": 0.11, "collapse": 0.1297},
+      "rationale": "The war with Russia and a shrinking population dominate: reconstruction and EU integration could drive fast catch-up from a war-depressed base, but renewed war or occupation keeps collapse risk high.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1.5, "jobs": -1, "ownership": -0.5, "stability": -1},
+        "reason": "Stability: on the frontline of an AI-boosted arms race with Russia, security decides everything; its IT outsourcing is also exposed."
+      }
+    },
+    {
+      "entity": "SAU",
+      "si": {"abundance": 0.13, "better": 0.53, "stagnation": 0.14, "decline": 0.10, "collapse": 0.10},
+      "noSi": {"abundance": 0.001, "better": 0.52, "stagnation": 0.22, "decline": 0.15, "collapse": 0.109},
+      "rationale": "Oil rents fund today's living standard, so decarbonisation and cheaper energy threaten it, and extreme water stress and heat add risk; 40% of residents are migrant workers far below the average. Sovereign wealth and cheap energy for compute are the hedge.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 0, "jobs": 0, "ownership": 1, "stability": -0.5},
+        "reason": "Ownership: sovereign wealth and cheap energy buy compute and robots, but cheaper energy erodes the oil rents that fund the state."
+      }
+    },
+    {
+      "entity": "POL",
+      "si": {"abundance": 0.20, "better": 0.53, "stagnation": 0.11, "decline": 0.08, "collapse": 0.08},
+      "noSi": {"abundance": 0.002, "better": 0.64, "stagnation": 0.16, "decline": 0.11, "collapse": 0.088},
+      "rationale": "Three decades of strong convergence and a competent state favour further gains. Very low fertility, coal dependence and the Russian frontier add risk.",
+      "reading": {
+        "channels": {"productivity": 1.5, "prices": 1, "jobs": -1, "ownership": 0, "stability": -0.5},
+        "reason": "Jobs: shared-services hubs and assembly plants sell exactly the work AI and robots replace, offsetting solid productivity gains."
+      }
+    },
+    {
+      "entity": "AUS",
+      "si": {"abundance": 0.32, "better": 0.48, "stagnation": 0.08, "decline": 0.06, "collapse": 0.06},
+      "noSi": {"abundance": 0.006, "better": 0.66, "stagnation": 0.17, "decline": 0.095, "collapse": 0.069},
+      "rationale": "Critical minerals, vast solar potential, an effective state and very high AI use favour gains. Heat, drought, fire and the decline of coal exports are the main risks.",
+      "reading": {
+        "channels": {"productivity": 1.5, "prices": 1, "jobs": -0.5, "ownership": 1, "stability": -0.5},
+        "reason": "Ownership: minerals for the robot build-out, sun for compute, super funds holding global tech, and very high AI use."
+      }
+    },
+    {
+      "entity": "NLD",
+      "si": {"abundance": 0.33, "better": 0.47, "stagnation": 0.08, "decline": 0.06, "collapse": 0.06},
+      "noSi": {"abundance": 0.006, "better": 0.66, "stagnation": 0.18, "decline": 0.093, "collapse": 0.061},
+      "rationale": "ASML, large pension funds, low debt and an effective state make the Netherlands a strong beneficiary. Sea-level rise is manageable at half a metre but a tail risk if ice sheets destabilise.",
+      "reading": {
+        "channels": {"productivity": 1.5, "prices": 1, "jobs": -0.5, "ownership": 1, "stability": -0.5},
+        "reason": "Ownership: ASML's lithography monopoly and big pension funds tie Dutch income to the AI build-out, on top of high AI use."
+      }
+    },
+    {
+      "entity": "SWE",
+      "si": {"abundance": 0.32, "better": 0.49, "stagnation": 0.07, "decline": 0.06, "collapse": 0.06},
+      "noSi": {"abundance": 0.006, "better": 0.68, "stagnation": 0.17, "decline": 0.085, "collapse": 0.059},
+      "rationale": "Cheap clean power, low debt, high trust and a strong welfare state make broad gains likely. Rising gang violence and the Russian frontier are modest risks.",
+      "reading": {
+        "channels": {"productivity": 1.5, "prices": 1, "jobs": -0.5, "ownership": 0.5, "stability": 0},
+        "reason": "Productivity: cheap clean power, high trust and a welfare state that can spread AI gains to nearly everyone."
+      }
+    },
+    {
+      "entity": "NOR",
+      "si": {"abundance": 0.38, "better": 0.45, "stagnation": 0.065, "decline": 0.05, "collapse": 0.055},
+      "noSi": {"abundance": 0.012, "better": 0.66, "stagnation": 0.19, "decline": 0.085, "collapse": 0.053},
+      "rationale": "The richest starting point, low inequality and an oil fund holding global equities make Norway the likeliest place to reach abundance. Falling oil and gas income is the main drag.",
+      "reading": {
+        "channels": {"productivity": 1.5, "prices": 0.5, "jobs": 0, "ownership": 2, "stability": 0},
+        "reason": "Ownership: the oil fund holds about 1.5% of world equities, AI giants included, so Norwegians own a slice of AI profits."
+      }
+    }
+  ]
+}

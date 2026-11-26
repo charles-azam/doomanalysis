@@ -1,6 +1,6 @@
 """Fetch everything, build the dataset, write the JSON files the site imports.
 
-Usage (from pdoom/pipeline): uv run python -m doom_pipeline.run --raw-dir <downloads> --out-dir ../src/data/generated
+Usage (from pipeline): uv run python -m doom_pipeline.run --raw-dir <downloads> --out-dir ../src/data/generated
 The raw dir holds the official files that have no API: the GPI 2026 site script, the ND-GAIN 2026 zip
 contents and the WRI Aqueduct 4.0 rankings workbook. The run also keeps there the files it downloads itself
 (Our World in Data, WHO, Gallup's safety map, UN WPP 2024, Microsoft's AI diffusion table, Anthropic's

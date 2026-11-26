@@ -1,0 +1,124 @@
+{
+  "places": [
+    {
+      "entity": "NER",
+      "si": {"abundance": 0.05, "better": 0.55, "stagnation": 0.13, "decline": 0.10, "collapse": 0.17},
+      "noSi": {"abundance": 0.001, "better": 0.50, "stagnation": 0.18, "decline": 0.13, "collapse": 0.189},
+      "rationale": "Niger's real income per head is no higher than in the 1960s, and it combines the world's highest fertility, a junta, a spreading jihadist insurgency and extreme Sahel heat and drought exposure. New oil exports and the low +25% bar still make modest gains the single most likely outcome."
+    },
+    {
+      "entity": "PRK",
+      "si": {"abundance": 0.08, "better": 0.60, "stagnation": 0.13, "decline": 0.07, "collapse": 0.12},
+      "noSi": {"abundance": 0.001, "better": 0.62, "stagnation": 0.17, "decline": 0.08, "collapse": 0.129},
+      "rationale": "Everything hinges on the regime: over 75 years an opening or reunification with South Korea would bring large gains (and in a superintelligence world a real shot at abundance). Continued isolation means chronic hunger, and the peninsula is a leading nuclear-war flashpoint."
+    },
+    {
+      "entity": "SYR",
+      "si": {"abundance": 0.07, "better": 0.62, "stagnation": 0.11, "decline": 0.08, "collapse": 0.12},
+      "noSi": {"abundance": 0.002, "better": 0.60, "stagnation": 0.15, "decline": 0.11, "collapse": 0.138},
+      "rationale": "Starting from a war-crushed base, reconstruction after the change of regime and sanctions relief makes a +25% gain likely. Severe water stress, a drying Euphrates basin, worsening heat and the risk of renewed sectarian war keep decline and collapse substantial."
+    },
+    {
+      "entity": "MLI",
+      "si": {"abundance": 0.04, "better": 0.55, "stagnation": 0.14, "decline": 0.10, "collapse": 0.17},
+      "noSi": {"abundance": 0.001, "better": 0.51, "stagnation": 0.18, "decline": 0.12, "collapse": 0.189},
+      "rationale": "Mali has the worst possible political-stability score, with a junta facing a jihadist insurgency that can choke the capital, very high fertility and low readiness to adapt to Sahel warming. The Niger river, gold and past slow growth make modest gains still the most likely path."
+    },
+    {
+      "entity": "BFA",
+      "si": {"abundance": 0.045, "better": 0.565, "stagnation": 0.135, "decline": 0.095, "collapse": 0.16},
+      "noSi": {"abundance": 0.001, "better": 0.53, "stagnation": 0.17, "decline": 0.12, "collapse": 0.179},
+      "rationale": "Large parts of the country are outside state control and water stress is set to nearly double by 2050. Burkina has grown more than its neighbours historically and fertility is falling faster, so it sits slightly better than Mali and Niger."
+    },
+    {
+      "entity": "MWI",
+      "si": {"abundance": 0.05, "better": 0.63, "stagnation": 0.13, "decline": 0.08, "collapse": 0.11},
+      "noSi": {"abundance": 0.001, "better": 0.60, "stagnation": 0.17, "decline": 0.10, "collapse": 0.129},
+      "rationale": "Malawi is peaceful with peaceful transfers of power, which keeps conflict-driven collapse low. Extreme poverty, very low electricity and water access, crushing debt service and maize-dependent food systems exposed to droughts and cyclones keep stagnation likely."
+    },
+    {
+      "entity": "ZMB",
+      "si": {"abundance": 0.06, "better": 0.65, "stagnation": 0.12, "decline": 0.07, "collapse": 0.10},
+      "noSi": {"abundance": 0.001, "better": 0.63, "stagnation": 0.15, "decline": 0.10, "collapse": 0.119},
+      "rationale": "Stable democratic politics and copper, a metal the energy transition is short of, are strong tailwinds. High hunger, heavy debt and dependence on drought-prone hydropower are the main drags."
+    },
+    {
+      "entity": "LKA",
+      "si": {"abundance": 0.10, "better": 0.66, "stagnation": 0.10, "decline": 0.06, "collapse": 0.08},
+      "noSi": {"abundance": 0.002, "better": 0.70, "stagnation": 0.14, "decline": 0.08, "collapse": 0.078},
+      "rationale": "Good human development, universal electricity and a solid record of growth before the 2022 default point to further gains. Extreme debt-service burdens, rapid ageing, dependence on energy imports and exposure to cyclones and sea-level rise as an island are the risks."
+    },
+    {
+      "entity": "TCD",
+      "si": {"abundance": 0.035, "better": 0.52, "stagnation": 0.15, "decline": 0.11, "collapse": 0.185},
+      "noSi": {"abundance": 0.001, "better": 0.48, "stagnation": 0.19, "decline": 0.13, "collapse": 0.199},
+      "rationale": "Chad has the lowest readiness to adapt in this group, very high climate vulnerability, minimal health coverage, about six births per woman and spillover from Sudan's war. Oil revenue and a very low starting point leave modest gains possible but fragile."
+    },
+    {
+      "entity": "KAZ",
+      "si": {"abundance": 0.14, "better": 0.62, "stagnation": 0.11, "decline": 0.06, "collapse": 0.07},
+      "noSi": {"abundance": 0.002, "better": 0.65, "stagnation": 0.18, "decline": 0.09, "collapse": 0.078},
+      "rationale": "Kazakhstan has abundant energy, uranium, minerals and land, low debt and an upper-middle-income base. As the world decarbonises its oil income fades, and rising water stress in Central Asia and an authoritarian system next to Russia raise the chance of stagnation."
+    },
+    {
+      "entity": "CHL",
+      "si": {"abundance": 0.18, "better": 0.61, "stagnation": 0.09, "decline": 0.065, "collapse": 0.055},
+      "noSi": {"abundance": 0.003, "better": 0.69, "stagnation": 0.16, "decline": 0.087, "collapse": 0.06},
+      "rationale": "Effective institutions plus copper and lithium make further gains likely. Very low fertility and rapid ageing, a chronic megadrought with extreme water stress, rising crime and high inequality (which makes the nine-in-ten abundance bar harder to reach) are the main drags."
+    },
+    {
+      "entity": "SOM",
+      "si": {"abundance": 0.03, "better": 0.50, "stagnation": 0.16, "decline": 0.11, "collapse": 0.20},
+      "noSi": {"abundance": 0.001, "better": 0.46, "stagnation": 0.19, "decline": 0.13, "collapse": 0.219},
+      "rationale": "Decades of state failure, an active insurgency, majority hunger, the weakest health indicators and severe drought-flood cycles make Somalia the most collapse-prone country here. Remittances, telecoms and the chance of stabilisation over 75 years keep improvement plausible."
+    },
+    {
+      "entity": "ROU",
+      "si": {"abundance": 0.24, "better": 0.56, "stagnation": 0.09, "decline": 0.05, "collapse": 0.06},
+      "noSi": {"abundance": 0.005, "better": 0.70, "stagnation": 0.15, "decline": 0.085, "collapse": 0.06},
+      "rationale": "EU membership and fast convergence from a high base make gains likely and give Romania the best chance of abundance in this group if superintelligence arrives. Rapid ageing, emigration, fiscal strain and its position on NATO's front line with Russia are the main risks."
+    },
+    {
+      "entity": "SEN",
+      "si": {"abundance": 0.07, "better": 0.66, "stagnation": 0.11, "decline": 0.07, "collapse": 0.09},
+      "noSi": {"abundance": 0.001, "better": 0.64, "stagnation": 0.15, "decline": 0.10, "collapse": 0.109},
+      "rationale": "Senegal is one of the region's steadier democracies, with decent governance, near-universal electricity for its income level and new offshore oil and gas. A debt crisis after hidden borrowing, rising water stress, coastal erosion and Sahel climate exposure are the main threats."
+    },
+    {
+      "entity": "GTM",
+      "si": {"abundance": 0.09, "better": 0.67, "stagnation": 0.11, "decline": 0.07, "collapse": 0.06},
+      "noSi": {"abundance": 0.002, "better": 0.68, "stagnation": 0.16, "decline": 0.09, "collapse": 0.068},
+      "rationale": "Steady if slow growth, low public debt, large remittances and falling fertility support moderate gains. Weak, captured institutions, high violence, deep inequality and Dry Corridor drought limit the upside."
+    },
+    {
+      "entity": "ECU",
+      "si": {"abundance": 0.08, "better": 0.64, "stagnation": 0.13, "decline": 0.08, "collapse": 0.07},
+      "noSi": {"abundance": 0.002, "better": 0.64, "stagnation": 0.18, "decline": 0.10, "collapse": 0.078},
+      "rationale": "Ecuador has an upper-middle-income base, a dollarised economy and good health indicators. A gang-driven homicide crisis that is among the worst in the world, a decade of near-zero per-capita growth, declining oil and hydropower vulnerable to drought raise the risk of stagnation."
+    },
+    {
+      "entity": "KHM",
+      "si": {"abundance": 0.09, "better": 0.70, "stagnation": 0.09, "decline": 0.06, "collapse": 0.06},
+      "noSi": {"abundance": 0.002, "better": 0.74, "stagnation": 0.12, "decline": 0.07, "collapse": 0.068},
+      "rationale": "Decades of fast export-led growth, low debt and political stability make further convergence the strong default. The risks are an authoritarian dynasty, poor safe-water access, flood exposure and dependence on the dammed Mekong."
+    },
+    {
+      "entity": "ZWE",
+      "si": {"abundance": 0.05, "better": 0.58, "stagnation": 0.15, "decline": 0.10, "collapse": 0.12},
+      "noSi": {"abundance": 0.001, "better": 0.54, "stagnation": 0.19, "decline": 0.12, "collapse": 0.149},
+      "rationale": "Zimbabwe has decent human capital and lithium, platinum and gold. Real income per head is roughly where it was in 1980 after repeated currency collapses and mismanagement, and very low readiness to adapt and recurring droughts keep stagnation and crisis risks high."
+    },
+    {
+      "entity": "GIN",
+      "si": {"abundance": 0.05, "better": 0.64, "stagnation": 0.12, "decline": 0.08, "collapse": 0.11},
+      "noSi": {"abundance": 0.001, "better": 0.61, "stagnation": 0.16, "decline": 0.10, "collapse": 0.129},
+      "rationale": "Simandou iron ore and the world's largest bauxite reserves, plus ample water, give Guinea a strong revenue base. Military rule, weak governance and the resource curse make it uncertain how much of that reaches households."
+    },
+    {
+      "entity": "BEN",
+      "si": {"abundance": 0.06, "better": 0.66, "stagnation": 0.11, "decline": 0.07, "collapse": 0.10},
+      "noSi": {"abundance": 0.001, "better": 0.64, "stagnation": 0.15, "decline": 0.09, "collapse": 0.119},
+      "rationale": "Benin has comparatively effective government, steady growth and port-led trade. Jihadist spillover from the Sahel into its north, high fertility, high climate vulnerability and a low-lying coast are the main risks."
+    }
+  ]
+}

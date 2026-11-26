@@ -1,0 +1,106 @@
+{
+  "places": [
+    {
+      "entity": "GBR",
+      "si": {"abundance": 0.30, "better": 0.52, "stagnation": 0.07, "decline": 0.05, "collapse": 0.06},
+      "noSi": {"abundance": 0.007, "better": 0.67, "stagnation": 0.17, "decline": 0.09, "collapse": 0.063},
+      "rationale": "Rich, effective state and an AI hub that would likely share in superintelligence gains; without it, the post-2008 productivity stall, high debt and 48% energy imports keep a real stagnation tail."
+    },
+    {
+      "entity": "FRA",
+      "si": {"abundance": 0.27, "better": 0.53, "stagnation": 0.08, "decline": 0.055, "collapse": 0.065},
+      "noSi": {"abundance": 0.006, "better": 0.65, "stagnation": 0.18, "decline": 0.10, "collapse": 0.064},
+      "rationale": "The nuclear fleet is a durable energy advantage, but debt heading to 144% of GDP and weak political stability raise the odds of fiscal and political drift."
+    },
+    {
+      "entity": "ZAF",
+      "si": {"abundance": 0.06, "better": 0.65, "stagnation": 0.11, "decline": 0.07, "collapse": 0.11},
+      "noSi": {"abundance": 0.001, "better": 0.60, "stagnation": 0.17, "decline": 0.11, "collapse": 0.119},
+      "rationale": "Extreme inequality makes the 9-in-10 abundance bar very hard, and severe water stress, very high violence, a heavy interest burden and a drying climate give it a large decline and collapse tail."
+    },
+    {
+      "entity": "ITA",
+      "si": {"abundance": 0.23, "better": 0.53, "stagnation": 0.11, "decline": 0.065, "collapse": 0.065},
+      "noSi": {"abundance": 0.004, "better": 0.56, "stagnation": 0.23, "decline": 0.13, "collapse": 0.076},
+      "rationale": "A quarter-century of flat consumption, 137% debt, very low fertility, 79% energy imports and a Mediterranean heat and water hotspot make stagnation unusually likely without superintelligence."
+    },
+    {
+      "entity": "KEN",
+      "si": {"abundance": 0.08, "better": 0.64, "stagnation": 0.10, "decline": 0.07, "collapse": 0.11},
+      "noSi": {"abundance": 0.001, "better": 0.659, "stagnation": 0.13, "decline": 0.09, "collapse": 0.12},
+      "rationale": "A low base and steady growth make 'better' the default, but high drought vulnerability, 35% undernourishment and a debt-interest squeeze leave it exposed if a global catastrophe falls on poor regions."
+    },
+    {
+      "entity": "COL",
+      "si": {"abundance": 0.12, "better": 0.63, "stagnation": 0.10, "decline": 0.07, "collapse": 0.08},
+      "noSi": {"abundance": 0.002, "better": 0.68, "stagnation": 0.14, "decline": 0.09, "collapse": 0.088},
+      "rationale": "Abundant water and energy exports support continued gains, but high violence, weak political stability and inequality limit abundance and keep a security-driven collapse tail."
+    },
+    {
+      "entity": "KOR",
+      "si": {"abundance": 0.27, "better": 0.53, "stagnation": 0.07, "decline": 0.05, "collapse": 0.08},
+      "noSi": {"abundance": 0.004, "better": 0.62, "stagnation": 0.18, "decline": 0.10, "collapse": 0.096},
+      "rationale": "A central place in AI hardware and robotics would let superintelligence offset the world's lowest fertility, but without it extreme ageing and 83% energy imports drag hard, and the North Korean and Taiwan war risks keep collapse elevated."
+    },
+    {
+      "entity": "ESP",
+      "si": {"abundance": 0.23, "better": 0.54, "stagnation": 0.10, "decline": 0.065, "collapse": 0.065},
+      "noSi": {"abundance": 0.004, "better": 0.60, "stagnation": 0.20, "decline": 0.12, "collapse": 0.076},
+      "rationale": "Strong solar resources and immigration help, but water stress heading to 4.5 and southern heat at 2.7 degrees, plus very low fertility, weigh on the no-superintelligence path."
+    },
+    {
+      "entity": "ARG",
+      "si": {"abundance": 0.13, "better": 0.62, "stagnation": 0.11, "decline": 0.07, "collapse": 0.07},
+      "noSi": {"abundance": 0.002, "better": 0.64, "stagnation": 0.19, "decline": 0.10, "collapse": 0.068},
+      "rationale": "Food, energy and lithium surpluses and Southern Hemisphere distance from major wars limit collapse, but decades of macroeconomic crises make long stagnation more likely than for its peers."
+    },
+    {
+      "entity": "CAN",
+      "si": {"abundance": 0.33, "better": 0.50, "stagnation": 0.06, "decline": 0.05, "collapse": 0.06},
+      "noSi": {"abundance": 0.012, "better": 0.69, "stagnation": 0.15, "decline": 0.085, "collapse": 0.063},
+      "rationale": "Energy and water surpluses, a climate that may gain from warming, high immigration and integration with the leading AI economy favour it; exposure to US policy and to a nuclear war is the main tail."
+    },
+    {
+      "entity": "UKR",
+      "si": {"abundance": 0.11, "better": 0.60, "stagnation": 0.10, "decline": 0.07, "collapse": 0.12},
+      "noSi": {"abundance": 0.002, "better": 0.64, "stagnation": 0.13, "decline": 0.10, "collapse": 0.128},
+      "rationale": "Today's war-depressed base and a possible EU convergence path on the Polish model make 'better' likely, but renewed war with Russia, a shrinking population and weak governance keep collapse the highest among the European cases."
+    },
+    {
+      "entity": "SAU",
+      "si": {"abundance": 0.12, "better": 0.56, "stagnation": 0.12, "decline": 0.09, "collapse": 0.11},
+      "noSi": {"abundance": 0.002, "better": 0.50, "stagnation": 0.22, "decline": 0.15, "collapse": 0.128},
+      "rationale": "Falling oil demand, extreme water stress, dangerous Gulf heat and regional war risk weigh against it, and the 40% migrant population makes the 9-in-10 bar hard; capital and cheap solar power for AI are the upside."
+    },
+    {
+      "entity": "POL",
+      "si": {"abundance": 0.22, "better": 0.57, "stagnation": 0.08, "decline": 0.06, "collapse": 0.07},
+      "noSi": {"abundance": 0.005, "better": 0.68, "stagnation": 0.15, "decline": 0.09, "collapse": 0.075},
+      "rationale": "Strong convergence momentum and stable institutions point to 'better', tempered by very low fertility, a coal-heavy energy transition and frontline exposure to Russia."
+    },
+    {
+      "entity": "AUS",
+      "si": {"abundance": 0.31, "better": 0.51, "stagnation": 0.07, "decline": 0.05, "collapse": 0.06},
+      "noSi": {"abundance": 0.010, "better": 0.70, "stagnation": 0.15, "decline": 0.085, "collapse": 0.055},
+      "rationale": "Mineral and energy surpluses, huge solar potential, a close US alliance and Southern Hemisphere distance from major wars favour it, offset by heat, drought and fire risk."
+    },
+    {
+      "entity": "NLD",
+      "si": {"abundance": 0.31, "better": 0.51, "stagnation": 0.07, "decline": 0.05, "collapse": 0.06},
+      "noSi": {"abundance": 0.008, "better": 0.68, "stagnation": 0.16, "decline": 0.09, "collapse": 0.062},
+      "rationale": "High wealth, low debt, excellent governance and ASML's role in AI chipmaking favour it; 88% energy imports and sea-level exposure, though well managed, are the main vulnerabilities."
+    },
+    {
+      "entity": "SWE",
+      "si": {"abundance": 0.31, "better": 0.52, "stagnation": 0.07, "decline": 0.05, "collapse": 0.05},
+      "noSi": {"abundance": 0.007, "better": 0.70, "stagnation": 0.16, "decline": 0.08, "collapse": 0.053},
+      "rationale": "Clean hydro and nuclear power, abundant water, low debt and strong redistribution make broad gains likely; Baltic security and rising gang violence are modest drags."
+    },
+    {
+      "entity": "NOR",
+      "si": {"abundance": 0.35, "better": 0.49, "stagnation": 0.07, "decline": 0.045, "collapse": 0.045},
+      "noSi": {"abundance": 0.015, "better": 0.68, "stagnation": 0.19, "decline": 0.07, "collapse": 0.045},
+      "rationale": "The highest starting level, a vast sovereign fund, hydropower and egalitarian distribution make it the likeliest to reach abundance, though falling oil income could flatten a high base without superintelligence."
+    }
+  ]
+}

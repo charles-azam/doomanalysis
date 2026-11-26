@@ -1,0 +1,124 @@
+{
+  "places": [
+    {
+      "entity": "AUT",
+      "si": {"abundance": 0.25, "better": 0.54, "stagnation": 0.09, "decline": 0.055, "collapse": 0.065},
+      "noSi": {"abundance": 0.006, "better": 0.66, "stagnation": 0.18, "decline": 0.09, "collapse": 0.064},
+      "rationale": "A rich, well-governed, low-climate-risk country where modest growth easily clears the 'better' bar; the main drags are fast aging, very low fertility and 56% energy imports, and abundance needs a 5x jump that only superintelligence makes plausible."
+    },
+    {
+      "entity": "CHE",
+      "si": {"abundance": 0.29, "better": 0.52, "stagnation": 0.08, "decline": 0.05, "collapse": 0.06},
+      "noSi": {"abundance": 0.008, "better": 0.702, "stagnation": 0.16, "decline": 0.075, "collapse": 0.055},
+      "rationale": "Top-tier institutions, low debt, capital and pharma/finance strength make Switzerland one of the most resilient places and well placed to capture superintelligence gains; aging and Alpine glacier loss are the main slow risks."
+    },
+    {
+      "entity": "BLR",
+      "si": {"abundance": 0.14, "better": 0.57, "stagnation": 0.11, "decline": 0.08, "collapse": 0.10},
+      "noSi": {"abundance": 0.002, "better": 0.62, "stagnation": 0.16, "decline": 0.11, "collapse": 0.108},
+      "rationale": "Belarus has decent basic services but an authoritarian, Russia-dependent economy (71% energy imports) sitting on the Russia-NATO fault line, so war and political rupture are the dominant risks; ordinary convergence makes 'better' the most likely outcome."
+    },
+    {
+      "entity": "SLE",
+      "si": {"abundance": 0.07, "better": 0.66, "stagnation": 0.11, "decline": 0.06, "collapse": 0.10},
+      "noSi": {"abundance": 0.001, "better": 0.64, "stagnation": 0.15, "decline": 0.09, "collapse": 0.119},
+      "rationale": "From a very low base (living standard 7, 25% undernourished, 39% electricity) a 25% gain by 2100 is a low bar, but long-run stagnation, high climate vulnerability and weak readiness keep collapse risk among the highest; abundance would need a roughly 70-fold rise."
+    },
+    {
+      "entity": "TGO",
+      "si": {"abundance": 0.075, "better": 0.665, "stagnation": 0.105, "decline": 0.06, "collapse": 0.095},
+      "noSi": {"abundance": 0.001, "better": 0.65, "stagnation": 0.15, "decline": 0.085, "collapse": 0.114},
+      "rationale": "Togo is slightly ahead of its poorest neighbours on electricity and food and has a port-led economy, but weak political stability, a heavy interest burden and Sahel jihadist spillover into the north are real downside risks."
+    },
+    {
+      "entity": "LAO",
+      "si": {"abundance": 0.11, "better": 0.67, "stagnation": 0.08, "decline": 0.06, "collapse": 0.08},
+      "noSi": {"abundance": 0.002, "better": 0.72, "stagnation": 0.12, "decline": 0.08, "collapse": 0.078},
+      "rationale": "Hydropower exports, near-universal electricity and links to China's growth make sustained gains likely, though the debt overhang (89% of GDP) and weak government effectiveness can stall it and Mekong climate change adds risk."
+    },
+    {
+      "entity": "TKM",
+      "si": {"abundance": 0.07, "better": 0.63, "stagnation": 0.11, "decline": 0.08, "collapse": 0.11},
+      "noSi": {"abundance": 0.001, "better": 0.62, "stagnation": 0.15, "decline": 0.11, "collapse": 0.119},
+      "rationale": "A closed autocracy living off gas exports that the energy transition will shrink, with severe water stress (3.7) that depends on the Amu Darya and worsening heat; gas income still makes moderate gains the base case."
+    },
+    {
+      "entity": "HKG",
+      "si": {"abundance": 0.20, "better": 0.53, "stagnation": 0.11, "decline": 0.07, "collapse": 0.09},
+      "noSi": {"abundance": 0.004, "better": 0.58, "stagnation": 0.22, "decline": 0.11, "collapse": 0.086},
+      "rationale": "Hong Kong is very rich already (index 131), so 'better' needs real growth against the world's lowest fertility, rapid aging, eroding autonomy and full exposure to any US-China or Taiwan conflict; superintelligence led from China could still lift it a lot."
+    },
+    {
+      "entity": "LBY",
+      "si": {"abundance": 0.06, "better": 0.53, "stagnation": 0.15, "decline": 0.11, "collapse": 0.15},
+      "noSi": {"abundance": 0.001, "better": 0.48, "stagnation": 0.18, "decline": 0.15, "collapse": 0.189},
+      "rationale": "A divided, oil-dependent state (political stability -1.84) facing near-maximum water stress on depleting fossil aquifers and falling oil rents over the century, so collapse is a serious risk; reunification and solar desalination are the upside."
+    },
+    {
+      "entity": "KGZ",
+      "si": {"abundance": 0.09, "better": 0.67, "stagnation": 0.09, "decline": 0.06, "collapse": 0.09},
+      "noSi": {"abundance": 0.001, "better": 0.68, "stagnation": 0.13, "decline": 0.09, "collapse": 0.099},
+      "rationale": "Low debt, universal electricity and hydropower potential support steady gains from a living standard of 23, but heavy reliance on Russian remittances, repeated political upheaval and glacier-fed water that shrinks later in the century cap the outlook."
+    },
+    {
+      "entity": "PRY",
+      "si": {"abundance": 0.13, "better": 0.67, "stagnation": 0.09, "decline": 0.05, "collapse": 0.06},
+      "noSi": {"abundance": 0.002, "better": 0.72, "stagnation": 0.14, "decline": 0.08, "collapse": 0.058},
+      "rationale": "A large food surplus, abundant clean hydropower and almost no water stress make Paraguay unusually resilient to global shocks; mediocre institutions, crime and droughts on its river trade routes are the main limits."
+    },
+    {
+      "entity": "NIC",
+      "si": {"abundance": 0.08, "better": 0.64, "stagnation": 0.12, "decline": 0.07, "collapse": 0.09},
+      "noSi": {"abundance": 0.001, "better": 0.63, "stagnation": 0.17, "decline": 0.10, "collapse": 0.099},
+      "rationale": "The entrenched dictatorship, mass emigration, 17% undernourishment and exposure to hurricanes and the Dry Corridor weigh against it, though a low base and low debt leave modest gains the likeliest path."
+    },
+    {
+      "entity": "SRB",
+      "si": {"abundance": 0.19, "better": 0.58, "stagnation": 0.10, "decline": 0.06, "collapse": 0.07},
+      "noSi": {"abundance": 0.003, "better": 0.64, "stagnation": 0.19, "decline": 0.10, "collapse": 0.067},
+      "rationale": "Convergence toward the EU should lift a living standard of 47, but steep population loss and aging, a coal-heavy energy system, democratic backsliding and Kosovo tensions add stagnation and conflict risk."
+    },
+    {
+      "entity": "COG",
+      "si": {"abundance": 0.07, "better": 0.63, "stagnation": 0.12, "decline": 0.07, "collapse": 0.11},
+      "noSi": {"abundance": 0.001, "better": 0.61, "stagnation": 0.16, "decline": 0.10, "collapse": 0.129},
+      "rationale": "An oil-dependent petro-state with debt near 100% of GDP, very weak government effectiveness and 25% undernourishment; the energy transition threatens its main income, while ample water and forest are buffers."
+    },
+    {
+      "entity": "BGR",
+      "si": {"abundance": 0.20, "better": 0.56, "stagnation": 0.11, "decline": 0.06, "collapse": 0.07},
+      "noSi": {"abundance": 0.004, "better": 0.64, "stagnation": 0.18, "decline": 0.10, "collapse": 0.076},
+      "rationale": "EU, NATO and euro membership plus low debt support further convergence from an already high consumption level, against severe depopulation, aging, high inequality and recurring political instability."
+    },
+    {
+      "entity": "SLV",
+      "si": {"abundance": 0.10, "better": 0.65, "stagnation": 0.11, "decline": 0.06, "collapse": 0.08},
+      "noSi": {"abundance": 0.001, "better": 0.66, "stagnation": 0.16, "decline": 0.09, "collapse": 0.089},
+      "rationale": "Security has improved dramatically, but it rests on authoritarian consolidation, alongside a heavy interest burden (14% of revenue), rising water stress and hurricane and drought exposure; remittances and a low base favour modest gains."
+    },
+    {
+      "entity": "SGP",
+      "si": {"abundance": 0.30, "better": 0.52, "stagnation": 0.07, "decline": 0.05, "collapse": 0.06},
+      "noSi": {"abundance": 0.008, "better": 0.71, "stagnation": 0.14, "decline": 0.077, "collapse": 0.065},
+      "rationale": "World-leading governance and readiness to adapt, a tech and capital hub well placed for superintelligence gains, offset by near-total dependence on imported food and energy, sea-level and heat exposure, and its position in any US-China conflict."
+    },
+    {
+      "entity": "DNK",
+      "si": {"abundance": 0.27, "better": 0.54, "stagnation": 0.08, "decline": 0.05, "collapse": 0.06},
+      "noSi": {"abundance": 0.006, "better": 0.71, "stagnation": 0.16, "decline": 0.074, "collapse": 0.05},
+      "rationale": "Strong institutions, low debt, a food surplus, wind power and low inequality (which helps the 9-in-10 test for abundance) make Denmark very resilient; sea-level rise and Greenland or Baltic geopolitics are the main risks."
+    },
+    {
+      "entity": "LBN",
+      "si": {"abundance": 0.07, "better": 0.58, "stagnation": 0.13, "decline": 0.09, "collapse": 0.13},
+      "noSi": {"abundance": 0.001, "better": 0.56, "stagnation": 0.18, "decline": 0.12, "collapse": 0.139},
+      "rationale": "Lebanon is still in a deep financial and state collapse, with maximum water stress, repeated war with Israel and a large refugee load; recovery from today's depressed level makes 'better' reachable, but renewed conflict keeps collapse risk high."
+    },
+    {
+      "entity": "LBR",
+      "si": {"abundance": 0.06, "better": 0.66, "stagnation": 0.11, "decline": 0.06, "collapse": 0.11},
+      "noSi": {"abundance": 0.001, "better": 0.63, "stagnation": 0.155, "decline": 0.09, "collapse": 0.124},
+      "rationale": "Among the poorest countries judged here (GDP about $2,000 PPP, 37% undernourished, 35% electricity) with high climate vulnerability and weak institutions, though two decades of peace and peaceful handovers of power support gradual gains."
+    }
+  ]
+}

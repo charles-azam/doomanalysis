@@ -1,0 +1,107 @@
+{
+  "world": {
+    "siBy2050": 0.6,
+    "siBy2100": 0.8,
+    "si": {
+      "causes": {
+        "climate": {"atLeast3": 0.075, "atLeast4": 0.004, "doom": 0.0005},
+        "resources": {"atLeast3": 0.045, "atLeast4": 0.012, "doom": 0.0005},
+        "war": {"atLeast3": 0.07, "atLeast4": 0.03, "doom": 0.006},
+        "civil": {"atLeast3": 0.095, "atLeast4": 0.025, "doom": 0.002},
+        "disease": {"atLeast3": 0.035, "atLeast4": 0.012, "doom": 0.004},
+        "ai": {"atLeast3": 0.1, "atLeast4": 0.06, "doom": 0.035},
+        "natural": {"atLeast3": 0.006, "atLeast4": 0.002, "doom": 0.001}
+      },
+      "directDoom": 0.05,
+      "abundance": 0.1
+    },
+    "noSi": {
+      "causes": {
+        "climate": {"atLeast3": 0.1, "atLeast4": 0.006, "doom": 0.001},
+        "resources": {"atLeast3": 0.06, "atLeast4": 0.015, "doom": 0.001},
+        "war": {"atLeast3": 0.065, "atLeast4": 0.025, "doom": 0.004},
+        "civil": {"atLeast3": 0.075, "atLeast4": 0.01, "doom": 0.0005},
+        "disease": {"atLeast3": 0.04, "atLeast4": 0.008, "doom": 0.0015},
+        "ai": {"atLeast3": 0.015, "atLeast4": 0.005, "doom": 0.003},
+        "natural": {"atLeast3": 0.006, "atLeast4": 0.0015, "doom": 0.0005}
+      },
+      "directDoom": 0.012,
+      "abundance": 0.001
+    },
+    "rationale": "If superintelligence arrives, AI takeover dominates doom: I put it near 3.5%, well above the card's 1%, because an AI that kills or disempowers over half of humanity is unlikely to allow recovery within a century, so most of the card's 6.8% at level 4 should count as doom. Nuclear and biological war is the second doom channel and gets worse with SI-driven arms races, while climate, resources and civil breakdown mostly drive level 3 harm rather than doom. I go below the warming card without SI (10% against 13%) because mainstream impact estimates at 2.5 to 3 degrees point to heavy regional losses rather than a billion people lastingly losing an essential, and below the energy-supply card in both cases, most of all with SI, since solar and storage are very likely to scale and SI speeds materials and robots rather than making energy scarcer. Abundance for 90% of humanity needs Sub-Saharan Africa and South Asia to grow 25 to 55 fold, which is plausible only in a fast and widely shared SI transition."
+  },
+  "places": [
+    {
+      "entity": "europe-north",
+      "si": {"abundance": 0.38, "better": 0.45, "stagnation": 0.07, "decline": 0.05, "collapse": 0.05},
+      "noSi": {"abundance": 0.01, "better": 0.72, "stagnation": 0.14, "decline": 0.08, "collapse": 0.05},
+      "rationale": "Rich, stable, well governed and nearly energy self-sufficient, so steady growth is the base case. Abundance needs the poorest tenth above 500, which only SI-driven growth delivers."
+    },
+    {
+      "entity": "europe-west",
+      "si": {"abundance": 0.37, "better": 0.45, "stagnation": 0.08, "decline": 0.05, "collapse": 0.05},
+      "noSi": {"abundance": 0.01, "better": 0.68, "stagnation": 0.16, "decline": 0.09, "collapse": 0.06},
+      "rationale": "Strong institutions but heavy energy imports and fast aging make stagnation a real risk without SI. With SI it is well placed to share in the gains."
+    },
+    {
+      "entity": "europe-south",
+      "si": {"abundance": 0.32, "better": 0.47, "stagnation": 0.1, "decline": 0.06, "collapse": 0.05},
+      "noSi": {"abundance": 0.005, "better": 0.62, "stagnation": 0.18, "decline": 0.12, "collapse": 0.075},
+      "rationale": "High debt, very low fertility, water stress and growing heat weigh on it more than on the rest of Western Europe. It still most likely ends richer than today."
+    },
+    {
+      "entity": "europe-east",
+      "si": {"abundance": 0.27, "better": 0.5, "stagnation": 0.1, "decline": 0.06, "collapse": 0.07},
+      "noSi": {"abundance": 0.005, "better": 0.66, "stagnation": 0.14, "decline": 0.11, "collapse": 0.085},
+      "rationale": "Energy exports and room to catch up favor growth, but war-level military spending and weaker governance raise the chance of decline or collapse."
+    },
+    {
+      "entity": "north-america",
+      "si": {"abundance": 0.42, "better": 0.4, "stagnation": 0.07, "decline": 0.05, "collapse": 0.06},
+      "noSi": {"abundance": 0.02, "better": 0.7, "stagnation": 0.14, "decline": 0.08, "collapse": 0.06},
+      "rationale": "The richest region, an energy exporter and likely home of SI, so it has the best shot at abundance. Polarisation, a heavy interest burden and high inequality keep the downside real."
+    },
+    {
+      "entity": "latin-america",
+      "si": {"abundance": 0.2, "better": 0.58, "stagnation": 0.1, "decline": 0.06, "collapse": 0.06},
+      "noSi": {"abundance": 0.002, "better": 0.7, "stagnation": 0.15, "decline": 0.08, "collapse": 0.068},
+      "rationale": "Resource-rich and far from major wars, so modest growth is likely, but high violence, debt service and inequality slow it. Abundance needs about thirteen-fold growth, which only SI can bring."
+    },
+    {
+      "entity": "mena",
+      "si": {"abundance": 0.18, "better": 0.55, "stagnation": 0.11, "decline": 0.07, "collapse": 0.09},
+      "noSi": {"abundance": 0.002, "better": 0.58, "stagnation": 0.18, "decline": 0.12, "collapse": 0.118},
+      "rationale": "Extreme water stress, dangerous heat, fragile politics and oil income that shrinks as the world moves off fossil fuels make it one of the riskiest regions. Cheap solar and desalination are its main way out."
+    },
+    {
+      "entity": "sub-saharan-africa",
+      "si": {"abundance": 0.13, "better": 0.62, "stagnation": 0.1, "decline": 0.06, "collapse": 0.09},
+      "noSi": {"abundance": 0.001, "better": 0.66, "stagnation": 0.14, "decline": 0.08, "collapse": 0.119},
+      "rationale": "Starting so low, a quarter above today is very likely if there is no collapse, but rapid population growth, climate exposure and fragile states make collapse the highest of any region. Abundance would mean a roughly fifty-five-fold rise, possible only in a widely shared SI boom."
+    },
+    {
+      "entity": "central-south-asia",
+      "si": {"abundance": 0.17, "better": 0.63, "stagnation": 0.08, "decline": 0.05, "collapse": 0.07},
+      "noSi": {"abundance": 0.002, "better": 0.72, "stagnation": 0.11, "decline": 0.07, "collapse": 0.098},
+      "rationale": "Strong catch-up growth is the base case, but water stress, humid heat and a nuclear rivalry put a large population at risk of collapse."
+    },
+    {
+      "entity": "east-asia",
+      "si": {"abundance": 0.33, "better": 0.48, "stagnation": 0.08, "decline": 0.05, "collapse": 0.06},
+      "noSi": {"abundance": 0.005, "better": 0.7, "stagnation": 0.13, "decline": 0.08, "collapse": 0.085},
+      "rationale": "Industrial capacity and a possible second SI pole favor big gains, while the world's lowest fertility and the risk of a war over Taiwan are the main dangers."
+    },
+    {
+      "entity": "southeast-asia",
+      "si": {"abundance": 0.22, "better": 0.59, "stagnation": 0.08, "decline": 0.05, "collapse": 0.06},
+      "noSi": {"abundance": 0.003, "better": 0.74, "stagnation": 0.12, "decline": 0.07, "collapse": 0.067},
+      "rationale": "Fairly peaceful with steady manufacturing-led growth, so better is very likely, though floods, sea-level rise and storms put its coastal megacities at risk."
+    },
+    {
+      "entity": "oceania",
+      "si": {"abundance": 0.36, "better": 0.46, "stagnation": 0.08, "decline": 0.05, "collapse": 0.05},
+      "noSi": {"abundance": 0.01, "better": 0.72, "stagnation": 0.14, "decline": 0.08, "collapse": 0.05},
+      "rationale": "Dominated by rich, stable, resource-exporting Australia and New Zealand, far from likely war zones. Heat, drought and fires are the main local risks."
+    }
+  ]
+}

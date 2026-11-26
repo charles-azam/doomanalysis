@@ -1,7 +1,7 @@
 {
   // Doom Analysis at doomanalysis.com: a Worker that serves the static Astro build and redirects
   // www.doomanalysis.com and the original doom.charlesazam.com to doomanalysis.com (see worker/index.ts).
-  // Cloudflare Workers Builds deploys it from this repository; manual deploy: npm run pdoom:deploy.
+  // Cloudflare Workers Builds deploys main from this repository. Never deploy by hand.
   // account_id pins every deploy to the account that owns both zones.
   "name": "doom",
   "account_id": "625c069e0532163edcb6ca8f144c6d42",

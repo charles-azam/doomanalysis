@@ -1,0 +1,10 @@
+{"entities": [
+{"entity": "NRU",
+ "si": {"collapse": 0.22, "abundance": 0.07, "pillarLoss": {"energy": 0.14, "water": 0.16, "food": 0.15, "health": 0.13, "security": 0.13}},
+ "noSi": {"collapse": 0.19, "abundance": 0.005, "pillarLoss": {"energy": 0.10, "water": 0.13, "food": 0.10, "health": 0.08, "security": 0.07}},
+ "rationale": "Nauru imports nearly all its food and depends on diesel-powered desalination and on Australian money, and it already went through a fiscal and blackout crisis in the 2000s; the 2024 treaty with Australia and the higher interior ground reduce the risk of a long collapse. Very low life expectancy and a weak health system make near-free, universal essentials a long shot even with superintelligence."},
+{"entity": "TUV",
+ "si": {"collapse": 0.26, "abundance": 0.05, "pillarLoss": {"energy": 0.14, "water": 0.19, "food": 0.18, "health": 0.13, "security": 0.13}},
+ "noSi": {"collapse": 0.24, "abundance": 0.003, "pillarLoss": {"energy": 0.09, "water": 0.17, "food": 0.14, "health": 0.09, "security": 0.08}},
+ "rationale": "Tuvalu is a low atoll nation facing about half a metre or more of sea-level rise, with saltwater flooding of land, crops and water supplies, droughts and total dependence on imports; land reclamation and the Falepili Union with Australia (migration plus a security guarantee) cushion it but cannot remove the habitability risk. Poor water access, low life expectancy and a tiny economy make strict abundance very unlikely."}
+]}

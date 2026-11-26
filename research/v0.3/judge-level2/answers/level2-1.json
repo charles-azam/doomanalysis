@@ -1,0 +1,29 @@
+{
+  "level2": {
+    "si": {
+      "climate": 0.21,
+      "resources": 0.1,
+      "war": 0.1,
+      "civil": 0.175,
+      "disease": 0.075,
+      "ai": 0.13,
+      "natural": 0.015
+    },
+    "noSi": {
+      "climate": 0.29,
+      "resources": 0.13,
+      "war": 0.095,
+      "civil": 0.16,
+      "disease": 0.11,
+      "ai": 0.025,
+      "natural": 0.017
+    },
+    "timeline": [
+      { "year": 2030, "atLeast2": 0.06 },
+      { "year": 2040, "atLeast2": 0.22 },
+      { "year": 2050, "atLeast2": 0.38 },
+      { "year": 2075, "atLeast2": 0.65 }
+    ]
+  },
+  "rationale": "With level 3+ already settled near 45% (with SI) and 38% (without), and level 2 counting anyone who lastingly loses one essential, roughly 1 in 100 people hit by a single chain over 75 years is more likely than not; the 20th century had three or four such events (1918 flu, WWII, the Great Leap famine, arguably HIV), though none since 1961. The extra level-2-only futures go mostly to slow-onset causes (climate, state breakdown, resources) and, without SI, to pandemics, while AI takeover stays largely bimodal so it gains little beyond its level-3 floor. The timeline assumes a roughly flat hazard of about 2% a year: AI and war risk peak mid-century, and climate harms build toward 2100."
+}

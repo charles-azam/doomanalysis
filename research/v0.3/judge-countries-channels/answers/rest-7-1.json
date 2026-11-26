@@ -1,0 +1,204 @@
+{
+  "places": [
+    {
+      "entity": "MUS",
+      "si": {"abundance": 0.10, "better": 0.67, "stagnation": 0.09, "decline": 0.07, "collapse": 0.07},
+      "noSi": {"abundance": 0.003, "better": 0.727, "stagnation": 0.12, "decline": 0.08, "collapse": 0.07},
+      "rationale": "Good governance, stability and a steady growth record make further gains likely; the drags are aging, high public debt, cyclones and an import-dependent island economy built on tourism, offshore finance and textiles.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1, "jobs": -0.5, "ownership": -0.5, "stability": 0},
+        "reason": "Productivity: good AI uptake for Africa lifts output, but offshore finance, BPO and textiles are exposed to automation."
+      }
+    },
+    {
+      "entity": "DJI",
+      "si": {"abundance": 0.04, "better": 0.56, "stagnation": 0.16, "decline": 0.11, "collapse": 0.13},
+      "noSi": {"abundance": 0.001, "better": 0.56, "stagnation": 0.18, "decline": 0.12, "collapse": 0.139},
+      "rationale": "Port and military-base rents give growth, but extreme heat, water and food import dependence, weak and authoritarian governance and a volatile Horn of Africa and Red Sea neighbourhood keep collapse risk high.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -0.5, "ownership": -1, "stability": -0.5},
+        "reason": "Prices: cheaper energy, desalinated water and imported food help, but it owns nothing in AI and port work automates."
+      }
+    },
+    {
+      "entity": "FJI",
+      "si": {"abundance": 0.06, "better": 0.62, "stagnation": 0.14, "decline": 0.09, "collapse": 0.09},
+      "noSi": {"abundance": 0.001, "better": 0.64, "stagnation": 0.17, "decline": 0.10, "collapse": 0.089},
+      "rationale": "Tourism and remittances support modest growth on a middling base; cyclones, poor water access, coastal sea-level exposure and a history of coups and ethnic tension are the main risks.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": 0, "ownership": -1, "stability": -0.5},
+        "reason": "Prices: cheaper imports and medicine help most; in-person tourism is hard to automate, but Fiji owns no AI capital."
+      }
+    },
+    {
+      "entity": "COM",
+      "si": {"abundance": 0.035, "better": 0.56, "stagnation": 0.18, "decline": 0.105, "collapse": 0.12},
+      "noSi": {"abundance": 0.001, "better": 0.55, "stagnation": 0.20, "decline": 0.115, "collapse": 0.134},
+      "rationale": "Very weak government effectiveness and adaptation readiness, high fertility, food insecurity and dependence on remittances from France make long stagnation or collapse real possibilities from a low base.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -0.5, "ownership": -1, "stability": -0.5},
+        "reason": "Prices: cheap goods and medicine help, but remittances from diaspora service jobs in France are exposed and the state is weak."
+      }
+    },
+    {
+      "entity": "SLB",
+      "si": {"abundance": 0.03, "better": 0.53, "stagnation": 0.20, "decline": 0.11, "collapse": 0.13},
+      "noSi": {"abundance": 0.001, "better": 0.50, "stagnation": 0.22, "decline": 0.12, "collapse": 0.159},
+      "rationale": "Very poor, with 27% undernourished, fast population growth, depleting logging revenue, weak government and high climate vulnerability; ethnic unrest and great-power rivalry add instability.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": 0, "ownership": -1, "stability": -0.5},
+        "reason": "Prices: cheap imported goods and medicine matter most for a subsistence economy with little AI and weak institutions."
+      }
+    },
+    {
+      "entity": "GUY",
+      "si": {"abundance": 0.08, "better": 0.67, "stagnation": 0.095, "decline": 0.075, "collapse": 0.08},
+      "noSi": {"abundance": 0.003, "better": 0.70, "stagnation": 0.11, "decline": 0.09, "collapse": 0.097},
+      "rationale": "The oil boom for under a million people should lift consumption a lot, but the resource curse, ethnic politics, high crime, the Venezuelan claim on Essequibo and a coastal plain below sea level are serious risks.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1, "jobs": -0.5, "ownership": 0, "stability": -0.5},
+        "reason": "Jobs and exports: faster clean-energy tech could devalue oil, partly offset by a sovereign fund owning global assets."
+      }
+    },
+    {
+      "entity": "BTN",
+      "si": {"abundance": 0.09, "better": 0.70, "stagnation": 0.08, "decline": 0.06, "collapse": 0.07},
+      "noSi": {"abundance": 0.002, "better": 0.74, "stagnation": 0.11, "decline": 0.07, "collapse": 0.078},
+      "rationale": "Very stable, peaceful and well run, with hydropower exports to India giving a durable income; risks are glacier-fed hydrology, heavy hydro debt, youth emigration and sitting between India and China.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": 0, "ownership": 0, "stability": 0},
+        "reason": "Prices: cheaper goods help, and abundant clean hydropower can sell to India or power compute, so exports hold up."
+      }
+    },
+    {
+      "entity": "LUX",
+      "si": {"abundance": 0.26, "better": 0.52, "stagnation": 0.11, "decline": 0.06, "collapse": 0.05},
+      "noSi": {"abundance": 0.01, "better": 0.64, "stagnation": 0.20, "decline": 0.10, "collapse": 0.05},
+      "rationale": "Already the richest place here with excellent governance and low debt, but real income per head has been flat for years and the model rests on a financial and tax niche that could erode.",
+      "reading": {
+        "channels": {"productivity": 1.5, "prices": 1, "jobs": -1, "ownership": 0.5, "stability": 0},
+        "reason": "Productivity: very high AI use and a strong state win out, though its fund-administration and banking jobs are highly automatable."
+      }
+    },
+    {
+      "entity": "MAC",
+      "si": {"abundance": 0.15, "better": 0.60, "stagnation": 0.12, "decline": 0.07, "collapse": 0.06},
+      "noSi": {"abundance": 0.005, "better": 0.62, "stagnation": 0.20, "decline": 0.105, "collapse": 0.07},
+      "rationale": "Rich with no debt and big reserves, but it depends on mainland Chinese gambling demand and Beijing's policy, has extremely low fertility, and many low-paid migrant workers weigh on the nine-in-ten test.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1, "jobs": 0.5, "ownership": 0, "stability": -0.5},
+        "reason": "Jobs and exports: richer Chinese consumers raise demand for in-person gaming and tourism, under a tighter surveillance state."
+      }
+    },
+    {
+      "entity": "SUR",
+      "si": {"abundance": 0.06, "better": 0.64, "stagnation": 0.13, "decline": 0.09, "collapse": 0.08},
+      "noSi": {"abundance": 0.002, "better": 0.66, "stagnation": 0.14, "decline": 0.10, "collapse": 0.098},
+      "rationale": "New offshore oil should raise incomes from about 2028, but recent default, high debt, middling governance, food insecurity and a low-lying coast keep the downside sizeable.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -0.5, "ownership": -0.5, "stability": -0.5},
+        "reason": "Prices: cheaper imported goods help most, while oil exports could lose value as AI speeds up clean energy."
+      }
+    },
+    {
+      "entity": "MNE",
+      "si": {"abundance": 0.14, "better": 0.64, "stagnation": 0.11, "decline": 0.06, "collapse": 0.05},
+      "noSi": {"abundance": 0.005, "better": 0.70, "stagnation": 0.15, "decline": 0.08, "collapse": 0.065},
+      "rationale": "Likely EU accession and NATO membership support convergence, with tourism as the base; fast aging and Balkan political fragility are the main drags.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1, "jobs": 0, "ownership": -0.5, "stability": 0},
+        "reason": "Productivity: EU access to AI and transfers lift output, and coastal tourism is in-person work AI does not replace."
+      }
+    },
+    {
+      "entity": "MLT",
+      "si": {"abundance": 0.18, "better": 0.59, "stagnation": 0.11, "decline": 0.065, "collapse": 0.055},
+      "noSi": {"abundance": 0.006, "better": 0.70, "stagnation": 0.15, "decline": 0.08, "collapse": 0.064},
+      "rationale": "A fast-growing EU member with good stability and high AI use, but growth leans on immigration, online gaming and finance, with very low fertility, rapid aging and Mediterranean heat and water stress.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1, "jobs": -0.5, "ownership": 0, "stability": 0},
+        "reason": "Productivity: high AI use lifts output, but iGaming, finance and remote services are exposed to automation."
+      }
+    },
+    {
+      "entity": "MDV",
+      "si": {"abundance": 0.07, "better": 0.60, "stagnation": 0.13, "decline": 0.09, "collapse": 0.11},
+      "noSi": {"abundance": 0.003, "better": 0.56, "stagnation": 0.16, "decline": 0.137, "collapse": 0.14},
+      "rationale": "Luxury tourism gives a decent income, but atolls about a metre high face 44 to 76 cm of sea-level rise, and a debt crisis and weak governance limit the costly adaptation needed.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": 0.5, "ownership": -0.5, "stability": -0.5},
+        "reason": "Prices: cheaper energy, desalination and engineering make adaptation affordable, and richer tourists raise demand."
+      }
+    },
+    {
+      "entity": "CPV",
+      "si": {"abundance": 0.08, "better": 0.68, "stagnation": 0.10, "decline": 0.065, "collapse": 0.075},
+      "noSi": {"abundance": 0.002, "better": 0.70, "stagnation": 0.13, "decline": 0.08, "collapse": 0.088},
+      "rationale": "A stable, well-governed democracy with tourism and a large diaspora sending money home, held back by high debt, drought and near-total dependence on imported food.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": 0, "ownership": -0.5, "stability": 0},
+        "reason": "Prices: cheaper imported food, energy and desalination help most; tourism gains offset remittance risk."
+      }
+    },
+    {
+      "entity": "BRN",
+      "si": {"abundance": 0.10, "better": 0.56, "stagnation": 0.17, "decline": 0.10, "collapse": 0.07},
+      "noSi": {"abundance": 0.004, "better": 0.52, "stagnation": 0.24, "decline": 0.156, "collapse": 0.08},
+      "rationale": "Stable and debt-free with a sovereign fund, but real income per head has not grown in decades and the oil and gas that pay for the state will run down or lose value before 2100.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1, "jobs": -1, "ownership": 0.5, "stability": 0},
+        "reason": "Jobs and exports: AI-driven clean energy erodes oil and gas income, partly offset by a sovereign fund that owns global capital."
+      }
+    },
+    {
+      "entity": "BLZ",
+      "si": {"abundance": 0.06, "better": 0.63, "stagnation": 0.14, "decline": 0.09, "collapse": 0.08},
+      "noSi": {"abundance": 0.002, "better": 0.64, "stagnation": 0.17, "decline": 0.10, "collapse": 0.088},
+      "rationale": "Tourism and farm exports support modest growth, but very high homicide, weak government effectiveness, hurricanes and a low-lying coast weigh on it.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": 0, "ownership": -1, "stability": -0.5},
+        "reason": "Prices: cheaper imports help; tourism gains roughly offset call-centre jobs lost to AI, and it owns no AI capital."
+      }
+    },
+    {
+      "entity": "BHS",
+      "si": {"abundance": 0.09, "better": 0.57, "stagnation": 0.16, "decline": 0.10, "collapse": 0.08},
+      "noSi": {"abundance": 0.003, "better": 0.54, "stagnation": 0.22, "decline": 0.137, "collapse": 0.10},
+      "rationale": "Fairly rich and stable, but income per head has been flat for two decades, interest costs are heavy, crime is very high, and the low islands face stronger hurricanes and sea-level rise.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1, "jobs": 0, "ownership": -0.5, "stability": 0},
+        "reason": "Prices: cheaper goods help, and richer US tourists offset offshore-finance jobs lost to automation."
+      }
+    },
+    {
+      "entity": "ISL",
+      "si": {"abundance": 0.28, "better": 0.52, "stagnation": 0.10, "decline": 0.055, "collapse": 0.045},
+      "noSi": {"abundance": 0.008, "better": 0.70, "stagnation": 0.17, "decline": 0.075, "collapse": 0.047},
+      "rationale": "Rich, equal, peaceful and very well governed, with huge clean geothermal and hydro power; volcanic activity and a possible AMOC slowdown hitting climate and fisheries are the main tail risks.",
+      "reading": {
+        "channels": {"productivity": 1.5, "prices": 1, "jobs": 0, "ownership": 0.5, "stability": 0},
+        "reason": "Productivity: high AI use and cheap clean power for data centres; fishing, tourism and smelting are hard to automate away."
+      }
+    },
+    {
+      "entity": "VUT",
+      "si": {"abundance": 0.03, "better": 0.55, "stagnation": 0.21, "decline": 0.11, "collapse": 0.10},
+      "noSi": {"abundance": 0.001, "better": 0.54, "stagnation": 0.23, "decline": 0.119, "collapse": 0.11},
+      "rationale": "Subsistence farming cushions food security, but it is one of the most disaster-exposed countries, with weak government, poor water and power access and high fertility.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -0.5, "ownership": -1, "stability": -0.5},
+        "reason": "Prices: cheap imports and medicine help, but farm robots could cut seasonal-work remittances from Australia and NZ."
+      }
+    },
+    {
+      "entity": "BRB",
+      "si": {"abundance": 0.09, "better": 0.62, "stagnation": 0.14, "decline": 0.08, "collapse": 0.07},
+      "noSi": {"abundance": 0.003, "better": 0.63, "stagnation": 0.19, "decline": 0.10, "collapse": 0.077},
+      "rationale": "A stable democracy with good adaptation readiness and solid health coverage, but slow growth since 2008, high debt and an aging population dependent on tourism and offshore business.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": 0, "ownership": -0.5, "stability": 0},
+        "reason": "Prices: cheaper imports and energy help; richer tourists offset offshore-business services lost to AI."
+      }
+    }
+  ]
+}

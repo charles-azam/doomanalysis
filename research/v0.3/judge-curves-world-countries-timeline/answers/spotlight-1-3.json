@@ -1,0 +1,124 @@
+{
+  "places": [
+    {
+      "entity": "IND",
+      "si": {"abundance": 0.10, "better": 0.715, "stagnation": 0.05, "decline": 0.055, "collapse": 0.08},
+      "noSi": {"abundance": 0.001, "better": 0.749, "stagnation": 0.09, "decline": 0.075, "collapse": 0.085},
+      "rationale": "A low base and steady convergence make 'better' the default, but extreme water stress, heat exposure and the nuclear rivalry with Pakistan carry real collapse risk; abundance needs roughly a fifty-fold rise for 9 in 10 people, which only fast, broadly shared SI growth could deliver."
+    },
+    {
+      "entity": "CHN",
+      "si": {"abundance": 0.18, "better": 0.64, "stagnation": 0.05, "decline": 0.06, "collapse": 0.07},
+      "noSi": {"abundance": 0.002, "better": 0.753, "stagnation": 0.105, "decline": 0.075, "collapse": 0.065},
+      "rationale": "High state capacity and its place at the AI frontier give China a real chance at abundance with SI, but a fertility rate near 1, high debt and the risk of a war with the US over Taiwan raise the chance of stagnation or a severe setback."
+    },
+    {
+      "entity": "USA",
+      "si": {"abundance": 0.32, "better": 0.51, "stagnation": 0.06, "decline": 0.05, "collapse": 0.06},
+      "noSi": {"abundance": 0.01, "better": 0.72, "stagnation": 0.14, "decline": 0.08, "collapse": 0.05},
+      "rationale": "The highest starting point and the AI lead put the US closest to the abundance bar with SI, held back by high inequality (9 in 10 residents must clear it) and political instability; without SI, slow growth on a high base makes stagnation a real possibility."
+    },
+    {
+      "entity": "IDN",
+      "si": {"abundance": 0.10, "better": 0.72, "stagnation": 0.06, "decline": 0.055, "collapse": 0.065},
+      "noSi": {"abundance": 0.001, "better": 0.77, "stagnation": 0.10, "decline": 0.068, "collapse": 0.061},
+      "rationale": "Low debt, energy self-sufficiency and relative peace support steady catch-up from a low base; the main drags are poor water access, coastal and sea-level exposure, and middling governance."
+    },
+    {
+      "entity": "PAK",
+      "si": {"abundance": 0.045, "better": 0.655, "stagnation": 0.09, "decline": 0.09, "collapse": 0.12},
+      "noSi": {"abundance": 0.001, "better": 0.62, "stagnation": 0.14, "decline": 0.11, "collapse": 0.129},
+      "rationale": "Very low political stability, dependence on a stressed Indus basin, high climate vulnerability, recurrent fiscal crises and a nuclear rivalry make Pakistan one of the riskier large countries, though a low base still makes 'better' most likely."
+    },
+    {
+      "entity": "NGA",
+      "si": {"abundance": 0.035, "better": 0.645, "stagnation": 0.12, "decline": 0.08, "collapse": 0.12},
+      "noSi": {"abundance": 0.0005, "better": 0.58, "stagnation": 0.17, "decline": 0.115, "collapse": 0.1345},
+      "rationale": "Decades of flat income per person, oil revenue that the energy transition will erode, insecurity and weak governance, plus rapid population growth, make stagnation and collapse unusually likely despite the low base."
+    },
+    {
+      "entity": "BRA",
+      "si": {"abundance": 0.09, "better": 0.69, "stagnation": 0.09, "decline": 0.07, "collapse": 0.06},
+      "noSi": {"abundance": 0.002, "better": 0.70, "stagnation": 0.15, "decline": 0.088, "collapse": 0.06},
+      "rationale": "Self-sufficiency in food, energy and water and distance from major conflicts make Brazil resilient to global shocks, but its long middle-income trap, heavy interest burden and very high inequality hold back both growth and the 9-in-10 abundance bar."
+    },
+    {
+      "entity": "BGD",
+      "si": {"abundance": 0.06, "better": 0.69, "stagnation": 0.07, "decline": 0.08, "collapse": 0.10},
+      "noSi": {"abundance": 0.001, "better": 0.69, "stagnation": 0.11, "decline": 0.095, "collapse": 0.104},
+      "rationale": "Strong recent growth and good health outcomes argue for further gains, but a low-lying delta exposed to sea-level rise and cyclones, low readiness to adapt, energy imports and a garment-export model exposed to automation keep the downside large."
+    },
+    {
+      "entity": "RUS",
+      "si": {"abundance": 0.11, "better": 0.59, "stagnation": 0.11, "decline": 0.09, "collapse": 0.10},
+      "noSi": {"abundance": 0.002, "better": 0.60, "stagnation": 0.18, "decline": 0.12, "collapse": 0.098},
+      "rationale": "A relatively high base and abundant land and resources are offset by an economy dependent on fossil exports that the transition will shrink, war, sanctions, poor governance and nuclear-conflict exposure, so stagnation and decline are likely."
+    },
+    {
+      "entity": "ETH",
+      "si": {"abundance": 0.03, "better": 0.69, "stagnation": 0.10, "decline": 0.07, "collapse": 0.11},
+      "noSi": {"abundance": 0.0002, "better": 0.66, "stagnation": 0.13, "decline": 0.09, "collapse": 0.1198},
+      "rationale": "From a very low base, the strong growth of the last two decades makes a 25% gain likely over 75 years, but recurring civil war, drought exposure, Nile tensions and weak infrastructure keep the collapse risk high."
+    },
+    {
+      "entity": "MEX",
+      "si": {"abundance": 0.10, "better": 0.67, "stagnation": 0.09, "decline": 0.07, "collapse": 0.07},
+      "noSi": {"abundance": 0.002, "better": 0.69, "stagnation": 0.15, "decline": 0.09, "collapse": 0.068},
+      "rationale": "Integration with the US economy and nearshoring support gains, but slow growth over the long run, severe water stress, very high violence and inequality limit both growth and the chance that 9 in 10 people reach abundance."
+    },
+    {
+      "entity": "JPN",
+      "si": {"abundance": 0.25, "better": 0.57, "stagnation": 0.08, "decline": 0.05, "collapse": 0.05},
+      "noSi": {"abundance": 0.002, "better": 0.59, "stagnation": 0.25, "decline": 0.108, "collapse": 0.05},
+      "rationale": "Excellent governance, low inequality and a society ready for robots favour broad abundance if SI arrives, but without it extreme ageing, public debt of 200% of GDP and dependence on imported energy and food make long stagnation quite likely."
+    },
+    {
+      "entity": "EGY",
+      "si": {"abundance": 0.06, "better": 0.63, "stagnation": 0.11, "decline": 0.10, "collapse": 0.10},
+      "noSi": {"abundance": 0.001, "better": 0.609, "stagnation": 0.16, "decline": 0.12, "collapse": 0.11},
+      "rationale": "Near-total dependence on the Nile under extreme water stress, heavy reliance on wheat imports, a crushing interest burden and a fast-growing population make Egypt fragile to climate and trade shocks."
+    },
+    {
+      "entity": "PHL",
+      "si": {"abundance": 0.07, "better": 0.71, "stagnation": 0.08, "decline": 0.065, "collapse": 0.075},
+      "noSi": {"abundance": 0.001, "better": 0.74, "stagnation": 0.11, "decline": 0.08, "collapse": 0.069},
+      "rationale": "Steady growth and a young workforce point to gains, but typhoon and sea-level exposure, South China Sea tensions, and outsourcing and remittance income that AI could displace add downside risk."
+    },
+    {
+      "entity": "COD",
+      "si": {"abundance": 0.015, "better": 0.635, "stagnation": 0.14, "decline": 0.08, "collapse": 0.13},
+      "noSi": {"abundance": 0.0001, "better": 0.56, "stagnation": 0.17, "decline": 0.11, "collapse": 0.1599},
+      "rationale": "The lowest base makes a 25% gain easy in principle and mineral wealth is a lever, but the weakest state capacity and readiness of any country here, chronic conflict, a population that may triple and a history of falling incomes keep collapse risk the highest."
+    },
+    {
+      "entity": "VNM",
+      "si": {"abundance": 0.12, "better": 0.71, "stagnation": 0.05, "decline": 0.055, "collapse": 0.065},
+      "noSi": {"abundance": 0.002, "better": 0.79, "stagnation": 0.08, "decline": 0.068, "collapse": 0.06},
+      "rationale": "Strong growth, political stability, low debt and a peaceful society favour continued catch-up; the main risks are sea-level exposure in the Mekong Delta, export manufacturing that automation could undercut, and its position next to China."
+    },
+    {
+      "entity": "IRN",
+      "si": {"abundance": 0.06, "better": 0.62, "stagnation": 0.11, "decline": 0.10, "collapse": 0.11},
+      "noSi": {"abundance": 0.001, "better": 0.60, "stagnation": 0.16, "decline": 0.12, "collapse": 0.119},
+      "rationale": "An educated population and energy wealth are undermined by an acute water crisis, sanctions, regime instability and direct military confrontation with Israel and the US, which make stagnation, decline and collapse all plausible."
+    },
+    {
+      "entity": "TUR",
+      "si": {"abundance": 0.13, "better": 0.64, "stagnation": 0.09, "decline": 0.07, "collapse": 0.07},
+      "noSi": {"abundance": 0.002, "better": 0.68, "stagnation": 0.16, "decline": 0.09, "collapse": 0.068},
+      "rationale": "A relatively high base, low public debt and a diversified industry next to Europe support gains, while heavy energy imports, rising water stress, macroeconomic instability, earthquakes and a volatile neighbourhood add risk."
+    },
+    {
+      "entity": "DEU",
+      "si": {"abundance": 0.28, "better": 0.54, "stagnation": 0.08, "decline": 0.05, "collapse": 0.05},
+      "noSi": {"abundance": 0.004, "better": 0.64, "stagnation": 0.21, "decline": 0.10, "collapse": 0.046},
+      "rationale": "Strong institutions and a welfare state that spreads gains favour broad abundance with SI, but without it ageing, dependence on imported energy and an industrial model under pressure make stagnation a real possibility on an already high base."
+    },
+    {
+      "entity": "THA",
+      "si": {"abundance": 0.12, "better": 0.67, "stagnation": 0.08, "decline": 0.06, "collapse": 0.07},
+      "noSi": {"abundance": 0.002, "better": 0.70, "stagnation": 0.15, "decline": 0.085, "collapse": 0.063},
+      "rationale": "A middle-income base and good health coverage support gains, but very low fertility and fast ageing, high water stress, a sinking Bangkok, energy imports and recurrent coups point to a middle-income trap."
+    }
+  ]
+}

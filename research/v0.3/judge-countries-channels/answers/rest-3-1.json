@@ -1,0 +1,204 @@
+{
+  "places": [
+    {
+      "entity": "RWA",
+      "si": {"abundance": 0.06, "better": 0.67, "stagnation": 0.08, "decline": 0.065, "collapse": 0.125},
+      "noSi": {"abundance": 0.001, "better": 0.68, "stagnation": 0.10, "decline": 0.08, "collapse": 0.139},
+      "rationale": "Rwanda's effective, growth-focused state makes a rising living standard the likely path from a very low base, but land scarcity, climate exposure, the eastern DRC conflict and an untested succession keep a real tail of decline or collapse.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1.5, "jobs": -0.5, "ownership": -1, "stability": -0.5},
+        "reason": "Prices: cheap medicine, power and farm advice reach a poor but well-run state, though it owns no compute and sells little AI can replace."
+      }
+    },
+    {
+      "entity": "BDI",
+      "si": {"abundance": 0.035, "better": 0.57, "stagnation": 0.15, "decline": 0.08, "collapse": 0.165},
+      "noSi": {"abundance": 0.0003, "better": 0.55, "stagnation": 0.17, "decline": 0.10, "collapse": 0.1797},
+      "rationale": "One of the world's poorest countries, with decades of flat income, 20% electricity access, very weak governance and fast population growth on scarce land; some gain over 75 years is likely, but state failure or famine is a large risk.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": 0, "ownership": -1, "stability": -0.5},
+        "reason": "Prices: imported medicine, power and inputs get cheaper; with 20% electricity and a predatory state, little AI is put to work locally."
+      }
+    },
+    {
+      "entity": "BOL",
+      "si": {"abundance": 0.07, "better": 0.62, "stagnation": 0.12, "decline": 0.09, "collapse": 0.10},
+      "noSi": {"abundance": 0.002, "better": 0.64, "stagnation": 0.16, "decline": 0.10, "collapse": 0.098},
+      "rationale": "A middle-income gas and mining economy coming out of a currency and fuel crisis, with weak institutions and high undernourishment; trend growth still favours a better 2100, with political and fiscal instability the main downside.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1, "jobs": -0.5, "ownership": -0.5, "stability": -0.5},
+        "reason": "Productivity: farming, mining and informal services gain as AI diffuses; gas and lithium exports give it no claim on AI profits."
+      }
+    },
+    {
+      "entity": "TUN",
+      "si": {"abundance": 0.08, "better": 0.55, "stagnation": 0.16, "decline": 0.11, "collapse": 0.10},
+      "noSi": {"abundance": 0.002, "better": 0.55, "stagnation": 0.20, "decline": 0.13, "collapse": 0.118},
+      "rationale": "Educated and middle-income but stalled since 2011, with extreme and worsening water stress, heavy energy imports, high debt and an authoritarian turn; modest growth is likely, but stagnation and decline are real.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1.5, "jobs": -1, "ownership": -0.5, "stability": -0.5},
+        "reason": "Jobs: nearshore call centres and routine factories for Europe are exposed, while cheap energy and desalination ease its water and import bills."
+      }
+    },
+    {
+      "entity": "SSD",
+      "si": {"abundance": 0.015, "better": 0.46, "stagnation": 0.165, "decline": 0.125, "collapse": 0.235},
+      "noSi": {"abundance": 0.0002, "better": 0.45, "stagnation": 0.17, "decline": 0.13, "collapse": 0.2498},
+      "rationale": "A near-failed state with recurring civil war, almost no electricity, famine and floods, and oil revenue hostage to Sudan's war; any lasting peace lifts it from a very low base, but renewed conflict or collapse is the largest risk here.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": 0, "ownership": -1, "stability": -1},
+        "reason": "Stability: cheap drones and surveillance can feed its armed factions; cheaper food and medicine help, but almost no AI is put to work there."
+      }
+    },
+    {
+      "entity": "BEL",
+      "si": {"abundance": 0.25, "better": 0.47, "stagnation": 0.11, "decline": 0.08, "collapse": 0.09},
+      "noSi": {"abundance": 0.01, "better": 0.60, "stagnation": 0.19, "decline": 0.117, "collapse": 0.083},
+      "rationale": "A rich, well-governed, high-AI-use economy; aging, high debt and near-total energy import dependence slow growth without superintelligence, and its catastrophe risk is mostly European war or a global shock.",
+      "reading": {
+        "channels": {"productivity": 1.5, "prices": 1, "jobs": -0.5, "ownership": -0.5, "stability": -0.5},
+        "reason": "Productivity: high AI use, skilled services and pharma adopt fast; profits mostly go to US and Chinese model owners, but the state can tax."
+      }
+    },
+    {
+      "entity": "HTI",
+      "si": {"abundance": 0.02, "better": 0.50, "stagnation": 0.175, "decline": 0.12, "collapse": 0.185},
+      "noSi": {"abundance": 0.0003, "better": 0.50, "stagnation": 0.18, "decline": 0.12, "collapse": 0.1997},
+      "rationale": "Gangs control much of the capital, half the population is undernourished and the state barely functions, so recovery from today's depressed base is possible but deeper collapse from violence, hurricanes or famine is a large risk.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -0.5, "ownership": -1, "stability": -0.5},
+        "reason": "Prices: cheaper food and medicine help most; remittances from US service work and garment assembly are exposed, and the state uses little AI."
+      }
+    },
+    {
+      "entity": "JOR",
+      "si": {"abundance": 0.07, "better": 0.53, "stagnation": 0.17, "decline": 0.12, "collapse": 0.11},
+      "noSi": {"abundance": 0.002, "better": 0.50, "stagnation": 0.21, "decline": 0.15, "collapse": 0.138},
+      "rationale": "A stable, fairly effective state, but among the most water-scarce countries, energy-importing, debt-burdened and next to recurring regional wars; income per person has stalled, so stagnation is a strong rival to better.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1.5, "jobs": -0.5, "ownership": -0.5, "stability": -0.5},
+        "reason": "Prices: cheap energy makes desalination affordable in one of the driest countries; its IT outsourcing and garment exports are exposed."
+      }
+    },
+    {
+      "entity": "DOM",
+      "si": {"abundance": 0.10, "better": 0.62, "stagnation": 0.11, "decline": 0.08, "collapse": 0.09},
+      "noSi": {"abundance": 0.003, "better": 0.68, "stagnation": 0.14, "decline": 0.09, "collapse": 0.087},
+      "rationale": "Decades of fast growth, a stable democracy and tourism make better the strong favourite; hurricanes, high homicide, poor water service and dependence on imported energy and US remittances are the main risks.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1.5, "jobs": -0.5, "ownership": -0.5, "stability": -0.5},
+        "reason": "Prices: an energy importer gains from cheap power; tourism holds up while free-zone assembly and US remittances face automation."
+      }
+    },
+    {
+      "entity": "ARE",
+      "si": {"abundance": 0.17, "better": 0.50, "stagnation": 0.15, "decline": 0.09, "collapse": 0.09},
+      "noSi": {"abundance": 0.003, "better": 0.47, "stagnation": 0.25, "decline": 0.17, "collapse": 0.107},
+      "rationale": "Rich and well-run, but oil rents fade over 75 years, extreme heat and total water stress depend on cheap energy and desalination, and the Gulf faces war risk; its large bet on AI compute is its strongest asset.",
+      "reading": {
+        "channels": {"productivity": 1.5, "prices": 0.5, "jobs": -0.5, "ownership": 1, "stability": -0.5},
+        "reason": "Ownership: the state has bought into compute and frontier models, cushioning the end of oil, and robots may shrink its migrant workforce."
+      }
+    },
+    {
+      "entity": "HND",
+      "si": {"abundance": 0.05, "better": 0.60, "stagnation": 0.15, "decline": 0.10, "collapse": 0.10},
+      "noSi": {"abundance": 0.0008, "better": 0.62, "stagnation": 0.17, "decline": 0.10, "collapse": 0.1092},
+      "rationale": "Lower-middle income with slow growth, high violence, weak institutions and hurricane exposure, propped up by US remittances and textile assembly; better is still more likely than not over 75 years.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1.5, "jobs": -1, "ownership": -1, "stability": -0.5},
+        "reason": "Jobs: remittances from US service work, maquila assembly and call centres are all exposed, roughly offsetting cheaper goods and medicine."
+      }
+    },
+    {
+      "entity": "CUB",
+      "si": {"abundance": 0.04, "better": 0.55, "stagnation": 0.17, "decline": 0.11, "collapse": 0.13},
+      "noSi": {"abundance": 0.0005, "better": 0.55, "stagnation": 0.19, "decline": 0.12, "collapse": 0.1395},
+      "rationale": "A deep crisis of blackouts, food shortages and mass emigration on an aging population leaves today's base depressed; a political or economic opening within 75 years would bring recovery, but grid and food collapse are real risks.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -0.5, "ownership": -1, "stability": -0.5},
+        "reason": "Prices: cheap solar and imports could fix its broken grid; AI medicine cuts demand for its doctors abroad, and internet controls limit use."
+      }
+    },
+    {
+      "entity": "CZE",
+      "si": {"abundance": 0.18, "better": 0.54, "stagnation": 0.12, "decline": 0.08, "collapse": 0.08},
+      "noSi": {"abundance": 0.004, "better": 0.66, "stagnation": 0.17, "decline": 0.095, "collapse": 0.071},
+      "rationale": "A well-governed, low-debt industrial economy still converging on Western Europe; aging and dependence on German car manufacturing are drags, and the main tail risk is war on NATO's eastern flank.",
+      "reading": {
+        "channels": {"productivity": 1.5, "prices": 1, "jobs": -1, "ownership": 0, "stability": -0.5},
+        "reason": "Productivity: strong AI use and factory robotics lift output, though car-industry assembly jobs go and profits partly flow to foreign owners."
+      }
+    },
+    {
+      "entity": "PRT",
+      "si": {"abundance": 0.20, "better": 0.52, "stagnation": 0.13, "decline": 0.08, "collapse": 0.07},
+      "noSi": {"abundance": 0.005, "better": 0.57, "stagnation": 0.22, "decline": 0.13, "collapse": 0.075},
+      "rationale": "Peaceful, stable and growing again with strong renewables, but one of Europe's oldest populations, high debt and worsening drought and heat in the south limit growth without superintelligence.",
+      "reading": {
+        "channels": {"productivity": 1.5, "prices": 1, "jobs": -0.5, "ownership": -0.5, "stability": -0.5},
+        "reason": "Productivity: high AI use and robots offset a fast-aging workforce; tourism holds while shared-services and IT outsourcing jobs are exposed."
+      }
+    },
+    {
+      "entity": "TJK",
+      "si": {"abundance": 0.03, "better": 0.57, "stagnation": 0.16, "decline": 0.105, "collapse": 0.135},
+      "noSi": {"abundance": 0.0005, "better": 0.62, "stagnation": 0.15, "decline": 0.10, "collapse": 0.1295},
+      "rationale": "Fast recent growth and large hydropower potential from a low base, but an economy living on remittances from Russia, an aging autocracy and the Afghan border make it fragile.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": -1.5, "ownership": -1, "stability": -0.5},
+        "reason": "Jobs: remittances from migrant construction and service work in Russia, near half of GDP, are what robots replace; cheap goods only partly offset."
+      }
+    },
+    {
+      "entity": "PNG",
+      "si": {"abundance": 0.035, "better": 0.56, "stagnation": 0.19, "decline": 0.10, "collapse": 0.115},
+      "noSi": {"abundance": 0.0005, "better": 0.55, "stagnation": 0.22, "decline": 0.11, "collapse": 0.1195},
+      "rationale": "Mostly subsistence farmers with low electricity and health coverage, weak governance and tribal violence; LNG and mineral exports have done little for most people, so stagnation is a strong rival to better.",
+      "reading": {
+        "channels": {"productivity": 0.5, "prices": 1.5, "jobs": 0, "ownership": -0.5, "stability": -0.5},
+        "reason": "Prices: cheap solar, medicine and AI advice can reach a mostly rural, subsistence population; copper and gold demand may add modest rents."
+      }
+    },
+    {
+      "entity": "GRC",
+      "si": {"abundance": 0.16, "better": 0.52, "stagnation": 0.15, "decline": 0.10, "collapse": 0.07},
+      "noSi": {"abundance": 0.004, "better": 0.53, "stagnation": 0.24, "decline": 0.15, "collapse": 0.076},
+      "rationale": "Recovered from a lost decade but still carrying 147% debt, very low fertility, heavy energy imports and worsening water stress, heat and fire; tourism and shipping give resilience, and decline is a plausible rival to growth.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1.5, "jobs": -0.5, "ownership": -0.5, "stability": -0.5},
+        "reason": "Prices: an indebted, aging energy importer gains from cheaper power and care; tourism is hard to automate, so job losses stay modest."
+      }
+    },
+    {
+      "entity": "AZE",
+      "si": {"abundance": 0.06, "better": 0.52, "stagnation": 0.19, "decline": 0.12, "collapse": 0.11},
+      "noSi": {"abundance": 0.001, "better": 0.52, "stagnation": 0.22, "decline": 0.14, "collapse": 0.119},
+      "rationale": "An oil and gas economy whose fields are maturing as the energy transition erodes rents, under an autocracy that has made peace with Armenia; diversification decides between better and stagnation.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 0, "jobs": 0, "ownership": -0.5, "stability": -0.5},
+        "reason": "Prices: cheap energy erodes the oil and gas rents behind the budget, offsetting cheaper imports; autocratic rule captures much of any AI gain."
+      }
+    },
+    {
+      "entity": "ISR",
+      "si": {"abundance": 0.20, "better": 0.50, "stagnation": 0.12, "decline": 0.09, "collapse": 0.09},
+      "noSi": {"abundance": 0.005, "better": 0.60, "stagnation": 0.18, "decline": 0.115, "collapse": 0.10},
+      "rationale": "A rich, innovative tech economy with high fertility and world-leading desalination, but recurring wars, an Iranian nuclear threat and deep domestic divisions give it a heavier conflict tail than most rich countries.",
+      "reading": {
+        "channels": {"productivity": 1.5, "prices": 1, "jobs": -1, "ownership": 0.5, "stability": -1},
+        "reason": "Productivity: a deep AI and tech ecosystem adopts fast, but its software-services exports are exposed and AI-enabled regional war is a risk."
+      }
+    },
+    {
+      "entity": "HUN",
+      "si": {"abundance": 0.15, "better": 0.53, "stagnation": 0.13, "decline": 0.10, "collapse": 0.09},
+      "noSi": {"abundance": 0.004, "better": 0.62, "stagnation": 0.18, "decline": 0.11, "collapse": 0.086},
+      "rationale": "A high-income EU economy built on foreign car and battery plants, with weakening institutions, high interest costs, an aging population and Russian energy ties; convergence still favours better.",
+      "reading": {
+        "channels": {"productivity": 1.5, "prices": 1, "jobs": -1, "ownership": -0.5, "stability": -0.5},
+        "reason": "Jobs: car and battery assembly for foreign firms is what robots replace; strong AI use lifts output, but profits flow to foreign owners."
+      }
+    }
+  ]
+}

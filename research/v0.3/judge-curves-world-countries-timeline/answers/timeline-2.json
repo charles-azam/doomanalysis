@@ -1,0 +1,9 @@
+{
+  "timeline": [
+    {"year": 2030, "si": 0.18, "atLeast3": 0.026, "atLeast4": 0.010, "doom": 0.0035},
+    {"year": 2040, "si": 0.43, "atLeast3": 0.10, "atLeast4": 0.040, "doom": 0.015},
+    {"year": 2050, "si": 0.60, "atLeast3": 0.18, "atLeast4": 0.067, "doom": 0.025},
+    {"year": 2075, "si": 0.75, "atLeast3": 0.32, "atLeast4": 0.11, "doom": 0.036}
+  ],
+  "rationale": "AI risk, which dominates level 4 and doom, is front-loaded: it tracks superintelligence arrival (most of which lands in the 2030s and 2040s) with a lag of a few years, so roughly half of the 2100 doom mass is reached by 2050. Wars, pandemics and civil breakdown strike at a roughly steady rate across the century, while climate and resource limits build slowly and push most of their level-3 contribution into the second half, which is why atLeast3 keeps rising steeply after 2050."
+}

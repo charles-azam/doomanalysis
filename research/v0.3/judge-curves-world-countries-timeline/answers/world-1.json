@@ -1,0 +1,107 @@
+{
+  "world": {
+    "siBy2050": 0.6,
+    "siBy2100": 0.8,
+    "si": {
+      "causes": {
+        "climate": {"atLeast3": 0.075, "atLeast4": 0.003, "doom": 0.0002},
+        "resources": {"atLeast3": 0.06, "atLeast4": 0.02, "doom": 0.0005},
+        "war": {"atLeast3": 0.07, "atLeast4": 0.025, "doom": 0.004},
+        "civil": {"atLeast3": 0.095, "atLeast4": 0.03, "doom": 0.001},
+        "disease": {"atLeast3": 0.04, "atLeast4": 0.012, "doom": 0.004},
+        "ai": {"atLeast3": 0.11, "atLeast4": 0.07, "doom": 0.035},
+        "natural": {"atLeast3": 0.006, "atLeast4": 0.001, "doom": 0.0005}
+      },
+      "directDoom": 0.045,
+      "abundance": 0.08
+    },
+    "noSi": {
+      "causes": {
+        "climate": {"atLeast3": 0.13, "atLeast4": 0.005, "doom": 0.0003},
+        "resources": {"atLeast3": 0.07, "atLeast4": 0.018, "doom": 0.0005},
+        "war": {"atLeast3": 0.06, "atLeast4": 0.02, "doom": 0.003},
+        "civil": {"atLeast3": 0.075, "atLeast4": 0.011, "doom": 0.0002},
+        "disease": {"atLeast3": 0.04, "atLeast4": 0.006, "doom": 0.001},
+        "ai": {"atLeast3": 0.02, "atLeast4": 0.006, "doom": 0.003},
+        "natural": {"atLeast3": 0.006, "atLeast4": 0.0008, "doom": 0.0003}
+      },
+      "directDoom": 0.008,
+      "abundance": 0.001
+    },
+    "rationale": "With superintelligence, AI itself drives the result: I put AI-caused doom at about 3.5%, well above the card's 1%, because expert and researcher surveys cluster between 3% and 10% and the card's gap between a 6.8% level-4 chance and a 1% doom chance looks too wide for a true loss of control. Without superintelligence, nuclear war and pandemics carry most of the small doom risk, while climate, energy and state breakdown drive a large but mostly recoverable level-3 risk; war and disease sit a little above their cards because they add every channel and the noSi case includes futures where a catastrophe stopped AI. I go below the energy card's 3.8% level-4 chance with superintelligence, because cheaper solar, storage and robots should ease energy shortages more than AI demand tightens them. Abundance for 90% of humanity needs Sub-Saharan Africa and South Asia to rise fifty- to a hundredfold with broad sharing, so it is near zero without superintelligence and under one in ten even with it."
+  },
+  "places": [
+    {
+      "entity": "europe-north",
+      "si": {"abundance": 0.33, "better": 0.45, "stagnation": 0.08, "decline": 0.05, "collapse": 0.09},
+      "noSi": {"abundance": 0.01, "better": 0.68, "stagnation": 0.18, "decline": 0.08, "collapse": 0.05},
+      "rationale": "Rich, well governed, low inequality and energy-secure, so steady growth is the base case and broad sharing of AI gains is likelier here than almost anywhere. Aging and low fertility are the main drag without superintelligence."
+    },
+    {
+      "entity": "europe-west",
+      "si": {"abundance": 0.31, "better": 0.46, "stagnation": 0.09, "decline": 0.05, "collapse": 0.09},
+      "noSi": {"abundance": 0.01, "better": 0.64, "stagnation": 0.19, "decline": 0.1, "collapse": 0.06},
+      "rationale": "Strong institutions and wealth, but heavy energy imports, aging and slow growth make stagnation a real possibility without superintelligence."
+    },
+    {
+      "entity": "europe-south",
+      "si": {"abundance": 0.27, "better": 0.47, "stagnation": 0.1, "decline": 0.06, "collapse": 0.1},
+      "noSi": {"abundance": 0.008, "better": 0.58, "stagnation": 0.22, "decline": 0.12, "collapse": 0.072},
+      "rationale": "High debt, very low fertility, high water stress and three-quarters of energy imported weigh on growth and raise climate exposure compared with the rest of Europe."
+    },
+    {
+      "entity": "europe-east",
+      "si": {"abundance": 0.2, "better": 0.52, "stagnation": 0.09, "decline": 0.07, "collapse": 0.12},
+      "noSi": {"abundance": 0.005, "better": 0.62, "stagnation": 0.17, "decline": 0.11, "collapse": 0.095},
+      "rationale": "Room to catch up and energy self-sufficiency favour improvement, but the war-level military spending and weaker governance raise the chance of decline or collapse."
+    },
+    {
+      "entity": "north-america",
+      "si": {"abundance": 0.36, "better": 0.43, "stagnation": 0.07, "decline": 0.05, "collapse": 0.09},
+      "noSi": {"abundance": 0.015, "better": 0.66, "stagnation": 0.17, "decline": 0.09, "collapse": 0.065},
+      "rationale": "Highest living standard, energy exporter and home of frontier AI, so abundance is likeliest here with superintelligence; high inequality, debt and interest burden and polarisation keep the bad tails non-trivial."
+    },
+    {
+      "entity": "latin-america",
+      "si": {"abundance": 0.15, "better": 0.6, "stagnation": 0.08, "decline": 0.06, "collapse": 0.11},
+      "noSi": {"abundance": 0.003, "better": 0.68, "stagnation": 0.15, "decline": 0.09, "collapse": 0.077},
+      "rationale": "Middle-income with energy and food surpluses, so a quarter above today is likely, but high violence, inequality and interest burdens hold back reaching abundance for nine in ten."
+    },
+    {
+      "entity": "mena",
+      "si": {"abundance": 0.13, "better": 0.57, "stagnation": 0.1, "decline": 0.07, "collapse": 0.13},
+      "noSi": {"abundance": 0.002, "better": 0.55, "stagnation": 0.2, "decline": 0.13, "collapse": 0.118},
+      "rationale": "Extreme water stress, rising heat, fragile states and dependence on oil and gas income that may shrink make this the riskiest middle-income region, though desalination and solar help."
+    },
+    {
+      "entity": "sub-saharan-africa",
+      "si": {"abundance": 0.1, "better": 0.64, "stagnation": 0.08, "decline": 0.05, "collapse": 0.13},
+      "noSi": {"abundance": 0.003, "better": 0.72, "stagnation": 0.12, "decline": 0.06, "collapse": 0.097},
+      "rationale": "Starting from a very low base makes a quarter above today the likely outcome, while abundance would need roughly a hundredfold rise; climate vulnerability, weak states and fast population growth make collapse more likely than elsewhere."
+    },
+    {
+      "entity": "central-south-asia",
+      "si": {"abundance": 0.12, "better": 0.65, "stagnation": 0.07, "decline": 0.05, "collapse": 0.11},
+      "noSi": {"abundance": 0.002, "better": 0.75, "stagnation": 0.1, "decline": 0.06, "collapse": 0.088},
+      "rationale": "Strong growth momentum, led by India, makes improvement the base case, but humid heat, very high water stress and a nuclear rivalry keep collapse risk elevated."
+    },
+    {
+      "entity": "east-asia",
+      "si": {"abundance": 0.27, "better": 0.52, "stagnation": 0.06, "decline": 0.05, "collapse": 0.1},
+      "noSi": {"abundance": 0.006, "better": 0.7, "stagnation": 0.14, "decline": 0.08, "collapse": 0.074},
+      "rationale": "Capable states, strong industry and AI capacity favour gains, but the world's lowest fertility, fast aging and the risk of a great-power war over Taiwan weigh on the outlook."
+    },
+    {
+      "entity": "southeast-asia",
+      "si": {"abundance": 0.18, "better": 0.6, "stagnation": 0.07, "decline": 0.05, "collapse": 0.1},
+      "noSi": {"abundance": 0.004, "better": 0.74, "stagnation": 0.12, "decline": 0.07, "collapse": 0.066},
+      "rationale": "Growing manufacturing economies and relative peace favour steady improvement, with sea-level rise, storms and heat as the main climate threats."
+    },
+    {
+      "entity": "oceania",
+      "si": {"abundance": 0.3, "better": 0.47, "stagnation": 0.08, "decline": 0.05, "collapse": 0.1},
+      "noSi": {"abundance": 0.01, "better": 0.64, "stagnation": 0.19, "decline": 0.09, "collapse": 0.07},
+      "rationale": "Dominated by rich, resource-exporting Australia and New Zealand, which do well in most futures, while poorer Pacific islands and Papua New Guinea pull down the share reaching abundance."
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 import generated from './generated/wikipedia.json' with { type: 'json' }
 
-/** The opening section of a Wikipedia article, word for word, as downloaded by pdoom/scripts/wikipedia.ts. */
+/** The opening section of a Wikipedia article, word for word, as downloaded by scripts/wikipedia.ts. */
 export type WikipediaExtract = { title: string; url: string; revision: number; timestamp: string; text: string }
 
 const extracts = generated as Record<string, WikipediaExtract>

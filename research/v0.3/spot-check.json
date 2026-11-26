@@ -1,0 +1,212 @@
+[
+ {
+  "card": "warming",
+  "kind": "curve",
+  "claim": "Global warming: P(value in 2100 above 1.5 °C) = 0.99 [derived]",
+  "source": "Climate Action Tracker, November 2026, current policies: normal curve fitted to the 16th and 50th percentiles",
+  "url": "https://climateactiontracker.org/documents/1451/CAT_2026-11-12_GlobalUpdate_COP31.pdf"
+ },
+ {
+  "card": "humid_heat",
+  "kind": "curve",
+  "claim": "Heat beyond the human range: P(value in 2100 above 5 %) = 0.99 [derived]",
+  "source": "Lenton et al. 2023, Nature Sustainability: 5% at 1.5 °C, with the warming card's 99% above 1.5 °C",
+  "url": "https://www.nature.com/articles/s41893-023-01132-6"
+ },
+ {
+  "card": "extreme_weather",
+  "kind": "today",
+  "claim": "More frequent extreme weather today: 4.8 times (2010)",
+  "source": "IPCC AR6 WGI, Figure SPM.6: at 1 °C, the 2001–2020 average",
+  "url": "https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_SPM.pdf"
+ },
+ {
+  "card": "sea_level",
+  "kind": "curve",
+  "claim": "Sea-level rise: P(value in 2100 above 44 cm) = 0.83 [published]",
+  "source": "IPCC AR6, intermediate emissions (SSP2-4.5): bottom of the likely range",
+  "url": "https://www.hko.gov.hk/en/climate_change/proj_global_sea_level.htm"
+ },
+ {
+  "card": "ice_sheets",
+  "kind": "today",
+  "claim": "Greenland and Antarctic ice sheets today: 2 m (2025)",
+  "source": "IPCC AR6: about 2 to 3 m over 2,000 years if warming stays at 1.5 °C; 2025 was 1.43 °C (WMO)",
+  "url": "https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_SPM.pdf"
+ },
+ {
+  "card": "ocean_heat",
+  "kind": "today",
+  "claim": "Heat stored in the ocean today: 480 ZJ (2025)",
+  "source": "IPCC AR6: 396 ZJ over 1971–2018, plus about 12.6 ZJ a year since then (WMO 2025)",
+  "url": "https://library.wmo.int/records/item/69807-state-of-the-global-climate-2025"
+ },
+ {
+  "card": "planetary_boundaries",
+  "kind": "today",
+  "claim": "Planetary boundaries crossed today: 7 of 9 (2026)",
+  "source": "Planetary Health Check 2026, Potsdam Institute for Climate Impact Research",
+  "url": "https://www.planetaryhealthcheck.org/"
+ },
+ {
+  "card": "asteroid",
+  "kind": "curve",
+  "claim": "Asteroid or comet impact: P(value in 2100 above 50 m) = 0.037 [derived]",
+  "source": "National Research Council, Defending Planet Earth, 2010: one impact per 2,000 years",
+  "url": "https://www.nationalacademies.org/read/12842/chapter/4"
+ },
+ {
+  "card": "asteroid",
+  "kind": "band",
+  "claim": "Asteroid or comet impact: 10000–20000 m means level 5 (Mass extinction, as for the dinosaurs 66 million years ago) [published]",
+  "source": "National Research Council, Defending Planet Earth, 2010, table 2.1 and fatality model",
+  "url": "https://www.nationalacademies.org/read/12842/chapter/4"
+ },
+ {
+  "card": "solar_storm",
+  "kind": "today",
+  "claim": "Solar storm today: 907 nT (May 1921 storm)",
+  "source": "Love, Hayakawa & Cliver 2019 (USGS)",
+  "url": "https://www.usgs.gov/publications/intensity-and-impact-new-york-railroad-superstorm-may-1921"
+ },
+ {
+  "card": "war",
+  "kind": "curve",
+  "claim": "Deadliest war before 2100: P(value in 2100 above 10 % of humanity) = 0.04 [derived]",
+  "source": "Forecasting Research Institute, XPT 2022: superforecasters’ median for nuclear weapons killing over 10% of humanity within five years, by 2100 (nuclear experts: 8%). Nuclear only, so a floor",
+  "url": "https://forecastingresearch.org/pdf/existential-risk-persuasion-tournament.pdf"
+ },
+ {
+  "card": "armed_conflicts",
+  "kind": "today",
+  "claim": "State-based armed conflicts today: 65 conflicts (2025)",
+  "source": "Uppsala Conflict Data Program (UCDP), June 2026",
+  "url": "https://www.uu.se/en/press/press-releases/2026/2026-06-09-ucdp-record-number-of-conflicts-between-states"
+ },
+ {
+  "card": "bioweapons",
+  "kind": "curve",
+  "claim": "Deadliest biological attack: P(value in 2100 above 1 % of humanity) = 0.04 [derived]",
+  "source": "XPT superforecasters, 2022 (Forecasting Research Institute): a genetically engineered pathogen, released on purpose or by accident, killing over 1% of humanity within five years, by 2100 (biorisk experts: 10.25%). A stand-in for deliberate use",
+  "url": "https://forecastingresearch.org/pdf/existential-risk-persuasion-tournament.pdf"
+ },
+ {
+  "card": "state_breakdown",
+  "kind": "today",
+  "claim": "Civil war and state breakdown today: 31 % of humanity (Taiping war, China)",
+  "source": "Our World in Data population series (HYDE, Gapminder, UN): China, 401 of 1,283 million people",
+  "url": "https://ourworldindata.org/grapher/population"
+ },
+ {
+  "card": "polarisation",
+  "kind": "today",
+  "claim": "Political polarisation today: -0.1 score (2025)",
+  "source": "V-Dem 2026 dataset via Our World in Data: mean of the 85 electoral and liberal democracies",
+  "url": "https://ourworldindata.org/grapher/political-polarization-score"
+ },
+ {
+  "card": "pandemic",
+  "kind": "today",
+  "claim": "Pandemics today: 2.7 % (1918 flu (modern record))",
+  "source": "Our World in Data, after Johnson and Mueller 2002: about 50 million deaths among 1.8 billion people",
+  "url": "https://ourworldindata.org/spanish-flu-largest-influenza-pandemic-in-history"
+ },
+ {
+  "card": "pandemic",
+  "kind": "band",
+  "claim": "Pandemics: 1–10 % means level 2 (1918 flu scale: 100 million to a billion dead within a few years) [derived]",
+  "source": "Our World in Data: the 1918 flu killed about 2.7% of humanity (estimates from 1% to 5.4%)",
+  "url": "https://ourworldindata.org/spanish-flu-largest-influenza-pandemic-in-history"
+ },
+ {
+  "card": "engineered_pandemic",
+  "kind": "curve",
+  "claim": "Human-caused pandemics: P(value in 2100 above 99.9999 %) = 0.0001 [published]",
+  "source": "XPT superforecasters, 2022 (Forecasting Research Institute): extinction by an engineered pathogen, meaning fewer than 5,000 survivors",
+  "url": "https://forum.effectivealtruism.org/posts/9ddheDChiMhveCfSw/what-do-xpt-results-tell-us-about-biorisk"
+ },
+ {
+  "card": "amr_deaths",
+  "kind": "band",
+  "claim": "Drug-resistant infections: 12–120 per 100,000 people means level 2 (1 to 10 deaths in 100 are due to resistance; care gets riskier) [derived]",
+  "source": "UN medium projection for 2100 via Our World in Data: 122.9 million deaths among 10.18 billion people",
+  "url": "https://ourworldindata.org/grapher/births-and-deaths-projected-to-2100"
+ },
+ {
+  "card": "coal",
+  "kind": "today",
+  "claim": "World coal production today: 9.05 billion tonnes a year (2025)",
+  "source": "Energy Institute, Statistical Review of World Energy 2026",
+  "url": "https://assets.kpmg.com/content/dam/kpmgsites/au/pdf/2026/statistical-review-of-world-energy.pdf"
+ },
+ {
+  "card": "phosphate",
+  "kind": "today",
+  "claim": "Phosphate rock supply today: 7 % (2008 price spike (use fell 7%))",
+  "source": "IFA, Medium-Term Outlook for Global Fertilizer Demand, June 2009: P₂O₅ use 38.8 → 36.0 Mt",
+  "url": "https://www.fertilizer.org/wp-content/uploads/2023/01/2009_shanghai_ifa_summary.pdf"
+ },
+ {
+  "card": "fission",
+  "kind": "today",
+  "claim": "Nuclear fission today: 8.9 % of electricity (2025)",
+  "source": "Ember, Global Electricity Review 2026 (the IAEA counts 8.4%)",
+  "url": "https://ember-energy.org/countries-and-regions/world/"
+ },
+ {
+  "card": "medicine",
+  "kind": "today",
+  "claim": "Drug discovery and medicine today: 46 drugs/yr (2025)",
+  "source": "US FDA, Novel Drug Approvals for 2025: 46 approved by CDER",
+  "url": "https://www.fda.gov/drugs/novel-drug-approvals-fda/novel-drug-approvals-2025"
+ },
+ {
+  "card": "materials",
+  "kind": "today",
+  "claim": "AI-driven materials discovery today: 15 years (2023)",
+  "source": "US National Academies, 2023: a 10- to 20-year development cycle (midpoint shown)",
+  "url": "https://www.nationalacademies.org/read/26723/chapter/3"
+ },
+ {
+  "card": "ai_takeover",
+  "kind": "band",
+  "claim": "AI takeover: 50–99 % of humanity means level 4 (Most people killed or ruled by AI; the rest keep control and rebuild) [derived]",
+  "source": "Danger scale applied to 8.22 billion people (World Bank, 2025)",
+  "url": "https://data.worldbank.org/indicator/SP.POP.TOTL"
+ },
+ {
+  "card": "living_standard",
+  "kind": "curve",
+  "claim": "Living standard: P(value in 2100 above 333 index) = 0.25 [derived]",
+  "source": "Christensen, Gillingham and Nordhaus 2018, expert survey: 75th percentile, 2.85% a year from 2010",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6003472"
+ },
+ {
+  "card": "essentials_cost_world",
+  "kind": "today",
+  "claim": "Cost of the essentials today: 26 % of world GDP (2025)",
+  "source": "Doom Analysis estimate (range 25–37%) from World Bank ICP 2021, WHO, SIPRI, Eurostat, US BEA and World Bank water data",
+  "url": "https://databank.worldbank.org/source/icp-2021"
+ },
+ {
+  "card": "life_expectancy_world",
+  "kind": "curve",
+  "claim": "Life expectancy: P(value in 2100 above 80.1 years) = 0.9 [published]",
+  "source": "UN World Population Prospects 2024, probabilistic projections: lower end of the 80% interval for 2100",
+  "url": "https://population.un.org/wpp/assets/Excel%20Files/2_Indicators%20(Probabilistic)/EXCEL_FILES/4_Mortality/UN_PPP2024_Output_e0.xlsx"
+ },
+ {
+  "card": "population",
+  "kind": "curve",
+  "claim": "World population: P(value in 2100 above 9.41 billion people) = 0.9 [published]",
+  "source": "UN World Population Prospects 2024, probabilistic projections: lower end of the 80% interval for 2100",
+  "url": "https://population.un.org/wpp/assets/Excel%20Files/2_Indicators%20(Probabilistic)/EXCEL_FILES/2_Population/UN_PPP2024_Output_PopTot.xlsx"
+ },
+ {
+  "card": "aging_world",
+  "kind": "curve",
+  "claim": "Older people per worker: P(value in 2100 above 36.8 per 100 of working age) = 0.9 [published]",
+  "source": "UN World Population Prospects 2024, probabilistic projections: lower end of the 80% interval for 2100",
+  "url": "https://population.un.org/wpp/assets/Excel%20Files/2_Indicators%20(Probabilistic)/EXCEL_FILES/2_Population/UN_PPP2024_Output_Annual_OldAgeDepRatio.xlsx"
+ }
+]

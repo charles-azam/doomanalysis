@@ -1,6 +1,6 @@
 import type { ForecastRun } from '../model/types.ts'
 
-/** Validated v0.3 judge runs, imported by pdoom/judge/import-forecasts.ts. Do not edit by hand. */
+/** Validated v0.3 judge runs, imported by judge/import-forecasts.ts. Do not edit by hand. */
 export const forecastRuns: ForecastRun[] = [
  {
   "id": "curves-climate-2026-11-25-1",

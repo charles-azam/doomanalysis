@@ -1,0 +1,3884 @@
+{
+ "Medium variant": {
+  "WLD": {
+   "2025": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 53.391,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 74.868,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 101.594,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 15.967,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 18.203,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 20.985,
+    "Annual potential support ratio [15-64/65+]": 6.263,
+    "Annual potential support ratio [20-64/65+]": 5.494,
+    "Annual potential support ratio [25-64/65+]": 4.765
+   },
+   "2050": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 57.992,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 76.578,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 99.852,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 25.797,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 28.832,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 32.632,
+    "Annual potential support ratio [15-64/65+]": 3.876,
+    "Annual potential support ratio [20-64/65+]": 3.468,
+    "Annual potential support ratio [25-64/65+]": 3.064
+   },
+   "2100": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 67.885,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 85.786,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 108.668,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 40.16,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 44.442,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 49.916,
+    "Annual potential support ratio [15-64/65+]": 2.49,
+    "Annual potential support ratio [20-64/65+]": 2.25,
+    "Annual potential support ratio [25-64/65+]": 2.003
+   }
+  },
+  "ETH": {
+   "2025": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 72.638,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 112.817,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 170.707,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 5.69,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 7.014,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 8.922,
+    "Annual potential support ratio [15-64/65+]": 17.576,
+    "Annual potential support ratio [20-64/65+]": 14.257,
+    "Annual potential support ratio [25-64/65+]": 11.209
+   },
+   "2050": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 54.784,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 81.14,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 118.43,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 8.291,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 9.703,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 11.7,
+    "Annual potential support ratio [15-64/65+]": 12.061,
+    "Annual potential support ratio [20-64/65+]": 10.306,
+    "Annual potential support ratio [25-64/65+]": 8.547
+   },
+   "2100": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 57.597,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 75.809,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 100.475,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 27.408,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 30.575,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 34.864,
+    "Annual potential support ratio [15-64/65+]": 3.649,
+    "Annual potential support ratio [20-64/65+]": 3.271,
+    "Annual potential support ratio [25-64/65+]": 2.868
+   }
+  },
+  "KEN": {
+   "2025": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 64.687,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 103.348,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 155.065,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 4.975,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 6.143,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 7.705,
+    "Annual potential support ratio [15-64/65+]": 20.1,
+    "Annual potential support ratio [20-64/65+]": 16.279,
+    "Annual potential support ratio [25-64/65+]": 12.978
+   },
+   "2050": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 51.243,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 76.065,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 108.168,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 8.63,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 10.047,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 11.878,
+    "Annual potential support ratio [15-64/65+]": 11.587,
+    "Annual potential support ratio [20-64/65+]": 9.954,
+    "Annual potential support ratio [25-64/65+]": 8.419
+   },
+   "2100": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 54.275,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 71.522,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 93.213,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 25.14,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 27.951,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 31.486,
+    "Annual potential support ratio [15-64/65+]": 3.978,
+    "Annual potential support ratio [20-64/65+]": 3.578,
+    "Annual potential support ratio [25-64/65+]": 3.176
+   }
+  },
+  "COD": {
+   "2025": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 96.208,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 146.989,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 213.879,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 6.051,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 7.617,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 9.68,
+    "Annual potential support ratio [15-64/65+]": 16.527,
+    "Annual potential support ratio [20-64/65+]": 13.129,
+    "Annual potential support ratio [25-64/65+]": 10.331
+   },
+   "2050": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 69.027,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 106.251,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 157.678,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 5.985,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 7.304,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 9.125,
+    "Annual potential support ratio [15-64/65+]": 16.707,
+    "Annual potential support ratio [20-64/65+]": 13.692,
+    "Annual potential support ratio [25-64/65+]": 10.959
+   },
+   "2100": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 51.893,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 72.097,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 97.799,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 16.489,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 18.683,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 21.473,
+    "Annual potential support ratio [15-64/65+]": 6.064,
+    "Annual potential support ratio [20-64/65+]": 5.353,
+    "Annual potential support ratio [25-64/65+]": 4.657
+   }
+  },
+  "EGY": {
+   "2025": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 58.297,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 85.701,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 119.811,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 8.344,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 9.789,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 11.587,
+    "Annual potential support ratio [15-64/65+]": 11.984,
+    "Annual potential support ratio [20-64/65+]": 10.216,
+    "Annual potential support ratio [25-64/65+]": 8.631
+   },
+   "2050": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 52.476,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 73.274,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 98.905,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 14.85,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 16.876,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 19.372,
+    "Annual potential support ratio [15-64/65+]": 6.734,
+    "Annual potential support ratio [20-64/65+]": 5.926,
+    "Annual potential support ratio [25-64/65+]": 5.162
+   },
+   "2100": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 63.471,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 80.531,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 101.998,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 36.052,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 39.815,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 44.549,
+    "Annual potential support ratio [15-64/65+]": 2.774,
+    "Annual potential support ratio [20-64/65+]": 2.512,
+    "Annual potential support ratio [25-64/65+]": 2.245
+   }
+  },
+  "ZAF": {
+   "2025": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 48.386,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 69.511,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 95.814,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 10.216,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 11.671,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 13.482,
+    "Annual potential support ratio [15-64/65+]": 9.788,
+    "Annual potential support ratio [20-64/65+]": 8.568,
+    "Annual potential support ratio [25-64/65+]": 7.417
+   },
+   "2050": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 48.793,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 66.842,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 92.053,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 16.754,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 18.786,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 21.625,
+    "Annual potential support ratio [15-64/65+]": 5.969,
+    "Annual potential support ratio [20-64/65+]": 5.323,
+    "Annual potential support ratio [25-64/65+]": 4.624
+   },
+   "2100": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 57.894,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 74.928,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 97.996,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 29.64,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 32.837,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 37.168,
+    "Annual potential support ratio [15-64/65+]": 3.374,
+    "Annual potential support ratio [20-64/65+]": 3.045,
+    "Annual potential support ratio [25-64/65+]": 2.691
+   }
+  },
+  "NGA": {
+   "2025": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 77.271,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 121.714,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 181.65,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 5.441,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 6.806,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 8.645,
+    "Annual potential support ratio [15-64/65+]": 18.378,
+    "Annual potential support ratio [20-64/65+]": 14.694,
+    "Annual potential support ratio [25-64/65+]": 11.567
+   },
+   "2050": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 54.875,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 82.442,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 121.019,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 7.031,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 8.282,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 10.033,
+    "Annual potential support ratio [15-64/65+]": 14.223,
+    "Annual potential support ratio [20-64/65+]": 12.074,
+    "Annual potential support ratio [25-64/65+]": 9.967
+   },
+   "2100": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 48.358,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 65.535,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 88.775,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 18.225,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 20.336,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 23.19,
+    "Annual potential support ratio [15-64/65+]": 5.487,
+    "Annual potential support ratio [20-64/65+]": 4.918,
+    "Annual potential support ratio [25-64/65+]": 4.312
+   }
+  },
+  "CHN": {
+   "2025": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 43.511,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 56.979,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 72.009,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 21.399,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 23.408,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 25.649,
+    "Annual potential support ratio [15-64/65+]": 4.673,
+    "Annual potential support ratio [20-64/65+]": 4.272,
+    "Annual potential support ratio [25-64/65+]": 3.899
+   },
+   "2050": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 69.1,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 78.959,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 89.975,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 52.285,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 55.333,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 58.74,
+    "Annual potential support ratio [15-64/65+]": 1.913,
+    "Annual potential support ratio [20-64/65+]": 1.807,
+    "Annual potential support ratio [25-64/65+]": 1.702
+   },
+   "2100": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 115.815,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 132.219,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 153.516,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 98.904,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 106.421,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 116.181,
+    "Annual potential support ratio [15-64/65+]": 1.011,
+    "Annual potential support ratio [20-64/65+]": 0.94,
+    "Annual potential support ratio [25-64/65+]": 0.861
+   }
+  },
+  "JPN": {
+   "2025": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 70.162,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 84.6,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 103.279,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 51.039,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 55.369,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 60.972,
+    "Annual potential support ratio [15-64/65+]": 1.959,
+    "Annual potential support ratio [20-64/65+]": 1.806,
+    "Annual potential support ratio [25-64/65+]": 1.64
+   },
+   "2050": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 95.039,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 110.802,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 131.541,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 73.103,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 79.011,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 86.785,
+    "Annual potential support ratio [15-64/65+]": 1.368,
+    "Annual potential support ratio [20-64/65+]": 1.266,
+    "Annual potential support ratio [25-64/65+]": 1.152
+   },
+   "2100": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 95.616,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 113.465,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 138.396,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 73.22,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 79.901,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 89.233,
+    "Annual potential support ratio [15-64/65+]": 1.366,
+    "Annual potential support ratio [20-64/65+]": 1.252,
+    "Annual potential support ratio [25-64/65+]": 1.121
+   }
+  },
+  "KOR": {
+   "2025": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 43.957,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 53.854,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 67.339,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 29.267,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 31.279,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 34.021,
+    "Annual potential support ratio [15-64/65+]": 3.417,
+    "Annual potential support ratio [20-64/65+]": 3.197,
+    "Annual potential support ratio [25-64/65+]": 2.939
+   },
+   "2050": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 90.526,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 101.82,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 116.806,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 75.61,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 80.092,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 86.039,
+    "Annual potential support ratio [15-64/65+]": 1.323,
+    "Annual potential support ratio [20-64/65+]": 1.249,
+    "Annual potential support ratio [25-64/65+]": 1.162
+   },
+   "2100": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 116.61,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 134.17,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 159.219,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 97.925,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 105.863,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 117.188,
+    "Annual potential support ratio [15-64/65+]": 1.021,
+    "Annual potential support ratio [20-64/65+]": 0.945,
+    "Annual potential support ratio [25-64/65+]": 0.853
+   }
+  },
+  "BGD": {
+   "2025": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 52.24,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 78.446,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 113.866,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 10.152,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 11.9,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 14.261,
+    "Annual potential support ratio [15-64/65+]": 9.85,
+    "Annual potential support ratio [20-64/65+]": 8.404,
+    "Annual potential support ratio [25-64/65+]": 7.012
+   },
+   "2050": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 49.251,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 66.866,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 90.196,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 20.281,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 22.675,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 25.845,
+    "Annual potential support ratio [15-64/65+]": 4.931,
+    "Annual potential support ratio [20-64/65+]": 4.41,
+    "Annual potential support ratio [25-64/65+]": 3.869
+   },
+   "2100": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 84.452,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 102.93,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 125.551,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 59.063,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 64.98,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 72.224,
+    "Annual potential support ratio [15-64/65+]": 1.693,
+    "Annual potential support ratio [20-64/65+]": 1.539,
+    "Annual potential support ratio [25-64/65+]": 1.385
+   }
+  },
+  "IND": {
+   "2025": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 46.139,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 67.301,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 96.443,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 10.78,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 12.341,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 14.491,
+    "Annual potential support ratio [15-64/65+]": 9.276,
+    "Annual potential support ratio [20-64/65+]": 8.103,
+    "Annual potential support ratio [25-64/65+]": 6.901
+   },
+   "2050": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 48.093,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 63.602,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 82.978,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 21.746,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 24.023,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 26.868,
+    "Annual potential support ratio [15-64/65+]": 4.599,
+    "Annual potential support ratio [20-64/65+]": 4.163,
+    "Annual potential support ratio [25-64/65+]": 3.722
+   },
+   "2100": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 77.517,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 94.35,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 115.223,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 53.063,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 58.094,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 64.334,
+    "Annual potential support ratio [15-64/65+]": 1.885,
+    "Annual potential support ratio [20-64/65+]": 1.721,
+    "Annual potential support ratio [25-64/65+]": 1.554
+   }
+  },
+  "IRN": {
+   "2025": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 44.098,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 60.345,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 78.517,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 12.365,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 13.759,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 15.319,
+    "Annual potential support ratio [15-64/65+]": 8.087,
+    "Annual potential support ratio [20-64/65+]": 7.268,
+    "Annual potential support ratio [25-64/65+]": 6.528
+   },
+   "2050": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 60.039,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 73.773,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 90.611,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 35.904,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 38.985,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 42.763,
+    "Annual potential support ratio [15-64/65+]": 2.785,
+    "Annual potential support ratio [20-64/65+]": 2.565,
+    "Annual potential support ratio [25-64/65+]": 2.338
+   },
+   "2100": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 89.609,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 107.321,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 129.55,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 66.681,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 72.91,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 80.727,
+    "Annual potential support ratio [15-64/65+]": 1.5,
+    "Annual potential support ratio [20-64/65+]": 1.372,
+    "Annual potential support ratio [25-64/65+]": 1.239
+   }
+  },
+  "PAK": {
+   "2025": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 68.367,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 105.399,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 153.566,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 7.344,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 8.959,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 11.06,
+    "Annual potential support ratio [15-64/65+]": 13.617,
+    "Annual potential support ratio [20-64/65+]": 11.162,
+    "Annual potential support ratio [25-64/65+]": 9.041
+   },
+   "2050": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 54.542,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 79.689,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 111.771,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 9.915,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 11.529,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 13.587,
+    "Annual potential support ratio [15-64/65+]": 10.086,
+    "Annual potential support ratio [20-64/65+]": 8.674,
+    "Annual potential support ratio [25-64/65+]": 7.36
+   },
+   "2100": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 55.848,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 73.732,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 96.231,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 25.868,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 28.837,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 32.571,
+    "Annual potential support ratio [15-64/65+]": 3.866,
+    "Annual potential support ratio [20-64/65+]": 3.468,
+    "Annual potential support ratio [25-64/65+]": 3.07
+   }
+  },
+  "IDN": {
+   "2025": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 46.606,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 66.76,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 91.37,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 11.058,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 12.578,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 14.435,
+    "Annual potential support ratio [15-64/65+]": 9.043,
+    "Annual potential support ratio [20-64/65+]": 7.95,
+    "Annual potential support ratio [25-64/65+]": 6.928
+   },
+   "2050": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 52.256,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 69.231,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 90.368,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 23.052,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 25.622,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 28.822,
+    "Annual potential support ratio [15-64/65+]": 4.338,
+    "Annual potential support ratio [20-64/65+]": 3.903,
+    "Annual potential support ratio [25-64/65+]": 3.47
+   },
+   "2100": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 68.641,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 85.118,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 105.717,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 43.535,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 47.788,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 53.106,
+    "Annual potential support ratio [15-64/65+]": 2.297,
+    "Annual potential support ratio [20-64/65+]": 2.093,
+    "Annual potential support ratio [25-64/65+]": 1.883
+   }
+  },
+  "PHL": {
+   "2025": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 48.949,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 74.345,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 107.651,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 8.526,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 9.98,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 11.886,
+    "Annual potential support ratio [15-64/65+]": 11.729,
+    "Annual potential support ratio [20-64/65+]": 10.021,
+    "Annual potential support ratio [25-64/65+]": 8.413
+   },
+   "2050": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 44.459,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 60.093,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 78.643,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 16.112,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 17.856,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 19.925,
+    "Annual potential support ratio [15-64/65+]": 6.206,
+    "Annual potential support ratio [20-64/65+]": 5.6,
+    "Annual potential support ratio [25-64/65+]": 5.019
+   },
+   "2100": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 67.465,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 83.178,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 103.117,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 43.834,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 47.947,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 53.166,
+    "Annual potential support ratio [15-64/65+]": 2.281,
+    "Annual potential support ratio [20-64/65+]": 2.086,
+    "Annual potential support ratio [25-64/65+]": 1.881
+   }
+  },
+  "VNM": {
+   "2025": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 47.821,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 65.801,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 85.593,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 14.035,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 15.742,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 17.621,
+    "Annual potential support ratio [15-64/65+]": 7.125,
+    "Annual potential support ratio [20-64/65+]": 6.352,
+    "Annual potential support ratio [25-64/65+]": 5.675
+   },
+   "2050": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 58.64,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 74.342,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 93.095,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 31.742,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 34.884,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 38.636,
+    "Annual potential support ratio [15-64/65+]": 3.15,
+    "Annual potential support ratio [20-64/65+]": 2.867,
+    "Annual potential support ratio [25-64/65+]": 2.588
+   },
+   "2100": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 80.602,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 97.414,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 118.591,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 56.723,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 62.003,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 68.655,
+    "Annual potential support ratio [15-64/65+]": 1.763,
+    "Annual potential support ratio [20-64/65+]": 1.613,
+    "Annual potential support ratio [25-64/65+]": 1.457
+   }
+  },
+  "SAU": {
+   "2025": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 36.384,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 51.212,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 71.436,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 4.169,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 4.622,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 5.24,
+    "Annual potential support ratio [15-64/65+]": 23.987,
+    "Annual potential support ratio [20-64/65+]": 21.635,
+    "Annual potential support ratio [25-64/65+]": 19.082
+   },
+   "2050": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 39.424,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 52.696,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 72.44,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 11.429,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 12.517,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 14.135,
+    "Annual potential support ratio [15-64/65+]": 8.75,
+    "Annual potential support ratio [20-64/65+]": 7.989,
+    "Annual potential support ratio [25-64/65+]": 7.075
+   },
+   "2100": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 51.616,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 64.688,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 83.621,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 25.397,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 27.587,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 30.759,
+    "Annual potential support ratio [15-64/65+]": 3.937,
+    "Annual potential support ratio [20-64/65+]": 3.625,
+    "Annual potential support ratio [25-64/65+]": 3.251
+   }
+  },
+  "TUR": {
+   "2025": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 46.186,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 63.384,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 85.108,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 15.453,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 17.271,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 19.568,
+    "Annual potential support ratio [15-64/65+]": 6.471,
+    "Annual potential support ratio [20-64/65+]": 5.79,
+    "Annual potential support ratio [25-64/65+]": 5.11
+   },
+   "2050": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 58.886,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 73.088,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 89.128,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 35.183,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 38.327,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 41.879,
+    "Annual potential support ratio [15-64/65+]": 2.842,
+    "Annual potential support ratio [20-64/65+]": 2.609,
+    "Annual potential support ratio [25-64/65+]": 2.388
+   },
+   "2100": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 95.21,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 112.344,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 132.087,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 73.798,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 80.276,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 87.739,
+    "Annual potential support ratio [15-64/65+]": 1.355,
+    "Annual potential support ratio [20-64/65+]": 1.246,
+    "Annual potential support ratio [25-64/65+]": 1.14
+   }
+  },
+  "POL": {
+   "2025": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 54.355,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 68.298,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 82.425,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 32.035,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 34.928,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 37.86,
+    "Annual potential support ratio [15-64/65+]": 3.122,
+    "Annual potential support ratio [20-64/65+]": 2.863,
+    "Annual potential support ratio [25-64/65+]": 2.641
+   },
+   "2050": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 76.409,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 89.151,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 104.804,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 56.099,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 60.15,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 65.128,
+    "Annual potential support ratio [15-64/65+]": 1.783,
+    "Annual potential support ratio [20-64/65+]": 1.663,
+    "Annual potential support ratio [25-64/65+]": 1.535
+   },
+   "2100": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 97.389,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 114.345,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 135.823,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 77.123,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 83.748,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 92.14,
+    "Annual potential support ratio [15-64/65+]": 1.297,
+    "Annual potential support ratio [20-64/65+]": 1.194,
+    "Annual potential support ratio [25-64/65+]": 1.085
+   }
+  },
+  "RUS": {
+   "2025": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 53.42,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 68.05,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 84.071,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 27.296,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 29.899,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 32.75,
+    "Annual potential support ratio [15-64/65+]": 3.664,
+    "Annual potential support ratio [20-64/65+]": 3.345,
+    "Annual potential support ratio [25-64/65+]": 3.053
+   },
+   "2050": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 65.262,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 79.462,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 98.231,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 39.395,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 42.78,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 47.254,
+    "Annual potential support ratio [15-64/65+]": 2.538,
+    "Annual potential support ratio [20-64/65+]": 2.338,
+    "Annual potential support ratio [25-64/65+]": 2.116
+   },
+   "2100": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 69.142,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 85.584,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 108.506,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 45.071,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 49.452,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 55.56,
+    "Annual potential support ratio [15-64/65+]": 2.219,
+    "Annual potential support ratio [20-64/65+]": 2.022,
+    "Annual potential support ratio [25-64/65+]": 1.8
+   }
+  },
+  "NOR": {
+   "2025": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 53.856,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 69.79,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 89.757,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 29.356,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 32.396,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 36.206,
+    "Annual potential support ratio [15-64/65+]": 3.406,
+    "Annual potential support ratio [20-64/65+]": 3.087,
+    "Annual potential support ratio [25-64/65+]": 2.762
+   },
+   "2050": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 68.561,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 83.268,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 103.036,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 45.193,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 49.136,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 54.437,
+    "Annual potential support ratio [15-64/65+]": 2.213,
+    "Annual potential support ratio [20-64/65+]": 2.035,
+    "Annual potential support ratio [25-64/65+]": 1.837
+   },
+   "2100": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 84.828,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 101.967,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 125.658,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 61.202,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 66.877,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 74.722,
+    "Annual potential support ratio [15-64/65+]": 1.634,
+    "Annual potential support ratio [20-64/65+]": 1.495,
+    "Annual potential support ratio [25-64/65+]": 1.338
+   }
+  },
+  "SWE": {
+   "2025": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 60.306,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 77.242,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 97.249,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 33.524,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 37.066,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 41.25,
+    "Annual potential support ratio [15-64/65+]": 2.983,
+    "Annual potential support ratio [20-64/65+]": 2.698,
+    "Annual potential support ratio [25-64/65+]": 2.424
+   },
+   "2050": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 66.927,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 80.95,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 99.865,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 42.887,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 46.49,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 51.35,
+    "Annual potential support ratio [15-64/65+]": 2.332,
+    "Annual potential support ratio [20-64/65+]": 2.151,
+    "Annual potential support ratio [25-64/65+]": 1.947
+   },
+   "2100": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 82.454,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 99.674,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 123.487,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 58.743,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 64.287,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 71.953,
+    "Annual potential support ratio [15-64/65+]": 1.702,
+    "Annual potential support ratio [20-64/65+]": 1.556,
+    "Annual potential support ratio [25-64/65+]": 1.39
+   }
+  },
+  "GBR": {
+   "2025": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 57.897,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 74.61,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 94.331,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 31.11,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 34.403,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 38.288,
+    "Annual potential support ratio [15-64/65+]": 3.214,
+    "Annual potential support ratio [20-64/65+]": 2.907,
+    "Annual potential support ratio [25-64/65+]": 2.612
+   },
+   "2050": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 65.939,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 80.981,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 101.281,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 40.949,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 44.661,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 49.671,
+    "Annual potential support ratio [15-64/65+]": 2.442,
+    "Annual potential support ratio [20-64/65+]": 2.239,
+    "Annual potential support ratio [25-64/65+]": 2.013
+   },
+   "2100": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 80.777,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 98.081,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 121.851,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 56.637,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 62.058,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 69.506,
+    "Annual potential support ratio [15-64/65+]": 1.766,
+    "Annual potential support ratio [20-64/65+]": 1.611,
+    "Annual potential support ratio [25-64/65+]": 1.439
+   }
+  },
+  "ITA": {
+   "2025": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 58.116,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 71.438,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 88.094,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 39.684,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 43.028,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 47.208,
+    "Annual potential support ratio [15-64/65+]": 2.52,
+    "Annual potential support ratio [20-64/65+]": 2.324,
+    "Annual potential support ratio [25-64/65+]": 2.118
+   },
+   "2050": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 91.291,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 106.281,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 126.333,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 70.449,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 75.969,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 83.354,
+    "Annual potential support ratio [15-64/65+]": 1.419,
+    "Annual potential support ratio [20-64/65+]": 1.316,
+    "Annual potential support ratio [25-64/65+]": 1.2
+   },
+   "2100": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 94.311,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 111.231,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 134.907,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 72.792,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 79.13,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 88,
+    "Annual potential support ratio [15-64/65+]": 1.374,
+    "Annual potential support ratio [20-64/65+]": 1.264,
+    "Annual potential support ratio [25-64/65+]": 1.136
+   }
+  },
+  "ESP": {
+   "2025": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 52.117,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 65.703,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 81.674,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 32.921,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 35.862,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 39.318,
+    "Annual potential support ratio [15-64/65+]": 3.038,
+    "Annual potential support ratio [20-64/65+]": 2.789,
+    "Annual potential support ratio [25-64/65+]": 2.543
+   },
+   "2050": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 90.679,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 105.722,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 125.954,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 68.758,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 74.183,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 81.478,
+    "Annual potential support ratio [15-64/65+]": 1.454,
+    "Annual potential support ratio [20-64/65+]": 1.348,
+    "Annual potential support ratio [25-64/65+]": 1.227
+   },
+   "2100": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 91.883,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 109.29,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 133.598,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 69.603,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 75.917,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 84.735,
+    "Annual potential support ratio [15-64/65+]": 1.437,
+    "Annual potential support ratio [20-64/65+]": 1.317,
+    "Annual potential support ratio [25-64/65+]": 1.18
+   }
+  },
+  "FRA": {
+   "2025": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 63.31,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 81.837,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 105.135,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 36.813,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 40.989,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 46.241,
+    "Annual potential support ratio [15-64/65+]": 2.716,
+    "Annual potential support ratio [20-64/65+]": 2.44,
+    "Annual potential support ratio [25-64/65+]": 2.163
+   },
+   "2050": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 75.833,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 93.103,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 115.58,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 48.461,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 53.221,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 59.416,
+    "Annual potential support ratio [15-64/65+]": 2.064,
+    "Annual potential support ratio [20-64/65+]": 1.879,
+    "Annual potential support ratio [25-64/65+]": 1.683
+   },
+   "2100": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 81.639,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 99.58,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 124.474,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 56.214,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 61.767,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 69.471,
+    "Annual potential support ratio [15-64/65+]": 1.779,
+    "Annual potential support ratio [20-64/65+]": 1.619,
+    "Annual potential support ratio [25-64/65+]": 1.439
+   }
+  },
+  "DEU": {
+   "2025": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 60.228,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 72.983,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 89.017,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 37.979,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 41.003,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 44.803,
+    "Annual potential support ratio [15-64/65+]": 2.633,
+    "Annual potential support ratio [20-64/65+]": 2.439,
+    "Annual potential support ratio [25-64/65+]": 2.232
+   },
+   "2050": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 76.71,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 91.749,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 112.859,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 53.514,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 58.069,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 64.462,
+    "Annual potential support ratio [15-64/65+]": 1.869,
+    "Annual potential support ratio [20-64/65+]": 1.722,
+    "Annual potential support ratio [25-64/65+]": 1.551
+   },
+   "2100": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 81.346,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 98.87,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 122.528,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 56.563,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 62.029,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 69.409,
+    "Annual potential support ratio [15-64/65+]": 1.768,
+    "Annual potential support ratio [20-64/65+]": 1.612,
+    "Annual potential support ratio [25-64/65+]": 1.441
+   }
+  },
+  "MEX": {
+   "2025": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 48.395,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 69.665,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 97.915,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 12.645,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 14.458,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 16.865,
+    "Annual potential support ratio [15-64/65+]": 7.908,
+    "Annual potential support ratio [20-64/65+]": 6.917,
+    "Annual potential support ratio [25-64/65+]": 5.929
+   },
+   "2050": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 52.519,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 68.533,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 88.751,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 25.861,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 28.576,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 32.004,
+    "Annual potential support ratio [15-64/65+]": 3.867,
+    "Annual potential support ratio [20-64/65+]": 3.499,
+    "Annual potential support ratio [25-64/65+]": 3.125
+   },
+   "2100": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 82.134,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 99.324,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 120.881,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 58.021,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 63.497,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 70.364,
+    "Annual potential support ratio [15-64/65+]": 1.724,
+    "Annual potential support ratio [20-64/65+]": 1.575,
+    "Annual potential support ratio [25-64/65+]": 1.421
+   }
+  },
+  "ARG": {
+   "2025": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 50.716,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 70.909,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 96.227,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 19.042,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 21.593,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 24.792,
+    "Annual potential support ratio [15-64/65+]": 5.252,
+    "Annual potential support ratio [20-64/65+]": 4.631,
+    "Annual potential support ratio [25-64/65+]": 4.034
+   },
+   "2050": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 54.834,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 68.806,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 85.169,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 30.884,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 33.67,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 36.934,
+    "Annual potential support ratio [15-64/65+]": 3.238,
+    "Annual potential support ratio [20-64/65+]": 2.97,
+    "Annual potential support ratio [25-64/65+]": 2.708
+   },
+   "2100": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 86.157,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 102.796,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 124.133,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 63.956,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 69.672,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 77.003,
+    "Annual potential support ratio [15-64/65+]": 1.564,
+    "Annual potential support ratio [20-64/65+]": 1.435,
+    "Annual potential support ratio [25-64/65+]": 1.299
+   }
+  },
+  "BRA": {
+   "2025": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 44.649,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 60.698,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 81.948,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 16.606,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 18.449,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 20.888,
+    "Annual potential support ratio [15-64/65+]": 6.022,
+    "Annual potential support ratio [20-64/65+]": 5.42,
+    "Annual potential support ratio [25-64/65+]": 4.787
+   },
+   "2050": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 59.119,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 73.665,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 91.84,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 35.808,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 39.082,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 43.172,
+    "Annual potential support ratio [15-64/65+]": 2.793,
+    "Annual potential support ratio [20-64/65+]": 2.559,
+    "Annual potential support ratio [25-64/65+]": 2.316
+   },
+   "2100": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 84.908,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 101.697,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 122.857,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 62.054,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 67.688,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 74.789,
+    "Annual potential support ratio [15-64/65+]": 1.612,
+    "Annual potential support ratio [20-64/65+]": 1.477,
+    "Annual potential support ratio [25-64/65+]": 1.337
+   }
+  },
+  "CAN": {
+   "2025": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 54.418,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 68.725,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 87.919,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 31.286,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 34.184,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 38.073,
+    "Annual potential support ratio [15-64/65+]": 3.196,
+    "Annual potential support ratio [20-64/65+]": 2.925,
+    "Annual potential support ratio [25-64/65+]": 2.627
+   },
+   "2050": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 64.288,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 78.214,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 97.35,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 42.172,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 45.747,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 50.659,
+    "Annual potential support ratio [15-64/65+]": 2.371,
+    "Annual potential support ratio [20-64/65+]": 2.186,
+    "Annual potential support ratio [25-64/65+]": 1.974
+   },
+   "2100": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 77.672,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 93.783,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 116.007,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 53.925,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 58.814,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 65.56,
+    "Annual potential support ratio [15-64/65+]": 1.854,
+    "Annual potential support ratio [20-64/65+]": 1.7,
+    "Annual potential support ratio [25-64/65+]": 1.525
+   }
+  },
+  "USA": {
+   "2025": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 55.006,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 72.592,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 94.935,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 28.501,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 31.735,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 35.843,
+    "Annual potential support ratio [15-64/65+]": 3.509,
+    "Annual potential support ratio [20-64/65+]": 3.151,
+    "Annual potential support ratio [25-64/65+]": 2.79
+   },
+   "2050": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 63.983,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 79.931,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 101.142,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 37.898,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 41.583,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 46.485,
+    "Annual potential support ratio [15-64/65+]": 2.639,
+    "Annual potential support ratio [20-64/65+]": 2.405,
+    "Annual potential support ratio [25-64/65+]": 2.151
+   },
+   "2100": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 74.845,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 91.687,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 114.904,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 49.679,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 54.465,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 61.061,
+    "Annual potential support ratio [15-64/65+]": 2.013,
+    "Annual potential support ratio [20-64/65+]": 1.836,
+    "Annual potential support ratio [25-64/65+]": 1.638
+   }
+  },
+  "AUS": {
+   "2025": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 55.697,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 72.195,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 92.118,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 28.17,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 31.155,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 34.76,
+    "Annual potential support ratio [15-64/65+]": 3.55,
+    "Annual potential support ratio [20-64/65+]": 3.21,
+    "Annual potential support ratio [25-64/65+]": 2.877
+   },
+   "2050": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 65.442,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 81.118,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 102.911,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 39.459,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 43.198,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 48.395,
+    "Annual potential support ratio [15-64/65+]": 2.534,
+    "Annual potential support ratio [20-64/65+]": 2.315,
+    "Annual potential support ratio [25-64/65+]": 2.066
+   },
+   "2100": {
+    "Variant": "Medium",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 75.786,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 93.016,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 116.49,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 49.851,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 54.737,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 61.394,
+    "Annual potential support ratio [15-64/65+]": 2.006,
+    "Annual potential support ratio [20-64/65+]": 1.827,
+    "Annual potential support ratio [25-64/65+]": 1.629
+   }
+  }
+ },
+ "High variant": {
+  "WLD": {
+   "2025": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 53.798,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 75.332,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 102.128,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 15.967,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 18.203,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 20.985,
+    "Annual potential support ratio [15-64/65+]": 6.263,
+    "Annual potential support ratio [20-64/65+]": 5.494,
+    "Annual potential support ratio [25-64/65+]": 4.765
+   },
+   "2050": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 63.631,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 86.29,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 114.018,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 24.84,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 28.28,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 32.489,
+    "Annual potential support ratio [15-64/65+]": 4.026,
+    "Annual potential support ratio [20-64/65+]": 3.536,
+    "Annual potential support ratio [25-64/65+]": 3.078
+   },
+   "2100": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 65.87,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 87.011,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 113.874,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 30.387,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 34.26,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 39.181,
+    "Annual potential support ratio [15-64/65+]": 3.291,
+    "Annual potential support ratio [20-64/65+]": 2.919,
+    "Annual potential support ratio [25-64/65+]": 2.552
+   }
+  },
+  "ETH": {
+   "2025": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 73.137,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 113.431,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 171.489,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 5.69,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 7.014,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 8.922,
+    "Annual potential support ratio [15-64/65+]": 17.576,
+    "Annual potential support ratio [20-64/65+]": 14.257,
+    "Annual potential support ratio [25-64/65+]": 11.209
+   },
+   "2050": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 61.623,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 92.24,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 134.758,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 8.026,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 9.546,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 11.657,
+    "Annual potential support ratio [15-64/65+]": 12.46,
+    "Annual potential support ratio [20-64/65+]": 10.475,
+    "Annual potential support ratio [25-64/65+]": 8.578
+   },
+   "2100": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 59.919,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 82.017,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 111.291,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 21.442,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 24.405,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 28.33,
+    "Annual potential support ratio [15-64/65+]": 4.664,
+    "Annual potential support ratio [20-64/65+]": 4.098,
+    "Annual potential support ratio [25-64/65+]": 3.53
+   }
+  },
+  "KEN": {
+   "2025": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 65.194,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 103.974,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 155.85,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 4.975,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 6.143,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 7.705,
+    "Annual potential support ratio [15-64/65+]": 20.1,
+    "Annual potential support ratio [20-64/65+]": 16.279,
+    "Annual potential support ratio [25-64/65+]": 12.978
+   },
+   "2050": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 58.06,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 87.444,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 124.917,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 8.312,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 9.858,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 11.828,
+    "Annual potential support ratio [15-64/65+]": 12.03,
+    "Annual potential support ratio [20-64/65+]": 10.144,
+    "Annual potential support ratio [25-64/65+]": 8.454
+   },
+   "2100": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 56.962,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 78.344,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 105.153,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 19.051,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 21.646,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 24.9,
+    "Annual potential support ratio [15-64/65+]": 5.249,
+    "Annual potential support ratio [20-64/65+]": 4.62,
+    "Annual potential support ratio [25-64/65+]": 4.016
+   }
+  },
+  "COD": {
+   "2025": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 96.679,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 147.583,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 214.633,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 6.051,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 7.617,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 9.68,
+    "Annual potential support ratio [15-64/65+]": 16.527,
+    "Annual potential support ratio [20-64/65+]": 13.129,
+    "Annual potential support ratio [25-64/65+]": 10.331
+   },
+   "2050": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 75.226,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 116.537,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 173.236,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 5.834,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 7.21,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 9.098,
+    "Annual potential support ratio [15-64/65+]": 17.14,
+    "Annual potential support ratio [20-64/65+]": 13.87,
+    "Annual potential support ratio [25-64/65+]": 10.992
+   },
+   "2100": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 56.687,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 80.668,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 111.294,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 13.63,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 15.717,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 18.381,
+    "Annual potential support ratio [15-64/65+]": 7.337,
+    "Annual potential support ratio [20-64/65+]": 6.363,
+    "Annual potential support ratio [25-64/65+]": 5.441
+   }
+  },
+  "EGY": {
+   "2025": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 58.74,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 86.221,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 120.427,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 8.344,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 9.789,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 11.587,
+    "Annual potential support ratio [15-64/65+]": 11.984,
+    "Annual potential support ratio [20-64/65+]": 10.216,
+    "Annual potential support ratio [25-64/65+]": 8.631
+   },
+   "2050": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 58.842,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 83.754,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 113.89,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 14.328,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 16.575,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 19.294,
+    "Annual potential support ratio [15-64/65+]": 6.979,
+    "Annual potential support ratio [20-64/65+]": 6.033,
+    "Annual potential support ratio [25-64/65+]": 5.183
+   },
+   "2100": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 62.921,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 83.548,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 109.365,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 27.361,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 30.824,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 35.16,
+    "Annual potential support ratio [15-64/65+]": 3.655,
+    "Annual potential support ratio [20-64/65+]": 3.244,
+    "Annual potential support ratio [25-64/65+]": 2.844
+   }
+  },
+  "ZAF": {
+   "2025": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 48.838,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 70.027,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 96.41,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 10.216,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 11.671,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 13.482,
+    "Annual potential support ratio [15-64/65+]": 9.788,
+    "Annual potential support ratio [20-64/65+]": 8.568,
+    "Annual potential support ratio [25-64/65+]": 7.417
+   },
+   "2050": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 55.31,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 77.451,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 107.431,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 16.116,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 18.414,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 21.525,
+    "Annual potential support ratio [15-64/65+]": 6.205,
+    "Annual potential support ratio [20-64/65+]": 5.431,
+    "Annual potential support ratio [25-64/65+]": 4.646
+   },
+   "2100": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 58.837,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 79.514,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 106.904,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 22.706,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 25.662,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 29.578,
+    "Annual potential support ratio [15-64/65+]": 4.404,
+    "Annual potential support ratio [20-64/65+]": 3.897,
+    "Annual potential support ratio [25-64/65+]": 3.381
+   }
+  },
+  "NGA": {
+   "2025": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 77.731,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 122.288,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 182.38,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 5.441,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 6.806,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 8.645,
+    "Annual potential support ratio [15-64/65+]": 18.378,
+    "Annual potential support ratio [20-64/65+]": 14.694,
+    "Annual potential support ratio [25-64/65+]": 11.567
+   },
+   "2050": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 61.605,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 93.328,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 136.924,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 6.821,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 8.16,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 10,
+    "Annual potential support ratio [15-64/65+]": 14.66,
+    "Annual potential support ratio [20-64/65+]": 12.255,
+    "Annual potential support ratio [25-64/65+]": 10
+   },
+   "2100": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 52.778,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 73.87,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 101.826,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 14.513,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 16.517,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 19.172,
+    "Annual potential support ratio [15-64/65+]": 6.89,
+    "Annual potential support ratio [20-64/65+]": 6.055,
+    "Annual potential support ratio [25-64/65+]": 5.216
+   }
+  },
+  "CHN": {
+   "2025": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 43.837,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 57.336,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 72.401,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 21.399,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 23.408,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 25.649,
+    "Annual potential support ratio [15-64/65+]": 4.673,
+    "Annual potential support ratio [20-64/65+]": 4.272,
+    "Annual potential support ratio [25-64/65+]": 3.899
+   },
+   "2050": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 73.456,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 87.387,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 102.21,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 50.145,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 54.172,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 58.458,
+    "Annual potential support ratio [15-64/65+]": 1.994,
+    "Annual potential support ratio [20-64/65+]": 1.846,
+    "Annual potential support ratio [25-64/65+]": 1.711
+   },
+   "2100": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 87.945,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 106.533,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 130.625,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 63.065,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 69.302,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 77.387,
+    "Annual potential support ratio [15-64/65+]": 1.586,
+    "Annual potential support ratio [20-64/65+]": 1.443,
+    "Annual potential support ratio [25-64/65+]": 1.292
+   }
+  },
+  "JPN": {
+   "2025": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 70.48,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 84.945,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 103.66,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 51.039,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 55.369,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 60.972,
+    "Annual potential support ratio [15-64/65+]": 1.959,
+    "Annual potential support ratio [20-64/65+]": 1.806,
+    "Annual potential support ratio [25-64/65+]": 1.64
+   },
+   "2050": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 98.83,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 119.549,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 145.288,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 69.994,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 77.287,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 86.348,
+    "Annual potential support ratio [15-64/65+]": 1.429,
+    "Annual potential support ratio [20-64/65+]": 1.294,
+    "Annual potential support ratio [25-64/65+]": 1.158
+   },
+   "2100": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 82.112,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 101.985,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 129.222,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 53.171,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 58.974,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 66.926,
+    "Annual potential support ratio [15-64/65+]": 1.881,
+    "Annual potential support ratio [20-64/65+]": 1.696,
+    "Annual potential support ratio [25-64/65+]": 1.494
+   }
+  },
+  "KOR": {
+   "2025": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 44.3,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 54.22,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 67.737,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 29.267,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 31.279,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 34.021,
+    "Annual potential support ratio [15-64/65+]": 3.417,
+    "Annual potential support ratio [20-64/65+]": 3.197,
+    "Annual potential support ratio [25-64/65+]": 2.939
+   },
+   "2050": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 93.445,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 109.992,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 130.267,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 71.858,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 78.004,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 85.536,
+    "Annual potential support ratio [15-64/65+]": 1.392,
+    "Annual potential support ratio [20-64/65+]": 1.282,
+    "Annual potential support ratio [25-64/65+]": 1.169
+   },
+   "2100": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 90.225,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 108.905,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 135.01,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 64.878,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 71.249,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 80.152,
+    "Annual potential support ratio [15-64/65+]": 1.541,
+    "Annual potential support ratio [20-64/65+]": 1.404,
+    "Annual potential support ratio [25-64/65+]": 1.248
+   }
+  },
+  "BGD": {
+   "2025": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 52.759,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 79.055,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 114.595,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 10.152,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 11.9,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 14.261,
+    "Annual potential support ratio [15-64/65+]": 9.85,
+    "Annual potential support ratio [20-64/65+]": 8.404,
+    "Annual potential support ratio [25-64/65+]": 7.012
+   },
+   "2050": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 55.369,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 77.256,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 105.567,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 19.432,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 22.17,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 25.711,
+    "Annual potential support ratio [15-64/65+]": 5.146,
+    "Annual potential support ratio [20-64/65+]": 4.511,
+    "Annual potential support ratio [25-64/65+]": 3.889
+   },
+   "2100": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 74.779,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 96.504,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 123.202,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 40.988,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 46.083,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 52.344,
+    "Annual potential support ratio [15-64/65+]": 2.44,
+    "Annual potential support ratio [20-64/65+]": 2.17,
+    "Annual potential support ratio [25-64/65+]": 1.91
+   }
+  },
+  "IND": {
+   "2025": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 46.572,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 67.798,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 97.026,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 10.78,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 12.341,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 14.491,
+    "Annual potential support ratio [15-64/65+]": 9.276,
+    "Annual potential support ratio [20-64/65+]": 8.103,
+    "Annual potential support ratio [25-64/65+]": 6.901
+   },
+   "2050": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 53.525,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 72.943,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 96.534,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 20.891,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 23.533,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 26.744,
+    "Annual potential support ratio [15-64/65+]": 4.787,
+    "Annual potential support ratio [20-64/65+]": 4.249,
+    "Annual potential support ratio [25-64/65+]": 3.739
+   },
+   "2100": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 71.166,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 91.188,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 115.78,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 38.225,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 42.697,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 48.189,
+    "Annual potential support ratio [15-64/65+]": 2.616,
+    "Annual potential support ratio [20-64/65+]": 2.342,
+    "Annual potential support ratio [25-64/65+]": 2.075
+   }
+  },
+  "IRN": {
+   "2025": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 44.492,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 60.784,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 79.006,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 12.365,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 13.759,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 15.319,
+    "Annual potential support ratio [15-64/65+]": 8.087,
+    "Annual potential support ratio [20-64/65+]": 7.268,
+    "Annual potential support ratio [25-64/65+]": 6.528
+   },
+   "2050": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 65.093,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 82.717,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 103.556,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 34.521,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 38.206,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 42.564,
+    "Annual potential support ratio [15-64/65+]": 2.897,
+    "Annual potential support ratio [20-64/65+]": 2.617,
+    "Annual potential support ratio [25-64/65+]": 2.349
+   },
+   "2100": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 77.947,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 98.27,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 123.72,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 46.9,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 52.257,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 58.965,
+    "Annual potential support ratio [15-64/65+]": 2.132,
+    "Annual potential support ratio [20-64/65+]": 1.914,
+    "Annual potential support ratio [25-64/65+]": 1.696
+   }
+  },
+  "PAK": {
+   "2025": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 68.83,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 105.963,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 154.263,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 7.344,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 8.959,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 11.06,
+    "Annual potential support ratio [15-64/65+]": 13.617,
+    "Annual potential support ratio [20-64/65+]": 11.162,
+    "Annual potential support ratio [25-64/65+]": 9.041
+   },
+   "2050": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 61.004,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 90.382,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 127.362,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 9.584,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 11.333,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 13.534,
+    "Annual potential support ratio [15-64/65+]": 10.434,
+    "Annual potential support ratio [20-64/65+]": 8.824,
+    "Annual potential support ratio [25-64/65+]": 7.389
+   },
+   "2100": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 58.353,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 80.106,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 107.439,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 20.033,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 22.785,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 26.243,
+    "Annual potential support ratio [15-64/65+]": 4.992,
+    "Annual potential support ratio [20-64/65+]": 4.389,
+    "Annual potential support ratio [25-64/65+]": 3.811
+   }
+  },
+  "IDN": {
+   "2025": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 47.007,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 67.216,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 91.893,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 11.058,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 12.578,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 14.435,
+    "Annual potential support ratio [15-64/65+]": 9.043,
+    "Annual potential support ratio [20-64/65+]": 7.95,
+    "Annual potential support ratio [25-64/65+]": 6.928
+   },
+   "2050": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 57.957,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 78.981,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 104.482,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 22.164,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 25.113,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 28.692,
+    "Annual potential support ratio [15-64/65+]": 4.512,
+    "Annual potential support ratio [20-64/65+]": 3.982,
+    "Annual potential support ratio [25-64/65+]": 3.485
+   },
+   "2100": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 65.353,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 85.062,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 109.646,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 32.071,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 35.893,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 40.661,
+    "Annual potential support ratio [15-64/65+]": 3.118,
+    "Annual potential support ratio [20-64/65+]": 2.786,
+    "Annual potential support ratio [25-64/65+]": 2.459
+   }
+  },
+  "PHL": {
+   "2025": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 49.407,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 74.881,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 108.29,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 8.526,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 9.98,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 11.886,
+    "Annual potential support ratio [15-64/65+]": 11.729,
+    "Annual potential support ratio [20-64/65+]": 10.021,
+    "Annual potential support ratio [25-64/65+]": 8.413
+   },
+   "2050": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 50.814,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 70.667,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 93.61,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 15.448,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 17.482,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 19.832,
+    "Annual potential support ratio [15-64/65+]": 6.473,
+    "Annual potential support ratio [20-64/65+]": 5.72,
+    "Annual potential support ratio [25-64/65+]": 5.042
+   },
+   "2100": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 63.292,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 82.127,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 106.055,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 31.587,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 35.231,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 39.86,
+    "Annual potential support ratio [15-64/65+]": 3.166,
+    "Annual potential support ratio [20-64/65+]": 2.838,
+    "Annual potential support ratio [25-64/65+]": 2.509
+   }
+  },
+  "VNM": {
+   "2025": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 48.204,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 66.231,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 86.074,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 14.035,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 15.742,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 17.621,
+    "Annual potential support ratio [15-64/65+]": 7.125,
+    "Annual potential support ratio [20-64/65+]": 6.352,
+    "Annual potential support ratio [25-64/65+]": 5.675
+   },
+   "2050": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 64.27,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 84.046,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 106.968,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 30.527,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 34.202,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 38.462,
+    "Annual potential support ratio [15-64/65+]": 3.276,
+    "Annual potential support ratio [20-64/65+]": 2.924,
+    "Annual potential support ratio [25-64/65+]": 2.6
+   },
+   "2100": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 72.332,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 92.412,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 117.552,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 39.926,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 44.578,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 50.402,
+    "Annual potential support ratio [15-64/65+]": 2.505,
+    "Annual potential support ratio [20-64/65+]": 2.243,
+    "Annual potential support ratio [25-64/65+]": 1.984
+   }
+  },
+  "SAU": {
+   "2025": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 36.743,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 51.61,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 71.887,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 4.169,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 4.622,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 5.24,
+    "Annual potential support ratio [15-64/65+]": 23.987,
+    "Annual potential support ratio [20-64/65+]": 21.635,
+    "Annual potential support ratio [25-64/65+]": 19.082
+   },
+   "2050": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 44.903,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 61.177,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 84.127,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 11.088,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 12.333,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 14.089,
+    "Annual potential support ratio [15-64/65+]": 9.019,
+    "Annual potential support ratio [20-64/65+]": 8.108,
+    "Annual potential support ratio [25-64/65+]": 7.098
+   },
+   "2100": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 54.511,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 71.013,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 93.676,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 21.393,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 23.678,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 26.816,
+    "Annual potential support ratio [15-64/65+]": 4.674,
+    "Annual potential support ratio [20-64/65+]": 4.223,
+    "Annual potential support ratio [25-64/65+]": 3.729
+   }
+  },
+  "TUR": {
+   "2025": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 46.591,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 63.836,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 85.621,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 15.453,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 17.271,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 19.568,
+    "Annual potential support ratio [15-64/65+]": 6.471,
+    "Annual potential support ratio [20-64/65+]": 5.79,
+    "Annual potential support ratio [25-64/65+]": 5.11
+   },
+   "2050": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 63.61,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 81.827,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 102.071,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 33.739,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 37.496,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 41.671,
+    "Annual potential support ratio [15-64/65+]": 2.964,
+    "Annual potential support ratio [20-64/65+]": 2.667,
+    "Annual potential support ratio [25-64/65+]": 2.4
+   },
+   "2100": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 80.692,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 100.206,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 123.848,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 51.03,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 56.541,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 63.218,
+    "Annual potential support ratio [15-64/65+]": 1.96,
+    "Annual potential support ratio [20-64/65+]": 1.769,
+    "Annual potential support ratio [25-64/65+]": 1.582
+   }
+  },
+  "POL": {
+   "2025": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 54.709,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 68.685,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 82.844,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 32.035,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 34.928,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 37.86,
+    "Annual potential support ratio [15-64/65+]": 3.122,
+    "Annual potential support ratio [20-64/65+]": 2.863,
+    "Annual potential support ratio [25-64/65+]": 2.641
+   },
+   "2050": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 80.49,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 97.357,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 117.306,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 53.801,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 58.829,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 64.776,
+    "Annual potential support ratio [15-64/65+]": 1.859,
+    "Annual potential support ratio [20-64/65+]": 1.7,
+    "Annual potential support ratio [25-64/65+]": 1.544
+   },
+   "2100": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 80.682,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 99.878,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 124.414,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 52.645,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 58.238,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 65.386,
+    "Annual potential support ratio [15-64/65+]": 1.9,
+    "Annual potential support ratio [20-64/65+]": 1.717,
+    "Annual potential support ratio [25-64/65+]": 1.529
+   }
+  },
+  "RUS": {
+   "2025": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 53.763,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 68.427,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 84.484,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 27.296,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 29.899,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 32.75,
+    "Annual potential support ratio [15-64/65+]": 3.664,
+    "Annual potential support ratio [20-64/65+]": 3.345,
+    "Annual potential support ratio [25-64/65+]": 3.053
+   },
+   "2050": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 70.464,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 88.775,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 111.696,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 37.874,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 41.942,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 47.035,
+    "Annual potential support ratio [15-64/65+]": 2.64,
+    "Annual potential support ratio [20-64/65+]": 2.384,
+    "Annual potential support ratio [25-64/65+]": 2.126
+   },
+   "2100": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 65.737,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 85.112,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 111.206,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 34.29,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 38.299,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 43.698,
+    "Annual potential support ratio [15-64/65+]": 2.916,
+    "Annual potential support ratio [20-64/65+]": 2.611,
+    "Annual potential support ratio [25-64/65+]": 2.288
+   }
+  },
+  "NOR": {
+   "2025": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 54.238,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 70.212,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 90.228,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 29.356,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 32.396,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 36.206,
+    "Annual potential support ratio [15-64/65+]": 3.406,
+    "Annual potential support ratio [20-64/65+]": 3.087,
+    "Annual potential support ratio [25-64/65+]": 2.762
+   },
+   "2050": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 73.326,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 92.237,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 116.46,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 43.381,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 48.114,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 54.177,
+    "Annual potential support ratio [15-64/65+]": 2.305,
+    "Annual potential support ratio [20-64/65+]": 2.078,
+    "Annual potential support ratio [25-64/65+]": 1.846
+   },
+   "2100": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 76.442,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 96.007,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 122.41,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 45.889,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 50.978,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 57.845,
+    "Annual potential support ratio [15-64/65+]": 2.179,
+    "Annual potential support ratio [20-64/65+]": 1.962,
+    "Annual potential support ratio [25-64/65+]": 1.729
+   }
+  },
+  "SWE": {
+   "2025": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 60.688,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 77.664,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 97.719,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 33.524,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 37.066,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 41.25,
+    "Annual potential support ratio [15-64/65+]": 2.983,
+    "Annual potential support ratio [20-64/65+]": 2.698,
+    "Annual potential support ratio [25-64/65+]": 2.424
+   },
+   "2050": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 71.934,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 89.847,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 112.821,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 41.3,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 45.603,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 51.121,
+    "Annual potential support ratio [15-64/65+]": 2.421,
+    "Annual potential support ratio [20-64/65+]": 2.193,
+    "Annual potential support ratio [25-64/65+]": 1.956
+   },
+   "2100": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 75.386,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 95.23,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 121.936,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 44.617,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 49.665,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 56.459,
+    "Annual potential support ratio [15-64/65+]": 2.241,
+    "Annual potential support ratio [20-64/65+]": 2.013,
+    "Annual potential support ratio [25-64/65+]": 1.771
+   }
+  },
+  "GBR": {
+   "2025": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 58.271,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 75.024,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 94.791,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 31.11,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 34.403,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 38.288,
+    "Annual potential support ratio [15-64/65+]": 3.214,
+    "Annual potential support ratio [20-64/65+]": 2.907,
+    "Annual potential support ratio [25-64/65+]": 2.612
+   },
+   "2050": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 71.069,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 90.151,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 114.671,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 39.409,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 43.805,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 49.454,
+    "Annual potential support ratio [15-64/65+]": 2.537,
+    "Annual potential support ratio [20-64/65+]": 2.283,
+    "Annual potential support ratio [25-64/65+]": 2.022
+   },
+   "2100": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 73.903,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 93.789,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 120.507,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 42.812,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 47.707,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 54.285,
+    "Annual potential support ratio [15-64/65+]": 2.336,
+    "Annual potential support ratio [20-64/65+]": 2.096,
+    "Annual potential support ratio [25-64/65+]": 1.842
+   }
+  },
+  "ITA": {
+   "2025": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 58.434,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 71.782,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 88.472,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 39.684,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 43.028,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 47.208,
+    "Annual potential support ratio [15-64/65+]": 2.52,
+    "Annual potential support ratio [20-64/65+]": 2.324,
+    "Annual potential support ratio [25-64/65+]": 2.118
+   },
+   "2050": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 94.988,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 114.752,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 139.708,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 67.455,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 74.292,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 82.925,
+    "Annual potential support ratio [15-64/65+]": 1.482,
+    "Annual potential support ratio [20-64/65+]": 1.346,
+    "Annual potential support ratio [25-64/65+]": 1.206
+   },
+   "2100": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 80.993,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 100.135,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 126.132,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 52.347,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 57.883,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 65.402,
+    "Annual potential support ratio [15-64/65+]": 1.91,
+    "Annual potential support ratio [20-64/65+]": 1.728,
+    "Annual potential support ratio [25-64/65+]": 1.529
+   }
+  },
+  "ESP": {
+   "2025": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 52.44,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 66.054,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 82.059,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 32.921,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 35.862,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 39.318,
+    "Annual potential support ratio [15-64/65+]": 3.038,
+    "Annual potential support ratio [20-64/65+]": 2.789,
+    "Annual potential support ratio [25-64/65+]": 2.543
+   },
+   "2050": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 94.765,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 114.536,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 139.618,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 65.891,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 72.58,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 81.066,
+    "Annual potential support ratio [15-64/65+]": 1.518,
+    "Annual potential support ratio [20-64/65+]": 1.378,
+    "Annual potential support ratio [25-64/65+]": 1.234
+   },
+   "2100": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 79.613,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 99.263,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 126.013,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 50.525,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 56.052,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 63.577,
+    "Annual potential support ratio [15-64/65+]": 1.979,
+    "Annual potential support ratio [20-64/65+]": 1.784,
+    "Annual potential support ratio [25-64/65+]": 1.573
+   }
+  },
+  "FRA": {
+   "2025": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 63.666,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 82.233,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 105.581,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 36.813,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 40.989,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 46.241,
+    "Annual potential support ratio [15-64/65+]": 2.716,
+    "Annual potential support ratio [20-64/65+]": 2.44,
+    "Annual potential support ratio [25-64/65+]": 2.163
+   },
+   "2050": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 80.804,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 102.542,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 129.649,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 46.565,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 52.164,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 59.145,
+    "Annual potential support ratio [15-64/65+]": 2.148,
+    "Annual potential support ratio [20-64/65+]": 1.917,
+    "Annual potential support ratio [25-64/65+]": 1.691
+   },
+   "2100": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 74.953,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 95.402,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 123.125,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 42.457,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 47.419,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 54.147,
+    "Annual potential support ratio [15-64/65+]": 2.355,
+    "Annual potential support ratio [20-64/65+]": 2.109,
+    "Annual potential support ratio [25-64/65+]": 1.847
+   }
+  },
+  "DEU": {
+   "2025": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 60.579,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 73.362,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 89.431,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 37.979,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 41.003,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 44.803,
+    "Annual potential support ratio [15-64/65+]": 2.633,
+    "Annual potential support ratio [20-64/65+]": 2.439,
+    "Annual potential support ratio [25-64/65+]": 2.232
+   },
+   "2050": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 80.9,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 99.998,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 125.563,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 51.441,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 56.872,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 64.141,
+    "Annual potential support ratio [15-64/65+]": 1.944,
+    "Annual potential support ratio [20-64/65+]": 1.758,
+    "Annual potential support ratio [25-64/65+]": 1.559
+   },
+   "2100": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 74.773,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 94.881,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 121.434,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 43.142,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 48.105,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 54.66,
+    "Annual potential support ratio [15-64/65+]": 2.318,
+    "Annual potential support ratio [20-64/65+]": 2.079,
+    "Annual potential support ratio [25-64/65+]": 1.829
+   }
+  },
+  "MEX": {
+   "2025": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 48.843,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 70.176,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 98.511,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 12.645,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 14.458,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 16.865,
+    "Annual potential support ratio [15-64/65+]": 7.908,
+    "Annual potential support ratio [20-64/65+]": 6.917,
+    "Annual potential support ratio [25-64/65+]": 5.929
+   },
+   "2050": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 58.53,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 78.826,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 103.691,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 24.785,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 27.958,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 31.846,
+    "Annual potential support ratio [15-64/65+]": 4.035,
+    "Annual potential support ratio [20-64/65+]": 3.577,
+    "Annual potential support ratio [25-64/65+]": 3.14
+   },
+   "2100": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 72.806,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 93.388,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 119.073,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 40.11,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 44.887,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 50.849,
+    "Annual potential support ratio [15-64/65+]": 2.493,
+    "Annual potential support ratio [20-64/65+]": 2.228,
+    "Annual potential support ratio [25-64/65+]": 1.967
+   }
+  },
+  "ARG": {
+   "2025": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 51.128,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 71.376,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 96.764,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 19.042,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 21.593,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 24.792,
+    "Annual potential support ratio [15-64/65+]": 5.252,
+    "Annual potential support ratio [20-64/65+]": 4.631,
+    "Annual potential support ratio [25-64/65+]": 4.034
+   },
+   "2050": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 60.372,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 78.553,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 99.147,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 29.602,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 32.958,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 36.759,
+    "Annual potential support ratio [15-64/65+]": 3.378,
+    "Annual potential support ratio [20-64/65+]": 3.034,
+    "Annual potential support ratio [25-64/65+]": 2.72
+   },
+   "2100": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 75.013,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 94.26,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 118.957,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 45.064,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 50.02,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 56.378,
+    "Annual potential support ratio [15-64/65+]": 2.219,
+    "Annual potential support ratio [20-64/65+]": 1.999,
+    "Annual potential support ratio [25-64/65+]": 1.774
+   }
+  },
+  "BRA": {
+   "2025": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 45.049,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 61.143,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 82.451,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 16.606,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 18.449,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 20.888,
+    "Annual potential support ratio [15-64/65+]": 6.022,
+    "Annual potential support ratio [20-64/65+]": 5.42,
+    "Annual potential support ratio [25-64/65+]": 4.787
+   },
+   "2050": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 64.194,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 82.916,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 105.549,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 34.31,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 38.222,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 42.951,
+    "Annual potential support ratio [15-64/65+]": 2.915,
+    "Annual potential support ratio [20-64/65+]": 2.616,
+    "Annual potential support ratio [25-64/65+]": 2.328
+   },
+   "2100": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 74.472,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 94.036,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 118.685,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 43.693,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 48.592,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 54.765,
+    "Annual potential support ratio [15-64/65+]": 2.289,
+    "Annual potential support ratio [20-64/65+]": 2.058,
+    "Annual potential support ratio [25-64/65+]": 1.826
+   }
+  },
+  "CAN": {
+   "2025": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 54.806,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 69.149,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 88.391,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 31.286,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 34.184,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 38.073,
+    "Annual potential support ratio [15-64/65+]": 3.196,
+    "Annual potential support ratio [20-64/65+]": 2.925,
+    "Annual potential support ratio [25-64/65+]": 2.627
+   },
+   "2050": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 69.213,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 87.138,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 110.393,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 40.568,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 44.865,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 50.441,
+    "Annual potential support ratio [15-64/65+]": 2.465,
+    "Annual potential support ratio [20-64/65+]": 2.229,
+    "Annual potential support ratio [25-64/65+]": 1.983
+   },
+   "2100": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 73.109,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 91.922,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 117.171,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 42.618,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 47.25,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 53.466,
+    "Annual potential support ratio [15-64/65+]": 2.346,
+    "Annual potential support ratio [20-64/65+]": 2.116,
+    "Annual potential support ratio [25-64/65+]": 1.87
+   }
+  },
+  "USA": {
+   "2025": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 55.381,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 73.011,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 95.407,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 28.501,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 31.735,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 35.843,
+    "Annual potential support ratio [15-64/65+]": 3.509,
+    "Annual potential support ratio [20-64/65+]": 3.151,
+    "Annual potential support ratio [25-64/65+]": 2.79
+   },
+   "2050": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 69.034,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 89.02,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 114.507,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 36.47,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 40.782,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 46.281,
+    "Annual potential support ratio [15-64/65+]": 2.742,
+    "Annual potential support ratio [20-64/65+]": 2.452,
+    "Annual potential support ratio [25-64/65+]": 2.161
+   },
+   "2100": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 70.948,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 90.64,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 117.046,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 38.622,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 43.071,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 49.037,
+    "Annual potential support ratio [15-64/65+]": 2.589,
+    "Annual potential support ratio [20-64/65+]": 2.322,
+    "Annual potential support ratio [25-64/65+]": 2.039
+   }
+  },
+  "AUS": {
+   "2025": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 56.099,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 72.639,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 92.614,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 28.17,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 31.155,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 34.76,
+    "Annual potential support ratio [15-64/65+]": 3.55,
+    "Annual potential support ratio [20-64/65+]": 3.21,
+    "Annual potential support ratio [25-64/65+]": 2.877
+   },
+   "2050": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 70.389,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 89.866,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 115.793,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 38.048,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 42.397,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 48.187,
+    "Annual potential support ratio [15-64/65+]": 2.628,
+    "Annual potential support ratio [20-64/65+]": 2.359,
+    "Annual potential support ratio [25-64/65+]": 2.075
+   },
+   "2100": {
+    "Variant": "High",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 72.703,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 92.811,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 119.483,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 39.777,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 44.409,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 50.552,
+    "Annual potential support ratio [15-64/65+]": 2.514,
+    "Annual potential support ratio [20-64/65+]": 2.252,
+    "Annual potential support ratio [25-64/65+]": 1.978
+   }
+  }
+ },
+ "Low variant": {
+  "WLD": {
+   "2025": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 52.985,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 74.405,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 101.059,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 15.967,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 18.203,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 20.985,
+    "Annual potential support ratio [15-64/65+]": 6.263,
+    "Annual potential support ratio [20-64/65+]": 5.494,
+    "Annual potential support ratio [25-64/65+]": 4.765
+   },
+   "2050": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 52.042,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 66.639,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 85.74,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 26.83,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 29.406,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 32.777,
+    "Annual potential support ratio [15-64/65+]": 3.727,
+    "Annual potential support ratio [20-64/65+]": 3.401,
+    "Annual potential support ratio [25-64/65+]": 3.051
+   },
+   "2100": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 76.759,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 91.755,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 111.134,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 56.504,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 61.298,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 67.493,
+    "Annual potential support ratio [15-64/65+]": 1.77,
+    "Annual potential support ratio [20-64/65+]": 1.631,
+    "Annual potential support ratio [25-64/65+]": 1.482
+   }
+  },
+  "ETH": {
+   "2025": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 72.14,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 112.202,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 169.925,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 5.69,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 7.014,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 8.922,
+    "Annual potential support ratio [15-64/65+]": 17.576,
+    "Annual potential support ratio [20-64/65+]": 14.257,
+    "Annual potential support ratio [25-64/65+]": 11.209
+   },
+   "2050": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 47.713,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 69.946,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 102.312,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 8.574,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 9.864,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 11.743,
+    "Annual potential support ratio [15-64/65+]": 11.663,
+    "Annual potential support ratio [20-64/65+]": 10.138,
+    "Annual potential support ratio [25-64/65+]": 8.516
+   },
+   "2100": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 58.497,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 73.09,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 93.742,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 36.387,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 39.737,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 44.479,
+    "Annual potential support ratio [15-64/65+]": 2.748,
+    "Annual potential support ratio [20-64/65+]": 2.517,
+    "Annual potential support ratio [25-64/65+]": 2.248
+   }
+  },
+  "KEN": {
+   "2025": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 64.18,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 102.723,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 154.281,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 4.975,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 6.143,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 7.705,
+    "Annual potential support ratio [15-64/65+]": 20.1,
+    "Annual potential support ratio [20-64/65+]": 16.279,
+    "Annual potential support ratio [25-64/65+]": 12.978
+   },
+   "2050": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 44.117,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 64.516,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 91.597,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 8.973,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 10.243,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 11.929,
+    "Annual potential support ratio [15-64/65+]": 11.145,
+    "Annual potential support ratio [20-64/65+]": 9.763,
+    "Annual potential support ratio [25-64/65+]": 8.383
+   },
+   "2100": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 55.635,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 69.037,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 85.946,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 35.206,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 38.238,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 42.063,
+    "Annual potential support ratio [15-64/65+]": 2.84,
+    "Annual potential support ratio [20-64/65+]": 2.615,
+    "Annual potential support ratio [25-64/65+]": 2.377
+   }
+  },
+  "COD": {
+   "2025": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 95.737,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 146.396,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 213.126,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 6.051,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 7.617,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 9.68,
+    "Annual potential support ratio [15-64/65+]": 16.527,
+    "Annual potential support ratio [20-64/65+]": 13.129,
+    "Annual potential support ratio [25-64/65+]": 10.331
+   },
+   "2050": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 62.632,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 95.854,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 142.222,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 6.145,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 7.4,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 9.152,
+    "Annual potential support ratio [15-64/65+]": 16.274,
+    "Annual potential support ratio [20-64/65+]": 13.514,
+    "Annual potential support ratio [25-64/65+]": 10.927
+   },
+   "2100": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 48.086,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 64.586,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 85.54,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 20.462,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 22.742,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 25.638,
+    "Annual potential support ratio [15-64/65+]": 4.887,
+    "Annual potential support ratio [20-64/65+]": 4.397,
+    "Annual potential support ratio [25-64/65+]": 3.901
+   }
+  },
+  "EGY": {
+   "2025": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 57.853,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 85.18,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 119.195,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 8.344,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 9.789,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 11.587,
+    "Annual potential support ratio [15-64/65+]": 11.984,
+    "Annual potential support ratio [20-64/65+]": 10.216,
+    "Annual potential support ratio [25-64/65+]": 8.631
+   },
+   "2050": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 45.802,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 62.598,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 84.008,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 15.412,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 17.187,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 19.45,
+    "Annual potential support ratio [15-64/65+]": 6.489,
+    "Annual potential support ratio [20-64/65+]": 5.818,
+    "Annual potential support ratio [25-64/65+]": 5.141
+   },
+   "2100": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 69.828,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 83.531,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 100.862,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 50.506,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 54.581,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 59.735,
+    "Annual potential support ratio [15-64/65+]": 1.98,
+    "Annual potential support ratio [20-64/65+]": 1.832,
+    "Annual potential support ratio [25-64/65+]": 1.674
+   }
+  },
+  "ZAF": {
+   "2025": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 47.935,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 68.996,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 95.219,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 10.216,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 11.671,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 13.482,
+    "Annual potential support ratio [15-64/65+]": 9.788,
+    "Annual potential support ratio [20-64/65+]": 8.568,
+    "Annual potential support ratio [25-64/65+]": 7.417
+   },
+   "2050": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 42.047,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 56.141,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 76.924,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 17.443,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 19.174,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 21.726,
+    "Annual potential support ratio [15-64/65+]": 5.733,
+    "Annual potential support ratio [20-64/65+]": 5.215,
+    "Annual potential support ratio [25-64/65+]": 4.603
+   },
+   "2100": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 61.017,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 74.619,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 94.036,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 40.539,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 43.963,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 48.852,
+    "Annual potential support ratio [15-64/65+]": 2.467,
+    "Annual potential support ratio [20-64/65+]": 2.275,
+    "Annual potential support ratio [25-64/65+]": 2.047
+   }
+  },
+  "NGA": {
+   "2025": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 76.812,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 121.139,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 180.92,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 5.441,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 6.806,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 8.645,
+    "Annual potential support ratio [15-64/65+]": 18.378,
+    "Annual potential support ratio [20-64/65+]": 14.694,
+    "Annual potential support ratio [25-64/65+]": 11.567
+   },
+   "2050": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 47.921,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 71.468,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 105.299,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 7.253,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 8.408,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 10.066,
+    "Annual potential support ratio [15-64/65+]": 13.787,
+    "Annual potential support ratio [20-64/65+]": 11.894,
+    "Annual potential support ratio [25-64/65+]": 9.934
+   },
+   "2100": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 45.877,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 59.394,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 78.418,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 23.682,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 25.877,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 28.965,
+    "Annual potential support ratio [15-64/65+]": 4.223,
+    "Annual potential support ratio [20-64/65+]": 3.864,
+    "Annual potential support ratio [25-64/65+]": 3.452
+   }
+  },
+  "CHN": {
+   "2025": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 43.184,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 56.621,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 71.618,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 21.399,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 23.408,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 25.649,
+    "Annual potential support ratio [15-64/65+]": 4.673,
+    "Annual potential support ratio [20-64/65+]": 4.272,
+    "Annual potential support ratio [25-64/65+]": 3.899
+   },
+   "2050": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 64.39,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 70.245,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 77.711,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 54.6,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 56.545,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 59.025,
+    "Annual potential support ratio [15-64/65+]": 1.831,
+    "Annual potential support ratio [20-64/65+]": 1.769,
+    "Annual potential support ratio [25-64/65+]": 1.694
+   },
+   "2100": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 206.099,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 221.89,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 241.272,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 196.648,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 206.793,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 219.245,
+    "Annual potential support ratio [15-64/65+]": 0.509,
+    "Annual potential support ratio [20-64/65+]": 0.484,
+    "Annual potential support ratio [25-64/65+]": 0.456
+   }
+  },
+  "JPN": {
+   "2025": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 69.844,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 84.255,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 102.899,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 51.039,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 55.369,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 60.972,
+    "Annual potential support ratio [15-64/65+]": 1.959,
+    "Annual potential support ratio [20-64/65+]": 1.806,
+    "Annual potential support ratio [25-64/65+]": 1.64
+   },
+   "2050": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 90.801,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 101.573,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 117.564,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 76.496,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 80.814,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 87.226,
+    "Annual potential support ratio [15-64/65+]": 1.307,
+    "Annual potential support ratio [20-64/65+]": 1.237,
+    "Annual potential support ratio [25-64/65+]": 1.146
+   },
+   "2100": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 128.912,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 144.796,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 168.973,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 113.389,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 121.257,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 133.233,
+    "Annual potential support ratio [15-64/65+]": 0.882,
+    "Annual potential support ratio [20-64/65+]": 0.825,
+    "Annual potential support ratio [25-64/65+]": 0.751
+   }
+  },
+  "KOR": {
+   "2025": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 43.615,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 53.488,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 66.941,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 29.267,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 31.279,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 34.021,
+    "Annual potential support ratio [15-64/65+]": 3.417,
+    "Annual potential support ratio [20-64/65+]": 3.197,
+    "Annual potential support ratio [25-64/65+]": 2.939
+   },
+   "2050": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 87.315,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 93.229,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 103.217,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 79.776,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 82.295,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 86.549,
+    "Annual potential support ratio [15-64/65+]": 1.254,
+    "Annual potential support ratio [20-64/65+]": 1.215,
+    "Annual potential support ratio [25-64/65+]": 1.155
+   },
+   "2100": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 197.417,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 215.302,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 244.196,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 184.997,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 196.122,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 214.094,
+    "Annual potential support ratio [15-64/65+]": 0.541,
+    "Annual potential support ratio [20-64/65+]": 0.51,
+    "Annual potential support ratio [25-64/65+]": 0.467
+   }
+  },
+  "BGD": {
+   "2025": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 51.72,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 77.837,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 113.136,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 10.152,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 11.9,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 14.261,
+    "Annual potential support ratio [15-64/65+]": 9.85,
+    "Annual potential support ratio [20-64/65+]": 8.404,
+    "Annual potential support ratio [25-64/65+]": 7.012
+   },
+   "2050": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 42.896,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 56.343,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 75.06,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 21.208,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 23.204,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 25.981,
+    "Annual potential support ratio [15-64/65+]": 4.715,
+    "Annual potential support ratio [20-64/65+]": 4.31,
+    "Annual potential support ratio [25-64/65+]": 3.849
+   },
+   "2100": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 112.966,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 128.843,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 148.014,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 96.043,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 103.203,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 111.848,
+    "Annual potential support ratio [15-64/65+]": 1.041,
+    "Annual potential support ratio [20-64/65+]": 0.969,
+    "Annual potential support ratio [25-64/65+]": 0.894
+   }
+  },
+  "IND": {
+   "2025": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 45.705,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 66.805,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 95.86,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 10.78,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 12.341,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 14.491,
+    "Annual potential support ratio [15-64/65+]": 9.276,
+    "Annual potential support ratio [20-64/65+]": 8.103,
+    "Annual potential support ratio [25-64/65+]": 6.901
+   },
+   "2050": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 42.313,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 53.991,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 69.433,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 22.673,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 24.534,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 26.994,
+    "Annual potential support ratio [15-64/65+]": 4.41,
+    "Annual potential support ratio [20-64/65+]": 4.076,
+    "Annual potential support ratio [25-64/65+]": 3.705
+   },
+   "2100": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 97.703,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 111.646,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 128.995,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 81.628,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 87.385,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 94.548,
+    "Annual potential support ratio [15-64/65+]": 1.225,
+    "Annual potential support ratio [20-64/65+]": 1.144,
+    "Annual potential support ratio [25-64/65+]": 1.058
+   }
+  },
+  "IRN": {
+   "2025": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 43.704,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 59.906,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 78.029,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 12.365,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 13.759,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 15.319,
+    "Annual potential support ratio [15-64/65+]": 8.087,
+    "Annual potential support ratio [20-64/65+]": 7.268,
+    "Annual potential support ratio [25-64/65+]": 6.528
+   },
+   "2050": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 54.602,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 64.53,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 77.624,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 37.396,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 39.797,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 42.964,
+    "Annual potential support ratio [15-64/65+]": 2.674,
+    "Annual potential support ratio [20-64/65+]": 2.513,
+    "Annual potential support ratio [25-64/65+]": 2.328
+   },
+   "2100": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 122.493,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 138.007,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 157.08,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 107.375,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 114.863,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 124.067,
+    "Annual potential support ratio [15-64/65+]": 0.931,
+    "Annual potential support ratio [20-64/65+]": 0.871,
+    "Annual potential support ratio [25-64/65+]": 0.806
+   }
+  },
+  "PAK": {
+   "2025": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 67.904,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 104.834,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 152.869,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 7.344,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 8.959,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 11.06,
+    "Annual potential support ratio [15-64/65+]": 13.617,
+    "Annual potential support ratio [20-64/65+]": 11.162,
+    "Annual potential support ratio [25-64/65+]": 9.041
+   },
+   "2050": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 47.786,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 68.814,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 96.28,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 10.27,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 11.731,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 13.64,
+    "Annual potential support ratio [15-64/65+]": 9.737,
+    "Annual potential support ratio [20-64/65+]": 8.524,
+    "Annual potential support ratio [25-64/65+]": 7.332
+   },
+   "2100": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 56.872,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 71.101,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 89.018,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 35.199,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 38.391,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 42.412,
+    "Annual potential support ratio [15-64/65+]": 2.841,
+    "Annual potential support ratio [20-64/65+]": 2.605,
+    "Annual potential support ratio [25-64/65+]": 2.358
+   }
+  },
+  "IDN": {
+   "2025": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 46.205,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 66.304,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 90.847,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 11.058,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 12.578,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 14.435,
+    "Annual potential support ratio [15-64/65+]": 9.043,
+    "Annual potential support ratio [20-64/65+]": 7.95,
+    "Annual potential support ratio [25-64/65+]": 6.928
+   },
+   "2050": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 46.211,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 59.222,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 76.284,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 24.015,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 26.152,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 28.954,
+    "Annual potential support ratio [15-64/65+]": 4.164,
+    "Annual potential support ratio [20-64/65+]": 3.824,
+    "Annual potential support ratio [25-64/65+]": 3.454
+   },
+   "2100": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 81.6,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 95.042,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 111.789,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 64.6,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 69.382,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 75.339,
+    "Annual potential support ratio [15-64/65+]": 1.548,
+    "Annual potential support ratio [20-64/65+]": 1.441,
+    "Annual potential support ratio [25-64/65+]": 1.327
+   }
+  },
+  "PHL": {
+   "2025": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 48.491,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 73.809,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 107.013,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 8.526,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 9.98,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 11.886,
+    "Annual potential support ratio [15-64/65+]": 11.729,
+    "Annual potential support ratio [20-64/65+]": 10.021,
+    "Annual potential support ratio [25-64/65+]": 8.413
+   },
+   "2050": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 37.731,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 49.268,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 63.763,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 16.837,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 18.247,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 20.019,
+    "Annual potential support ratio [15-64/65+]": 5.939,
+    "Annual potential support ratio [20-64/65+]": 5.48,
+    "Annual potential support ratio [25-64/65+]": 4.995
+   },
+   "2100": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 83.626,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 96.421,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 112.487,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 68.126,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 72.873,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 78.834,
+    "Annual potential support ratio [15-64/65+]": 1.468,
+    "Annual potential support ratio [20-64/65+]": 1.372,
+    "Annual potential support ratio [25-64/65+]": 1.268
+   }
+  },
+  "VNM": {
+   "2025": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 47.437,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 65.371,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 85.111,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 14.035,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 15.742,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 17.621,
+    "Annual potential support ratio [15-64/65+]": 7.125,
+    "Annual potential support ratio [20-64/65+]": 6.352,
+    "Annual potential support ratio [25-64/65+]": 5.675
+   },
+   "2050": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 52.788,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 64.493,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 79.363,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 33.061,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 35.594,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 38.812,
+    "Annual potential support ratio [15-64/65+]": 3.025,
+    "Annual potential support ratio [20-64/65+]": 2.809,
+    "Annual potential support ratio [25-64/65+]": 2.577
+   },
+   "2100": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 105.25,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 119.199,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 136.777,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 89.757,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 95.857,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 103.544,
+    "Annual potential support ratio [15-64/65+]": 1.114,
+    "Annual potential support ratio [20-64/65+]": 1.043,
+    "Annual potential support ratio [25-64/65+]": 0.966
+   }
+  },
+  "SAU": {
+   "2025": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 36.025,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 50.814,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 70.985,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 4.169,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 4.622,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 5.24,
+    "Annual potential support ratio [15-64/65+]": 23.987,
+    "Annual potential support ratio [20-64/65+]": 21.635,
+    "Annual potential support ratio [25-64/65+]": 19.082
+   },
+   "2050": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 33.655,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 44.02,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 60.745,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 11.791,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 12.706,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 14.181,
+    "Annual potential support ratio [15-64/65+]": 8.481,
+    "Annual potential support ratio [20-64/65+]": 7.87,
+    "Annual potential support ratio [25-64/65+]": 7.052
+   },
+   "2100": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 50.128,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 59.716,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 75.186,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 30.724,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 32.686,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 35.852,
+    "Annual potential support ratio [15-64/65+]": 3.255,
+    "Annual potential support ratio [20-64/65+]": 3.059,
+    "Annual potential support ratio [25-64/65+]": 2.789
+   }
+  },
+  "TUR": {
+   "2025": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 45.781,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 62.931,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 84.596,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 15.453,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 17.271,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 19.568,
+    "Annual potential support ratio [15-64/65+]": 6.471,
+    "Annual potential support ratio [20-64/65+]": 5.79,
+    "Annual potential support ratio [25-64/65+]": 5.11
+   },
+   "2050": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 53.682,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 63.839,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 75.926,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 36.768,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 39.198,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 42.09,
+    "Annual potential support ratio [15-64/65+]": 2.72,
+    "Annual potential support ratio [20-64/65+]": 2.551,
+    "Annual potential support ratio [25-64/65+]": 2.376
+   },
+   "2100": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 138.628,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 153.597,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 168.171,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 125.652,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 133.534,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 141.208,
+    "Annual potential support ratio [15-64/65+]": 0.796,
+    "Annual potential support ratio [20-64/65+]": 0.749,
+    "Annual potential support ratio [25-64/65+]": 0.708
+   }
+  },
+  "POL": {
+   "2025": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 54.001,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 67.912,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 82.007,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 32.035,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 34.928,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 37.86,
+    "Annual potential support ratio [15-64/65+]": 3.122,
+    "Annual potential support ratio [20-64/65+]": 2.863,
+    "Annual potential support ratio [25-64/65+]": 2.641
+   },
+   "2050": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 72.032,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 80.638,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 92.24,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 58.601,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 61.532,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 65.484,
+    "Annual potential support ratio [15-64/65+]": 1.706,
+    "Annual potential support ratio [20-64/65+]": 1.625,
+    "Annual potential support ratio [25-64/65+]": 1.527
+   },
+   "2100": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 145.732,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 160.998,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 179.731,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 133.085,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 141.353,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 151.499,
+    "Annual potential support ratio [15-64/65+]": 0.751,
+    "Annual potential support ratio [20-64/65+]": 0.707,
+    "Annual potential support ratio [25-64/65+]": 0.66
+   }
+  },
+  "RUS": {
+   "2025": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 53.076,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 67.674,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 83.659,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 27.296,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 29.899,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 32.75,
+    "Annual potential support ratio [15-64/65+]": 3.664,
+    "Annual potential support ratio [20-64/65+]": 3.345,
+    "Annual potential support ratio [25-64/65+]": 3.053
+   },
+   "2050": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 59.293,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 69.544,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 84.416,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 41.008,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 43.647,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 47.475,
+    "Annual potential support ratio [15-64/65+]": 2.439,
+    "Annual potential support ratio [20-64/65+]": 2.291,
+    "Annual potential support ratio [25-64/65+]": 2.106
+   },
+   "2100": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 80.709,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 94.445,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 114.734,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 63.611,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 68.446,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 75.588,
+    "Annual potential support ratio [15-64/65+]": 1.572,
+    "Annual potential support ratio [20-64/65+]": 1.461,
+    "Annual potential support ratio [25-64/65+]": 1.323
+   }
+  },
+  "NOR": {
+   "2025": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 53.474,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 69.369,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 89.285,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 29.356,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 32.396,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 36.206,
+    "Annual potential support ratio [15-64/65+]": 3.406,
+    "Annual potential support ratio [20-64/65+]": 3.087,
+    "Annual potential support ratio [25-64/65+]": 2.762
+   },
+   "2050": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 63.503,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 74.04,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 89.634,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 47.161,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 50.201,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 54.699,
+    "Annual potential support ratio [15-64/65+]": 2.12,
+    "Annual potential support ratio [20-64/65+]": 1.992,
+    "Annual potential support ratio [25-64/65+]": 1.828
+   },
+   "2100": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 104.689,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 119.523,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 141.469,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 88.038,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 94.418,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 103.857,
+    "Annual potential support ratio [15-64/65+]": 1.136,
+    "Annual potential support ratio [20-64/65+]": 1.059,
+    "Annual potential support ratio [25-64/65+]": 0.963
+   }
+  },
+  "SWE": {
+   "2025": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 59.924,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 76.82,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 96.78,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 33.524,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 37.066,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 41.25,
+    "Annual potential support ratio [15-64/65+]": 2.983,
+    "Annual potential support ratio [20-64/65+]": 2.698,
+    "Annual potential support ratio [25-64/65+]": 2.424
+   },
+   "2050": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 61.568,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 71.751,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 86.849,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 44.601,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 47.412,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 51.58,
+    "Annual potential support ratio [15-64/65+]": 2.242,
+    "Annual potential support ratio [20-64/65+]": 2.109,
+    "Annual potential support ratio [25-64/65+]": 1.939
+   },
+   "2100": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 99.02,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 113.722,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 135.386,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 82.104,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 88.169,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 97.106,
+    "Annual potential support ratio [15-64/65+]": 1.218,
+    "Annual potential support ratio [20-64/65+]": 1.134,
+    "Annual potential support ratio [25-64/65+]": 1.03
+   }
+  },
+  "GBR": {
+   "2025": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 57.522,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 74.196,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 93.87,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 31.11,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 34.403,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 38.288,
+    "Annual potential support ratio [15-64/65+]": 3.214,
+    "Annual potential support ratio [20-64/65+]": 2.907,
+    "Annual potential support ratio [25-64/65+]": 2.612
+   },
+   "2050": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 60.442,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 71.5,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 87.833,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 42.614,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 45.551,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 49.889,
+    "Annual potential support ratio [15-64/65+]": 2.347,
+    "Annual potential support ratio [20-64/65+]": 2.195,
+    "Annual potential support ratio [25-64/65+]": 2.004
+   },
+   "2100": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 97.506,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 112.278,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 133.803,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 80.26,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 86.262,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 95.01,
+    "Annual potential support ratio [15-64/65+]": 1.246,
+    "Annual potential support ratio [20-64/65+]": 1.159,
+    "Annual potential support ratio [25-64/65+]": 1.053
+   }
+  },
+  "ITA": {
+   "2025": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 57.798,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 71.093,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 87.716,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 39.684,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 43.028,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 47.208,
+    "Annual potential support ratio [15-64/65+]": 2.52,
+    "Annual potential support ratio [20-64/65+]": 2.324,
+    "Annual potential support ratio [25-64/65+]": 2.118
+   },
+   "2050": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 87.317,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 97.489,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 112.895,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 73.721,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 77.724,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 83.788,
+    "Annual potential support ratio [15-64/65+]": 1.356,
+    "Annual potential support ratio [20-64/65+]": 1.287,
+    "Annual potential support ratio [25-64/65+]": 1.193
+   },
+   "2100": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 127.22,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 142.229,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 165.073,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 112.602,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 120.04,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 131.361,
+    "Annual potential support ratio [15-64/65+]": 0.888,
+    "Annual potential support ratio [20-64/65+]": 0.833,
+    "Annual potential support ratio [25-64/65+]": 0.761
+   }
+  },
+  "ESP": {
+   "2025": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 51.795,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 65.352,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 81.289,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 32.921,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 35.862,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 39.318,
+    "Annual potential support ratio [15-64/65+]": 3.038,
+    "Annual potential support ratio [20-64/65+]": 2.789,
+    "Annual potential support ratio [25-64/65+]": 2.543
+   },
+   "2050": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 86.3,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 96.594,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 112.242,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 71.886,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 75.858,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 81.896,
+    "Annual potential support ratio [15-64/65+]": 1.391,
+    "Annual potential support ratio [20-64/65+]": 1.318,
+    "Annual potential support ratio [25-64/65+]": 1.221
+   },
+   "2100": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 121.404,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 136.824,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 160.039,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 105.808,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 113.177,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 124.271,
+    "Annual potential support ratio [15-64/65+]": 0.945,
+    "Annual potential support ratio [20-64/65+]": 0.884,
+    "Annual potential support ratio [25-64/65+]": 0.805
+   }
+  },
+  "FRA": {
+   "2025": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 62.954,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 81.44,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 104.688,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 36.813,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 40.989,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 46.241,
+    "Annual potential support ratio [15-64/65+]": 2.716,
+    "Annual potential support ratio [20-64/65+]": 2.44,
+    "Annual potential support ratio [25-64/65+]": 2.163
+   },
+   "2050": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 70.497,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 83.335,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 101.45,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 50.517,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 54.321,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 59.688,
+    "Annual potential support ratio [15-64/65+]": 1.98,
+    "Annual potential support ratio [20-64/65+]": 1.841,
+    "Annual potential support ratio [25-64/65+]": 1.675
+   },
+   "2100": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 98.132,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 113.699,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 136.52,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 79.662,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 85.921,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 95.097,
+    "Annual potential support ratio [15-64/65+]": 1.255,
+    "Annual potential support ratio [20-64/65+]": 1.164,
+    "Annual potential support ratio [25-64/65+]": 1.052
+   }
+  },
+  "DEU": {
+   "2025": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 59.877,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 72.604,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 88.603,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 37.979,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 41.003,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 44.803,
+    "Annual potential support ratio [15-64/65+]": 2.633,
+    "Annual potential support ratio [20-64/65+]": 2.439,
+    "Annual potential support ratio [25-64/65+]": 2.232
+   },
+   "2050": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 72.233,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 83.194,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 100.062,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 55.774,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 59.323,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 64.785,
+    "Annual potential support ratio [15-64/65+]": 1.793,
+    "Annual potential support ratio [20-64/65+]": 1.686,
+    "Annual potential support ratio [25-64/65+]": 1.544
+   },
+   "2100": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 97.389,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 112.265,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 133.85,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 79.821,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 85.837,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 94.565,
+    "Annual potential support ratio [15-64/65+]": 1.253,
+    "Annual potential support ratio [20-64/65+]": 1.165,
+    "Annual potential support ratio [25-64/65+]": 1.057
+   }
+  },
+  "MEX": {
+   "2025": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 47.948,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 69.153,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 97.318,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 12.645,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 14.458,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 16.865,
+    "Annual potential support ratio [15-64/65+]": 7.908,
+    "Annual potential support ratio [20-64/65+]": 6.917,
+    "Annual potential support ratio [25-64/65+]": 5.929
+   },
+   "2050": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 46.327,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 58.171,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 74.098,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 27.034,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 29.222,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 32.164,
+    "Annual potential support ratio [15-64/65+]": 3.699,
+    "Annual potential support ratio [20-64/65+]": 3.422,
+    "Annual potential support ratio [25-64/65+]": 3.109
+   },
+   "2100": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 110.026,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 124.303,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 142.373,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 94.461,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 100.882,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 109.009,
+    "Annual potential support ratio [15-64/65+]": 1.059,
+    "Annual potential support ratio [20-64/65+]": 0.991,
+    "Annual potential support ratio [25-64/65+]": 0.917
+   }
+  },
+  "ARG": {
+   "2025": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 50.304,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 70.441,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 95.691,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 19.042,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 21.593,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 24.792,
+    "Annual potential support ratio [15-64/65+]": 5.252,
+    "Annual potential support ratio [20-64/65+]": 4.631,
+    "Annual potential support ratio [25-64/65+]": 4.034
+   },
+   "2050": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 48.956,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 58.8,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 71.24,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 32.282,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 34.415,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 37.111,
+    "Annual potential support ratio [15-64/65+]": 3.098,
+    "Annual potential support ratio [20-64/65+]": 2.906,
+    "Annual potential support ratio [25-64/65+]": 2.695
+   },
+   "2100": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 117.432,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 131.824,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 150.216,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 102.865,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 109.674,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 118.375,
+    "Annual potential support ratio [15-64/65+]": 0.972,
+    "Annual potential support ratio [20-64/65+]": 0.912,
+    "Annual potential support ratio [25-64/65+]": 0.845
+   }
+  },
+  "BRA": {
+   "2025": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 44.248,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 60.253,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 81.444,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 16.606,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 18.449,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 20.888,
+    "Annual potential support ratio [15-64/65+]": 6.022,
+    "Annual potential support ratio [20-64/65+]": 5.42,
+    "Annual potential support ratio [25-64/65+]": 4.787
+   },
+   "2050": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 53.796,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 64.22,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 78.243,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 37.442,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 39.98,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 43.394,
+    "Annual potential support ratio [15-64/65+]": 2.671,
+    "Annual potential support ratio [20-64/65+]": 2.501,
+    "Annual potential support ratio [25-64/65+]": 2.304
+   },
+   "2100": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 114.831,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 129.185,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 147.25,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 99.872,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 106.544,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 114.943,
+    "Annual potential support ratio [15-64/65+]": 1.001,
+    "Annual potential support ratio [20-64/65+]": 0.939,
+    "Annual potential support ratio [25-64/65+]": 0.87
+   }
+  },
+  "CAN": {
+   "2025": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 54.03,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 68.301,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 87.447,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 31.286,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 34.184,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 38.073,
+    "Annual potential support ratio [15-64/65+]": 3.196,
+    "Annual potential support ratio [20-64/65+]": 2.925,
+    "Annual potential support ratio [25-64/65+]": 2.627
+   },
+   "2050": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 59.16,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 69.193,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 84.491,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 43.894,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 46.661,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 50.88,
+    "Annual potential support ratio [15-64/65+]": 2.278,
+    "Annual potential support ratio [20-64/65+]": 2.143,
+    "Annual potential support ratio [25-64/65+]": 1.965
+   },
+   "2100": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 87.604,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 101.029,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 120.831,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 70.458,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 75.5,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 82.937,
+    "Annual potential support ratio [15-64/65+]": 1.419,
+    "Annual potential support ratio [20-64/65+]": 1.324,
+    "Annual potential support ratio [25-64/65+]": 1.206
+   }
+  },
+  "USA": {
+   "2025": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 54.63,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 72.174,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 94.462,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 28.501,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 31.735,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 35.843,
+    "Annual potential support ratio [15-64/65+]": 3.509,
+    "Annual potential support ratio [20-64/65+]": 3.151,
+    "Annual potential support ratio [25-64/65+]": 2.79
+   },
+   "2050": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 58.578,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 70.528,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 87.718,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 39.443,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 42.416,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 46.691,
+    "Annual potential support ratio [15-64/65+]": 2.535,
+    "Annual potential support ratio [20-64/65+]": 2.358,
+    "Annual potential support ratio [25-64/65+]": 2.142
+   },
+   "2100": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 85.192,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 99.306,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 119.971,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 67.094,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 72.208,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 79.694,
+    "Annual potential support ratio [15-64/65+]": 1.49,
+    "Annual potential support ratio [20-64/65+]": 1.385,
+    "Annual potential support ratio [25-64/65+]": 1.255
+   }
+  },
+  "AUS": {
+   "2025": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 55.295,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 71.751,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 91.622,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 28.17,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 31.155,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 34.76,
+    "Annual potential support ratio [15-64/65+]": 3.55,
+    "Annual potential support ratio [20-64/65+]": 3.21,
+    "Annual potential support ratio [25-64/65+]": 2.877
+   },
+   "2050": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 60.183,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 72.109,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 90,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 40.978,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 44.029,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 48.606,
+    "Annual potential support ratio [15-64/65+]": 2.44,
+    "Annual potential support ratio [20-64/65+]": 2.271,
+    "Annual potential support ratio [25-64/65+]": 2.057
+   },
+   "2100": {
+    "Variant": "Low",
+    "Annual total dep. ratio [(0-14 & 65+) / 15-64] (%)": 83.611,
+    "Annual total dep. ratio [(0-19 & 65+) / 20-64] (%)": 98.023,
+    "Annual total dep. ratio [(0-24 & 65+) / 25-64] (%)": 118.759,
+    "Annual old-age dep. ratio [65+ / 15-64] (%)": 64.468,
+    "Annual old-age dep. ratio [65+ / 20-64] (%)": 69.529,
+    "Annual old-age dep. ratio [65+ / 25-64] (%)": 76.809,
+    "Annual potential support ratio [15-64/65+]": 1.551,
+    "Annual potential support ratio [20-64/65+]": 1.438,
+    "Annual potential support ratio [25-64/65+]": 1.302
+   }
+  }
+ }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "doomanalysis",
+  "private": true,
+  "version": "0.3.0",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "lint": "eslint .",
+    "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "prompt": "node --experimental-strip-types judge/print-forecast.ts",
+    "import": "node --experimental-strip-types judge/import-forecasts.ts",
+    "headline": "node --experimental-strip-types judge/record-headline.ts",
+    "data": "cd pipeline && uv run python -m doom_pipeline.run --out-dir ../src/data/generated --raw-dir",
+    "cards": "node --experimental-strip-types scripts/check-cards.ts",
+    "wikipedia": "node --experimental-strip-types scripts/wikipedia.ts"
+  },
+  "dependencies": {
+    "@astrojs/react": "^4.4.2",
+    "@tailwindcss/vite": "^4.1.18",
+    "astro": "^5.17.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tailwindcss": "^4.1.18"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.13",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.46.4",
+    "wrangler": "^4.168.0"
+  }
+}

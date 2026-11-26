@@ -1,0 +1,29 @@
+{
+  "level2": {
+    "si": {
+      "climate": 0.16,
+      "resources": 0.095,
+      "war": 0.125,
+      "civil": 0.155,
+      "disease": 0.085,
+      "ai": 0.13,
+      "natural": 0.022
+    },
+    "noSi": {
+      "climate": 0.24,
+      "resources": 0.12,
+      "war": 0.115,
+      "civil": 0.13,
+      "disease": 0.10,
+      "ai": 0.028,
+      "natural": 0.022
+    },
+    "timeline": [
+      {"year": 2030, "atLeast2": 0.045},
+      {"year": 2040, "atLeast2": 0.19},
+      {"year": 2050, "atLeast2": 0.33},
+      {"year": 2075, "atLeast2": 0.61}
+    ]
+  },
+  "rationale": "Level-2 events (WWI/WWII, 1918 flu, the Great Chinese Famine, Taiping) happened several times per century historically, and the broad 'lastingly loses decent living conditions' criterion makes climate, resource and state-breakdown routes to 1% of humanity fairly likely over 75 years, so I put about a third of futures at exactly level 2 on top of the settled level-3+ mass (roughly 77% level 2+ in total in both cases). Superintelligence shifts mass from climate, resources and disease toward AI, war and civil breakdown, while the no-SI case is weighted toward slow climate and resource deprivation and includes worlds where a catastrophe stopped SI; AI takeover risk is mostly bimodal, so its level-2 share sits only modestly above its level-3+ share."
+}

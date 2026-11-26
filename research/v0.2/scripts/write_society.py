@@ -1,0 +1,199 @@
+import json
+
+SIPRI = "https://www.sipri.org/sites/default/files/2026-06/yb26_summary_en_1.pdf"
+XPT = "https://forecastingresearch.org/pdf/existential-risk-persuasion-tournament.pdf"
+XIA = "https://www.nature.com/articles/s43016-022-00573-0"
+MC4779 = "https://www.metaculus.com/questions/4779/"
+MC11601 = "https://www.metaculus.com/questions/11601/"
+MC11602 = "https://www.metaculus.com/questions/11602/"
+MC1493 = "https://www.metaculus.com/questions/1493/"
+MC1494 = "https://www.metaculus.com/questions/1494/"
+MC1502 = "https://www.metaculus.com/questions/1502/"
+UCDP26 = "https://www.uu.se/en/press/press-releases/2026/2026-06-09-ucdp-record-number-of-conflicts-between-states"
+UCDP25 = "https://www.uu.se/en/press/press-releases/2025/2025-06-11-ucdp-sharp-increase-in-conflicts-and-wars"
+HEGRE = "https://doi.org/10.1088/1748-9326/11/5/054002"
+AFP = "https://www.geo.tv/latest/668187-number-of-forcibly-displaced-people-dips-to-118-million-un"
+IDMC = "https://api.internal-displacement.org/sites/default/files/2026-05/IDMC-GRID-2026-Global-Report-on-Internal-Displacement.pdf"
+GROUND = "https://www.cbsnews.com/news/climate-change-200-million-move-2050-world-bank-report"
+GRAM = "https://doi.org/10.1016/S0140-6736(24)01867-1"
+ONEILL = "https://amr-review.org/sites/default/files/160525_Final%20paper_with%20cover.pdf"
+MARANI = "https://doi.org/10.1073/pnas.2105482118"
+WHO = "https://www.who.int/news/item/05-05-2022-14.9-million-excess-deaths-were-associated-with-the-COVID-19-pandemic-in-2020-and-2021"
+GPI = "https://www.visionofhumanity.org/wp-content/uploads/2026/06/Global-Peace-Index-2026-Report.pdf"
+UNODC19 = "https://www.unodc.org/documents/data-and-analysis/gsh/Booklet2.pdf"
+WGI = "https://www.worldbank.org/en/publication/worldwide-governance-indicators/documentation"
+
+projections = [
+    {"factorId": "nuclear_warheads", "entity": "WLD", "value": 13500, "low": None, "high": None, "year": 2040,
+     "scenario": "XPT superforecasters, median forecast for end-2040 (furthest year asked; no 2100 forecast exists)",
+     "source": "Forecasting Research Institute, XPT report (2023)", "url": XPT,
+     "note": "Total warheads in military inventories; early-2022 baseline was 12,705. Superforecasters expected an increase."},
+    {"factorId": "nuclear_warheads", "entity": "WLD", "value": 11990, "low": None, "high": None, "year": 2040,
+     "scenario": "XPT nuclear experts, median forecast for end-2040 (furthest year asked)",
+     "source": "Forecasting Research Institute, XPT report (2023)", "url": XPT,
+     "note": "Experts expected a decrease from the 12,705 baseline. SIPRI 2026 expects new warheads to soon outpace dismantlement."},
+    {"factorId": "armed_conflicts", "entity": "WLD", "value": None, "low": None, "high": None, "year": 2100,
+     "scenario": "Hegre et al. 2016, civil-conflict incidence along SSP1-SSP5, 2014-2100",
+     "source": "Hegre et al., Environmental Research Letters (2016)", "url": HEGRE,
+     "note": "Only shown in figures, no numbers in text. Share of countries in civil conflict falls under SSP1, SSP2, SSP5 and rises under SSP3, SSP4; end-century SSP5 incidence is about a quarter of SSP3. Covers civil conflict only, not the UCDP count, and predates the post-2020 surge."},
+    {"factorId": "forced_displacement", "entity": "WLD", "value": 216, "low": None, "high": None, "year": 2050,
+     "scenario": "World Bank Groundswell Part 2, pessimistic scenario (high emissions, unequal development), six regions",
+     "source": "World Bank Groundswell Part 2 (2021), via CBS News", "url": GROUND,
+     "note": "Internal climate migrants, a different measure from UNHCR forced displacement. No 2100 forecast of the UNHCR total exists."},
+    {"factorId": "forced_displacement", "entity": "WLD", "value": 44, "low": None, "high": None, "year": 2050,
+     "scenario": "World Bank Groundswell Part 2, climate-friendly scenario (low emissions, inclusive development)",
+     "source": "World Bank Groundswell Part 2 (2021), via CBS News", "url": GROUND,
+     "note": "Internal climate migrants; up to 80% lower than the pessimistic scenario."},
+    {"factorId": "amr_deaths", "entity": "WLD", "value": 1.91, "low": 1.56, "high": 2.26, "year": 2050,
+     "scenario": "GRAM reference forecast (furthest published year is 2050), deaths attributable to bacterial AMR",
+     "source": "GRAM collaborators, The Lancet (2024)", "url": GRAM,
+     "note": "95% uncertainty interval. Associated deaths: 8.22 million (6.85-9.65). Better-care scenario averts 92.0 million deaths over 2025-2050; Gram-negative drug scenario averts 11.1 million."},
+    {"factorId": "pandemic", "entity": "WLD", "value": None, "low": None, "high": None, "year": 2100,
+     "scenario": "No published forecast of pandemic mortality share for 2100",
+     "source": "Marani et al., PNAS (2021)", "url": MARANI,
+     "note": "Marani et al. estimate the yearly probability of extreme epidemics could rise up to threefold in coming decades as disease emergence accelerates."},
+]
+
+thresholds = [
+    # nuclear: units are warheads DETONATED in war
+    {"factorId": "nuclear_warheads", "value": 1, "label": "First war use", "severity": "limit", "basis": "judgment",
+     "consequence": "Breaks the post-1945 taboo and raises the odds of further use", "source": "Site judgment; Metaculus question framing", "url": MC4779},
+    {"factorId": "nuclear_warheads", "value": 100, "label": "Famine trigger", "severity": "danger", "basis": "published",
+     "consequence": "100 city strikes: 27M killed, ~255M at risk of famine", "source": "Xia et al., Nature Food (2022), Table 1", "url": XIA},
+    {"factorId": "nuclear_warheads", "value": 500, "label": "Catastrophe war", "severity": "danger", "basis": "published",
+     "consequence": "500 large city strikes: ~2.5 billion at risk of famine", "source": "Xia et al., Nature Food (2022), Table 1", "url": XIA},
+    {"factorId": "nuclear_warheads", "value": 4400, "label": "Nuclear winter", "severity": "danger", "basis": "published",
+     "consequence": "Full US-Russia war: ~5.3 billion at risk of famine", "source": "Xia et al., Nature Food (2022), Table 1", "url": XIA},
+    {"factorId": "armed_conflicts", "value": 65, "label": "2025 record", "severity": "limit", "basis": "published",
+     "consequence": "Most state-based conflicts since records began in 1946", "source": "UCDP, Uppsala University (2026)", "url": UCDP26},
+    {"factorId": "armed_conflicts", "value": 80, "label": "Overstretch", "severity": "danger", "basis": "judgment",
+     "consequence": "Diplomacy, aid and peacekeeping stretched over too many wars", "source": "Site judgment", "url": UCDP26},
+    {"factorId": "forced_displacement", "value": 123.2, "label": "End-2024 record", "severity": "limit", "basis": "published",
+     "consequence": "Displacement back at record; the 2025 dip was a pause", "source": "UNHCR Global Trends 2026, via AFP", "url": AFP},
+    {"factorId": "forced_displacement", "value": 250, "label": "3% uprooted", "severity": "danger", "basis": "judgment",
+     "consequence": "About 3% of humanity uprooted; aid and host regions overwhelmed", "source": "Site judgment", "url": AFP},
+    {"factorId": "amr_deaths", "value": 2.0, "label": "Above GRAM path", "severity": "limit", "basis": "judgment",
+     "consequence": "Resistance outpacing GRAM's 2050 reference forecast of 1.91 million", "source": "Site judgment, anchored on GRAM (2024)", "url": GRAM},
+    {"factorId": "amr_deaths", "value": 10, "label": "O'Neill 2050", "severity": "danger", "basis": "published",
+     "consequence": "O'Neill review's no-action scenario: 10 million deaths a year", "source": "Review on Antimicrobial Resistance (O'Neill, 2016)", "url": ONEILL},
+    {"factorId": "pandemic", "value": 1, "label": "1% of humanity", "severity": "limit", "basis": "published",
+     "consequence": "~80 million deaths in five years; health systems overwhelmed worldwide", "source": "XPT question threshold (Forecasting Research Institute, 2023)", "url": XPT},
+    {"factorId": "pandemic", "value": 10, "label": "Catastrophe", "severity": "danger", "basis": "published",
+     "consequence": "~800 million deaths in five years; collapse likely in many countries", "source": "XPT catastrophe definition (Forecasting Research Institute, 2023)", "url": XPT},
+    {"factorId": "peace", "value": 2.0, "label": "Abundance line", "severity": "limit", "basis": "judgment",
+     "consequence": "Insecurity starts to limit access to the other essentials", "source": "Site judgment; 83 of 163 countries at or below in GPI 2026", "url": GPI},
+    {"factorId": "peace", "value": 3.0, "label": "War-zone level", "severity": "danger", "basis": "judgment",
+     "consequence": "All nine countries above 3.0 in 2026 are at war or just after", "source": "Site judgment, from GPI 2026 rankings", "url": GPI},
+    {"factorId": "homicide_rate", "value": 10, "label": "Epidemic level", "severity": "limit", "basis": "published",
+     "consequence": "Conventional 'epidemic' homicide level; violence shapes daily life", "source": "Convention described by UNODC Global Study on Homicide 2019 (origin unclear, not a formal WHO definition)", "url": UNODC19},
+    {"factorId": "homicide_rate", "value": 20, "label": "Very high", "severity": "danger", "basis": "judgment",
+     "consequence": "20 countries above it had 9% of people, 49% of homicides", "source": "Site judgment; statistic from UNODC Global Study on Homicide 2019 (2017 data)", "url": UNODC19},
+    {"factorId": "political_stability", "value": 0, "label": "World middle", "severity": "limit", "basis": "judgment",
+     "consequence": "Below 0: less stable than the typical country", "source": "Site judgment; WGI estimates are standardized around 0", "url": WGI},
+    {"factorId": "political_stability", "value": -1.0, "label": "Fragile", "severity": "danger", "basis": "judgment",
+     "consequence": "Insurgency, terrorism or coup risk; essential services often disrupted", "source": "Site judgment (about one standard unit below the middle)", "url": WGI},
+]
+
+exceedance = [
+    # nuclear (threshold = warheads detonated in war, cumulative from today)
+    {"factorId": "nuclear_warheads", "entity": "WLD", "threshold": 1, "direction": "above", "year": 2100, "probability": 0.55, "basis": "derived",
+     "source": "Metaculus Q4779 (34% by 2050, 535 forecasters) and Q11601 (timing of first detonation if any by 2100: median Jun 2038, quartiles Mar 2030-Apr 2062, 29 forecasters), accessed 2026-11-24",
+     "url": MC4779,
+     "reasoning": "Interpolating Q11601, about 62% of first detonations before 2100 fall before 2050, so 0.34/0.62 is about 0.55."},
+    {"factorId": "nuclear_warheads", "entity": "WLD", "threshold": 1, "direction": "above", "year": 2100, "probability": 0.31, "basis": "derived",
+     "source": "XPT superforecasters: 4% that a nuclear weapon kills over 1,000 people by end-2030 (nuclear experts 4.5%)",
+     "url": XPT,
+     "reasoning": "4% over 2023-2030 implies about 0.5% a year; held constant over 2027-2100 (74 years) gives about 31%."},
+    {"factorId": "nuclear_warheads", "entity": "WLD", "threshold": 100, "direction": "above", "year": 2100, "probability": 0.21, "basis": "derived",
+     "source": "Metaculus Q11602 (if any detonation by 2050: 39% over 100, 9% over 1,000; 50 forecasters) with Q4779 and Q11601, accessed 2026-11-24",
+     "url": MC11602,
+     "reasoning": "0.34 x 0.39 = 13% by 2050, scaled to 2100 by the same 1/0.62 timing factor, assuming the size distribution holds."},
+    {"factorId": "nuclear_warheads", "entity": "WLD", "threshold": 500, "direction": "above", "year": 2100, "probability": 0.04, "basis": "derived",
+     "source": "XPT superforecasters' median for a nuclear catastrophe killing over 10% of humanity by 2100 (nuclear experts: 8%)",
+     "url": XPT,
+     "reasoning": "Proxy: per Xia et al., about 500 large city strikes put 2.5 billion at famine risk, the scale at which deaths could pass 10%."},
+    {"factorId": "nuclear_warheads", "entity": "WLD", "threshold": 500, "direction": "above", "year": 2100, "probability": 0.08, "basis": "derived",
+     "source": "XPT nuclear experts' median for a nuclear catastrophe killing over 10% of humanity by 2100 (N=13)",
+     "url": XPT,
+     "reasoning": "Same proxy mapping as the superforecaster row; the expert panel is small."},
+    {"factorId": "nuclear_warheads", "entity": "WLD", "threshold": 4400, "direction": "above", "year": 2100, "probability": 0.03, "basis": "judged",
+     "source": "Judgment informed by Metaculus Q11602 and XPT", "url": MC11602,
+     "reasoning": "Metaculus implies about 5% for over 1,000 detonations by 2100 (0.34 x 0.09 / 0.62); a full 4,400-warhead exchange is a subset."},
+    # armed conflicts
+    {"factorId": "armed_conflicts", "entity": "WLD", "threshold": 65, "direction": "above", "year": 2100, "probability": 0.6, "basis": "judged",
+     "source": "Judgment informed by UCDP trend and Hegre et al. 2016", "url": UCDP25,
+     "reasoning": "The count nearly doubled since 2010 and set records in 2023, 2024 and 2025; one year above 65 in 74 years is more likely than not."},
+    {"factorId": "armed_conflicts", "entity": "WLD", "threshold": 80, "direction": "above", "year": 2100, "probability": 0.3, "basis": "judged",
+     "source": "Judgment informed by UCDP trend and Hegre et al. 2016", "url": HEGRE,
+     "reasoning": "Needs a further 23% rise; plausible under fragmentation-type pathways, unlikely if broad development continues as in SSP1, SSP2 or SSP5."},
+    # displacement
+    {"factorId": "forced_displacement", "entity": "WLD", "threshold": 123.2, "direction": "above", "year": 2100, "probability": 0.8, "basis": "judged",
+     "source": "Judgment informed by UNHCR Global Trends 2026 (via AFP) and IDMC 2026", "url": AFP,
+     "reasoning": "2025 was the first fall in a decade, driven by often unsafe returns, and 2026 already brought 3.2 million newly displaced in Iran."},
+    {"factorId": "forced_displacement", "entity": "WLD", "threshold": 250, "direction": "above", "year": 2100, "probability": 0.25, "basis": "judged",
+     "source": "Judgment informed by UNHCR, IDMC and World Bank Groundswell", "url": GROUND,
+     "reasoning": "Requires roughly doubling today's total; possible with a great-power or regional war wave plus climate stress, not the central path."},
+    # AMR
+    {"factorId": "amr_deaths", "entity": "WLD", "threshold": 2.0, "direction": "above", "year": 2100, "probability": 0.45, "basis": "judged",
+     "source": "Judgment informed by GRAM forecasts (Lancet 2024)", "url": GRAM,
+     "reasoning": "GRAM's 2050 central forecast is 1.91 million (1.56-2.26) and ageing continues after 2050, but better care and new drugs could bend it."},
+    {"factorId": "amr_deaths", "entity": "WLD", "threshold": 10, "direction": "above", "year": 2100, "probability": 0.02, "basis": "judged",
+     "source": "Judgment informed by GRAM forecasts (Lancet 2024)", "url": GRAM,
+     "reasoning": "GRAM's upper 2050 bound for attributable deaths is 2.26 million; 10 million would need near-total antibiotic failure."},
+    # pandemic (% of humanity killed within five years)
+    {"factorId": "pandemic", "entity": "WLD", "threshold": 1, "direction": "above", "year": 2100, "probability": 0.075, "basis": "derived",
+     "source": "XPT superforecasters: natural pathogen 3.63%, engineered pathogen 4% (over 1% of humanity dying in five years, by 2100)",
+     "url": XPT,
+     "reasoning": "Combined assuming independence: 1 - (1-0.0363)(1-0.04) = 7.5%."},
+    {"factorId": "pandemic", "entity": "WLD", "threshold": 1, "direction": "above", "year": 2100, "probability": 0.176, "basis": "derived",
+     "source": "XPT domain experts: natural pathogen 8.14%, engineered pathogen 10.25%",
+     "url": XPT,
+     "reasoning": "Combined assuming independence: 1 - (1-0.0814)(1-0.1025) = 17.6%."},
+    {"factorId": "pandemic", "entity": "WLD", "threshold": 1, "direction": "above", "year": 2100, "probability": 0.17, "basis": "derived",
+     "source": "Marani et al., PNAS 2021: 1918-flu-intensity epidemic recurs every 400 years (95% CI 332-489); 127 years if emergence triples",
+     "url": MARANI,
+     "reasoning": "Poisson over 2027-2100: 1 - exp(-74/400) = 17%, rising to 44% if disease emergence triples as the authors say it may."},
+    {"factorId": "pandemic", "entity": "WLD", "threshold": 10, "direction": "above", "year": 2100, "probability": 0.018, "basis": "derived",
+     "source": "XPT superforecasters (post-tournament survey): natural pathogen catastrophe 1%, engineered 0.8%",
+     "url": XPT,
+     "reasoning": "Combined assuming independence: 1 - (0.99)(0.992) = 1.8%."},
+    {"factorId": "pandemic", "entity": "WLD", "threshold": 10, "direction": "above", "year": 2100, "probability": 0.038, "basis": "derived",
+     "source": "XPT domain experts (post-tournament survey): natural pathogen catastrophe 0.85%, engineered 3%",
+     "url": XPT,
+     "reasoning": "Combined assuming independence: 1 - (0.9915)(0.97) = 3.8%."},
+    {"factorId": "pandemic", "entity": "WLD", "threshold": 10, "direction": "above", "year": 2100, "probability": 0.11, "basis": "derived",
+     "source": "Metaculus Q1493 (45% for a 10% population fall in five years by 2100, 432 forecasters) x Q1502 (25% of such catastrophes due to biotech), accessed 2026-11-24",
+     "url": MC1502,
+     "reasoning": "0.45 x 0.25 = 11%, engineered or biotech causes only; Metaculus is far more pessimistic than the XPT."},
+]
+
+notes = [
+    "Nuclear thresholds and exceedance are in units of warheads DETONATED in war (cumulative), not stockpile size. The stockpile (12,187 total, 9,745 military stockpile, 4,012 deployed, 2,100-2,200 on high alert; SIPRI 2026) is already far above every detonation threshold, so a stockpile-based exceedance would be meaningless.",
+    "The site's current limit label '~100 warheads can cause global famine' overstates Xia et al. 2022. Their 100-weapon case is 100 x 15 kt on cities (India-Pakistan 2008 scenario, 5 Tg soot): 27 million direct deaths, 7% fall in global crop calories in years 1-5, and 255 million people without food at end of year 2 in the no-trade, partial-livestock case. The paper says mass food shortages in almost all countries occur ABOVE 5 Tg. Suggested label: '~100 city strikes: ~255M at famine risk'.",
+    "Published nuclear-risk numbers for the doom model: XPT (2022) nuclear catastrophe (over 10% of humanity dead within 5 years) by 2100: superforecasters 4%, nuclear experts 8% (by 2050: 1.83% and 3.4%). Nuclear extinction by 2100: 0.074% and 0.55%. XPT nuclear use killing over 1,000 by 2030: superforecasters 4%, experts 4.5% (N=4 experts). Metaculus (accessed 2026-11-24): 34% for a detonation in war by 2050 (535 forecasters); 45% for any-cause 10% population fall by 2100, 29.2% of which nuclear, i.e. about 13% nuclear catastrophe (derived). Metaculus is much more pessimistic than the XPT; XPT predates the 2025-2026 interstate wars.",
+    "Derived nuclear-use probabilities combine different crowds (Q4779: 535 forecasters; Q11601: 29; Q11602: 50). Treat them as rough. Metaculus values are live community predictions and will move.",
+    "XPT nuclear stockpile forecasts are military inventories versus an early-2022 baseline of 12,705 (which matches SIPRI's January 2022 total inventory). FAS gives a 1986 peak of about 70,300 warheads; FAS's page also shows an inconsistent 12,321 next to 12,187 for 2026.",
+    "Armed conflicts: UCDP counts 59 (2023), 61 (2024), 65 (2025). 2025 also had 13 wars (most since 1992), 8 interstate conflicts, and about 244,600 deaths from organized violence. Hegre et al. 2016 is the only 2100 projection found, and it publishes curves only (no numbers in the text), for civil conflict share of countries, not the UCDP count.",
+    "Forced displacement: UNHCR pages and the Global Trends PDF returned HTTP 403, so the 117.8 million end-2025 figure, 41.6 million refugees, 14.7 million returns and the 5.4 million fall come from the AFP report (Geo News). The end-2024 record of 123.2 million is derived (117.8 + 5.4); search snippets of UNHCR pages also show 123.2. GPI 2026 rounds to 117 million. IDMC: 82.2 million IDPs at end-2025 (68.6 conflict, 13.6 disaster).",
+    "Groundswell's 216 million (2050) are internal climate migrants in six regions, not UNHCR forced displacement; do not plot them on the same axis without a caveat.",
+    "AMR: the O'Neill 10 million a year (2050) is a no-action scenario and is conceptually closer to GRAM's 'associated' deaths (8.22 million in 2050) than to the 'attributable' deaths this indicator uses (1.91 million). The site's bad anchor of 10 should say so. No AMR forecast beyond 2050 exists.",
+    "Pandemic is a proposed new global factor: 'excess deaths in the worst pandemic within any five-year window, as % of world population'. Today's value: COVID-19, 14.9 million excess deaths 2020-2021 (WHO; range 13.3-16.6 million) over 7.92 billion people in 2021 (World Bank) = about 0.19%. Thresholds follow the XPT definitions (1% and 10% within five years).",
+    "Alternative pandemic indicator if an annual-probability card is preferred: Marani et al. 2021 give a 59-year mean recurrence (about 1.7% a year) for an epidemic as intense per year as COVID-19 was as recorded (0.33 deaths per 1,000 per year), 209 years (about 0.5% a year) for COVID-19 without interventions (2.63 per 1,000 per year), and 400 years (about 0.25% a year) for a 1918-flu-intensity event, with up to a threefold rise in coming decades. The Duke press release says 'about 2% in any year' and that someone born in 2000 had a 38% chance of a COVID-like pandemic 'by now'; the paper's 38% is a 100-year lifetime probability using the 209-year recurrence. Use the paper, not the press release. The '12,000 years to an extinction-level pandemic' claim in the press release is not in the paper.",
+    "XPT pathogen catastrophe and extinction numbers come from a one-shot post-tournament survey (not the full tournament process) because of information-hazard concerns. Engineered-pathogen extinction by 2100: superforecasters 0.01%, experts 1%. The XPT report also cites Toby Ord's 1-in-30 chance of existential catastrophe from engineered pandemics by 2120.",
+    "Homicide: the '10 per 100,000 = epidemic (WHO)' convention could not be traced to any WHO document. UNODC (Global Study on Homicide 2019, footnote 17) says the label is widely used and often ascribed to the UN or WHO, but its exact origin is unclear, and it questions the metaphor. The threshold is kept as a convention with that caveat.",
+    "Homicide data versions differ: the World Bank series (UNODC data) gives a world rate of 5.5 for 2021 and 5.2 for 2023; UNODC's Global Study on Homicide 2023 gave 5.8 for 2021 (about 458,000 victims). Use one series consistently.",
+    "Swedish police confirmed-shooting statistics (annual PDFs, preliminary): 2017 281 shootings/34 dead; 2018 325/43; 2019 360/43; 2020 379/47; 2021 344/45; 2022 391/62; 2023 368/54; 2024 296/44; 2025 158/43 (46 injured; includes the February 2025 Orebro Risbergska shooting). The January 2026 police press release, as fetched, gave 46 killed and 44 injured for 2025, which conflicts with the PDF's 43 killed and 46 injured. Jan-Jun 2026: 39 shootings, 8 killed; Jan-Oct 2026: 69 shootings vs 145 a year earlier. Explosions rose: 189 in 2025 vs 136 in 2024.",
+    "Norway (Kripos 2025): 18 homicide cases, 19 victims (lowest on record, about 0.34 per 100,000 using World Bank population), 4 firearm victims in 2025; 44 firearm victims in total over 2015-2024. Brå's lethal-violence count for Sweden in 2025 was 84 cases (42 with firearms, 50%), derived from its statistics page.",
+    "Swedish gun-violence debate sources are deliberately mixed: Brå 2021:8 (criminal-milieu dynamics, drug markets), Brå 2025 (homicide since 1990: firearms 40% of homicides in 2018-2021; criminal milieu 34%), Swedish police (about 60% of 2022-2024 shootings linked to 65 vulnerable areas), Hällsten et al. 2013 (socioeconomic resources and segregation explain half to three-quarters of the gap for men), PM Kristersson 2023 (immigration and failed integration), Brå 2021:9 (excess suspect risk highest for Swedish-born with two foreign-born parents, largely due to age distribution for that group), and Brå 2025:7 published June 2026 (migrants over-represented in Nordic registers; research insufficient to judge migration's net effect in Sweden).",
+    "Peace (GPI 2026): 163 countries, 23 indicators, internal peace 60% / external 40%. Scores run 1.161 (Iceland) to 3.367 (Russia). 83 of 163 countries score at or below the site's 2.0 abundance line. Nine score above 3.0. The 2026 Iran war is only partly captured. No forecasts to 2100 exist.",
+    "Political stability: the WGI 2026 release (data to 2025) recalculated all estimates back to 1996 with a revised method and 35 sources, so values differ from older releases; an absolute 0-100 score is now also published. The World Bank API indicator code is GOV_WGI_PV.EST (source 3); the old PV.EST code points to an archive. Year-to-year changes are mostly within the margin of error.",
+    "Country-level factors (peace, homicide_rate, political_stability): thresholds are given for the cards, but exceedance is omitted, as instructed. No 2100 projections are published for any of the three.",
+]
+
+out = {"projections": projections, "thresholds": thresholds, "exceedance": exceedance, "notes": notes}
+for t in thresholds:
+    assert len(t["label"]) <= 16, t["label"]
+    assert len(t["consequence"].split()) <= 15, (t["consequence"], len(t["consequence"].split()))
+with open("/private/tmp/claude-501/-Users-charlesazam-github-charles-azam-github-io/e1909179-3d1a-41ed-9dbc-94826798a9d1/scratchpad/research/society.json", "w") as f:
+    json.dump(out, f, indent=2, ensure_ascii=False)
+print("ok", len(projections), len(thresholds), len(exceedance), len(notes))

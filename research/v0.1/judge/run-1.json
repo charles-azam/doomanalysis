@@ -1,0 +1,241 @@
+{
+  "world": {
+    "siBy2050": 0.45,
+    "siBy2100": 0.68,
+    "si": {
+      "doom": 0.12,
+      "abundance": 0.45,
+      "pathways": {
+        "ai": 0.09,
+        "nuclear": 0.012,
+        "pandemic": 0.01,
+        "climate": 0.002,
+        "resources": 0.001,
+        "other": 0.005
+      }
+    },
+    "noSi": {
+      "doom": 0.04,
+      "abundance": 0.15,
+      "pathways": {
+        "ai": 0.003,
+        "nuclear": 0.016,
+        "pandemic": 0.01,
+        "climate": 0.004,
+        "resources": 0.003,
+        "other": 0.004
+      }
+    },
+    "rationale": "Rapid capability gains (multi-hour METR task horizons in 2026) make superintelligence by 2050 close to a coin flip and likely by 2100, and loss of control or misuse then dominates doom risk. Without SI, doom stays a few percent, driven by nuclear war and engineered pandemics, and is slightly raised because some no-SI worlds are ones where a catastrophe halted progress; climate and resource stress are severe but rarely irreversible at civilizational scale. Global abundance demands 90% of a population increasingly concentrated in sub-Saharan Africa to have all five essentials including security and 75+ life expectancy, which trend growth alone rarely delivers but SI-driven abundance plausibly can."
+  },
+  "countries": [
+    {
+      "entity": "FRA",
+      "si": {
+        "collapse": 0.16,
+        "abundance": 0.76,
+        "pillarLoss": {
+          "energy": 0.12,
+          "water": 0.1,
+          "food": 0.12,
+          "health": 0.12,
+          "security": 0.14
+        }
+      },
+      "noSi": {
+        "collapse": 0.07,
+        "abundance": 0.75,
+        "pillarLoss": {
+          "energy": 0.04,
+          "water": 0.03,
+          "food": 0.045,
+          "health": 0.04,
+          "security": 0.055
+        }
+      },
+      "rationale": "France already meets nearly every threshold (83-year life expectancy, universal electricity and water), so abundance is mainly a question of avoiding global catastrophe and a European war; food insecurity near 9% and aging are the main reasons abundance is not higher."
+    },
+    {
+      "entity": "USA",
+      "si": {
+        "collapse": 0.17,
+        "abundance": 0.72,
+        "pillarLoss": {
+          "energy": 0.12,
+          "water": 0.1,
+          "food": 0.12,
+          "health": 0.12,
+          "security": 0.15
+        }
+      },
+      "noSi": {
+        "collapse": 0.08,
+        "abundance": 0.62,
+        "pillarLoss": {
+          "energy": 0.04,
+          "water": 0.035,
+          "food": 0.045,
+          "health": 0.045,
+          "security": 0.065
+        }
+      },
+      "rationale": "Great wealth and adaptive capacity, but higher fragility, food insecurity around 11%, status as a primary nuclear target and as the likely site of SI development raise collapse risk; unequal health and food access are the main barrier to the 90% abundance threshold."
+    },
+    {
+      "entity": "CHN",
+      "si": {
+        "collapse": 0.18,
+        "abundance": 0.65,
+        "pillarLoss": {
+          "energy": 0.12,
+          "water": 0.12,
+          "food": 0.13,
+          "health": 0.12,
+          "security": 0.16
+        }
+      },
+      "noSi": {
+        "collapse": 0.09,
+        "abundance": 0.6,
+        "pillarLoss": {
+          "energy": 0.045,
+          "water": 0.05,
+          "food": 0.055,
+          "health": 0.045,
+          "security": 0.07
+        }
+      },
+      "rationale": "Strong state capacity and high living standards favor abundance, but a Taiwan conflict with the US, political instability, northern water stress and an extreme 1.0 fertility rate straining care for the elderly are the main risks."
+    },
+    {
+      "entity": "IND",
+      "si": {
+        "collapse": 0.22,
+        "abundance": 0.5,
+        "pillarLoss": {
+          "energy": 0.13,
+          "water": 0.17,
+          "food": 0.17,
+          "health": 0.14,
+          "security": 0.17
+        }
+      },
+      "noSi": {
+        "collapse": 0.13,
+        "abundance": 0.38,
+        "pillarLoss": {
+          "energy": 0.05,
+          "water": 0.09,
+          "food": 0.09,
+          "health": 0.06,
+          "security": 0.08
+        }
+      },
+      "rationale": "Extreme water stress, groundwater depletion, lethal heat and the risk of nuclear war with Pakistan drive collapse risk, while fast growth and near-universal electricity make reaching the 90% threshold plausible by 2100, especially with SI."
+    },
+    {
+      "entity": "NGA",
+      "si": {
+        "collapse": 0.3,
+        "abundance": 0.3,
+        "pillarLoss": {
+          "energy": 0.14,
+          "water": 0.15,
+          "food": 0.2,
+          "health": 0.17,
+          "security": 0.26
+        }
+      },
+      "noSi": {
+        "collapse": 0.28,
+        "abundance": 0.07,
+        "pillarLoss": {
+          "energy": 0.08,
+          "water": 0.1,
+          "food": 0.16,
+          "health": 0.12,
+          "security": 0.24
+        }
+      },
+      "rationale": "Very high fragility, ethnic grievance, insurgency and rapid population growth make a long civil war or state failure the dominant collapse route; starting from 55-year life expectancy, 30% safe water and 77% food insecurity, 90% abundance by 2100 is unlikely without SI."
+    },
+    {
+      "entity": "BRA",
+      "si": {
+        "collapse": 0.17,
+        "abundance": 0.6,
+        "pillarLoss": {
+          "energy": 0.12,
+          "water": 0.12,
+          "food": 0.13,
+          "health": 0.12,
+          "security": 0.15
+        }
+      },
+      "noSi": {
+        "collapse": 0.09,
+        "abundance": 0.4,
+        "pillarLoss": {
+          "energy": 0.045,
+          "water": 0.05,
+          "food": 0.055,
+          "health": 0.05,
+          "security": 0.07
+        }
+      },
+      "rationale": "Abundant water, hydro and renewables and food surpluses keep collapse risk low; high criminal violence, inequality and gaps in sanitation are the main obstacles to the 90% abundance threshold, with Amazon dieback a tail risk."
+    },
+    {
+      "entity": "BGD",
+      "si": {
+        "collapse": 0.24,
+        "abundance": 0.45,
+        "pillarLoss": {
+          "energy": 0.13,
+          "water": 0.17,
+          "food": 0.19,
+          "health": 0.14,
+          "security": 0.17
+        }
+      },
+      "noSi": {
+        "collapse": 0.16,
+        "abundance": 0.25,
+        "pillarLoss": {
+          "energy": 0.05,
+          "water": 0.1,
+          "food": 0.12,
+          "health": 0.07,
+          "security": 0.09
+        }
+      },
+      "rationale": "A densely populated low-lying delta faces sea-level rise, cyclones and salinization that threaten food and water, plus high fragility and grievance; strong recent gains in electricity and life expectancy give a real but uncertain path to abundance."
+    },
+    {
+      "entity": "EGY",
+      "si": {
+        "collapse": 0.25,
+        "abundance": 0.45,
+        "pillarLoss": {
+          "energy": 0.13,
+          "water": 0.2,
+          "food": 0.2,
+          "health": 0.14,
+          "security": 0.18
+        }
+      },
+      "noSi": {
+        "collapse": 0.18,
+        "abundance": 0.25,
+        "pillarLoss": {
+          "energy": 0.05,
+          "water": 0.14,
+          "food": 0.14,
+          "health": 0.07,
+          "security": 0.11
+        }
+      },
+      "rationale": "Near-total dependence on the Nile under extreme water stress, heavy food imports, a growing population and regime fragility make water and food the main collapse routes; cheap energy for desalination, especially with SI, is the main path to abundance."
+    }
+  ]
+}

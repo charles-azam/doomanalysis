@@ -5,7 +5,7 @@ import type { Card } from '../src/model/types.ts'
 
 /**
  * Checks one card file on its own, so a research agent can validate its work without the other files.
- * Usage: node --experimental-strip-types pdoom/scripts/check-cards.ts pdoom/src/data/cards/<file>.ts
+ * Usage: node --experimental-strip-types scripts/check-cards.ts src/data/cards/<file>.ts
  * The file must export `cards`. Missing parents are reported only as a note: the parent may live in another file.
  */
 const file = process.argv[2]

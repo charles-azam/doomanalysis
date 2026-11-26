@@ -1,0 +1,174 @@
+{
+  "places": [
+    {
+      "entity": "GBR",
+      "si": {"abundance": 0.27, "better": 0.51, "stagnation": 0.085, "decline": 0.06, "collapse": 0.075},
+      "noSi": {"abundance": 0.006, "better": 0.64, "stagnation": 0.18, "decline": 0.10, "collapse": 0.074},
+      "rationale": "High AI uptake and a capable state point to broad gains with SI, but a services-export economy, public debt above 100% of GDP and weak growth since 2008 make stagnation a real risk without it.",
+      "reading": {
+        "channels": {"productivity": 1.5, "prices": 1.5, "jobs": -1, "ownership": 0, "stability": -0.5},
+        "reason": "Jobs: a finance and professional-services exporter loses income as AI does that work; high AI uptake and cheaper goods still net positive."
+      }
+    },
+    {
+      "entity": "FRA",
+      "si": {"abundance": 0.25, "better": 0.52, "stagnation": 0.09, "decline": 0.065, "collapse": 0.075},
+      "noSi": {"abundance": 0.006, "better": 0.61, "stagnation": 0.20, "decline": 0.11, "collapse": 0.074},
+      "rationale": "Nuclear electricity, high AI uptake and a strong welfare state favour sharing SI gains; political instability and debt heading toward 144% of GDP weigh on the no-SI path.",
+      "reading": {
+        "channels": {"productivity": 1.5, "prices": 1.5, "jobs": -0.5, "ownership": 0, "stability": -0.5},
+        "reason": "Productivity: heavy AI use and nuclear power for compute favour gains, though political fragility and risk of unrest temper them."
+      }
+    },
+    {
+      "entity": "ZAF",
+      "si": {"abundance": 0.05, "better": 0.54, "stagnation": 0.15, "decline": 0.12, "collapse": 0.14},
+      "noSi": {"abundance": 0.001, "better": 0.53, "stagnation": 0.20, "decline": 0.14, "collapse": 0.129},
+      "rationale": "Extreme inequality, violent crime, mass unemployment and severe water stress cap gains and fatten the collapse tail; mineral wealth and a functioning if strained state keep improvement the most likely path.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1.5, "jobs": -1, "ownership": -0.5, "stability": -1},
+        "reason": "Stability: the world's highest inequality and mass unemployment make automation-driven unrest the swing factor; cheaper medicine and energy help."
+      }
+    },
+    {
+      "entity": "ITA",
+      "si": {"abundance": 0.19, "better": 0.54, "stagnation": 0.12, "decline": 0.075, "collapse": 0.075},
+      "noSi": {"abundance": 0.004, "better": 0.52, "stagnation": 0.25, "decline": 0.146, "collapse": 0.08},
+      "rationale": "Severe ageing, 137% debt, 79% energy imports and a quarter-century of flat consumption make stagnation likely without SI; with SI, automation can offset the shrinking workforce.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1.5, "jobs": -0.5, "ownership": -0.5, "stability": -0.5},
+        "reason": "Productivity: robots offset one of the fastest-ageing workforces in Europe, but slow AI adoption by small firms limits the gain."
+      }
+    },
+    {
+      "entity": "KEN",
+      "si": {"abundance": 0.06, "better": 0.635, "stagnation": 0.11, "decline": 0.08, "collapse": 0.115},
+      "noSi": {"abundance": 0.001, "better": 0.64, "stagnation": 0.14, "decline": 0.09, "collapse": 0.129},
+      "rationale": "A fast-growing, mobile-savvy economy with strong catch-up potential, but 35% undernourishment, climate exposure, heavy debt service and unrest keep a sizeable collapse tail.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1.5, "jobs": -0.5, "ownership": -1, "stability": -0.5},
+        "reason": "Prices: cheaper medicine, energy and farm inputs reach a poor, mobile-first population even with little local AI use or compute ownership."
+      }
+    },
+    {
+      "entity": "COL",
+      "si": {"abundance": 0.07, "better": 0.63, "stagnation": 0.13, "decline": 0.09, "collapse": 0.08},
+      "noSi": {"abundance": 0.001, "better": 0.62, "stagnation": 0.18, "decline": 0.11, "collapse": 0.089},
+      "rationale": "Steady growth, abundant water and a broad economy favour improvement; armed violence, weak political stability and reliance on oil and coal exports are the main drags.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1.5, "jobs": -1, "ownership": -0.5, "stability": -0.5},
+        "reason": "Jobs: a growing call-centre and services-export base is exposed to AI, offset by cheaper goods and medicine for consumers."
+      }
+    },
+    {
+      "entity": "KOR",
+      "si": {"abundance": 0.26, "better": 0.52, "stagnation": 0.08, "decline": 0.06, "collapse": 0.08},
+      "noSi": {"abundance": 0.004, "better": 0.58, "stagnation": 0.20, "decline": 0.12, "collapse": 0.096},
+      "rationale": "World-leading chips, robotics and governance favour large SI gains; without SI, a 0.75 fertility rate, 83% energy imports and North Korea risk make stagnation and decline real.",
+      "reading": {
+        "channels": {"productivity": 2, "prices": 1, "jobs": -0.5, "ownership": 1, "stability": -0.5},
+        "reason": "Ownership: Korea makes the memory chips and robots SI runs on, and automation offsets the world's lowest fertility."
+      }
+    },
+    {
+      "entity": "ESP",
+      "si": {"abundance": 0.20, "better": 0.54, "stagnation": 0.11, "decline": 0.07, "collapse": 0.08},
+      "noSi": {"abundance": 0.004, "better": 0.56, "stagnation": 0.23, "decline": 0.126, "collapse": 0.08},
+      "rationale": "High AI uptake, strong solar resources and immigration-supported demography help; severe and worsening water stress and heat are the main physical risk.",
+      "reading": {
+        "channels": {"productivity": 1.5, "prices": 1.5, "jobs": -0.5, "ownership": -0.5, "stability": -0.5},
+        "reason": "Productivity and prices: high AI uptake and cheap solar power lift living standards despite the exposure of tourism and services jobs."
+      }
+    },
+    {
+      "entity": "ARG",
+      "si": {"abundance": 0.10, "better": 0.63, "stagnation": 0.12, "decline": 0.08, "collapse": 0.07},
+      "noSi": {"abundance": 0.002, "better": 0.62, "stagnation": 0.19, "decline": 0.115, "collapse": 0.073},
+      "rationale": "Rich in food, shale and lithium and far from likely war zones, but a long record of macroeconomic crises makes stagnation a real possibility.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1.5, "jobs": -0.5, "ownership": -0.5, "stability": -0.5},
+        "reason": "Prices: cheaper goods and services lift a commodity exporter whose own AI ownership and macro management are weak."
+      }
+    },
+    {
+      "entity": "CAN",
+      "si": {"abundance": 0.32, "better": 0.49, "stagnation": 0.07, "decline": 0.05, "collapse": 0.07},
+      "noSi": {"abundance": 0.01, "better": 0.67, "stagnation": 0.16, "decline": 0.10, "collapse": 0.06},
+      "rationale": "An energy and resource surplus, strong institutions and closeness to US AI make Canada a likely SI winner; housing costs and dependence on the US are the main risks.",
+      "reading": {
+        "channels": {"productivity": 1.5, "prices": 1.5, "jobs": -0.5, "ownership": 0.5, "stability": 0},
+        "reason": "Productivity: high AI use, cheap energy and land for data centres, and close ties to US AI firms put Canada near the front."
+      }
+    },
+    {
+      "entity": "UKR",
+      "si": {"abundance": 0.08, "better": 0.57, "stagnation": 0.11, "decline": 0.10, "collapse": 0.14},
+      "noSi": {"abundance": 0.002, "better": 0.58, "stagnation": 0.15, "decline": 0.13, "collapse": 0.138},
+      "rationale": "Reconstruction from a wartime low and EU integration make improvement likely, but renewed war, population loss and weak governance keep collapse risk high.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1.5, "jobs": -0.5, "ownership": -0.5, "stability": -1},
+        "reason": "Stability: AI-driven warfare with Russia is the swing factor; reconstruction and EU integration could carry SI gains in."
+      }
+    },
+    {
+      "entity": "SAU",
+      "si": {"abundance": 0.11, "better": 0.55, "stagnation": 0.13, "decline": 0.10, "collapse": 0.11},
+      "noSi": {"abundance": 0.002, "better": 0.48, "stagnation": 0.21, "decline": 0.17, "collapse": 0.138},
+      "rationale": "Fading oil rents, extreme heat and near-total water stress threaten living standards without SI; large sovereign wealth and cheap energy for data centres give it a path with SI.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 0.5, "jobs": 0, "ownership": 0.5, "stability": -0.5},
+        "reason": "Ownership: oil money buying compute and data centres can replace fading oil rents, though cheaper energy cuts export income."
+      }
+    },
+    {
+      "entity": "POL",
+      "si": {"abundance": 0.17, "better": 0.55, "stagnation": 0.12, "decline": 0.07, "collapse": 0.09},
+      "noSi": {"abundance": 0.004, "better": 0.646, "stagnation": 0.16, "decline": 0.10, "collapse": 0.09},
+      "rationale": "Strong convergence momentum and sound public finances favour improvement; frontline exposure to Russia and rapid ageing are the main risks.",
+      "reading": {
+        "channels": {"productivity": 1, "prices": 1.5, "jobs": -1, "ownership": -0.5, "stability": -0.5},
+        "reason": "Jobs: Poland's large business-services and assembly export base is exposed to AI, partly offset by cheaper energy for a coal-heavy importer."
+      }
+    },
+    {
+      "entity": "AUS",
+      "si": {"abundance": 0.30, "better": 0.50, "stagnation": 0.08, "decline": 0.05, "collapse": 0.07},
+      "noSi": {"abundance": 0.008, "better": 0.66, "stagnation": 0.17, "decline": 0.092, "collapse": 0.07},
+      "rationale": "Strong institutions, low debt and minerals for the energy and AI build-out favour gains; heat, drought, fire and fading coal and gas exports are the main drags.",
+      "reading": {
+        "channels": {"productivity": 1.5, "prices": 1.5, "jobs": -0.5, "ownership": 0, "stability": 0},
+        "reason": "Productivity: very high AI use and minerals the SI build-out needs favour gains, though Australia owns little compute itself."
+      }
+    },
+    {
+      "entity": "NLD",
+      "si": {"abundance": 0.31, "better": 0.50, "stagnation": 0.075, "decline": 0.05, "collapse": 0.065},
+      "noSi": {"abundance": 0.008, "better": 0.67, "stagnation": 0.17, "decline": 0.09, "collapse": 0.062},
+      "rationale": "ASML, a top trade hub, low debt and very effective government favour large gains; sea-level rise and 88% energy imports are manageable but real risks.",
+      "reading": {
+        "channels": {"productivity": 1.5, "prices": 1.5, "jobs": -0.5, "ownership": 1, "stability": 0},
+        "reason": "Ownership: ASML's hold on chipmaking tools and a capable tax state let the Netherlands share in AI profits."
+      }
+    },
+    {
+      "entity": "SWE",
+      "si": {"abundance": 0.29, "better": 0.52, "stagnation": 0.075, "decline": 0.05, "collapse": 0.065},
+      "noSi": {"abundance": 0.008, "better": 0.68, "stagnation": 0.165, "decline": 0.087, "collapse": 0.06},
+      "rationale": "Clean power, low water stress, low debt and very effective government favour broad gains; gang violence and integration strains are the main domestic risks.",
+      "reading": {
+        "channels": {"productivity": 1.5, "prices": 1, "jobs": -0.5, "ownership": 0.5, "stability": 0},
+        "reason": "Productivity: strong digital adoption, clean cheap power and an effective redistributive state spread AI gains widely."
+      }
+    },
+    {
+      "entity": "NOR",
+      "si": {"abundance": 0.34, "better": 0.48, "stagnation": 0.07, "decline": 0.05, "collapse": 0.06},
+      "noSi": {"abundance": 0.012, "better": 0.66, "stagnation": 0.18, "decline": 0.09, "collapse": 0.058},
+      "rationale": "The richest start, a vast sovereign fund, top governance and abundant hydropower make Norway among the likeliest to reach abundance; fading oil income is the main drag.",
+      "reading": {
+        "channels": {"productivity": 1.5, "prices": 1, "jobs": 0, "ownership": 1, "stability": 0},
+        "reason": "Ownership: the sovereign fund holds a slice of the global AI firms, so Norway shares in SI profits even without its own labs."
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "level2": {
+    "si": {
+      "climate": 0.17,
+      "resources": 0.09,
+      "war": 0.12,
+      "civil": 0.14,
+      "disease": 0.08,
+      "ai": 0.14,
+      "natural": 0.012
+    },
+    "noSi": {
+      "climate": 0.24,
+      "resources": 0.11,
+      "war": 0.11,
+      "civil": 0.12,
+      "disease": 0.11,
+      "ai": 0.025,
+      "natural": 0.012
+    },
+    "timeline": [
+      {"year": 2030, "atLeast2": 0.035},
+      {"year": 2040, "atLeast2": 0.14},
+      {"year": 2050, "atLeast2": 0.27},
+      {"year": 2075, "atLeast2": 0.54}
+    ]
+  },
+  "rationale": "The settled level-3 mass already sums to about 45% with superintelligence and 38% without, and the twentieth century alone produced several level-2 events (two world wars, the 1918 flu, the Great Chinese Famine), so a level-2-or-worse outcome by 2100 is more likely than not in both cases (about 75% and 73%). Climate gets the largest share as a root cause because its own cards make level 2 near-certain in isolation, but I discounted those card values heavily since many such futures are overtaken by a worse event with another root cause, and superintelligence trims climate and disease while adding AI, war and state-breakdown risk. The timeline is back-loaded because physical climate and resource stress and the superintelligence transition both build over decades."
+}

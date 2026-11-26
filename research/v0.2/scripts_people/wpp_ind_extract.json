@@ -1,0 +1,1430 @@
+{
+ "WLD": {
+  "2024": {
+   "TPopulation1July": "8161972.572",
+   "TFR": "2.2477",
+   "LEx": "73.3217",
+   "MedianAgePop": "30.6211",
+   "NetMigrations": "0",
+   "Variant": "Medium",
+   "Location": "World",
+   "LocID": "900"
+  },
+  "2025": {
+   "TPopulation1July": "8231613.07",
+   "TFR": "2.2385",
+   "LEx": "73.5179",
+   "MedianAgePop": "30.8626",
+   "NetMigrations": "0",
+   "Variant": "Medium",
+   "Location": "World",
+   "LocID": "900"
+  },
+  "2050": {
+   "TPopulation1July": "9664378.587",
+   "TFR": "2.0966",
+   "LEx": "77.023",
+   "MedianAgePop": "36.068",
+   "NetMigrations": "0",
+   "Variant": "Medium",
+   "Location": "World",
+   "LocID": "900"
+  },
+  "2100": {
+   "TPopulation1July": "10180160.751",
+   "TFR": "1.838",
+   "LEx": "81.7342",
+   "MedianAgePop": "42.1254",
+   "NetMigrations": "0",
+   "Variant": "Medium",
+   "Location": "World",
+   "LocID": "900"
+  }
+ },
+ "ETH": {
+  "2024": {
+   "TPopulation1July": "132059.767",
+   "TFR": "3.9094",
+   "LEx": "67.6028",
+   "MedianAgePop": "18.9334",
+   "NetMigrations": "30.069",
+   "Variant": "Medium",
+   "Location": "Ethiopia",
+   "LocID": "231"
+  },
+  "2025": {
+   "TPopulation1July": "135472.051",
+   "TFR": "3.8059",
+   "LEx": "67.8758",
+   "MedianAgePop": "19.1333",
+   "NetMigrations": "24.054",
+   "Variant": "Medium",
+   "Location": "Ethiopia",
+   "LocID": "231"
+  },
+  "2050": {
+   "TPopulation1July": "225021.874",
+   "TFR": "2.5544",
+   "LEx": "73.3086",
+   "MedianAgePop": "24.6137",
+   "NetMigrations": "19.219",
+   "Variant": "Medium",
+   "Location": "Ethiopia",
+   "LocID": "231"
+  },
+  "2100": {
+   "TPopulation1July": "367289.596",
+   "TFR": "1.8795",
+   "LEx": "81.5584",
+   "MedianAgePop": "36.5904",
+   "NetMigrations": "132.855",
+   "Variant": "Medium",
+   "Location": "Ethiopia",
+   "LocID": "231"
+  }
+ },
+ "KEN": {
+  "2024": {
+   "TPopulation1July": "56432.944",
+   "TFR": "3.1666",
+   "LEx": "63.8344",
+   "MedianAgePop": "19.7811",
+   "NetMigrations": "-19.781",
+   "Variant": "Medium",
+   "Location": "Kenya",
+   "LocID": "404"
+  },
+  "2025": {
+   "TPopulation1July": "57532.492",
+   "TFR": "3.1208",
+   "LEx": "64.0138",
+   "MedianAgePop": "20.037",
+   "NetMigrations": "-27.33",
+   "Variant": "Medium",
+   "Location": "Kenya",
+   "LocID": "404"
+  },
+  "2050": {
+   "TPopulation1July": "83593.239",
+   "TFR": "2.3551",
+   "LEx": "67.8565",
+   "MedianAgePop": "26.2703",
+   "NetMigrations": "-80.968",
+   "Variant": "Medium",
+   "Location": "Kenya",
+   "LocID": "404"
+  },
+  "2100": {
+   "TPopulation1July": "104195.5",
+   "TFR": "1.8367",
+   "LEx": "74.362",
+   "MedianAgePop": "37.4662",
+   "NetMigrations": "-96.99",
+   "Variant": "Medium",
+   "Location": "Kenya",
+   "LocID": "404"
+  }
+ },
+ "COD": {
+  "2024": {
+   "TPopulation1July": "109276.265",
+   "TFR": "5.981",
+   "LEx": "62.0741",
+   "MedianAgePop": "15.7844",
+   "NetMigrations": "-26.968",
+   "Variant": "Medium",
+   "Location": "Democratic Republic of the Congo",
+   "LocID": "180"
+  },
+  "2025": {
+   "TPopulation1July": "112832.473",
+   "TFR": "5.9024",
+   "LEx": "62.228",
+   "MedianAgePop": "15.8139",
+   "NetMigrations": "-27.309",
+   "Variant": "Medium",
+   "Location": "Democratic Republic of the Congo",
+   "LocID": "180"
+  },
+  "2050": {
+   "TPopulation1July": "218246.072",
+   "TFR": "3.6585",
+   "LEx": "65.9496",
+   "MedianAgePop": "20.002",
+   "NetMigrations": "-46.131",
+   "Variant": "Medium",
+   "Location": "Democratic Republic of the Congo",
+   "LocID": "180"
+  },
+  "2100": {
+   "TPopulation1July": "430709.445",
+   "TFR": "2.1616",
+   "LEx": "71.9194",
+   "MedianAgePop": "31.776",
+   "NetMigrations": "-62.565",
+   "Variant": "Medium",
+   "Location": "Democratic Republic of the Congo",
+   "LocID": "180"
+  }
+ },
+ "EGY": {
+  "2024": {
+   "TPopulation1July": "116538.258",
+   "TFR": "2.7351",
+   "LEx": "71.8058",
+   "MedianAgePop": "24.2544",
+   "NetMigrations": "123.884",
+   "Variant": "Medium",
+   "Location": "Egypt",
+   "LocID": "818"
+  },
+  "2025": {
+   "TPopulation1July": "118365.994",
+   "TFR": "2.7083",
+   "LEx": "71.9868",
+   "MedianAgePop": "24.4775",
+   "NetMigrations": "-57.305",
+   "Variant": "Medium",
+   "Location": "Egypt",
+   "LocID": "818"
+  },
+  "2050": {
+   "TPopulation1July": "161630.192",
+   "TFR": "2.2124",
+   "LEx": "76.0641",
+   "MedianAgePop": "31.0002",
+   "NetMigrations": "-17.467",
+   "Variant": "Medium",
+   "Location": "Egypt",
+   "LocID": "818"
+  },
+  "2100": {
+   "TPopulation1July": "201895.184",
+   "TFR": "1.8394",
+   "LEx": "83.4718",
+   "MedianAgePop": "41.5688",
+   "NetMigrations": "-19.019",
+   "Variant": "Medium",
+   "Location": "Egypt",
+   "LocID": "818"
+  }
+ },
+ "ZAF": {
+  "2024": {
+   "TPopulation1July": "64007.187",
+   "TFR": "2.205",
+   "LEx": "66.3124",
+   "MedianAgePop": "28.4727",
+   "NetMigrations": "166.972",
+   "Variant": "Medium",
+   "Location": "South Africa",
+   "LocID": "710"
+  },
+  "2025": {
+   "TPopulation1July": "64747.319",
+   "TFR": "2.1863",
+   "LEx": "66.4874",
+   "MedianAgePop": "28.6959",
+   "NetMigrations": "146.37",
+   "Variant": "Medium",
+   "Location": "South Africa",
+   "LocID": "710"
+  },
+  "2050": {
+   "TPopulation1July": "79177.328",
+   "TFR": "1.8925",
+   "LEx": "70.3382",
+   "MedianAgePop": "32.2879",
+   "NetMigrations": "178.382",
+   "Variant": "Medium",
+   "Location": "South Africa",
+   "LocID": "710"
+  },
+  "2100": {
+   "TPopulation1July": "94314.448",
+   "TFR": "1.7443",
+   "LEx": "77.331",
+   "MedianAgePop": "38.252",
+   "NetMigrations": "199.038",
+   "Variant": "Medium",
+   "Location": "South Africa",
+   "LocID": "710"
+  }
+ },
+ "NGA": {
+  "2024": {
+   "TPopulation1July": "232679.478",
+   "TFR": "4.3818",
+   "LEx": "54.6349",
+   "MedianAgePop": "17.945",
+   "NetMigrations": "-35.202",
+   "Variant": "Medium",
+   "Location": "Nigeria",
+   "LocID": "566"
+  },
+  "2025": {
+   "TPopulation1July": "237527.782",
+   "TFR": "4.2965",
+   "LEx": "54.784",
+   "MedianAgePop": "18.1419",
+   "NetMigrations": "-15.258",
+   "Variant": "Medium",
+   "Location": "Nigeria",
+   "LocID": "566"
+  },
+  "2050": {
+   "TPopulation1July": "359185.556",
+   "TFR": "2.6584",
+   "LEx": "58.528",
+   "MedianAgePop": "23.8847",
+   "NetMigrations": "56.965",
+   "Variant": "Medium",
+   "Location": "Nigeria",
+   "LocID": "566"
+  },
+  "2100": {
+   "TPopulation1July": "476747.781",
+   "TFR": "1.9129",
+   "LEx": "64.725",
+   "MedianAgePop": "34.2862",
+   "NetMigrations": "58.541",
+   "Variant": "Medium",
+   "Location": "Nigeria",
+   "LocID": "566"
+  }
+ },
+ "CHN": {
+  "2024": {
+   "TPopulation1July": "1419321.278",
+   "TFR": "1.013",
+   "LEx": "78.0171",
+   "MedianAgePop": "39.5875",
+   "NetMigrations": "-318.992",
+   "Variant": "Medium",
+   "Location": "China",
+   "LocID": "156"
+  },
+  "2025": {
+   "TPopulation1July": "1416096.094",
+   "TFR": "1.0209",
+   "LEx": "78.3723",
+   "MedianAgePop": "40.1079",
+   "NetMigrations": "-268.126",
+   "Variant": "Medium",
+   "Location": "China",
+   "LocID": "156"
+  },
+  "2050": {
+   "TPopulation1July": "1260289.093",
+   "TFR": "1.1842",
+   "LEx": "83.3813",
+   "MedianAgePop": "52.1406",
+   "NetMigrations": "-171.498",
+   "Variant": "Medium",
+   "Location": "China",
+   "LocID": "156"
+  },
+  "2100": {
+   "TPopulation1July": "633368.113",
+   "TFR": "1.3455",
+   "LEx": "89.7949",
+   "MedianAgePop": "60.7058",
+   "NetMigrations": "-77.792",
+   "Variant": "Medium",
+   "Location": "China",
+   "LocID": "156"
+  }
+ },
+ "JPN": {
+  "2024": {
+   "TPopulation1July": "123753.041",
+   "TFR": "1.2168",
+   "LEx": "84.852",
+   "MedianAgePop": "49.3827",
+   "NetMigrations": "153.357",
+   "Variant": "Medium",
+   "Location": "Japan",
+   "LocID": "392"
+  },
+  "2025": {
+   "TPopulation1July": "123103.479",
+   "TFR": "1.225",
+   "LEx": "85.0012",
+   "MedianAgePop": "49.7917",
+   "NetMigrations": "140.579",
+   "Variant": "Medium",
+   "Location": "Japan",
+   "LocID": "392"
+  },
+  "2050": {
+   "TPopulation1July": "105123.167",
+   "TFR": "1.3491",
+   "LEx": "88.3907",
+   "MedianAgePop": "52.7551",
+   "NetMigrations": "119.363",
+   "Variant": "Medium",
+   "Location": "Japan",
+   "LocID": "392"
+  },
+  "2100": {
+   "TPopulation1July": "76845.989",
+   "TFR": "1.472",
+   "LEx": "94.3965",
+   "MedianAgePop": "53.0022",
+   "NetMigrations": "73.71",
+   "Variant": "Medium",
+   "Location": "Japan",
+   "LocID": "392"
+  }
+ },
+ "KOR": {
+  "2024": {
+   "TPopulation1July": "51717.59",
+   "TFR": "0.7338",
+   "LEx": "84.4336",
+   "MedianAgePop": "45.05",
+   "NetMigrations": "75.963",
+   "Variant": "Medium",
+   "Location": "Republic of Korea",
+   "LocID": "410"
+  },
+  "2025": {
+   "TPopulation1July": "51667.029",
+   "TFR": "0.7494",
+   "LEx": "84.5348",
+   "MedianAgePop": "45.6188",
+   "NetMigrations": "65.731",
+   "Variant": "Medium",
+   "Location": "Republic of Korea",
+   "LocID": "410"
+  },
+  "2050": {
+   "TPopulation1July": "45143.134",
+   "TFR": "1.0257",
+   "LEx": "87.3345",
+   "MedianAgePop": "56.7229",
+   "NetMigrations": "15.924",
+   "Variant": "Medium",
+   "Location": "Republic of Korea",
+   "LocID": "410"
+  },
+  "2100": {
+   "TPopulation1July": "21848.791",
+   "TFR": "1.2961",
+   "LEx": "93.1426",
+   "MedianAgePop": "59.8496",
+   "NetMigrations": "-0.554",
+   "Variant": "Medium",
+   "Location": "Republic of Korea",
+   "LocID": "410"
+  }
+ },
+ "BGD": {
+  "2024": {
+   "TPopulation1July": "173562.364",
+   "TFR": "2.1384",
+   "LEx": "74.9298",
+   "MedianAgePop": "25.6531",
+   "NetMigrations": "-473.362",
+   "Variant": "Medium",
+   "Location": "Bangladesh",
+   "LocID": "50"
+  },
+  "2025": {
+   "TPopulation1July": "175686.9",
+   "TFR": "2.1143",
+   "LEx": "75.195",
+   "MedianAgePop": "25.9769",
+   "NetMigrations": "-402.1",
+   "Variant": "Medium",
+   "Location": "Bangladesh",
+   "LocID": "50"
+  },
+  "2050": {
+   "TPopulation1July": "214709.097",
+   "TFR": "1.8064",
+   "LEx": "80.8998",
+   "MedianAgePop": "35.5499",
+   "NetMigrations": "-308.07",
+   "Variant": "Medium",
+   "Location": "Bangladesh",
+   "LocID": "50"
+  },
+  "2100": {
+   "TPopulation1July": "208596.516",
+   "TFR": "1.7226",
+   "LEx": "88.3358",
+   "MedianAgePop": "48.6738",
+   "NetMigrations": "-236.966",
+   "Variant": "Medium",
+   "Location": "Bangladesh",
+   "LocID": "50"
+  }
+ },
+ "IND": {
+  "2024": {
+   "TPopulation1July": "1450935.791",
+   "TFR": "1.9622",
+   "LEx": "72.2353",
+   "MedianAgePop": "28.4413",
+   "NetMigrations": "-630.83",
+   "Variant": "Medium",
+   "Location": "India",
+   "LocID": "356"
+  },
+  "2025": {
+   "TPopulation1July": "1463865.525",
+   "TFR": "1.9435",
+   "LEx": "72.4848",
+   "MedianAgePop": "28.8288",
+   "NetMigrations": "-495.753",
+   "Variant": "Medium",
+   "Location": "India",
+   "LocID": "356"
+  },
+  "2050": {
+   "TPopulation1July": "1679589.259",
+   "TFR": "1.7645",
+   "LEx": "77.548",
+   "MedianAgePop": "38.2631",
+   "NetMigrations": "-371.956",
+   "Variant": "Medium",
+   "Location": "India",
+   "LocID": "356"
+  },
+  "2100": {
+   "TPopulation1July": "1505251.761",
+   "TFR": "1.6926",
+   "LEx": "85.2965",
+   "MedianAgePop": "47.7755",
+   "NetMigrations": "-319.573",
+   "Variant": "Medium",
+   "Location": "India",
+   "LocID": "356"
+  }
+ },
+ "IRN": {
+  "2024": {
+   "TPopulation1July": "91567.738",
+   "TFR": "1.6842",
+   "LEx": "77.8539",
+   "MedianAgePop": "33.4085",
+   "NetMigrations": "190.156",
+   "Variant": "Medium",
+   "Location": "Iran (Islamic Republic of)",
+   "LocID": "364"
+  },
+  "2025": {
+   "TPopulation1July": "92417.681",
+   "TFR": "1.6699",
+   "LEx": "78.0506",
+   "MedianAgePop": "33.9595",
+   "NetMigrations": "116.786",
+   "Variant": "Medium",
+   "Location": "Iran (Islamic Republic of)",
+   "LocID": "364"
+  },
+  "2050": {
+   "TPopulation1July": "101861.993",
+   "TFR": "1.6259",
+   "LEx": "82.7451",
+   "MedianAgePop": "43.4573",
+   "NetMigrations": "-31.191",
+   "Variant": "Medium",
+   "Location": "Iran (Islamic Republic of)",
+   "LocID": "364"
+  },
+  "2100": {
+   "TPopulation1July": "80045.291",
+   "TFR": "1.6359",
+   "LEx": "89.3035",
+   "MedianAgePop": "51.894",
+   "NetMigrations": "-24.436",
+   "Variant": "Medium",
+   "Location": "Iran (Islamic Republic of)",
+   "LocID": "364"
+  }
+ },
+ "PAK": {
+  "2024": {
+   "TPopulation1July": "251269.164",
+   "TFR": "3.5467",
+   "LEx": "67.7994",
+   "MedianAgePop": "20.4358",
+   "NetMigrations": "-1401.173",
+   "Variant": "Medium",
+   "Location": "Pakistan",
+   "LocID": "586"
+  },
+  "2025": {
+   "TPopulation1July": "255219.554",
+   "TFR": "3.4952",
+   "LEx": "67.9371",
+   "MedianAgePop": "20.6027",
+   "NetMigrations": "-1235.336",
+   "Variant": "Medium",
+   "Location": "Pakistan",
+   "LocID": "586"
+  },
+  "2050": {
+   "TPopulation1July": "371863.793",
+   "TFR": "2.5821",
+   "LEx": "71.2837",
+   "MedianAgePop": "26.2566",
+   "NetMigrations": "-507.801",
+   "Variant": "Medium",
+   "Location": "Pakistan",
+   "LocID": "586"
+  },
+  "2100": {
+   "TPopulation1July": "511000.618",
+   "TFR": "1.9318",
+   "LEx": "78.1692",
+   "MedianAgePop": "37.2611",
+   "NetMigrations": "-459.844",
+   "Variant": "Medium",
+   "Location": "Pakistan",
+   "LocID": "586"
+  }
+ },
+ "IDN": {
+  "2024": {
+   "TPopulation1July": "283487.931",
+   "TFR": "2.1147",
+   "LEx": "71.2881",
+   "MedianAgePop": "30.1017",
+   "NetMigrations": "-38.469",
+   "Variant": "Medium",
+   "Location": "Indonesia",
+   "LocID": "360"
+  },
+  "2025": {
+   "TPopulation1July": "285721.236",
+   "TFR": "2.0959",
+   "LEx": "71.4377",
+   "MedianAgePop": "30.3791",
+   "NetMigrations": "-39.509",
+   "Variant": "Medium",
+   "Location": "Indonesia",
+   "LocID": "360"
+  },
+  "2050": {
+   "TPopulation1July": "320712.949",
+   "TFR": "1.8477",
+   "LEx": "74.9492",
+   "MedianAgePop": "36.8386",
+   "NetMigrations": "-44.888",
+   "Variant": "Medium",
+   "Location": "Indonesia",
+   "LocID": "360"
+  },
+  "2100": {
+   "TPopulation1July": "295511.061",
+   "TFR": "1.7311",
+   "LEx": "81.8755",
+   "MedianAgePop": "44.9711",
+   "NetMigrations": "-37.19",
+   "Variant": "Medium",
+   "Location": "Indonesia",
+   "LocID": "360"
+  }
+ },
+ "PHL": {
+  "2024": {
+   "TPopulation1July": "115843.67",
+   "TFR": "1.8936",
+   "LEx": "69.9461",
+   "MedianAgePop": "25.7118",
+   "NetMigrations": "-160.373",
+   "Variant": "Medium",
+   "Location": "Philippines",
+   "LocID": "608"
+  },
+  "2025": {
+   "TPopulation1July": "116786.962",
+   "TFR": "1.876",
+   "LEx": "70.0671",
+   "MedianAgePop": "26.1401",
+   "NetMigrations": "-149.315",
+   "Variant": "Medium",
+   "Location": "Philippines",
+   "LocID": "608"
+  },
+  "2050": {
+   "TPopulation1July": "134373.439",
+   "TFR": "1.7348",
+   "LEx": "73.2361",
+   "MedianAgePop": "35.9154",
+   "NetMigrations": "-109.452",
+   "Variant": "Medium",
+   "Location": "Philippines",
+   "LocID": "608"
+  },
+  "2100": {
+   "TPopulation1July": "114221.909",
+   "TFR": "1.6737",
+   "LEx": "80.3549",
+   "MedianAgePop": "46.1075",
+   "NetMigrations": "-81.123",
+   "Variant": "Medium",
+   "Location": "Philippines",
+   "LocID": "608"
+  }
+ },
+ "VNM": {
+  "2024": {
+   "TPopulation1July": "100987.686",
+   "TFR": "1.895",
+   "LEx": "74.7364",
+   "MedianAgePop": "32.9257",
+   "NetMigrations": "-59.645",
+   "Variant": "Medium",
+   "Location": "Viet Nam",
+   "LocID": "704"
+  },
+  "2025": {
+   "TPopulation1July": "101598.527",
+   "TFR": "1.8783",
+   "LEx": "74.8813",
+   "MedianAgePop": "33.4196",
+   "NetMigrations": "-48.171",
+   "Variant": "Medium",
+   "Location": "Viet Nam",
+   "LocID": "704"
+  },
+  "2050": {
+   "TPopulation1July": "110008.908",
+   "TFR": "1.7447",
+   "LEx": "78.9179",
+   "MedianAgePop": "40.2299",
+   "NetMigrations": "-32.395",
+   "Variant": "Medium",
+   "Location": "Viet Nam",
+   "LocID": "704"
+  },
+  "2100": {
+   "TPopulation1July": "91705.108",
+   "TFR": "1.7039",
+   "LEx": "86.0763",
+   "MedianAgePop": "49.3161",
+   "NetMigrations": "-27.263",
+   "Variant": "Medium",
+   "Location": "Viet Nam",
+   "LocID": "704"
+  }
+ },
+ "SAU": {
+  "2024": {
+   "TPopulation1July": "33962.757",
+   "TFR": "2.3079",
+   "LEx": "78.982",
+   "MedianAgePop": "29.5632",
+   "NetMigrations": "122.17",
+   "Variant": "Medium",
+   "Location": "Saudi Arabia",
+   "LocID": "682"
+  },
+  "2025": {
+   "TPopulation1July": "34566.328",
+   "TFR": "2.2923",
+   "LEx": "79.1953",
+   "MedianAgePop": "29.6263",
+   "NetMigrations": "119.738",
+   "Variant": "Medium",
+   "Location": "Saudi Arabia",
+   "LocID": "682"
+  },
+  "2050": {
+   "TPopulation1July": "47693.91",
+   "TFR": "1.875",
+   "LEx": "83.9931",
+   "MedianAgePop": "31.9849",
+   "NetMigrations": "28.517",
+   "Variant": "Medium",
+   "Location": "Saudi Arabia",
+   "LocID": "682"
+  },
+  "2100": {
+   "TPopulation1July": "71006.69",
+   "TFR": "1.7175",
+   "LEx": "90.3425",
+   "MedianAgePop": "35.7786",
+   "NetMigrations": "26.653",
+   "Variant": "Medium",
+   "Location": "Saudi Arabia",
+   "LocID": "682"
+  }
+ },
+ "TUR": {
+  "2024": {
+   "TPopulation1July": "87473.805",
+   "TFR": "1.6206",
+   "LEx": "77.4209",
+   "MedianAgePop": "32.9874",
+   "NetMigrations": "-275.952",
+   "Variant": "Medium",
+   "Location": "T\u00fcrkiye",
+   "LocID": "792"
+  },
+  "2025": {
+   "TPopulation1July": "87685.426",
+   "TFR": "1.6195",
+   "LEx": "77.8239",
+   "MedianAgePop": "33.4635",
+   "NetMigrations": "-258.205",
+   "Variant": "Medium",
+   "Location": "T\u00fcrkiye",
+   "LocID": "792"
+  },
+  "2050": {
+   "TPopulation1July": "91258.061",
+   "TFR": "1.6164",
+   "LEx": "82.4741",
+   "MedianAgePop": "44.2989",
+   "NetMigrations": "-74.065",
+   "Variant": "Medium",
+   "Location": "T\u00fcrkiye",
+   "LocID": "792"
+  },
+  "2100": {
+   "TPopulation1July": "65338.458",
+   "TFR": "1.6112",
+   "LEx": "88.5993",
+   "MedianAgePop": "54.6491",
+   "NetMigrations": "-29.204",
+   "Variant": "Medium",
+   "Location": "T\u00fcrkiye",
+   "LocID": "792"
+  }
+ },
+ "POL": {
+  "2024": {
+   "TPopulation1July": "38539.201",
+   "TFR": "1.3035",
+   "LEx": "78.8098",
+   "MedianAgePop": "41.8385",
+   "NetMigrations": "-238.062",
+   "Variant": "Medium",
+   "Location": "Poland",
+   "LocID": "616"
+  },
+  "2025": {
+   "TPopulation1July": "38140.91",
+   "TFR": "1.3082",
+   "LEx": "78.9807",
+   "MedianAgePop": "42.4635",
+   "NetMigrations": "-330.82",
+   "Variant": "Medium",
+   "Location": "Poland",
+   "LocID": "616"
+  },
+  "2050": {
+   "TPopulation1July": "32814.096",
+   "TFR": "1.3974",
+   "LEx": "83.021",
+   "MedianAgePop": "51.7562",
+   "NetMigrations": "-4.478",
+   "Variant": "Medium",
+   "Location": "Poland",
+   "LocID": "616"
+  },
+  "2100": {
+   "TPopulation1July": "19329.839",
+   "TFR": "1.4916",
+   "LEx": "89.0023",
+   "MedianAgePop": "55.2708",
+   "NetMigrations": "-1.073",
+   "Variant": "Medium",
+   "Location": "Poland",
+   "LocID": "616"
+  }
+ },
+ "RUS": {
+  "2024": {
+   "TPopulation1July": "144820.423",
+   "TFR": "1.457",
+   "LEx": "73.3428",
+   "MedianAgePop": "39.8713",
+   "NetMigrations": "-178.042",
+   "Variant": "Medium",
+   "Location": "Russian Federation",
+   "LocID": "643"
+  },
+  "2025": {
+   "TPopulation1July": "143997.393",
+   "TFR": "1.4647",
+   "LEx": "73.5216",
+   "MedianAgePop": "40.2975",
+   "NetMigrations": "-251.822",
+   "Variant": "Medium",
+   "Location": "Russian Federation",
+   "LocID": "643"
+  },
+  "2050": {
+   "TPopulation1July": "136132.775",
+   "TFR": "1.5405",
+   "LEx": "77.928",
+   "MedianAgePop": "41.676",
+   "NetMigrations": "322.727",
+   "Variant": "Medium",
+   "Location": "Russian Federation",
+   "LocID": "643"
+  },
+  "2100": {
+   "TPopulation1July": "126386.515",
+   "TFR": "1.5922",
+   "LEx": "84.9791",
+   "MedianAgePop": "44.995",
+   "NetMigrations": "273.559",
+   "Variant": "Medium",
+   "Location": "Russian Federation",
+   "LocID": "643"
+  }
+ },
+ "NOR": {
+  "2024": {
+   "TPopulation1July": "5576.66",
+   "TFR": "1.4102",
+   "LEx": "83.46",
+   "MedianAgePop": "39.6676",
+   "NetMigrations": "44.356",
+   "Variant": "Medium",
+   "Location": "Norway",
+   "LocID": "578"
+  },
+  "2025": {
+   "TPopulation1July": "5623.071",
+   "TFR": "1.415",
+   "LEx": "83.6072",
+   "MedianAgePop": "39.8457",
+   "NetMigrations": "29.798",
+   "Variant": "Medium",
+   "Location": "Norway",
+   "LocID": "578"
+  },
+  "2050": {
+   "TPopulation1July": "5899.829",
+   "TFR": "1.4985",
+   "LEx": "86.7611",
+   "MedianAgePop": "45.5039",
+   "NetMigrations": "11.797",
+   "Variant": "Medium",
+   "Location": "Norway",
+   "LocID": "578"
+  },
+  "2100": {
+   "TPopulation1July": "5413.618",
+   "TFR": "1.5506",
+   "LEx": "92.0957",
+   "MedianAgePop": "49.3422",
+   "NetMigrations": "8.417",
+   "Variant": "Medium",
+   "Location": "Norway",
+   "LocID": "578"
+  }
+ },
+ "SWE": {
+  "2024": {
+   "TPopulation1July": "10606.999",
+   "TFR": "1.4342",
+   "LEx": "83.4236",
+   "MedianAgePop": "40.1235",
+   "NetMigrations": "50.115",
+   "Variant": "Medium",
+   "Location": "Sweden",
+   "LocID": "752"
+  },
+  "2025": {
+   "TPopulation1July": "10656.633",
+   "TFR": "1.4399",
+   "LEx": "83.5764",
+   "MedianAgePop": "40.2715",
+   "NetMigrations": "47.079",
+   "Variant": "Medium",
+   "Location": "Sweden",
+   "LocID": "752"
+  },
+  "2050": {
+   "TPopulation1July": "11309.63",
+   "TFR": "1.522",
+   "LEx": "86.7503",
+   "MedianAgePop": "44.0955",
+   "NetMigrations": "31.031",
+   "Variant": "Medium",
+   "Location": "Sweden",
+   "LocID": "752"
+  },
+  "2100": {
+   "TPopulation1July": "11366.896",
+   "TFR": "1.5823",
+   "LEx": "92.1825",
+   "MedianAgePop": "48.5791",
+   "NetMigrations": "26.976",
+   "Variant": "Medium",
+   "Location": "Sweden",
+   "LocID": "752"
+  }
+ },
+ "GBR": {
+  "2024": {
+   "TPopulation1July": "69138.192",
+   "TFR": "1.5511",
+   "LEx": "81.4484",
+   "MedianAgePop": "39.9725",
+   "NetMigrations": "417.114",
+   "Variant": "Medium",
+   "Location": "United Kingdom",
+   "LocID": "826"
+  },
+  "2025": {
+   "TPopulation1July": "69551.332",
+   "TFR": "1.5389",
+   "LEx": "81.5995",
+   "MedianAgePop": "40.076",
+   "NetMigrations": "389.911",
+   "Variant": "Medium",
+   "Location": "United Kingdom",
+   "LocID": "826"
+  },
+  "2050": {
+   "TPopulation1July": "75504.681",
+   "TFR": "1.5492",
+   "LEx": "85.0728",
+   "MedianAgePop": "42.8558",
+   "NetMigrations": "196.199",
+   "Variant": "Medium",
+   "Location": "United Kingdom",
+   "LocID": "826"
+  },
+  "2100": {
+   "TPopulation1July": "74305.411",
+   "TFR": "1.5953",
+   "LEx": "90.5874",
+   "MedianAgePop": "47.9468",
+   "NetMigrations": "97.329",
+   "Variant": "Medium",
+   "Location": "United Kingdom",
+   "LocID": "826"
+  }
+ },
+ "ITA": {
+  "2024": {
+   "TPopulation1July": "59342.867",
+   "TFR": "1.2058",
+   "LEx": "83.8691",
+   "MedianAgePop": "47.8458",
+   "NetMigrations": "95.246",
+   "Variant": "Medium",
+   "Location": "Italy",
+   "LocID": "380"
+  },
+  "2025": {
+   "TPopulation1July": "59146.26",
+   "TFR": "1.214",
+   "LEx": "84.0285",
+   "MedianAgePop": "48.2307",
+   "NetMigrations": "75.448",
+   "Variant": "Medium",
+   "Location": "Italy",
+   "LocID": "380"
+  },
+  "2050": {
+   "TPopulation1July": "51891.098",
+   "TFR": "1.3487",
+   "LEx": "87.2329",
+   "MedianAgePop": "52.8586",
+   "NetMigrations": "42.787",
+   "Variant": "Medium",
+   "Location": "Italy",
+   "LocID": "380"
+  },
+  "2100": {
+   "TPopulation1July": "35376.821",
+   "TFR": "1.4776",
+   "LEx": "92.7648",
+   "MedianAgePop": "53.4154",
+   "NetMigrations": "25.086",
+   "Variant": "Medium",
+   "Location": "Italy",
+   "LocID": "380"
+  }
+ },
+ "ESP": {
+  "2024": {
+   "TPopulation1July": "47910.526",
+   "TFR": "1.2213",
+   "LEx": "83.7994",
+   "MedianAgePop": "45.3938",
+   "NetMigrations": "111.674",
+   "Variant": "Medium",
+   "Location": "Spain",
+   "LocID": "724"
+  },
+  "2025": {
+   "TPopulation1July": "47889.958",
+   "TFR": "1.2299",
+   "LEx": "83.9598",
+   "MedianAgePop": "45.8505",
+   "NetMigrations": "96.63",
+   "Variant": "Medium",
+   "Location": "Spain",
+   "LocID": "724"
+  },
+  "2050": {
+   "TPopulation1July": "44928.558",
+   "TFR": "1.3622",
+   "LEx": "87.1391",
+   "MedianAgePop": "51.7922",
+   "NetMigrations": "68.276",
+   "Variant": "Medium",
+   "Location": "Spain",
+   "LocID": "724"
+  },
+  "2100": {
+   "TPopulation1July": "33127.478",
+   "TFR": "1.4834",
+   "LEx": "92.869",
+   "MedianAgePop": "52.2371",
+   "NetMigrations": "28.582",
+   "Variant": "Medium",
+   "Location": "Spain",
+   "LocID": "724"
+  }
+ },
+ "FRA": {
+  "2024": {
+   "TPopulation1July": "66548.53",
+   "TFR": "1.636",
+   "LEx": "83.4582",
+   "MedianAgePop": "42.0679",
+   "NetMigrations": "90.527",
+   "Variant": "Medium",
+   "Location": "France",
+   "LocID": "250"
+  },
+  "2025": {
+   "TPopulation1July": "66650.804",
+   "TFR": "1.6369",
+   "LEx": "83.5804",
+   "MedianAgePop": "42.2759",
+   "NetMigrations": "91.737",
+   "Variant": "Medium",
+   "Location": "France",
+   "LocID": "250"
+  },
+  "2050": {
+   "TPopulation1July": "68219.675",
+   "TFR": "1.647",
+   "LEx": "86.5793",
+   "MedianAgePop": "43.5234",
+   "NetMigrations": "107.825",
+   "Variant": "Medium",
+   "Location": "France",
+   "LocID": "250"
+  },
+  "2100": {
+   "TPopulation1July": "68484.558",
+   "TFR": "1.6463",
+   "LEx": "92.1419",
+   "MedianAgePop": "47.1112",
+   "NetMigrations": "93.308",
+   "Variant": "Medium",
+   "Location": "France",
+   "LocID": "250"
+  }
+ },
+ "DEU": {
+  "2024": {
+   "TPopulation1July": "84552.242",
+   "TFR": "1.4481",
+   "LEx": "81.5387",
+   "MedianAgePop": "45.2868",
+   "NetMigrations": "36.954",
+   "Variant": "Medium",
+   "Location": "Germany",
+   "LocID": "276"
+  },
+  "2025": {
+   "TPopulation1July": "84075.075",
+   "TFR": "1.4553",
+   "LEx": "81.707",
+   "MedianAgePop": "45.4909",
+   "NetMigrations": "-334.072",
+   "Variant": "Medium",
+   "Location": "Germany",
+   "LocID": "276"
+  },
+  "2050": {
+   "TPopulation1July": "78294.613",
+   "TFR": "1.5378",
+   "LEx": "85.2034",
+   "MedianAgePop": "47.8994",
+   "NetMigrations": "178.945",
+   "Variant": "Medium",
+   "Location": "Germany",
+   "LocID": "276"
+  },
+  "2100": {
+   "TPopulation1July": "70899.863",
+   "TFR": "1.597",
+   "LEx": "90.7835",
+   "MedianAgePop": "47.387",
+   "NetMigrations": "141.38",
+   "Variant": "Medium",
+   "Location": "Germany",
+   "LocID": "276"
+  }
+ },
+ "MEX": {
+  "2024": {
+   "TPopulation1July": "130861.007",
+   "TFR": "1.8916",
+   "LEx": "75.2645",
+   "MedianAgePop": "29.2524",
+   "NetMigrations": "-104.581",
+   "Variant": "Medium",
+   "Location": "Mexico",
+   "LocID": "484"
+  },
+  "2025": {
+   "TPopulation1July": "131946.9",
+   "TFR": "1.8689",
+   "LEx": "75.4456",
+   "MedianAgePop": "29.6229",
+   "NetMigrations": "-108.037",
+   "Variant": "Medium",
+   "Location": "Mexico",
+   "LocID": "484"
+  },
+  "2050": {
+   "TPopulation1July": "148946.274",
+   "TFR": "1.7007",
+   "LEx": "79.8233",
+   "MedianAgePop": "38.7089",
+   "NetMigrations": "-98.661",
+   "Variant": "Medium",
+   "Location": "Mexico",
+   "LocID": "484"
+  },
+  "2100": {
+   "TPopulation1July": "130248.836",
+   "TFR": "1.6691",
+   "LEx": "86.781",
+   "MedianAgePop": "49.1553",
+   "NetMigrations": "-64.427",
+   "Variant": "Medium",
+   "Location": "Mexico",
+   "LocID": "484"
+  }
+ },
+ "ARG": {
+  "2024": {
+   "TPopulation1July": "45696.159",
+   "TFR": "1.5043",
+   "LEx": "77.5434",
+   "MedianAgePop": "32.5226",
+   "NetMigrations": "3.454",
+   "Variant": "Medium",
+   "Location": "Argentina",
+   "LocID": "32"
+  },
+  "2025": {
+   "TPopulation1July": "45851.378",
+   "TFR": "1.5047",
+   "LEx": "77.6894",
+   "MedianAgePop": "32.9227",
+   "NetMigrations": "2.859",
+   "Variant": "Medium",
+   "Location": "Argentina",
+   "LocID": "32"
+  },
+  "2050": {
+   "TPopulation1July": "48308.944",
+   "TFR": "1.5373",
+   "LEx": "81.4056",
+   "MedianAgePop": "41.8643",
+   "NetMigrations": "0.612",
+   "Variant": "Medium",
+   "Location": "Argentina",
+   "LocID": "32"
+  },
+  "2100": {
+   "TPopulation1July": "38255.99",
+   "TFR": "1.5782",
+   "LEx": "87.7408",
+   "MedianAgePop": "51.7369",
+   "NetMigrations": "0.523",
+   "Variant": "Medium",
+   "Location": "Argentina",
+   "LocID": "32"
+  }
+ },
+ "BRA": {
+  "2024": {
+   "TPopulation1July": "211998.574",
+   "TFR": "1.6143",
+   "LEx": "76.023",
+   "MedianAgePop": "34.3821",
+   "NetMigrations": "-225.51",
+   "Variant": "Medium",
+   "Location": "Brazil",
+   "LocID": "76"
+  },
+  "2025": {
+   "TPopulation1July": "212812.405",
+   "TFR": "1.6001",
+   "LEx": "76.1999",
+   "MedianAgePop": "34.8183",
+   "NetMigrations": "-217.283",
+   "Variant": "Medium",
+   "Location": "Brazil",
+   "LocID": "76"
+  },
+  "2050": {
+   "TPopulation1July": "217489.3",
+   "TFR": "1.5589",
+   "LEx": "80.3018",
+   "MedianAgePop": "43.9056",
+   "NetMigrations": "-29.987",
+   "Variant": "Medium",
+   "Location": "Brazil",
+   "LocID": "76"
+  },
+  "2100": {
+   "TPopulation1July": "163364.064",
+   "TFR": "1.5775",
+   "LEx": "86.7963",
+   "MedianAgePop": "50.7266",
+   "NetMigrations": "-22.148",
+   "Variant": "Medium",
+   "Location": "Brazil",
+   "LocID": "76"
+  }
+ },
+ "CAN": {
+  "2024": {
+   "TPopulation1July": "39742.43",
+   "TFR": "1.3431",
+   "LEx": "82.7192",
+   "MedianAgePop": "40.4761",
+   "NetMigrations": "368.599",
+   "Variant": "Medium",
+   "Location": "Canada",
+   "LocID": "124"
+  },
+  "2025": {
+   "TPopulation1July": "40126.723",
+   "TFR": "1.3324",
+   "LEx": "82.8834",
+   "MedianAgePop": "40.6431",
+   "NetMigrations": "326.204",
+   "Variant": "Medium",
+   "Location": "Canada",
+   "LocID": "124"
+  },
+  "2050": {
+   "TPopulation1July": "45621.882",
+   "TFR": "1.389",
+   "LEx": "86.2347",
+   "MedianAgePop": "45.0927",
+   "NetMigrations": "261.957",
+   "Variant": "Medium",
+   "Location": "Canada",
+   "LocID": "124"
+  },
+  "2100": {
+   "TPopulation1July": "53612.234",
+   "TFR": "1.4942",
+   "LEx": "91.7461",
+   "MedianAgePop": "46.897",
+   "NetMigrations": "281.666",
+   "Variant": "Medium",
+   "Location": "Canada",
+   "LocID": "124"
+  }
+ },
+ "USA": {
+  "2024": {
+   "TPopulation1July": "345426.571",
+   "TFR": "1.6221",
+   "LEx": "79.4625",
+   "MedianAgePop": "38.289",
+   "NetMigrations": "1286.132",
+   "Variant": "Medium",
+   "Location": "United States of America",
+   "LocID": "840"
+  },
+  "2025": {
+   "TPopulation1July": "347275.808",
+   "TFR": "1.6234",
+   "LEx": "79.6135",
+   "MedianAgePop": "38.5012",
+   "NetMigrations": "1230.663",
+   "Variant": "Medium",
+   "Location": "United States of America",
+   "LocID": "840"
+  },
+  "2050": {
+   "TPopulation1July": "380846.91",
+   "TFR": "1.6428",
+   "LEx": "83.2351",
+   "MedianAgePop": "41.8597",
+   "NetMigrations": "1277.326",
+   "Variant": "Medium",
+   "Location": "United States of America",
+   "LocID": "840"
+  },
+  "2100": {
+   "TPopulation1July": "421278.889",
+   "TFR": "1.6469",
+   "LEx": "89.1705",
+   "MedianAgePop": "45.324",
+   "NetMigrations": "1226.443",
+   "Variant": "Medium",
+   "Location": "United States of America",
+   "LocID": "840"
+  }
+ },
+ "AUS": {
+  "2024": {
+   "TPopulation1July": "26713.205",
+   "TFR": "1.6379",
+   "LEx": "84.073",
+   "MedianAgePop": "38.0072",
+   "NetMigrations": "138.51",
+   "Variant": "Medium",
+   "Location": "Australia",
+   "LocID": "36"
+  },
+  "2025": {
+   "TPopulation1July": "26974.026",
+   "TFR": "1.6388",
+   "LEx": "84.2135",
+   "MedianAgePop": "38.2635",
+   "NetMigrations": "137.109",
+   "Variant": "Medium",
+   "Location": "Australia",
+   "LocID": "36"
+  },
+  "2050": {
+   "TPopulation1July": "32506.969",
+   "TFR": "1.6384",
+   "LEx": "87.2473",
+   "MedianAgePop": "41.9594",
+   "NetMigrations": "169.597",
+   "Variant": "Medium",
+   "Location": "Australia",
+   "LocID": "36"
+  },
+  "2100": {
+   "TPopulation1July": "43143.685",
+   "TFR": "1.6323",
+   "LEx": "92.6173",
+   "MedianAgePop": "44.7825",
+   "NetMigrations": "189.462",
+   "Variant": "Medium",
+   "Location": "Australia",
+   "LocID": "36"
+  }
+ }
+}
