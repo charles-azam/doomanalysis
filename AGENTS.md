@@ -18,9 +18,10 @@ counterforce and as a risk.
 - Contributors with write access merge into `main` on their own, without waiting for Charles: open a pull request
   and merge it, or push to `main` directly, once the checks below pass.
 - Checks before merging: `npm test`, `npx tsc --noEmit`, `npm run build`, `npx wrangler deploy --dry-run`.
-- `main` is what goes live: Cloudflare Workers Builds deploys it as the Worker `doom`. Until the Worker's builds are
-  connected to this repository (they still point at Charles's website repository), merges here do not go live yet.
-  Never run `wrangler deploy` by hand; the next Git build overwrites it.
+- `main` is what goes live: every push to `main` triggers a Cloudflare Workers Build (`npm run build`, then
+  `npx wrangler deploy`) that deploys the Worker `doom` within a few minutes. Build logs are in the Cloudflare
+  dashboard under Workers & Pages → doom → Deployments. Never run `wrangler deploy` by hand; the next Git build
+  overwrites it.
 - Never edit by hand `src/data/forecasts.ts`, past records in `src/data/history.ts`, or `src/data/generated/*.json`:
   they come from the judge import and the data pipeline.
 - Show visual changes in the local preview (`npm run dev`) before shipping.
@@ -117,5 +118,6 @@ source check, then a calibration across cards). Every prompt and answer so far i
 - **Hacker News**: two plain posts ("P(doom)") got no votes. The plan is one Show HN on a weekday morning, US
   Eastern time: "Show HN: Does superintelligence lead to abundance? Forecasts for 199 countries", with a first
   comment explaining why and how.
-- **Cloudflare branch previews** have failed on every non-`main` branch; verify locally instead.
+- **Cloudflare branch previews** failed on every non-`main` branch while builds came from the website repository;
+  not yet tried from this one. Verify locally either way.
 - No technology reaches potential level 5; level 5 is hidden from "How good, and why".
